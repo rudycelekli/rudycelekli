@@ -72,13 +72,15 @@ I design for that multiplier, but I won’t publish one without exposing its sco
 <!-- agentic-power-profile:start -->
 ### Live Agentic Power snapshot
 
-<img src="./assets/agentic-power-profile.svg" width="100%" alt="Provisional modeled Agentic Power since 2025 with a month-by-month timeline" />
+<img src="./assets/agentic-power-profile.svg" width="100%" alt="Operator-calibrated provisional Agentic Power since 2025 with a month-by-month timeline" />
 
-**AP ≈ 6.1× (provisional modeled estimate):** approximately 7,924.0 skilled Human-Equivalent Hours, or 198.1 engineer-weeks, divided by 1,308.0 modeled human-direction hours. The transparent scenario range is 2.7× to 12.9×.
+**AP ≈ 55.9× (operator-calibrated provisional estimate):** approximately 7,924.0 skilled Human-Equivalent Hours, or 198.1 engineer-weeks, divided by 141.8 operator-estimated human-direction hours. The transparent scenario range is 34.6× to 90.9×.
 
-The evidence base since January 2025 combines **83 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**—personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
+The evidence base since January 2025 combines **83 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**: personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
 
-Direction time is modeled from visible work and review signals, not message gaps or agent runtime. Default-branch presence is treated as repository-level acceptance, and inaccessible historical repositories cannot be counted, so this remains **a transparent scenario—not a completed Full Evidence Audit**.
+The conservative GitHub activity proxy produces 1,308.0 direction hours because it assigns attention to individual commits and repository-months. Operator recall is **1.5–2.0 active direction hours per week**; across 81.0 weeks, that calibrates the denominator to 121.5–162.0 hours, with 141.8 as the midpoint.
+
+Direction includes active briefing, steering, reviewing, correcting, and coordinating. It excludes agent runtime and waiting. The calibration is operator-estimated rather than reconstructed from time logs, so this remains **a transparent scenario, not a completed Full Evidence Audit**.
 
 <sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence refreshed hourly; redacted repository snapshot retained until a private read credential is available</sub>
 <!-- agentic-power-profile:end -->

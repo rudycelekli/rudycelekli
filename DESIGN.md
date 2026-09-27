@@ -64,7 +64,7 @@ Dark-profile translation:
 - Four-lever capability rail: Delegate, Orchestrate, Verify, Improve.
 - Human-judgment boundary: goals and constraints enter from the left.
 - Evidence gate: only accepted, replayable work counts at the output.
-- Live Agentic Power equation: modeled HEH, modeled human direction, central AP, and a visible uncertainty range.
+- Live Agentic Power equation: modeled HEH, operator-estimated human direction, central AP, and a visible uncertainty range. Preserve the conservative GitHub direction proxy in the evidence data for comparison.
 - Two-row month-over-month timeline from January 2025 onward: accepted HEH bars plus a modeled AP line.
 - Semantic SVG motion: evidence signals flow, operating stages activate in sequence, and charts reveal their series; all motion stops under `prefers-reduced-motion`.
 - Responsive SVG copy: wrap long card titles inside their own bounds and preserve a readable text equivalent in the README.
