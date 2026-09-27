@@ -2,6 +2,21 @@
   <title id="title">Rudy Celekli's agentic operating model</title>
   <desc id="desc">Human judgment directs goals and constraints through delegation, orchestration, verification, and improvement, with accepted evidence as the output.</desc>
   <defs>
+    <style>
+      .flow-rail { stroke-dasharray: 10 12; animation: flow 2.4s linear infinite; }
+      .stage-border, .stage-node { animation: activate 8s ease-in-out infinite; }
+      .stage-2 { animation-delay: 2s; }
+      .stage-3 { animation-delay: 4s; }
+      .stage-4 { animation-delay: 6s; }
+      .gate-pulse { animation: pulse 2.8s ease-in-out infinite; }
+      .gate-pulse.delay { animation-delay: 1.4s; }
+      @keyframes flow { to { stroke-dashoffset: -44; } }
+      @keyframes activate { 0%, 18%, 100% { opacity: .48; } 7%, 11% { opacity: 1; } }
+      @keyframes pulse { 0%, 100% { opacity: .62; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) {
+        .flow-rail, .stage-border, .stage-node, .gate-pulse { animation: none; opacity: 1; }
+      }
+    </style>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="520" gradientUnits="userSpaceOnUse">
       <stop stop-color="#07111E"/>
       <stop offset="0.58" stop-color="#0A1020"/>
@@ -38,62 +53,67 @@
     <rect width="1076" height="56" rx="14" fill="#0C1628" stroke="#FFFFFF" stroke-opacity="0.09"/>
     <text x="24" y="23" fill="#64748B" font-family="ui-monospace, monospace" font-size="10" font-weight="700" letter-spacing="1.5">AGENTIC POWER</text>
     <text x="24" y="43" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">accepted skilled work</text>
-    <line x1="232" y1="28" x2="410" y2="28" stroke="#4D7CFE" stroke-width="2"/>
+    <line class="flow-rail" x1="232" y1="28" x2="410" y2="28" stroke="#4D7CFE" stroke-width="2"/>
     <text x="432" y="35" fill="#94A3B8" font-family="ui-monospace, monospace" font-size="15">÷</text>
     <text x="468" y="35" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="700">human direction</text>
     <text x="1038" y="34" text-anchor="end" fill="#64748B" font-family="ui-monospace, monospace" font-size="11" letter-spacing="1.2">MEASURE, DON'T IMPLY</text>
   </g>
 
-  <path d="M120 286H1080" stroke="url(#rail)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M120 286H1080" stroke="url(#rail)" stroke-width="3" stroke-linecap="round" opacity="0.28"/>
+  <path class="flow-rail" d="M120 286H1080" stroke="url(#rail)" stroke-width="3" stroke-linecap="round"/>
   <path d="M1070 277L1081 286L1070 295" stroke="#F2A93B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 
   <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
-    <g transform="translate(82 252)">
-      <rect width="238" height="140" rx="18" fill="#0B1629" stroke="#4D7CFE" stroke-opacity="0.48"/>
-      <circle cx="34" cy="34" r="16" fill="#4D7CFE"/><text x="34" y="39" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">01</text>
+    <g transform="translate(82 246)">
+      <rect class="stage-border stage-1" width="238" height="154" rx="18" fill="#0B1629" stroke="#4D7CFE" stroke-opacity="0.9"/>
+      <circle class="stage-node stage-1" cx="34" cy="34" r="16" fill="#4D7CFE"/><text x="34" y="39" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">01</text>
       <text x="62" y="40" fill="#8DACFF" font-size="13" font-weight="800" letter-spacing="1.4">DELEGATE</text>
-      <text x="22" y="79" fill="#F8FAFC" font-size="19" font-weight="750">Tasks → roles → outcomes</text>
-      <text x="22" y="108" fill="#94A3B8" font-size="13">Define responsibility, standards</text>
-      <text x="22" y="128" fill="#94A3B8" font-size="13">and escalation boundaries.</text>
+      <text x="22" y="76" fill="#F8FAFC" font-size="17" font-weight="750">Tasks → roles</text>
+      <text x="22" y="97" fill="#F8FAFC" font-size="17" font-weight="750">→ outcomes</text>
+      <text x="22" y="124" fill="#94A3B8" font-size="12.5">Define responsibility, standards</text>
+      <text x="22" y="143" fill="#94A3B8" font-size="12.5">and escalation boundaries.</text>
     </g>
 
-    <g transform="translate(348 252)">
-      <rect width="238" height="140" rx="18" fill="#0A1B24" stroke="#2DE2C5" stroke-opacity="0.45"/>
-      <circle cx="34" cy="34" r="16" fill="#149F92"/><text x="34" y="39" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">02</text>
+    <g transform="translate(348 246)">
+      <rect class="stage-border stage-2" width="238" height="154" rx="18" fill="#0A1B24" stroke="#2DE2C5" stroke-opacity="0.9"/>
+      <circle class="stage-node stage-2" cx="34" cy="34" r="16" fill="#149F92"/><text x="34" y="39" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">02</text>
       <text x="62" y="40" fill="#6EE7D5" font-size="13" font-weight="800" letter-spacing="1.4">ORCHESTRATE</text>
-      <text x="22" y="79" fill="#F8FAFC" font-size="19" font-weight="750">Context + tools + memory</text>
-      <text x="22" y="108" fill="#94A3B8" font-size="13">Compose models, skills, agents</text>
-      <text x="22" y="128" fill="#94A3B8" font-size="13">and loops into one operation.</text>
+      <text x="22" y="76" fill="#F8FAFC" font-size="17" font-weight="750">Context + tools</text>
+      <text x="22" y="97" fill="#F8FAFC" font-size="17" font-weight="750">+ memory</text>
+      <text x="22" y="124" fill="#94A3B8" font-size="12.5">Compose models, skills, agents</text>
+      <text x="22" y="143" fill="#94A3B8" font-size="12.5">and loops into one operation.</text>
     </g>
 
-    <g transform="translate(614 252)">
-      <rect width="238" height="140" rx="18" fill="#141227" stroke="#9B7CFF" stroke-opacity="0.48"/>
-      <circle cx="34" cy="34" r="16" fill="#7254B3"/><text x="34" y="39" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">03</text>
+    <g transform="translate(614 246)">
+      <rect class="stage-border stage-3" width="238" height="154" rx="18" fill="#141227" stroke="#9B7CFF" stroke-opacity="0.9"/>
+      <circle class="stage-node stage-3" cx="34" cy="34" r="16" fill="#7254B3"/><text x="34" y="39" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">03</text>
       <text x="62" y="40" fill="#C4B5FD" font-size="13" font-weight="800" letter-spacing="1.4">VERIFY</text>
-      <text x="22" y="79" fill="#F8FAFC" font-size="19" font-weight="750">Receipts + replay + tests</text>
-      <text x="22" y="108" fill="#94A3B8" font-size="13">Challenge the work before its</text>
-      <text x="22" y="128" fill="#94A3B8" font-size="13">claims earn trust.</text>
+      <text x="22" y="76" fill="#F8FAFC" font-size="17" font-weight="750">Receipts + replay</text>
+      <text x="22" y="97" fill="#F8FAFC" font-size="17" font-weight="750">+ tests</text>
+      <text x="22" y="124" fill="#94A3B8" font-size="12.5">Challenge the work before its</text>
+      <text x="22" y="143" fill="#94A3B8" font-size="12.5">claims earn trust.</text>
     </g>
 
-    <g transform="translate(880 252)">
-      <rect width="238" height="140" rx="18" fill="#21170D" stroke="#F2A93B" stroke-opacity="0.5"/>
-      <circle cx="34" cy="34" r="16" fill="#9A6217"/><text x="34" y="39" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">04</text>
+    <g transform="translate(880 246)">
+      <rect class="stage-border stage-4" width="238" height="154" rx="18" fill="#21170D" stroke="#F2A93B" stroke-opacity="0.9"/>
+      <circle class="stage-node stage-4" cx="34" cy="34" r="16" fill="#9A6217"/><text x="34" y="39" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">04</text>
       <text x="62" y="40" fill="#F8C66E" font-size="13" font-weight="800" letter-spacing="1.4">IMPROVE</text>
-      <text x="22" y="79" fill="#F8FAFC" font-size="19" font-weight="750">Evidence → better next run</text>
-      <text x="22" y="108" fill="#94A3B8" font-size="13">Feed measured failures back into</text>
-      <text x="22" y="128" fill="#94A3B8" font-size="13">instructions and system design.</text>
+      <text x="22" y="76" fill="#F8FAFC" font-size="17" font-weight="750">Evidence → better</text>
+      <text x="22" y="97" fill="#F8FAFC" font-size="17" font-weight="750">next run</text>
+      <text x="22" y="124" fill="#94A3B8" font-size="12.5">Feed measured failures back into</text>
+      <text x="22" y="143" fill="#94A3B8" font-size="12.5">instructions and system design.</text>
     </g>
   </g>
 
   <g transform="translate(62 426)" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
     <rect width="512" height="55" rx="14" fill="#0C1628" stroke="#4D7CFE" stroke-opacity="0.28"/>
-    <circle cx="28" cy="27" r="7" fill="#4D7CFE" filter="url(#glow)"/>
+    <circle class="gate-pulse" cx="28" cy="27" r="7" fill="#4D7CFE" filter="url(#glow)"/>
     <text x="48" y="23" fill="#7EA0FF" font-size="10" font-weight="700" letter-spacing="1.6">HUMAN AUTHORITY</text>
     <text x="48" y="41" fill="#CBD5E1" font-size="12">sets goals · constraints · quality bar</text>
   </g>
   <g transform="translate(594 426)" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
     <rect width="544" height="55" rx="14" fill="#0C1628" stroke="#2DE2C5" stroke-opacity="0.28"/>
-    <circle cx="28" cy="27" r="7" fill="#2DE2C5" filter="url(#glow)"/>
+    <circle class="gate-pulse delay" cx="28" cy="27" r="7" fill="#2DE2C5" filter="url(#glow)"/>
     <text x="48" y="23" fill="#6EE7D5" font-size="10" font-weight="700" letter-spacing="1.6">EVIDENCE GATE</text>
     <text x="48" y="41" fill="#CBD5E1" font-size="12">only accepted, replayable work counts</text>
   </g>

@@ -2,6 +2,23 @@
   <title id="title">Rudy Celekli — proof-driven AI systems</title>
   <desc id="desc">A dark technical banner with evidence paths converging on a verified signal.</desc>
   <defs>
+    <style>
+      .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 20s linear infinite; }
+      .signal { stroke-dasharray: 8 10; animation: signal 2.8s linear infinite; }
+      .signal.reverse { animation-direction: reverse; }
+      .beacon { animation: beacon 3s ease-in-out infinite; }
+      .beacon.delay-1 { animation-delay: .75s; }
+      .beacon.delay-2 { animation-delay: 1.5s; }
+      .beacon.delay-3 { animation-delay: 2.25s; }
+      .verified-core { animation: verified 3.2s ease-in-out infinite; }
+      @keyframes orbit { to { transform: rotate(360deg); } }
+      @keyframes signal { to { stroke-dashoffset: -36; } }
+      @keyframes beacon { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
+      @keyframes verified { 0%, 100% { opacity: .82; } 50% { opacity: 1; } }
+      @media (prefers-reduced-motion: reduce) {
+        .orbit, .signal, .beacon, .verified-core { animation: none; opacity: 1; }
+      }
+    </style>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
       <stop stop-color="#07111E"/>
       <stop offset="0.55" stop-color="#0A1020"/>
@@ -41,19 +58,19 @@
 
   <g transform="translate(940 210)">
     <circle r="137" stroke="#38BDF8" stroke-opacity="0.12"/>
-    <circle r="102" stroke="#2DE2C5" stroke-opacity="0.2" stroke-dasharray="5 9"/>
+    <circle class="orbit" r="102" stroke="#2DE2C5" stroke-opacity="0.42" stroke-dasharray="5 9"/>
     <circle r="66" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.55"/>
-    <circle r="30" fill="#0B1627" stroke="#2DE2C5" stroke-width="2" filter="url(#softGlow)"/>
+    <circle class="verified-core" r="30" fill="#0B1627" stroke="#2DE2C5" stroke-width="2" filter="url(#softGlow)"/>
     <path d="M-12 0L-3 9L15 -12" stroke="#E6FFFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <path d="M-174 -62H-120L-87 -34" stroke="#2DE2C5" stroke-width="2"/>
-    <circle cx="-174" cy="-62" r="5" fill="#2DE2C5"/>
-    <path d="M-172 85H-118L-86 48" stroke="#38BDF8" stroke-width="2"/>
-    <circle cx="-172" cy="85" r="5" fill="#38BDF8"/>
-    <path d="M169 -84H123L90 -48" stroke="#8B5CF6" stroke-width="2"/>
-    <circle cx="169" cy="-84" r="5" fill="#8B5CF6"/>
-    <path d="M177 72H122L91 43" stroke="#F59E0B" stroke-width="2"/>
-    <circle cx="177" cy="72" r="5" fill="#F59E0B"/>
+    <path class="signal" d="M-174 -62H-120L-87 -34" stroke="#2DE2C5" stroke-width="2"/>
+    <circle class="beacon" cx="-174" cy="-62" r="5" fill="#2DE2C5"/>
+    <path class="signal reverse" d="M-172 85H-118L-86 48" stroke="#38BDF8" stroke-width="2"/>
+    <circle class="beacon delay-1" cx="-172" cy="85" r="5" fill="#38BDF8"/>
+    <path class="signal" d="M169 -84H123L90 -48" stroke="#8B5CF6" stroke-width="2"/>
+    <circle class="beacon delay-2" cx="169" cy="-84" r="5" fill="#8B5CF6"/>
+    <path class="signal reverse" d="M177 72H122L91 43" stroke="#F59E0B" stroke-width="2"/>
+    <circle class="beacon delay-3" cx="177" cy="72" r="5" fill="#F59E0B"/>
   </g>
 
   <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.3">

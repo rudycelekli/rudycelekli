@@ -1,0 +1,617 @@
+{
+  "acceptance_basis": "Non-merge commits reached a repository default branch; this is treated as repository-level acceptance.",
+  "category_counts": {
+    "feature_and_research": 1300,
+    "fix_and_refactor": 758,
+    "knowledge": 474,
+    "maintenance": 3822,
+    "quality": 178
+  },
+  "default_branch_non_merge_commits": 6532,
+  "methodology": {
+    "collection": "Authenticated GitHub commit search across all currently accessible repositories. GitHub searches the default branch; results are exhaustively partitioned when a window exceeds 1,000 results.",
+    "direction": "Modeled active direction per outcome class plus two hours per active repository-month for setup, review, coordination, and maintenance.",
+    "heh": "Conservative outcome-class scenarios from conventional commit categories; merge commits and duplicate SHAs are excluded to avoid duplicate work.",
+    "limitation": "Default-branch presence is a repository-level acceptance proxy, not a completed independent audit. No repository names, messages, links, code, employer, or client data are published."
+  },
+  "modeled_human_direction_hours": {
+    "base": 1218.94,
+    "high": 1972.41,
+    "low": 795.66
+  },
+  "monthly": {
+    "2025-03": {
+      "active_repositories": 10,
+      "category_counts": {
+        "feature_and_research": 0,
+        "fix_and_refactor": 0,
+        "knowledge": 0,
+        "maintenance": 77,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 77,
+      "modeled_human_direction_hours": {
+        "base": 26.16,
+        "high": 49.24,
+        "low": 14.31
+      },
+      "modeled_setup_hours": {
+        "base": 20.0,
+        "high": 40.0,
+        "low": 10.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 38.5,
+        "high": 53.9,
+        "low": 26.95
+      }
+    },
+    "2025-04": {
+      "active_repositories": 7,
+      "category_counts": {
+        "feature_and_research": 0,
+        "fix_and_refactor": 0,
+        "knowledge": 0,
+        "maintenance": 28,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 28,
+      "modeled_human_direction_hours": {
+        "base": 16.24,
+        "high": 31.36,
+        "low": 8.57
+      },
+      "modeled_setup_hours": {
+        "base": 14.0,
+        "high": 28.0,
+        "low": 7.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 14.0,
+        "high": 19.6,
+        "low": 9.8
+      }
+    },
+    "2025-05": {
+      "active_repositories": 1,
+      "category_counts": {
+        "feature_and_research": 0,
+        "fix_and_refactor": 0,
+        "knowledge": 0,
+        "maintenance": 3,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 3,
+      "modeled_human_direction_hours": {
+        "base": 2.24,
+        "high": 4.36,
+        "low": 1.17
+      },
+      "modeled_setup_hours": {
+        "base": 2.0,
+        "high": 4.0,
+        "low": 1.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 1.5,
+        "high": 2.1,
+        "low": 1.05
+      }
+    },
+    "2025-06": {
+      "active_repositories": 5,
+      "category_counts": {
+        "feature_and_research": 0,
+        "fix_and_refactor": 0,
+        "knowledge": 0,
+        "maintenance": 31,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 31,
+      "modeled_human_direction_hours": {
+        "base": 12.48,
+        "high": 23.72,
+        "low": 6.74
+      },
+      "modeled_setup_hours": {
+        "base": 10.0,
+        "high": 20.0,
+        "low": 5.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 15.5,
+        "high": 21.7,
+        "low": 10.85
+      }
+    },
+    "2025-07": {
+      "active_repositories": 3,
+      "category_counts": {
+        "feature_and_research": 0,
+        "fix_and_refactor": 0,
+        "knowledge": 0,
+        "maintenance": 10,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 10,
+      "modeled_human_direction_hours": {
+        "base": 6.8,
+        "high": 13.2,
+        "low": 3.56
+      },
+      "modeled_setup_hours": {
+        "base": 6.0,
+        "high": 12.0,
+        "low": 3.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 5.0,
+        "high": 7.0,
+        "low": 3.5
+      }
+    },
+    "2025-08": {
+      "active_repositories": 2,
+      "category_counts": {
+        "feature_and_research": 0,
+        "fix_and_refactor": 0,
+        "knowledge": 0,
+        "maintenance": 5,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 5,
+      "modeled_human_direction_hours": {
+        "base": 4.4,
+        "high": 8.6,
+        "low": 2.28
+      },
+      "modeled_setup_hours": {
+        "base": 4.0,
+        "high": 8.0,
+        "low": 2.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 2.5,
+        "high": 3.5,
+        "low": 1.75
+      }
+    },
+    "2025-10": {
+      "active_repositories": 2,
+      "category_counts": {
+        "feature_and_research": 0,
+        "fix_and_refactor": 0,
+        "knowledge": 0,
+        "maintenance": 6,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 6,
+      "modeled_human_direction_hours": {
+        "base": 4.48,
+        "high": 8.72,
+        "low": 2.34
+      },
+      "modeled_setup_hours": {
+        "base": 4.0,
+        "high": 8.0,
+        "low": 2.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 3.0,
+        "high": 4.2,
+        "low": 2.1
+      }
+    },
+    "2025-11": {
+      "active_repositories": 1,
+      "category_counts": {
+        "feature_and_research": 20,
+        "fix_and_refactor": 11,
+        "knowledge": 8,
+        "maintenance": 6,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 45,
+      "modeled_human_direction_hours": {
+        "base": 11.64,
+        "high": 18.46,
+        "low": 7.75
+      },
+      "modeled_setup_hours": {
+        "base": 2.0,
+        "high": 4.0,
+        "low": 1.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 75.5,
+        "high": 105.7,
+        "low": 52.85
+      }
+    },
+    "2025-12": {
+      "active_repositories": 8,
+      "category_counts": {
+        "feature_and_research": 42,
+        "fix_and_refactor": 35,
+        "knowledge": 0,
+        "maintenance": 43,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 120,
+      "modeled_human_direction_hours": {
+        "base": 39.04,
+        "high": 66.56,
+        "low": 24.13
+      },
+      "modeled_setup_hours": {
+        "base": 16.0,
+        "high": 32.0,
+        "low": 8.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 179.0,
+        "high": 250.6,
+        "low": 125.3
+      }
+    },
+    "2026-01": {
+      "active_repositories": 4,
+      "category_counts": {
+        "feature_and_research": 6,
+        "fix_and_refactor": 9,
+        "knowledge": 4,
+        "maintenance": 71,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 90,
+      "modeled_human_direction_hours": {
+        "base": 17.76,
+        "high": 30.64,
+        "low": 10.83
+      },
+      "modeled_setup_hours": {
+        "base": 8.0,
+        "high": 16.0,
+        "low": 4.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 67.0,
+        "high": 93.8,
+        "low": 46.9
+      }
+    },
+    "2026-02": {
+      "active_repositories": 5,
+      "category_counts": {
+        "feature_and_research": 3,
+        "fix_and_refactor": 4,
+        "knowledge": 0,
+        "maintenance": 191,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 198,
+      "modeled_human_direction_hours": {
+        "base": 26.98,
+        "high": 45.47,
+        "low": 16.89
+      },
+      "modeled_setup_hours": {
+        "base": 10.0,
+        "high": 20.0,
+        "low": 5.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 109.0,
+        "high": 152.6,
+        "low": 76.3
+      }
+    },
+    "2026-03": {
+      "active_repositories": 13,
+      "category_counts": {
+        "feature_and_research": 3,
+        "fix_and_refactor": 4,
+        "knowledge": 0,
+        "maintenance": 339,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 346,
+      "modeled_human_direction_hours": {
+        "base": 54.82,
+        "high": 95.23,
+        "low": 33.17
+      },
+      "modeled_setup_hours": {
+        "base": 26.0,
+        "high": 52.0,
+        "low": 13.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 183.0,
+        "high": 256.2,
+        "low": 128.1
+      }
+    },
+    "2026-04": {
+      "active_repositories": 18,
+      "category_counts": {
+        "feature_and_research": 40,
+        "fix_and_refactor": 62,
+        "knowledge": 0,
+        "maintenance": 727,
+        "quality": 1
+      },
+      "default_branch_non_merge_commits": 830,
+      "modeled_human_direction_hours": {
+        "base": 118.71,
+        "high": 196.07,
+        "low": 75.9
+      },
+      "modeled_setup_hours": {
+        "base": 36.0,
+        "high": 72.0,
+        "low": 18.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 557.5,
+        "high": 780.5,
+        "low": 390.25
+      }
+    },
+    "2026-05": {
+      "active_repositories": 10,
+      "category_counts": {
+        "feature_and_research": 102,
+        "fix_and_refactor": 105,
+        "knowledge": 5,
+        "maintenance": 178,
+        "quality": 0
+      },
+      "default_branch_non_merge_commits": 390,
+      "modeled_human_direction_hours": {
+        "base": 86.44,
+        "high": 139.66,
+        "low": 56.51
+      },
+      "modeled_setup_hours": {
+        "base": 20.0,
+        "high": 40.0,
+        "low": 10.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 505.25,
+        "high": 707.35,
+        "low": 353.68
+      }
+    },
+    "2026-06": {
+      "active_repositories": 20,
+      "category_counts": {
+        "feature_and_research": 173,
+        "fix_and_refactor": 41,
+        "knowledge": 21,
+        "maintenance": 841,
+        "quality": 8
+      },
+      "default_branch_non_merge_commits": 1084,
+      "modeled_human_direction_hours": {
+        "base": 171.1,
+        "high": 276.65,
+        "low": 111.77
+      },
+      "modeled_setup_hours": {
+        "base": 40.0,
+        "high": 80.0,
+        "low": 20.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 938.25,
+        "high": 1313.55,
+        "low": 656.78
+      }
+    },
+    "2026-07": {
+      "active_repositories": 7,
+      "category_counts": {
+        "feature_and_research": 159,
+        "fix_and_refactor": 50,
+        "knowledge": 67,
+        "maintenance": 551,
+        "quality": 11
+      },
+      "default_branch_non_merge_commits": 838,
+      "modeled_human_direction_hours": {
+        "base": 125.47,
+        "high": 195.21,
+        "low": 85.03
+      },
+      "modeled_setup_hours": {
+        "base": 14.0,
+        "high": 28.0,
+        "low": 7.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 809.25,
+        "high": 1132.95,
+        "low": 566.48
+      }
+    },
+    "2026-08": {
+      "active_repositories": 14,
+      "category_counts": {
+        "feature_and_research": 451,
+        "fix_and_refactor": 346,
+        "knowledge": 230,
+        "maintenance": 265,
+        "quality": 123
+      },
+      "default_branch_non_merge_commits": 1415,
+      "modeled_human_direction_hours": {
+        "base": 299.75,
+        "high": 463.63,
+        "low": 204.23
+      },
+      "modeled_setup_hours": {
+        "base": 28.0,
+        "high": 56.0,
+        "low": 14.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 2074.5,
+        "high": 2904.3,
+        "low": 1452.15
+      }
+    },
+    "2026-09": {
+      "active_repositories": 14,
+      "category_counts": {
+        "feature_and_research": 301,
+        "fix_and_refactor": 91,
+        "knowledge": 139,
+        "maintenance": 450,
+        "quality": 35
+      },
+      "default_branch_non_merge_commits": 1016,
+      "modeled_human_direction_hours": {
+        "base": 194.43,
+        "high": 305.65,
+        "low": 130.5
+      },
+      "modeled_setup_hours": {
+        "base": 28.0,
+        "high": 56.0,
+        "low": 14.0
+      },
+      "skilled_human_equivalent_hours": {
+        "base": 1253.25,
+        "high": 1754.55,
+        "low": 877.28
+      }
+    }
+  },
+  "per_repository_commit_counts_unlabeled": [
+    1280,
+    1131,
+    432,
+    396,
+    368,
+    300,
+    210,
+    161,
+    160,
+    137,
+    133,
+    119,
+    114,
+    113,
+    94,
+    94,
+    77,
+    52,
+    50,
+    49,
+    46,
+    45,
+    42,
+    40,
+    39,
+    35,
+    35,
+    34,
+    34,
+    34,
+    33,
+    33,
+    31,
+    27,
+    27,
+    25,
+    22,
+    22,
+    22,
+    19,
+    19,
+    18,
+    18,
+    18,
+    16,
+    15,
+    14,
+    13,
+    13,
+    13,
+    11,
+    10,
+    10,
+    10,
+    10,
+    10,
+    9,
+    9,
+    9,
+    8,
+    8,
+    8,
+    8,
+    7,
+    7,
+    7,
+    6,
+    6,
+    5,
+    5,
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "privacy": "Repository names, commit titles, URLs, and code are intentionally excluded.",
+  "repository_count": 109,
+  "schema_version": 1,
+  "scope": "Authored work since 2025 in accessible, non-fork default branches",
+  "skilled_human_equivalent_hours": {
+    "base": 6831.5,
+    "high": 9564.1,
+    "low": 4782.05
+  },
+  "updated_at_utc": "2026-09-27",
+  "window": {
+    "end": "2026-09-27T15:20:03.000-04:00",
+    "start": "2025-03-09T15:30:23.000-04:00"
+  }
+}

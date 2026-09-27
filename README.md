@@ -67,7 +67,21 @@ Regression memory for coding agents. Seal behavioral claims once; check them ove
 
 [Agentic Power](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) asks a practical question: **how much accepted skilled work can one hour of human direction command?**
 
-I design for that multiplier—but I won’t publish a multiplier without an evidence-backed audit. My operating model is to delegate meaningful responsibility, compose the right tools and context, verify the result, then use the evidence to improve the next run.
+I design for that multiplier, but I won’t publish one without exposing its scope, evidence, assumptions, and uncertainty. My operating model is to delegate meaningful responsibility, compose the right tools and context, verify the result, then use the evidence to improve the next run.
+
+<!-- agentic-power-profile:start -->
+### Live Agentic Power snapshot
+
+<img src="./assets/agentic-power-profile.svg" width="100%" alt="Provisional modeled Agentic Power since 2025 with a month-by-month timeline" />
+
+**AP ≈ 6.1× (provisional modeled estimate):** approximately 7,924.0 skilled Human-Equivalent Hours, or 198.1 engineer-weeks, divided by 1,308.0 modeled human-direction hours. The transparent scenario range is 2.7× to 12.9×.
+
+The evidence base since January 2025 combines **83 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**—personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
+
+Direction time is modeled from visible work and review signals, not message gaps or agent runtime. Default-branch presence is treated as repository-level acceptance, and inaccessible historical repositories cannot be counted, so this remains **a transparent scenario—not a completed Full Evidence Audit**.
+
+<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence refreshed hourly; redacted repository snapshot retained until a private read credential is available</sub>
+<!-- agentic-power-profile:end -->
 
 <img src="./assets/agentic-operating-model.svg" width="100%" alt="Agentic operating model: delegate, orchestrate, verify, and improve" />
 
@@ -79,16 +93,16 @@ I design for that multiplier—but I won’t publish a multiplier without an evi
 <sub>Framework concept by [Dr. Mark Allen / HeroForge.AI](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/). Visual and operating-model adaptation are original to this profile.</sub>
 
 <!-- contribution-stats:start -->
-## Open-source contributor
+## Official open-source contributor
 
-I contribute upstream to agent orchestration and quality-engineering infrastructure. These numbers come directly from GitHub; **accepted-code totals include merged pull requests only**.
+I contribute upstream to agent orchestration and quality-engineering infrastructure. This section includes **only projects where GitHub lists me as a contributor**; accepted-code totals include merged pull requests only.
 
 <img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for Ruflo and Agentic-QE" />
 
-- **[Ruflo](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli)** — 14 merged / 59 open / 74 authored PRs; +1,256 / −79 accepted lines across 37 changed files.
-- **[Agentic-QE](https://github.com/proffesor-for-testing/agentic-qe/pulls?q=is%3Apr+author%3Arudycelekli)** — 34 merged / 2 open / 36 authored PRs; +11,061 / −1,967 accepted lines across 242 changed files.
+- **[Ruflo](https://github.com/ruvnet/ruflo)** — [GitHub-listed contributor](https://github.com/ruvnet/ruflo/graphs/contributors) with 84 repository commits and [49 merged PRs](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli); +5,783 / −741 accepted lines across 191 changed files.
+- **[Agentic-QE](https://github.com/proffesor-for-testing/agentic-qe)** — [GitHub-listed contributor](https://github.com/proffesor-for-testing/agentic-qe/graphs/contributors) with 74 repository commits and [34 merged PRs](https://github.com/proffesor-for-testing/agentic-qe/pulls?q=is%3Apr+author%3Arudycelekli); +11,061 / −1,967 accepted lines across 242 changed files.
 
-<sub>Last verified 2026-09-27 UTC · refreshed daily by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
+<sub>Last verified 2026-09-27 UTC · refreshed hourly by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
 <!-- contribution-stats:end -->
 
 ## What I’m exploring
@@ -119,6 +133,10 @@ The thread through all of it is simple: **an AI system should be able to show it
 
 - **[Gradia Universes](https://github.com/rudycelekli/gradia-universes-work-sample)** — proof-carrying, interruption-capable synthetic agent worlds with deterministic replay.
 - **[Gradia Reward Loop](https://github.com/rudycelekli/gradia-reward-loop)** — oracle-witnessed reward-hacking experiments and a replay-verified paired-GRPO diagnostic.
+
+## Building the human layer
+
+I build communities as deliberately as systems: Chapter Lead for **AI Tinkerers Charlotte** and Regional Ambassador for the **Agentics Foundation**, connecting builders who are actively shipping agentic AI.
 
 ---
 

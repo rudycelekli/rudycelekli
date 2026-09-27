@@ -1,9 +1,9 @@
-name: Refresh contribution stats
+name: Refresh contribution stats and Agentic Power
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 6 * * *"
+    - cron: "17 * * * *"
 
 permissions:
   contents: write
@@ -11,7 +11,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - name: Check out profile
         uses: actions/checkout@v4
@@ -24,6 +24,8 @@ jobs:
       - name: Refresh GitHub contribution evidence
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRIVATE_GITHUB_TOKEN: ${{ secrets.AP_REPOSITORY_TOKEN }}
+          AP_EXCLUDED_REPOSITORIES: ${{ secrets.AP_EXCLUDED_REPOSITORIES }}
         run: python scripts/update_contributions.py
 
       - name: Commit verified changes
@@ -34,6 +36,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md data/contributions.json assets/open-source-contributions.svg
+          git add README.md data/contributions.json data/agentic-power.json data/repository-work-aggregate.json assets/open-source-contributions.svg assets/agentic-power-profile.svg
           git commit -m "chore: refresh contribution stats"
           git push

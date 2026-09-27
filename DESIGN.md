@@ -64,6 +64,10 @@ Dark-profile translation:
 - Four-lever capability rail: Delegate, Orchestrate, Verify, Improve.
 - Human-judgment boundary: goals and constraints enter from the left.
 - Evidence gate: only accepted, replayable work counts at the output.
+- Live Agentic Power equation: modeled HEH, modeled human direction, central AP, and a visible uncertainty range.
+- Two-row month-over-month timeline from January 2025 onward: accepted HEH bars plus a modeled AP line.
+- Semantic SVG motion: evidence signals flow, operating stages activate in sequence, and charts reveal their series; all motion stops under `prefers-reduced-motion`.
+- Responsive SVG copy: wrap long card titles inside their own bounds and preserve a readable text equivalent in the README.
 - Attribution link: directly credit the Agentic Power Framework and its author.
 
 ## Page Pattern
@@ -71,17 +75,18 @@ Dark-profile translation:
 1. Existing proof-driven hero.
 2. Evidence thesis and proof loop.
 3. Flagship proof stack.
-4. Agentic operating model and framework attribution.
-5. Live open-source contribution proof.
-6. Research questions, tools, and current work.
-7. Closing invitation.
+4. Live modeled Agentic Power snapshot with evidence and caveats.
+5. Agentic operating model and framework attribution.
+6. Live open-source contribution proof.
+7. Research questions, tools, community leadership, and current work.
+8. Closing invitation.
 
 ## Content Style
 
 - Short declarative headings.
 - Prefer operational verbs: delegate, orchestrate, verify, improve.
 - Distinguish capability from measured output.
-- Never publish an Agentic Power multiplier without an evidence-backed audit.
+- Never publish an Agentic Power multiplier without visible evidence scope, assumptions, uncertainty, and audit limitations.
 - Treat human judgment, acceptance criteria, and authority boundaries as core system components.
 
 ## Agent Build Instructions
@@ -91,7 +96,7 @@ Dark-profile translation:
 - Build original diagrams; do not copy HeroForge artwork or language beyond attributed framework terms.
 - Tie every capability claim to public work or phrase it as an operating principle.
 - Keep the profile scannable: one graphic, one short explanation, four concrete operating principles.
-- Keep contribution claims machine-counted. Separate authored work from accepted upstream work, and calculate accepted code only from merged pull requests.
+- Keep contribution claims machine-counted. Include a project only when GitHub's Contributors API lists Rudy, and calculate accepted code only from merged pull requests.
 
 ## Rerun Inputs
 
