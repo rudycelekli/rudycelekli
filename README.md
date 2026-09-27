@@ -89,7 +89,6 @@ The thread through all of it is simple: **an AI system should be able to show it
 
 ## In the lab
 
-- **[DreamMachine](https://github.com/rudycelekli/DreamMachine)** — a daily AI research laboratory with native memory, tested experiments, and mandatory architecture decisions.
 - **[Gradia Universes](https://github.com/rudycelekli/gradia-universes-work-sample)** — proof-carrying, interruption-capable synthetic agent worlds with deterministic replay.
 - **[Gradia Reward Loop](https://github.com/rudycelekli/gradia-reward-loop)** — oracle-witnessed reward-hacking experiments and a replay-verified paired-GRPO diagnostic.
 
