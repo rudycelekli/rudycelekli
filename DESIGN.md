@@ -72,8 +72,9 @@ Dark-profile translation:
 2. Evidence thesis and proof loop.
 3. Flagship proof stack.
 4. Agentic operating model and framework attribution.
-5. Research questions, tools, and current work.
-6. Closing invitation.
+5. Live open-source contribution proof.
+6. Research questions, tools, and current work.
+7. Closing invitation.
 
 ## Content Style
 
@@ -90,6 +91,7 @@ Dark-profile translation:
 - Build original diagrams; do not copy HeroForge artwork or language beyond attributed framework terms.
 - Tie every capability claim to public work or phrase it as an operating principle.
 - Keep the profile scannable: one graphic, one short explanation, four concrete operating principles.
+- Keep contribution claims machine-counted. Separate authored work from accepted upstream work, and calculate accepted code only from merged pull requests.
 
 ## Rerun Inputs
 

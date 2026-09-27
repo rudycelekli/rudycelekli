@@ -78,6 +78,19 @@ I design for that multiplier—but I won’t publish a multiplier without an evi
 
 <sub>Framework concept by [Dr. Mark Allen / HeroForge.AI](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/). Visual and operating-model adaptation are original to this profile.</sub>
 
+<!-- contribution-stats:start -->
+## Open-source contributor
+
+I contribute upstream to agent orchestration and quality-engineering infrastructure. These numbers come directly from GitHub; **accepted-code totals include merged pull requests only**.
+
+<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for Ruflo and Agentic-QE" />
+
+- **[Ruflo](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli)** — 14 merged / 59 open / 74 authored PRs; +1,256 / −79 accepted lines across 37 changed files.
+- **[Agentic-QE](https://github.com/proffesor-for-testing/agentic-qe/pulls?q=is%3Apr+author%3Arudycelekli)** — 34 merged / 2 open / 36 authored PRs; +11,061 / −1,967 accepted lines across 242 changed files.
+
+<sub>Last verified 2026-09-27 UTC · refreshed daily by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
+<!-- contribution-stats:end -->
+
 ## What I’m exploring
 
 ```text
