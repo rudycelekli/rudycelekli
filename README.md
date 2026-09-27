@@ -63,6 +63,21 @@ Regression memory for coding agents. Seal behavioral claims once; check them ove
 </tr>
 </table>
 
+## Agentic power, engineered
+
+[Agentic Power](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) asks a practical question: **how much accepted skilled work can one hour of human direction command?**
+
+I design for that multiplier—but I won’t publish a multiplier without an evidence-backed audit. My operating model is to delegate meaningful responsibility, compose the right tools and context, verify the result, then use the evidence to improve the next run.
+
+<img src="./assets/agentic-operating-model.svg" width="100%" alt="Agentic operating model: delegate, orchestrate, verify, and improve" />
+
+- **Direct:** goals, constraints, acceptance criteria, and escalation rules stay explicit.
+- **Orchestrate:** models, specialist agents, reusable skills, tools, memory, and loops become one working system.
+- **Verify:** [Gradia Guard](https://github.com/rudycelekli/gradia-guard), [ProofSeal](https://github.com/rudycelekli/proofseal), and replayable evaluations separate completed work from plausible-looking activity.
+- **Improve:** [Wind Tunnel](https://github.com/rudycelekli/gradia-wind-tunnel) and [Reward Loop](https://github.com/rudycelekli/gradia-reward-loop) turn measured failure into a better next run.
+
+<sub>Framework concept by [Dr. Mark Allen / HeroForge.AI](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/). Visual and operating-model adaptation are original to this profile.</sub>
+
 ## What I’m exploring
 
 ```text
