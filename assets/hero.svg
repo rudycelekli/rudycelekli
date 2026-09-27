@@ -1,0 +1,65 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Rudy Celekli — proof-driven AI systems</title>
+  <desc id="desc">A dark technical banner with evidence paths converging on a verified signal.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111E"/>
+      <stop offset="0.55" stop-color="#0A1020"/>
+      <stop offset="1" stop-color="#150B2E"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="735" y1="80" x2="1100" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DE2C5"/>
+      <stop offset="0.55" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(946 211) rotate(90) scale(188)">
+      <stop stop-color="#2DE2C5" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#2DE2C5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#94A3B8" stroke-opacity="0.07"/>
+    </pattern>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="418" rx="27" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2"/>
+  <rect width="1200" height="420" rx="28" fill="url(#grid)"/>
+  <circle cx="946" cy="211" r="188" fill="url(#glow)"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace">
+    <text x="72" y="72" fill="#2DE2C5" font-size="14" font-weight="700" letter-spacing="4">RUDY CELEKLI / AI SYSTEMS</text>
+    <text x="72" y="145" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="48" font-weight="750" letter-spacing="-1.6">I build AI systems</text>
+    <text x="72" y="202" fill="#F8FAFC" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="48" font-weight="750" letter-spacing="-1.6">that can prove</text>
+    <text x="72" y="259" fill="url(#accent)" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="48" font-weight="750" letter-spacing="-1.6">what happened.</text>
+    <text x="72" y="312" fill="#94A3B8" font-size="14" letter-spacing="2.2">EVIDENCE  ·  EVALUATION  ·  AGENT RELIABILITY</text>
+    <text x="72" y="370" fill="#64748B" font-size="12" letter-spacing="1.5">CHARLOTTE, NC  //  WORKING IN PUBLIC</text>
+  </g>
+
+  <g transform="translate(940 210)">
+    <circle r="137" stroke="#38BDF8" stroke-opacity="0.12"/>
+    <circle r="102" stroke="#2DE2C5" stroke-opacity="0.2" stroke-dasharray="5 9"/>
+    <circle r="66" stroke="url(#accent)" stroke-width="2" stroke-opacity="0.55"/>
+    <circle r="30" fill="#0B1627" stroke="#2DE2C5" stroke-width="2" filter="url(#softGlow)"/>
+    <path d="M-12 0L-3 9L15 -12" stroke="#E6FFFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M-174 -62H-120L-87 -34" stroke="#2DE2C5" stroke-width="2"/>
+    <circle cx="-174" cy="-62" r="5" fill="#2DE2C5"/>
+    <path d="M-172 85H-118L-86 48" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="-172" cy="85" r="5" fill="#38BDF8"/>
+    <path d="M169 -84H123L90 -48" stroke="#8B5CF6" stroke-width="2"/>
+    <circle cx="169" cy="-84" r="5" fill="#8B5CF6"/>
+    <path d="M177 72H122L91 43" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="177" cy="72" r="5" fill="#F59E0B"/>
+  </g>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11" font-weight="700" letter-spacing="1.3">
+    <g transform="translate(722 128)"><rect width="116" height="28" rx="14" fill="#0B1D2A" stroke="#2DE2C5" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#7FFFEA">OBSERVED</text></g>
+    <g transform="translate(718 278)"><rect width="116" height="28" rx="14" fill="#0B1B2E" stroke="#38BDF8" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#8ADFFF">RECORDED</text></g>
+    <g transform="translate(1041 106)"><rect width="108" height="28" rx="14" fill="#17102A" stroke="#8B5CF6" stroke-opacity="0.45"/><text x="54" y="18" text-anchor="middle" fill="#C4B5FD">REPLAYED</text></g>
+    <g transform="translate(1048 264)"><rect width="102" height="28" rx="14" fill="#24180B" stroke="#F59E0B" stroke-opacity="0.45"/><text x="51" y="18" text-anchor="middle" fill="#FCD38D">VERIFIED</text></g>
+  </g>
+</svg>
