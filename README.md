@@ -104,7 +104,7 @@ I contribute upstream to agent orchestration and quality-engineering infrastruct
 - **[Ruflo](https://github.com/ruvnet/ruflo)** — [GitHub-listed contributor](https://github.com/ruvnet/ruflo/graphs/contributors) with 84 repository commits and [49 merged PRs](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli); +5,783 / −741 accepted lines across 191 changed files.
 - **[Agentic-QE](https://github.com/proffesor-for-testing/agentic-qe)** — [GitHub-listed contributor](https://github.com/proffesor-for-testing/agentic-qe/graphs/contributors) with 74 repository commits and [34 merged PRs](https://github.com/proffesor-for-testing/agentic-qe/pulls?q=is%3Apr+author%3Arudycelekli); +11,061 / −1,967 accepted lines across 242 changed files.
 
-<sub>Last verified 2026-09-27 UTC · refreshed hourly by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
+<sub>Last verified 2026-09-28 UTC · refreshed hourly by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
 <!-- contribution-stats:end -->
 
 ## What I’m exploring
