@@ -75,10 +75,10 @@ Dark-profile translation:
 
 1. Existing proof-driven hero.
 2. Evidence thesis and proof loop.
-3. Flagship proof stack.
-4. Live modeled Agentic Power snapshot with evidence and caveats.
-5. Agentic operating model and framework attribution.
-6. Live open-source contribution proof.
+3. Verified upstream contribution proof, before self-authored projects.
+4. Flagship proof stack.
+5. Live modeled Agentic Power snapshot with evidence and caveats.
+6. Agentic operating model and framework attribution.
 7. Research questions, tools, community leadership, and current work.
 8. Closing invitation.
 
@@ -98,6 +98,7 @@ Dark-profile translation:
 - Tie every capability claim to public work or phrase it as an operating principle.
 - Keep the profile scannable: one graphic, one short explanation, four concrete operating principles.
 - Keep contribution claims machine-counted. Discover public upstream projects from merged PR history, include one only when GitHub's Contributors API lists Rudy, and calculate accepted code only from merged pull requests.
+- Treat GitHub-indexed commits as a separate cached attribution signal, never as a synonym for merged pull requests or accepted work.
 
 ## Rerun Inputs
 

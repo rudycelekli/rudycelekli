@@ -18,6 +18,20 @@ My work sits where agent infrastructure meets experimental science: record what 
 
 <img src="./assets/proof-loop.svg" width="100%" alt="The proof loop: observe, record, replay, verify" />
 
+<!-- contribution-stats:start -->
+## Open-source impact, verified
+
+My upstream work is discovered automatically across public repositories outside my account and included **only when GitHub also lists me as a contributor**. Merged PRs are the accepted-work measure; GitHub-indexed commits are a separate cached attribution signal. Stars and forks describe repository reach, not personal credit.
+
+<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for Ruflo, Agentic-QE, MoneyPrinterTurbo" />
+
+- **[Ruflo](https://github.com/ruvnet/ruflo)**: [GitHub-listed contributor](https://github.com/ruvnet/ruflo/graphs/contributors) with 84 GitHub-indexed commits and [49 merged PRs](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +5,783 / −741 accepted lines across 191 changed files. Repository reach: 73,405 stars and 8,716 forks.
+- **[Agentic-QE](https://github.com/proffesor-for-testing/agentic-qe)**: [GitHub-listed contributor](https://github.com/proffesor-for-testing/agentic-qe/graphs/contributors) with 74 GitHub-indexed commits and [34 merged PRs](https://github.com/proffesor-for-testing/agentic-qe/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +11,061 / −1,967 accepted lines across 242 changed files. Repository reach: 485 stars and 95 forks.
+- **[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)**: [GitHub-listed contributor](https://github.com/harry0703/MoneyPrinterTurbo/graphs/contributors) with 5 GitHub-indexed commits and [13 merged PRs](https://github.com/harry0703/MoneyPrinterTurbo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +768 / −115 accepted lines across 31 changed files. Repository reach: 126,348 stars and 19,730 forks.
+
+<sub>Last verified 2026-09-28 UTC · visual + evidence refreshed every 30 minutes by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
+<!-- contribution-stats:end -->
+
 ## The proof stack
 
 <table>
@@ -74,15 +88,15 @@ I design for that multiplier, but I won’t publish one without exposing its sco
 
 <img src="./assets/agentic-power-profile.svg" width="100%" alt="Operator-calibrated provisional Agentic Power since 2025 with a month-by-month timeline" />
 
-**AP ≈ 56.4× (operator-calibrated provisional estimate):** approximately 7,998.5 skilled Human-Equivalent Hours, or 200.0 engineer-weeks, divided by 141.8 operator-estimated human-direction hours. The transparent scenario range is 34.9× to 91.6×.
+**AP ≈ 56.7× (operator-calibrated provisional estimate):** approximately 8,043.6 skilled Human-Equivalent Hours, or 201.1 engineer-weeks, divided by 141.8 operator-estimated human-direction hours. The transparent scenario range is 35.1× to 92.1×.
 
-The evidence base since January 2025 combines **91 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**: personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
+The evidence base since January 2025 combines **96 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**: personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
 
-The conservative GitHub activity proxy produces 1,316.5 direction hours because it assigns attention to individual commits and repository-months. Operator recall is **1.5–2.0 active direction hours per week**; across 81.0 weeks, that calibrates the denominator to 121.6–162.1 hours, with 141.8 as the midpoint.
+The conservative GitHub activity proxy produces 1,320.4 direction hours because it assigns attention to individual commits and repository-months. Operator recall is **1.5–2.0 active direction hours per week**; across 81.0 weeks, that calibrates the denominator to 121.6–162.1 hours, with 141.8 as the midpoint.
 
 Direction includes active briefing, steering, reviewing, correcting, and coordinating. It excludes agent runtime and waiting. The calibration is operator-estimated rather than reconstructed from time logs, so this remains **a transparent scenario, not a completed Full Evidence Audit**.
 
-<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence and visuals refreshed hourly; redacted repository snapshot retained until a private read credential is available</sub>
+<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence and visuals refreshed every 30 minutes; redacted repository snapshot retained until a private read credential is available</sub>
 <!-- agentic-power-profile:end -->
 
 <img src="./assets/agentic-operating-model.svg" width="100%" alt="Agentic operating model: delegate, orchestrate, verify, and improve" />
@@ -93,20 +107,6 @@ Direction includes active briefing, steering, reviewing, correcting, and coordin
 - **Improve:** [Wind Tunnel](https://github.com/rudycelekli/gradia-wind-tunnel) and [Reward Loop](https://github.com/rudycelekli/gradia-reward-loop) turn measured failure into a better next run.
 
 <sub>Framework concept by [Dr. Mark Allen / HeroForge.AI](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/). Visual and operating-model adaptation are original to this profile.</sub>
-
-<!-- contribution-stats:start -->
-## Official open-source contributor
-
-This section discovers my merged upstream work automatically and includes **only projects where GitHub lists me as a contributor**. Accepted-code totals count merged pull requests only; stars and forks describe repository reach, not personal credit.
-
-<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for Ruflo, Agentic-QE, MoneyPrinterTurbo" />
-
-- **[Ruflo](https://github.com/ruvnet/ruflo)**: [GitHub-listed contributor](https://github.com/ruvnet/ruflo/graphs/contributors) with 84 repository commits and [49 merged PRs](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +5,783 / −741 accepted lines across 191 changed files. Repository reach: 73,405 stars and 8,716 forks.
-- **[Agentic-QE](https://github.com/proffesor-for-testing/agentic-qe)**: [GitHub-listed contributor](https://github.com/proffesor-for-testing/agentic-qe/graphs/contributors) with 74 repository commits and [34 merged PRs](https://github.com/proffesor-for-testing/agentic-qe/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +11,061 / −1,967 accepted lines across 242 changed files. Repository reach: 485 stars and 95 forks.
-- **[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)**: [GitHub-listed contributor](https://github.com/harry0703/MoneyPrinterTurbo/graphs/contributors) with 5 repository commits and [8 merged PRs](https://github.com/harry0703/MoneyPrinterTurbo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +465 / −57 accepted lines across 21 changed files. Repository reach: 126,337 stars and 19,729 forks.
-
-<sub>Last verified 2026-09-28 UTC · visual + evidence refreshed hourly by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
-<!-- contribution-stats:end -->
 
 ## What I’m exploring
 

@@ -618,7 +618,7 @@ def metric(x: int, label: str, value: str, color: str) -> str:
     return f"""
       <g transform="translate({x} 0)">
         <text y="0" fill="{color}" font-size="31" font-weight="750">{html.escape(value)}</text>
-        <text y="27" fill="#91A2B8" font-size="12" letter-spacing="1.2">{html.escape(label.upper())}</text>
+        <text y="27" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" letter-spacing="0.55">{html.escape(label.upper())}</text>
       </g>"""
 
 
@@ -1075,10 +1075,10 @@ def render_repository_card(
       <text x="519" y="52" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">{compact(int(repo['stargazers']))} STARS · {compact(int(repo['forks']))} FORKS</text>
       <text x="31" y="81" fill="#91A2B8" font-size="12.5">{description}</text>
       <g transform="translate(31 148)">
-        {metric(0, 'repo commits', str(commits), str(repo['accent']))}
-        {metric(122, 'merged PRs', str(merged), str(repo['secondary']))}
-        {metric(238, 'files accepted', compact(files), '#F8FAFC')}
-        {metric(366, 'line changes', compact(accepted_lines), '#F8FAFC')}
+        {metric(0, 'indexed commits', compact(commits), str(repo['accent']))}
+        {metric(128, 'merged PRs', compact(merged), str(repo['secondary']))}
+        {metric(250, 'files accepted', compact(files), '#F8FAFC')}
+        {metric(380, 'line changes', compact(accepted_lines), '#F8FAFC')}
       </g>
       <line x1="31" y1="194" x2="519" y2="194" stroke="#203149"/>
       <text x="31" y="222" fill="#91A2B8" font-size="12">accepted code</text>
@@ -1101,10 +1101,10 @@ def render_contribution_footer(
     <text x="152" fill="#65758B">•</text>
     <text x="172" fill="#9B7CFF">{total_merged} merged PRs</text>
     <text x="292" fill="#65758B">•</text>
-    <text x="312" fill="#F8FAFC">{compact(total_commits)} repo commits</text>
+    <text x="312" fill="#F8FAFC">{compact(total_commits)} indexed commits</text>
     <text x="445" fill="#65758B">•</text>
     <text x="465" fill="#F2A93B">{compact(total_stars)} combined stars</text>
-    <text x="1116" fill="#65758B" text-anchor="end">official contributor evidence · refreshed hourly</text>
+    <text x="1116" fill="#65758B" text-anchor="end">official evidence · every 30 min</text>
   </g>"""
 
 
@@ -1140,7 +1140,7 @@ def render_svg(repositories: list[dict[str, object]], updated: str) -> str:
   <rect width="1200" height="{height}" rx="28" fill="url(#canvas)"/>
   <rect x="1" y="1" width="1198" height="{height - 2}" rx="27" fill="none" stroke="#26364D"/>
   <rect x="42" y="32" width="66" height="4" rx="2" fill="url(#rule)"/>
-  <text x="42" y="70" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="29" font-weight="780">OFFICIAL OPEN-SOURCE CONTRIBUTOR</text>
+  <text x="42" y="70" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="29" font-weight="780">OPEN-SOURCE IMPACT, VERIFIED</text>
   <text x="1158" y="68" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" text-anchor="end">GITHUB · {html.escape(updated)} UTC</text>
   <g font-family="Avenir Next,Segoe UI,sans-serif">
     {''.join(cards)}
@@ -1153,9 +1153,9 @@ def render_svg(repositories: list[dict[str, object]], updated: str) -> str:
 def render_readme_section(repositories: list[dict[str, object]], updated: str) -> str:
     lines = [
         "<!-- contribution-stats:start -->",
-        "## Official open-source contributor",
+        "## Open-source impact, verified",
         "",
-        "This section discovers my merged upstream work automatically and includes **only projects where GitHub lists me as a contributor**. Accepted-code totals count merged pull requests only; stars and forks describe repository reach, not personal credit.",
+        "My upstream work is discovered automatically across public repositories outside my account and included **only when GitHub also lists me as a contributor**. Merged PRs are the accepted-work measure; GitHub-indexed commits are a separate cached attribution signal. Stars and forks describe repository reach, not personal credit.",
         "",
         f'<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for {html.escape(", ".join(str(repo["name"]) for repo in repositories))}" />',
         "",
@@ -1164,7 +1164,7 @@ def render_readme_section(repositories: list[dict[str, object]], updated: str) -
         lines.append(
             f"- **[{repo['name']}]({repo['url']})**: "
             f"[GitHub-listed contributor]({repo['contributors_url']}) with "
-            f"{int(repo['contributor_commits']):,} repository commits and "
+            f"{int(repo['contributor_commits']):,} GitHub-indexed commits and "
             f"[{int(repo['merged_prs']):,} merged PRs]({repo['pull_requests_url']}); "
             f"+{int(repo['accepted_additions']):,} / −{int(repo['accepted_deletions']):,} "
             f"accepted lines across {int(repo['accepted_changed_files']):,} changed files. "
@@ -1173,7 +1173,7 @@ def render_readme_section(repositories: list[dict[str, object]], updated: str) -
     lines.extend(
         [
             "",
-            f"<sub>Last verified {updated} UTC · visual + evidence refreshed hourly by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>",
+            f"<sub>Last verified {updated} UTC · visual + evidence refreshed every 30 minutes by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>",
             "<!-- contribution-stats:end -->",
         ]
     )
@@ -1208,7 +1208,7 @@ def render_agentic_power_readme(profile: dict[str, object]) -> str:
             "",
             "Direction includes active briefing, steering, reviewing, correcting, and coordinating. It excludes agent runtime and waiting. The calibration is operator-estimated rather than reconstructed from time logs, so this remains **a transparent scenario, not a completed Full Evidence Audit**.",
             "",
-            "<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence and visuals refreshed hourly; redacted repository snapshot retained until a private read credential is available</sub>",
+            "<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence and visuals refreshed every 30 minutes; redacted repository snapshot retained until a private read credential is available</sub>",
             "<!-- agentic-power-profile:end -->",
         ]
     )
@@ -1283,7 +1283,7 @@ def main() -> int:
         "methodology": {
             "project_discovery": "Every public, non-fork repository outside the login's own account with a merged pull request authored by the login is discovered automatically on each run.",
             "project_inclusion": "A discovered repository is included only when GitHub's Contributors API also lists the login.",
-            "contributor_commits": "Commit count reported by GitHub's Contributors API.",
+            "contributor_commits": "Cached commit-attribution count reported by GitHub's Contributors API; GitHub identifies contributors by author email and says this endpoint may be several hours behind.",
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
         },

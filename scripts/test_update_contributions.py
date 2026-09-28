@@ -129,6 +129,9 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("3 verified projects", svg)
         self.assertIn("6.0k combined stars", svg)
         self.assertIn("STARS", svg)
+        self.assertIn("INDEXED COMMITS", svg)
+        self.assertIn("OPEN-SOURCE IMPACT, VERIFIED", svg)
+        self.assertIn("every 30 min", svg)
         self.assertIn("Repository stars and forks describe project reach", svg)
 
     def test_long_unbroken_copy_is_clamped(self):
@@ -136,6 +139,17 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual(len(lines), 2)
         self.assertLessEqual(max(map(len, lines)), 20)
         self.assertTrue(lines[-1].endswith("…"))
+
+    def test_profile_leads_with_upstream_proof_and_runs_twice_hourly(self):
+        readme = (subject.ROOT / "README.md").read_text()
+        workflow = (
+            subject.ROOT / ".github" / "workflows" / "refresh-contribution-stats.yml"
+        ).read_text()
+        self.assertLess(
+            readme.index("<!-- contribution-stats:start -->"),
+            readme.index("## The proof stack"),
+        )
+        self.assertIn('cron: "17,47 * * * *"', workflow)
 
 
 if __name__ == "__main__":
