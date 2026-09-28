@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import html
 import json
 import math
@@ -31,24 +32,29 @@ OPERATOR_DIRECTION_HOURS_PER_WEEK = {
     "base": 1.75,
     "high": 2.0,
 }
-REPOSITORIES = (
-    {
+# Cosmetic copy/color overrides only. Inclusion is always discovered from GitHub.
+PRESENTATION_OVERRIDES = {
+    "ruvnet/ruflo": {
         "name": "Ruflo",
-        "full_name": "ruvnet/ruflo",
         "accent": "#2DE2C5",
         "secondary": "#4D7CFE",
         "description": "Agent orchestration & autonomous workflows",
     },
-    {
+    "proffesor-for-testing/agentic-qe": {
         "name": "Agentic-QE",
-        "full_name": "proffesor-for-testing/agentic-qe",
         "accent": "#9B7CFF",
         "secondary": "#F2A93B",
         "description": "Agentic quality engineering infrastructure",
     },
+}
+ACCENT_PAIRS = (
+    ("#2DE2C5", "#4D7CFE"),
+    ("#9B7CFF", "#F2A93B"),
+    ("#F2A93B", "#2DE2C5"),
+    ("#4D7CFE", "#9B7CFF"),
 )
 
-QUERY = """
+DISCOVERY_QUERY = """
 query($query: String!, $cursor: String) {
   search(query: $query, type: ISSUE, first: 100, after: $cursor) {
     issueCount
@@ -67,6 +73,17 @@ query($query: String!, $cursor: String) {
         commits { totalCount }
         comments { totalCount }
         reviews { totalCount }
+        repository {
+          name
+          nameWithOwner
+          description
+          url
+          isPrivate
+          isFork
+          stargazerCount
+          forkCount
+          owner { login }
+        }
       }
     }
   }
@@ -75,48 +92,57 @@ query($query: String!, $cursor: String) {
 
 
 def graphql(token: str, variables: dict[str, object]) -> dict[str, object]:
-    body = json.dumps({"query": QUERY, "variables": variables}).encode()
-    request = urllib.request.Request(
-        "https://api.github.com/graphql",
-        data=body,
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json",
-            "User-Agent": "rudycelekli-profile-stats",
-        },
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            payload = json.load(response)
-    except urllib.error.HTTPError as error:
-        detail = error.read().decode(errors="replace")
-        raise RuntimeError(f"GitHub GraphQL failed ({error.code}): {detail}") from error
-    if payload.get("errors"):
-        raise RuntimeError(f"GitHub GraphQL errors: {payload['errors']}")
-    return payload["data"]["search"]
+    body = json.dumps({"query": DISCOVERY_QUERY, "variables": variables}).encode()
+    for attempt in range(6):
+        request = urllib.request.Request(
+            "https://api.github.com/graphql",
+            data=body,
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json",
+                "User-Agent": "rudycelekli-profile-stats",
+            },
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=45) as response:
+                payload = json.load(response)
+        except urllib.error.HTTPError as error:
+            detail = error.read().decode(errors="replace")
+            if error.code >= 500 and attempt < 5:
+                time.sleep(min(2**attempt, 16))
+                continue
+            if error.code == 403 and attempt < 5:
+                reset_at = int(error.headers.get("X-RateLimit-Reset", "0"))
+                delay = max(reset_at - int(time.time()) + 2, 5)
+                time.sleep(min(delay, 60))
+                continue
+            raise RuntimeError(
+                f"GitHub GraphQL failed ({error.code}): {detail}"
+            ) from error
+        except urllib.error.URLError as error:
+            if attempt < 5:
+                time.sleep(min(2**attempt, 16))
+                continue
+            raise RuntimeError(f"GitHub GraphQL network failure: {error}") from error
+        if payload.get("errors"):
+            raise RuntimeError(f"GitHub GraphQL errors: {payload['errors']}")
+        return payload["data"]["search"]
+    raise RuntimeError("GitHub GraphQL failed after retries")
 
 
 def official_contribution_count(token: str, full_name: str) -> int | None:
     """Return GitHub's commit count only when the login is in Contributors."""
     page = 1
     while True:
-        request = urllib.request.Request(
-            f"https://api.github.com/repos/{full_name}/contributors?per_page=100&page={page}",
-            headers={
-                "Authorization": f"Bearer {token}",
-                "Accept": "application/vnd.github+json",
-                "X-GitHub-Api-Version": "2022-11-28",
-                "User-Agent": "rudycelekli-profile-stats",
-            },
+        contributors = rest_json(
+            token,
+            f"https://api.github.com/repos/{full_name}/contributors"
+            f"?per_page=100&page={page}",
         )
-        try:
-            with urllib.request.urlopen(request, timeout=30) as response:
-                contributors = json.load(response)
-        except urllib.error.HTTPError as error:
-            detail = error.read().decode(errors="replace")
+        if not isinstance(contributors, list):
             raise RuntimeError(
-                f"GitHub Contributors API failed for {full_name} ({error.code}): {detail}"
-            ) from error
+                f"Unexpected GitHub Contributors response for {full_name}"
+            )
 
         for contributor in contributors:
             if contributor.get("login", "").casefold() == LOGIN.casefold():
@@ -410,15 +436,24 @@ def collect_repository_aggregate(
     }
 
 
-def collect_repository(token: str, repository: dict[str, str]) -> dict[str, object]:
-    contributor_commits = official_contribution_count(token, repository["full_name"])
-    if contributor_commits is None:
-        raise RuntimeError(
-            f"{LOGIN} is not listed by GitHub as a contributor to "
-            f"{repository['full_name']}; refusing to publish this project"
-        )
+def readable_description(value: object) -> str:
+    """Prefer an English summary when a bilingual GitHub description provides one."""
+    description = " ".join(str(value or "Open-source software").split())
+    if "。" in description:
+        trailing = description.rsplit("。", 1)[-1].strip()
+        if trailing:
+            description = trailing
+    return description
 
-    query = f"repo:{repository['full_name']} is:pr author:{LOGIN}"
+
+def search_merged_pull_requests(
+    token: str, start: dt.date, end: dt.date
+) -> list[dict[str, object]]:
+    """Exhaust GitHub PR search, splitting date windows above its 1,000-result cap."""
+    query = (
+        f"is:pr author:{LOGIN} is:merged "
+        f"merged:{start.isoformat()}..{end.isoformat()}"
+    )
     cursor = None
     pull_requests: list[dict[str, object]] = []
     expected_total = 0
@@ -426,6 +461,18 @@ def collect_repository(token: str, repository: dict[str, str]) -> dict[str, obje
     while True:
         result = graphql(token, {"query": query, "cursor": cursor})
         expected_total = int(result["issueCount"])
+        if expected_total > 1_000:
+            if start == end:
+                raise RuntimeError(
+                    f"More than 1,000 merged PRs occurred on {start}; "
+                    "GitHub search cannot exhaust this day"
+                )
+            midpoint = start + (end - start) // 2
+            return search_merged_pull_requests(
+                token, start, midpoint
+            ) + search_merged_pull_requests(
+                token, midpoint + dt.timedelta(days=1), end
+            )
         pull_requests.extend(node for node in result["nodes"] if node)
         page = result["pageInfo"]
         if not page["hasNextPage"]:
@@ -434,27 +481,85 @@ def collect_repository(token: str, repository: dict[str, str]) -> dict[str, obje
 
     if len(pull_requests) != expected_total:
         raise RuntimeError(
-            f"Expected {expected_total} PRs for {repository['full_name']}, "
+            f"Expected {expected_total} merged PRs for {LOGIN}, "
             f"received {len(pull_requests)}"
         )
+    return pull_requests
 
-    merged = [item for item in pull_requests if item["merged"]]
-    return {
-        **repository,
-        "url": f"https://github.com/{repository['full_name']}",
-        "contributors_url": f"https://github.com/{repository['full_name']}/graphs/contributors",
-        "pull_requests_url": (
-            f"https://github.com/{repository['full_name']}/pulls"
-            f"?q=is%3Apr+author%3A{LOGIN}"
-        ),
-        "official_contributor": True,
-        "contributor_commits": contributor_commits,
-        "merged_prs": len(merged),
-        "accepted_additions": sum(int(item["additions"]) for item in merged),
-        "accepted_deletions": sum(int(item["deletions"]) for item in merged),
-        "accepted_changed_files": sum(int(item["changedFiles"]) for item in merged),
-        "_merged_pull_requests": merged,
-    }
+
+def discover_repositories(token: str) -> list[dict[str, object]]:
+    """Discover every public upstream repo with a merged PR and contributor proof."""
+    pull_requests = search_merged_pull_requests(
+        token, dt.date(2008, 1, 1), dt.datetime.now(dt.timezone.utc).date()
+    )
+
+    grouped: dict[str, dict[str, object]] = {}
+    for pull_request in pull_requests:
+        repository = pull_request.get("repository") or {}
+        full_name = str(repository.get("nameWithOwner", ""))
+        owner = repository.get("owner") or {}
+        if (
+            not full_name
+            or bool(repository.get("isPrivate"))
+            or bool(repository.get("isFork"))
+            or str(owner.get("login", "")).casefold() == LOGIN.casefold()
+        ):
+            continue
+        entry = grouped.setdefault(
+            full_name,
+            {"repository": repository, "pull_requests": []},
+        )
+        entry["pull_requests"].append(pull_request)
+
+    repositories: list[dict[str, object]] = []
+    for full_name, entry in grouped.items():
+        contributor_commits = official_contribution_count(token, full_name)
+        if contributor_commits is None:
+            continue
+        repository = entry["repository"]
+        merged = entry["pull_requests"]
+        override = PRESENTATION_OVERRIDES.get(full_name, {})
+        palette_index = hashlib.sha256(full_name.encode()).digest()[0] % len(
+            ACCENT_PAIRS
+        )
+        accent, secondary = ACCENT_PAIRS[palette_index]
+        repositories.append(
+            {
+                "name": override.get("name", repository["name"]),
+                "full_name": full_name,
+                "accent": override.get("accent", accent),
+                "secondary": override.get("secondary", secondary),
+                "description": override.get(
+                    "description", readable_description(repository.get("description"))
+                ),
+                "url": repository["url"],
+                "contributors_url": f"https://github.com/{full_name}/graphs/contributors",
+                "pull_requests_url": (
+                    f"https://github.com/{full_name}/pulls"
+                    f"?q=is%3Apr+author%3A{LOGIN}+is%3Amerged"
+                ),
+                "official_contributor": True,
+                "contributor_commits": contributor_commits,
+                "merged_prs": len(merged),
+                "accepted_additions": sum(int(item["additions"]) for item in merged),
+                "accepted_deletions": sum(int(item["deletions"]) for item in merged),
+                "accepted_changed_files": sum(
+                    int(item["changedFiles"]) for item in merged
+                ),
+                "stargazers": int(repository["stargazerCount"]),
+                "forks": int(repository["forkCount"]),
+                "_merged_pull_requests": merged,
+            }
+        )
+
+    repositories.sort(
+        key=lambda item: (
+            -int(item["merged_prs"]),
+            -int(item["stargazers"]),
+            str(item["full_name"]).casefold(),
+        )
+    )
+    return repositories
 
 
 def compact(value: int) -> str:
@@ -463,6 +568,50 @@ def compact(value: int) -> str:
     if value < 10_000:
         return f"{value / 1_000:.1f}k"
     return f"{round(value / 1_000):.0f}k"
+
+
+def ellipsize(value: object, limit: int) -> str:
+    text = " ".join(str(value).split())
+    if len(text) <= limit:
+        return text
+    return text[: max(limit - 1, 1)].rstrip() + "…"
+
+
+def wrap_svg_text(value: object, width: int = 64, lines: int = 2) -> list[str]:
+    """Wrap predictable SVG copy and clamp it before it can escape a card."""
+    words = str(value).split()
+    wrapped: list[str] = []
+    current = ""
+    for word in words:
+        while len(word) > width:
+            if current:
+                wrapped.append(current)
+                current = ""
+                if len(wrapped) == lines:
+                    break
+            wrapped.append(word[:width])
+            word = word[width:]
+            if len(wrapped) == lines:
+                break
+        if len(wrapped) == lines:
+            break
+        candidate = word if not current else f"{current} {word}"
+        if len(candidate) <= width:
+            current = candidate
+        else:
+            wrapped.append(current)
+            current = word
+            if len(wrapped) == lines:
+                break
+    if current and len(wrapped) < lines:
+        wrapped.append(current)
+    original = " ".join(words)
+    visible = " ".join(wrapped)
+    if len(visible) < len(original) and wrapped:
+        wrapped[-1] = ellipsize(wrapped[-1], max(width - 1, 1))
+        if not wrapped[-1].endswith("…"):
+            wrapped[-1] += "…"
+    return wrapped or [""]
 
 
 def metric(x: int, label: str, value: str, color: str) -> str:
@@ -899,48 +1048,85 @@ def render_agentic_power_svg(profile: dict[str, object]) -> str:
 """
 
 
-def render_svg(repositories: list[dict[str, object]], updated: str) -> str:
-    cards: list[str] = []
-    for index, repo in enumerate(repositories):
-        x = 42 + index * 567
-        merged = int(repo["merged_prs"])
-        commits = int(repo["contributor_commits"])
-        added = int(repo["accepted_additions"])
-        deleted = int(repo["accepted_deletions"])
-        files = int(repo["accepted_changed_files"])
-        accepted_lines = added + deleted
-        cards.append(
-            f"""
-    <g transform="translate({x} 112)">
-      <rect width="550" height="226" rx="22" fill="#0B1728" stroke="{repo['accent']}" stroke-opacity="0.42"/>
-      <rect x="1" y="1" width="7" height="224" rx="4" fill="{repo['accent']}"/>
-      <circle cx="39" cy="39" r="8" fill="{repo['accent']}"/>
-      <text x="59" y="47" fill="#F8FAFC" font-size="24" font-weight="760">{html.escape(str(repo['name']))}</text>
-      <text x="31" y="76" fill="#91A2B8" font-size="13">{html.escape(str(repo['description']))}</text>
-      <g transform="translate(31 123)">
+def render_repository_card(
+    repo: dict[str, object], index: int, repository_count: int
+) -> str:
+    """Render one reusable repository evidence component."""
+    row = index // 2
+    is_single_last = repository_count % 2 == 1 and index == repository_count - 1
+    x = 325 if is_single_last else 42 + (index % 2) * 567
+    y = 112 + row * 258
+    merged = int(repo["merged_prs"])
+    commits = int(repo["contributor_commits"])
+    added = int(repo["accepted_additions"])
+    deleted = int(repo["accepted_deletions"])
+    files = int(repo["accepted_changed_files"])
+    accepted_lines = added + deleted
+    description_lines = wrap_svg_text(repo["description"], width=65, lines=2)
+    description = "".join(
+        f'<tspan x="31" dy="{0 if line_index == 0 else 18}">{html.escape(line)}</tspan>'
+        for line_index, line in enumerate(description_lines)
+    )
+    return f"""
+    <g transform="translate({x} {y})">
+      <rect width="550" height="240" rx="22" fill="#0B1728" stroke="{repo['accent']}" stroke-opacity="0.42"/>
+      <rect class="signal" x="31" y="23" width="48" height="3" rx="1.5" fill="{repo['accent']}"/>
+      <text x="31" y="55" fill="#F8FAFC" font-size="22" font-weight="760">{html.escape(ellipsize(repo['name'], 24))}</text>
+      <text x="519" y="52" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">{compact(int(repo['stargazers']))} STARS · {compact(int(repo['forks']))} FORKS</text>
+      <text x="31" y="81" fill="#91A2B8" font-size="12.5">{description}</text>
+      <g transform="translate(31 148)">
         {metric(0, 'repo commits', str(commits), str(repo['accent']))}
-        {metric(126, 'merged PRs', str(merged), str(repo['secondary']))}
-        {metric(244, 'files accepted', compact(files), '#F8FAFC')}
-        {metric(372, 'line changes', compact(accepted_lines), '#F8FAFC')}
+        {metric(122, 'merged PRs', str(merged), str(repo['secondary']))}
+        {metric(238, 'files accepted', compact(files), '#F8FAFC')}
+        {metric(366, 'line changes', compact(accepted_lines), '#F8FAFC')}
       </g>
-      <line x1="31" y1="175" x2="519" y2="175" stroke="#203149"/>
-      <text x="31" y="205" fill="#91A2B8" font-size="13">accepted code</text>
-      <text x="132" y="205" fill="{repo['accent']}" font-size="15" font-weight="700">+{added:,}</text>
-      <text x="220" y="205" fill="#F87171" font-size="15" font-weight="700">−{deleted:,}</text>
-      <text x="519" y="205" fill="#65758B" font-size="12" text-anchor="end">GitHub-listed contributor</text>
+      <line x1="31" y1="194" x2="519" y2="194" stroke="#203149"/>
+      <text x="31" y="222" fill="#91A2B8" font-size="12">accepted code</text>
+      <text x="128" y="222" fill="{repo['accent']}" font-size="14" font-weight="700">+{added:,}</text>
+      <text x="216" y="222" fill="#F87171" font-size="14" font-weight="700">−{deleted:,}</text>
+      <text x="519" y="222" fill="#65758B" font-size="11.5" text-anchor="end">GitHub-listed contributor</text>
     </g>"""
-        )
 
+
+def render_contribution_footer(
+    repositories: list[dict[str, object]], footer_y: int
+) -> str:
+    """Render aggregate proof and freshness as one reusable summary component."""
     total_merged = sum(int(repo["merged_prs"]) for repo in repositories)
     total_commits = sum(int(repo["contributor_commits"]) for repo in repositories)
-    total_lines = sum(
-        int(repo["accepted_additions"]) + int(repo["accepted_deletions"])
-        for repo in repositories
-    )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
+    total_stars = sum(int(repo["stargazers"]) for repo in repositories)
+    return f"""
+  <g transform="translate(42 {footer_y})" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12">
+    <text fill="#2DE2C5">{len(repositories)} verified projects</text>
+    <text x="152" fill="#65758B">•</text>
+    <text x="172" fill="#9B7CFF">{total_merged} merged PRs</text>
+    <text x="292" fill="#65758B">•</text>
+    <text x="312" fill="#F8FAFC">{compact(total_commits)} repo commits</text>
+    <text x="445" fill="#65758B">•</text>
+    <text x="465" fill="#F2A93B">{compact(total_stars)} combined stars</text>
+    <text x="1116" fill="#65758B" text-anchor="end">official contributor evidence · refreshed hourly</text>
+  </g>"""
+
+
+def render_svg(repositories: list[dict[str, object]], updated: str) -> str:
+    cards = [
+        render_repository_card(repo, index, len(repositories))
+        for index, repo in enumerate(repositories)
+    ]
+    rows = max(math.ceil(len(repositories) / 2), 1)
+    height = 112 + rows * 240 + max(rows - 1, 0) * 18 + 72
+    footer_y = height - 34
+    footer = render_contribution_footer(repositories, footer_y)
+    project_names = ", ".join(str(repo["name"]) for repo in repositories)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-labelledby="title desc">
   <title id="title">Open-source contribution evidence for Rudy Celekli</title>
-  <desc id="desc">GitHub-verified contribution totals for Ruflo and Agentic-QE.</desc>
+  <desc id="desc">GitHub-verified contribution totals for {html.escape(project_names)}. Repository stars and forks describe project reach, not personal contribution.</desc>
   <defs>
+    <style>
+      .signal {{ animation: signal-pulse 3.8s ease-in-out infinite; }}
+      @keyframes signal-pulse {{ 0%, 100% {{ opacity: .58; }} 50% {{ opacity: 1; }} }}
+      @media (prefers-reduced-motion: reduce) {{ .signal {{ animation: none; opacity: 1; }} }}
+    </style>
     <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#07111E"/>
       <stop offset="1" stop-color="#150B2E"/>
@@ -951,24 +1137,15 @@ def render_svg(repositories: list[dict[str, object]], updated: str) -> str:
       <stop offset="1" stop-color="#9B7CFF"/>
     </linearGradient>
   </defs>
-  <rect width="1200" height="410" rx="28" fill="url(#canvas)"/>
-  <rect x="1" y="1" width="1198" height="408" rx="27" fill="none" stroke="#26364D"/>
+  <rect width="1200" height="{height}" rx="28" fill="url(#canvas)"/>
+  <rect x="1" y="1" width="1198" height="{height - 2}" rx="27" fill="none" stroke="#26364D"/>
   <rect x="42" y="32" width="66" height="4" rx="2" fill="url(#rule)"/>
-  <text x="42" y="70" fill="#F8FAFC" font-family="Inter,Segoe UI,sans-serif" font-size="29" font-weight="780">OFFICIAL OPEN-SOURCE CONTRIBUTOR</text>
+  <text x="42" y="70" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="29" font-weight="780">OFFICIAL OPEN-SOURCE CONTRIBUTOR</text>
   <text x="1158" y="68" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" text-anchor="end">GITHUB · {html.escape(updated)} UTC</text>
-  <g font-family="Inter,Segoe UI,sans-serif">
+  <g font-family="Avenir Next,Segoe UI,sans-serif">
     {''.join(cards)}
   </g>
-  <g transform="translate(42 372)" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13">
-    <text fill="#2DE2C5">{len(repositories)} verified projects</text>
-    <text x="160" fill="#65758B">•</text>
-    <text x="182" fill="#9B7CFF">{total_commits} repository commits</text>
-    <text x="378" fill="#65758B">•</text>
-    <text x="400" fill="#F8FAFC">{total_merged} merged PRs</text>
-    <text x="525" fill="#65758B">•</text>
-    <text x="547" fill="#F2A93B">{total_lines:,} accepted line changes</text>
-    <text x="1116" fill="#65758B" text-anchor="end">public GitHub API evidence · refreshed hourly</text>
-  </g>
+  {footer}
 </svg>
 """
 
@@ -978,24 +1155,25 @@ def render_readme_section(repositories: list[dict[str, object]], updated: str) -
         "<!-- contribution-stats:start -->",
         "## Official open-source contributor",
         "",
-        "I contribute upstream to agent orchestration and quality-engineering infrastructure. This section includes **only projects where GitHub lists me as a contributor**; accepted-code totals include merged pull requests only.",
+        "This section discovers my merged upstream work automatically and includes **only projects where GitHub lists me as a contributor**. Accepted-code totals count merged pull requests only; stars and forks describe repository reach, not personal credit.",
         "",
-        '<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for Ruflo and Agentic-QE" />',
+        f'<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for {html.escape(", ".join(str(repo["name"]) for repo in repositories))}" />',
         "",
     ]
     for repo in repositories:
         lines.append(
-            f"- **[{repo['name']}]({repo['url']})** — "
+            f"- **[{repo['name']}]({repo['url']})**: "
             f"[GitHub-listed contributor]({repo['contributors_url']}) with "
             f"{int(repo['contributor_commits']):,} repository commits and "
             f"[{int(repo['merged_prs']):,} merged PRs]({repo['pull_requests_url']}); "
             f"+{int(repo['accepted_additions']):,} / −{int(repo['accepted_deletions']):,} "
-            f"accepted lines across {int(repo['accepted_changed_files']):,} changed files."
+            f"accepted lines across {int(repo['accepted_changed_files']):,} changed files. "
+            f"Repository reach: {int(repo['stargazers']):,} stars and {int(repo['forks']):,} forks."
         )
     lines.extend(
         [
             "",
-            f"<sub>Last verified {updated} UTC · refreshed hourly by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>",
+            f"<sub>Last verified {updated} UTC · visual + evidence refreshed hourly by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>",
             "<!-- contribution-stats:end -->",
         ]
     )
@@ -1030,7 +1208,7 @@ def render_agentic_power_readme(profile: dict[str, object]) -> str:
             "",
             "Direction includes active briefing, steering, reviewing, correcting, and coordinating. It excludes agent runtime and waiting. The calibration is operator-estimated rather than reconstructed from time logs, so this remains **a transparent scenario, not a completed Full Evidence Audit**.",
             "",
-            "<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence refreshed hourly; redacted repository snapshot retained until a private read credential is available</sub>",
+            "<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence and visuals refreshed hourly; redacted repository snapshot retained until a private read credential is available</sub>",
             "<!-- agentic-power-profile:end -->",
         ]
     )
@@ -1048,6 +1226,11 @@ def update_readme(marker: str, section: str) -> None:
     README.write_text(updated)
 
 
+def write_generated(path: Path, content: str) -> None:
+    """Write deterministic generated text with no trailing whitespace."""
+    path.write_text("\n".join(line.rstrip() for line in content.splitlines()) + "\n")
+
+
 def main() -> int:
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if not token:
@@ -1055,7 +1238,11 @@ def main() -> int:
         return 2
 
     updated = dt.datetime.now(dt.timezone.utc).date().isoformat()
-    repositories = [collect_repository(token, repo) for repo in REPOSITORIES]
+    repositories = discover_repositories(token)
+    if not repositories:
+        raise RuntimeError(
+            "No public upstream repositories passed the merged-PR and official-contributor gates"
+        )
     private_token = os.environ.get("PRIVATE_GITHUB_TOKEN")
     raw_exclusions = os.environ.get("AP_EXCLUDED_REPOSITORIES", "")
     excluded = {
@@ -1063,7 +1250,7 @@ def main() -> int:
         for value in raw_exclusions.split(",")
         if value.strip()
     }
-    excluded.update(str(repo["full_name"]).casefold() for repo in REPOSITORIES)
+    excluded.update(str(repo["full_name"]).casefold() for repo in repositories)
     if private_token:
         if not raw_exclusions.strip():
             raise RuntimeError(
@@ -1089,22 +1276,26 @@ def main() -> int:
         for repo in repositories
     ]
     payload = {
-        "schema_version": 1,
-        "source": "GitHub GraphQL API",
+        "schema_version": 2,
+        "source": "GitHub GraphQL and REST APIs",
         "login": LOGIN,
         "updated_at_utc": updated,
         "methodology": {
-            "project_inclusion": "Included only when GitHub's Contributors API lists the login.",
+            "project_discovery": "Every public, non-fork repository outside the login's own account with a merged pull request authored by the login is discovered automatically on each run.",
+            "project_inclusion": "A discovered repository is included only when GitHub's Contributors API also lists the login.",
             "contributor_commits": "Commit count reported by GitHub's Contributors API.",
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
+            "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
         },
         "repositories": public_repositories,
     }
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
-    DATA_FILE.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
-    AP_DATA_FILE.write_text(json.dumps(agentic_power, indent=2, sort_keys=True) + "\n")
-    SVG_FILE.write_text(render_svg(repositories, updated))
-    AP_SVG_FILE.write_text(render_agentic_power_svg(agentic_power))
+    write_generated(DATA_FILE, json.dumps(payload, indent=2, sort_keys=True))
+    write_generated(
+        AP_DATA_FILE, json.dumps(agentic_power, indent=2, sort_keys=True)
+    )
+    write_generated(SVG_FILE, render_svg(repositories, updated))
+    write_generated(AP_SVG_FILE, render_agentic_power_svg(agentic_power))
     update_readme(
         "agentic-power-profile", render_agentic_power_readme(agentic_power)
     )

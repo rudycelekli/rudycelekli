@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Test contribution discovery and rendering
+        run: python -m unittest discover -s scripts -p 'test_*.py'
+
       - name: Refresh GitHub contribution evidence
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

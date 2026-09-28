@@ -67,7 +67,8 @@ Dark-profile translation:
 - Live Agentic Power equation: modeled HEH, operator-estimated human direction, central AP, and a visible uncertainty range. Preserve the conservative GitHub direction proxy in the evidence data for comparison.
 - Two-row month-over-month timeline from January 2025 onward: accepted HEH bars plus a modeled AP line.
 - Semantic SVG motion: evidence signals flow, operating stages activate in sequence, and charts reveal their series; all motion stops under `prefers-reduced-motion`.
-- Responsive SVG copy: wrap long card titles inside their own bounds and preserve a readable text equivalent in the README.
+- Responsive SVG copy: wrap or clamp repository names and descriptions inside their own bounds and preserve a readable text equivalent in the README.
+- Auto-discovered contribution constellation: qualifying upstream projects flow into a two-column evidence layout with current stars and forks labeled as project reach, never personal credit.
 - Attribution link: directly credit the Agentic Power Framework and its author.
 
 ## Page Pattern
@@ -96,7 +97,7 @@ Dark-profile translation:
 - Build original diagrams; do not copy HeroForge artwork or language beyond attributed framework terms.
 - Tie every capability claim to public work or phrase it as an operating principle.
 - Keep the profile scannable: one graphic, one short explanation, four concrete operating principles.
-- Keep contribution claims machine-counted. Include a project only when GitHub's Contributors API lists Rudy, and calculate accepted code only from merged pull requests.
+- Keep contribution claims machine-counted. Discover public upstream projects from merged PR history, include one only when GitHub's Contributors API lists Rudy, and calculate accepted code only from merged pull requests.
 
 ## Rerun Inputs
 
