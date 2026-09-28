@@ -1,18 +1,18 @@
 {
   "agentic_power_x": {
-    "base": 59.4,
-    "high": 96.4,
+    "base": 59.5,
+    "high": 96.5,
     "low": 36.9
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.105,
-      "high": 0.12,
+      "base": 0.1049,
+      "high": 0.1199,
       "low": 0.09
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 81.11,
+    "evidence_window_weeks": 81.12,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 210.8,
+  "engineer_weeks_at_40h": 211.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 141.94,
-    "high": 162.22,
-    "low": 121.66
+    "base": 141.96,
+    "high": 162.24,
+    "low": 121.68
   },
   "monthly": [
     {
@@ -416,7 +416,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 5.75,
-        "high": 6.58,
+        "high": 6.57,
         "low": 4.93
       },
       "month": "2026-03",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 52.2,
-        "high": 85.3,
+        "high": 85.4,
         "low": 32.0
       },
       "modeled_human_direction_hours": {
         "base": 17.96,
-        "high": 20.53,
-        "low": 15.4
+        "high": 20.52,
+        "low": 15.39
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -545,9 +545,9 @@
         "low": 40.4
       },
       "modeled_human_direction_hours": {
-        "base": 31.47,
-        "high": 35.96,
-        "low": 26.97
+        "base": 31.46,
+        "high": 35.95,
+        "low": 26.96
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,48 +566,48 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 83.0,
-        "high": 132.8,
-        "low": 52.8
+        "base": 83.2,
+        "high": 133.2,
+        "low": 53.0
       },
       "modeled_human_direction_hours": {
-        "base": 34.39,
-        "high": 39.31,
-        "low": 29.48
+        "base": 34.45,
+        "high": 39.37,
+        "low": 29.52
       },
       "month": "2026-09",
-      "public_merged_pull_requests": 137,
+      "public_merged_pull_requests": 138,
       "repository_default_branch_commits": 1016,
       "skilled_human_equivalent_hours": {
-        "base": 2852.7,
-        "high": 3913.87,
-        "low": 2076.82
+        "base": 2866.17,
+        "high": 3932.05,
+        "low": 2086.92
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 327.62,
-        "high": 495.57,
-        "low": 222.46
+        "base": 328.23,
+        "high": 496.42,
+        "low": 222.89
       }
     }
   ],
-  "public_accepted_pull_requests": 137,
+  "public_accepted_pull_requests": 138,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 8430.95,
-    "high": 11723.42,
-    "low": 5981.61
+    "base": 8444.42,
+    "high": 11741.6,
+    "low": 5991.71
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 1352.13,
-    "high": 2162.35,
-    "low": 887.64
+    "base": 1352.74,
+    "high": 2163.2,
+    "low": 888.07
   },
   "updated_at_utc": "2026-09-28",
   "window": {
-    "end": "2026-09-28T13:35:20Z",
+    "end": "2026-09-28T15:24:57Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -4583,6 +4583,35 @@
       "pull_request": 1472,
       "title": "fix(tts): time out and safely publish FFmpeg narration",
       "url": "https://github.com/harry0703/MoneyPrinterTurbo/pull/1472"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-09-28T06:16:17Z",
+      "evidence": {
+        "additions": 206,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 55,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.47,
+        "high": 18.18,
+        "low": 10.1
+      },
+      "merged_at": "2026-09-28T15:24:57Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 3515,
+      "title": "fix(security): produce valid JSON and SARIF scan output",
+      "url": "https://github.com/ruvnet/ruflo/pull/3515"
     }
   ]
 }
