@@ -151,6 +151,13 @@ class ContributionDiscoveryTests(unittest.TestCase):
         )
         self.assertIn('cron: "17,47 * * * *"', workflow)
 
+    def test_professional_identity_and_community_links_are_visible(self):
+        readme = (subject.ROOT / "README.md").read_text()
+        self.assertIn("https://www.linkedin.com/in/rudymizrahi/", readme)
+        self.assertIn("https://charlotte.aitinkerers.org/", readme)
+        self.assertIn("https://agentics.org/leadership/", readme)
+        self.assertLess(readme.index("LINKEDIN-connect"), readme.index("## Intelligence"))
+
 
 if __name__ == "__main__":
     unittest.main()

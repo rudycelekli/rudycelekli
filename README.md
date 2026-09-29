@@ -4,6 +4,7 @@
 
 <br />
 
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-connect-0B1220?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2&color=0B1220)](https://www.linkedin.com/in/rudymizrahi/)
 [![Gradia](https://img.shields.io/badge/GRADIA-proof--bound_AI-0B1220?style=for-the-badge&labelColor=13B8A6&color=0B1220)](https://www.gradiahq.com)
 [![ORCID](https://img.shields.io/badge/ORCID-research_record-0B1220?style=for-the-badge&logo=orcid&logoColor=white&labelColor=A6CE39&color=0B1220)](https://orcid.org/0009-0000-7043-3766)
 [![Follow](https://img.shields.io/github/followers/rudycelekli?style=for-the-badge&logo=github&label=FOLLOW&labelColor=7C3AED&color=0B1220)](https://github.com/rudycelekli?tab=followers)
@@ -141,7 +142,7 @@ The thread through all of it is simple: **an AI system should be able to show it
 
 ## Building the human layer
 
-I build communities as deliberately as systems: Chapter Lead for **AI Tinkerers Charlotte** and Regional Ambassador for the **Agentics Foundation**, connecting builders who are actively shipping agentic AI.
+I build communities as deliberately as systems. I lead [**AI Tinkerers Charlotte**](https://charlotte.aitinkerers.org/), a demo-first room for people shipping real AI systems, and serve as [**Regional Ambassador for the Agentics Foundation**](https://agentics.org/leadership/), connecting builders working on practical agentic AI.
 
 ---
 
@@ -151,7 +152,7 @@ I build communities as deliberately as systems: Chapter Lead for **AI Tinkerers 
 
 If you care about agent reliability, evaluation integrity, or evidence-first AI, explore the work and compare notes.
 
-[**Explore Gradia →**](https://www.gradiahq.com) &nbsp;&nbsp; [**Research record →**](https://orcid.org/0009-0000-7043-3766) &nbsp;&nbsp; [**Follow the work →**](https://github.com/rudycelekli?tab=followers)
+[**Connect on LinkedIn →**](https://www.linkedin.com/in/rudymizrahi/) &nbsp;&nbsp; [**Explore Gradia →**](https://www.gradiahq.com) &nbsp;&nbsp; [**Research record →**](https://orcid.org/0009-0000-7043-3766) &nbsp;&nbsp; [**Follow on GitHub →**](https://github.com/rudycelekli?tab=followers)
 
 <sub>Based in Charlotte · working in public</sub>
 

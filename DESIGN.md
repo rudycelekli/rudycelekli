@@ -74,13 +74,14 @@ Dark-profile translation:
 ## Page Pattern
 
 1. Existing proof-driven hero.
-2. Evidence thesis and proof loop.
-3. Verified upstream contribution proof, before self-authored projects.
-4. Flagship proof stack.
-5. Live modeled Agentic Power snapshot with evidence and caveats.
-6. Agentic operating model and framework attribution.
-7. Research questions, tools, community leadership, and current work.
-8. Closing invitation.
+2. Restrained professional identity rail: LinkedIn, Gradia, ORCID, and GitHub.
+3. Evidence thesis and proof loop.
+4. Verified upstream contribution proof, before self-authored projects.
+5. Flagship proof stack.
+6. Live modeled Agentic Power snapshot with evidence and caveats.
+7. Agentic operating model and framework attribution.
+8. Research questions, tools, linked community leadership, and current work.
+9. Closing invitation with one clear professional conversation path.
 
 ## Content Style
 
@@ -99,6 +100,7 @@ Dark-profile translation:
 - Keep the profile scannable: one graphic, one short explanation, four concrete operating principles.
 - Keep contribution claims machine-counted. Discover public upstream projects from merged PR history, include one only when GitHub's Contributors API lists Rudy, and calculate accepted code only from merged pull requests.
 - Treat GitHub-indexed commits as a separate cached attribution signal, never as a synonym for merged pull requests or accepted work.
+- Keep identity links restrained and verifiable. Prefer a small first-screen rail plus contextual links over a résumé-style badge wall.
 
 ## Rerun Inputs
 
