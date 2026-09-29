@@ -25,10 +25,10 @@ My upstream work is discovered automatically across public repositories outside 
 
 <img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for MoneyPrinterTurbo, Ruflo, Agentic-QE, CowAgent" />
 
-- **[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)**: [GitHub-listed contributor](https://github.com/harry0703/MoneyPrinterTurbo/graphs/contributors) with 57 GitHub-indexed commits and [58 merged PRs](https://github.com/harry0703/MoneyPrinterTurbo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +4,585 / −421 accepted lines across 131 changed files. Repository reach: 126,711 stars and 19,790 forks.
-- **[Ruflo](https://github.com/ruvnet/ruflo)**: [GitHub-listed contributor](https://github.com/ruvnet/ruflo/graphs/contributors) with 89 GitHub-indexed commits and [51 merged PRs](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +6,041 / −801 accepted lines across 195 changed files. Repository reach: 73,454 stars and 8,723 forks.
+- **[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)**: [GitHub-listed contributor](https://github.com/harry0703/MoneyPrinterTurbo/graphs/contributors) with 57 GitHub-indexed commits and [58 merged PRs](https://github.com/harry0703/MoneyPrinterTurbo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +4,585 / −421 accepted lines across 131 changed files. Repository reach: 126,714 stars and 19,789 forks.
+- **[Ruflo](https://github.com/ruvnet/ruflo)**: [GitHub-listed contributor](https://github.com/ruvnet/ruflo/graphs/contributors) with 89 GitHub-indexed commits and [51 merged PRs](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +6,041 / −801 accepted lines across 195 changed files. Repository reach: 73,455 stars and 8,723 forks.
 - **[Agentic-QE](https://github.com/proffesor-for-testing/agentic-qe)**: [GitHub-listed contributor](https://github.com/proffesor-for-testing/agentic-qe/graphs/contributors) with 84 GitHub-indexed commits and [42 merged PRs](https://github.com/proffesor-for-testing/agentic-qe/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +11,868 / −2,105 accepted lines across 284 changed files. Repository reach: 486 stars and 96 forks.
-- **[CowAgent](https://github.com/zhayujie/CowAgent)**: [GitHub-listed contributor](https://github.com/zhayujie/CowAgent/graphs/contributors) with 4 GitHub-indexed commits and [4 merged PRs](https://github.com/zhayujie/CowAgent/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +500 / −48 accepted lines across 8 changed files. Repository reach: 47,159 stars and 10,375 forks.
+- **[CowAgent](https://github.com/zhayujie/CowAgent)**: [GitHub-listed contributor](https://github.com/zhayujie/CowAgent/graphs/contributors) with 4 GitHub-indexed commits and [9 merged PRs](https://github.com/zhayujie/CowAgent/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +1,126 / −126 accepted lines across 21 changed files. Repository reach: 47,160 stars and 10,375 forks.
 
 <sub>Last verified 2026-09-29 UTC · visual + evidence refreshed every 30 minutes by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
 <!-- contribution-stats:end -->
@@ -89,11 +89,11 @@ I design for that multiplier, but I won’t publish one without exposing its sco
 
 <img src="./assets/agentic-power-profile.svg" width="100%" alt="Operator-calibrated provisional Agentic Power since 2025 with a month-by-month timeline" />
 
-**AP ≈ 60.7× (operator-calibrated provisional estimate):** approximately 8,621.2 skilled Human-Equivalent Hours, or 215.5 engineer-weeks, divided by 142.1 operator-estimated human-direction hours. The transparent scenario range is 37.7× to 98.4×.
+**AP ≈ 61.0× (operator-calibrated provisional estimate):** approximately 8,675.1 skilled Human-Equivalent Hours, or 216.9 engineer-weeks, divided by 142.1 operator-estimated human-direction hours. The transparent scenario range is 38.0× to 99.0×.
 
-The evidence base since January 2025 combines **155 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**: personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
+The evidence base since January 2025 combines **160 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**: personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
 
-The conservative GitHub activity proxy produces 1,369.9 direction hours because it assigns attention to individual commits and repository-months. Operator recall is **1.5–2.0 active direction hours per week**; across 81.2 weeks, that calibrates the denominator to 121.8–162.4 hours, with 142.1 as the midpoint.
+The conservative GitHub activity proxy produces 1,373.2 direction hours because it assigns attention to individual commits and repository-months. Operator recall is **1.5–2.0 active direction hours per week**; across 81.2 weeks, that calibrates the denominator to 121.8–162.4 hours, with 142.1 as the midpoint.
 
 Direction includes active briefing, steering, reviewing, correcting, and coordinating. It excludes agent runtime and waiting. The calibration is operator-estimated rather than reconstructed from time logs, so this remains **a transparent scenario, not a completed Full Evidence Audit**.
 
