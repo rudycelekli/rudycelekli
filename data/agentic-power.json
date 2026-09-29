@@ -1,18 +1,18 @@
 {
   "agentic_power_x": {
-    "base": 61.2,
-    "high": 99.2,
+    "base": 61.3,
+    "high": 99.3,
     "low": 38.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.1032,
+      "base": 0.1031,
       "high": 0.1179,
       "low": 0.0884
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 81.2,
+    "evidence_window_weeks": 81.21,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 217.4,
+  "engineer_weeks_at_40h": 217.7,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 142.1,
-    "high": 162.4,
-    "low": 121.8
+    "base": 142.12,
+    "high": 162.42,
+    "low": 121.81
   },
   "monthly": [
     {
@@ -124,13 +124,13 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 8.3,
+        "base": 8.4,
         "high": 13.6,
         "low": 5.1
       },
       "modeled_human_direction_hours": {
-        "base": 1.68,
-        "high": 1.92,
+        "base": 1.67,
+        "high": 1.91,
         "low": 1.44
       },
       "month": "2025-04",
@@ -410,12 +410,12 @@
     {
       "active_repositories": 13,
       "agentic_power_x": {
-        "base": 32.3,
+        "base": 32.4,
         "high": 52.8,
         "low": 19.8
       },
       "modeled_human_direction_hours": {
-        "base": 5.66,
+        "base": 5.65,
         "high": 6.46,
         "low": 4.85
       },
@@ -437,13 +437,13 @@
       "active_repositories": 18,
       "agentic_power_x": {
         "base": 45.5,
-        "high": 74.3,
+        "high": 74.4,
         "low": 27.9
       },
       "modeled_human_direction_hours": {
-        "base": 12.25,
-        "high": 14.0,
-        "low": 10.5
+        "base": 12.24,
+        "high": 13.99,
+        "low": 10.49
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 53.2,
         "high": 86.8,
-        "low": 32.5
+        "low": 32.6
       },
       "modeled_human_direction_hours": {
         "base": 17.65,
-        "high": 20.18,
+        "high": 20.17,
         "low": 15.13
       },
       "month": "2026-06",
@@ -515,13 +515,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 62.5,
-        "high": 102.1,
+        "high": 102.2,
         "low": 38.3
       },
       "modeled_human_direction_hours": {
-        "base": 12.95,
-        "high": 14.8,
-        "low": 11.1
+        "base": 12.94,
+        "high": 14.79,
+        "low": 11.09
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -545,9 +545,9 @@
         "low": 41.1
       },
       "modeled_human_direction_hours": {
-        "base": 30.93,
-        "high": 35.35,
-        "low": 26.51
+        "base": 30.92,
+        "high": 35.33,
+        "low": 26.5
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,48 +566,48 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 85.7,
-        "high": 137.0,
-        "low": 54.7
+        "base": 85.9,
+        "high": 137.3,
+        "low": 54.8
       },
       "modeled_human_direction_hours": {
-        "base": 36.39,
-        "high": 41.59,
-        "low": 31.19
+        "base": 36.45,
+        "high": 41.66,
+        "low": 31.24
       },
       "month": "2026-09",
-      "public_merged_pull_requests": 162,
+      "public_merged_pull_requests": 163,
       "repository_default_branch_commits": 1016,
       "skilled_human_equivalent_hours": {
-        "base": 3118.67,
-        "high": 4272.93,
-        "low": 2276.3
+        "base": 3129.82,
+        "high": 4287.99,
+        "low": 2284.66
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 352.69,
-        "high": 531.87,
-        "low": 239.58
+        "base": 353.42,
+        "high": 532.89,
+        "low": 240.09
       }
     }
   ],
-  "public_accepted_pull_requests": 162,
+  "public_accepted_pull_requests": 163,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 8696.92,
-    "high": 12082.48,
-    "low": 6181.09
+    "base": 8708.07,
+    "high": 12097.54,
+    "low": 6189.45
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 1377.2,
-    "high": 2198.65,
-    "low": 904.76
+    "base": 1377.93,
+    "high": 2199.67,
+    "low": 905.27
   },
   "updated_at_utc": "2026-09-29",
   "window": {
-    "end": "2026-09-29T05:48:42Z",
+    "end": "2026-09-29T06:29:07Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -5308,6 +5308,35 @@
       "pull_request": 1467,
       "title": "fix(upload-post): refuse redirected video submissions",
       "url": "https://github.com/harry0703/MoneyPrinterTurbo/pull/1467"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-28T03:31:48Z",
+      "evidence": {
+        "additions": 167,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.15,
+        "high": 15.06,
+        "low": 8.36
+      },
+      "merged_at": "2026-09-29T06:29:07Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3255,
+      "title": "fix(terminal): bound remote image downloads",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3255"
     }
   ]
 }
