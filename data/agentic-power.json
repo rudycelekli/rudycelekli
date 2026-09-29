@@ -1,14 +1,14 @@
 {
   "agentic_power_x": {
     "base": 61.3,
-    "high": 99.3,
-    "low": 38.1
+    "high": 99.4,
+    "low": 38.2
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.1031,
-      "high": 0.1179,
+      "high": 0.1178,
       "low": 0.0884
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 217.7,
+  "engineer_weeks_at_40h": 218.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -332,12 +332,12 @@
     {
       "active_repositories": 8,
       "agentic_power_x": {
-        "base": 44.4,
+        "base": 44.5,
         "high": 72.6,
         "low": 27.2
       },
       "modeled_human_direction_hours": {
-        "base": 4.03,
+        "base": 4.02,
         "high": 4.6,
         "low": 3.45
       },
@@ -385,13 +385,13 @@
       "active_repositories": 5,
       "agentic_power_x": {
         "base": 39.2,
-        "high": 63.8,
+        "high": 64.1,
         "low": 24.0
       },
       "modeled_human_direction_hours": {
         "base": 2.78,
         "high": 3.18,
-        "low": 2.39
+        "low": 2.38
       },
       "month": "2026-02",
       "public_merged_pull_requests": 0,
@@ -411,13 +411,13 @@
       "active_repositories": 13,
       "agentic_power_x": {
         "base": 32.4,
-        "high": 52.8,
+        "high": 52.9,
         "low": 19.8
       },
       "modeled_human_direction_hours": {
         "base": 5.65,
         "high": 6.46,
-        "low": 4.85
+        "low": 4.84
       },
       "month": "2026-03",
       "public_merged_pull_requests": 0,
@@ -462,13 +462,13 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 56.6,
+        "base": 56.7,
         "high": 92.6,
         "low": 34.7
       },
       "modeled_human_direction_hours": {
-        "base": 8.92,
-        "high": 10.19,
+        "base": 8.91,
+        "high": 10.18,
         "low": 7.64
       },
       "month": "2026-05",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 53.2,
-        "high": 86.8,
+        "high": 86.9,
         "low": 32.6
       },
       "modeled_human_direction_hours": {
-        "base": 17.65,
-        "high": 20.17,
-        "low": 15.13
+        "base": 17.64,
+        "high": 20.16,
+        "low": 15.12
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -520,7 +520,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 12.94,
-        "high": 14.79,
+        "high": 14.78,
         "low": 11.09
       },
       "month": "2026-07",
@@ -545,9 +545,9 @@
         "low": 41.1
       },
       "modeled_human_direction_hours": {
-        "base": 30.92,
-        "high": 35.33,
-        "low": 26.5
+        "base": 30.9,
+        "high": 35.32,
+        "low": 26.49
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,48 +566,48 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 85.9,
-        "high": 137.3,
-        "low": 54.8
+        "base": 86.0,
+        "high": 137.5,
+        "low": 55.0
       },
       "modeled_human_direction_hours": {
-        "base": 36.45,
-        "high": 41.66,
-        "low": 31.24
+        "base": 36.5,
+        "high": 41.71,
+        "low": 31.28
       },
       "month": "2026-09",
-      "public_merged_pull_requests": 163,
+      "public_merged_pull_requests": 164,
       "repository_default_branch_commits": 1016,
       "skilled_human_equivalent_hours": {
-        "base": 3129.82,
-        "high": 4287.99,
-        "low": 2284.66
+        "base": 3140.4,
+        "high": 4302.27,
+        "low": 2292.6
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 353.42,
-        "high": 532.89,
-        "low": 240.09
+        "base": 354.03,
+        "high": 533.74,
+        "low": 240.52
       }
     }
   ],
-  "public_accepted_pull_requests": 163,
+  "public_accepted_pull_requests": 164,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 8708.07,
-    "high": 12097.54,
-    "low": 6189.45
+    "base": 8718.65,
+    "high": 12111.82,
+    "low": 6197.39
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 1377.93,
-    "high": 2199.67,
-    "low": 905.27
+    "base": 1378.54,
+    "high": 2200.52,
+    "low": 905.7
   },
   "updated_at_utc": "2026-09-29",
   "window": {
-    "end": "2026-09-29T06:29:07Z",
+    "end": "2026-09-29T06:54:15Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -5337,6 +5337,35 @@
       "pull_request": 3255,
       "title": "fix(terminal): bound remote image downloads",
       "url": "https://github.com/zhayujie/CowAgent/pull/3255"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-28T03:48:31Z",
+      "evidence": {
+        "additions": 137,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.58,
+        "high": 14.28,
+        "low": 7.94
+      },
+      "merged_at": "2026-09-29T06:54:15Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3258,
+      "title": "fix(wechat-kf): advance cursor after queueing messages",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3258"
     }
   ]
 }
