@@ -153,7 +153,11 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
     def test_professional_identity_and_community_links_are_visible(self):
         readme = (subject.ROOT / "README.md").read_text()
+        self.assertIn("Forward Deployed AI Researcher", readme)
         self.assertIn("https://www.linkedin.com/in/rudymizrahi/", readme)
+        self.assertIn("https://www.gradiahq.com", readme)
+        self.assertIn("https://snorkel.ai/", readme)
+        self.assertIn("https://axiomconsulting.ai/", readme)
         self.assertIn("https://charlotte.aitinkerers.org/", readme)
         self.assertIn("https://agentics.org/leadership/", readme)
         self.assertLess(readme.index("LINKEDIN-connect"), readme.index("## Intelligence"))

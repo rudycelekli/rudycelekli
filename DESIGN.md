@@ -74,7 +74,7 @@ Dark-profile translation:
 ## Page Pattern
 
 1. Existing proof-driven hero.
-2. Restrained professional identity rail: LinkedIn, Gradia, ORCID, and GitHub.
+2. Restrained professional identity rail: positioning, LinkedIn, Gradia, ORCID, GitHub, and concise current affiliations.
 3. Evidence thesis and proof loop.
 4. Verified upstream contribution proof, before self-authored projects.
 5. Flagship proof stack.

@@ -9,11 +9,19 @@
 [![ORCID](https://img.shields.io/badge/ORCID-research_record-0B1220?style=for-the-badge&logo=orcid&logoColor=white&labelColor=A6CE39&color=0B1220)](https://orcid.org/0009-0000-7043-3766)
 [![Follow](https://img.shields.io/github/followers/rudycelekli?style=for-the-badge&logo=github&label=FOLLOW&labelColor=7C3AED&color=0B1220)](https://github.com/rudycelekli?tab=followers)
 
+<br />
+
+**Forward Deployed AI Researcher · Agentic AI Engineer**
+
+<sub>Building verifiable, long-horizon agent environments · Enterprise AI & GTM</sub>
+
+[Gradia](https://www.gradiahq.com) · [Snorkel AI](https://snorkel.ai/) · [Axiom Consulting](https://axiomconsulting.ai/)
+
 </div>
 
 ## Intelligence is cheap. Evidence is the product.
 
-I’m an AI solutions engineer and research scientist building systems that make autonomous behavior **observable, replayable, and independently verifiable**.
+I’m a forward deployed AI researcher and agentic AI engineer building systems that make autonomous behavior **observable, replayable, and independently verifiable**.
 
 My work sits where agent infrastructure meets experimental science: record what happened, challenge the evaluator, preserve the evidence, and make every important claim reproducible by someone else.
 
