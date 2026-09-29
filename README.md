@@ -25,7 +25,7 @@ My upstream work is discovered automatically across public repositories outside 
 
 <img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for MoneyPrinterTurbo, Ruflo, Agentic-QE" />
 
-- **[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)**: [GitHub-listed contributor](https://github.com/harry0703/MoneyPrinterTurbo/graphs/contributors) with 54 GitHub-indexed commits and [54 merged PRs](https://github.com/harry0703/MoneyPrinterTurbo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +4,334 / −412 accepted lines across 123 changed files. Repository reach: 126,702 stars and 19,787 forks.
+- **[MoneyPrinterTurbo](https://github.com/harry0703/MoneyPrinterTurbo)**: [GitHub-listed contributor](https://github.com/harry0703/MoneyPrinterTurbo/graphs/contributors) with 54 GitHub-indexed commits and [57 merged PRs](https://github.com/harry0703/MoneyPrinterTurbo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +4,531 / −419 accepted lines across 129 changed files. Repository reach: 126,707 stars and 19,788 forks.
 - **[Ruflo](https://github.com/ruvnet/ruflo)**: [GitHub-listed contributor](https://github.com/ruvnet/ruflo/graphs/contributors) with 89 GitHub-indexed commits and [51 merged PRs](https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +6,041 / −801 accepted lines across 195 changed files. Repository reach: 73,451 stars and 8,722 forks.
 - **[Agentic-QE](https://github.com/proffesor-for-testing/agentic-qe)**: [GitHub-listed contributor](https://github.com/proffesor-for-testing/agentic-qe/graphs/contributors) with 84 GitHub-indexed commits and [42 merged PRs](https://github.com/proffesor-for-testing/agentic-qe/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged); +11,868 / −2,105 accepted lines across 284 changed files. Repository reach: 486 stars and 96 forks.
 
@@ -88,11 +88,11 @@ I design for that multiplier, but I won’t publish one without exposing its sco
 
 <img src="./assets/agentic-power-profile.svg" width="100%" alt="Operator-calibrated provisional Agentic Power since 2025 with a month-by-month timeline" />
 
-**AP ≈ 60.2× (operator-calibrated provisional estimate):** approximately 8,544.9 skilled Human-Equivalent Hours, or 213.6 engineer-weeks, divided by 142.0 operator-estimated human-direction hours. The transparent scenario range is 37.4× to 97.6×.
+**AP ≈ 60.3× (operator-calibrated provisional estimate):** approximately 8,571.0 skilled Human-Equivalent Hours, or 214.3 engineer-weeks, divided by 142.1 operator-estimated human-direction hours. The transparent scenario range is 37.5× to 97.8×.
 
-The evidence base since January 2025 combines **147 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**: personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
+The evidence base since January 2025 combines **150 merged upstream PRs** with **6,532 authored, non-merge default-branch commits across 109 currently accessible repositories**: personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.
 
-The conservative GitHub activity proxy produces 1,362.5 direction hours because it assigns attention to individual commits and repository-months. Operator recall is **1.5–2.0 active direction hours per week**; across 81.1 weeks, that calibrates the denominator to 121.7–162.3 hours, with 142.0 as the midpoint.
+The conservative GitHub activity proxy produces 1,364.7 direction hours because it assigns attention to individual commits and repository-months. Operator recall is **1.5–2.0 active direction hours per week**; across 81.2 weeks, that calibrates the denominator to 121.8–162.4 hours, with 142.1 as the midpoint.
 
 Direction includes active briefing, steering, reviewing, correcting, and coordinating. It excludes agent runtime and waiting. The calibration is operator-estimated rather than reconstructed from time logs, so this remains **a transparent scenario, not a completed Full Evidence Audit**.
 
