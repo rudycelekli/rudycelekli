@@ -39,6 +39,30 @@ def repository(full_name, **overrides):
     return value
 
 
+def owned_repository(full_name, **overrides):
+    owner, name = full_name.split("/", 1)
+    value = {
+        "name": name,
+        "full_name": full_name,
+        "html_url": f"https://github.com/{full_name}",
+        "description": "An owned public source project",
+        "homepage": "",
+        "language": "Python",
+        "topics": ["agents"],
+        "stargazers_count": 0,
+        "forks_count": 0,
+        "private": False,
+        "fork": False,
+        "archived": False,
+        "disabled": False,
+        "pushed_at": "2026-09-30T00:00:00Z",
+        "created_at": "2026-01-01T00:00:00Z",
+        "owner": {"login": owner},
+    }
+    value.update(overrides)
+    return value
+
+
 class ContributionDiscoveryTests(unittest.TestCase):
     @mock.patch.object(subject, "graphql")
     def test_search_splits_windows_beyond_githubs_result_cap(self, graphql):
@@ -134,6 +158,63 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("every 30 min", svg)
         self.assertIn("Repository stars and forks describe project reach", svg)
 
+    @mock.patch.object(subject, "official_contribution_count")
+    @mock.patch.object(subject, "rest_json")
+    def test_discovers_owned_public_projects_without_confusing_them_with_upstream(
+        self, rest_json, official_count
+    ):
+        rest_json.return_value = [
+            owned_repository(f"{subject.LOGIN}/testlore", stargazers_count=1),
+            owned_repository(f"{subject.LOGIN}/proofseal", stargazers_count=2),
+            owned_repository(f"{subject.LOGIN}/gradia-guard"),
+            owned_repository(f"{subject.LOGIN}/{subject.LOGIN}"),
+            owned_repository(f"{subject.LOGIN}/DreamMachine"),
+            owned_repository(f"{subject.LOGIN}/forked", fork=True),
+            owned_repository(f"{subject.LOGIN}/archived", archived=True),
+        ]
+        official_count.side_effect = lambda _token, full_name: {
+            f"{subject.LOGIN}/testlore": 40,
+            f"{subject.LOGIN}/proofseal": 25,
+            f"{subject.LOGIN}/gradia-guard": 60,
+        }[full_name]
+
+        discovered = subject.discover_owned_repositories("token")
+
+        self.assertEqual(
+            [item["name"] for item in discovered],
+            ["ProofSeal", "TestLore", "Gradia Guard"],
+        )
+        self.assertTrue(all(item["ownership"] == "owner" for item in discovered))
+        self.assertTrue(all(item["visibility"] == "public" for item in discovered))
+        self.assertNotIn("DreamMachine", [item["name"] for item in discovered])
+
+    def test_owned_project_visual_is_compact_and_overflow_safe(self):
+        projects = []
+        for index in range(4):
+            projects.append(
+                {
+                    "name": "testlore" if index == 0 else f"owned-project-{index}",
+                    "description": "x" * 180,
+                    "accent": "#2DE2C5",
+                    "secondary": "#4D7CFE",
+                    "contributor_commits": index + 1,
+                    "stargazers": index,
+                    "forks": 0,
+                    "pushed_at": "2026-09-30T00:00:00Z",
+                }
+            )
+
+        svg = subject.render_owned_svg(projects, 12, "2026-09-30")
+
+        self.assertIn('height="518"', svg)
+        self.assertIn("PUBLIC PROJECTS, OWNED", svg)
+        self.assertIn("12 qualifying owned repos", svg)
+        self.assertIn("4 spotlighted", svg)
+        self.assertIn("OWNER", svg)
+        self.assertIn("testlore", svg)
+        self.assertIn('clip-path="url(#owned-card-0)"', svg)
+        self.assertIn("prefers-reduced-motion", svg)
+
     def test_long_unbroken_copy_is_clamped(self):
         lines = subject.wrap_svg_text("x" * 200, width=20, lines=2)
         self.assertEqual(len(lines), 2)
@@ -147,6 +228,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
         ).read_text()
         self.assertLess(
             readme.index("<!-- contribution-stats:start -->"),
+            readme.index("## The proof stack"),
+        )
+        self.assertLess(
+            readme.index("### Public projects I own"),
             readme.index("## The proof stack"),
         )
         self.assertIn('cron: "17,47 * * * *"', workflow)

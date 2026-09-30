@@ -69,6 +69,7 @@ Dark-profile translation:
 - Semantic SVG motion: evidence signals flow, operating stages activate in sequence, and charts reveal their series; all motion stops under `prefers-reduced-motion`.
 - Responsive SVG copy: wrap or clamp repository names and descriptions inside their own bounds and preserve a readable text equivalent in the README.
 - Auto-discovered contribution constellation: qualifying upstream projects flow into a two-column evidence layout with current stars and forks labeled as project reach, never personal credit.
+- Auto-discovered owner-project spotlight: public, non-fork, active source repositories use a compact three-column layout and explicit OWNER labels. Preserve the complete qualifying set in machine-readable evidence while keeping the visible profile selective and scannable.
 - Attribution link: directly credit the Agentic Power Framework and its author.
 
 ## Page Pattern
@@ -76,7 +77,7 @@ Dark-profile translation:
 1. Existing proof-driven hero.
 2. Restrained professional identity rail: positioning, LinkedIn, Gradia, ORCID, GitHub, and concise current affiliations.
 3. Evidence thesis and proof loop.
-4. Verified upstream contribution proof, before self-authored projects.
+4. Verified upstream contribution proof, followed by explicitly labeled owned public projects.
 5. Flagship proof stack.
 6. Live modeled Agentic Power snapshot with evidence and caveats.
 7. Agentic operating model and framework attribution.
@@ -100,6 +101,7 @@ Dark-profile translation:
 - Keep the profile scannable: one graphic, one short explanation, four concrete operating principles.
 - Keep contribution claims machine-counted. Discover public upstream projects from merged PR history, include one only when GitHub's Contributors API lists Rudy, and calculate accepted code only from merged pull requests.
 - Treat GitHub-indexed commits as a separate cached attribution signal, never as a synonym for merged pull requests or accepted work.
+- Discover owned public projects independently from upstream contributions. Exclude forks, archived or disabled repositories, the profile repository, and explicit authorship exceptions; never convert ownership into contributor credit.
 - Keep identity links restrained and verifiable. Prefer a small first-screen rail plus contextual links over a résumé-style badge wall.
 
 ## Rerun Inputs

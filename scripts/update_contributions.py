@@ -22,10 +22,18 @@ ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 DATA_FILE = ROOT / "data" / "contributions.json"
 SVG_FILE = ROOT / "assets" / "open-source-contributions.svg"
+OWNED_SVG_FILE = ROOT / "assets" / "owned-public-projects.svg"
 AP_DATA_FILE = ROOT / "data" / "agentic-power.json"
 AP_SVG_FILE = ROOT / "assets" / "agentic-power-profile.svg"
 REPOSITORY_DATA_FILE = ROOT / "data" / "repository-work-aggregate.json"
 LOGIN = "rudycelekli"
+OWNED_PROJECT_DISPLAY_LIMIT = 8
+# The profile repository is presentation infrastructure, not a product. The
+# user has also explicitly identified DreamMachine as not their authored work.
+OWNED_PROJECT_EXCLUSIONS = {
+    f"{LOGIN}/{LOGIN}".casefold(),
+    f"{LOGIN}/DreamMachine".casefold(),
+}
 PERIOD_START = dt.datetime(2025, 1, 1, tzinfo=dt.timezone.utc)
 OPERATOR_DIRECTION_HOURS_PER_WEEK = {
     "low": 1.5,
@@ -46,6 +54,11 @@ PRESENTATION_OVERRIDES = {
         "secondary": "#F2A93B",
         "description": "Agentic quality engineering infrastructure",
     },
+}
+OWNED_PRESENTATION_OVERRIDES = {
+    f"{LOGIN}/testlore": {"name": "TestLore"},
+    f"{LOGIN}/proofseal": {"name": "ProofSeal"},
+    f"{LOGIN}/gradia-guard": {"name": "Gradia Guard"},
 }
 ACCENT_PAIRS = (
     ("#2DE2C5", "#4D7CFE"),
@@ -562,12 +575,96 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
     return repositories
 
 
+def discover_owned_repositories(token: str) -> list[dict[str, object]]:
+    """Discover public source repositories owned by the profile login."""
+    repositories: list[dict[str, object]] = []
+    page = 1
+    while True:
+        parameters = urllib.parse.urlencode(
+            {
+                "type": "owner",
+                "sort": "pushed",
+                "direction": "desc",
+                "per_page": 100,
+                "page": page,
+            }
+        )
+        payload = rest_json(
+            token, f"https://api.github.com/users/{LOGIN}/repos?{parameters}"
+        )
+        if not isinstance(payload, list):
+            raise RuntimeError("Unexpected GitHub owned-repositories response")
+        for repository in payload:
+            owner = repository.get("owner") or {}
+            full_name = str(repository.get("full_name", ""))
+            if (
+                not full_name
+                or str(owner.get("login", "")).casefold() != LOGIN.casefold()
+                or bool(repository.get("private"))
+                or bool(repository.get("fork"))
+                or bool(repository.get("archived"))
+                or bool(repository.get("disabled"))
+                or full_name.casefold() in OWNED_PROJECT_EXCLUSIONS
+            ):
+                continue
+            commits = official_contribution_count(token, full_name) or 0
+            override = OWNED_PRESENTATION_OVERRIDES.get(full_name, {})
+            palette_index = hashlib.sha256(full_name.encode()).digest()[0] % len(
+                ACCENT_PAIRS
+            )
+            accent, secondary = ACCENT_PAIRS[palette_index]
+            repositories.append(
+                {
+                    "name": override.get("name", repository["name"]),
+                    "full_name": full_name,
+                    "url": repository["html_url"],
+                    "description": readable_description(repository.get("description")),
+                    "homepage": repository.get("homepage") or None,
+                    "language": repository.get("language") or "Multi-language",
+                    "topics": repository.get("topics") or [],
+                    "stargazers": int(repository.get("stargazers_count") or 0),
+                    "forks": int(repository.get("forks_count") or 0),
+                    "contributor_commits": commits,
+                    "pushed_at": repository.get("pushed_at"),
+                    "created_at": repository.get("created_at"),
+                    "ownership": "owner",
+                    "visibility": "public",
+                    "accent": accent,
+                    "secondary": secondary,
+                }
+            )
+        if len(payload) < 100:
+            break
+        page += 1
+
+    # Stable sorts make the public ranking legible: reach, recent activity,
+    # then attributed work. The complete discovered set is still published.
+    repositories.sort(key=lambda item: str(item["full_name"]).casefold())
+    repositories.sort(
+        key=lambda item: int(item["contributor_commits"]), reverse=True
+    )
+    repositories.sort(
+        key=lambda item: str(item.get("pushed_at") or ""), reverse=True
+    )
+    repositories.sort(key=lambda item: int(item["stargazers"]), reverse=True)
+    return repositories
+
+
 def compact(value: int) -> str:
     if value < 1_000:
         return str(value)
     if value < 10_000:
         return f"{value / 1_000:.1f}k"
     return f"{round(value / 1_000):.0f}k"
+
+
+def counted(value: int, noun: str) -> str:
+    """Format a count without visibly broken singular grammar."""
+    return f"{value:,} {noun if value == 1 else noun + 's'}"
+
+
+def compact_counted(value: int, noun: str) -> str:
+    return f"{compact(value)} {noun if value == 1 else noun + 'S'}"
 
 
 def ellipsize(value: object, limit: int) -> str:
@@ -1150,7 +1247,85 @@ def render_svg(repositories: list[dict[str, object]], updated: str) -> str:
 """
 
 
-def render_readme_section(repositories: list[dict[str, object]], updated: str) -> str:
+def render_owned_project_card(repo: dict[str, object], index: int) -> str:
+    """Render one compact, overflow-safe owner-project component."""
+    column = index % 3
+    row = index // 3
+    x = 42 + column * 372
+    y = 122 + row * 174
+    description_lines = wrap_svg_text(repo["description"], width=43, lines=2)
+    description = "".join(
+        f'<text x="24" y="{76 + line_index * 17}" fill="#91A2B8" font-size="11.5">{html.escape(line)}</text>'
+        for line_index, line in enumerate(description_lines)
+    )
+    pushed = str(repo.get("pushed_at") or "")[:10] or "unknown"
+    return f"""
+    <g transform="translate({x} {y})">
+      <defs><clipPath id="owned-card-{index}"><rect width="354" height="156" rx="18"/></clipPath></defs>
+      <rect width="354" height="156" rx="18" fill="#0B1728" stroke="{repo['accent']}" stroke-opacity="0.38"/>
+      <g clip-path="url(#owned-card-{index})">
+        <rect class="owned-signal" x="24" y="21" width="42" height="3" rx="1.5" fill="{repo['accent']}"/>
+        <text x="24" y="51" fill="#F8FAFC" font-size="19" font-weight="760">{html.escape(ellipsize(repo['name'], 20))}</text>
+        <text x="330" y="49" fill="{repo['accent']}" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" text-anchor="end">OWNER</text>
+        {description}
+        <line x1="24" y1="115" x2="330" y2="115" stroke="#203149"/>
+        <text x="24" y="140" fill="#F8FAFC" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">{compact_counted(int(repo['contributor_commits']), 'COMMIT')} · {compact_counted(int(repo['stargazers']), 'STAR')} · {compact_counted(int(repo['forks']), 'FORK')}</text>
+        <text x="330" y="140" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" text-anchor="end">{html.escape(pushed)}</text>
+      </g>
+    </g>"""
+
+
+def render_owned_svg(
+    projects: list[dict[str, object]], total_count: int, updated: str
+) -> str:
+    """Render the ranked owner-project spotlight as a separate visual."""
+    cards = [render_owned_project_card(repo, index) for index, repo in enumerate(projects)]
+    rows = max(math.ceil(len(projects) / 3), 1)
+    height = 122 + rows * 156 + max(rows - 1, 0) * 18 + 66
+    footer_y = height - 28
+    project_names = ", ".join(str(repo["name"]) for repo in projects)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-labelledby="title desc">
+  <title id="title">Public projects owned by Rudy Celekli</title>
+  <desc id="desc">Automatically discovered public owner repositories, spotlighting {html.escape(project_names)}. The complete qualifying set remains in machine-readable evidence.</desc>
+  <defs>
+    <style>
+      .owned-signal {{ animation: owner-pulse 4.2s ease-in-out infinite; }}
+      @keyframes owner-pulse {{ 0%, 100% {{ opacity: .52; }} 50% {{ opacity: 1; }} }}
+      @media (prefers-reduced-motion: reduce) {{ .owned-signal {{ animation: none; opacity: 1; }} }}
+    </style>
+    <linearGradient id="owned-canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#07111E"/>
+      <stop offset="1" stop-color="#150B2E"/>
+    </linearGradient>
+    <linearGradient id="owned-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#4D7CFE"/>
+      <stop offset="0.5" stop-color="#2DE2C5"/>
+      <stop offset="1" stop-color="#9B7CFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="{height}" rx="28" fill="url(#owned-canvas)"/>
+  <rect x="1" y="1" width="1198" height="{height - 2}" rx="27" fill="none" stroke="#26364D"/>
+  <rect x="42" y="30" width="66" height="4" rx="2" fill="url(#owned-rule)"/>
+  <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="27" font-weight="780">PUBLIC PROJECTS, OWNED</text>
+  <text x="1158" y="66" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" text-anchor="end">AUTO-DISCOVERED · {html.escape(updated)} UTC</text>
+  <text x="42" y="94" fill="#91A2B8" font-family="Avenir Next,Segoe UI,sans-serif" font-size="13">Ownership is explicit. Activity and reach are repository context, not upstream contribution credit.</text>
+  <g font-family="Avenir Next,Segoe UI,sans-serif">{''.join(cards)}</g>
+  <g transform="translate(42 {footer_y})" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11.5">
+    <text fill="#2DE2C5">{total_count} qualifying owned repos</text>
+    <text x="185" fill="#65758B">•</text>
+    <text x="205" fill="#9B7CFF">{len(projects)} spotlighted</text>
+    <text x="1116" fill="#65758B" text-anchor="end">public · source · non-fork · active</text>
+  </g>
+</svg>
+"""
+
+
+def render_readme_section(
+    repositories: list[dict[str, object]],
+    owned_repositories: list[dict[str, object]],
+    updated: str,
+) -> str:
+    owned_spotlight = owned_repositories[:OWNED_PROJECT_DISPLAY_LIMIT]
     lines = [
         "<!-- contribution-stats:start -->",
         "## Open-source impact, verified",
@@ -1164,14 +1339,35 @@ def render_readme_section(repositories: list[dict[str, object]], updated: str) -
         lines.append(
             f"- **[{repo['name']}]({repo['url']})**: "
             f"[GitHub-listed contributor]({repo['contributors_url']}) with "
-            f"{int(repo['contributor_commits']):,} GitHub-indexed commits and "
-            f"[{int(repo['merged_prs']):,} merged PRs]({repo['pull_requests_url']}); "
+            f"{counted(int(repo['contributor_commits']), 'GitHub-indexed commit')} and "
+            f"[{counted(int(repo['merged_prs']), 'merged PR')}]({repo['pull_requests_url']}); "
             f"+{int(repo['accepted_additions']):,} / −{int(repo['accepted_deletions']):,} "
             f"accepted lines across {int(repo['accepted_changed_files']):,} changed files. "
             f"Repository reach: {int(repo['stargazers']):,} stars and {int(repo['forks']):,} forks."
         )
     lines.extend(
         [
+            "",
+            "### Public projects I own",
+            "",
+            "Owned public source is a separate signal: GitHub lists me as the repository owner. These projects are discovered automatically from my public, non-fork, non-archived repositories, then ranked by stars, recent activity, and GitHub-attributed commits. Ownership is not counted as upstream contributor credit.",
+            "",
+            f'<img src="./assets/owned-public-projects.svg" width="100%" alt="Automatically discovered public projects owned by Rudy Celekli: {html.escape(", ".join(str(repo["name"]) for repo in owned_spotlight))}" />',
+            "",
+        ]
+    )
+    for repo in owned_spotlight:
+        pushed = str(repo.get("pushed_at") or "")[:10] or "unknown"
+        lines.append(
+            f"- **[{repo['name']}]({repo['url']})**: public owner repository with "
+            f"{counted(int(repo['contributor_commits']), 'GitHub-indexed commit')}. "
+            f"Repository reach: {counted(int(repo['stargazers']), 'star')} and "
+            f"{counted(int(repo['forks']), 'fork')}; last pushed {pushed}."
+        )
+    lines.extend(
+        [
+            "",
+            f"<sub>Showing {len(owned_spotlight)} of {len(owned_repositories)} qualifying owned public repositories · [browse every public source repository](https://github.com/{LOGIN}?tab=repositories&type=source) · complete evidence retained in [machine-readable data](./data/contributions.json)</sub>",
             "",
             f"<sub>Last verified {updated} UTC · visual + evidence refreshed every 30 minutes by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>",
             "<!-- contribution-stats:end -->",
@@ -1243,6 +1439,9 @@ def main() -> int:
         raise RuntimeError(
             "No public upstream repositories passed the merged-PR and official-contributor gates"
         )
+    owned_repositories = discover_owned_repositories(token)
+    if not owned_repositories:
+        raise RuntimeError("No qualifying owned public repositories were discovered")
     private_token = os.environ.get("PRIVATE_GITHUB_TOKEN")
     raw_exclusions = os.environ.get("AP_EXCLUDED_REPOSITORIES", "")
     excluded = {
@@ -1276,7 +1475,7 @@ def main() -> int:
         for repo in repositories
     ]
     payload = {
-        "schema_version": 2,
+        "schema_version": 3,
         "source": "GitHub GraphQL and REST APIs",
         "login": LOGIN,
         "updated_at_utc": updated,
@@ -1286,8 +1485,14 @@ def main() -> int:
             "contributor_commits": "Cached commit-attribution count reported by GitHub's Contributors API; GitHub identifies contributors by author email and says this endpoint may be several hours behind.",
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
+            "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",
+            "owned_project_ranking": "The profile spotlight ranks the complete discovered set by stars, recent activity, then GitHub-attributed commits. Every qualifying owned repository remains in this evidence file.",
+            "ownership_boundary": "Repository ownership is reported separately and is never counted as upstream contributor credit or accepted merged-PR work.",
         },
         "repositories": public_repositories,
+        "owned_repositories": owned_repositories,
+        "owned_project_spotlight_limit": OWNED_PROJECT_DISPLAY_LIMIT,
+        "owned_project_exclusions": sorted(OWNED_PROJECT_EXCLUSIONS),
     }
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     write_generated(DATA_FILE, json.dumps(payload, indent=2, sort_keys=True))
@@ -1295,12 +1500,21 @@ def main() -> int:
         AP_DATA_FILE, json.dumps(agentic_power, indent=2, sort_keys=True)
     )
     write_generated(SVG_FILE, render_svg(repositories, updated))
+    write_generated(
+        OWNED_SVG_FILE,
+        render_owned_svg(
+            owned_repositories[:OWNED_PROJECT_DISPLAY_LIMIT],
+            len(owned_repositories),
+            updated,
+        ),
+    )
     write_generated(AP_SVG_FILE, render_agentic_power_svg(agentic_power))
     update_readme(
         "agentic-power-profile", render_agentic_power_readme(agentic_power)
     )
     update_readme(
-        "contribution-stats", render_readme_section(repositories, updated)
+        "contribution-stats",
+        render_readme_section(repositories, owned_repositories, updated),
     )
     print(
         "Updated official contributor evidence: "
@@ -1308,6 +1522,11 @@ def main() -> int:
             f"{repo['name']}={repo['contributor_commits']} commits/{repo['merged_prs']} merged PRs"
             for repo in repositories
         )
+    )
+    print(
+        "Updated owned public project evidence: "
+        f"{len(owned_repositories)} discovered, "
+        f"{min(len(owned_repositories), OWNED_PROJECT_DISPLAY_LIMIT)} spotlighted"
     )
     if repository_aggregate:
         print(
