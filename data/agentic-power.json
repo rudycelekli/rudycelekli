@@ -1,18 +1,18 @@
 {
   "agentic_power_x": {
     "base": 76.9,
-    "high": 123.8,
-    "low": 48.3
+    "high": 123.9,
+    "low": 48.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0866,
+      "base": 0.0865,
       "high": 0.0989,
       "low": 0.0742
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 81.65,
+    "evidence_window_weeks": 81.66,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 274.5,
+  "engineer_weeks_at_40h": 274.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 142.89,
-    "high": 163.3,
-    "low": 122.48
+    "base": 142.91,
+    "high": 163.32,
+    "low": 122.49
   },
   "monthly": [
     {
@@ -384,12 +384,12 @@
     {
       "active_repositories": 5,
       "agentic_power_x": {
-        "base": 46.6,
+        "base": 46.8,
         "high": 76.3,
         "low": 28.6
       },
       "modeled_human_direction_hours": {
-        "base": 2.34,
+        "base": 2.33,
         "high": 2.67,
         "low": 2.0
       },
@@ -410,12 +410,12 @@
     {
       "active_repositories": 13,
       "agentic_power_x": {
-        "base": 38.5,
+        "base": 38.6,
         "high": 62.9,
         "low": 23.6
       },
       "modeled_human_direction_hours": {
-        "base": 4.75,
+        "base": 4.74,
         "high": 5.42,
         "low": 4.07
       },
@@ -436,14 +436,14 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 54.2,
-        "high": 88.6,
+        "base": 54.3,
+        "high": 88.7,
         "low": 33.2
       },
       "modeled_human_direction_hours": {
-        "base": 10.28,
+        "base": 10.27,
         "high": 11.74,
-        "low": 8.81
+        "low": 8.8
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 63.4,
-        "high": 103.4,
+        "high": 103.5,
         "low": 38.8
       },
       "modeled_human_direction_hours": {
-        "base": 14.81,
-        "high": 16.93,
-        "low": 12.7
+        "base": 14.8,
+        "high": 16.92,
+        "low": 12.69
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 79.9,
+        "base": 80.0,
         "high": 130.6,
         "low": 49.0
       },
       "modeled_human_direction_hours": {
-        "base": 25.95,
-        "high": 29.65,
-        "low": 22.24
+        "base": 25.94,
+        "high": 29.64,
+        "low": 22.23
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 105.3,
-        "high": 167.8,
+        "high": 167.9,
         "low": 67.6
       },
       "modeled_human_direction_hours": {
-        "base": 36.65,
-        "high": 41.89,
-        "low": 31.42
+        "base": 36.64,
+        "high": 41.87,
+        "low": 31.4
       },
       "month": "2026-09",
       "public_merged_pull_requests": 241,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 88.0,
-        "high": 138.6,
-        "low": 57.8
+        "base": 88.2,
+        "high": 139.0,
+        "low": 57.9
       },
       "modeled_human_direction_hours": {
-        "base": 17.55,
-        "high": 20.06,
-        "low": 15.04
+        "base": 17.62,
+        "high": 20.14,
+        "low": 15.1
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 166,
+      "public_merged_pull_requests": 167,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 1544.59,
-        "high": 2085.29,
-        "low": 1158.49
+        "base": 1554.24,
+        "high": 2098.32,
+        "low": 1165.73
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 202.72,
-        "high": 293.4,
-        "low": 138.69
+        "base": 203.63,
+        "high": 294.67,
+        "low": 139.33
       }
     }
   ],
-  "public_accepted_pull_requests": 407,
+  "public_accepted_pull_requests": 408,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 10981.83,
-    "high": 15167.2,
-    "low": 7894.81
+    "base": 10991.48,
+    "high": 15180.23,
+    "low": 7902.05
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 1650.64,
-    "high": 2594.57,
-    "low": 1091.74
+    "base": 1651.55,
+    "high": 2595.84,
+    "low": 1092.38
   },
   "updated_at_utc": "2026-10-02",
   "window": {
-    "end": "2026-10-02T09:05:51Z",
+    "end": "2026-10-02T09:50:56Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -12439,6 +12439,35 @@
       "pull_request": 442,
       "title": "fix(workflow): recover repaired diagnostic rows in place",
       "url": "https://github.com/mvschwarz/openrig/pull/442"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-09-28T04:01:20Z",
+      "evidence": {
+        "additions": 38,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.65,
+        "high": 13.03,
+        "low": 7.24
+      },
+      "merged_at": "2026-10-02T09:50:56Z",
+      "modeled_human_direction_hours": {
+        "base": 0.91,
+        "high": 1.27,
+        "low": 0.64
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 139,
+      "title": "fix: fail layout validation for misnamed inspection folders",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/139"
     }
   ]
 }
