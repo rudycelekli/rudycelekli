@@ -1166,22 +1166,25 @@ def render_repository_card(
     )
     return f"""
     <g transform="translate({x} {y})">
+      <defs><clipPath id="contribution-card-{index}"><rect width="550" height="240" rx="22"/></clipPath></defs>
       <rect width="550" height="240" rx="22" fill="#0B1728" stroke="{repo['accent']}" stroke-opacity="0.42"/>
-      <rect class="signal" x="31" y="23" width="48" height="3" rx="1.5" fill="{repo['accent']}"/>
-      <text x="31" y="55" fill="#F8FAFC" font-size="22" font-weight="760">{html.escape(ellipsize(repo['name'], 24))}</text>
-      <text x="519" y="52" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">{compact(int(repo['stargazers']))} STARS · {compact(int(repo['forks']))} FORKS</text>
-      <text x="31" y="81" fill="#91A2B8" font-size="12.5">{description}</text>
-      <g transform="translate(31 148)">
-        {metric(0, 'indexed commits', compact(commits), str(repo['accent']))}
-        {metric(128, 'merged PRs', compact(merged), str(repo['secondary']))}
-        {metric(250, 'files accepted', compact(files), '#F8FAFC')}
-        {metric(380, 'line changes', compact(accepted_lines), '#F8FAFC')}
+      <g clip-path="url(#contribution-card-{index})">
+        <rect class="signal" x="31" y="23" width="48" height="3" rx="1.5" fill="{repo['accent']}"/>
+        <text x="31" y="55" fill="#F8FAFC" font-size="22" font-weight="760">{html.escape(ellipsize(repo['name'], 24))}</text>
+        <text x="519" y="52" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">{compact(int(repo['stargazers']))} STARS · {compact(int(repo['forks']))} FORKS</text>
+        <text x="31" y="81" fill="#91A2B8" font-size="12.5">{description}</text>
+        <g transform="translate(31 148)">
+          {metric(0, 'indexed commits', compact(commits), str(repo['accent']))}
+          {metric(128, 'merged PRs', compact(merged), str(repo['secondary']))}
+          {metric(250, 'files accepted', compact(files), '#F8FAFC')}
+          {metric(380, 'line changes', compact(accepted_lines), '#F8FAFC')}
+        </g>
+        <line x1="31" y1="194" x2="519" y2="194" stroke="#203149"/>
+        <text x="31" y="222" fill="#91A2B8" font-size="12">accepted code</text>
+        <text x="128" y="222" fill="{repo['accent']}" font-size="14" font-weight="700">+{added:,}</text>
+        <text x="216" y="222" fill="#F87171" font-size="14" font-weight="700">−{deleted:,}</text>
+        <text x="519" y="222" fill="#65758B" font-size="11.5" text-anchor="end">GitHub-listed contributor</text>
       </g>
-      <line x1="31" y1="194" x2="519" y2="194" stroke="#203149"/>
-      <text x="31" y="222" fill="#91A2B8" font-size="12">accepted code</text>
-      <text x="128" y="222" fill="{repo['accent']}" font-size="14" font-weight="700">+{added:,}</text>
-      <text x="216" y="222" fill="#F87171" font-size="14" font-weight="700">−{deleted:,}</text>
-      <text x="519" y="222" fill="#65758B" font-size="11.5" text-anchor="end">GitHub-listed contributor</text>
     </g>"""
 
 
@@ -1191,16 +1194,22 @@ def render_contribution_footer(
     """Render aggregate proof and freshness as one reusable summary component."""
     total_merged = sum(int(repo["merged_prs"]) for repo in repositories)
     total_commits = sum(int(repo["contributor_commits"]) for repo in repositories)
+    total_line_changes = sum(
+        int(repo["accepted_additions"]) + int(repo["accepted_deletions"])
+        for repo in repositories
+    )
     total_stars = sum(int(repo["stargazers"]) for repo in repositories)
     return f"""
   <g transform="translate(42 {footer_y})" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12">
     <text fill="#2DE2C5">{len(repositories)} verified projects</text>
-    <text x="152" fill="#65758B">•</text>
-    <text x="172" fill="#9B7CFF">{total_merged} merged PRs</text>
-    <text x="292" fill="#65758B">•</text>
-    <text x="312" fill="#F8FAFC">{compact(total_commits)} indexed commits</text>
-    <text x="445" fill="#65758B">•</text>
-    <text x="465" fill="#F2A93B">{compact(total_stars)} combined stars</text>
+    <text x="142" fill="#65758B">•</text>
+    <text x="162" fill="#9B7CFF">{total_merged} merged PRs</text>
+    <text x="274" fill="#65758B">•</text>
+    <text x="294" fill="#F8FAFC">{compact(total_commits)} indexed commits</text>
+    <text x="424" fill="#65758B">•</text>
+    <text x="444" fill="#2DE2C5">{total_line_changes:,} accepted line changes</text>
+    <text x="668" fill="#65758B">•</text>
+    <text x="688" fill="#F2A93B">{compact(total_stars)} combined stars</text>
     <text x="1116" fill="#65758B" text-anchor="end">official evidence · every 30 min</text>
   </g>"""
 
@@ -1334,16 +1343,18 @@ def render_readme_section(
         "",
         f'<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for {html.escape(", ".join(str(repo["name"]) for repo in repositories))}" />',
         "",
+        "| Project | Indexed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
+        "|:--|--:|--:|--:|--:|--:|",
     ]
     for repo in repositories:
         lines.append(
-            f"- **[{repo['name']}]({repo['url']})**: "
-            f"[GitHub-listed contributor]({repo['contributors_url']}) with "
-            f"{counted(int(repo['contributor_commits']), 'GitHub-indexed commit')} and "
-            f"[{counted(int(repo['merged_prs']), 'merged PR')}]({repo['pull_requests_url']}); "
-            f"+{int(repo['accepted_additions']):,} / −{int(repo['accepted_deletions']):,} "
-            f"accepted lines across {int(repo['accepted_changed_files']):,} changed files. "
-            f"Repository reach: {int(repo['stargazers']):,} stars and {int(repo['forks']):,} forks."
+            f"| **[{repo['name']}]({repo['url']})** · "
+            f"[contributor proof]({repo['contributors_url']}) "
+            f"| {int(repo['contributor_commits']):,} "
+            f"| [{int(repo['merged_prs']):,}]({repo['pull_requests_url']}) "
+            f"| +{int(repo['accepted_additions']):,} / −{int(repo['accepted_deletions']):,} "
+            f"| {int(repo['accepted_changed_files']):,} "
+            f"| {int(repo['stargazers']):,} ★ · {int(repo['forks']):,} forks |"
         )
     lines.extend(
         [

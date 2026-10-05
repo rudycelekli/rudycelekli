@@ -151,12 +151,40 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
         self.assertIn('height="682"', svg)
         self.assertIn("3 verified projects", svg)
+        self.assertIn("330 accepted line changes", svg)
         self.assertIn("6.0k combined stars", svg)
         self.assertIn("STARS", svg)
         self.assertIn("INDEXED COMMITS", svg)
         self.assertIn("OPEN-SOURCE IMPACT, VERIFIED", svg)
+        self.assertIn('clip-path="url(#contribution-card-0)"', svg)
         self.assertIn("every 30 min", svg)
         self.assertIn("Repository stars and forks describe project reach", svg)
+
+    def test_readme_contribution_proof_is_rendered_as_a_comparable_table(self):
+        repository = {
+            "name": "Upstream Project",
+            "url": "https://github.com/upstream/project",
+            "contributors_url": "https://github.com/upstream/project/graphs/contributors",
+            "pull_requests_url": "https://github.com/upstream/project/pulls?q=author%3Arudycelekli+is%3Amerged",
+            "contributor_commits": 12,
+            "merged_prs": 9,
+            "accepted_additions": 1_234,
+            "accepted_deletions": 56,
+            "accepted_changed_files": 42,
+            "stargazers": 7_890,
+            "forks": 321,
+        }
+
+        section = subject.render_readme_section([repository], [], "2026-10-05")
+
+        self.assertIn(
+            "| Project | Indexed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
+            section,
+        )
+        self.assertIn("[contributor proof]", section)
+        self.assertIn("| 12 | [9]", section)
+        self.assertIn("| +1,234 / −56 | 42 | 7,890 ★ · 321 forks |", section)
+        self.assertNotIn("- **[Upstream Project]", section)
 
     @mock.patch.object(subject, "official_contribution_count")
     @mock.patch.object(subject, "rest_json")
