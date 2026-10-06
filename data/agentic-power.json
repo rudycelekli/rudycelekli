@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 413.6,
+  "engineer_weeks_at_40h": 413.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 75.7,
         "high": 123.7,
-        "low": 46.4
+        "low": 46.3
       },
       "modeled_human_direction_hours": {
         "base": 7.36,
-        "high": 8.41,
+        "high": 8.42,
         "low": 6.31
       },
       "month": "2026-04",
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 94.3,
-        "high": 154.1,
+        "high": 153.8,
         "low": 57.7
       },
       "modeled_human_direction_hours": {
         "base": 5.36,
         "high": 6.13,
-        "low": 4.59
+        "low": 4.6
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 111.6,
-        "high": 182.3,
+        "high": 182.2,
         "low": 68.3
       },
       "modeled_human_direction_hours": {
         "base": 18.59,
         "high": 21.25,
-        "low": 15.93
+        "low": 15.94
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 147.1,
         "high": 234.4,
-        "low": 94.5
+        "low": 94.4
       },
       "modeled_human_direction_hours": {
-        "base": 26.3,
-        "high": 30.06,
+        "base": 26.31,
+        "high": 30.07,
         "low": 22.55
       },
       "month": "2026-09",
@@ -592,27 +592,27 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 131.1,
+        "base": 131.0,
         "high": 206.4,
         "low": 86.0
       },
       "modeled_human_direction_hours": {
-        "base": 54.15,
-        "high": 61.88,
-        "low": 46.41
+        "base": 54.13,
+        "high": 61.86,
+        "low": 46.4
       },
       "month": "2026-10",
       "public_merged_pull_requests": 703,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 7096.42,
-        "high": 9580.39,
-        "low": 5322.27
+        "base": 7092.9,
+        "high": 9575.65,
+        "low": 5319.63
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 873.12,
-        "high": 1243.98,
-        "low": 603.96
+        "base": 872.64,
+        "high": 1243.3,
+        "low": 603.63
       }
     }
   ],
@@ -622,18 +622,18 @@
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 16543.86,
-    "high": 22676.07,
-    "low": 12066.24
+    "base": 16540.34,
+    "high": 22671.33,
+    "low": 12063.6
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2321.77,
-    "high": 3546.17,
-    "low": 1557.52
+    "base": 2321.29,
+    "high": 3545.49,
+    "low": 1557.19
   },
   "updated_at_utc": "2026-10-06",
   "window": {
-    "end": "2026-10-06T17:48:20Z",
+    "end": "2026-10-06T18:26:57Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -21927,35 +21927,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-05T16:22:46Z",
-      "evidence": {
-        "additions": 154,
-        "changed_files": 2,
-        "comments": 2,
-        "commits": 3,
-        "deletions": 8,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.93,
-        "high": 16.1,
-        "low": 8.95
-      },
-      "merged_at": "2026-10-05T17:02:57Z",
-      "modeled_human_direction_hours": {
-        "base": 1.09,
-        "high": 1.53,
-        "low": 0.76
-      },
-      "project": "morluto/rea",
-      "pull_request": 589,
-      "title": "fix(javascript): respect HTML base URL components",
-      "url": "https://github.com/morluto/rea/pull/589"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-05T16:28:19Z",
       "evidence": {
         "additions": 302,
@@ -28041,6 +28012,35 @@
       "pull_request": 1033,
       "title": "Preserve ICU arguments and selectors during pseudo-localization",
       "url": "https://github.com/msitarzewski/agency-agents/pull/1033"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-06T17:05:45Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.41,
+        "high": 11.36,
+        "low": 6.31
+      },
+      "merged_at": "2026-10-06T18:26:57Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 1959,
+      "title": "fix(setup): require Colibri health success before reusing a port",
+      "url": "https://github.com/JustVugg/colibri/pull/1959"
     }
   ]
 }
