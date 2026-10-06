@@ -165,6 +165,26 @@ def official_contribution_count(token: str, full_name: str) -> int | None:
         page += 1
 
 
+def default_branch_contribution_count(token: str, full_name: str) -> int:
+    """Count authored commits that GitHub exposes on the default branch."""
+    total = 0
+    page = 1
+    while True:
+        commits = rest_json(
+            token,
+            f"https://api.github.com/repos/{full_name}/commits"
+            f"?author={LOGIN}&per_page=100&page={page}",
+        )
+        if not isinstance(commits, list):
+            raise RuntimeError(
+                f"Unexpected GitHub commit response for {full_name}"
+            )
+        total += len(commits)
+        if len(commits) < 100:
+            return total
+        page += 1
+
+
 def rest_json(token: str, url: str) -> object:
     for attempt in range(8):
         request = urllib.request.Request(
@@ -459,13 +479,19 @@ def readable_description(value: object) -> str:
     return description
 
 
-def search_merged_pull_requests(
-    token: str, start: dt.date, end: dt.date
+def search_pull_requests(
+    token: str,
+    start: dt.date,
+    end: dt.date,
+    *,
+    merged_only: bool,
 ) -> list[dict[str, object]]:
-    """Exhaust GitHub PR search, splitting date windows above its 1,000-result cap."""
+    """Exhaust GitHub PR search, splitting date windows above its result cap."""
+    status = " is:merged" if merged_only else ""
+    date_field = "merged" if merged_only else "created"
     query = (
-        f"is:pr author:{LOGIN} is:merged "
-        f"merged:{start.isoformat()}..{end.isoformat()}"
+        f"is:pr author:{LOGIN}{status} "
+        f"{date_field}:{start.isoformat()}..{end.isoformat()}"
     )
     cursor = None
     pull_requests: list[dict[str, object]] = []
@@ -477,14 +503,17 @@ def search_merged_pull_requests(
         if expected_total > 1_000:
             if start == end:
                 raise RuntimeError(
-                    f"More than 1,000 merged PRs occurred on {start}; "
+                    f"More than 1,000 matching PRs occurred on {start}; "
                     "GitHub search cannot exhaust this day"
                 )
             midpoint = start + (end - start) // 2
-            return search_merged_pull_requests(
-                token, start, midpoint
-            ) + search_merged_pull_requests(
-                token, midpoint + dt.timedelta(days=1), end
+            return search_pull_requests(
+                token, start, midpoint, merged_only=merged_only
+            ) + search_pull_requests(
+                token,
+                midpoint + dt.timedelta(days=1),
+                end,
+                merged_only=merged_only,
             )
         pull_requests.extend(node for node in result["nodes"] if node)
         page = result["pageInfo"]
@@ -494,15 +523,29 @@ def search_merged_pull_requests(
 
     if len(pull_requests) != expected_total:
         raise RuntimeError(
-            f"Expected {expected_total} merged PRs for {LOGIN}, "
+            f"Expected {expected_total} matching PRs for {LOGIN}, "
             f"received {len(pull_requests)}"
         )
     return pull_requests
 
 
+def search_merged_pull_requests(
+    token: str, start: dt.date, end: dt.date
+) -> list[dict[str, object]]:
+    """Return every merged pull request authored by the profile login."""
+    return search_pull_requests(token, start, end, merged_only=True)
+
+
+def search_authored_pull_requests(
+    token: str, start: dt.date, end: dt.date
+) -> list[dict[str, object]]:
+    """Return every authored PR so default-branch acceptance can also be found."""
+    return search_pull_requests(token, start, end, merged_only=False)
+
+
 def discover_repositories(token: str) -> list[dict[str, object]]:
-    """Discover every public upstream repo with a merged PR and contributor proof."""
-    pull_requests = search_merged_pull_requests(
+    """Discover public upstream repos with accepted PR or default-branch proof."""
+    pull_requests = search_authored_pull_requests(
         token, dt.date(2008, 1, 1), dt.datetime.now(dt.timezone.utc).date()
     )
 
@@ -526,11 +569,36 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
 
     repositories: list[dict[str, object]] = []
     for full_name, entry in grouped.items():
-        contributor_commits = official_contribution_count(token, full_name)
-        if contributor_commits is None:
-            continue
         repository = entry["repository"]
-        merged = entry["pull_requests"]
+        merged = [
+            pull_request
+            for pull_request in entry["pull_requests"]
+            if bool(pull_request.get("merged"))
+        ]
+        listed_commits = None
+        default_branch_commits = 0
+        if merged:
+            listed_commits = official_contribution_count(token, full_name)
+        if listed_commits is None:
+            default_branch_commits = default_branch_contribution_count(
+                token, full_name
+            )
+            if default_branch_commits and not merged:
+                listed_commits = official_contribution_count(token, full_name)
+        if listed_commits is not None:
+            verification_tier = "github_listed_contributor"
+            verification_label = "GitHub-listed contributor"
+            contributor_commits = listed_commits
+        elif default_branch_commits:
+            verification_tier = "default_branch_commit_verified"
+            verification_label = "Default-branch commit verified"
+            contributor_commits = default_branch_commits
+        elif merged:
+            verification_tier = "merged_pr_verified"
+            verification_label = "Merged-PR verified"
+            contributor_commits = 0
+        else:
+            continue
         override = PRESENTATION_OVERRIDES.get(full_name, {})
         palette_index = hashlib.sha256(full_name.encode()).digest()[0] % len(
             ACCENT_PAIRS
@@ -547,11 +615,18 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
                 ),
                 "url": repository["url"],
                 "contributors_url": f"https://github.com/{full_name}/graphs/contributors",
+                "commits_url": (
+                    f"https://github.com/{full_name}/commits"
+                    f"?author={LOGIN}"
+                ),
                 "pull_requests_url": (
                     f"https://github.com/{full_name}/pulls"
                     f"?q=is%3Apr+author%3A{LOGIN}+is%3Amerged"
                 ),
-                "official_contributor": True,
+                "verification_tier": verification_tier,
+                "verification_label": verification_label,
+                "official_contributor": listed_commits is not None,
+                "default_branch_commits": default_branch_commits,
                 "contributor_commits": contributor_commits,
                 "merged_prs": len(merged),
                 "accepted_additions": sum(int(item["additions"]) for item in merged),
@@ -568,6 +643,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
     repositories.sort(
         key=lambda item: (
             -int(item["merged_prs"]),
+            -int(item["contributor_commits"]),
             -int(item["stargazers"]),
             str(item["full_name"]).casefold(),
         )
@@ -655,6 +731,8 @@ def compact(value: int) -> str:
         return str(value)
     if value < 10_000:
         return f"{value / 1_000:.1f}k"
+    if value >= 1_000_000:
+        return f"{value / 1_000_000:.1f}m"
     return f"{round(value / 1_000):.0f}k"
 
 
@@ -1159,6 +1237,20 @@ def render_repository_card(
     deleted = int(repo["accepted_deletions"])
     files = int(repo["accepted_changed_files"])
     accepted_lines = added + deleted
+    tier = str(repo.get("verification_tier") or "github_listed_contributor")
+    verification_label = str(
+        repo.get("verification_label") or "GitHub-listed contributor"
+    )
+    commit_metric_label = (
+        "indexed commits"
+        if tier == "github_listed_contributor"
+        else "default commits"
+        if tier == "default_branch_commit_verified"
+        else "commit index"
+    )
+    commit_metric_value = compact(commits) if commits else "—"
+    files_metric_value = compact(files) if merged else "—"
+    lines_metric_value = compact(accepted_lines) if merged else "—"
     description_lines = wrap_svg_text(repo["description"], width=65, lines=2)
     description = "".join(
         f'<tspan x="31" dy="{0 if line_index == 0 else 18}">{html.escape(line)}</tspan>'
@@ -1174,16 +1266,16 @@ def render_repository_card(
         <text x="519" y="52" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">{compact(int(repo['stargazers']))} STARS · {compact(int(repo['forks']))} FORKS</text>
         <text x="31" y="81" fill="#91A2B8" font-size="12.5">{description}</text>
         <g transform="translate(31 148)">
-          {metric(0, 'indexed commits', compact(commits), str(repo['accent']))}
+          {metric(0, commit_metric_label, commit_metric_value, str(repo['accent']))}
           {metric(128, 'merged PRs', compact(merged), str(repo['secondary']))}
-          {metric(250, 'files accepted', compact(files), '#F8FAFC')}
-          {metric(380, 'line changes', compact(accepted_lines), '#F8FAFC')}
+          {metric(250, 'files accepted', files_metric_value, '#F8FAFC')}
+          {metric(380, 'line changes', lines_metric_value, '#F8FAFC')}
         </g>
         <line x1="31" y1="194" x2="519" y2="194" stroke="#203149"/>
-        <text x="31" y="222" fill="#91A2B8" font-size="12">accepted code</text>
-        <text x="128" y="222" fill="{repo['accent']}" font-size="14" font-weight="700">+{added:,}</text>
-        <text x="216" y="222" fill="#F87171" font-size="14" font-weight="700">−{deleted:,}</text>
-        <text x="519" y="222" fill="#65758B" font-size="11.5" text-anchor="end">GitHub-listed contributor</text>
+        <text x="31" y="222" fill="#91A2B8" font-size="12">{('accepted code' if merged else 'default branch')}</text>
+        <text x="128" y="222" fill="{repo['accent']}" font-size="14" font-weight="700">{('+' + format(added, ',')) if merged else counted(commits, 'commit')}</text>
+        <text x="216" y="222" fill="#F87171" font-size="14" font-weight="700">{('−' + format(deleted, ',')) if merged else ''}</text>
+        <text x="519" y="222" fill="#65758B" font-size="11.5" text-anchor="end">{html.escape(verification_label)}</text>
       </g>
     </g>"""
 
@@ -1205,7 +1297,7 @@ def render_contribution_footer(
     <text x="142" fill="#65758B">•</text>
     <text x="162" fill="#9B7CFF">{total_merged} merged PRs</text>
     <text x="274" fill="#65758B">•</text>
-    <text x="294" fill="#F8FAFC">{compact(total_commits)} indexed commits</text>
+    <text x="294" fill="#F8FAFC">{compact(total_commits)} attributed commits</text>
     <text x="424" fill="#65758B">•</text>
     <text x="444" fill="#2DE2C5">{total_line_changes:,} accepted line changes</text>
     <text x="668" fill="#65758B">•</text>
@@ -1339,21 +1431,43 @@ def render_readme_section(
         "<!-- contribution-stats:start -->",
         "## Open-source impact, verified",
         "",
-        "My upstream work is discovered automatically across public repositories outside my account and included **only when GitHub also lists me as a contributor**. Merged PRs are the accepted-work measure; GitHub-indexed commits are a separate cached attribution signal. Stars and forks describe repository reach, not personal credit.",
+        "My upstream work is discovered automatically across public repositories outside my account. A project enters when GitHub proves accepted work through an authored merged PR on any upstream branch or an authored commit on the default branch. **GitHub-listed contributor** is the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. Stars and forks describe repository reach, not personal credit.",
         "",
         f'<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for {html.escape(", ".join(str(repo["name"]) for repo in repositories))}" />',
         "",
-        "| Project | Indexed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
+        "| Project and evidence | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
         "|:--|--:|--:|--:|--:|--:|",
     ]
     for repo in repositories:
+        tier = str(repo.get("verification_tier") or "github_listed_contributor")
+        evidence_url = (
+            repo["contributors_url"]
+            if tier == "github_listed_contributor"
+            else repo["commits_url"]
+            if tier == "default_branch_commit_verified"
+            else repo["pull_requests_url"]
+        )
+        evidence_label = str(
+            repo.get("verification_label") or "GitHub-listed contributor"
+        )
+        merged_prs = int(repo["merged_prs"])
+        attributed_commits = int(repo["contributor_commits"])
+        accepted_lines = (
+            f"+{int(repo['accepted_additions']):,} / "
+            f"−{int(repo['accepted_deletions']):,}"
+            if merged_prs
+            else "—"
+        )
+        accepted_files = (
+            f"{int(repo['accepted_changed_files']):,}" if merged_prs else "—"
+        )
         lines.append(
             f"| **[{repo['name']}]({repo['url']})** · "
-            f"[contributor proof]({repo['contributors_url']}) "
-            f"| {int(repo['contributor_commits']):,} "
-            f"| [{int(repo['merged_prs']):,}]({repo['pull_requests_url']}) "
-            f"| +{int(repo['accepted_additions']):,} / −{int(repo['accepted_deletions']):,} "
-            f"| {int(repo['accepted_changed_files']):,} "
+            f"[{evidence_label}]({evidence_url}) "
+            f"| {f'{attributed_commits:,}' if attributed_commits else '—'} "
+            f"| [{merged_prs:,}]({repo['pull_requests_url']}) "
+            f"| {accepted_lines} "
+            f"| {accepted_files} "
             f"| {int(repo['stargazers']):,} ★ · {int(repo['forks']):,} forks |"
         )
     lines.extend(
@@ -1486,14 +1600,15 @@ def main() -> int:
         for repo in repositories
     ]
     payload = {
-        "schema_version": 3,
+        "schema_version": 4,
         "source": "GitHub GraphQL and REST APIs",
         "login": LOGIN,
         "updated_at_utc": updated,
         "methodology": {
-            "project_discovery": "Every public, non-fork repository outside the login's own account with a merged pull request authored by the login is discovered automatically on each run.",
-            "project_inclusion": "A discovered repository is included only when GitHub's Contributors API also lists the login.",
-            "contributor_commits": "Cached commit-attribution count reported by GitHub's Contributors API; GitHub identifies contributors by author email and says this endpoint may be several hours behind.",
+            "project_discovery": "Every public, non-fork repository outside the login's account with any authored pull request is examined automatically on each run.",
+            "project_inclusion": "A project is included when GitHub proves accepted work through an authored merged pull request on any branch or an authored commit present on the default branch.",
+            "verification_tiers": "Evidence upgrades automatically from merged-PR verified, to default-branch commit verified, to GitHub-listed contributor as stronger GitHub attribution becomes available.",
+            "contributor_commits": "The GitHub Contributors API count is used at the highest tier. Before it catches up, directly attributed default-branch commits are reported separately. GitHub's contributor index may lag by several hours.",
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",

@@ -4,13 +4,13 @@ from unittest import mock
 from scripts import update_contributions as subject
 
 
-def pull_request(repository, number=1):
+def pull_request(repository, number=1, merged=True):
     return {
         "number": number,
         "title": "fix: accepted upstream work",
         "createdAt": "2026-09-01T00:00:00Z",
-        "mergedAt": "2026-09-02T00:00:00Z",
-        "merged": True,
+        "mergedAt": "2026-09-02T00:00:00Z" if merged else None,
+        "merged": merged,
         "additions": 25,
         "deletions": 5,
         "changedFiles": 3,
@@ -93,39 +93,65 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual([item["number"] for item in results], [1, 2])
         self.assertEqual(graphql.call_count, 3)
 
+    @mock.patch.object(subject, "default_branch_contribution_count")
     @mock.patch.object(subject, "official_contribution_count")
-    @mock.patch.object(subject, "graphql")
-    def test_discovers_all_eligible_projects_without_a_fixed_allowlist(
-        self, graphql, official_count
+    @mock.patch.object(subject, "search_authored_pull_requests")
+    def test_discovers_and_upgrades_each_accepted_evidence_tier(
+        self, authored_search, official_count, default_count
     ):
         accepted = repository("upstream/new-project")
-        unlisted = repository("upstream/not-official")
+        pending = repository("upstream/pending-index")
+        default_only = repository("upstream/default-only")
+        unaccepted = repository("upstream/open-only")
         private = repository("company/private", isPrivate=True)
         owned = repository(f"{subject.LOGIN}/owned-project")
-        graphql.return_value = {
-            "issueCount": 4,
-            "pageInfo": {"hasNextPage": False, "endCursor": None},
-            "nodes": [
-                pull_request(accepted, 4),
-                pull_request(unlisted, 3),
-                pull_request(private, 2),
-                pull_request(owned, 1),
-            ],
-        }
+        authored_search.return_value = [
+            pull_request(accepted, 6),
+            pull_request(pending, 5),
+            pull_request(default_only, 4, merged=False),
+            pull_request(unaccepted, 3, merged=False),
+            pull_request(private, 2),
+            pull_request(owned, 1),
+        ]
         official_count.side_effect = lambda _token, full_name: (
             7 if full_name == "upstream/new-project" else None
         )
+        default_count.side_effect = lambda _token, full_name: {
+            "upstream/pending-index": 0,
+            "upstream/default-only": 4,
+            "upstream/open-only": 0,
+        }[full_name]
 
         discovered = subject.discover_repositories("token")
 
-        self.assertEqual([item["full_name"] for item in discovered], ["upstream/new-project"])
+        self.assertEqual(
+            [item["full_name"] for item in discovered],
+            [
+                "upstream/new-project",
+                "upstream/pending-index",
+                "upstream/default-only",
+            ],
+        )
         self.assertEqual(discovered[0]["merged_prs"], 1)
         self.assertEqual(discovered[0]["contributor_commits"], 7)
+        self.assertEqual(discovered[0]["verification_tier"], "github_listed_contributor")
+        self.assertEqual(discovered[1]["verification_tier"], "merged_pr_verified")
+        self.assertEqual(discovered[1]["contributor_commits"], 0)
+        self.assertEqual(
+            discovered[2]["verification_tier"],
+            "default_branch_commit_verified",
+        )
+        self.assertEqual(discovered[2]["contributor_commits"], 4)
+        self.assertEqual(discovered[2]["merged_prs"], 0)
         self.assertEqual(discovered[0]["stargazers"], 1_234)
         self.assertEqual(discovered[0]["forks"], 56)
         self.assertEqual(
             [call.args[1] for call in official_count.call_args_list],
-            ["upstream/new-project", "upstream/not-official"],
+            [
+                "upstream/new-project",
+                "upstream/pending-index",
+                "upstream/default-only",
+            ],
         )
 
     def test_svg_expands_for_new_projects_and_labels_reach(self):
@@ -154,7 +180,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("330 accepted line changes", svg)
         self.assertIn("6.0k combined stars", svg)
         self.assertIn("STARS", svg)
-        self.assertIn("INDEXED COMMITS", svg)
+        self.assertIn("attributed commits", svg)
         self.assertIn("OPEN-SOURCE IMPACT, VERIFIED", svg)
         self.assertIn('clip-path="url(#contribution-card-0)"', svg)
         self.assertIn("every 30 min", svg)
@@ -165,7 +191,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "name": "Upstream Project",
             "url": "https://github.com/upstream/project",
             "contributors_url": "https://github.com/upstream/project/graphs/contributors",
+            "commits_url": "https://github.com/upstream/project/commits?author=rudycelekli",
             "pull_requests_url": "https://github.com/upstream/project/pulls?q=author%3Arudycelekli+is%3Amerged",
+            "verification_tier": "github_listed_contributor",
+            "verification_label": "GitHub-listed contributor",
             "contributor_commits": 12,
             "merged_prs": 9,
             "accepted_additions": 1_234,
@@ -178,13 +207,31 @@ class ContributionDiscoveryTests(unittest.TestCase):
         section = subject.render_readme_section([repository], [], "2026-10-05")
 
         self.assertIn(
-            "| Project | Indexed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
+            "| Project and evidence | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
             section,
         )
-        self.assertIn("[contributor proof]", section)
+        self.assertIn("[GitHub-listed contributor]", section)
         self.assertIn("| 12 | [9]", section)
         self.assertIn("| +1,234 / −56 | 42 | 7,890 ★ · 321 forks |", section)
         self.assertNotIn("- **[Upstream Project]", section)
+
+        default_only = {
+            **repository,
+            "name": "Default Branch Project",
+            "verification_tier": "default_branch_commit_verified",
+            "verification_label": "Default-branch commit verified",
+            "contributor_commits": 4,
+            "merged_prs": 0,
+            "accepted_additions": 0,
+            "accepted_deletions": 0,
+            "accepted_changed_files": 0,
+        }
+        default_section = subject.render_readme_section(
+            [default_only], [], "2026-10-05"
+        )
+        self.assertIn("[Default-branch commit verified]", default_section)
+        self.assertIn("| 4 | [0]", default_section)
+        self.assertIn("| — | — | 7,890 ★ · 321 forks |", default_section)
 
     @mock.patch.object(subject, "official_contribution_count")
     @mock.patch.object(subject, "rest_json")

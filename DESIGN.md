@@ -99,7 +99,7 @@ Dark-profile translation:
 - Build original diagrams; do not copy HeroForge artwork or language beyond attributed framework terms.
 - Tie every capability claim to public work or phrase it as an operating principle.
 - Keep the profile scannable: one graphic, one short explanation, four concrete operating principles.
-- Keep contribution claims machine-counted. Discover public upstream projects from merged PR history, include one only when GitHub's Contributors API lists Rudy, and calculate accepted code only from merged pull requests.
+- Keep contribution claims machine-counted. Discover public upstream projects from complete authored-PR history. Include a project when GitHub proves accepted work through an authored merged PR on any branch or an authored default-branch commit. Upgrade the evidence label automatically when GitHub's Contributors API lists Rudy, and calculate accepted line changes only from merged pull requests.
 - Treat GitHub-indexed commits as a separate cached attribution signal, never as a synonym for merged pull requests or accepted work.
 - Discover owned public projects independently from upstream contributions. Exclude forks, archived or disabled repositories, the profile repository, and explicit authorship exceptions; never convert ownership into contributor credit.
 - Keep identity links restrained and verifiable. Prefer a small first-screen rail plus contextual links over a résumé-style badge wall.
