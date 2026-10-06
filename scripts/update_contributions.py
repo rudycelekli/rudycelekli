@@ -1283,7 +1283,7 @@ def render_repository_card(
 def render_contribution_footer(
     repositories: list[dict[str, object]], footer_y: int
 ) -> str:
-    """Render aggregate proof and freshness as one reusable summary component."""
+    """Render aggregate proof and freshness as a two-row summary component."""
     total_merged = sum(int(repo["merged_prs"]) for repo in repositories)
     total_commits = sum(int(repo["contributor_commits"]) for repo in repositories)
     total_line_changes = sum(
@@ -1293,16 +1293,19 @@ def render_contribution_footer(
     total_stars = sum(int(repo["stargazers"]) for repo in repositories)
     return f"""
   <g transform="translate(42 {footer_y})" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12">
-    <text fill="#2DE2C5">{len(repositories)} verified projects</text>
-    <text x="142" fill="#65758B">•</text>
-    <text x="162" fill="#9B7CFF">{total_merged} merged PRs</text>
-    <text x="274" fill="#65758B">•</text>
-    <text x="294" fill="#F8FAFC">{compact(total_commits)} attributed commits</text>
-    <text x="424" fill="#65758B">•</text>
-    <text x="444" fill="#2DE2C5">{total_line_changes:,} accepted line changes</text>
-    <text x="668" fill="#65758B">•</text>
-    <text x="688" fill="#F2A93B">{compact(total_stars)} combined stars</text>
-    <text x="1116" fill="#65758B" text-anchor="end">official evidence · every 30 min</text>
+    <g>
+      <text fill="#2DE2C5">{len(repositories)} verified projects</text>
+      <text x="142" fill="#65758B">•</text>
+      <text x="162" fill="#9B7CFF">{total_merged} merged PRs</text>
+      <text x="294" fill="#65758B">•</text>
+      <text x="314" fill="#F8FAFC">{compact(total_commits)} attributed commits</text>
+    </g>
+    <g transform="translate(0 24)">
+      <text fill="#2DE2C5">{total_line_changes:,} accepted line changes</text>
+      <text x="224" fill="#65758B">•</text>
+      <text x="244" fill="#F2A93B">{compact(total_stars)} combined stars</text>
+      <text x="1116" fill="#65758B" text-anchor="end">official evidence · every 30 min</text>
+    </g>
   </g>"""
 
 
@@ -1312,8 +1315,8 @@ def render_svg(repositories: list[dict[str, object]], updated: str) -> str:
         for index, repo in enumerate(repositories)
     ]
     rows = max(math.ceil(len(repositories) / 2), 1)
-    height = 112 + rows * 240 + max(rows - 1, 0) * 18 + 72
-    footer_y = height - 34
+    height = 112 + rows * 240 + max(rows - 1, 0) * 18 + 96
+    footer_y = height - 58
     footer = render_contribution_footer(repositories, footer_y)
     project_names = ", ".join(str(repo["name"]) for repo in repositories)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-labelledby="title desc">

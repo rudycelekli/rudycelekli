@@ -175,7 +175,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
         svg = subject.render_svg(repositories, "2026-09-28")
 
-        self.assertIn('height="682"', svg)
+        self.assertIn('height="706"', svg)
         self.assertIn("3 verified projects", svg)
         self.assertIn("330 accepted line changes", svg)
         self.assertIn("6.0k combined stars", svg)
@@ -184,6 +184,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("OPEN-SOURCE IMPACT, VERIFIED", svg)
         self.assertIn('clip-path="url(#contribution-card-0)"', svg)
         self.assertIn("every 30 min", svg)
+        self.assertIn('transform="translate(0 24)"', svg)
         self.assertIn("Repository stars and forks describe project reach", svg)
 
     def test_readme_contribution_proof_is_rendered_as_a_comparable_table(self):
