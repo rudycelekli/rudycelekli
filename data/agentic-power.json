@@ -1,6 +1,6 @@
 {
   "agentic_power_x": {
-    "base": 116.4,
+    "base": 116.3,
     "high": 186.0,
     "low": 74.3
   },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 418.9,
+  "engineer_weeks_at_40h": 418.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -386,11 +386,11 @@
       "agentic_power_x": {
         "base": 65.7,
         "high": 107.5,
-        "low": 40.4
+        "low": 40.2
       },
       "modeled_human_direction_hours": {
         "base": 1.66,
-        "high": 1.89,
+        "high": 1.9,
         "low": 1.42
       },
       "month": "2026-02",
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 76.5,
+        "base": 76.4,
         "high": 124.9,
         "low": 46.8
       },
       "modeled_human_direction_hours": {
-        "base": 7.29,
+        "base": 7.3,
         "high": 8.34,
         "low": 6.25
       },
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 89.3,
+        "base": 89.2,
         "high": 145.8,
         "low": 54.6
       },
       "modeled_human_direction_hours": {
-        "base": 10.51,
+        "base": 10.52,
         "high": 12.02,
         "low": 9.01
       },
@@ -546,7 +546,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 18.42,
-        "high": 21.05,
+        "high": 21.06,
         "low": 15.79
       },
       "month": "2026-08",
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 148.5,
+        "base": 148.4,
         "high": 236.6,
         "low": 95.3
       },
       "modeled_human_direction_hours": {
-        "base": 26.06,
+        "base": 26.07,
         "high": 29.79,
         "low": 22.34
       },
@@ -597,22 +597,22 @@
         "low": 87.2
       },
       "modeled_human_direction_hours": {
-        "base": 54.99,
-        "high": 62.84,
-        "low": 47.13
+        "base": 54.97,
+        "high": 62.82,
+        "low": 47.12
       },
       "month": "2026-10",
       "public_merged_pull_requests": 726,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 7308.42,
-        "high": 9866.61,
-        "low": 5481.27
+        "base": 7306.21,
+        "high": 9863.62,
+        "low": 5479.61
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 894.83,
-        "high": 1274.31,
-        "low": 619.19
+        "base": 894.34,
+        "high": 1273.62,
+        "low": 618.85
       }
     }
   ],
@@ -622,14 +622,14 @@
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 16755.86,
-    "high": 22962.29,
-    "low": 12225.24
+    "base": 16753.65,
+    "high": 22959.3,
+    "low": 12223.58
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2343.48,
-    "high": 3576.5,
-    "low": 1572.75
+    "base": 2342.99,
+    "high": 3575.81,
+    "low": 1572.41
   },
   "updated_at_utc": "2026-10-06",
   "window": {
@@ -19491,35 +19491,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-04T16:29:07Z",
-      "evidence": {
-        "additions": 129,
-        "changed_files": 4,
-        "comments": 3,
-        "commits": 4,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.53,
-        "high": 16.92,
-        "low": 9.4
-      },
-      "merged_at": "2026-10-05T05:48:06Z",
-      "modeled_human_direction_hours": {
-        "base": 1.47,
-        "high": 2.06,
-        "low": 1.03
-      },
-      "project": "thedotmack/claude-mem",
-      "pull_request": 4405,
-      "title": "fix(worker): persist the model reported by Claude assistant messages",
-      "url": "https://github.com/thedotmack/claude-mem/pull/4405"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-04T13:58:13Z",
       "evidence": {
         "additions": 72,
@@ -28447,6 +28418,35 @@
       "pull_request": 199,
       "title": "fix(http): retry transient gateway status failures",
       "url": "https://github.com/ifixai-ai/iFixAi/pull/199"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-06T11:08:37Z",
+      "evidence": {
+        "additions": 89,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.32,
+        "high": 13.93,
+        "low": 7.74
+      },
+      "merged_at": "2026-10-06T20:26:10Z",
+      "modeled_human_direction_hours": {
+        "base": 0.98,
+        "high": 1.37,
+        "low": 0.69
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 201,
+      "title": "fix(reporting): preserve grading provenance in human exports",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/201"
     },
     {
       "acceptance_basis": "merged pull request",
