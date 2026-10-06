@@ -70,6 +70,7 @@ Dark-profile translation:
 - Responsive SVG copy: wrap or clamp repository names and descriptions inside their own bounds and preserve a readable text equivalent in the README.
 - Auto-discovered contribution constellation: qualifying upstream projects flow into a two-column evidence layout with current stars and forks labeled as project reach, never personal credit.
 - Auto-discovered owner-project spotlight: public, non-fork, active source repositories use a compact three-column layout and explicit OWNER labels. Preserve the complete qualifying set in machine-readable evidence while keeping the visible profile selective and scannable.
+- Seven-chapter operating brief: a 35-second, pure-SVG profile walkthrough moves from thesis through Direct, Orchestrate, Verify, Improve, live proof, and invitation. Pull its proof figures from the contribution and Agentic Power datasets, preserve a complete reduced-motion frame, and keep the artwork original. Narrative-format inspiration: RuVector's vector walkthrough.
 - Attribution link: directly credit the Agentic Power Framework and its author.
 
 ## Page Pattern

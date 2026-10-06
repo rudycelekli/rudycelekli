@@ -25,6 +25,7 @@ SVG_FILE = ROOT / "assets" / "open-source-contributions.svg"
 OWNED_SVG_FILE = ROOT / "assets" / "owned-public-projects.svg"
 AP_DATA_FILE = ROOT / "data" / "agentic-power.json"
 AP_SVG_FILE = ROOT / "assets" / "agentic-power-profile.svg"
+WALKTHROUGH_SVG_FILE = ROOT / "assets" / "profile-walkthrough.svg"
 REPOSITORY_DATA_FILE = ROOT / "data" / "repository-work-aggregate.json"
 LOGIN = "rudycelekli"
 OWNED_PROJECT_DISPLAY_LIMIT = 8
@@ -1223,6 +1224,191 @@ def render_agentic_power_svg(profile: dict[str, object]) -> str:
 """
 
 
+def render_profile_walkthrough_svg(
+    repositories: list[dict[str, object]],
+    owned_repositories: list[dict[str, object]],
+    profile: dict[str, object],
+) -> str:
+    """Render a concise animated profile tour backed by live evidence."""
+    total_merged = sum(int(repo["merged_prs"]) for repo in repositories)
+    total_line_changes = sum(
+        int(repo["accepted_additions"]) + int(repo["accepted_deletions"])
+        for repo in repositories
+    )
+    agentic_power = float(profile["agentic_power_x"]["base"])
+    updated = html.escape(str(profile["updated_at_utc"]))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Rudy Celekli, 35-second operating brief</title>
+  <desc id="desc">A seven-chapter animated walkthrough of Rudy's evidence-first agentic engineering practice. Live proof includes {len(repositories)} verified upstream projects, {total_merged} merged pull requests, {total_line_changes:,} accepted line changes, {len(owned_repositories)} owned public projects, and a provisional Agentic Power estimate of {agentic_power:.1f} times.</desc>
+  <defs>
+    <style>
+      .scene {{ opacity: 0; animation: chapter 35s linear infinite; }}
+      .scene-1 {{ animation-delay: 0s; }}
+      .scene-2 {{ animation-delay: 5s; }}
+      .scene-3 {{ animation-delay: 10s; }}
+      .scene-4 {{ animation-delay: 15s; }}
+      .scene-5 {{ animation-delay: 20s; }}
+      .scene-6 {{ animation-delay: 25s; }}
+      .scene-7 {{ animation-delay: 30s; }}
+      .trace {{ stroke-dasharray: 8 12; animation: trace-flow 2.2s linear infinite; }}
+      .pulse {{ animation: signal-pulse 2.8s ease-in-out infinite; }}
+      .scene-static {{ opacity: 0; }}
+      @keyframes chapter {{ 0%, 12% {{ opacity: 1; }} 14.285%, 100% {{ opacity: 0; }} }}
+      @keyframes trace-flow {{ to {{ stroke-dashoffset: -40; }} }}
+      @keyframes signal-pulse {{ 0%, 100% {{ opacity: .58; }} 50% {{ opacity: 1; }} }}
+      @media (prefers-reduced-motion: reduce) {{
+        .scene, .trace, .pulse {{ animation: none; }}
+        .scene {{ opacity: 0; }}
+        .scene-static {{ opacity: 1; }}
+      }}
+    </style>
+    <linearGradient id="walkthrough-canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#07111E"/>
+      <stop offset="0.58" stop-color="#0B1728"/>
+      <stop offset="1" stop-color="#150B2E"/>
+    </linearGradient>
+    <linearGradient id="walkthrough-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#2DE2C5"/>
+      <stop offset="0.52" stop-color="#4D7CFE"/>
+      <stop offset="1" stop-color="#9B7CFF"/>
+    </linearGradient>
+    <radialGradient id="walkthrough-glow">
+      <stop stop-color="#4D7CFE" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#4D7CFE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="620" rx="28" fill="url(#walkthrough-canvas)"/>
+  <rect x="1" y="1" width="1198" height="618" rx="27" fill="none" stroke="#26364D"/>
+  <circle cx="955" cy="285" r="280" fill="url(#walkthrough-glow)"/>
+  <rect x="42" y="34" width="74" height="4" rx="2" fill="url(#walkthrough-rule)"/>
+  <text x="42" y="70" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="25" font-weight="780">RUDY CELEKLI / OPERATING BRIEF</text>
+  <text x="1158" y="68" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">07 CHAPTERS · 35 SEC · LIVE EVIDENCE {updated}</text>
+  <line x1="42" y1="92" x2="1158" y2="92" stroke="#26364D"/>
+  <g fill="#26364D"><rect x="42" y="568" width="142" height="4" rx="2"/><rect x="204" y="568" width="142" height="4" rx="2"/><rect x="366" y="568" width="142" height="4" rx="2"/><rect x="528" y="568" width="142" height="4" rx="2"/><rect x="690" y="568" width="142" height="4" rx="2"/><rect x="852" y="568" width="142" height="4" rx="2"/><rect x="1014" y="568" width="144" height="4" rx="2"/></g>
+
+  <g class="scene scene-1" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">01 / THESIS</text>
+    <text x="42" y="224" fill="#F8FAFC" font-size="58" font-weight="820">INTELLIGENCE IS CHEAP.</text>
+    <text x="42" y="292" fill="#2DE2C5" font-size="58" font-weight="820">EVIDENCE IS THE PRODUCT.</text>
+    <text x="45" y="346" fill="#AAB8CA" font-size="19">Build long-horizon agents that can show what happened, replay it, and earn trust.</text>
+    <g transform="translate(760 160)">
+      <circle cx="160" cy="110" r="102" fill="none" stroke="#26364D"/>
+      <circle class="pulse" cx="160" cy="110" r="66" fill="none" stroke="#4D7CFE" stroke-width="2"/>
+      <circle cx="160" cy="110" r="9" fill="#2DE2C5"/>
+      <circle cx="67" cy="54" r="6" fill="#9B7CFF"/><circle cx="248" cy="62" r="6" fill="#F2A93B"/>
+      <circle cx="77" cy="181" r="6" fill="#4D7CFE"/><circle cx="242" cy="180" r="6" fill="#2DE2C5"/>
+      <path class="trace" d="M67 54 L160 110 L248 62 M77 181 L160 110 L242 180" fill="none" stroke="#65758B" stroke-width="2"/>
+      <text x="160" y="254" fill="#91A2B8" font-size="13" text-anchor="middle">CAPABILITY → RECEIPT → TRUST</text>
+    </g>
+    <rect x="42" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
+  </g>
+
+  <g class="scene scene-2" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="137" fill="#4D7CFE" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">02 / DIRECT</text>
+    <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">HUMAN AUTHORITY SETS THE CONTRACT.</text>
+    <text x="42" y="246" fill="#AAB8CA" font-size="18">Direction is goals, constraints, acceptance criteria, and escalation boundaries.</text>
+    <path class="trace" d="M150 356 H1035" fill="none" stroke="#4D7CFE" stroke-width="3"/>
+    <g transform="translate(64 309)"><rect width="214" height="96" rx="18" fill="#0B1728" stroke="#4D7CFE"/><text x="107" y="42" fill="#8EB0FF" font-size="13" letter-spacing="1.4" text-anchor="middle">GOALS</text><text x="107" y="68" fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle">Define success</text></g>
+    <g transform="translate(349 309)"><rect width="214" height="96" rx="18" fill="#0B1728" stroke="#2DE2C5"/><text x="107" y="42" fill="#6EE7D8" font-size="13" letter-spacing="1.4" text-anchor="middle">CONSTRAINTS</text><text x="107" y="68" fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle">Bound the system</text></g>
+    <g transform="translate(634 309)"><rect width="214" height="96" rx="18" fill="#0B1728" stroke="#9B7CFF"/><text x="107" y="42" fill="#C4B5FD" font-size="13" letter-spacing="1.4" text-anchor="middle">ACCEPTANCE</text><text x="107" y="68" fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle">Name the proof</text></g>
+    <g transform="translate(919 309)"><rect width="214" height="96" rx="18" fill="#0B1728" stroke="#F2A93B"/><text x="107" y="42" fill="#F8C66E" font-size="13" letter-spacing="1.4" text-anchor="middle">ESCALATION</text><text x="107" y="68" fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle">Keep authority</text></g>
+    <rect x="204" y="568" width="142" height="4" rx="2" fill="#4D7CFE"/>
+  </g>
+
+  <g class="scene scene-3" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">03 / ORCHESTRATE</text>
+    <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">TURN CAPABILITY INTO A WORKING SYSTEM.</text>
+    <text x="42" y="246" fill="#AAB8CA" font-size="18">Compose specialist agents, models, tools, memory, and loops around one explicit outcome.</text>
+    <g transform="translate(452 320)"><circle cx="148" cy="68" r="63" fill="#101D31" stroke="#2DE2C5" stroke-width="2"/><text x="148" y="63" fill="#F8FAFC" font-size="18" font-weight="780" text-anchor="middle">DIRECTED</text><text x="148" y="87" fill="#6EE7D8" font-size="13" text-anchor="middle">SYSTEM</text></g>
+    <g fill="#0B1728" stroke="#26364D">
+      <rect x="74" y="324" width="210" height="72" rx="16"/><rect x="916" y="324" width="210" height="72" rx="16"/>
+      <rect x="211" y="432" width="210" height="72" rx="16"/><rect x="779" y="432" width="210" height="72" rx="16"/>
+    </g>
+    <g fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle"><text x="179" y="368">SPECIALIST AGENTS</text><text x="1021" y="368">MODELS + TOOLS</text><text x="316" y="476">MEMORY</text><text x="884" y="476">FEEDBACK LOOPS</text></g>
+    <path class="trace" d="M284 360 H452 M748 360 H916 M421 468 L478 419 M779 468 L722 419" fill="none" stroke="#2DE2C5" stroke-width="2.5"/>
+    <rect x="366" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
+  </g>
+
+  <g class="scene scene-4" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="137" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">04 / VERIFY</text>
+    <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">PLAUSIBLE IS NOT THE SAME AS PROVEN.</text>
+    <text x="42" y="246" fill="#AAB8CA" font-size="18">Receipts, deterministic replay, and adversarial tests decide what gets accepted.</text>
+    <g transform="translate(64 316)" font-family="ui-monospace,SFMono-Regular,monospace">
+      <text x="0" y="22" fill="#91A2B8" font-size="12" letter-spacing="1.5">RAW OUTPUT</text>
+      <rect x="0" y="48" width="214" height="86" rx="16" fill="#0B1728" stroke="#65758B"/><text x="107" y="100" fill="#F8FAFC" font-size="16" text-anchor="middle">AGENT RESULT</text>
+      <path class="trace" d="M214 91 H357" fill="none" stroke="#9B7CFF" stroke-width="3"/>
+      <path d="M348 83 L360 91 L348 99" fill="none" stroke="#9B7CFF" stroke-width="3"/>
+      <rect x="357" y="22" width="350" height="138" rx="22" fill="#14132A" stroke="#9B7CFF" stroke-width="2"/>
+      <text x="532" y="58" fill="#C4B5FD" font-size="12" letter-spacing="1.6" text-anchor="middle">EVIDENCE GATE</text>
+      <text x="422" y="106" fill="#F8FAFC" font-size="16">RECEIPT</text><text x="532" y="106" fill="#F8FAFC" font-size="16">REPLAY</text><text x="637" y="106" fill="#F8FAFC" font-size="16">TEST</text>
+      <path class="trace" d="M707 91 H850" fill="none" stroke="#2DE2C5" stroke-width="3"/>
+      <path d="M841 83 L853 91 L841 99" fill="none" stroke="#2DE2C5" stroke-width="3"/>
+      <rect x="850" y="48" width="214" height="86" rx="16" fill="#0B2427" stroke="#2DE2C5"/><text x="957" y="100" fill="#6EE7D8" font-size="16" font-weight="700" text-anchor="middle">ACCEPTED WORK</text>
+    </g>
+    <text x="600" y="516" fill="#91A2B8" font-size="15" text-anchor="middle">Every important claim should survive independent inspection.</text>
+    <rect x="528" y="568" width="142" height="4" rx="2" fill="#9B7CFF"/>
+  </g>
+
+  <g class="scene scene-5" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="137" fill="#F2A93B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">05 / IMPROVE</text>
+    <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">MAKE FAILURE STRENGTHEN THE NEXT RUN.</text>
+    <text x="42" y="246" fill="#AAB8CA" font-size="18">Measured breakdowns become sharper instructions, tests, and system design.</text>
+    <path class="trace" d="M191 390 C235 277 397 273 452 378 C510 490 690 490 748 378 C803 273 965 277 1009 390" fill="none" stroke="#F2A93B" stroke-width="3"/>
+    <g text-anchor="middle">
+      <circle cx="191" cy="390" r="50" fill="#0B1728" stroke="#4D7CFE"/><text x="191" y="386" fill="#8EB0FF" font-size="12">01</text><text x="191" y="410" fill="#F8FAFC" font-size="15" font-weight="700">DIRECT</text>
+      <circle cx="452" cy="378" r="50" fill="#0B1728" stroke="#2DE2C5"/><text x="452" y="374" fill="#6EE7D8" font-size="12">02</text><text x="452" y="398" fill="#F8FAFC" font-size="15" font-weight="700">ORCHESTRATE</text>
+      <circle cx="748" cy="378" r="50" fill="#0B1728" stroke="#9B7CFF"/><text x="748" y="374" fill="#C4B5FD" font-size="12">03</text><text x="748" y="398" fill="#F8FAFC" font-size="15" font-weight="700">VERIFY</text>
+      <circle cx="1009" cy="390" r="50" fill="#241A0A" stroke="#F2A93B"/><text x="1009" y="386" fill="#F8C66E" font-size="12">04</text><text x="1009" y="410" fill="#F8FAFC" font-size="15" font-weight="700">IMPROVE</text>
+    </g>
+    <path class="trace" d="M1009 442 C988 525 222 525 191 442" fill="none" stroke="#65758B" stroke-width="2"/>
+    <rect x="690" y="568" width="142" height="4" rx="2" fill="#F2A93B"/>
+  </g>
+
+  <g class="scene scene-6" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">06 / LIVE PROOF</text>
+    <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">THE PROFILE UPDATES AS THE WORK LANDS.</text>
+    <text x="42" y="246" fill="#AAB8CA" font-size="18">Public contribution evidence and modeled Agentic Power refresh from source data.</text>
+    <g transform="translate(42 318)">
+      <line x1="0" y1="0" x2="1116" y2="0" stroke="#26364D"/>
+      <line x1="274" y1="0" x2="274" y2="142" stroke="#26364D"/><line x1="558" y1="0" x2="558" y2="142" stroke="#26364D"/><line x1="842" y1="0" x2="842" y2="142" stroke="#26364D"/>
+      <text x="0" y="58" fill="#2DE2C5" font-size="42" font-weight="820">{len(repositories)}</text><text x="0" y="88" fill="#91A2B8" font-size="12" letter-spacing="1.3">VERIFIED UPSTREAM PROJECTS</text>
+      <text x="308" y="58" fill="#9B7CFF" font-size="42" font-weight="820">{total_merged:,}</text><text x="308" y="88" fill="#91A2B8" font-size="12" letter-spacing="1.3">MERGED PULL REQUESTS</text>
+      <text x="592" y="58" fill="#F8FAFC" font-size="42" font-weight="820">{total_line_changes:,}</text><text x="592" y="88" fill="#91A2B8" font-size="12" letter-spacing="1.3">ACCEPTED LINE CHANGES</text>
+      <text x="876" y="58" fill="#F2A93B" font-size="42" font-weight="820">{agentic_power:.1f}×</text><text x="876" y="88" fill="#91A2B8" font-size="12" letter-spacing="1.3">PROVISIONAL AGENTIC POWER</text>
+      <text x="0" y="132" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11">{len(owned_repositories)} owned public projects · evidence refresh every 30 minutes · assumptions remain visible</text>
+    </g>
+    <rect x="852" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
+  </g>
+
+  <g class="scene scene-7" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="137" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">07 / BUILD TOGETHER</text>
+    <text x="42" y="218" fill="#F8FAFC" font-size="55" font-weight="820">BUILD AI THAT CAN SURVIVE</text>
+    <text x="42" y="284" fill="#9B7CFF" font-size="55" font-weight="820">CONTACT WITH REALITY.</text>
+    <text x="45" y="341" fill="#AAB8CA" font-size="19">Agent reliability · evaluation integrity · proof-bound execution · enterprise deployment</text>
+    <g transform="translate(45 407)" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13" letter-spacing="1.3">
+      <text x="0" fill="#2DE2C5">OPEN SOURCE</text><text x="155" fill="#65758B">•</text><text x="182" fill="#4D7CFE">GRADIA</text><text x="284" fill="#65758B">•</text><text x="311" fill="#9B7CFF">RESEARCH</text><text x="436" fill="#65758B">•</text><text x="463" fill="#F2A93B">COLLABORATE</text>
+    </g>
+    <rect x="1014" y="568" width="144" height="4" rx="2" fill="#9B7CFF"/>
+  </g>
+
+  <g class="scene-static" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">EVIDENCE-FIRST AGENTIC ENGINEERING</text>
+    <text x="42" y="211" fill="#F8FAFC" font-size="45" font-weight="820">DIRECT → ORCHESTRATE → VERIFY → IMPROVE</text>
+    <text x="42" y="258" fill="#AAB8CA" font-size="18">Human authority sets the contract. Only accepted, inspectable work counts.</text>
+    <g transform="translate(42 329)">
+      <text x="0" y="45" fill="#2DE2C5" font-size="38" font-weight="820">{len(repositories)}</text><text x="0" y="72" fill="#91A2B8" font-size="11">VERIFIED PROJECTS</text>
+      <text x="270" y="45" fill="#9B7CFF" font-size="38" font-weight="820">{total_merged:,}</text><text x="270" y="72" fill="#91A2B8" font-size="11">MERGED PRS</text>
+      <text x="550" y="45" fill="#F8FAFC" font-size="38" font-weight="820">{total_line_changes:,}</text><text x="550" y="72" fill="#91A2B8" font-size="11">ACCEPTED LINE CHANGES</text>
+      <text x="870" y="45" fill="#F2A93B" font-size="38" font-weight="820">{agentic_power:.1f}×</text><text x="870" y="72" fill="#91A2B8" font-size="11">PROVISIONAL AP</text>
+    </g>
+  </g>
+
+  <text x="42" y="598" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">CONCEPTUAL WALKTHROUGH · LIVE NUMBERS ARE MACHINE-COUNTED · MOTION STOPS WITH REDUCED-MOTION</text>
+  <text x="1158" y="598" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">REPLAYING</text>
+</svg>
+"""
+
+
 def render_repository_card(
     repo: dict[str, object], index: int, repository_count: int
 ) -> str:
@@ -1638,6 +1824,12 @@ def main() -> int:
         ),
     )
     write_generated(AP_SVG_FILE, render_agentic_power_svg(agentic_power))
+    write_generated(
+        WALKTHROUGH_SVG_FILE,
+        render_profile_walkthrough_svg(
+            repositories, owned_repositories, agentic_power
+        ),
+    )
     update_readme(
         "agentic-power-profile", render_agentic_power_readme(agentic_power)
     )

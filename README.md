@@ -19,6 +19,14 @@
 
 </div>
 
+## Watch the operating brief
+
+<img src="./assets/profile-walkthrough.svg" width="100%" alt="Animated seven-chapter walkthrough of Rudy Celekli's evidence-first agentic engineering practice" />
+
+<sub>35 seconds · seven chapters · live evidence · reduced-motion safe · narrative format inspired by [RuVector’s vector walkthrough](https://github.com/ruvnet/ruvector/blob/main/assets/ruvector/ruvector-walkthrough.md)</sub>
+
+[Inspect public proof](#open-source-impact-verified) · [Explore the proof stack](#the-proof-stack) · [Audit Agentic Power](#agentic-power-engineered) · [Meet the human layer](#building-the-human-layer)
+
 ## Intelligence is cheap. Evidence is the product.
 
 I’m a forward deployed AI researcher and agentic AI engineer building systems that make autonomous behavior **observable, replayable, and independently verifiable**.

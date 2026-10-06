@@ -297,6 +297,38 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertLessEqual(max(map(len, lines)), 20)
         self.assertTrue(lines[-1].endswith("…"))
 
+    def test_profile_walkthrough_uses_live_evidence_and_reduced_motion(self):
+        repositories = [
+            {
+                "merged_prs": 9,
+                "accepted_additions": 1_234,
+                "accepted_deletions": 56,
+            },
+            {
+                "merged_prs": 4,
+                "accepted_additions": 500,
+                "accepted_deletions": 10,
+            },
+        ]
+        profile = {
+            "agentic_power_x": {"base": 42.5},
+            "updated_at_utc": "2026-10-06",
+        }
+
+        svg = subject.render_profile_walkthrough_svg(
+            repositories, [{}, {}, {}], profile
+        )
+
+        self.assertIn("RUDY CELEKLI / OPERATING BRIEF", svg)
+        self.assertIn("07 CHAPTERS · 35 SEC", svg)
+        self.assertIn("2 verified upstream projects", svg)
+        self.assertIn("13 merged pull requests", svg)
+        self.assertIn("1,800 accepted line changes", svg)
+        self.assertIn("42.5 times", svg)
+        self.assertIn("3 owned public projects", svg)
+        self.assertIn("prefers-reduced-motion", svg)
+        self.assertIn('class="scene-static"', svg)
+
     def test_profile_leads_with_upstream_proof_and_runs_twice_hourly(self):
         readme = (subject.ROOT / "README.md").read_text()
         workflow = (
@@ -321,6 +353,8 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("https://axiomconsulting.ai/", readme)
         self.assertIn("https://charlotte.aitinkerers.org/", readme)
         self.assertIn("https://agentics.org/leadership/", readme)
+        self.assertIn("./assets/profile-walkthrough.svg", readme)
+        self.assertIn("RuVector’s vector walkthrough", readme)
         self.assertLess(readme.index("LINKEDIN-connect"), readme.index("## Intelligence"))
 
 
