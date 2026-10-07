@@ -31,7 +31,8 @@ WALKTHROUGH_SVG_FILE = ROOT / "assets" / "profile-walkthrough.svg"
 REPOSITORY_DATA_FILE = ROOT / "data" / "repository-work-aggregate.json"
 LOGIN = "rudycelekli"
 OWNED_PROJECT_DISPLAY_LIMIT = 8
-FEATURED_OWNED_PROJECT_LIMIT = 3
+FEATURED_OWNED_PROJECT_LIMIT = 6
+BUILDING_FRONTIER_PAGE_SIZE = 3
 # The profile repository is presentation infrastructure, not a product. The
 # user has also explicitly identified DreamMachine as not their authored work.
 OWNED_PROJECT_EXCLUSIONS = {
@@ -1372,27 +1373,52 @@ def render_hero_svg(
 def render_building_now_svg(
     owned_repositories: list[dict[str, object]], updated: str
 ) -> str:
-    """Render the private product anchor and auto-ranked public frontier."""
+    """Render the private product anchor and rotating auto-ranked frontier."""
     featured = select_featured_owned_projects(owned_repositories, updated)
-    rows: list[str] = []
-    for index, repo in enumerate(featured):
-        y = 36 + index * 82
-        description = str(repo.get("description") or "Public source project")
-        description = description.replace("—", "·").replace("–", "-")
-        description_lines = wrap_svg_text(description, width=61, lines=2)
-        description_svg = "".join(
-            f'<text x="66" y="{y + 38 + line_index * 16}" fill="#91A2B8" font-size="11.5">{html.escape(line)}</text>'
-            for line_index, line in enumerate(description_lines)
+    frontier_pages: list[str] = []
+    page_count = max(
+        1,
+        (len(featured) + BUILDING_FRONTIER_PAGE_SIZE - 1)
+        // BUILDING_FRONTIER_PAGE_SIZE,
+    )
+    for page_index in range(page_count):
+        page_repositories = featured[
+            page_index
+            * BUILDING_FRONTIER_PAGE_SIZE : (page_index + 1)
+            * BUILDING_FRONTIER_PAGE_SIZE
+        ]
+        rows: list[str] = []
+        for row_index, repo in enumerate(page_repositories):
+            rank = page_index * BUILDING_FRONTIER_PAGE_SIZE + row_index + 1
+            y = 36 + row_index * 82
+            description = str(repo.get("description") or "Public source project")
+            description = description.replace("—", "·").replace("–", "-")
+            description_lines = wrap_svg_text(description, width=61, lines=2)
+            description_svg = "".join(
+                f'<text x="66" y="{y + 38 + line_index * 16}" fill="#91A2B8" font-size="11.5">{html.escape(line)}</text>'
+                for line_index, line in enumerate(description_lines)
+            )
+            pushed = str(repo.get("pushed_at") or "")[:10] or "unknown"
+            rows.append(
+                f"""
+      <g>
+        <text x="0" y="{y + 25}" fill="{repo['accent']}" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">{rank:02d}</text>
+        <text x="66" y="{y + 24}" fill="#F8FAFC" font-size="20" font-weight="780">{html.escape(ellipsize(repo['name'], 24))}</text>
+        <text x="642" y="{y + 22}" fill="#AAB8CA" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{compact_counted(int(repo['contributor_commits']), 'COMMIT')} · {compact_counted(int(repo['stargazers']), 'STAR')} · {pushed}</text>
+        {description_svg}
+        <line x1="0" y1="{y + 72}" x2="642" y2="{y + 72}" stroke="#203149"/>
+      </g>"""
+            )
+        page_class = (
+            f"frontier-page frontier-page-{page_index + 1}"
+            if page_count > 1
+            else "frontier-page-static"
         )
-        pushed = str(repo.get("pushed_at") or "")[:10] or "unknown"
-        rows.append(
+        frontier_pages.append(
             f"""
-    <g class="frontier-row" style="animation-delay:{index * 0.55:.2f}s">
-      <text x="0" y="{y + 25}" fill="{repo['accent']}" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">0{index + 1}</text>
-      <text x="66" y="{y + 24}" fill="#F8FAFC" font-size="20" font-weight="780">{html.escape(ellipsize(repo['name'], 24))}</text>
-      <text x="642" y="{y + 22}" fill="#AAB8CA" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{compact_counted(int(repo['contributor_commits']), 'COMMIT')} · {compact_counted(int(repo['stargazers']), 'STAR')} · {pushed}</text>
-      {description_svg}
-      <line x1="0" y1="{y + 72}" x2="642" y2="{y + 72}" stroke="#203149"/>
+    <g class="{page_class}">
+      <text x="642" y="14" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">VIEW {page_index + 1} / {page_count}</text>
+      {''.join(rows)}
     </g>"""
         )
     project_names = ", ".join(str(repo["name"]) for repo in featured)
@@ -1402,11 +1428,16 @@ def render_building_now_svg(
   <defs>
     <style>
       .private-signal {{ stroke-dasharray: 7 10; animation: building-flow 2.8s linear infinite; }}
-      .frontier-row {{ animation: frontier-pulse 5.5s ease-in-out infinite; }}
+      .frontier-page {{ opacity: 0; }}
+      .frontier-page-1 {{ animation: frontier-page-one 16s cubic-bezier(.16,1,.3,1) infinite; }}
+      .frontier-page-2 {{ animation: frontier-page-two 16s cubic-bezier(.16,1,.3,1) infinite; }}
       @keyframes building-flow {{ to {{ stroke-dashoffset: -34; }} }}
-      @keyframes frontier-pulse {{ 0%, 100% {{ opacity: .72; }} 50% {{ opacity: 1; }} }}
+      @keyframes frontier-page-one {{ 0%, 43% {{ opacity: 1; }} 48%, 95% {{ opacity: 0; }} 100% {{ opacity: 1; }} }}
+      @keyframes frontier-page-two {{ 0%, 43% {{ opacity: 0; }} 48%, 95% {{ opacity: 1; }} 100% {{ opacity: 0; }} }}
       @media (prefers-reduced-motion: reduce) {{
-        .private-signal, .frontier-row {{ animation: none; opacity: 1; }}
+        .private-signal, .frontier-page {{ animation: none; }}
+        .frontier-page-1 {{ opacity: 1; }}
+        .frontier-page-2 {{ opacity: 0; }}
       }}
     </style>
     <linearGradient id="building-canvas" x1="0" y1="0" x2="1" y2="1">
@@ -1445,12 +1476,12 @@ def render_building_now_svg(
   </g>
 
   <g transform="translate(494 103)" font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="0" y="14" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" letter-spacing="1.6">PUBLIC FRONTIER / AUTO-RANKED</text>
-    {''.join(rows)}
+    <text x="0" y="14" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" letter-spacing="1.6">PUBLIC FRONTIER / {len(featured)} AUTO-RANKED</text>
+    {''.join(frontier_pages)}
   </g>
 
   <text x="42" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">SELECTION SIGNALS: REACH · SHIPPING RECENCY · ATTRIBUTED WORK · PROJECT COMPLETENESS</text>
-  <text x="1158" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">RE-EVALUATED EVERY 30 MIN</text>
+  <text x="1158" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{len(featured)} PROJECTS · ROTATES EVERY 8 SEC · RE-RANKED EVERY 30 MIN</text>
 </svg>
 """
 
@@ -1460,19 +1491,28 @@ def render_building_now_readme(
 ) -> str:
     """Render the compact accessible text companion for the top portfolio rail."""
     featured = select_featured_owned_projects(owned_repositories, updated)
+    page_count = max(
+        1,
+        (len(featured) + BUILDING_FRONTIER_PAGE_SIZE - 1)
+        // BUILDING_FRONTIER_PAGE_SIZE,
+    )
+    view_label = (
+        "one view" if page_count == 1 else f"{page_count} rotating views"
+    )
     lines = [
         "<!-- building-now:start -->",
         "## Building now",
         "",
-        '<img src="./assets/building-now.svg" width="100%" alt="Gradia private product and the strongest automatically ranked public projects Rudy is building" />',
+        f'<img src="./assets/building-now.svg" width="100%" alt="Gradia private product and {len(featured)} automatically ranked public projects Rudy is building, shown in {view_label}" />',
         "",
         "**[Gradia](https://www.gradiahq.com)** for business-grounded AI agent evaluation: test real workflows and rules, inspect failures, and compare changes before release.",
         "",
-        "**Public frontier, selected automatically:**",
+        f"**Public frontier, selected automatically and shown in {view_label}:**",
         "",
     ]
     for index, repo in enumerate(featured, 1):
         blurb = str(repo["description"]).rstrip(".")
+        blurb = blurb.replace(" — ", ": ").replace(" – ", ": ")
         blurb = blurb.replace("—", ":").replace("–", "-")
         lines.append(f"{index}. **[{repo['name']}]({repo['url']})**: {blurb}.")
     lines.extend(

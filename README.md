@@ -22,15 +22,18 @@
 <!-- building-now:start -->
 ## Building now
 
-<img src="./assets/building-now.svg" width="100%" alt="Gradia private product and the strongest automatically ranked public projects Rudy is building" />
+<img src="./assets/building-now.svg" width="100%" alt="Gradia private product and 6 automatically ranked public projects Rudy is building, shown in 2 rotating views" />
 
 **[Gradia](https://www.gradiahq.com)** for business-grounded AI agent evaluation: test real workflows and rules, inspect failures, and compare changes before release.
 
-**Public frontier, selected automatically:**
+**Public frontier, selected automatically and shown in 2 rotating views:**
 
 1. **[TestLore](https://github.com/rudycelekli/testlore)**: Build better tests. Run what matters. Remember what worked. An open-source test intelligence and quality engineering layer.
 2. **[code-transplant](https://github.com/rudycelekli/code-transplant)**: Gradia Research: move TypeScript parsers between programs with dependency capsules and reproducible behavioral evidence.
 3. **[Gradia Guard](https://github.com/rudycelekli/gradia-guard)**: Open-source, proof-bound evidence recorder and verifier for explicit AI-system execution boundaries.
+4. **[ProofSeal](https://github.com/rudycelekli/proofseal)**: Regression memory for coding agents: seal how your repo behaves, then check over MCP (or in CI) that an edit didn't regress it: pass/drift/regressed/missing. With seal history, bisection, and staleness queries.
+5. **[gradia-wind-tunnel](https://github.com/rudycelekli/gradia-wind-tunnel)**: Proof-bound evaluator stress testing with oracle-witnessed reward-hacking exploits and replayable evidence.
+6. **[ghostpart](https://github.com/rudycelekli/ghostpart)**: GhostPart: open-source repair CAD from a phone photo. Try it: https://rudycelekli.github.io/ghostpart/.
 
 <sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping recency, attributed work, and project completeness · last ranked 2026-10-07 UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>
 <!-- building-now:end -->

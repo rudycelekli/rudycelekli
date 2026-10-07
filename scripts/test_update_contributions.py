@@ -400,6 +400,22 @@ class ContributionDiscoveryTests(unittest.TestCase):
                 "accent": "#F2A93B",
             },
         ]
+        for index in range(3):
+            projects.append(
+                {
+                    "name": f"Additional Project {index + 1}",
+                    "full_name": f"rudycelekli/additional-project-{index + 1}",
+                    "url": f"https://github.com/rudycelekli/additional-project-{index + 1}",
+                    "description": "Another public project in the rotating frontier",
+                    "homepage": None,
+                    "topics": [],
+                    "stargazers": 0,
+                    "forks": 0,
+                    "contributor_commits": 1,
+                    "pushed_at": f"2026-09-0{index + 1}T00:00:00Z",
+                    "accent": "#4D7CFE",
+                }
+            )
 
         featured = subject.select_featured_owned_projects(
             projects, "2026-10-07", limit=2
@@ -412,12 +428,17 @@ class ContributionDiscoveryTests(unittest.TestCase):
             ["Adopted Project", "Fresh Project"],
         )
         self.assertIn("PRIVATE PRODUCT · PUBLIC EVIDENCE", svg)
-        self.assertIn("PUBLIC FRONTIER / AUTO-RANKED", svg)
-        self.assertIn("RE-EVALUATED EVERY 30 MIN", svg)
+        self.assertIn("PUBLIC FRONTIER / 6 AUTO-RANKED", svg)
+        self.assertIn("VIEW 1 / 2", svg)
+        self.assertIn("VIEW 2 / 2", svg)
+        self.assertIn("frontier-page-two 16s", svg)
+        self.assertIn("ROTATES EVERY 8 SEC", svg)
+        self.assertIn("RE-RANKED EVERY 30 MIN", svg)
         self.assertIn("prefers-reduced-motion", svg)
         self.assertIn("Gradia", readme)
         self.assertIn("private repository evidence remains private", readme)
         self.assertIn("Adopted Project", readme)
+        self.assertIn("Additional Project", readme)
 
     def test_profile_leads_with_upstream_proof_and_runs_twice_hourly(self):
         readme = (subject.ROOT / "README.md").read_text()
