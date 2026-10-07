@@ -19,6 +19,22 @@
 
 </div>
 
+<!-- building-now:start -->
+## Building now
+
+<img src="./assets/building-now.svg" width="100%" alt="Gradia private product and the strongest automatically ranked public projects Rudy is building" />
+
+**[Gradia](https://www.gradiahq.com)** for business-grounded AI agent evaluation: test real workflows and rules, inspect failures, and compare changes before release.
+
+**Public frontier, selected automatically:**
+
+1. **[TestLore](https://github.com/rudycelekli/testlore)**: Build better tests. Run what matters. Remember what worked. An open-source test intelligence and quality engineering layer.
+2. **[code-transplant](https://github.com/rudycelekli/code-transplant)**: Gradia Research: move TypeScript parsers between programs with dependency capsules and reproducible behavioral evidence.
+3. **[Gradia Guard](https://github.com/rudycelekli/gradia-guard)**: Open-source, proof-bound evidence recorder and verifier for explicit AI-system execution boundaries.
+
+<sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping recency, attributed work, and project completeness · last ranked 2026-10-07 UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>
+<!-- building-now:end -->
+
 ## Watch the operating brief
 
 <img src="./assets/profile-walkthrough.svg" width="100%" alt="Animated seven-chapter walkthrough of Rudy Celekli's evidence-first agentic engineering practice" />

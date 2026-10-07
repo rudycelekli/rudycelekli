@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 DATA_FILE = ROOT / "data" / "contributions.json"
 HERO_SVG_FILE = ROOT / "assets" / "hero.svg"
+BUILDING_SVG_FILE = ROOT / "assets" / "building-now.svg"
 SVG_FILE = ROOT / "assets" / "open-source-contributions.svg"
 OWNED_SVG_FILE = ROOT / "assets" / "owned-public-projects.svg"
 AP_DATA_FILE = ROOT / "data" / "agentic-power.json"
@@ -30,6 +31,7 @@ WALKTHROUGH_SVG_FILE = ROOT / "assets" / "profile-walkthrough.svg"
 REPOSITORY_DATA_FILE = ROOT / "data" / "repository-work-aggregate.json"
 LOGIN = "rudycelekli"
 OWNED_PROJECT_DISPLAY_LIMIT = 8
+FEATURED_OWNED_PROJECT_LIMIT = 3
 # The profile repository is presentation infrastructure, not a product. The
 # user has also explicitly identified DreamMachine as not their authored work.
 OWNED_PROJECT_EXCLUSIONS = {
@@ -743,6 +745,47 @@ def counted(value: int, noun: str) -> str:
     return f"{value:,} {noun if value == 1 else noun + 's'}"
 
 
+def owned_project_portfolio_score(
+    repo: dict[str, object], updated: str
+) -> float:
+    """Score public owner projects using current, inspectable GitHub signals."""
+    as_of = dt.date.fromisoformat(updated)
+    pushed_raw = str(repo.get("pushed_at") or "")[:10]
+    try:
+        pushed = dt.date.fromisoformat(pushed_raw)
+        age_days = max((as_of - pushed).days, 0)
+    except ValueError:
+        age_days = 365
+    recency = max(120 - age_days, 0)
+    description = str(repo.get("description") or "").strip()
+    topics = repo.get("topics") or []
+    return round(
+        int(repo.get("stargazers") or 0) * 100
+        + int(repo.get("forks") or 0) * 60
+        + min(int(repo.get("contributor_commits") or 0), 150) * 1.5
+        + recency * 1.5
+        + (25 if description and description != "Public source project" else 0)
+        + (20 if repo.get("homepage") else 0)
+        + min(len(topics), 5) * 4,
+        1,
+    )
+
+
+def select_featured_owned_projects(
+    repositories: list[dict[str, object]],
+    updated: str,
+    limit: int = FEATURED_OWNED_PROJECT_LIMIT,
+) -> list[dict[str, object]]:
+    """Re-rank the strongest current public projects for the profile top fold."""
+    return sorted(
+        repositories,
+        key=lambda repo: (
+            -owned_project_portfolio_score(repo, updated),
+            str(repo.get("full_name") or repo.get("name") or "").casefold(),
+        ),
+    )[:limit]
+
+
 def compact_counted(value: int, noun: str) -> str:
     return f"{compact(value)} {noun if value == 1 else noun + 'S'}"
 
@@ -1326,6 +1369,122 @@ def render_hero_svg(
 """
 
 
+def render_building_now_svg(
+    owned_repositories: list[dict[str, object]], updated: str
+) -> str:
+    """Render the private product anchor and auto-ranked public frontier."""
+    featured = select_featured_owned_projects(owned_repositories, updated)
+    rows: list[str] = []
+    for index, repo in enumerate(featured):
+        y = 36 + index * 82
+        description = str(repo.get("description") or "Public source project")
+        description = description.replace("—", "·").replace("–", "-")
+        description_lines = wrap_svg_text(description, width=61, lines=2)
+        description_svg = "".join(
+            f'<text x="66" y="{y + 38 + line_index * 16}" fill="#91A2B8" font-size="11.5">{html.escape(line)}</text>'
+            for line_index, line in enumerate(description_lines)
+        )
+        pushed = str(repo.get("pushed_at") or "")[:10] or "unknown"
+        rows.append(
+            f"""
+    <g class="frontier-row" style="animation-delay:{index * 0.55:.2f}s">
+      <text x="0" y="{y + 25}" fill="{repo['accent']}" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">0{index + 1}</text>
+      <text x="66" y="{y + 24}" fill="#F8FAFC" font-size="20" font-weight="780">{html.escape(ellipsize(repo['name'], 24))}</text>
+      <text x="642" y="{y + 22}" fill="#AAB8CA" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{compact_counted(int(repo['contributor_commits']), 'COMMIT')} · {compact_counted(int(repo['stargazers']), 'STAR')} · {pushed}</text>
+      {description_svg}
+      <line x1="0" y1="{y + 72}" x2="642" y2="{y + 72}" stroke="#203149"/>
+    </g>"""
+        )
+    project_names = ", ".join(str(repo["name"]) for repo in featured)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
+  <title id="title">What Rudy Celekli is building now</title>
+  <desc id="desc">Gradia is the private product anchor for business-grounded AI agent evaluation. The automatically ranked public frontier currently features {html.escape(project_names)} using repository reach, recent shipping, attributed work, and project completeness.</desc>
+  <defs>
+    <style>
+      .private-signal {{ stroke-dasharray: 7 10; animation: building-flow 2.8s linear infinite; }}
+      .frontier-row {{ animation: frontier-pulse 5.5s ease-in-out infinite; }}
+      @keyframes building-flow {{ to {{ stroke-dashoffset: -34; }} }}
+      @keyframes frontier-pulse {{ 0%, 100% {{ opacity: .72; }} 50% {{ opacity: 1; }} }}
+      @media (prefers-reduced-motion: reduce) {{
+        .private-signal, .frontier-row {{ animation: none; opacity: 1; }}
+      }}
+    </style>
+    <linearGradient id="building-canvas" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#07111E"/>
+      <stop offset="0.58" stop-color="#0B1728"/>
+      <stop offset="1" stop-color="#150B2E"/>
+    </linearGradient>
+    <linearGradient id="building-rule" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#2DE2C5"/>
+      <stop offset="0.52" stop-color="#4D7CFE"/>
+      <stop offset="1" stop-color="#9B7CFF"/>
+    </linearGradient>
+    <radialGradient id="building-glow">
+      <stop stop-color="#2DE2C5" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#2DE2C5" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="410" rx="28" fill="url(#building-canvas)"/>
+  <rect x="1" y="1" width="1198" height="408" rx="27" fill="none" stroke="#26364D"/>
+  <rect x="42" y="30" width="66" height="4" rx="2" fill="url(#building-rule)"/>
+  <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="27" font-weight="780">BUILDING, NOW</text>
+  <text x="1158" y="65" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">PRIVATE PRODUCT + AUTO-RANKED PUBLIC FRONTIER · {html.escape(updated)} UTC</text>
+
+  <g transform="translate(42 103)" font-family="Avenir Next,Segoe UI,sans-serif">
+    <rect width="410" height="246" rx="24" fill="#0A2026" stroke="#2DE2C5" stroke-opacity="0.54"/>
+    <circle cx="342" cy="76" r="98" fill="url(#building-glow)"/>
+    <text x="28" y="37" fill="#6EE7D8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" letter-spacing="1.6">PRIVATE PRODUCT · PUBLIC EVIDENCE</text>
+    <text x="28" y="92" fill="#F8FAFC" font-size="42" font-weight="830">Gradia</text>
+    <text x="28" y="127" fill="#D6E2EE" font-size="17" font-weight="650">Know which AI agents</text>
+    <text x="28" y="151" fill="#D6E2EE" font-size="17" font-weight="650">can actually do your work.</text>
+    <text x="28" y="187" fill="#91A2B8" font-size="12.5">Evaluation grounded in real workflows,</text>
+    <text x="28" y="206" fill="#91A2B8" font-size="12.5">business rules, and inspectable evidence.</text>
+    <path class="private-signal" d="M278 72 H352 V178 H306" fill="none" stroke="#2DE2C5" stroke-width="2"/>
+    <circle cx="278" cy="72" r="5" fill="#2DE2C5"/><circle cx="306" cy="178" r="5" fill="#4D7CFE"/>
+    <text x="28" y="229" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11">GRADIAHQ.COM</text>
+  </g>
+
+  <g transform="translate(494 103)" font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="0" y="14" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" letter-spacing="1.6">PUBLIC FRONTIER / AUTO-RANKED</text>
+    {''.join(rows)}
+  </g>
+
+  <text x="42" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">SELECTION SIGNALS: REACH · SHIPPING RECENCY · ATTRIBUTED WORK · PROJECT COMPLETENESS</text>
+  <text x="1158" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">RE-EVALUATED EVERY 30 MIN</text>
+</svg>
+"""
+
+
+def render_building_now_readme(
+    owned_repositories: list[dict[str, object]], updated: str
+) -> str:
+    """Render the compact accessible text companion for the top portfolio rail."""
+    featured = select_featured_owned_projects(owned_repositories, updated)
+    lines = [
+        "<!-- building-now:start -->",
+        "## Building now",
+        "",
+        '<img src="./assets/building-now.svg" width="100%" alt="Gradia private product and the strongest automatically ranked public projects Rudy is building" />',
+        "",
+        "**[Gradia](https://www.gradiahq.com)** for business-grounded AI agent evaluation: test real workflows and rules, inspect failures, and compare changes before release.",
+        "",
+        "**Public frontier, selected automatically:**",
+        "",
+    ]
+    for index, repo in enumerate(featured, 1):
+        blurb = str(repo["description"]).rstrip(".")
+        blurb = blurb.replace("—", ":").replace("–", "-")
+        lines.append(f"{index}. **[{repo['name']}]({repo['url']})**: {blurb}.")
+    lines.extend(
+        [
+            "",
+            f"<sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>",
+            "<!-- building-now:end -->",
+        ]
+    )
+    return "\n".join(lines)
+
+
 def render_profile_walkthrough_svg(
     repositories: list[dict[str, object]],
     owned_repositories: list[dict[str, object]],
@@ -1904,6 +2063,7 @@ def main() -> int:
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",
             "owned_project_ranking": "The profile spotlight ranks the complete discovered set by stars, recent activity, then GitHub-attributed commits. Every qualifying owned repository remains in this evidence file.",
+            "building_now_ranking": "The top-fold public frontier is re-ranked on every run using repository reach, 120-day shipping recency, attributed commits, and project completeness signals. Gradia remains a separately disclosed private-product anchor and contributes no private repository details.",
             "ownership_boundary": "Repository ownership is reported separately and is never counted as upstream contributor credit or accepted merged-PR work.",
         },
         "repositories": public_repositories,
@@ -1928,6 +2088,10 @@ def main() -> int:
     write_generated(AP_SVG_FILE, render_agentic_power_svg(agentic_power))
     write_generated(HERO_SVG_FILE, render_hero_svg(repositories, agentic_power))
     write_generated(
+        BUILDING_SVG_FILE,
+        render_building_now_svg(owned_repositories, updated),
+    )
+    write_generated(
         WALKTHROUGH_SVG_FILE,
         render_profile_walkthrough_svg(
             repositories, owned_repositories, agentic_power
@@ -1935,6 +2099,9 @@ def main() -> int:
     )
     update_readme(
         "agentic-power-profile", render_agentic_power_readme(agentic_power)
+    )
+    update_readme(
+        "building-now", render_building_now_readme(owned_repositories, updated)
     )
     update_readme(
         "contribution-stats",

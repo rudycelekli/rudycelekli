@@ -358,6 +358,67 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("prefers-reduced-motion", svg)
         self.assertNotIn('fill="url(#hero-accent)" font-family', svg)
 
+    def test_building_now_re_ranks_public_projects_and_keeps_gradia_private(self):
+        projects = [
+            {
+                "name": "Fresh Project",
+                "full_name": "rudycelekli/fresh-project",
+                "url": "https://github.com/rudycelekli/fresh-project",
+                "description": "A freshly shipped public project",
+                "homepage": "https://example.com/fresh",
+                "topics": ["agents", "evaluation"],
+                "stargazers": 1,
+                "forks": 0,
+                "contributor_commits": 80,
+                "pushed_at": "2026-10-06T00:00:00Z",
+                "accent": "#2DE2C5",
+            },
+            {
+                "name": "Adopted Project",
+                "full_name": "rudycelekli/adopted-project",
+                "url": "https://github.com/rudycelekli/adopted-project",
+                "description": "A broadly adopted public project",
+                "homepage": None,
+                "topics": [],
+                "stargazers": 5,
+                "forks": 1,
+                "contributor_commits": 20,
+                "pushed_at": "2026-06-01T00:00:00Z",
+                "accent": "#9B7CFF",
+            },
+            {
+                "name": "Small Project",
+                "full_name": "rudycelekli/small-project",
+                "url": "https://github.com/rudycelekli/small-project",
+                "description": "A smaller public project",
+                "homepage": None,
+                "topics": [],
+                "stargazers": 0,
+                "forks": 0,
+                "contributor_commits": 3,
+                "pushed_at": "2026-10-05T00:00:00Z",
+                "accent": "#F2A93B",
+            },
+        ]
+
+        featured = subject.select_featured_owned_projects(
+            projects, "2026-10-07", limit=2
+        )
+        svg = subject.render_building_now_svg(projects, "2026-10-07")
+        readme = subject.render_building_now_readme(projects, "2026-10-07")
+
+        self.assertEqual(
+            [repo["name"] for repo in featured],
+            ["Adopted Project", "Fresh Project"],
+        )
+        self.assertIn("PRIVATE PRODUCT · PUBLIC EVIDENCE", svg)
+        self.assertIn("PUBLIC FRONTIER / AUTO-RANKED", svg)
+        self.assertIn("RE-EVALUATED EVERY 30 MIN", svg)
+        self.assertIn("prefers-reduced-motion", svg)
+        self.assertIn("Gradia", readme)
+        self.assertIn("private repository evidence remains private", readme)
+        self.assertIn("Adopted Project", readme)
+
     def test_profile_leads_with_upstream_proof_and_runs_twice_hourly(self):
         readme = (subject.ROOT / "README.md").read_text()
         workflow = (
@@ -383,6 +444,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("https://charlotte.aitinkerers.org/", readme)
         self.assertIn("https://agentics.org/leadership/", readme)
         self.assertIn("./assets/profile-walkthrough.svg", readme)
+        self.assertIn("./assets/building-now.svg", readme)
         self.assertIn("RuVector’s vector walkthrough", readme)
         self.assertLess(readme.index("LINKEDIN-connect"), readme.index("## Intelligence"))
 

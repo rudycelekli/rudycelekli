@@ -72,6 +72,7 @@ Dark-profile translation:
 - Auto-discovered owner-project spotlight: public, non-fork, active source repositories use a compact three-column layout and explicit OWNER labels. Preserve the complete qualifying set in machine-readable evidence while keeping the visible profile selective and scannable.
 - Seven-chapter operating brief: a 35-second, pure-SVG profile walkthrough moves from thesis through Direct, Orchestrate, Verify, Improve, live proof, and invitation. Pull its proof figures from the contribution and Agentic Power datasets, preserve a complete reduced-motion frame, and keep the artwork original. Narrative-format inspiration: RuVector's vector walkthrough.
 - Live evidence hero: the first screen pairs the positioning statement with a restrained machine-counted proof rail. It refreshes merged PRs, accepted lines, provisional AP, and evidence date from the same source data as the detailed sections. Keep proof secondary to the thesis rather than turning the hero into a metric dashboard.
+- Building-now frontier: place Gradia as a clearly labeled private-product anchor beside three automatically re-ranked public owner projects. Rank public work from inspectable GitHub signals, keep private repository details out, and use an asymmetric anchor-plus-ledger composition rather than a repeated card grid.
 - Attribution link: directly credit the Agentic Power Framework and its author.
 
 ## Page Pattern
