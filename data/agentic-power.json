@@ -1,14 +1,14 @@
 {
   "agentic_power_x": {
-    "base": 124.3,
-    "high": 198.6,
-    "low": 79.5
+    "base": 124.4,
+    "high": 198.7,
+    "low": 79.6
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0583,
-      "high": 0.0667,
+      "high": 0.0666,
       "low": 0.05
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 448.1,
+  "engineer_weeks_at_40h": 448.4,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -412,11 +412,11 @@
       "agentic_power_x": {
         "base": 57.2,
         "high": 93.5,
-        "low": 35.0
+        "low": 35.1
       },
       "modeled_human_direction_hours": {
         "base": 3.2,
-        "high": 3.66,
+        "high": 3.65,
         "low": 2.74
       },
       "month": "2026-03",
@@ -436,14 +436,14 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 80.4,
-        "high": 131.4,
+        "base": 80.6,
+        "high": 131.6,
         "low": 49.3
       },
       "modeled_human_direction_hours": {
-        "base": 6.93,
-        "high": 7.92,
-        "low": 5.94
+        "base": 6.92,
+        "high": 7.91,
+        "low": 5.93
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 94.0,
-        "high": 153.5,
+        "high": 153.6,
         "low": 57.6
       },
       "modeled_human_direction_hours": {
         "base": 9.98,
-        "high": 11.41,
-        "low": 8.56
+        "high": 11.4,
+        "low": 8.55
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 110.6,
         "high": 180.7,
-        "low": 67.7
+        "low": 67.8
       },
       "modeled_human_direction_hours": {
         "base": 7.32,
-        "high": 8.37,
+        "high": 8.36,
         "low": 6.27
       },
       "month": "2026-07",
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 118.6,
-        "high": 193.7,
-        "low": 72.6
+        "base": 118.7,
+        "high": 193.9,
+        "low": 72.7
       },
       "modeled_human_direction_hours": {
-        "base": 17.49,
-        "high": 19.99,
-        "low": 14.99
+        "base": 17.48,
+        "high": 19.98,
+        "low": 14.98
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 156.3,
-        "high": 249.2,
+        "base": 156.5,
+        "high": 249.3,
         "low": 100.4
       },
       "modeled_human_direction_hours": {
-        "base": 24.75,
-        "high": 28.28,
-        "low": 21.21
+        "base": 24.73,
+        "high": 28.27,
+        "low": 21.2
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -593,43 +593,43 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 142.1,
-        "high": 223.8,
-        "low": 93.2
+        "high": 223.9,
+        "low": 93.3
       },
       "modeled_human_direction_hours": {
-        "base": 59.66,
-        "high": 68.18,
-        "low": 51.14
+        "base": 59.71,
+        "high": 68.24,
+        "low": 51.18
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 845,
+      "public_merged_pull_requests": 846,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 8476.85,
-        "high": 11444.05,
-        "low": 6357.65
+        "base": 8486.81,
+        "high": 11457.5,
+        "low": 6365.12
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1022.53,
-        "high": 1457.72,
-        "low": 706.96
+        "base": 1023.98,
+        "high": 1459.75,
+        "low": 707.97
       }
     }
   ],
-  "public_accepted_pull_requests": 1087,
+  "public_accepted_pull_requests": 1088,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 17924.29,
-    "high": 24539.73,
-    "low": 13101.62
+    "base": 17934.25,
+    "high": 24553.18,
+    "low": 13109.09
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2471.18,
-    "high": 3759.91,
-    "low": 1660.52
+    "base": 2472.63,
+    "high": 3761.94,
+    "low": 1661.53
   },
   "updated_at_utc": "2026-10-07",
   "window": {
@@ -24851,6 +24851,35 @@
       "pull_request": 4501,
       "title": "fix(smart-read): retain PHP enum declarations and method owners",
       "url": "https://github.com/thedotmack/claude-mem/pull/4501"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-05T18:31:31Z",
+      "evidence": {
+        "additions": 68,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 2,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.96,
+        "high": 13.45,
+        "low": 7.47
+      },
+      "merged_at": "2026-10-05T23:58:05Z",
+      "modeled_human_direction_hours": {
+        "base": 1.45,
+        "high": 2.03,
+        "low": 1.01
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 4489,
+      "title": "fix(context): discard renders after cache variant teardown",
+      "url": "https://github.com/thedotmack/claude-mem/pull/4489"
     },
     {
       "acceptance_basis": "merged pull request",
