@@ -148,26 +148,74 @@ def graphql(token: str, variables: dict[str, object]) -> dict[str, object]:
     raise RuntimeError("GitHub GraphQL failed after retries")
 
 
-def official_contribution_count(token: str, full_name: str) -> int | None:
-    """Return GitHub's commit count only when the login is in Contributors."""
+def cached_contribution_stats(full_name: str) -> tuple[int | None, int | None]:
+    """Return the last published contributor evidence when GitHub is pending."""
+    if not DATA_FILE.exists():
+        return None, None
+    try:
+        payload = json.loads(DATA_FILE.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None, None
+    candidates = list(payload.get("repositories") or []) + list(
+        payload.get("owned_repositories") or []
+    )
+    for repo in candidates:
+        if str(repo.get("full_name", "")).casefold() != full_name.casefold():
+            continue
+        count = repo.get("contributor_commits")
+        rank = repo.get("contributor_rank")
+        return (
+            int(count) if count is not None else None,
+            int(rank) if rank is not None else None,
+        )
+    return None, None
+
+
+def official_contribution_stats(
+    token: str, full_name: str
+) -> tuple[int | None, int | None]:
+    """Return GitHub's indexed commit count and all-time contributor rank."""
     page = 1
     while True:
-        contributors = rest_json(
-            token,
-            f"https://api.github.com/repos/{full_name}/contributors"
-            f"?per_page=100&page={page}",
-        )
-        if not isinstance(contributors, list):
-            raise RuntimeError(
-                f"Unexpected GitHub Contributors response for {full_name}"
+        try:
+            contributors = rest_json(
+                token,
+                f"https://api.github.com/repos/{full_name}/contributors"
+                f"?per_page=100&page={page}",
             )
+        except RuntimeError as error:
+            # GitHub may return 202 with an empty body while computing a
+            # repository's contributor statistics. Missing this optional tier
+            # must not abort the complete portfolio refresh.
+            cached = cached_contribution_stats(full_name)
+            print(
+                f"warning: contributor index unavailable for {full_name}; "
+                f"using cached evidence {cached}: {error}",
+                file=sys.stderr,
+            )
+            return cached
+        if not isinstance(contributors, list):
+            cached = cached_contribution_stats(full_name)
+            print(
+                f"warning: unexpected contributor index for {full_name}; "
+                f"using cached evidence {cached}",
+                file=sys.stderr,
+            )
+            return cached
 
-        for contributor in contributors:
+        for index, contributor in enumerate(contributors):
             if contributor.get("login", "").casefold() == LOGIN.casefold():
-                return int(contributor["contributions"])
+                rank = (page - 1) * 100 + index + 1
+                return int(contributor["contributions"]), rank
         if len(contributors) < 100:
-            return None
+            return None, None
         page += 1
+
+
+def official_contribution_count(token: str, full_name: str) -> int | None:
+    """Compatibility wrapper for call sites that only need the commit count."""
+    count, _rank = official_contribution_stats(token, full_name)
+    return count
 
 
 def default_branch_contribution_count(token: str, full_name: str) -> int:
@@ -208,7 +256,7 @@ def rest_json(token: str, url: str) -> object:
             # GitHub occasionally closes a successful REST response before a
             # JSON body reaches the runner. Treat that as transient instead of
             # letting one repository abort the complete scheduled refresh.
-            if attempt < 7:
+            if attempt < 2:
                 time.sleep(min(2**attempt, 16))
                 continue
             raise RuntimeError(
@@ -591,15 +639,20 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
             if bool(pull_request.get("merged"))
         ]
         listed_commits = None
+        contributor_rank = None
         default_branch_commits = 0
         if merged:
-            listed_commits = official_contribution_count(token, full_name)
+            listed_commits, contributor_rank = official_contribution_stats(
+                token, full_name
+            )
         if listed_commits is None:
             default_branch_commits = default_branch_contribution_count(
                 token, full_name
             )
             if default_branch_commits and not merged:
-                listed_commits = official_contribution_count(token, full_name)
+                listed_commits, contributor_rank = official_contribution_stats(
+                    token, full_name
+                )
         if listed_commits is not None:
             verification_tier = "github_listed_contributor"
             verification_label = "GitHub-listed contributor"
@@ -641,6 +694,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
                 "verification_tier": verification_tier,
                 "verification_label": verification_label,
                 "official_contributor": listed_commits is not None,
+                "contributor_rank": contributor_rank,
                 "default_branch_commits": default_branch_commits,
                 "contributor_commits": contributor_commits,
                 "merged_prs": len(merged),
@@ -698,7 +752,8 @@ def discover_owned_repositories(token: str) -> list[dict[str, object]]:
                 or full_name.casefold() in OWNED_PROJECT_EXCLUSIONS
             ):
                 continue
-            commits = official_contribution_count(token, full_name) or 0
+            commits, _rank = official_contribution_stats(token, full_name)
+            commits = commits or 0
             override = OWNED_PRESENTATION_OVERRIDES.get(full_name, {})
             palette_index = hashlib.sha256(full_name.encode()).digest()[0] % len(
                 ACCENT_PAIRS
@@ -1284,15 +1339,17 @@ def render_hero_svg(
 ) -> str:
     """Render the first-screen identity and live proof signal."""
     total_merged = sum(int(repo["merged_prs"]) for repo in repositories)
+    total_commits = sum(int(repo["contributor_commits"]) for repo in repositories)
     total_line_changes = sum(
         int(repo["accepted_additions"]) + int(repo["accepted_deletions"])
         for repo in repositories
     )
+    total_stars = sum(int(repo["stargazers"]) for repo in repositories)
     agentic_power = float(profile["agentic_power_x"]["base"])
     updated = html.escape(str(profile["updated_at_utc"]))
     return f"""<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Rudy Celekli, evidence-first agentic systems</title>
-  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes {total_merged} merged pull requests, {total_line_changes:,} accepted line changes, and a provisional Agentic Power estimate of {agentic_power:.1f} times.</desc>
+  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes {len(repositories)} verified upstream projects, {total_merged} merged pull requests, {total_commits} attributed commits, {total_line_changes:,} accepted line changes, {total_stars} combined repository stars, and a provisional Agentic Power estimate of {agentic_power:.1f} times.</desc>
   <defs>
     <style>
       .orbit {{ transform-box: fill-box; transform-origin: center; animation: orbit 20s linear infinite; }}
@@ -1348,9 +1405,10 @@ def render_hero_svg(
     <text x="72" y="252" fill="#2DE2C5" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">what happened.</text>
     <text x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="14">Forward deployed AI researcher · Agentic AI engineer · Enterprise AI</text>
     <line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
-    <circle class="proof-live" cx="78" cy="368" r="5" fill="#2DE2C5"/>
-    <text x="94" y="372" fill="#91A2B8" font-size="11.5" letter-spacing="1">LIVE PROOF · {total_merged:,} MERGED PRS · {total_line_changes:,} ACCEPTED LINES · {agentic_power:.1f}× PROVISIONAL AP</text>
-    <text x="664" y="398" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · {updated} UTC</text>
+    <circle class="proof-live" cx="78" cy="358" r="5" fill="#2DE2C5"/>
+    <text x="94" y="362" fill="#91A2B8" font-size="10.5" letter-spacing=".8">LIVE PROOF · {len(repositories)} VERIFIED PROJECTS · {total_merged:,} MERGED PRS · {compact(total_commits)} ATTRIBUTED COMMITS</text>
+    <text x="94" y="384" fill="#91A2B8" font-size="10.5" letter-spacing=".8">{total_line_changes:,} ACCEPTED LINES · {compact(total_stars)} COMBINED STARS · {agentic_power:.1f}× PROVISIONAL AP</text>
+    <text x="664" y="405" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · {updated} UTC</text>
   </g>
 
   <g transform="translate(940 210)">
@@ -1530,6 +1588,58 @@ def render_building_now_readme(
             "",
             f"<sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>",
             "<!-- building-now:end -->",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def top_five_contributor_repositories(
+    repositories: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    """Select only projects where GitHub currently ranks the login 1 through 5."""
+    qualified = [
+        repo
+        for repo in repositories
+        if repo.get("contributor_rank") is not None
+        and 1 <= int(repo["contributor_rank"]) <= 5
+    ]
+    return sorted(
+        qualified,
+        key=lambda repo: (
+            int(repo["contributor_rank"]),
+            -int(repo["stargazers"]),
+            str(repo["full_name"]).casefold(),
+        ),
+    )
+
+
+def render_top_contributor_readme(
+    repositories: list[dict[str, object]], updated: str
+) -> str:
+    """Render compact, API-backed all-time contributor-rank proof near the top."""
+    qualified = top_five_contributor_repositories(repositories)
+    lines = [
+        "<!-- top-contributor-proof:start -->",
+        '<div align="center">',
+        "",
+        "**GitHub all-time Top-5 contributor at**",
+        "",
+    ]
+    if qualified:
+        proof = " &nbsp;·&nbsp; ".join(
+            f"[**{repo['name']}**]({repo['url']}) `#{int(repo['contributor_rank'])}` · {compact(int(repo['stargazers']))} ★"
+            for repo in qualified
+        )
+        lines.append(proof)
+    else:
+        lines.append("Contributor-rank evidence is awaiting GitHub's index.")
+    lines.extend(
+        [
+            "",
+            f"<sub>All-time rank from GitHub's Contributors API · repository stars are reach, not personal credit · refreshed {updated} UTC</sub>",
+            "",
+            "</div>",
+            "<!-- top-contributor-proof:end -->",
         ]
     )
     return "\n".join(lines)
@@ -2100,7 +2210,7 @@ def main() -> int:
         for repo in repositories
     ]
     payload = {
-        "schema_version": 4,
+        "schema_version": 5,
         "source": "GitHub GraphQL and REST APIs",
         "login": LOGIN,
         "updated_at_utc": updated,
@@ -2109,6 +2219,7 @@ def main() -> int:
             "project_inclusion": "A project is included when GitHub proves accepted work through an authored merged pull request on any branch or an authored commit present on the default branch.",
             "verification_tiers": "Evidence upgrades automatically from merged-PR verified, to default-branch commit verified, to GitHub-listed contributor as stronger GitHub attribution becomes available.",
             "contributor_commits": "The GitHub Contributors API count is used at the highest tier. Before it catches up, directly attributed default-branch commits are reported separately. GitHub's contributor index may lag by several hours.",
+            "contributor_rank": "All-time contributor rank is the login's one-based position in GitHub's Contributors API ordering. The top-profile proof includes only observed ranks 1 through 5 and omits unavailable or pending indexes.",
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",
@@ -2152,6 +2263,10 @@ def main() -> int:
     )
     update_readme(
         "building-now", render_building_now_readme(owned_repositories, updated)
+    )
+    update_readme(
+        "top-contributor-proof",
+        render_top_contributor_readme(repositories, updated),
     )
     update_readme(
         "contribution-stats",

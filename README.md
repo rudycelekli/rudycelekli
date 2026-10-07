@@ -19,6 +19,18 @@
 
 </div>
 
+<!-- top-contributor-proof:start -->
+<div align="center">
+
+**GitHub all-time Top-5 contributor at**
+
+Contributor-rank evidence is awaiting GitHub's index.
+
+<sub>All-time rank from GitHub's Contributors API · repository stars are reach, not personal credit · refreshed 2026-10-07 UTC</sub>
+
+</div>
+<!-- top-contributor-proof:end -->
+
 <!-- building-now:start -->
 ## Building now
 

@@ -1,5 +1,8 @@
 import io
+import json
+import tempfile
 import unittest
+from pathlib import Path
 from unittest import mock
 
 from scripts import update_contributions as subject
@@ -80,6 +83,47 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual(urlopen.call_count, 2)
         sleep.assert_called_once_with(1)
 
+    @mock.patch.object(subject, "rest_json")
+    def test_official_contribution_stats_returns_all_time_rank(self, rest_json):
+        rest_json.return_value = [
+            {"login": "first", "contributions": 90},
+            {"login": subject.LOGIN, "contributions": 42},
+            {"login": "third", "contributions": 12},
+        ]
+
+        count, rank = subject.official_contribution_stats(
+            "token", "upstream/project"
+        )
+
+        self.assertEqual((count, rank), (42, 2))
+
+    @mock.patch.object(subject, "rest_json")
+    def test_official_contribution_stats_uses_cached_evidence_when_pending(
+        self, rest_json
+    ):
+        rest_json.side_effect = RuntimeError("pending contributor index")
+        with tempfile.TemporaryDirectory() as directory:
+            data_file = Path(directory) / "contributions.json"
+            data_file.write_text(
+                json.dumps(
+                    {
+                        "repositories": [
+                            {
+                                "full_name": "upstream/project",
+                                "contributor_commits": 41,
+                                "contributor_rank": 3,
+                            }
+                        ]
+                    }
+                )
+            )
+            with mock.patch.object(subject, "DATA_FILE", data_file):
+                stats = subject.official_contribution_stats(
+                    "token", "upstream/project"
+                )
+
+        self.assertEqual(stats, (41, 3))
+
     @mock.patch.object(subject, "graphql")
     def test_search_splits_windows_beyond_githubs_result_cap(self, graphql):
         left = pull_request(repository("upstream/left"), 1)
@@ -110,10 +154,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual(graphql.call_count, 3)
 
     @mock.patch.object(subject, "default_branch_contribution_count")
-    @mock.patch.object(subject, "official_contribution_count")
+    @mock.patch.object(subject, "official_contribution_stats")
     @mock.patch.object(subject, "search_authored_pull_requests")
     def test_discovers_and_upgrades_each_accepted_evidence_tier(
-        self, authored_search, official_count, default_count
+        self, authored_search, official_stats, default_count
     ):
         accepted = repository("upstream/new-project")
         pending = repository("upstream/pending-index")
@@ -129,8 +173,8 @@ class ContributionDiscoveryTests(unittest.TestCase):
             pull_request(private, 2),
             pull_request(owned, 1),
         ]
-        official_count.side_effect = lambda _token, full_name: (
-            7 if full_name == "upstream/new-project" else None
+        official_stats.side_effect = lambda _token, full_name: (
+            (7, 3) if full_name == "upstream/new-project" else (None, None)
         )
         default_count.side_effect = lambda _token, full_name: {
             "upstream/pending-index": 0,
@@ -150,6 +194,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         )
         self.assertEqual(discovered[0]["merged_prs"], 1)
         self.assertEqual(discovered[0]["contributor_commits"], 7)
+        self.assertEqual(discovered[0]["contributor_rank"], 3)
         self.assertEqual(discovered[0]["verification_tier"], "github_listed_contributor")
         self.assertEqual(discovered[1]["verification_tier"], "merged_pr_verified")
         self.assertEqual(discovered[1]["contributor_commits"], 0)
@@ -162,7 +207,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual(discovered[0]["stargazers"], 1_234)
         self.assertEqual(discovered[0]["forks"], 56)
         self.assertEqual(
-            [call.args[1] for call in official_count.call_args_list],
+            [call.args[1] for call in official_stats.call_args_list],
             [
                 "upstream/new-project",
                 "upstream/pending-index",
@@ -250,10 +295,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("| 4 | [0]", default_section)
         self.assertIn("| — | — | 7,890 ★ · 321 forks |", default_section)
 
-    @mock.patch.object(subject, "official_contribution_count")
+    @mock.patch.object(subject, "official_contribution_stats")
     @mock.patch.object(subject, "rest_json")
     def test_discovers_owned_public_projects_without_confusing_them_with_upstream(
-        self, rest_json, official_count
+        self, rest_json, official_stats
     ):
         rest_json.return_value = [
             owned_repository(f"{subject.LOGIN}/testlore", stargazers_count=1),
@@ -264,10 +309,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
             owned_repository(f"{subject.LOGIN}/forked", fork=True),
             owned_repository(f"{subject.LOGIN}/archived", archived=True),
         ]
-        official_count.side_effect = lambda _token, full_name: {
-            f"{subject.LOGIN}/testlore": 40,
-            f"{subject.LOGIN}/proofseal": 25,
-            f"{subject.LOGIN}/gradia-guard": 60,
+        official_stats.side_effect = lambda _token, full_name: {
+            f"{subject.LOGIN}/testlore": (40, 1),
+            f"{subject.LOGIN}/proofseal": (25, 1),
+            f"{subject.LOGIN}/gradia-guard": (60, 1),
         }[full_name]
 
         discovered = subject.discover_owned_repositories("token")
@@ -349,13 +394,17 @@ class ContributionDiscoveryTests(unittest.TestCase):
         repositories = [
             {
                 "merged_prs": 12,
+                "contributor_commits": 110,
                 "accepted_additions": 2_000,
                 "accepted_deletions": 100,
+                "stargazers": 900,
             },
             {
                 "merged_prs": 5,
+                "contributor_commits": 15,
                 "accepted_additions": 400,
                 "accepted_deletions": 25,
+                "stargazers": 100,
             },
         ]
         profile = {
@@ -367,12 +416,50 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
         self.assertIn("EVIDENCE-FIRST AGENTIC SYSTEMS", svg)
         self.assertIn("Forward deployed AI researcher", svg)
+        self.assertIn("2 VERIFIED PROJECTS", svg)
         self.assertIn("17 MERGED PRS", svg)
+        self.assertIn("125 ATTRIBUTED COMMITS", svg)
         self.assertIn("2,525 ACCEPTED LINES", svg)
+        self.assertIn("1.0k COMBINED STARS", svg)
         self.assertIn("51.2× PROVISIONAL AP", svg)
         self.assertIn("MACHINE-COUNTED · 2026-10-06 UTC", svg)
         self.assertIn("prefers-reduced-motion", svg)
         self.assertNotIn('fill="url(#hero-accent)" font-family', svg)
+
+    def test_top_contributor_proof_includes_only_observed_top_five_ranks(self):
+        repositories = [
+            {
+                "name": "Top Project",
+                "full_name": "upstream/top-project",
+                "url": "https://github.com/upstream/top-project",
+                "contributor_rank": 2,
+                "stargazers": 12_345,
+            },
+            {
+                "name": "Sixth Project",
+                "full_name": "upstream/sixth-project",
+                "url": "https://github.com/upstream/sixth-project",
+                "contributor_rank": 6,
+                "stargazers": 99_999,
+            },
+            {
+                "name": "Pending Project",
+                "full_name": "upstream/pending-project",
+                "url": "https://github.com/upstream/pending-project",
+                "contributor_rank": None,
+                "stargazers": 500,
+            },
+        ]
+
+        section = subject.render_top_contributor_readme(
+            repositories, "2026-10-07"
+        )
+
+        self.assertIn("Top Project", section)
+        self.assertIn("`#2`", section)
+        self.assertIn("12k ★", section)
+        self.assertNotIn("Sixth Project", section)
+        self.assertNotIn("Pending Project", section)
 
     def test_building_now_re_ranks_public_projects_and_keeps_gradia_private(self):
         projects = [
