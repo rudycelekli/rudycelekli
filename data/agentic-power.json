@@ -1,14 +1,14 @@
 {
   "agentic_power_x": {
-    "base": 122.4,
-    "high": 195.5,
+    "base": 122.5,
+    "high": 195.7,
     "low": 78.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0589,
-      "high": 0.0674,
+      "high": 0.0673,
       "low": 0.0505
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 440.9,
+  "engineer_weeks_at_40h": 441.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -436,14 +436,14 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 79.6,
-        "high": 130.1,
+        "base": 79.8,
+        "high": 130.3,
         "low": 48.8
       },
       "modeled_human_direction_hours": {
-        "base": 7.0,
-        "high": 8.0,
-        "low": 6.0
+        "base": 6.99,
+        "high": 7.99,
+        "low": 5.99
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -494,7 +494,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 10.08,
-        "high": 11.53,
+        "high": 11.52,
         "low": 8.64
       },
       "month": "2026-06",
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 109.4,
+        "base": 109.5,
         "high": 178.7,
         "low": 67.0
       },
       "modeled_human_direction_hours": {
-        "base": 7.4,
+        "base": 7.39,
         "high": 8.45,
         "low": 6.34
       },
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 117.4,
+        "base": 117.5,
         "high": 191.8,
-        "low": 71.9
+        "low": 72.0
       },
       "modeled_human_direction_hours": {
-        "base": 17.67,
-        "high": 20.19,
+        "base": 17.66,
+        "high": 20.18,
         "low": 15.14
       },
       "month": "2026-08",
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 154.8,
-        "high": 246.7,
+        "high": 246.8,
         "low": 99.4
       },
       "modeled_human_direction_hours": {
-        "base": 25.0,
-        "high": 28.57,
-        "low": 21.43
+        "base": 24.99,
+        "high": 28.56,
+        "low": 21.42
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 139.5,
-        "high": 219.7,
-        "low": 91.5
+        "base": 139.6,
+        "high": 219.9,
+        "low": 91.6
       },
       "modeled_human_direction_hours": {
-        "base": 58.71,
-        "high": 67.1,
-        "low": 50.32
+        "base": 58.75,
+        "high": 67.14,
+        "low": 50.36
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 816,
+      "public_merged_pull_requests": 817,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 8189.76,
-        "high": 11056.42,
-        "low": 6142.3
+        "base": 8201.84,
+        "high": 11072.73,
+        "low": 6151.36
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 996.13,
-        "high": 1418.41,
-        "low": 689.28
+        "base": 997.17,
+        "high": 1419.87,
+        "low": 690.01
       }
     }
   ],
-  "public_accepted_pull_requests": 1058,
+  "public_accepted_pull_requests": 1059,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 17637.2,
-    "high": 24152.1,
-    "low": 12886.27
+    "base": 17649.28,
+    "high": 24168.41,
+    "low": 12895.33
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2444.78,
-    "high": 3720.6,
-    "low": 1642.84
+    "base": 2445.82,
+    "high": 3722.06,
+    "low": 1643.57
   },
   "updated_at_utc": "2026-10-07",
   "window": {
-    "end": "2026-10-07T04:40:57Z",
+    "end": "2026-10-07T04:58:02Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -31318,6 +31318,35 @@
       "pull_request": 3848,
       "title": "fix(session): round-trip compressed JSON backups",
       "url": "https://github.com/ruvnet/ruflo/pull/3848"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-06T16:31:07Z",
+      "evidence": {
+        "additions": 102,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 49,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.08,
+        "high": 16.31,
+        "low": 9.06
+      },
+      "merged_at": "2026-10-07T04:58:02Z",
+      "modeled_human_direction_hours": {
+        "base": 1.04,
+        "high": 1.46,
+        "low": 0.73
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 3842,
+      "title": "fix(session): preserve saved values in YAML exports",
+      "url": "https://github.com/ruvnet/ruflo/pull/3842"
     }
   ]
 }
