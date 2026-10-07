@@ -300,7 +300,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
     def test_discovers_owned_public_projects_without_confusing_them_with_upstream(
         self, rest_json, official_stats
     ):
-        rest_json.return_value = [
+        owned_payload = [
             owned_repository(f"{subject.LOGIN}/testlore", stargazers_count=1),
             owned_repository(f"{subject.LOGIN}/proofseal", stargazers_count=2),
             owned_repository(f"{subject.LOGIN}/gradia-guard"),
@@ -309,6 +309,9 @@ class ContributionDiscoveryTests(unittest.TestCase):
             owned_repository(f"{subject.LOGIN}/forked", fork=True),
             owned_repository(f"{subject.LOGIN}/archived", archived=True),
         ]
+        rest_json.side_effect = lambda _token, url: (
+            [] if "/releases?" in url else owned_payload
+        )
         official_stats.side_effect = lambda _token, full_name: {
             f"{subject.LOGIN}/testlore": (40, 1),
             f"{subject.LOGIN}/proofseal": (25, 1),
@@ -324,6 +327,28 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertTrue(all(item["ownership"] == "owner" for item in discovered))
         self.assertTrue(all(item["visibility"] == "public" for item in discovered))
         self.assertNotIn("DreamMachine", [item["name"] for item in discovered])
+
+    @mock.patch.object(subject, "rest_json")
+    def test_discovers_newest_public_prerelease(self, rest_json):
+        rest_json.return_value = [
+            {"draft": True, "tag_name": "v0.2.0-draft"},
+            {
+                "draft": False,
+                "prerelease": True,
+                "tag_name": "v0.1.0",
+                "name": "Kin 0.1.0",
+                "html_url": "https://github.com/rudycelekli/kin-connect/releases/tag/v0.1.0",
+                "published_at": "2026-10-07T10:59:00Z",
+            },
+        ]
+
+        release = subject.discover_latest_release(
+            "token", "rudycelekli/kin-connect"
+        )
+
+        self.assertEqual(release["tag_name"], "v0.1.0")
+        self.assertTrue(release["prerelease"])
+        self.assertIn("/releases/tag/v0.1.0", release["url"])
 
     def test_owned_project_visual_is_compact_and_overflow_safe(self):
         projects = []
@@ -500,6 +525,13 @@ class ContributionDiscoveryTests(unittest.TestCase):
                 "forks": 0,
                 "contributor_commits": 3,
                 "pushed_at": "2026-10-05T00:00:00Z",
+                "latest_release": {
+                    "tag_name": "v0.1.0",
+                    "name": "First public release",
+                    "url": "https://github.com/rudycelekli/small-project/releases/tag/v0.1.0",
+                    "published_at": "2026-10-07T00:00:00Z",
+                    "prerelease": True,
+                },
                 "accent": "#F2A93B",
             },
         ]
@@ -528,7 +560,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
         self.assertEqual(
             [repo["name"] for repo in featured],
-            ["Adopted Project", "Fresh Project"],
+            ["Adopted Project", "Small Project"],
         )
         self.assertIn("PRIVATE PRODUCT · PUBLIC EVIDENCE", svg)
         self.assertIn("PUBLIC FRONTIER / 6 AUTO-RANKED", svg)
@@ -537,10 +569,12 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("frontier-page-two 16s", svg)
         self.assertIn("ROTATES EVERY 8 SEC", svg)
         self.assertIn("RE-RANKED EVERY 30 MIN", svg)
+        self.assertIn("v0.1.0 PRE-RELEASE", svg)
         self.assertIn("prefers-reduced-motion", svg)
         self.assertIn("Gradia", readme)
         self.assertIn("private repository evidence remains private", readme)
         self.assertIn("Adopted Project", readme)
+        self.assertIn("v0.1.0 pre-release", readme)
         self.assertIn("Additional Project", readme)
 
     def test_profile_leads_with_upstream_proof_and_runs_twice_hourly(self):

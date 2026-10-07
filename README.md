@@ -40,14 +40,14 @@
 
 **Public frontier, selected automatically and shown in 2 rotating views:**
 
-1. **[TestLore](https://github.com/rudycelekli/testlore)**: Build better tests. Run what matters. Remember what worked. An open-source test intelligence and quality engineering layer.
-2. **[Gradia Guard](https://github.com/rudycelekli/gradia-guard)**: Open-source, proof-bound evidence recorder and verifier for explicit AI-system execution boundaries.
-3. **[ProofSeal](https://github.com/rudycelekli/proofseal)**: Regression memory for coding agents: seal how your repo behaves, then check over MCP (or in CI) that an edit didn't regress it: pass/drift/regressed/missing. With seal history, bisection, and staleness queries.
-4. **[code-transplant](https://github.com/rudycelekli/code-transplant)**: Gradia Research: move TypeScript parsers between programs with dependency capsules and reproducible behavioral evidence.
-5. **[gradia-wind-tunnel](https://github.com/rudycelekli/gradia-wind-tunnel)**: Proof-bound evaluator stress testing with oracle-witnessed reward-hacking exploits and replayable evidence.
-6. **[ghostpart](https://github.com/rudycelekli/ghostpart)**: GhostPart: open-source repair CAD from a phone photo. Try it: https://rudycelekli.github.io/ghostpart/.
+1. **[code-transplant](https://github.com/rudycelekli/code-transplant)** · [v0.1.0 pre-release](https://github.com/rudycelekli/code-transplant/releases/tag/v0.1.0): Gradia Research: move TypeScript parsers between programs with dependency capsules and reproducible behavioral evidence.
+2. **[Gradia Guard](https://github.com/rudycelekli/gradia-guard)** · [source-v0.1.0-beta.8 pre-release](https://github.com/rudycelekli/gradia-guard/releases/tag/source-v0.1.0-beta.8): Open-source, proof-bound evidence recorder and verifier for explicit AI-system execution boundaries.
+3. **[TestLore](https://github.com/rudycelekli/testlore)**: Build better tests. Run what matters. Remember what worked. An open-source test intelligence and quality engineering layer.
+4. **[Kin Connect](https://github.com/rudycelekli/kin-connect)** · [v0.1.0 pre-release](https://github.com/rudycelekli/kin-connect/releases/tag/v0.1.0): Your agent. Your people. Open-source agent-to-agent introductions for friendship, dating, and collaboration.
+5. **[gradia-lens](https://github.com/rudycelekli/gradia-lens)** · [v0.1.0a1 pre-release](https://github.com/rudycelekli/gradia-lens/releases/tag/v0.1.0a1): Open-model intervention research by Gradia: inspect computation, change components, measure side effects, restore and replay.
+6. **[scrapmind](https://github.com/rudycelekli/scrapmind)** · [v0.1.0-alpha.8 pre-release](https://github.com/rudycelekli/scrapmind/releases/tag/v0.1.0-alpha.8): Invent with what you have. Inventory-constrained planning, adaptive builds, and Device Alchemy for spare materials and devices.
 
-<sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping recency, attributed work, and project completeness · last ranked 2026-10-07 UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>
+<sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked 2026-10-07 UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>
 <!-- building-now:end -->
 
 ## Watch the operating brief

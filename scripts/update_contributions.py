@@ -64,6 +64,7 @@ OWNED_PRESENTATION_OVERRIDES = {
     f"{LOGIN}/testlore": {"name": "TestLore"},
     f"{LOGIN}/proofseal": {"name": "ProofSeal"},
     f"{LOGIN}/gradia-guard": {"name": "Gradia Guard"},
+    f"{LOGIN}/kin-connect": {"name": "Kin Connect"},
 }
 ACCENT_PAIRS = (
     ("#2DE2C5", "#4D7CFE"),
@@ -216,6 +217,55 @@ def official_contribution_count(token: str, full_name: str) -> int | None:
     """Compatibility wrapper for call sites that only need the commit count."""
     count, _rank = official_contribution_stats(token, full_name)
     return count
+
+
+def cached_latest_release(full_name: str) -> dict[str, object] | None:
+    """Return the last published release signal when GitHub is unavailable."""
+    if not DATA_FILE.exists():
+        return None
+    try:
+        payload = json.loads(DATA_FILE.read_text())
+    except (OSError, json.JSONDecodeError):
+        return None
+    for repo in payload.get("owned_repositories") or []:
+        if str(repo.get("full_name", "")).casefold() == full_name.casefold():
+            release = repo.get("latest_release")
+            return release if isinstance(release, dict) else None
+    return None
+
+
+def discover_latest_release(
+    token: str, full_name: str
+) -> dict[str, object] | None:
+    """Return the newest public, non-draft GitHub release or prerelease."""
+    try:
+        releases = rest_json(
+            token,
+            f"https://api.github.com/repos/{full_name}/releases?per_page=5",
+        )
+    except RuntimeError as error:
+        cached = cached_latest_release(full_name)
+        print(
+            f"warning: release index unavailable for {full_name}; "
+            f"using cached release {cached}: {error}",
+            file=sys.stderr,
+        )
+        return cached
+    if not isinstance(releases, list):
+        return cached_latest_release(full_name)
+    for release in releases:
+        if bool(release.get("draft")):
+            continue
+        return {
+            "tag_name": str(release.get("tag_name") or "release"),
+            "name": str(
+                release.get("name") or release.get("tag_name") or "Release"
+            ),
+            "url": str(release.get("html_url") or ""),
+            "published_at": release.get("published_at"),
+            "prerelease": bool(release.get("prerelease")),
+        }
+    return None
 
 
 def default_branch_contribution_count(token: str, full_name: str) -> int:
@@ -754,6 +804,7 @@ def discover_owned_repositories(token: str) -> list[dict[str, object]]:
                 continue
             commits, _rank = official_contribution_stats(token, full_name)
             commits = commits or 0
+            latest_release = discover_latest_release(token, full_name)
             override = OWNED_PRESENTATION_OVERRIDES.get(full_name, {})
             palette_index = hashlib.sha256(full_name.encode()).digest()[0] % len(
                 ACCENT_PAIRS
@@ -773,6 +824,7 @@ def discover_owned_repositories(token: str) -> list[dict[str, object]]:
                     "contributor_commits": commits,
                     "pushed_at": repository.get("pushed_at"),
                     "created_at": repository.get("created_at"),
+                    "latest_release": latest_release,
                     "ownership": "owner",
                     "visibility": "public",
                     "accent": accent,
@@ -823,6 +875,17 @@ def owned_project_portfolio_score(
     except ValueError:
         age_days = 365
     recency = max(120 - age_days, 0)
+    release = repo.get("latest_release") or {}
+    release_published = str(release.get("published_at") or "")[:10]
+    release_bonus = 0
+    if release_published:
+        try:
+            release_age = max(
+                (as_of - dt.date.fromisoformat(release_published)).days, 0
+            )
+            release_bonus = max(300 - release_age * 2, 0)
+        except ValueError:
+            release_bonus = 0
     description = str(repo.get("description") or "").strip()
     topics = repo.get("topics") or []
     return round(
@@ -832,7 +895,8 @@ def owned_project_portfolio_score(
         + recency * 1.5
         + (25 if description and description != "Public source project" else 0)
         + (20 if repo.get("homepage") else 0)
-        + min(len(topics), 5) * 4,
+        + min(len(topics), 5) * 4
+        + release_bonus,
         1,
     )
 
@@ -1467,12 +1531,27 @@ def render_building_now_svg(
                 for line_index, line in enumerate(description_lines)
             )
             pushed = str(repo.get("pushed_at") or "")[:10] or "unknown"
+            release = repo.get("latest_release") or {}
+            if release:
+                release_kind = (
+                    "PRE-RELEASE" if release.get("prerelease") else "RELEASE"
+                )
+                activity = (
+                    f"{ellipsize(release.get('tag_name') or 'release', 14)} "
+                    f"{release_kind}"
+                )
+                activity_color = str(repo["accent"])
+            else:
+                activity = compact_counted(
+                    int(repo["contributor_commits"]), "COMMIT"
+                )
+                activity_color = "#AAB8CA"
             rows.append(
                 f"""
       <g>
         <text x="0" y="{y + 25}" fill="{repo['accent']}" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">{rank:02d}</text>
         <text x="66" y="{y + 24}" fill="#F8FAFC" font-size="20" font-weight="780">{html.escape(ellipsize(repo['name'], 24))}</text>
-        <text x="642" y="{y + 22}" fill="#AAB8CA" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{compact_counted(int(repo['contributor_commits']), 'COMMIT')} · {compact_counted(int(repo['stargazers']), 'STAR')} · {pushed}</text>
+        <text x="642" y="{y + 22}" fill="{activity_color}" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{html.escape(activity)} · {compact_counted(int(repo['stargazers']), 'STAR')} · {pushed}</text>
         {description_svg}
         <line x1="0" y1="{y + 72}" x2="642" y2="{y + 72}" stroke="#203149"/>
       </g>"""
@@ -1492,7 +1571,7 @@ def render_building_now_svg(
     project_names = ", ".join(str(repo["name"]) for repo in featured)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
   <title id="title">What Rudy Celekli is building now</title>
-  <desc id="desc">Gradia is the private product anchor for business-grounded AI agent evaluation. The automatically ranked public frontier currently features {html.escape(project_names)} using repository reach, recent shipping, attributed work, and project completeness.</desc>
+  <desc id="desc">Gradia is the private product anchor for business-grounded AI agent evaluation. The automatically ranked public frontier currently features {html.escape(project_names)} using repository reach, recent shipping, public releases, attributed work, and project completeness.</desc>
   <defs>
     <style>
       .private-signal {{ stroke-dasharray: 7 10; animation: building-flow 2.8s linear infinite; }}
@@ -1548,7 +1627,7 @@ def render_building_now_svg(
     {''.join(frontier_pages)}
   </g>
 
-  <text x="42" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">SELECTION SIGNALS: REACH · SHIPPING RECENCY · ATTRIBUTED WORK · PROJECT COMPLETENESS</text>
+  <text x="42" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">SIGNALS: REACH · SHIP RECENCY · RELEASES · ATTRIBUTED WORK · COMPLETENESS</text>
   <text x="1158" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{len(featured)} PROJECTS · ROTATES EVERY 8 SEC · RE-RANKED EVERY 30 MIN</text>
 </svg>
 """
@@ -1582,11 +1661,23 @@ def render_building_now_readme(
         blurb = str(repo["description"]).rstrip(".")
         blurb = blurb.replace(" — ", ": ").replace(" – ", ": ")
         blurb = blurb.replace("—", ":").replace("–", "-")
-        lines.append(f"{index}. **[{repo['name']}]({repo['url']})**: {blurb}.")
+        release = repo.get("latest_release") or {}
+        release_proof = ""
+        if release.get("url"):
+            release_kind = (
+                "pre-release" if release.get("prerelease") else "release"
+            )
+            release_proof = (
+                f" · [{release.get('tag_name') or 'latest'} {release_kind}]"
+                f"({release['url']})"
+            )
+        lines.append(
+            f"{index}. **[{repo['name']}]({repo['url']})**{release_proof}: {blurb}."
+        )
     lines.extend(
         [
             "",
-            f"<sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>",
+            f"<sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>",
             "<!-- building-now:end -->",
         ]
     )
@@ -2210,7 +2301,7 @@ def main() -> int:
         for repo in repositories
     ]
     payload = {
-        "schema_version": 5,
+        "schema_version": 6,
         "source": "GitHub GraphQL and REST APIs",
         "login": LOGIN,
         "updated_at_utc": updated,
@@ -2224,7 +2315,8 @@ def main() -> int:
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",
             "owned_project_ranking": "The profile spotlight ranks the complete discovered set by stars, recent activity, then GitHub-attributed commits. Every qualifying owned repository remains in this evidence file.",
-            "building_now_ranking": "The top-fold public frontier is re-ranked on every run using repository reach, 120-day shipping recency, attributed commits, and project completeness signals. Gradia remains a separately disclosed private-product anchor and contributes no private repository details.",
+            "release_discovery": "The newest public, non-draft GitHub release or prerelease is discovered for every owned public project. A recent release adds a decaying 150-day launch signal and is linked directly in the profile.",
+            "building_now_ranking": "The top-fold public frontier is re-ranked on every run using repository reach, 120-day shipping recency, recent public releases, attributed commits, and project completeness signals. Gradia remains a separately disclosed private-product anchor and contributes no private repository details.",
             "ownership_boundary": "Repository ownership is reported separately and is never counted as upstream contributor credit or accepted merged-PR work.",
         },
         "repositories": public_repositories,
