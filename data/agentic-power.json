@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 125.4,
-    "high": 200.2,
+    "base": 125.3,
+    "high": 200.1,
     "low": 80.2
   },
   "basis": "operator-calibrated provisional estimate",
@@ -9,7 +9,7 @@
     "allocation_factor_vs_base_proxy": {
       "base": 0.0578,
       "high": 0.0661,
-      "low": 0.0495
+      "low": 0.0496
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
     "evidence_window_weeks": 82.41,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 452.0,
+  "engineer_weeks_at_40h": 451.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -494,7 +494,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 9.89,
-        "high": 11.3,
+        "high": 11.31,
         "low": 8.48
       },
       "month": "2026-06",
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 111.6,
+        "base": 111.5,
         "high": 182.1,
         "low": 68.3
       },
       "modeled_human_direction_hours": {
-        "base": 7.25,
+        "base": 7.26,
         "high": 8.29,
         "low": 6.22
       },
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 119.7,
-        "high": 195.6,
+        "high": 195.4,
         "low": 73.3
       },
       "modeled_human_direction_hours": {
         "base": 17.33,
-        "high": 19.8,
-        "low": 14.85
+        "high": 19.81,
+        "low": 14.86
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 157.8,
-        "high": 251.6,
+        "base": 157.7,
+        "high": 251.5,
         "low": 101.3
       },
       "modeled_human_direction_hours": {
-        "base": 24.52,
-        "high": 28.02,
-        "low": 21.01
+        "base": 24.53,
+        "high": 28.03,
+        "low": 21.02
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -594,42 +594,42 @@
       "agentic_power_x": {
         "base": 142.7,
         "high": 224.8,
-        "low": 93.7
+        "low": 93.6
       },
       "modeled_human_direction_hours": {
-        "base": 60.48,
-        "high": 69.12,
-        "low": 51.84
+        "base": 60.45,
+        "high": 69.09,
+        "low": 51.81
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 859,
+      "public_merged_pull_requests": 858,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 8633.2,
-        "high": 11655.13,
-        "low": 6474.91
+        "base": 8625.29,
+        "high": 11644.45,
+        "low": 6468.97
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1046.26,
-        "high": 1490.91,
-        "low": 723.57
+        "base": 1045.41,
+        "high": 1489.72,
+        "low": 722.98
       }
     }
   ],
-  "public_accepted_pull_requests": 1101,
+  "public_accepted_pull_requests": 1100,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 18080.64,
-    "high": 24750.81,
-    "low": 13218.88
+    "base": 18072.73,
+    "high": 24740.13,
+    "low": 13212.94
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2494.91,
-    "high": 3793.1,
-    "low": 1677.13
+    "base": 2494.06,
+    "high": 3791.91,
+    "low": 1676.54
   },
   "updated_at_utc": "2026-10-07",
   "window": {
@@ -20646,35 +20646,6 @@
       "pull_request": 521,
       "title": "fix(workflows): preserve punctuation in filesystem source paths",
       "url": "https://github.com/morluto/rea/pull/521"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-05T04:11:47Z",
-      "evidence": {
-        "additions": 48,
-        "changed_files": 2,
-        "comments": 1,
-        "commits": 2,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 7.91,
-        "high": 10.68,
-        "low": 5.94
-      },
-      "merged_at": "2026-10-05T07:02:48Z",
-      "modeled_human_direction_hours": {
-        "base": 0.85,
-        "high": 1.19,
-        "low": 0.59
-      },
-      "project": "morluto/rea",
-      "pull_request": 512,
-      "title": "fix(replay): preserve Date call and explicit constructor semantics",
-      "url": "https://github.com/morluto/rea/pull/512"
     },
     {
       "acceptance_basis": "merged pull request",
