@@ -204,6 +204,16 @@ def rest_json(token: str, url: str) -> object:
         try:
             with urllib.request.urlopen(request, timeout=45) as response:
                 return json.load(response)
+        except json.JSONDecodeError as error:
+            # GitHub occasionally closes a successful REST response before a
+            # JSON body reaches the runner. Treat that as transient instead of
+            # letting one repository abort the complete scheduled refresh.
+            if attempt < 7:
+                time.sleep(min(2**attempt, 16))
+                continue
+            raise RuntimeError(
+                f"GitHub REST API returned invalid JSON for {url}"
+            ) from error
         except urllib.error.HTTPError as error:
             detail = error.read().decode(errors="replace")
             if (

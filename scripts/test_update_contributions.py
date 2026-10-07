@@ -1,3 +1,4 @@
+import io
 import unittest
 from unittest import mock
 
@@ -64,6 +65,21 @@ def owned_repository(full_name, **overrides):
 
 
 class ContributionDiscoveryTests(unittest.TestCase):
+    @mock.patch.object(subject.time, "sleep")
+    @mock.patch.object(subject.urllib.request, "urlopen")
+    def test_rest_json_retries_an_empty_success_body(self, urlopen, sleep):
+        empty_response = mock.MagicMock()
+        empty_response.__enter__.return_value = io.BytesIO(b"")
+        valid_response = mock.MagicMock()
+        valid_response.__enter__.return_value = io.BytesIO(b'[{"ok": true}]')
+        urlopen.side_effect = [empty_response, valid_response]
+
+        payload = subject.rest_json("token", "https://api.github.com/example")
+
+        self.assertEqual(payload, [{"ok": True}])
+        self.assertEqual(urlopen.call_count, 2)
+        sleep.assert_called_once_with(1)
+
     @mock.patch.object(subject, "graphql")
     def test_search_splits_windows_beyond_githubs_result_cap(self, graphql):
         left = pull_request(repository("upstream/left"), 1)
