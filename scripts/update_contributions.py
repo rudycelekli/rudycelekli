@@ -21,6 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 DATA_FILE = ROOT / "data" / "contributions.json"
+HERO_SVG_FILE = ROOT / "assets" / "hero.svg"
 SVG_FILE = ROOT / "assets" / "open-source-contributions.svg"
 OWNED_SVG_FILE = ROOT / "assets" / "owned-public-projects.svg"
 AP_DATA_FILE = ROOT / "data" / "agentic-power.json"
@@ -1224,6 +1225,107 @@ def render_agentic_power_svg(profile: dict[str, object]) -> str:
 """
 
 
+def render_hero_svg(
+    repositories: list[dict[str, object]], profile: dict[str, object]
+) -> str:
+    """Render the first-screen identity and live proof signal."""
+    total_merged = sum(int(repo["merged_prs"]) for repo in repositories)
+    total_line_changes = sum(
+        int(repo["accepted_additions"]) + int(repo["accepted_deletions"])
+        for repo in repositories
+    )
+    agentic_power = float(profile["agentic_power_x"]["base"])
+    updated = html.escape(str(profile["updated_at_utc"]))
+    return f"""<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Rudy Celekli, evidence-first agentic systems</title>
+  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes {total_merged} merged pull requests, {total_line_changes:,} accepted line changes, and a provisional Agentic Power estimate of {agentic_power:.1f} times.</desc>
+  <defs>
+    <style>
+      .orbit {{ transform-box: fill-box; transform-origin: center; animation: orbit 20s linear infinite; }}
+      .signal {{ stroke-dasharray: 8 10; animation: signal 2.8s linear infinite; }}
+      .signal.reverse {{ animation-direction: reverse; }}
+      .beacon {{ animation: beacon 3s ease-in-out infinite; }}
+      .beacon.delay-1 {{ animation-delay: .75s; }}
+      .beacon.delay-2 {{ animation-delay: 1.5s; }}
+      .beacon.delay-3 {{ animation-delay: 2.25s; }}
+      .verified-core {{ animation: verified 3.2s ease-in-out infinite; }}
+      .proof-live {{ animation: proof-live 3.4s ease-in-out infinite; }}
+      @keyframes orbit {{ to {{ transform: rotate(360deg); }} }}
+      @keyframes signal {{ to {{ stroke-dashoffset: -36; }} }}
+      @keyframes beacon {{ 0%, 100% {{ opacity: .5; }} 50% {{ opacity: 1; }} }}
+      @keyframes verified {{ 0%, 100% {{ opacity: .82; }} 50% {{ opacity: 1; }} }}
+      @keyframes proof-live {{ 0%, 100% {{ opacity: .72; }} 50% {{ opacity: 1; }} }}
+      @media (prefers-reduced-motion: reduce) {{
+        .orbit, .signal, .beacon, .verified-core, .proof-live {{ animation: none; opacity: 1; }}
+      }}
+    </style>
+    <linearGradient id="hero-bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111E"/>
+      <stop offset="0.55" stop-color="#0A1020"/>
+      <stop offset="1" stop-color="#150B2E"/>
+    </linearGradient>
+    <linearGradient id="hero-accent" x1="735" y1="80" x2="1100" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DE2C5"/>
+      <stop offset="0.55" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="hero-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(946 211) rotate(90) scale(188)">
+      <stop stop-color="#2DE2C5" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#2DE2C5" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hero-grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#94A3B8" stroke-opacity="0.07"/>
+    </pattern>
+    <filter id="hero-soft-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" rx="28" fill="url(#hero-bg)"/>
+  <rect x="1" y="1" width="1198" height="418" rx="27" stroke="#F8FAFC" stroke-opacity="0.08" stroke-width="2"/>
+  <rect width="1200" height="420" rx="28" fill="url(#hero-grid)"/>
+  <circle cx="946" cy="211" r="188" fill="url(#hero-glow)"/>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">
+    <text x="72" y="64" fill="#2DE2C5" font-size="13" font-weight="700" letter-spacing="3">RUDY CELEKLI / EVIDENCE-FIRST AGENTIC SYSTEMS</text>
+    <text x="72" y="138" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">I build agentic systems</text>
+    <text x="72" y="195" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">that can prove</text>
+    <text x="72" y="252" fill="#2DE2C5" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">what happened.</text>
+    <text x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="14">Forward deployed AI researcher · Agentic AI engineer · Enterprise AI</text>
+    <line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
+    <circle class="proof-live" cx="78" cy="368" r="5" fill="#2DE2C5"/>
+    <text x="94" y="372" fill="#91A2B8" font-size="11.5" letter-spacing="1">LIVE PROOF · {total_merged:,} MERGED PRS · {total_line_changes:,} ACCEPTED LINES · {agentic_power:.1f}× PROVISIONAL AP</text>
+    <text x="664" y="398" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · {updated} UTC</text>
+  </g>
+
+  <g transform="translate(940 210)">
+    <circle r="137" stroke="#38BDF8" stroke-opacity="0.12"/>
+    <circle class="orbit" r="102" stroke="#2DE2C5" stroke-opacity="0.42" stroke-dasharray="5 9"/>
+    <circle r="66" stroke="url(#hero-accent)" stroke-width="2" stroke-opacity="0.55"/>
+    <circle class="verified-core" r="30" fill="#0B1627" stroke="#2DE2C5" stroke-width="2" filter="url(#hero-soft-glow)"/>
+    <path d="M-12 0L-3 9L15 -12" stroke="#E6FFFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path class="signal" d="M-174 -62H-120L-87 -34" stroke="#2DE2C5" stroke-width="2"/>
+    <circle class="beacon" cx="-174" cy="-62" r="5" fill="#2DE2C5"/>
+    <path class="signal reverse" d="M-172 85H-118L-86 48" stroke="#38BDF8" stroke-width="2"/>
+    <circle class="beacon delay-1" cx="-172" cy="85" r="5" fill="#38BDF8"/>
+    <path class="signal" d="M169 -84H123L90 -48" stroke="#8B5CF6" stroke-width="2"/>
+    <circle class="beacon delay-2" cx="169" cy="-84" r="5" fill="#8B5CF6"/>
+    <path class="signal reverse" d="M177 72H122L91 43" stroke="#F2A93B" stroke-width="2"/>
+    <circle class="beacon delay-3" cx="177" cy="72" r="5" fill="#F2A93B"/>
+  </g>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="11" font-weight="700" letter-spacing="1.3">
+    <g transform="translate(722 128)"><rect width="116" height="28" rx="14" fill="#0B1D2A" stroke="#2DE2C5" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#7FFFEA">OBSERVED</text></g>
+    <g transform="translate(718 278)"><rect width="116" height="28" rx="14" fill="#0B1B2E" stroke="#38BDF8" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#8ADFFF">RECORDED</text></g>
+    <g transform="translate(1041 106)"><rect width="108" height="28" rx="14" fill="#17102A" stroke="#8B5CF6" stroke-opacity="0.45"/><text x="54" y="18" text-anchor="middle" fill="#C4B5FD">REPLAYED</text></g>
+    <g transform="translate(1048 264)"><rect width="102" height="28" rx="14" fill="#24180B" stroke="#F2A93B" stroke-opacity="0.45"/><text x="51" y="18" text-anchor="middle" fill="#F8C66E">VERIFIED</text></g>
+  </g>
+</svg>
+"""
+
+
 def render_profile_walkthrough_svg(
     repositories: list[dict[str, object]],
     owned_repositories: list[dict[str, object]],
@@ -1824,6 +1926,7 @@ def main() -> int:
         ),
     )
     write_generated(AP_SVG_FILE, render_agentic_power_svg(agentic_power))
+    write_generated(HERO_SVG_FILE, render_hero_svg(repositories, agentic_power))
     write_generated(
         WALKTHROUGH_SVG_FILE,
         render_profile_walkthrough_svg(

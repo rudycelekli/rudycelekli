@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Rudy Celekli — building AI systems that can prove what happened" />
+<img src="./assets/hero.svg" width="100%" alt="Rudy Celekli, evidence-first agentic systems with live machine-counted proof" />
 
 <br />
 

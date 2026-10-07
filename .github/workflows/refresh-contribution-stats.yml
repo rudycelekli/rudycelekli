@@ -39,6 +39,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md data/contributions.json data/agentic-power.json data/repository-work-aggregate.json assets/open-source-contributions.svg assets/owned-public-projects.svg assets/agentic-power-profile.svg assets/profile-walkthrough.svg
+          git add README.md data/contributions.json data/agentic-power.json data/repository-work-aggregate.json assets/hero.svg assets/open-source-contributions.svg assets/owned-public-projects.svg assets/agentic-power-profile.svg assets/profile-walkthrough.svg
           git commit -m "chore: refresh contribution stats"
           git push

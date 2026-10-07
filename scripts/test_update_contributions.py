@@ -329,6 +329,35 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("prefers-reduced-motion", svg)
         self.assertIn('class="scene-static"', svg)
 
+    def test_hero_leads_with_positioning_and_live_machine_counted_proof(self):
+        repositories = [
+            {
+                "merged_prs": 12,
+                "accepted_additions": 2_000,
+                "accepted_deletions": 100,
+            },
+            {
+                "merged_prs": 5,
+                "accepted_additions": 400,
+                "accepted_deletions": 25,
+            },
+        ]
+        profile = {
+            "agentic_power_x": {"base": 51.2},
+            "updated_at_utc": "2026-10-06",
+        }
+
+        svg = subject.render_hero_svg(repositories, profile)
+
+        self.assertIn("EVIDENCE-FIRST AGENTIC SYSTEMS", svg)
+        self.assertIn("Forward deployed AI researcher", svg)
+        self.assertIn("17 MERGED PRS", svg)
+        self.assertIn("2,525 ACCEPTED LINES", svg)
+        self.assertIn("51.2× PROVISIONAL AP", svg)
+        self.assertIn("MACHINE-COUNTED · 2026-10-06 UTC", svg)
+        self.assertIn("prefers-reduced-motion", svg)
+        self.assertNotIn('fill="url(#hero-accent)" font-family', svg)
+
     def test_profile_leads_with_upstream_proof_and_runs_twice_hourly(self):
         readme = (subject.ROOT / "README.md").read_text()
         workflow = (
