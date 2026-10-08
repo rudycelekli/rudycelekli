@@ -4,14 +4,22 @@
   <defs>
     <style>
       .private-signal { stroke-dasharray: 7 10; animation: building-flow 2.8s linear infinite; }
+      .private-orbit { transform-box: fill-box; transform-origin: center; animation: private-orbit 18s linear infinite; }
+      .private-pulse { transform-box: fill-box; transform-origin: center; animation: private-pulse 4.6s cubic-bezier(.16,1,.3,1) infinite; }
+      .private-pulse.delay { animation-delay: 2.3s; }
       .frontier-page { opacity: 0; }
       .frontier-page-1 { animation: frontier-page-one 16s cubic-bezier(.16,1,.3,1) infinite; }
       .frontier-page-2 { animation: frontier-page-two 16s cubic-bezier(.16,1,.3,1) infinite; }
+      .frontier-progress { transform-box: fill-box; transform-origin: left; animation: frontier-progress 8s linear infinite; }
       @keyframes building-flow { to { stroke-dashoffset: -34; } }
-      @keyframes frontier-page-one { 0%, 43% { opacity: 1; } 48%, 95% { opacity: 0; } 100% { opacity: 1; } }
-      @keyframes frontier-page-two { 0%, 43% { opacity: 0; } 48%, 95% { opacity: 1; } 100% { opacity: 0; } }
+      @keyframes private-orbit { to { transform: rotate(360deg); } }
+      @keyframes private-pulse { 0% { opacity: .46; transform: scale(.65); } 72%, 100% { opacity: 0; transform: scale(1.35); } }
+      @keyframes frontier-page-one { 0%, 43% { opacity: 1; transform: translateY(0); } 48%, 95% { opacity: 0; transform: translateY(-12px); } 100% { opacity: 1; transform: translateY(0); } }
+      @keyframes frontier-page-two { 0%, 43% { opacity: 0; transform: translateY(12px); } 48%, 95% { opacity: 1; transform: translateY(0); } 100% { opacity: 0; transform: translateY(-12px); } }
+      @keyframes frontier-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
       @media (prefers-reduced-motion: reduce) {
-        .private-signal, .frontier-page { animation: none; }
+        .private-signal, .private-orbit, .private-pulse, .frontier-page, .frontier-row, .frontier-progress { animation: none; opacity: 1; transform: none; }
+        .private-pulse { display: none; }
         .frontier-page-1 { opacity: 1; }
         .frontier-page-2 { opacity: 0; }
       }
@@ -46,6 +54,9 @@
     <text x="28" y="151" fill="#D6E2EE" font-size="17" font-weight="650">can actually do your work.</text>
     <text x="28" y="187" fill="#91A2B8" font-size="12.5">Evaluation grounded in real workflows,</text>
     <text x="28" y="206" fill="#91A2B8" font-size="12.5">business rules, and inspectable evidence.</text>
+    <circle class="private-pulse" cx="342" cy="124" r="54" fill="none" stroke="#2DE2C5" stroke-opacity=".42"/>
+    <circle class="private-pulse delay" cx="342" cy="124" r="54" fill="none" stroke="#4D7CFE" stroke-opacity=".34"/>
+    <circle class="private-orbit" cx="342" cy="124" r="43" fill="none" stroke="#7FFFEA" stroke-opacity=".34" stroke-dasharray="4 10"/>
     <path class="private-signal" d="M278 72 H352 V178 H306" fill="none" stroke="#2DE2C5" stroke-width="2"/>
     <circle cx="278" cy="72" r="5" fill="#2DE2C5"/><circle cx="306" cy="178" r="5" fill="#4D7CFE"/>
     <text x="28" y="229" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11">GRADIAHQ.COM</text>
@@ -57,24 +68,24 @@
     <g class="frontier-page frontier-page-1">
       <text x="642" y="14" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">VIEW 1 / 2</text>
 
-      <g>
+      <g class="frontier-row frontier-row-1">
         <text x="0" y="61" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">01</text>
         <text x="66" y="60" fill="#F8FAFC" font-size="20" font-weight="780">code-transplant</text>
         <text x="642" y="58" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">v0.1.0 PRE-RELEASE · 2 STARS · 2026-10-07</text>
         <text x="66" y="74" fill="#91A2B8" font-size="11.5">Gradia Research: move TypeScript parsers between programs</text><text x="66" y="90" fill="#91A2B8" font-size="11.5">with dependency capsules and reproducible behavioral…</text>
         <line x1="0" y1="108" x2="642" y2="108" stroke="#203149"/>
       </g>
-      <g>
+      <g class="frontier-row frontier-row-2">
         <text x="0" y="143" fill="#F2A93B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">02</text>
         <text x="66" y="142" fill="#F8FAFC" font-size="20" font-weight="780">Gradia Guard</text>
         <text x="642" y="140" fill="#F2A93B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">source-v0.1.0… PRE-RELEASE · 2 STARS · 2026-10-08</text>
         <text x="66" y="156" fill="#91A2B8" font-size="11.5">Open-source, proof-bound evidence recorder and verifier for</text><text x="66" y="172" fill="#91A2B8" font-size="11.5">explicit AI-system execution boundaries.</text>
         <line x1="0" y1="190" x2="642" y2="190" stroke="#203149"/>
       </g>
-      <g>
+      <g class="frontier-row frontier-row-3">
         <text x="0" y="225" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">03</text>
         <text x="66" y="224" fill="#F8FAFC" font-size="20" font-weight="780">TestLore</text>
-        <text x="642" y="222" fill="#AAB8CA" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">205 COMMITS · 2 STARS · 2026-10-08</text>
+        <text x="642" y="222" fill="#AAB8CA" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">211 COMMITS · 2 STARS · 2026-10-08</text>
         <text x="66" y="238" fill="#91A2B8" font-size="11.5">Build better tests. Run what matters. Remember what worked.</text><text x="66" y="254" fill="#91A2B8" font-size="11.5">An open-source test intelligence and quality engineering…</text>
         <line x1="0" y1="272" x2="642" y2="272" stroke="#203149"/>
       </g>
@@ -82,21 +93,21 @@
     <g class="frontier-page frontier-page-2">
       <text x="642" y="14" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">VIEW 2 / 2</text>
 
-      <g>
+      <g class="frontier-row frontier-row-1">
         <text x="0" y="61" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">04</text>
         <text x="66" y="60" fill="#F8FAFC" font-size="20" font-weight="780">Kin Connect</text>
         <text x="642" y="58" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">v0.2.1 PRE-RELEASE · 0 STARS · 2026-10-08</text>
         <text x="66" y="74" fill="#91A2B8" font-size="11.5">Your agent. Your people. Open-source agent-to-agent</text><text x="66" y="90" fill="#91A2B8" font-size="11.5">introductions for friendship, dating, and collaboration.</text>
         <line x1="0" y1="108" x2="642" y2="108" stroke="#203149"/>
       </g>
-      <g>
+      <g class="frontier-row frontier-row-2">
         <text x="0" y="143" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">05</text>
         <text x="66" y="142" fill="#F8FAFC" font-size="20" font-weight="780">gradia-lens</text>
         <text x="642" y="140" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">v0.1.0a1 PRE-RELEASE · 0 STARS · 2026-10-07</text>
         <text x="66" y="156" fill="#91A2B8" font-size="11.5">Open-model intervention research by Gradia: inspect</text><text x="66" y="172" fill="#91A2B8" font-size="11.5">computation, change components, measure side effects, resto…</text>
         <line x1="0" y1="190" x2="642" y2="190" stroke="#203149"/>
       </g>
-      <g>
+      <g class="frontier-row frontier-row-3">
         <text x="0" y="225" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">06</text>
         <text x="66" y="224" fill="#F8FAFC" font-size="20" font-weight="780">scrapmind</text>
         <text x="642" y="222" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">v0.1.0-alpha.8 PRE-RELEASE · 0 STARS · 2026-10-03</text>
@@ -108,4 +119,5 @@
 
   <text x="42" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">SIGNALS: REACH · SHIP RECENCY · RELEASES · ATTRIBUTED WORK · COMPLETENESS</text>
   <text x="1158" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">6 PROJECTS · ROTATES EVERY 8 SEC · RE-RANKED EVERY 30 MIN</text>
+  <rect x="494" y="396" width="664" height="2" rx="1" fill="#203149"/><rect class="frontier-progress" x="494" y="396" width="664" height="2" rx="1" fill="url(#building-rule)"/>
 </svg>

@@ -110,6 +110,8 @@ class ContributionDiscoveryTests(unittest.TestCase):
                         "repositories": [
                             {
                                 "full_name": "upstream/project",
+                                "official_contributor": True,
+                                "verification_tier": "github_listed_contributor",
                                 "contributor_commits": 41,
                                 "contributor_rank": 3,
                             }
@@ -123,6 +125,33 @@ class ContributionDiscoveryTests(unittest.TestCase):
                 )
 
         self.assertEqual(stats, (41, 3))
+
+    def test_cached_graph_evidence_does_not_impersonate_official_index(self):
+        with tempfile.TemporaryDirectory() as directory:
+            data_file = Path(directory) / "contributions.json"
+            data_file.write_text(
+                json.dumps(
+                    {
+                        "repositories": [
+                            {
+                                "full_name": "earthtojake/text-to-cad",
+                                "official_contributor": False,
+                                "verification_tier": (
+                                    "github_contribution_graph_verified"
+                                ),
+                                "contributor_commits": 1,
+                                "contributor_rank": None,
+                            }
+                        ]
+                    }
+                )
+            )
+            with mock.patch.object(subject, "DATA_FILE", data_file):
+                stats = subject.cached_contribution_stats(
+                    "earthtojake/text-to-cad"
+                )
+
+        self.assertEqual(stats, (None, None))
 
     @mock.patch.object(subject, "graphql")
     def test_search_splits_windows_beyond_githubs_result_cap(self, graphql):
@@ -155,9 +184,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
     @mock.patch.object(subject, "default_branch_contribution_count")
     @mock.patch.object(subject, "official_contribution_stats")
+    @mock.patch.object(subject, "discover_commit_contribution_repositories")
     @mock.patch.object(subject, "search_authored_pull_requests")
     def test_discovers_and_upgrades_each_accepted_evidence_tier(
-        self, authored_search, official_stats, default_count
+        self, authored_search, graph_search, official_stats, default_count
     ):
         accepted = repository("upstream/new-project")
         pending = repository("upstream/pending-index")
@@ -173,6 +203,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             pull_request(private, 2),
             pull_request(owned, 1),
         ]
+        graph_search.return_value = {}
         official_stats.side_effect = lambda _token, full_name: (
             (7, 3) if full_name == "upstream/new-project" else (None, None)
         )
@@ -214,6 +245,131 @@ class ContributionDiscoveryTests(unittest.TestCase):
                 "upstream/default-only",
             ],
         )
+
+    @mock.patch.object(subject, "default_branch_contribution_count", return_value=0)
+    @mock.patch.object(
+        subject, "official_contribution_stats", return_value=(None, None)
+    )
+    @mock.patch.object(subject, "discover_commit_contribution_repositories")
+    @mock.patch.object(subject, "search_authored_pull_requests", return_value=[])
+    def test_discovers_contribution_graph_only_repository(
+        self, _authored_search, graph_search, _official_stats, _default_count
+    ):
+        text_to_cad = repository("earthtojake/text-to-cad")
+        evidence_url = (
+            "https://github.com/rudycelekli?tab=overview"
+            "&from=2026-10-01&to=2026-10-31"
+        )
+        graph_search.return_value = {
+            "earthtojake/text-to-cad": {
+                "repository": text_to_cad,
+                "contribution_graph_commits": 1,
+                "contribution_graph_evidence_url": evidence_url,
+                "contribution_graph_latest_at": "2026-10-08T07:00:00Z",
+            }
+        }
+
+        discovered = subject.discover_repositories("token")
+
+        self.assertEqual(len(discovered), 1)
+        contribution = discovered[0]
+        self.assertEqual(contribution["full_name"], "earthtojake/text-to-cad")
+        self.assertEqual(
+            contribution["verification_tier"],
+            "github_contribution_graph_verified",
+        )
+        self.assertEqual(contribution["verification_label"], "GitHub graph verified")
+        self.assertEqual(contribution["contributor_commits"], 1)
+        self.assertEqual(contribution["merged_prs"], 0)
+        self.assertEqual(contribution["accepted_additions"], 0)
+        self.assertEqual(contribution["accepted_deletions"], 0)
+        self.assertEqual(contribution["accepted_changed_files"], 0)
+        self.assertEqual(
+            contribution["contribution_graph_evidence_url"], evidence_url
+        )
+
+    @mock.patch.object(subject, "graphql_data")
+    def test_contribution_graph_discovery_aggregates_daily_commit_counts(
+        self, graphql_data
+    ):
+        text_to_cad = repository("earthtojake/text-to-cad")
+        graphql_data.return_value = {
+            "user": {
+                "contributionsCollection": {
+                    "commitContributionsByRepository": [
+                        {
+                            "repository": text_to_cad,
+                            "contributions": {
+                                "totalCount": 2,
+                                "pageInfo": {"hasNextPage": False},
+                                "nodes": [
+                                    {
+                                        "commitCount": 2,
+                                        "occurredAt": "2026-10-07T07:00:00Z",
+                                        "url": "https://github.com/rudycelekli?from=2026-10-01",
+                                    },
+                                    {
+                                        "commitCount": 3,
+                                        "occurredAt": "2026-10-08T07:00:00Z",
+                                        "url": "https://github.com/rudycelekli?from=2026-10-01",
+                                    },
+                                ],
+                            },
+                        }
+                    ]
+                }
+            }
+        }
+
+        discovered = subject.discover_commit_contribution_repositories(
+            "token", subject.dt.date(2026, 1, 1), subject.dt.date(2026, 12, 31)
+        )
+
+        self.assertEqual(
+            discovered["earthtojake/text-to-cad"]["contribution_graph_commits"],
+            5,
+        )
+        self.assertEqual(
+            discovered["earthtojake/text-to-cad"]["contribution_graph_latest_at"],
+            "2026-10-08T07:00:00Z",
+        )
+
+    @mock.patch.object(subject, "graphql_data")
+    def test_high_single_day_commit_count_is_not_mistaken_for_pagination(
+        self, graphql_data
+    ):
+        busy = repository("upstream/busy-day")
+        graphql_data.return_value = {
+            "user": {
+                "contributionsCollection": {
+                    "commitContributionsByRepository": [
+                        {
+                            "repository": busy,
+                            "contributions": {
+                                "totalCount": 132,
+                                "pageInfo": {"hasNextPage": False},
+                                "nodes": [
+                                    {
+                                        "commitCount": 132,
+                                        "occurredAt": "2026-10-05T07:00:00Z",
+                                        "url": "https://github.com/rudycelekli?from=2026-10-01",
+                                    }
+                                ],
+                            },
+                        }
+                    ]
+                }
+            }
+        }
+
+        discovered = subject.discover_commit_contribution_repositories(
+            "token", subject.dt.date(2026, 10, 5), subject.dt.date(2026, 10, 5)
+        )
+
+        self.assertEqual(
+            discovered["upstream/busy-day"]["contribution_graph_commits"], 132
+        )
+        graphql_data.assert_called_once()
 
     def test_svg_expands_for_new_projects_and_labels_reach(self):
         repositories = []
@@ -294,6 +450,28 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("[Default-branch commit verified]", default_section)
         self.assertIn("| 4 | [0]", default_section)
         self.assertIn("| — | — | 7,890 ★ · 321 forks |", default_section)
+
+        graph_only = {
+            **repository,
+            "name": "Graph Project",
+            "verification_tier": "github_contribution_graph_verified",
+            "verification_label": "GitHub graph verified",
+            "contribution_graph_evidence_url": "https://github.com/rudycelekli?tab=overview",
+            "contributor_commits": 1,
+            "merged_prs": 0,
+            "accepted_additions": 0,
+            "accepted_deletions": 0,
+            "accepted_changed_files": 0,
+        }
+        graph_section = subject.render_readme_section(
+            [graph_only], [], "2026-10-05"
+        )
+        self.assertIn(
+            "[GitHub graph verified](https://github.com/rudycelekli?tab=overview)",
+            graph_section,
+        )
+        self.assertIn("| 1 | [0]", graph_section)
+        self.assertIn("Only merged PRs contribute accepted-line", graph_section)
 
     @mock.patch.object(subject, "official_contribution_stats")
     @mock.patch.object(subject, "rest_json")
@@ -414,6 +592,9 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("3 owned public projects", svg)
         self.assertIn("prefers-reduced-motion", svg)
         self.assertIn('class="scene-static"', svg)
+        self.assertIn('class="walk-scan"', svg)
+        self.assertIn('class="chapter-fill"', svg)
+        self.assertIn("translateY(-10px)", svg)
 
     def test_hero_leads_with_positioning_and_live_machine_counted_proof(self):
         repositories = [
@@ -449,6 +630,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("51.2× PROVISIONAL AP", svg)
         self.assertIn("MACHINE-COUNTED · 2026-10-06 UTC", svg)
         self.assertIn("prefers-reduced-motion", svg)
+        self.assertIn('class="packet"', svg)
+        self.assertIn('class="ring-wave"', svg)
+        self.assertIn('class="state-chip state-chip-4"', svg)
+        self.assertIn('class="border-trace"', svg)
         self.assertNotIn('fill="url(#hero-accent)" font-family', svg)
 
     def test_top_contributor_proof_includes_only_observed_top_five_ranks(self):
@@ -571,6 +756,9 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("RE-RANKED EVERY 30 MIN", svg)
         self.assertIn("v0.1.0 PRE-RELEASE", svg)
         self.assertIn("prefers-reduced-motion", svg)
+        self.assertIn('class="private-orbit"', svg)
+        self.assertIn('class="frontier-progress"', svg)
+        self.assertIn('class="frontier-row frontier-row-1"', svg)
         self.assertIn("Gradia", readme)
         self.assertIn("private repository evidence remains private", readme)
         self.assertIn("Adopted Project", readme)

@@ -67,6 +67,7 @@ Dark-profile translation:
 - Live Agentic Power equation: modeled HEH, operator-estimated human direction, central AP, and a visible uncertainty range. Preserve the conservative GitHub direction proxy in the evidence data for comparison.
 - Two-row month-over-month timeline from January 2025 onward: accepted HEH bars plus a modeled AP line.
 - Semantic SVG motion: evidence signals flow, operating stages activate in sequence, and charts reveal their series; all motion stops under `prefers-reduced-motion`.
+- Layer motion by purpose: one staged entrance establishes hierarchy, routed packets and state changes explain the proof flow, and restrained scans or orbital traces supply ambience. Keep meaningful content visible at frame zero so static renderers never produce an empty panel.
 - Responsive SVG copy: wrap or clamp repository names and descriptions inside their own bounds and preserve a readable text equivalent in the README.
 - Auto-discovered contribution constellation: qualifying upstream projects flow into a two-column evidence layout with current stars and forks labeled as project reach, never personal credit.
 - Auto-discovered owner-project spotlight: public, non-fork, active source repositories use a compact three-column layout and explicit OWNER labels. Preserve the complete qualifying set in machine-readable evidence while keeping the visible profile selective and scannable.

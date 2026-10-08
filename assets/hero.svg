@@ -1,6 +1,6 @@
 <svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Rudy Celekli, evidence-first agentic systems</title>
-  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes 23 verified upstream projects, 1140 merged pull requests, 1308 attributed commits, 123,427 accepted line changes, 1490885 combined repository stars, and a provisional Agentic Power estimate of 128.0 times.</desc>
+  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes 28 verified upstream projects, 1142 merged pull requests, 1318 attributed commits, 123,569 accepted line changes, 1560772 combined repository stars, and a provisional Agentic Power estimate of 128.1 times.</desc>
   <defs>
     <style>
       .orbit { transform-box: fill-box; transform-origin: center; animation: orbit 20s linear infinite; }
@@ -12,13 +12,43 @@
       .beacon.delay-3 { animation-delay: 2.25s; }
       .verified-core { animation: verified 3.2s ease-in-out infinite; }
       .proof-live { animation: proof-live 3.4s ease-in-out infinite; }
+      .hero-kicker, .hero-line, .hero-subtitle, .proof-rail { opacity: .35; animation: hero-reveal .9s cubic-bezier(.16,1,.3,1) forwards; }
+      .hero-line-1 { animation-delay: .12s; }
+      .hero-line-2 { animation-delay: .24s; }
+      .hero-line-3 { animation-delay: .36s; }
+      .hero-subtitle { animation-delay: .52s; }
+      .proof-rail { animation-delay: .68s; }
+      .visual-assembly { opacity: .4; animation: visual-reveal 1.1s .24s cubic-bezier(.16,1,.3,1) forwards; }
+      .scan-beam { opacity: 0; animation: scan-beam 7s cubic-bezier(.76,0,.24,1) infinite; }
+      .ring-wave { transform-box: fill-box; transform-origin: center; animation: ring-wave 4.8s cubic-bezier(.16,1,.3,1) infinite; }
+      .ring-wave.delay { animation-delay: 2.4s; }
+      .packet { animation: packet-run 2.8s cubic-bezier(.4,0,.2,1) infinite; }
+      .packet.delay-1 { animation-delay: .7s; }
+      .packet.delay-2 { animation-delay: 1.4s; }
+      .packet.delay-3 { animation-delay: 2.1s; }
+      .state-chip { animation: state-focus 8s cubic-bezier(.16,1,.3,1) infinite; }
+      .state-chip-2 { animation-delay: 2s; }
+      .state-chip-3 { animation-delay: 4s; }
+      .state-chip-4 { animation-delay: 6s; }
+      .check-draw { stroke-dasharray: 42; stroke-dashoffset: 42; animation: check-draw 4.8s cubic-bezier(.16,1,.3,1) infinite; }
+      .border-trace { stroke-dasharray: 90 2300; animation: border-trace 11s linear infinite; }
       @keyframes orbit { to { transform: rotate(360deg); } }
       @keyframes signal { to { stroke-dashoffset: -36; } }
       @keyframes beacon { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
       @keyframes verified { 0%, 100% { opacity: .82; } 50% { opacity: 1; } }
       @keyframes proof-live { 0%, 100% { opacity: .72; } 50% { opacity: 1; } }
+      @keyframes hero-reveal { from { opacity: .35; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes visual-reveal { from { opacity: .4; } to { opacity: 1; } }
+      @keyframes scan-beam { 0%, 12% { opacity: 0; transform: translateX(0); } 22%, 74% { opacity: .62; } 88%, 100% { opacity: 0; transform: translateX(430px); } }
+      @keyframes ring-wave { 0% { opacity: .52; transform: scale(.62); } 72%, 100% { opacity: 0; transform: scale(1.45); } }
+      @keyframes packet-run { 0% { opacity: 0; transform: translate(0,0); } 14%, 82% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--dx),var(--dy)); } }
+      @keyframes state-focus { 0%, 19%, 100% { opacity: .45; } 5%, 13% { opacity: 1; filter: brightness(1.35); } }
+      @keyframes check-draw { 0%, 14% { stroke-dashoffset: 42; opacity: .35; } 32%, 82% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: .45; } }
+      @keyframes border-trace { to { stroke-dashoffset: -2390; } }
       @media (prefers-reduced-motion: reduce) {
-        .orbit, .signal, .beacon, .verified-core, .proof-live { animation: none; opacity: 1; }
+        .orbit, .signal, .beacon, .verified-core, .proof-live, .hero-kicker, .hero-line, .hero-subtitle, .proof-rail, .state-chip, .check-draw, .border-trace { animation: none; opacity: 1; transform: none; stroke-dashoffset: 0; filter: none; }
+        .visual-assembly { animation: none; opacity: 1; }
+        .scan-beam, .ring-wave, .packet { display: none; }
       }
     </style>
     <linearGradient id="hero-bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
@@ -42,47 +72,56 @@
       <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <clipPath id="hero-visual-clip"><rect x="686" y="34" width="472" height="344" rx="24"/></clipPath>
   </defs>
 
   <rect width="1200" height="420" rx="28" fill="url(#hero-bg)"/>
   <rect x="1" y="1" width="1198" height="418" rx="27" stroke="#F8FAFC" stroke-opacity="0.08" stroke-width="2"/>
+  <rect class="border-trace" x="2" y="2" width="1196" height="416" rx="26" stroke="url(#hero-accent)" stroke-opacity=".46" stroke-width="2"/>
   <rect width="1200" height="420" rx="28" fill="url(#hero-grid)"/>
   <circle cx="946" cy="211" r="188" fill="url(#hero-glow)"/>
+  <g clip-path="url(#hero-visual-clip)"><rect class="scan-beam" x="690" y="46" width="1.5" height="320" fill="#7FFFEA"/><rect class="scan-beam" x="691.5" y="46" width="34" height="320" fill="#2DE2C5" fill-opacity=".035"/></g>
 
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">
-    <text x="72" y="64" fill="#2DE2C5" font-size="13" font-weight="700" letter-spacing="3">RUDY CELEKLI / EVIDENCE-FIRST AGENTIC SYSTEMS</text>
-    <text x="72" y="138" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">I build agentic systems</text>
-    <text x="72" y="195" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">that can prove</text>
-    <text x="72" y="252" fill="#2DE2C5" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">what happened.</text>
-    <text x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="14">Forward deployed AI researcher · Agentic AI engineer · Enterprise AI</text>
-    <line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
+    <text class="hero-kicker" x="72" y="64" fill="#2DE2C5" font-size="13" font-weight="700" letter-spacing="3">RUDY CELEKLI / EVIDENCE-FIRST AGENTIC SYSTEMS</text>
+    <text class="hero-line hero-line-1" x="72" y="138" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">I build agentic systems</text>
+    <text class="hero-line hero-line-2" x="72" y="195" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">that can prove</text>
+    <text class="hero-line hero-line-3" x="72" y="252" fill="#2DE2C5" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">what happened.</text>
+    <text class="hero-subtitle" x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="14">Forward deployed AI researcher · Agentic AI engineer · Enterprise AI</text>
+    <g class="proof-rail"><line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
     <circle class="proof-live" cx="78" cy="358" r="5" fill="#2DE2C5"/>
-    <text x="94" y="362" fill="#91A2B8" font-size="10.5" letter-spacing=".8">LIVE PROOF · 23 VERIFIED PROJECTS · 1,140 MERGED PRS · 1.3k ATTRIBUTED COMMITS</text>
-    <text x="94" y="384" fill="#91A2B8" font-size="10.5" letter-spacing=".8">123,427 ACCEPTED LINES · 1.5m COMBINED STARS · 128.0× PROVISIONAL AP</text>
-    <text x="664" y="405" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · 2026-10-08 UTC</text>
+    <text x="94" y="362" fill="#91A2B8" font-size="10.5" letter-spacing=".8">LIVE PROOF · 28 VERIFIED PROJECTS · 1,142 MERGED PRS · 1.3k ATTRIBUTED COMMITS</text>
+    <text x="94" y="384" fill="#91A2B8" font-size="10.5" letter-spacing=".8">123,569 ACCEPTED LINES · 1.6m COMBINED STARS · 128.1× PROVISIONAL AP</text>
+    <text x="664" y="405" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · 2026-10-08 UTC</text></g>
   </g>
 
-  <g transform="translate(940 210)">
+  <g class="visual-assembly" transform="translate(940 210)">
     <circle r="137" stroke="#38BDF8" stroke-opacity="0.12"/>
+    <circle class="ring-wave" r="76" stroke="#2DE2C5" stroke-opacity=".42"/>
+    <circle class="ring-wave delay" r="76" stroke="#8B5CF6" stroke-opacity=".34"/>
     <circle class="orbit" r="102" stroke="#2DE2C5" stroke-opacity="0.42" stroke-dasharray="5 9"/>
     <circle r="66" stroke="url(#hero-accent)" stroke-width="2" stroke-opacity="0.55"/>
     <circle class="verified-core" r="30" fill="#0B1627" stroke="#2DE2C5" stroke-width="2" filter="url(#hero-soft-glow)"/>
-    <path d="M-12 0L-3 9L15 -12" stroke="#E6FFFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="check-draw" d="M-12 0L-3 9L15 -12" stroke="#E6FFFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 
     <path class="signal" d="M-174 -62H-120L-87 -34" stroke="#2DE2C5" stroke-width="2"/>
     <circle class="beacon" cx="-174" cy="-62" r="5" fill="#2DE2C5"/>
+    <circle class="packet" style="--dx:87px;--dy:28px" cx="-174" cy="-62" r="4" fill="#B8FFF4"/>
     <path class="signal reverse" d="M-172 85H-118L-86 48" stroke="#38BDF8" stroke-width="2"/>
     <circle class="beacon delay-1" cx="-172" cy="85" r="5" fill="#38BDF8"/>
+    <circle class="packet delay-1" style="--dx:86px;--dy:-37px" cx="-172" cy="85" r="4" fill="#BAE6FD"/>
     <path class="signal" d="M169 -84H123L90 -48" stroke="#8B5CF6" stroke-width="2"/>
     <circle class="beacon delay-2" cx="169" cy="-84" r="5" fill="#8B5CF6"/>
+    <circle class="packet delay-2" style="--dx:-79px;--dy:36px" cx="169" cy="-84" r="4" fill="#DDD6FE"/>
     <path class="signal reverse" d="M177 72H122L91 43" stroke="#F2A93B" stroke-width="2"/>
     <circle class="beacon delay-3" cx="177" cy="72" r="5" fill="#F2A93B"/>
+    <circle class="packet delay-3" style="--dx:-86px;--dy:-29px" cx="177" cy="72" r="4" fill="#FDE68A"/>
   </g>
 
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="11" font-weight="700" letter-spacing="1.3">
-    <g transform="translate(722 128)"><rect width="116" height="28" rx="14" fill="#0B1D2A" stroke="#2DE2C5" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#7FFFEA">OBSERVED</text></g>
-    <g transform="translate(718 278)"><rect width="116" height="28" rx="14" fill="#0B1B2E" stroke="#38BDF8" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#8ADFFF">RECORDED</text></g>
-    <g transform="translate(1041 106)"><rect width="108" height="28" rx="14" fill="#17102A" stroke="#8B5CF6" stroke-opacity="0.45"/><text x="54" y="18" text-anchor="middle" fill="#C4B5FD">REPLAYED</text></g>
-    <g transform="translate(1048 264)"><rect width="102" height="28" rx="14" fill="#24180B" stroke="#F2A93B" stroke-opacity="0.45"/><text x="51" y="18" text-anchor="middle" fill="#F8C66E">VERIFIED</text></g>
+    <g class="state-chip state-chip-1" transform="translate(722 128)"><rect width="116" height="28" rx="14" fill="#0B1D2A" stroke="#2DE2C5" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#7FFFEA">OBSERVED</text></g>
+    <g class="state-chip state-chip-2" transform="translate(718 278)"><rect width="116" height="28" rx="14" fill="#0B1B2E" stroke="#38BDF8" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#8ADFFF">RECORDED</text></g>
+    <g class="state-chip state-chip-3" transform="translate(1041 106)"><rect width="108" height="28" rx="14" fill="#17102A" stroke="#8B5CF6" stroke-opacity="0.45"/><text x="54" y="18" text-anchor="middle" fill="#C4B5FD">REPLAYED</text></g>
+    <g class="state-chip state-chip-4" transform="translate(1048 264)"><rect width="102" height="28" rx="14" fill="#24180B" stroke="#F2A93B" stroke-opacity="0.45"/><text x="51" y="18" text-anchor="middle" fill="#F8C66E">VERIFIED</text></g>
   </g>
 </svg>

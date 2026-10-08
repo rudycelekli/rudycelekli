@@ -109,9 +109,43 @@ query($query: String!, $cursor: String) {
 }
 """
 
+COMMIT_CONTRIBUTIONS_QUERY = """
+query($login: String!, $from: DateTime!, $to: DateTime!) {
+  user(login: $login) {
+    contributionsCollection(from: $from, to: $to) {
+      commitContributionsByRepository(maxRepositories: 100) {
+        repository {
+          name
+          nameWithOwner
+          description
+          url
+          isPrivate
+          isFork
+          stargazerCount
+          forkCount
+          owner { login }
+        }
+        contributions(first: 100) {
+          totalCount
+          pageInfo { hasNextPage }
+          nodes {
+            commitCount
+            occurredAt
+            url
+          }
+        }
+      }
+    }
+  }
+}
+"""
 
-def graphql(token: str, variables: dict[str, object]) -> dict[str, object]:
-    body = json.dumps({"query": DISCOVERY_QUERY, "variables": variables}).encode()
+
+def graphql_data(
+    token: str, query: str, variables: dict[str, object]
+) -> dict[str, object]:
+    """Run a GitHub GraphQL query with retry and rate-limit handling."""
+    body = json.dumps({"query": query, "variables": variables}).encode()
     for attempt in range(6):
         request = urllib.request.Request(
             "https://api.github.com/graphql",
@@ -145,8 +179,13 @@ def graphql(token: str, variables: dict[str, object]) -> dict[str, object]:
             raise RuntimeError(f"GitHub GraphQL network failure: {error}") from error
         if payload.get("errors"):
             raise RuntimeError(f"GitHub GraphQL errors: {payload['errors']}")
-        return payload["data"]["search"]
+        return payload["data"]
     raise RuntimeError("GitHub GraphQL failed after retries")
+
+
+def graphql(token: str, variables: dict[str, object]) -> dict[str, object]:
+    """Compatibility wrapper for exhaustive authored-PR search."""
+    return graphql_data(token, DISCOVERY_QUERY, variables)["search"]
 
 
 def cached_contribution_stats(full_name: str) -> tuple[int | None, int | None]:
@@ -163,6 +202,10 @@ def cached_contribution_stats(full_name: str) -> tuple[int | None, int | None]:
     for repo in candidates:
         if str(repo.get("full_name", "")).casefold() != full_name.casefold():
             continue
+        if not bool(repo.get("official_contributor")) and str(
+            repo.get("verification_tier") or ""
+        ) != "github_listed_contributor":
+            return None, None
         count = repo.get("contributor_commits")
         rank = repo.get("contributor_rank")
         return (
@@ -656,11 +699,149 @@ def search_authored_pull_requests(
     return search_pull_requests(token, start, end, merged_only=False)
 
 
+def discover_commit_contribution_repositories(
+    token: str,
+    start: dt.date = dt.date(2008, 1, 1),
+    end: dt.date | None = None,
+) -> dict[str, dict[str, object]]:
+    """Discover every public upstream repository credited by GitHub's graph.
+
+    GitHub groups commit contributions by day and caps nested connections at
+    100 nodes. Windows are split recursively whenever connection pagination
+    says that repository discovery or daily contribution groups were truncated.
+    """
+    end = end or dt.datetime.now(dt.timezone.utc).date()
+    if end < start:
+        return {}
+
+    def collect_window(
+        window_start: dt.date, window_end: dt.date
+    ) -> dict[str, dict[str, object]]:
+        data = graphql_data(
+            token,
+            COMMIT_CONTRIBUTIONS_QUERY,
+            {
+                "login": LOGIN,
+                "from": f"{window_start.isoformat()}T00:00:00Z",
+                "to": f"{window_end.isoformat()}T23:59:59Z",
+            },
+        )
+        user = data.get("user") or {}
+        collection = user.get("contributionsCollection") or {}
+        entries = list(collection.get("commitContributionsByRepository") or [])
+        could_be_truncated = len(entries) >= 100 or any(
+            bool(
+                ((entry.get("contributions") or {}).get("pageInfo") or {}).get(
+                    "hasNextPage"
+                )
+            )
+            for entry in entries
+        )
+        if could_be_truncated:
+            if window_start == window_end:
+                raise RuntimeError(
+                    "GitHub contribution graph pagination exceeded its 100-day "
+                    "group cap on "
+                    f"{window_start.isoformat()}"
+                )
+            midpoint = window_start + (window_end - window_start) // 2
+            left = collect_window(window_start, midpoint)
+            right = collect_window(midpoint + dt.timedelta(days=1), window_end)
+            for full_name, candidate in right.items():
+                existing = left.setdefault(
+                    full_name,
+                    {
+                        "repository": candidate["repository"],
+                        "contribution_graph_commits": 0,
+                        "contribution_graph_evidence_url": candidate.get(
+                            "contribution_graph_evidence_url"
+                        ),
+                        "contribution_graph_latest_at": candidate.get(
+                            "contribution_graph_latest_at"
+                        ),
+                    },
+                )
+                existing["repository"] = candidate["repository"]
+                existing["contribution_graph_commits"] = int(
+                    existing["contribution_graph_commits"]
+                ) + int(candidate["contribution_graph_commits"])
+                if str(candidate.get("contribution_graph_latest_at") or "") > str(
+                    existing.get("contribution_graph_latest_at") or ""
+                ):
+                    existing["contribution_graph_latest_at"] = candidate.get(
+                        "contribution_graph_latest_at"
+                    )
+                    existing["contribution_graph_evidence_url"] = candidate.get(
+                        "contribution_graph_evidence_url"
+                    )
+            return left
+
+        discovered: dict[str, dict[str, object]] = {}
+        for entry in entries:
+            repository = entry.get("repository") or {}
+            full_name = str(repository.get("nameWithOwner") or "")
+            contributions = entry.get("contributions") or {}
+            nodes = list(contributions.get("nodes") or [])
+            commit_count = sum(int(node.get("commitCount") or 0) for node in nodes)
+            if not full_name or not commit_count:
+                continue
+            latest = max(
+                nodes,
+                key=lambda node: str(node.get("occurredAt") or ""),
+                default={},
+            )
+            discovered[full_name] = {
+                "repository": repository,
+                "contribution_graph_commits": commit_count,
+                "contribution_graph_evidence_url": str(latest.get("url") or ""),
+                "contribution_graph_latest_at": latest.get("occurredAt"),
+            }
+        return discovered
+
+    discovered: dict[str, dict[str, object]] = {}
+    cursor = start
+    while cursor <= end:
+        window_end = min(
+            dt.date(cursor.year, 12, 31),
+            end,
+        )
+        for full_name, candidate in collect_window(cursor, window_end).items():
+            existing = discovered.setdefault(
+                full_name,
+                {
+                    "repository": candidate["repository"],
+                    "contribution_graph_commits": 0,
+                    "contribution_graph_evidence_url": candidate.get(
+                        "contribution_graph_evidence_url"
+                    ),
+                    "contribution_graph_latest_at": candidate.get(
+                        "contribution_graph_latest_at"
+                    ),
+                },
+            )
+            existing["repository"] = candidate["repository"]
+            existing["contribution_graph_commits"] = int(
+                existing["contribution_graph_commits"]
+            ) + int(candidate["contribution_graph_commits"])
+            if str(candidate.get("contribution_graph_latest_at") or "") > str(
+                existing.get("contribution_graph_latest_at") or ""
+            ):
+                existing["contribution_graph_latest_at"] = candidate.get(
+                    "contribution_graph_latest_at"
+                )
+                existing["contribution_graph_evidence_url"] = candidate.get(
+                    "contribution_graph_evidence_url"
+                )
+        cursor = window_end + dt.timedelta(days=1)
+    return discovered
+
+
 def discover_repositories(token: str) -> list[dict[str, object]]:
-    """Discover public upstream repos with accepted PR or default-branch proof."""
+    """Discover public upstream repos from every GitHub attribution surface."""
     pull_requests = search_authored_pull_requests(
         token, dt.date(2008, 1, 1), dt.datetime.now(dt.timezone.utc).date()
     )
+    graph_repositories = discover_commit_contribution_repositories(token)
 
     grouped: dict[str, dict[str, object]] = {}
     for pull_request in pull_requests:
@@ -676,9 +857,46 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
             continue
         entry = grouped.setdefault(
             full_name,
-            {"repository": repository, "pull_requests": []},
+            {
+                "repository": repository,
+                "pull_requests": [],
+                "contribution_graph_commits": 0,
+                "contribution_graph_evidence_url": "",
+                "contribution_graph_latest_at": None,
+            },
         )
         entry["pull_requests"].append(pull_request)
+
+    for full_name, graph_entry in graph_repositories.items():
+        repository = graph_entry["repository"]
+        owner = repository.get("owner") or {}
+        if (
+            not full_name
+            or bool(repository.get("isPrivate"))
+            or bool(repository.get("isFork"))
+            or str(owner.get("login", "")).casefold() == LOGIN.casefold()
+        ):
+            continue
+        entry = grouped.setdefault(
+            full_name,
+            {
+                "repository": repository,
+                "pull_requests": [],
+                "contribution_graph_commits": 0,
+                "contribution_graph_evidence_url": "",
+                "contribution_graph_latest_at": None,
+            },
+        )
+        entry["repository"] = repository
+        entry["contribution_graph_commits"] = int(
+            graph_entry["contribution_graph_commits"]
+        )
+        entry["contribution_graph_evidence_url"] = str(
+            graph_entry.get("contribution_graph_evidence_url") or ""
+        )
+        entry["contribution_graph_latest_at"] = graph_entry.get(
+            "contribution_graph_latest_at"
+        )
 
     repositories: list[dict[str, object]] = []
     for full_name, entry in grouped.items():
@@ -688,10 +906,11 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
             for pull_request in entry["pull_requests"]
             if bool(pull_request.get("merged"))
         ]
+        graph_commits = int(entry.get("contribution_graph_commits") or 0)
         listed_commits = None
         contributor_rank = None
         default_branch_commits = 0
-        if merged:
+        if merged or graph_commits:
             listed_commits, contributor_rank = official_contribution_stats(
                 token, full_name
             )
@@ -711,6 +930,10 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
             verification_tier = "default_branch_commit_verified"
             verification_label = "Default-branch commit verified"
             contributor_commits = default_branch_commits
+        elif graph_commits:
+            verification_tier = "github_contribution_graph_verified"
+            verification_label = "GitHub graph verified"
+            contributor_commits = graph_commits
         elif merged:
             verification_tier = "merged_pr_verified"
             verification_label = "Merged-PR verified"
@@ -737,6 +960,13 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
                     f"https://github.com/{full_name}/commits"
                     f"?author={LOGIN}"
                 ),
+                "contribution_graph_evidence_url": str(
+                    entry.get("contribution_graph_evidence_url") or ""
+                ),
+                "contribution_graph_latest_at": entry.get(
+                    "contribution_graph_latest_at"
+                ),
+                "contribution_graph_commits": graph_commits,
                 "pull_requests_url": (
                     f"https://github.com/{full_name}/pulls"
                     f"?q=is%3Apr+author%3A{LOGIN}+is%3Amerged"
@@ -1425,13 +1655,43 @@ def render_hero_svg(
       .beacon.delay-3 {{ animation-delay: 2.25s; }}
       .verified-core {{ animation: verified 3.2s ease-in-out infinite; }}
       .proof-live {{ animation: proof-live 3.4s ease-in-out infinite; }}
+      .hero-kicker, .hero-line, .hero-subtitle, .proof-rail {{ opacity: .35; animation: hero-reveal .9s cubic-bezier(.16,1,.3,1) forwards; }}
+      .hero-line-1 {{ animation-delay: .12s; }}
+      .hero-line-2 {{ animation-delay: .24s; }}
+      .hero-line-3 {{ animation-delay: .36s; }}
+      .hero-subtitle {{ animation-delay: .52s; }}
+      .proof-rail {{ animation-delay: .68s; }}
+      .visual-assembly {{ opacity: .4; animation: visual-reveal 1.1s .24s cubic-bezier(.16,1,.3,1) forwards; }}
+      .scan-beam {{ opacity: 0; animation: scan-beam 7s cubic-bezier(.76,0,.24,1) infinite; }}
+      .ring-wave {{ transform-box: fill-box; transform-origin: center; animation: ring-wave 4.8s cubic-bezier(.16,1,.3,1) infinite; }}
+      .ring-wave.delay {{ animation-delay: 2.4s; }}
+      .packet {{ animation: packet-run 2.8s cubic-bezier(.4,0,.2,1) infinite; }}
+      .packet.delay-1 {{ animation-delay: .7s; }}
+      .packet.delay-2 {{ animation-delay: 1.4s; }}
+      .packet.delay-3 {{ animation-delay: 2.1s; }}
+      .state-chip {{ animation: state-focus 8s cubic-bezier(.16,1,.3,1) infinite; }}
+      .state-chip-2 {{ animation-delay: 2s; }}
+      .state-chip-3 {{ animation-delay: 4s; }}
+      .state-chip-4 {{ animation-delay: 6s; }}
+      .check-draw {{ stroke-dasharray: 42; stroke-dashoffset: 42; animation: check-draw 4.8s cubic-bezier(.16,1,.3,1) infinite; }}
+      .border-trace {{ stroke-dasharray: 90 2300; animation: border-trace 11s linear infinite; }}
       @keyframes orbit {{ to {{ transform: rotate(360deg); }} }}
       @keyframes signal {{ to {{ stroke-dashoffset: -36; }} }}
       @keyframes beacon {{ 0%, 100% {{ opacity: .5; }} 50% {{ opacity: 1; }} }}
       @keyframes verified {{ 0%, 100% {{ opacity: .82; }} 50% {{ opacity: 1; }} }}
       @keyframes proof-live {{ 0%, 100% {{ opacity: .72; }} 50% {{ opacity: 1; }} }}
+      @keyframes hero-reveal {{ from {{ opacity: .35; transform: translateY(15px); }} to {{ opacity: 1; transform: translateY(0); }} }}
+      @keyframes visual-reveal {{ from {{ opacity: .4; }} to {{ opacity: 1; }} }}
+      @keyframes scan-beam {{ 0%, 12% {{ opacity: 0; transform: translateX(0); }} 22%, 74% {{ opacity: .62; }} 88%, 100% {{ opacity: 0; transform: translateX(430px); }} }}
+      @keyframes ring-wave {{ 0% {{ opacity: .52; transform: scale(.62); }} 72%, 100% {{ opacity: 0; transform: scale(1.45); }} }}
+      @keyframes packet-run {{ 0% {{ opacity: 0; transform: translate(0,0); }} 14%, 82% {{ opacity: 1; }} 100% {{ opacity: 0; transform: translate(var(--dx),var(--dy)); }} }}
+      @keyframes state-focus {{ 0%, 19%, 100% {{ opacity: .45; }} 5%, 13% {{ opacity: 1; filter: brightness(1.35); }} }}
+      @keyframes check-draw {{ 0%, 14% {{ stroke-dashoffset: 42; opacity: .35; }} 32%, 82% {{ stroke-dashoffset: 0; opacity: 1; }} 100% {{ stroke-dashoffset: 0; opacity: .45; }} }}
+      @keyframes border-trace {{ to {{ stroke-dashoffset: -2390; }} }}
       @media (prefers-reduced-motion: reduce) {{
-        .orbit, .signal, .beacon, .verified-core, .proof-live {{ animation: none; opacity: 1; }}
+        .orbit, .signal, .beacon, .verified-core, .proof-live, .hero-kicker, .hero-line, .hero-subtitle, .proof-rail, .state-chip, .check-draw, .border-trace {{ animation: none; opacity: 1; transform: none; stroke-dashoffset: 0; filter: none; }}
+        .visual-assembly {{ animation: none; opacity: 1; }}
+        .scan-beam, .ring-wave, .packet {{ display: none; }}
       }}
     </style>
     <linearGradient id="hero-bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
@@ -1455,48 +1715,57 @@ def render_hero_svg(
       <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
+    <clipPath id="hero-visual-clip"><rect x="686" y="34" width="472" height="344" rx="24"/></clipPath>
   </defs>
 
   <rect width="1200" height="420" rx="28" fill="url(#hero-bg)"/>
   <rect x="1" y="1" width="1198" height="418" rx="27" stroke="#F8FAFC" stroke-opacity="0.08" stroke-width="2"/>
+  <rect class="border-trace" x="2" y="2" width="1196" height="416" rx="26" stroke="url(#hero-accent)" stroke-opacity=".46" stroke-width="2"/>
   <rect width="1200" height="420" rx="28" fill="url(#hero-grid)"/>
   <circle cx="946" cy="211" r="188" fill="url(#hero-glow)"/>
+  <g clip-path="url(#hero-visual-clip)"><rect class="scan-beam" x="690" y="46" width="1.5" height="320" fill="#7FFFEA"/><rect class="scan-beam" x="691.5" y="46" width="34" height="320" fill="#2DE2C5" fill-opacity=".035"/></g>
 
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">
-    <text x="72" y="64" fill="#2DE2C5" font-size="13" font-weight="700" letter-spacing="3">RUDY CELEKLI / EVIDENCE-FIRST AGENTIC SYSTEMS</text>
-    <text x="72" y="138" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">I build agentic systems</text>
-    <text x="72" y="195" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">that can prove</text>
-    <text x="72" y="252" fill="#2DE2C5" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">what happened.</text>
-    <text x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="14">Forward deployed AI researcher · Agentic AI engineer · Enterprise AI</text>
-    <line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
+    <text class="hero-kicker" x="72" y="64" fill="#2DE2C5" font-size="13" font-weight="700" letter-spacing="3">RUDY CELEKLI / EVIDENCE-FIRST AGENTIC SYSTEMS</text>
+    <text class="hero-line hero-line-1" x="72" y="138" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">I build agentic systems</text>
+    <text class="hero-line hero-line-2" x="72" y="195" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">that can prove</text>
+    <text class="hero-line hero-line-3" x="72" y="252" fill="#2DE2C5" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">what happened.</text>
+    <text class="hero-subtitle" x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="14">Forward deployed AI researcher · Agentic AI engineer · Enterprise AI</text>
+    <g class="proof-rail"><line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
     <circle class="proof-live" cx="78" cy="358" r="5" fill="#2DE2C5"/>
     <text x="94" y="362" fill="#91A2B8" font-size="10.5" letter-spacing=".8">LIVE PROOF · {len(repositories)} VERIFIED PROJECTS · {total_merged:,} MERGED PRS · {compact(total_commits)} ATTRIBUTED COMMITS</text>
     <text x="94" y="384" fill="#91A2B8" font-size="10.5" letter-spacing=".8">{total_line_changes:,} ACCEPTED LINES · {compact(total_stars)} COMBINED STARS · {agentic_power:.1f}× PROVISIONAL AP</text>
-    <text x="664" y="405" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · {updated} UTC</text>
+    <text x="664" y="405" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · {updated} UTC</text></g>
   </g>
 
-  <g transform="translate(940 210)">
+  <g class="visual-assembly" transform="translate(940 210)">
     <circle r="137" stroke="#38BDF8" stroke-opacity="0.12"/>
+    <circle class="ring-wave" r="76" stroke="#2DE2C5" stroke-opacity=".42"/>
+    <circle class="ring-wave delay" r="76" stroke="#8B5CF6" stroke-opacity=".34"/>
     <circle class="orbit" r="102" stroke="#2DE2C5" stroke-opacity="0.42" stroke-dasharray="5 9"/>
     <circle r="66" stroke="url(#hero-accent)" stroke-width="2" stroke-opacity="0.55"/>
     <circle class="verified-core" r="30" fill="#0B1627" stroke="#2DE2C5" stroke-width="2" filter="url(#hero-soft-glow)"/>
-    <path d="M-12 0L-3 9L15 -12" stroke="#E6FFFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path class="check-draw" d="M-12 0L-3 9L15 -12" stroke="#E6FFFA" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
 
     <path class="signal" d="M-174 -62H-120L-87 -34" stroke="#2DE2C5" stroke-width="2"/>
     <circle class="beacon" cx="-174" cy="-62" r="5" fill="#2DE2C5"/>
+    <circle class="packet" style="--dx:87px;--dy:28px" cx="-174" cy="-62" r="4" fill="#B8FFF4"/>
     <path class="signal reverse" d="M-172 85H-118L-86 48" stroke="#38BDF8" stroke-width="2"/>
     <circle class="beacon delay-1" cx="-172" cy="85" r="5" fill="#38BDF8"/>
+    <circle class="packet delay-1" style="--dx:86px;--dy:-37px" cx="-172" cy="85" r="4" fill="#BAE6FD"/>
     <path class="signal" d="M169 -84H123L90 -48" stroke="#8B5CF6" stroke-width="2"/>
     <circle class="beacon delay-2" cx="169" cy="-84" r="5" fill="#8B5CF6"/>
+    <circle class="packet delay-2" style="--dx:-79px;--dy:36px" cx="169" cy="-84" r="4" fill="#DDD6FE"/>
     <path class="signal reverse" d="M177 72H122L91 43" stroke="#F2A93B" stroke-width="2"/>
     <circle class="beacon delay-3" cx="177" cy="72" r="5" fill="#F2A93B"/>
+    <circle class="packet delay-3" style="--dx:-86px;--dy:-29px" cx="177" cy="72" r="4" fill="#FDE68A"/>
   </g>
 
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace" font-size="11" font-weight="700" letter-spacing="1.3">
-    <g transform="translate(722 128)"><rect width="116" height="28" rx="14" fill="#0B1D2A" stroke="#2DE2C5" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#7FFFEA">OBSERVED</text></g>
-    <g transform="translate(718 278)"><rect width="116" height="28" rx="14" fill="#0B1B2E" stroke="#38BDF8" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#8ADFFF">RECORDED</text></g>
-    <g transform="translate(1041 106)"><rect width="108" height="28" rx="14" fill="#17102A" stroke="#8B5CF6" stroke-opacity="0.45"/><text x="54" y="18" text-anchor="middle" fill="#C4B5FD">REPLAYED</text></g>
-    <g transform="translate(1048 264)"><rect width="102" height="28" rx="14" fill="#24180B" stroke="#F2A93B" stroke-opacity="0.45"/><text x="51" y="18" text-anchor="middle" fill="#F8C66E">VERIFIED</text></g>
+    <g class="state-chip state-chip-1" transform="translate(722 128)"><rect width="116" height="28" rx="14" fill="#0B1D2A" stroke="#2DE2C5" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#7FFFEA">OBSERVED</text></g>
+    <g class="state-chip state-chip-2" transform="translate(718 278)"><rect width="116" height="28" rx="14" fill="#0B1B2E" stroke="#38BDF8" stroke-opacity="0.4"/><text x="58" y="18" text-anchor="middle" fill="#8ADFFF">RECORDED</text></g>
+    <g class="state-chip state-chip-3" transform="translate(1041 106)"><rect width="108" height="28" rx="14" fill="#17102A" stroke="#8B5CF6" stroke-opacity="0.45"/><text x="54" y="18" text-anchor="middle" fill="#C4B5FD">REPLAYED</text></g>
+    <g class="state-chip state-chip-4" transform="translate(1048 264)"><rect width="102" height="28" rx="14" fill="#24180B" stroke="#F2A93B" stroke-opacity="0.45"/><text x="51" y="18" text-anchor="middle" fill="#F8C66E">VERIFIED</text></g>
   </g>
 </svg>
 """
@@ -1548,7 +1817,7 @@ def render_building_now_svg(
                 activity_color = "#AAB8CA"
             rows.append(
                 f"""
-      <g>
+      <g class="frontier-row frontier-row-{row_index + 1}">
         <text x="0" y="{y + 25}" fill="{repo['accent']}" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" font-weight="700">{rank:02d}</text>
         <text x="66" y="{y + 24}" fill="#F8FAFC" font-size="20" font-weight="780">{html.escape(ellipsize(repo['name'], 24))}</text>
         <text x="642" y="{y + 22}" fill="{activity_color}" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{html.escape(activity)} · {compact_counted(int(repo['stargazers']), 'STAR')} · {pushed}</text>
@@ -1575,14 +1844,22 @@ def render_building_now_svg(
   <defs>
     <style>
       .private-signal {{ stroke-dasharray: 7 10; animation: building-flow 2.8s linear infinite; }}
+      .private-orbit {{ transform-box: fill-box; transform-origin: center; animation: private-orbit 18s linear infinite; }}
+      .private-pulse {{ transform-box: fill-box; transform-origin: center; animation: private-pulse 4.6s cubic-bezier(.16,1,.3,1) infinite; }}
+      .private-pulse.delay {{ animation-delay: 2.3s; }}
       .frontier-page {{ opacity: 0; }}
       .frontier-page-1 {{ animation: frontier-page-one 16s cubic-bezier(.16,1,.3,1) infinite; }}
       .frontier-page-2 {{ animation: frontier-page-two 16s cubic-bezier(.16,1,.3,1) infinite; }}
+      .frontier-progress {{ transform-box: fill-box; transform-origin: left; animation: frontier-progress 8s linear infinite; }}
       @keyframes building-flow {{ to {{ stroke-dashoffset: -34; }} }}
-      @keyframes frontier-page-one {{ 0%, 43% {{ opacity: 1; }} 48%, 95% {{ opacity: 0; }} 100% {{ opacity: 1; }} }}
-      @keyframes frontier-page-two {{ 0%, 43% {{ opacity: 0; }} 48%, 95% {{ opacity: 1; }} 100% {{ opacity: 0; }} }}
+      @keyframes private-orbit {{ to {{ transform: rotate(360deg); }} }}
+      @keyframes private-pulse {{ 0% {{ opacity: .46; transform: scale(.65); }} 72%, 100% {{ opacity: 0; transform: scale(1.35); }} }}
+      @keyframes frontier-page-one {{ 0%, 43% {{ opacity: 1; transform: translateY(0); }} 48%, 95% {{ opacity: 0; transform: translateY(-12px); }} 100% {{ opacity: 1; transform: translateY(0); }} }}
+      @keyframes frontier-page-two {{ 0%, 43% {{ opacity: 0; transform: translateY(12px); }} 48%, 95% {{ opacity: 1; transform: translateY(0); }} 100% {{ opacity: 0; transform: translateY(-12px); }} }}
+      @keyframes frontier-progress {{ from {{ transform: scaleX(0); }} to {{ transform: scaleX(1); }} }}
       @media (prefers-reduced-motion: reduce) {{
-        .private-signal, .frontier-page {{ animation: none; }}
+        .private-signal, .private-orbit, .private-pulse, .frontier-page, .frontier-row, .frontier-progress {{ animation: none; opacity: 1; transform: none; }}
+        .private-pulse {{ display: none; }}
         .frontier-page-1 {{ opacity: 1; }}
         .frontier-page-2 {{ opacity: 0; }}
       }}
@@ -1617,6 +1894,9 @@ def render_building_now_svg(
     <text x="28" y="151" fill="#D6E2EE" font-size="17" font-weight="650">can actually do your work.</text>
     <text x="28" y="187" fill="#91A2B8" font-size="12.5">Evaluation grounded in real workflows,</text>
     <text x="28" y="206" fill="#91A2B8" font-size="12.5">business rules, and inspectable evidence.</text>
+    <circle class="private-pulse" cx="342" cy="124" r="54" fill="none" stroke="#2DE2C5" stroke-opacity=".42"/>
+    <circle class="private-pulse delay" cx="342" cy="124" r="54" fill="none" stroke="#4D7CFE" stroke-opacity=".34"/>
+    <circle class="private-orbit" cx="342" cy="124" r="43" fill="none" stroke="#7FFFEA" stroke-opacity=".34" stroke-dasharray="4 10"/>
     <path class="private-signal" d="M278 72 H352 V178 H306" fill="none" stroke="#2DE2C5" stroke-width="2"/>
     <circle cx="278" cy="72" r="5" fill="#2DE2C5"/><circle cx="306" cy="178" r="5" fill="#4D7CFE"/>
     <text x="28" y="229" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11">GRADIAHQ.COM</text>
@@ -1629,6 +1909,7 @@ def render_building_now_svg(
 
   <text x="42" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">SIGNALS: REACH · SHIP RECENCY · RELEASES · ATTRIBUTED WORK · COMPLETENESS</text>
   <text x="1158" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{len(featured)} PROJECTS · ROTATES EVERY 8 SEC · RE-RANKED EVERY 30 MIN</text>
+  <rect x="494" y="396" width="664" height="2" rx="1" fill="#203149"/><rect class="frontier-progress" x="494" y="396" width="664" height="2" rx="1" fill="url(#building-rule)"/>
 </svg>
 """
 
@@ -1764,12 +2045,19 @@ def render_profile_walkthrough_svg(
       .scene-7 {{ animation-delay: 30s; }}
       .trace {{ stroke-dasharray: 8 12; animation: trace-flow 2.2s linear infinite; }}
       .pulse {{ animation: signal-pulse 2.8s ease-in-out infinite; }}
+      .walk-scan {{ opacity: 0; animation: walk-scan 9s cubic-bezier(.76,0,.24,1) infinite; }}
+      .chapter-fill {{ transform-box: fill-box; transform-origin: left; animation: chapter-fill 5s linear infinite; }}
+      .chapter-number {{ animation: chapter-number 5s cubic-bezier(.16,1,.3,1) infinite; }}
       .scene-static {{ opacity: 0; }}
-      @keyframes chapter {{ 0%, 12% {{ opacity: 1; }} 14.285%, 100% {{ opacity: 0; }} }}
+      @keyframes chapter {{ 0%, 11.8% {{ opacity: 1; transform: translateY(0); }} 14.285%, 100% {{ opacity: 0; transform: translateY(-10px); }} }}
       @keyframes trace-flow {{ to {{ stroke-dashoffset: -40; }} }}
       @keyframes signal-pulse {{ 0%, 100% {{ opacity: .58; }} 50% {{ opacity: 1; }} }}
+      @keyframes walk-scan {{ 0%, 10% {{ opacity: 0; transform: translateX(0); }} 18%, 72% {{ opacity: .46; }} 88%, 100% {{ opacity: 0; transform: translateX(1116px); }} }}
+      @keyframes chapter-fill {{ from {{ transform: scaleX(0); }} to {{ transform: scaleX(1); }} }}
+      @keyframes chapter-number {{ 0%, 12% {{ opacity: .32; }} 22%, 84% {{ opacity: 1; }} 100% {{ opacity: .32; }} }}
       @media (prefers-reduced-motion: reduce) {{
-        .scene, .trace, .pulse {{ animation: none; }}
+        .scene, .trace, .pulse, .chapter-fill, .chapter-number {{ animation: none; transform: none; }}
+        .walk-scan {{ display: none; }}
         .scene {{ opacity: 0; }}
         .scene-static {{ opacity: 1; }}
       }}
@@ -1792,6 +2080,7 @@ def render_profile_walkthrough_svg(
   <rect width="1200" height="620" rx="28" fill="url(#walkthrough-canvas)"/>
   <rect x="1" y="1" width="1198" height="618" rx="27" fill="none" stroke="#26364D"/>
   <circle cx="955" cy="285" r="280" fill="url(#walkthrough-glow)"/>
+  <rect class="walk-scan" x="42" y="95" width="1.5" height="446" fill="#7FFFEA"/><rect class="walk-scan" x="43.5" y="95" width="42" height="446" fill="#4D7CFE" fill-opacity=".025"/>
   <rect x="42" y="34" width="74" height="4" rx="2" fill="url(#walkthrough-rule)"/>
   <text x="42" y="70" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="25" font-weight="780">RUDY CELEKLI / OPERATING BRIEF</text>
   <text x="1158" y="68" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">07 CHAPTERS · 35 SEC · LIVE EVIDENCE {updated}</text>
@@ -1799,10 +2088,11 @@ def render_profile_walkthrough_svg(
   <g fill="#26364D"><rect x="42" y="568" width="142" height="4" rx="2"/><rect x="204" y="568" width="142" height="4" rx="2"/><rect x="366" y="568" width="142" height="4" rx="2"/><rect x="528" y="568" width="142" height="4" rx="2"/><rect x="690" y="568" width="142" height="4" rx="2"/><rect x="852" y="568" width="142" height="4" rx="2"/><rect x="1014" y="568" width="144" height="4" rx="2"/></g>
 
   <g class="scene scene-1" font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">01 / THESIS</text>
-    <text x="42" y="224" fill="#F8FAFC" font-size="58" font-weight="820">INTELLIGENCE IS CHEAP.</text>
-    <text x="42" y="292" fill="#2DE2C5" font-size="58" font-weight="820">EVIDENCE IS THE PRODUCT.</text>
-    <text x="45" y="346" fill="#AAB8CA" font-size="19">Build long-horizon agents that can show what happened, replay it, and earn trust.</text>
+    <text class="chapter-number" x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">01 / THESIS</text>
+    <text x="42" y="214" fill="#F8FAFC" font-size="54" font-weight="820">INTELLIGENCE IS CHEAP.</text>
+    <text x="42" y="274" fill="#2DE2C5" font-size="54" font-weight="820">EVIDENCE IS THE</text>
+    <text x="42" y="334" fill="#2DE2C5" font-size="54" font-weight="820">PRODUCT.</text>
+    <text x="45" y="386" fill="#AAB8CA" font-size="18">Build long-horizon agents that can show what happened, replay it, and earn trust.</text>
     <g transform="translate(760 160)">
       <circle cx="160" cy="110" r="102" fill="none" stroke="#26364D"/>
       <circle class="pulse" cx="160" cy="110" r="66" fill="none" stroke="#4D7CFE" stroke-width="2"/>
@@ -1812,11 +2102,11 @@ def render_profile_walkthrough_svg(
       <path class="trace" d="M67 54 L160 110 L248 62 M77 181 L160 110 L242 180" fill="none" stroke="#65758B" stroke-width="2"/>
       <text x="160" y="254" fill="#91A2B8" font-size="13" text-anchor="middle">CAPABILITY → RECEIPT → TRUST</text>
     </g>
-    <rect x="42" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
+    <rect class="chapter-fill" x="42" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
   </g>
 
   <g class="scene scene-2" font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="42" y="137" fill="#4D7CFE" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">02 / DIRECT</text>
+    <text class="chapter-number" x="42" y="137" fill="#4D7CFE" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">02 / DIRECT</text>
     <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">HUMAN AUTHORITY SETS THE CONTRACT.</text>
     <text x="42" y="246" fill="#AAB8CA" font-size="18">Direction is goals, constraints, acceptance criteria, and escalation boundaries.</text>
     <path class="trace" d="M150 356 H1035" fill="none" stroke="#4D7CFE" stroke-width="3"/>
@@ -1824,11 +2114,11 @@ def render_profile_walkthrough_svg(
     <g transform="translate(349 309)"><rect width="214" height="96" rx="18" fill="#0B1728" stroke="#2DE2C5"/><text x="107" y="42" fill="#6EE7D8" font-size="13" letter-spacing="1.4" text-anchor="middle">CONSTRAINTS</text><text x="107" y="68" fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle">Bound the system</text></g>
     <g transform="translate(634 309)"><rect width="214" height="96" rx="18" fill="#0B1728" stroke="#9B7CFF"/><text x="107" y="42" fill="#C4B5FD" font-size="13" letter-spacing="1.4" text-anchor="middle">ACCEPTANCE</text><text x="107" y="68" fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle">Name the proof</text></g>
     <g transform="translate(919 309)"><rect width="214" height="96" rx="18" fill="#0B1728" stroke="#F2A93B"/><text x="107" y="42" fill="#F8C66E" font-size="13" letter-spacing="1.4" text-anchor="middle">ESCALATION</text><text x="107" y="68" fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle">Keep authority</text></g>
-    <rect x="204" y="568" width="142" height="4" rx="2" fill="#4D7CFE"/>
+    <rect class="chapter-fill" x="204" y="568" width="142" height="4" rx="2" fill="#4D7CFE"/>
   </g>
 
   <g class="scene scene-3" font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">03 / ORCHESTRATE</text>
+    <text class="chapter-number" x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">03 / ORCHESTRATE</text>
     <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">TURN CAPABILITY INTO A WORKING SYSTEM.</text>
     <text x="42" y="246" fill="#AAB8CA" font-size="18">Compose specialist agents, models, tools, memory, and loops around one explicit outcome.</text>
     <g transform="translate(452 320)"><circle cx="148" cy="68" r="63" fill="#101D31" stroke="#2DE2C5" stroke-width="2"/><text x="148" y="63" fill="#F8FAFC" font-size="18" font-weight="780" text-anchor="middle">DIRECTED</text><text x="148" y="87" fill="#6EE7D8" font-size="13" text-anchor="middle">SYSTEM</text></g>
@@ -1838,11 +2128,11 @@ def render_profile_walkthrough_svg(
     </g>
     <g fill="#F8FAFC" font-size="17" font-weight="700" text-anchor="middle"><text x="179" y="368">SPECIALIST AGENTS</text><text x="1021" y="368">MODELS + TOOLS</text><text x="316" y="476">MEMORY</text><text x="884" y="476">FEEDBACK LOOPS</text></g>
     <path class="trace" d="M284 360 H452 M748 360 H916 M421 468 L478 419 M779 468 L722 419" fill="none" stroke="#2DE2C5" stroke-width="2.5"/>
-    <rect x="366" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
+    <rect class="chapter-fill" x="366" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
   </g>
 
   <g class="scene scene-4" font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="42" y="137" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">04 / VERIFY</text>
+    <text class="chapter-number" x="42" y="137" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">04 / VERIFY</text>
     <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">PLAUSIBLE IS NOT THE SAME AS PROVEN.</text>
     <text x="42" y="246" fill="#AAB8CA" font-size="18">Receipts, deterministic replay, and adversarial tests decide what gets accepted.</text>
     <g transform="translate(64 316)" font-family="ui-monospace,SFMono-Regular,monospace">
@@ -1858,11 +2148,11 @@ def render_profile_walkthrough_svg(
       <rect x="850" y="48" width="214" height="86" rx="16" fill="#0B2427" stroke="#2DE2C5"/><text x="957" y="100" fill="#6EE7D8" font-size="16" font-weight="700" text-anchor="middle">ACCEPTED WORK</text>
     </g>
     <text x="600" y="516" fill="#91A2B8" font-size="15" text-anchor="middle">Every important claim should survive independent inspection.</text>
-    <rect x="528" y="568" width="142" height="4" rx="2" fill="#9B7CFF"/>
+    <rect class="chapter-fill" x="528" y="568" width="142" height="4" rx="2" fill="#9B7CFF"/>
   </g>
 
   <g class="scene scene-5" font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="42" y="137" fill="#F2A93B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">05 / IMPROVE</text>
+    <text class="chapter-number" x="42" y="137" fill="#F2A93B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">05 / IMPROVE</text>
     <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">MAKE FAILURE STRENGTHEN THE NEXT RUN.</text>
     <text x="42" y="246" fill="#AAB8CA" font-size="18">Measured breakdowns become sharper instructions, tests, and system design.</text>
     <path class="trace" d="M191 390 C235 277 397 273 452 378 C510 490 690 490 748 378 C803 273 965 277 1009 390" fill="none" stroke="#F2A93B" stroke-width="3"/>
@@ -1873,11 +2163,11 @@ def render_profile_walkthrough_svg(
       <circle cx="1009" cy="390" r="50" fill="#241A0A" stroke="#F2A93B"/><text x="1009" y="386" fill="#F8C66E" font-size="12">04</text><text x="1009" y="410" fill="#F8FAFC" font-size="15" font-weight="700">IMPROVE</text>
     </g>
     <path class="trace" d="M1009 442 C988 525 222 525 191 442" fill="none" stroke="#65758B" stroke-width="2"/>
-    <rect x="690" y="568" width="142" height="4" rx="2" fill="#F2A93B"/>
+    <rect class="chapter-fill" x="690" y="568" width="142" height="4" rx="2" fill="#F2A93B"/>
   </g>
 
   <g class="scene scene-6" font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">06 / LIVE PROOF</text>
+    <text class="chapter-number" x="42" y="137" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">06 / LIVE PROOF</text>
     <text x="42" y="205" fill="#F8FAFC" font-size="46" font-weight="820">THE PROFILE UPDATES AS THE WORK LANDS.</text>
     <text x="42" y="246" fill="#AAB8CA" font-size="18">Public contribution evidence and modeled Agentic Power refresh from source data.</text>
     <g transform="translate(42 318)">
@@ -1889,18 +2179,18 @@ def render_profile_walkthrough_svg(
       <text x="876" y="58" fill="#F2A93B" font-size="42" font-weight="820">{agentic_power:.1f}×</text><text x="876" y="88" fill="#91A2B8" font-size="12" letter-spacing="1.3">PROVISIONAL AGENTIC POWER</text>
       <text x="0" y="132" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11">{len(owned_repositories)} owned public projects · evidence refresh every 30 minutes · assumptions remain visible</text>
     </g>
-    <rect x="852" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
+    <rect class="chapter-fill" x="852" y="568" width="142" height="4" rx="2" fill="#2DE2C5"/>
   </g>
 
   <g class="scene scene-7" font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="42" y="137" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">07 / BUILD TOGETHER</text>
+    <text class="chapter-number" x="42" y="137" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" letter-spacing="2">07 / BUILD TOGETHER</text>
     <text x="42" y="218" fill="#F8FAFC" font-size="55" font-weight="820">BUILD AI THAT CAN SURVIVE</text>
     <text x="42" y="284" fill="#9B7CFF" font-size="55" font-weight="820">CONTACT WITH REALITY.</text>
     <text x="45" y="341" fill="#AAB8CA" font-size="19">Agent reliability · evaluation integrity · proof-bound execution · enterprise deployment</text>
     <g transform="translate(45 407)" font-family="ui-monospace,SFMono-Regular,monospace" font-size="13" letter-spacing="1.3">
       <text x="0" fill="#2DE2C5">OPEN SOURCE</text><text x="155" fill="#65758B">•</text><text x="182" fill="#4D7CFE">GRADIA</text><text x="284" fill="#65758B">•</text><text x="311" fill="#9B7CFF">RESEARCH</text><text x="436" fill="#65758B">•</text><text x="463" fill="#F2A93B">COLLABORATE</text>
     </g>
-    <rect x="1014" y="568" width="144" height="4" rx="2" fill="#9B7CFF"/>
+    <rect class="chapter-fill" x="1014" y="568" width="144" height="4" rx="2" fill="#9B7CFF"/>
   </g>
 
   <g class="scene-static" font-family="Avenir Next,Segoe UI,sans-serif">
@@ -1944,6 +2234,8 @@ def render_repository_card(
         if tier == "github_listed_contributor"
         else "default commits"
         if tier == "default_branch_commit_verified"
+        else "graph commits"
+        if tier == "github_contribution_graph_verified"
         else "commit index"
     )
     commit_metric_value = compact(commits) if commits else "—"
@@ -1970,7 +2262,7 @@ def render_repository_card(
           {metric(380, 'line changes', lines_metric_value, '#F8FAFC')}
         </g>
         <line x1="31" y1="194" x2="519" y2="194" stroke="#203149"/>
-        <text x="31" y="222" fill="#91A2B8" font-size="12">{('accepted code' if merged else 'default branch')}</text>
+        <text x="31" y="222" fill="#91A2B8" font-size="12">{('accepted code' if merged else 'GitHub graph' if tier == 'github_contribution_graph_verified' else 'default branch')}</text>
         <text x="128" y="222" fill="{repo['accent']}" font-size="14" font-weight="700">{('+' + format(added, ',')) if merged else counted(commits, 'commit')}</text>
         <text x="216" y="222" fill="#F87171" font-size="14" font-weight="700">{('−' + format(deleted, ',')) if merged else ''}</text>
         <text x="519" y="222" fill="#65758B" font-size="11.5" text-anchor="end">{html.escape(verification_label)}</text>
@@ -2132,7 +2424,7 @@ def render_readme_section(
         "<!-- contribution-stats:start -->",
         "## Open-source impact, verified",
         "",
-        "My upstream work is discovered automatically across public repositories outside my account. A project enters when GitHub proves accepted work through an authored merged PR on any upstream branch or an authored commit on the default branch. **GitHub-listed contributor** is the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. Stars and forks describe repository reach, not personal credit.",
+        "My upstream work is discovered automatically across public repositories outside my account. A project enters when GitHub verifies at least one attribution signal: its Contributors index, its contribution graph, an authored commit on the default branch, or an authored merged PR on any branch. **GitHub-listed contributor** remains the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. Only merged PRs contribute accepted-line and accepted-file totals; graph credit never converts an open or closed-unmerged PR into accepted work. Stars and forks describe repository reach, not personal credit.",
         "",
         f'<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for {html.escape(", ".join(str(repo["name"]) for repo in repositories))}" />',
         "",
@@ -2146,6 +2438,8 @@ def render_readme_section(
             if tier == "github_listed_contributor"
             else repo["commits_url"]
             if tier == "default_branch_commit_verified"
+            else repo.get("contribution_graph_evidence_url") or repo["url"]
+            if tier == "github_contribution_graph_verified"
             else repo["pull_requests_url"]
         )
         evidence_label = str(
@@ -2301,15 +2595,15 @@ def main() -> int:
         for repo in repositories
     ]
     payload = {
-        "schema_version": 6,
+        "schema_version": 7,
         "source": "GitHub GraphQL and REST APIs",
         "login": LOGIN,
         "updated_at_utc": updated,
         "methodology": {
-            "project_discovery": "Every public, non-fork repository outside the login's account with any authored pull request is examined automatically on each run.",
-            "project_inclusion": "A project is included when GitHub proves accepted work through an authored merged pull request on any branch or an authored commit present on the default branch.",
-            "verification_tiers": "Evidence upgrades automatically from merged-PR verified, to default-branch commit verified, to GitHub-listed contributor as stronger GitHub attribution becomes available.",
-            "contributor_commits": "The GitHub Contributors API count is used at the highest tier. Before it catches up, directly attributed default-branch commits are reported separately. GitHub's contributor index may lag by several hours.",
+            "project_discovery": "Every public, non-fork repository outside the login's account found through exhaustive authored-PR history or year-windowed GitHub contribution-graph commit attribution is examined automatically on each run.",
+            "project_inclusion": "A project is included when GitHub verifies at least one attribution signal: Contributors API listing, contribution-graph commit credit, an authored commit present on the default branch, or an authored merged pull request on any branch.",
+            "verification_tiers": "Evidence upgrades automatically from merged-PR verified or GitHub-graph verified, to default-branch commit verified, to GitHub-listed contributor as stronger GitHub attribution becomes available.",
+            "contributor_commits": "The GitHub Contributors API count is used at the highest tier. Before it catches up, directly attributed default-branch commits or GitHub contribution-graph commits are reported with their distinct evidence tier. GitHub indexes can disagree temporarily and may lag by several hours.",
             "contributor_rank": "All-time contributor rank is the login's one-based position in GitHub's Contributors API ordering. The top-profile proof includes only observed ranks 1 through 5 and omits unavailable or pending indexes.",
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
@@ -2365,7 +2659,7 @@ def main() -> int:
         render_readme_section(repositories, owned_repositories, updated),
     )
     print(
-        "Updated official contributor evidence: "
+        "Updated verified upstream contribution evidence: "
         + ", ".join(
             f"{repo['name']}={repo['contributor_commits']} commits/{repo['merged_prs']} merged PRs"
             for repo in repositories
