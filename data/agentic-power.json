@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 127.6,
-    "high": 203.7,
+    "base": 127.7,
+    "high": 203.9,
     "low": 81.7
   },
   "basis": "operator-calibrated provisional estimate",
@@ -9,10 +9,10 @@
     "allocation_factor_vs_base_proxy": {
       "base": 0.057,
       "high": 0.0651,
-      "low": 0.0489
+      "low": 0.0488
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 82.48,
+    "evidence_window_weeks": 82.49,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 460.4,
+  "engineer_weeks_at_40h": 460.9,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 144.34,
-    "high": 164.96,
-    "low": 123.72
+    "base": 144.36,
+    "high": 164.98,
+    "low": 123.73
   },
   "monthly": [
     {
@@ -332,12 +332,12 @@
     {
       "active_repositories": 8,
       "agentic_power_x": {
-        "base": 80.3,
+        "base": 80.6,
         "high": 131.2,
         "low": 49.3
       },
       "modeled_human_direction_hours": {
-        "base": 2.23,
+        "base": 2.22,
         "high": 2.54,
         "low": 1.91
       },
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 82.3,
+        "base": 82.5,
         "high": 134.6,
         "low": 50.5
       },
       "modeled_human_direction_hours": {
-        "base": 6.77,
+        "base": 6.76,
         "high": 7.73,
         "low": 5.8
       },
@@ -462,12 +462,12 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 102.5,
+        "base": 102.7,
         "high": 167.6,
         "low": 62.8
       },
       "modeled_human_direction_hours": {
-        "base": 4.93,
+        "base": 4.92,
         "high": 5.63,
         "low": 4.22
       },
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 96.2,
         "high": 157.1,
-        "low": 58.9
+        "low": 59.0
       },
       "modeled_human_direction_hours": {
         "base": 9.75,
-        "high": 11.15,
+        "high": 11.14,
         "low": 8.36
       },
       "month": "2026-06",
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 121.4,
-        "high": 198.2,
+        "base": 121.5,
+        "high": 198.4,
         "low": 74.4
       },
       "modeled_human_direction_hours": {
-        "base": 17.09,
-        "high": 19.53,
-        "low": 14.65
+        "base": 17.08,
+        "high": 19.52,
+        "low": 14.64
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 160.0,
-        "high": 255.1,
+        "base": 160.1,
+        "high": 255.2,
         "low": 102.8
       },
       "modeled_human_direction_hours": {
-        "base": 24.18,
-        "high": 27.63,
-        "low": 20.72
+        "base": 24.16,
+        "high": 27.62,
+        "low": 20.71
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 145.2,
-        "high": 228.7,
-        "low": 95.3
+        "base": 145.4,
+        "high": 229.0,
+        "low": 95.4
       },
       "modeled_human_direction_hours": {
-        "base": 61.76,
-        "high": 70.59,
-        "low": 52.94
+        "base": 61.82,
+        "high": 70.66,
+        "low": 52.99
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 894,
+      "public_merged_pull_requests": 895,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 8967.96,
-        "high": 12107.12,
-        "low": 6725.99
+        "base": 8987.34,
+        "high": 12133.29,
+        "low": 6740.53
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1083.49,
-        "high": 1543.01,
-        "low": 749.68
+        "base": 1085.15,
+        "high": 1545.33,
+        "low": 750.84
       }
     }
   ],
-  "public_accepted_pull_requests": 1136,
+  "public_accepted_pull_requests": 1137,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 18415.4,
-    "high": 25202.8,
-    "low": 13469.96
+    "base": 18434.78,
+    "high": 25228.97,
+    "low": 13484.5
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2532.14,
-    "high": 3845.2,
-    "low": 1703.24
+    "base": 2533.8,
+    "high": 3847.52,
+    "low": 1704.4
   },
   "updated_at_utc": "2026-10-08",
   "window": {
-    "end": "2026-10-08T03:51:01Z",
+    "end": "2026-10-08T05:24:24Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -33580,6 +33580,35 @@
       "pull_request": 166599,
       "title": "fix(feishu): retain API diagnostics for rejected tool requests",
       "url": "https://github.com/openclaw/openclaw/pull/166599"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-08T02:26:35Z",
+      "evidence": {
+        "additions": 475,
+        "changed_files": 11,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 22,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 19.38,
+        "high": 26.17,
+        "low": 14.54
+      },
+      "merged_at": "2026-10-08T05:24:24Z",
+      "modeled_human_direction_hours": {
+        "base": 1.66,
+        "high": 2.32,
+        "low": 1.16
+      },
+      "project": "morluto/rea",
+      "pull_request": 1042,
+      "title": "fix(javascript): reconstruct HTML script loads accurately",
+      "url": "https://github.com/morluto/rea/pull/1042"
     }
   ]
 }
