@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 127.9,
-    "high": 204.2,
+    "base": 128.0,
+    "high": 204.3,
     "low": 81.9
   },
   "basis": "operator-calibrated provisional estimate",
@@ -9,7 +9,7 @@
     "allocation_factor_vs_base_proxy": {
       "base": 0.0569,
       "high": 0.065,
-      "low": 0.0488
+      "low": 0.0487
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
     "evidence_window_weeks": 82.5,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 461.7,
+  "engineer_weeks_at_40h": 462.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -385,13 +385,13 @@
       "active_repositories": 5,
       "agentic_power_x": {
         "base": 71.2,
-        "high": 115.6,
+        "high": 116.5,
         "low": 43.6
       },
       "modeled_human_direction_hours": {
         "base": 1.53,
         "high": 1.75,
-        "low": 1.32
+        "low": 1.31
       },
       "month": "2026-02",
       "public_merged_pull_requests": 0,
@@ -442,7 +442,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 6.75,
-        "high": 7.72,
+        "high": 7.71,
         "low": 5.79
       },
       "month": "2026-04",
@@ -514,13 +514,13 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 113.3,
+        "base": 113.5,
         "high": 185.1,
-        "low": 69.4
+        "low": 69.5
       },
       "modeled_human_direction_hours": {
-        "base": 7.14,
-        "high": 8.16,
+        "base": 7.13,
+        "high": 8.15,
         "low": 6.12
       },
       "month": "2026-07",
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 121.7,
-        "high": 198.7,
+        "high": 198.8,
         "low": 74.5
       },
       "modeled_human_direction_hours": {
-        "base": 17.05,
-        "high": 19.49,
-        "low": 14.62
+        "base": 17.04,
+        "high": 19.48,
+        "low": 14.61
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 160.3,
-        "high": 255.6,
-        "low": 102.9
+        "base": 160.4,
+        "high": 255.7,
+        "low": 103.0
       },
       "modeled_human_direction_hours": {
-        "base": 24.13,
-        "high": 27.58,
-        "low": 20.68
+        "base": 24.12,
+        "high": 27.56,
+        "low": 20.67
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 145.6,
-        "high": 229.3,
-        "low": 95.5
+        "base": 145.7,
+        "high": 229.4,
+        "low": 95.6
       },
       "modeled_human_direction_hours": {
-        "base": 61.96,
-        "high": 70.82,
-        "low": 53.11
+        "base": 62.0,
+        "high": 70.86,
+        "low": 53.14
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 897,
+      "public_merged_pull_requests": 898,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 9021.0,
-        "high": 12178.73,
-        "low": 6765.77
+        "base": 9031.12,
+        "high": 12192.39,
+        "low": 6773.36
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1089.23,
-        "high": 1551.05,
-        "low": 753.68
+        "base": 1090.39,
+        "high": 1552.68,
+        "low": 754.49
       }
     }
   ],
-  "public_accepted_pull_requests": 1139,
+  "public_accepted_pull_requests": 1140,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 18468.44,
-    "high": 25274.41,
-    "low": 13509.74
+    "base": 18478.56,
+    "high": 25288.07,
+    "low": 13517.33
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2537.88,
-    "high": 3853.24,
-    "low": 1707.24
+    "base": 2539.04,
+    "high": 3854.87,
+    "low": 1708.05
   },
   "updated_at_utc": "2026-10-08",
   "window": {
-    "end": "2026-10-08T07:49:36Z",
+    "end": "2026-10-08T08:18:44Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -33647,7 +33647,7 @@
       "evidence": {
         "additions": 182,
         "changed_files": 3,
-        "comments": 3,
+        "comments": 4,
         "commits": 4,
         "deletions": 7,
         "reviews": 1
@@ -33659,14 +33659,43 @@
       },
       "merged_at": "2026-10-08T07:49:36Z",
       "modeled_human_direction_hours": {
-        "base": 1.58,
-        "high": 2.21,
-        "low": 1.11
+        "base": 1.7,
+        "high": 2.38,
+        "low": 1.19
       },
       "project": "mvschwarz/openrig",
       "pull_request": 979,
       "title": "fix(scope): update frontmatter fields by decoded YAML key",
       "url": "https://github.com/mvschwarz/openrig/pull/979"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-08T03:28:56Z",
+      "evidence": {
+        "additions": 61,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.12,
+        "high": 13.66,
+        "low": 7.59
+      },
+      "merged_at": "2026-10-08T08:18:44Z",
+      "modeled_human_direction_hours": {
+        "base": 1.04,
+        "high": 1.46,
+        "low": 0.73
+      },
+      "project": "harry0703/MoneyPrinterTurbo",
+      "pull_request": 1594,
+      "title": "fix(video): preserve literal POSIX backslashes in concat paths",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo/pull/1594"
     }
   ]
 }
