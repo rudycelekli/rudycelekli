@@ -1,14 +1,14 @@
 {
   "agentic_power_x": {
-    "base": 128.4,
-    "high": 205.0,
+    "base": 128.5,
+    "high": 205.1,
     "low": 82.2
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0567,
-      "high": 0.0648,
+      "base": 0.0566,
+      "high": 0.0647,
       "low": 0.0486
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 463.6,
+  "engineer_weeks_at_40h": 463.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -436,14 +436,14 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 82.8,
-        "high": 135.3,
-        "low": 50.7
+        "base": 83.0,
+        "high": 135.5,
+        "low": 50.8
       },
       "modeled_human_direction_hours": {
-        "base": 6.73,
-        "high": 7.69,
-        "low": 5.77
+        "base": 6.72,
+        "high": 7.68,
+        "low": 5.76
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 96.7,
+        "base": 96.8,
         "high": 158.1,
         "low": 59.3
       },
       "modeled_human_direction_hours": {
-        "base": 9.7,
+        "base": 9.69,
         "high": 11.08,
         "low": 8.31
       },
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 113.8,
         "high": 186.0,
-        "low": 69.7
+        "low": 69.8
       },
       "modeled_human_direction_hours": {
         "base": 7.11,
-        "high": 8.13,
+        "high": 8.12,
         "low": 6.09
       },
       "month": "2026-07",
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 122.1,
-        "high": 199.5,
+        "base": 122.2,
+        "high": 199.6,
         "low": 74.8
       },
       "modeled_human_direction_hours": {
-        "base": 16.99,
+        "base": 16.98,
         "high": 19.41,
-        "low": 14.56
+        "low": 14.55
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 161.0,
-        "high": 256.6,
+        "high": 256.7,
         "low": 103.4
       },
       "modeled_human_direction_hours": {
         "base": 24.03,
-        "high": 27.47,
-        "low": 20.6
+        "high": 27.46,
+        "low": 20.59
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 145.9,
-        "high": 229.8,
-        "low": 95.7
+        "base": 146.0,
+        "high": 230.0,
+        "low": 95.8
       },
       "modeled_human_direction_hours": {
-        "base": 62.34,
-        "high": 71.25,
-        "low": 53.43
+        "base": 62.37,
+        "high": 71.28,
+        "low": 53.46
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 904,
+      "public_merged_pull_requests": 905,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 9095.4,
-        "high": 12279.16,
-        "low": 6821.56
+        "base": 9106.46,
+        "high": 12294.09,
+        "low": 6829.86
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1100.17,
-        "high": 1566.38,
-        "low": 761.32
+        "base": 1101.03,
+        "high": 1567.58,
+        "low": 761.92
       }
     }
   ],
-  "public_accepted_pull_requests": 1146,
+  "public_accepted_pull_requests": 1147,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 18542.84,
-    "high": 25374.84,
-    "low": 13565.53
+    "base": 18553.9,
+    "high": 25389.77,
+    "low": 13573.83
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2548.82,
-    "high": 3868.57,
-    "low": 1714.88
+    "base": 2549.68,
+    "high": 3869.77,
+    "low": 1715.48
   },
   "updated_at_utc": "2026-10-08",
   "window": {
-    "end": "2026-10-08T11:47:40Z",
+    "end": "2026-10-08T12:47:02Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -33870,6 +33870,35 @@
       "pull_request": 943,
       "title": "fix(web): scope shadow landmarks to outer sections",
       "url": "https://github.com/tester-army/e2e/pull/943"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-07T23:20:05Z",
+      "evidence": {
+        "additions": 145,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 11.06,
+        "high": 14.93,
+        "low": 8.3
+      },
+      "merged_at": "2026-10-08T12:47:02Z",
+      "modeled_human_direction_hours": {
+        "base": 0.86,
+        "high": 1.2,
+        "low": 0.6
+      },
+      "project": "morluto/rea",
+      "pull_request": 1035,
+      "title": "fix: select Node legacy package entry fields for import and require",
+      "url": "https://github.com/morluto/rea/pull/1035"
     }
   ]
 }
