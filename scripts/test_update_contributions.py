@@ -34,6 +34,7 @@ def repository(full_name, **overrides):
         "description": "A public upstream project with accepted contributions",
         "url": f"https://github.com/{full_name}",
         "isPrivate": False,
+        "visibility": "PUBLIC",
         "isFork": False,
         "stargazerCount": 1_234,
         "forkCount": 56,
@@ -194,6 +195,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         default_only = repository("upstream/default-only")
         unaccepted = repository("upstream/open-only")
         private = repository("company/private", isPrivate=True)
+        internal = repository("company/internal", visibility="INTERNAL")
         owned = repository(f"{subject.LOGIN}/owned-project")
         authored_search.return_value = [
             pull_request(accepted, 6),
@@ -201,6 +203,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             pull_request(default_only, 4, merged=False),
             pull_request(unaccepted, 3, merged=False),
             pull_request(private, 2),
+            pull_request(internal, 7),
             pull_request(owned, 1),
         ]
         graph_search.return_value = {}
@@ -266,7 +269,15 @@ class ContributionDiscoveryTests(unittest.TestCase):
                 "contribution_graph_commits": 1,
                 "contribution_graph_evidence_url": evidence_url,
                 "contribution_graph_latest_at": "2026-10-08T07:00:00Z",
-            }
+            },
+            "company/internal": {
+                "repository": repository(
+                    "company/internal", visibility="INTERNAL"
+                ),
+                "contribution_graph_commits": 10,
+                "contribution_graph_evidence_url": evidence_url,
+                "contribution_graph_latest_at": "2026-10-08T07:00:00Z",
+            },
         }
 
         discovered = subject.discover_repositories("token")

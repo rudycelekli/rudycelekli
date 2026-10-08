@@ -98,6 +98,7 @@ query($query: String!, $cursor: String) {
           description
           url
           isPrivate
+          visibility
           isFork
           stargazerCount
           forkCount
@@ -120,6 +121,7 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
           description
           url
           isPrivate
+          visibility
           isFork
           stargazerCount
           forkCount
@@ -851,6 +853,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
         if (
             not full_name
             or bool(repository.get("isPrivate"))
+            or str(repository.get("visibility") or "").upper() != "PUBLIC"
             or bool(repository.get("isFork"))
             or str(owner.get("login", "")).casefold() == LOGIN.casefold()
         ):
@@ -873,6 +876,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
         if (
             not full_name
             or bool(repository.get("isPrivate"))
+            or str(repository.get("visibility") or "").upper() != "PUBLIC"
             or bool(repository.get("isFork"))
             or str(owner.get("login", "")).casefold() == LOGIN.casefold()
         ):
