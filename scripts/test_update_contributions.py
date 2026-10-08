@@ -278,9 +278,19 @@ class ContributionDiscoveryTests(unittest.TestCase):
                 "contribution_graph_evidence_url": evidence_url,
                 "contribution_graph_latest_at": "2026-10-08T07:00:00Z",
             },
+            "company/policy-hidden": {
+                "repository": repository("company/policy-hidden"),
+                "contribution_graph_commits": 10,
+                "contribution_graph_evidence_url": evidence_url,
+                "contribution_graph_latest_at": "2026-10-08T07:00:00Z",
+            },
         }
 
-        discovered = subject.discover_repositories("token")
+        with mock.patch.dict(
+            subject.os.environ,
+            {"PROFILE_UPSTREAM_EXCLUSIONS": "company/policy-hidden"},
+        ):
+            discovered = subject.discover_repositories("token")
 
         self.assertEqual(len(discovered), 1)
         contribution = discovered[0]
@@ -298,6 +308,19 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual(
             contribution["contribution_graph_evidence_url"], evidence_url
         )
+
+    def test_required_private_exclusion_policy_fails_closed_when_missing(self):
+        with mock.patch.dict(
+            subject.os.environ,
+            {
+                "PROFILE_UPSTREAM_EXCLUSIONS": "",
+                "REQUIRE_PROFILE_UPSTREAM_EXCLUSIONS": "true",
+            },
+        ):
+            with self.assertRaisesRegex(
+                RuntimeError, "PROFILE_UPSTREAM_EXCLUSIONS is required"
+            ):
+                subject.upstream_project_exclusions()
 
     @mock.patch.object(subject, "graphql_data")
     def test_contribution_graph_discovery_aggregates_daily_commit_counts(

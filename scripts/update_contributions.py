@@ -701,6 +701,21 @@ def search_authored_pull_requests(
     return search_pull_requests(token, start, end, merged_only=False)
 
 
+def upstream_project_exclusions() -> set[str]:
+    """Return private policy exclusions without publishing their values."""
+    raw = os.environ.get("PROFILE_UPSTREAM_EXCLUSIONS", "")
+    required = os.environ.get("REQUIRE_PROFILE_UPSTREAM_EXCLUSIONS", "").lower()
+    if required in {"1", "true", "yes"} and not raw.strip():
+        raise RuntimeError(
+            "PROFILE_UPSTREAM_EXCLUSIONS is required for this public refresh"
+        )
+    return {
+        value.strip().casefold()
+        for value in re.split(r"[,\n]", raw)
+        if value.strip()
+    }
+
+
 def discover_commit_contribution_repositories(
     token: str,
     start: dt.date = dt.date(2008, 1, 1),
@@ -840,6 +855,7 @@ def discover_commit_contribution_repositories(
 
 def discover_repositories(token: str) -> list[dict[str, object]]:
     """Discover public upstream repos from every GitHub attribution surface."""
+    excluded = upstream_project_exclusions()
     pull_requests = search_authored_pull_requests(
         token, dt.date(2008, 1, 1), dt.datetime.now(dt.timezone.utc).date()
     )
@@ -852,6 +868,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
         owner = repository.get("owner") or {}
         if (
             not full_name
+            or full_name.casefold() in excluded
             or bool(repository.get("isPrivate"))
             or str(repository.get("visibility") or "").upper() != "PUBLIC"
             or bool(repository.get("isFork"))
@@ -875,6 +892,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
         owner = repository.get("owner") or {}
         if (
             not full_name
+            or full_name.casefold() in excluded
             or bool(repository.get("isPrivate"))
             or str(repository.get("visibility") or "").upper() != "PUBLIC"
             or bool(repository.get("isFork"))

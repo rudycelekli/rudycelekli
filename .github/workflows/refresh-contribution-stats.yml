@@ -29,6 +29,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PRIVATE_GITHUB_TOKEN: ${{ secrets.AP_REPOSITORY_TOKEN }}
           AP_EXCLUDED_REPOSITORIES: ${{ secrets.AP_EXCLUDED_REPOSITORIES }}
+          PROFILE_UPSTREAM_EXCLUSIONS: ${{ secrets.PROFILE_UPSTREAM_EXCLUSIONS }}
+          REQUIRE_PROFILE_UPSTREAM_EXCLUSIONS: "true"
         run: python scripts/update_contributions.py
 
       - name: Commit verified changes
