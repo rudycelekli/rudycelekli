@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 145.3,
-    "high": 231.6,
+    "base": 145.4,
+    "high": 231.7,
     "low": 93.3
   },
   "basis": "operator-calibrated provisional estimate",
@@ -9,7 +9,7 @@
     "allocation_factor_vs_base_proxy": {
       "base": 0.0522,
       "high": 0.0597,
-      "low": 0.0448
+      "low": 0.0447
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
     "evidence_window_weeks": 82.7,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 525.8,
+  "engineer_weeks_at_40h": 526.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -202,12 +202,12 @@
     {
       "active_repositories": 3,
       "agentic_power_x": {
-        "base": 13.9,
+        "base": 14.3,
         "high": 23.3,
         "low": 8.5
       },
       "modeled_human_direction_hours": {
-        "base": 0.36,
+        "base": 0.35,
         "high": 0.41,
         "low": 0.3
       },
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 89.9,
         "high": 147.0,
-        "low": 55.0
+        "low": 55.1
       },
       "modeled_human_direction_hours": {
         "base": 6.2,
-        "high": 7.09,
+        "high": 7.08,
         "low": 5.31
       },
       "month": "2026-04",
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 104.9,
+        "base": 105.1,
         "high": 171.5,
         "low": 64.3
       },
       "modeled_human_direction_hours": {
-        "base": 8.94,
+        "base": 8.93,
         "high": 10.21,
         "low": 7.66
       },
@@ -515,13 +515,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 123.5,
-        "high": 201.6,
+        "high": 202.0,
         "low": 75.6
       },
       "modeled_human_direction_hours": {
         "base": 6.55,
         "high": 7.49,
-        "low": 5.62
+        "low": 5.61
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 132.6,
-        "high": 216.4,
+        "high": 216.6,
         "low": 81.2
       },
       "modeled_human_direction_hours": {
         "base": 15.65,
-        "high": 17.89,
-        "low": 13.42
+        "high": 17.88,
+        "low": 13.41
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 174.7,
-        "high": 278.4,
+        "base": 174.8,
+        "high": 278.5,
         "low": 112.2
       },
       "modeled_human_direction_hours": {
-        "base": 22.15,
-        "high": 25.31,
-        "low": 18.99
+        "base": 22.14,
+        "high": 25.3,
+        "low": 18.98
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 167.7,
-        "high": 264.1,
-        "low": 110.0
+        "base": 167.8,
+        "high": 264.2,
+        "low": 110.1
       },
       "modeled_human_direction_hours": {
-        "base": 69.07,
-        "high": 78.94,
-        "low": 59.2
+        "base": 69.1,
+        "high": 78.97,
+        "low": 59.23
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1141,
+      "public_merged_pull_requests": 1142,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 11582.62,
-        "high": 15636.95,
-        "low": 8687.0
+        "base": 11592.33,
+        "high": 15650.05,
+        "low": 8694.28
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1322.6,
-        "high": 1881.18,
-        "low": 916.04
+        "base": 1323.71,
+        "high": 1882.73,
+        "low": 916.82
       }
     }
   ],
-  "public_accepted_pull_requests": 1383,
+  "public_accepted_pull_requests": 1384,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 21030.06,
-    "high": 28732.63,
-    "low": 15430.97
+    "base": 21039.77,
+    "high": 28745.73,
+    "low": 15438.25
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2771.25,
-    "high": 4183.37,
-    "low": 1869.6
+    "base": 2772.36,
+    "high": 4184.92,
+    "low": 1870.38
   },
   "updated_at_utc": "2026-10-09",
   "window": {
-    "end": "2026-10-09T16:28:47Z",
+    "end": "2026-10-09T16:43:42Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -40743,6 +40743,35 @@
       "pull_request": 330,
       "title": "fix(motion): exempt decorative SVG icons from accessible naming checks",
       "url": "https://github.com/cathrynlavery/diagram-design/pull/330"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-06T20:27:13Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 21,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.71,
+        "high": 13.1,
+        "low": 7.28
+      },
+      "merged_at": "2026-10-09T16:43:42Z",
+      "modeled_human_direction_hours": {
+        "base": 1.11,
+        "high": 1.55,
+        "low": 0.78
+      },
+      "project": "cathrynlavery/diagram-design",
+      "pull_request": 327,
+      "title": "fix(geometry): compare translated label masks in canvas coordinates",
+      "url": "https://github.com/cathrynlavery/diagram-design/pull/327"
     }
   ]
 }
