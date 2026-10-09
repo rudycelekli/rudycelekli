@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 139.5,
-    "high": 222.4,
+    "high": 222.5,
     "low": 89.5
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0461
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 82.59,
+    "evidence_window_weeks": 82.61,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 503.9,
+  "engineer_weeks_at_40h": 504.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 144.53,
-    "high": 165.18,
-    "low": 123.89
+    "base": 144.57,
+    "high": 165.22,
+    "low": 123.91
   },
   "monthly": [
     {
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 102.0,
-        "high": 166.5,
+        "high": 166.7,
         "low": 62.5
       },
       "modeled_human_direction_hours": {
         "base": 9.2,
         "high": 10.51,
-        "low": 7.89
+        "low": 7.88
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -540,12 +540,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 128.7,
+        "base": 128.8,
         "high": 210.3,
         "low": 78.8
       },
       "modeled_human_direction_hours": {
-        "base": 16.12,
+        "base": 16.11,
         "high": 18.42,
         "low": 13.81
       },
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 169.6,
-        "high": 270.4,
+        "base": 169.7,
+        "high": 270.5,
         "low": 108.9
       },
       "modeled_human_direction_hours": {
-        "base": 22.81,
+        "base": 22.8,
         "high": 26.06,
-        "low": 19.55
+        "low": 19.54
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 160.7,
-        "high": 253.1,
+        "base": 160.8,
+        "high": 253.2,
         "low": 105.5
       },
       "modeled_human_direction_hours": {
-        "base": 66.64,
-        "high": 76.16,
-        "low": 57.12
+        "base": 66.69,
+        "high": 76.21,
+        "low": 57.16
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1056,
+      "public_merged_pull_requests": 1057,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 10709.32,
-        "high": 14457.94,
-        "low": 8032.0
+        "base": 10721.82,
+        "high": 14474.82,
+        "low": 8041.38
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1239.42,
-        "high": 1761.16,
-        "low": 859.06
+        "base": 1240.43,
+        "high": 1762.57,
+        "low": 859.77
       }
     }
   ],
-  "public_accepted_pull_requests": 1298,
+  "public_accepted_pull_requests": 1299,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 20156.76,
-    "high": 27553.62,
-    "low": 14775.97
+    "base": 20169.26,
+    "high": 27570.5,
+    "low": 14785.35
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2688.07,
-    "high": 4063.35,
-    "low": 1812.62
+    "base": 2689.08,
+    "high": 4064.76,
+    "low": 1813.33
   },
   "updated_at_utc": "2026-10-09",
   "window": {
-    "end": "2026-10-08T21:51:41Z",
+    "end": "2026-10-09T02:32:26Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -38278,6 +38278,35 @@
       "pull_request": 725,
       "title": "feat: add source-backed content-to-skill authoring workflow",
       "url": "https://github.com/coreyhaines31/marketingskills/pull/725"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-08T07:20:16Z",
+      "evidence": {
+        "additions": 137,
+        "changed_files": 6,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 35,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.5,
+        "high": 16.88,
+        "low": 9.38
+      },
+      "merged_at": "2026-10-09T02:32:26Z",
+      "modeled_human_direction_hours": {
+        "base": 1.01,
+        "high": 1.41,
+        "low": 0.71
+      },
+      "project": "harry0703/MoneyPrinterTurbo",
+      "pull_request": 1595,
+      "title": "fix(subtitle): preserve body timecodes across caption consumers",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo/pull/1595"
     }
   ]
 }
