@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 145.1,
-    "high": 231.3,
-    "low": 93.1
+    "base": 145.2,
+    "high": 231.4,
+    "low": 93.2
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 524.8,
+  "engineer_weeks_at_40h": 525.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 123.2,
+        "base": 123.4,
         "high": 201.2,
         "low": 75.5
       },
       "modeled_human_direction_hours": {
-        "base": 6.57,
+        "base": 6.56,
         "high": 7.5,
         "low": 5.63
       },
@@ -572,7 +572,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 22.19,
-        "high": 25.36,
+        "high": 25.35,
         "low": 19.02
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 167.6,
-        "high": 264.0,
-        "low": 110.0
+        "base": 167.7,
+        "high": 264.2,
+        "low": 110.1
       },
       "modeled_human_direction_hours": {
-        "base": 68.89,
-        "high": 78.73,
-        "low": 59.05
+        "base": 68.92,
+        "high": 78.76,
+        "low": 59.07
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1138,
+      "public_merged_pull_requests": 1139,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 11545.27,
-        "high": 15586.54,
-        "low": 8658.99
+        "base": 11559.65,
+        "high": 15605.95,
+        "low": 8669.77
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1316.61,
-        "high": 1871.6,
-        "low": 912.25
+        "base": 1317.54,
+        "high": 1872.9,
+        "low": 912.9
       }
     }
   ],
-  "public_accepted_pull_requests": 1380,
+  "public_accepted_pull_requests": 1381,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 20992.71,
-    "high": 28682.22,
-    "low": 15402.96
+    "base": 21007.09,
+    "high": 28701.63,
+    "low": 15413.74
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2765.26,
-    "high": 4173.79,
-    "low": 1865.81
+    "base": 2766.19,
+    "high": 4175.09,
+    "low": 1866.46
   },
   "updated_at_utc": "2026-10-09",
   "window": {
-    "end": "2026-10-09T12:54:42Z",
+    "end": "2026-10-09T13:09:45Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -40656,6 +40656,35 @@
       "pull_request": 901,
       "title": "fix(governance): require runner-up evidence before promotion",
       "url": "https://github.com/proffesor-for-testing/agentic-qe/pull/901"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-09T08:30:48Z",
+      "evidence": {
+        "additions": 218,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 58,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 14.38,
+        "high": 19.41,
+        "low": 10.78
+      },
+      "merged_at": "2026-10-09T13:09:45Z",
+      "modeled_human_direction_hours": {
+        "base": 0.93,
+        "high": 1.3,
+        "low": 0.65
+      },
+      "project": "proffesor-for-testing/agentic-qe",
+      "pull_request": 903,
+      "title": "fix(cli): evaluate all accepted cron fields for workflow schedules",
+      "url": "https://github.com/proffesor-for-testing/agentic-qe/pull/903"
     }
   ]
 }
