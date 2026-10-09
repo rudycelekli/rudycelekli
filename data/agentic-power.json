@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 140.1,
-    "high": 223.4,
+    "base": 140.2,
+    "high": 223.5,
     "low": 89.9
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 506.5,
+  "engineer_weeks_at_40h": 506.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -359,13 +359,13 @@
       "active_repositories": 4,
       "agentic_power_x": {
         "base": 70.5,
-        "high": 114.4,
+        "high": 115.8,
         "low": 43.0
       },
       "modeled_human_direction_hours": {
         "base": 0.95,
         "high": 1.09,
-        "low": 0.82
+        "low": 0.81
       },
       "month": "2026-01",
       "public_merged_pull_requests": 0,
@@ -410,12 +410,12 @@
     {
       "active_repositories": 13,
       "agentic_power_x": {
-        "base": 62.2,
+        "base": 62.5,
         "high": 101.7,
         "low": 38.2
       },
       "modeled_human_direction_hours": {
-        "base": 2.94,
+        "base": 2.93,
         "high": 3.35,
         "low": 2.52
       },
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 87.7,
+        "base": 87.8,
         "high": 143.2,
         "low": 53.8
       },
       "modeled_human_direction_hours": {
-        "base": 6.36,
+        "base": 6.35,
         "high": 7.26,
         "low": 5.45
       },
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 129.3,
-        "high": 211.1,
+        "high": 211.2,
         "low": 79.2
       },
       "modeled_human_direction_hours": {
-        "base": 16.05,
+        "base": 16.04,
         "high": 18.34,
-        "low": 13.76
+        "low": 13.75
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 170.4,
-        "high": 271.5,
-        "low": 109.4
+        "high": 271.6,
+        "low": 109.5
       },
       "modeled_human_direction_hours": {
-        "base": 22.71,
-        "high": 25.96,
-        "low": 19.47
+        "base": 22.7,
+        "high": 25.94,
+        "low": 19.46
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 161.3,
-        "high": 254.0,
-        "low": 105.8
+        "high": 254.1,
+        "low": 105.9
       },
       "modeled_human_direction_hours": {
-        "base": 67.05,
-        "high": 76.63,
-        "low": 57.47
+        "base": 67.08,
+        "high": 76.67,
+        "low": 57.5
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1065,
+      "public_merged_pull_requests": 1066,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 10812.68,
-        "high": 14597.48,
-        "low": 8109.51
+        "base": 10822.81,
+        "high": 14611.16,
+        "low": 8117.11
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1252.22,
-        "high": 1780.27,
-        "low": 867.62
+        "base": 1253.31,
+        "high": 1781.8,
+        "low": 868.38
       }
     }
   ],
-  "public_accepted_pull_requests": 1307,
+  "public_accepted_pull_requests": 1308,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 20260.12,
-    "high": 27693.16,
-    "low": 14853.48
+    "base": 20270.25,
+    "high": 27706.84,
+    "low": 14861.08
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2700.87,
-    "high": 4082.46,
-    "low": 1821.18
+    "base": 2701.96,
+    "high": 4083.99,
+    "low": 1821.94
   },
   "updated_at_utc": "2026-10-09",
   "window": {
-    "end": "2026-10-09T07:07:14Z",
+    "end": "2026-10-09T07:21:41Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -38539,6 +38539,35 @@
       "pull_request": 935,
       "title": "fix(oauth): cancel ChatGPT authorization-code exchange",
       "url": "https://github.com/tester-army/e2e/pull/935"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-08T07:55:10Z",
+      "evidence": {
+        "additions": 92,
+        "changed_files": 2,
+        "comments": 3,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.13,
+        "high": 13.68,
+        "low": 7.6
+      },
+      "merged_at": "2026-10-09T07:21:41Z",
+      "modeled_human_direction_hours": {
+        "base": 1.09,
+        "high": 1.53,
+        "low": 0.76
+      },
+      "project": "harry0703/MoneyPrinterTurbo",
+      "pull_request": 1596,
+      "title": "fix(video): render accepted subtitle background colors consistently",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo/pull/1596"
     }
   ]
 }
