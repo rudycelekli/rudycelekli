@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
     "base": 145.4,
-    "high": 231.7,
-    "low": 93.3
+    "high": 231.8,
+    "low": 93.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0447
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 82.7,
+    "evidence_window_weeks": 82.76,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 526.0,
+  "engineer_weeks_at_40h": 526.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 144.72,
-    "high": 165.4,
-    "low": 124.05
+    "base": 144.83,
+    "high": 165.52,
+    "low": 124.14
   },
   "monthly": [
     {
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 105.1,
-        "high": 171.5,
+        "high": 171.7,
         "low": 64.3
       },
       "modeled_human_direction_hours": {
         "base": 8.93,
         "high": 10.21,
-        "low": 7.66
+        "low": 7.65
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 123.5,
         "high": 202.0,
-        "low": 75.6
+        "low": 75.7
       },
       "modeled_human_direction_hours": {
         "base": 6.55,
-        "high": 7.49,
+        "high": 7.48,
         "low": 5.61
       },
       "month": "2026-07",
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 174.8,
-        "high": 278.5,
+        "high": 278.7,
         "low": 112.2
       },
       "modeled_human_direction_hours": {
         "base": 22.14,
         "high": 25.3,
-        "low": 18.98
+        "low": 18.97
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 167.8,
-        "high": 264.2,
+        "high": 264.3,
         "low": 110.1
       },
       "modeled_human_direction_hours": {
-        "base": 69.1,
-        "high": 78.97,
-        "low": 59.23
+        "base": 69.22,
+        "high": 79.11,
+        "low": 59.33
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1142,
+      "public_merged_pull_requests": 1144,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 11592.33,
-        "high": 15650.05,
-        "low": 8694.28
+        "base": 11615.96,
+        "high": 15681.96,
+        "low": 8712.0
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1323.71,
-        "high": 1882.73,
-        "low": 916.82
+        "base": 1326.2,
+        "high": 1886.22,
+        "low": 918.56
       }
     }
   ],
-  "public_accepted_pull_requests": 1384,
+  "public_accepted_pull_requests": 1386,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 21039.77,
-    "high": 28745.73,
-    "low": 15438.25
+    "base": 21063.4,
+    "high": 28777.64,
+    "low": 15455.97
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2772.36,
-    "high": 4184.92,
-    "low": 1870.38
+    "base": 2774.85,
+    "high": 4188.41,
+    "low": 1872.12
   },
   "updated_at_utc": "2026-10-10",
   "window": {
-    "end": "2026-10-09T16:43:42Z",
+    "end": "2026-10-10T03:37:12Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -40772,6 +40772,64 @@
       "pull_request": 327,
       "title": "fix(geometry): compare translated label masks in canvas coordinates",
       "url": "https://github.com/cathrynlavery/diagram-design/pull/327"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-07T23:21:16Z",
+      "evidence": {
+        "additions": 139,
+        "changed_files": 2,
+        "comments": 4,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.52,
+        "high": 14.21,
+        "low": 7.89
+      },
+      "merged_at": "2026-10-10T03:37:09Z",
+      "modeled_human_direction_hours": {
+        "base": 1.09,
+        "high": 1.53,
+        "low": 0.76
+      },
+      "project": "openclaw/Peekaboo",
+      "pull_request": 1006,
+      "title": "fix(capture): retain valid UTF8 output at the byte limit",
+      "url": "https://github.com/openclaw/Peekaboo/pull/1006"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-08T05:20:05Z",
+      "evidence": {
+        "additions": 243,
+        "changed_files": 3,
+        "comments": 5,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.11,
+        "high": 17.7,
+        "low": 9.83
+      },
+      "merged_at": "2026-10-10T03:37:12Z",
+      "modeled_human_direction_hours": {
+        "base": 1.4,
+        "high": 1.96,
+        "low": 0.98
+      },
+      "project": "openclaw/Peekaboo",
+      "pull_request": 1007,
+      "title": "fix(config): refuse mutation after an existing configuration read fails",
+      "url": "https://github.com/openclaw/Peekaboo/pull/1007"
     }
   ]
 }
