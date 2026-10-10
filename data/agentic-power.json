@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 149.9,
-    "high": 238.9,
-    "low": 96.3
+    "base": 150.0,
+    "high": 239.0,
+    "low": 96.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0438
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 82.86,
+    "evidence_window_weeks": 82.88,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 543.5,
+  "engineer_weeks_at_40h": 544.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 145.0,
-    "high": 165.72,
-    "low": 124.29
+    "base": 145.04,
+    "high": 165.76,
+    "low": 124.32
   },
   "monthly": [
     {
@@ -332,12 +332,12 @@
     {
       "active_repositories": 8,
       "agentic_power_x": {
-        "base": 89.5,
+        "base": 89.9,
         "high": 146.5,
         "low": 55.0
       },
       "modeled_human_direction_hours": {
-        "base": 2.0,
+        "base": 1.99,
         "high": 2.28,
         "low": 1.71
       },
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 91.8,
+        "base": 92.0,
         "high": 150.1,
         "low": 56.3
       },
       "modeled_human_direction_hours": {
-        "base": 6.07,
+        "base": 6.06,
         "high": 6.93,
         "low": 5.2
       },
@@ -488,14 +488,14 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 107.2,
-        "high": 175.1,
+        "base": 107.4,
+        "high": 175.4,
         "low": 65.7
       },
       "modeled_human_direction_hours": {
-        "base": 8.75,
+        "base": 8.74,
         "high": 9.99,
-        "low": 7.5
+        "low": 7.49
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -515,13 +515,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 126.2,
-        "high": 206.0,
+        "high": 206.4,
         "low": 77.3
       },
       "modeled_human_direction_hours": {
         "base": 6.41,
         "high": 7.33,
-        "low": 5.5
+        "low": 5.49
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 135.4,
+        "base": 135.5,
         "high": 221.2,
-        "low": 82.9
+        "low": 83.0
       },
       "modeled_human_direction_hours": {
-        "base": 15.32,
-        "high": 17.51,
+        "base": 15.31,
+        "high": 17.5,
         "low": 13.13
       },
       "month": "2026-08",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 178.5,
-        "high": 284.5,
-        "low": 114.6
+        "base": 178.6,
+        "high": 284.7,
+        "low": 114.7
       },
       "modeled_human_direction_hours": {
-        "base": 21.68,
-        "high": 24.77,
-        "low": 18.58
+        "base": 21.67,
+        "high": 24.76,
+        "low": 18.57
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 173.3,
-        "high": 272.9,
+        "high": 273.0,
         "low": 113.7
       },
       "modeled_human_direction_hours": {
-        "base": 70.96,
-        "high": 81.1,
-        "low": 60.83
+        "base": 71.03,
+        "high": 81.18,
+        "low": 60.88
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1210,
+      "public_merged_pull_requests": 1212,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 12294.45,
-        "high": 16597.91,
-        "low": 9220.83
+        "base": 12311.84,
+        "high": 16621.39,
+        "low": 9233.87
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1388.43,
-        "high": 1976.89,
-        "low": 960.94
+        "base": 1390.39,
+        "high": 1979.63,
+        "low": 962.31
       }
     }
   ],
-  "public_accepted_pull_requests": 1452,
+  "public_accepted_pull_requests": 1454,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 21741.89,
-    "high": 29693.59,
-    "low": 15964.8
+    "base": 21759.28,
+    "high": 29717.07,
+    "low": 15977.84
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2837.08,
-    "high": 4279.08,
-    "low": 1914.5
+    "base": 2839.04,
+    "high": 4281.82,
+    "low": 1915.87
   },
   "updated_at_utc": "2026-10-10",
   "window": {
-    "end": "2026-10-10T20:10:02Z",
+    "end": "2026-10-10T22:51:23Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -42744,6 +42744,64 @@
       "pull_request": 815,
       "title": "fix(report): retain generated questions on same-day reruns",
       "url": "https://github.com/ktwu01/benchmark-radar/pull/815"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-10T03:26:06Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 11,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.88,
+        "high": 11.99,
+        "low": 6.66
+      },
+      "merged_at": "2026-10-10T22:51:18Z",
+      "modeled_human_direction_hours": {
+        "base": 0.91,
+        "high": 1.27,
+        "low": 0.64
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 272,
+      "title": "fix: Classify malformed MiniMax response shapes as errors",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/272"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-10T03:12:04Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.51,
+        "high": 11.49,
+        "low": 6.38
+      },
+      "merged_at": "2026-10-10T22:51:23Z",
+      "modeled_human_direction_hours": {
+        "base": 1.05,
+        "high": 1.47,
+        "low": 0.73
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 258,
+      "title": "fix: Expose AtlasCloud in guided setup and credential detection",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/258"
     }
   ]
 }
