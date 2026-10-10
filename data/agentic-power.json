@@ -12,7 +12,7 @@
       "low": 0.0438
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 82.85,
+    "evidence_window_weeks": 82.86,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 543.4,
+  "engineer_weeks_at_40h": 543.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 144.99,
-    "high": 165.7,
-    "low": 124.27
+    "base": 145.0,
+    "high": 165.72,
+    "low": 124.29
   },
   "monthly": [
     {
@@ -228,12 +228,12 @@
     {
       "active_repositories": 2,
       "agentic_power_x": {
-        "base": 10.9,
+        "base": 11.4,
         "high": 18.4,
         "low": 6.7
       },
       "modeled_human_direction_hours": {
-        "base": 0.23,
+        "base": 0.22,
         "high": 0.26,
         "low": 0.19
       },
@@ -306,12 +306,12 @@
     {
       "active_repositories": 1,
       "agentic_power_x": {
-        "base": 125.8,
+        "base": 128.0,
         "high": 207.3,
         "low": 77.7
       },
       "modeled_human_direction_hours": {
-        "base": 0.6,
+        "base": 0.59,
         "high": 0.68,
         "low": 0.51
       },
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 91.8,
         "high": 150.1,
-        "low": 56.2
+        "low": 56.3
       },
       "modeled_human_direction_hours": {
         "base": 6.07,
-        "high": 6.94,
+        "high": 6.93,
         "low": 5.2
       },
       "month": "2026-04",
@@ -494,7 +494,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 8.75,
-        "high": 10.0,
+        "high": 9.99,
         "low": 7.5
       },
       "month": "2026-06",
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 126.1,
+        "base": 126.2,
         "high": 206.0,
         "low": 77.3
       },
       "modeled_human_direction_hours": {
-        "base": 6.42,
+        "base": 6.41,
         "high": 7.33,
         "low": 5.5
       },
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 135.3,
-        "high": 221.0,
+        "base": 135.4,
+        "high": 221.2,
         "low": 82.9
       },
       "modeled_human_direction_hours": {
-        "base": 15.33,
-        "high": 17.52,
-        "low": 13.14
+        "base": 15.32,
+        "high": 17.51,
+        "low": 13.13
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 178.4,
-        "high": 284.4,
-        "low": 114.5
+        "base": 178.5,
+        "high": 284.5,
+        "low": 114.6
       },
       "modeled_human_direction_hours": {
-        "base": 21.69,
-        "high": 24.79,
-        "low": 18.59
+        "base": 21.68,
+        "high": 24.78,
+        "low": 18.58
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -593,26 +593,26 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 173.3,
-        "high": 273.0,
+        "high": 272.9,
         "low": 113.7
       },
       "modeled_human_direction_hours": {
-        "base": 70.91,
-        "high": 81.04,
-        "low": 60.78
+        "base": 70.96,
+        "high": 81.1,
+        "low": 60.82
       },
       "month": "2026-10",
       "public_merged_pull_requests": 1210,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 12290.16,
-        "high": 16592.11,
-        "low": 9217.61
+        "base": 12294.45,
+        "high": 16597.91,
+        "low": 9220.83
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1386.57,
-        "high": 1974.29,
-        "low": 959.64
+        "base": 1388.31,
+        "high": 1976.73,
+        "low": 960.86
       }
     }
   ],
@@ -622,18 +622,18 @@
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 21737.6,
-    "high": 29687.79,
-    "low": 15961.58
+    "base": 21741.89,
+    "high": 29693.59,
+    "low": 15964.8
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2835.22,
-    "high": 4276.48,
-    "low": 1913.2
+    "base": 2836.96,
+    "high": 4278.92,
+    "low": 1914.42
   },
   "updated_at_utc": "2026-10-10",
   "window": {
-    "end": "2026-10-10T18:50:03Z",
+    "end": "2026-10-10T20:10:02Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -37557,35 +37557,6 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-08T03:12:11Z",
-      "evidence": {
-        "additions": 197,
-        "changed_files": 3,
-        "comments": 1,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.9,
-        "high": 16.06,
-        "low": 8.92
-      },
-      "merged_at": "2026-10-08T21:47:34Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "ruvnet/ruflo",
-      "pull_request": 3904,
-      "title": "fix(hooks): consume eligible persisted SONA routing patterns",
-      "url": "https://github.com/ruvnet/ruflo/pull/3904"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
       "category": "systems_engineering",
       "created_at": "2026-10-08T01:24:01Z",
       "evidence": {
@@ -42744,6 +42715,35 @@
       "pull_request": 3969,
       "title": "fix(mcp): preserve cancellation when an aborted executor resolves",
       "url": "https://github.com/ruvnet/ruflo/pull/3969"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T06:28:20Z",
+      "evidence": {
+        "additions": 449,
+        "changed_files": 3,
+        "comments": 3,
+        "commits": 3,
+        "deletions": 10,
+        "reviews": 7
+      },
+      "heh": {
+        "base": 16.19,
+        "high": 21.86,
+        "low": 12.14
+      },
+      "merged_at": "2026-10-10T20:10:02Z",
+      "modeled_human_direction_hours": {
+        "base": 2.54,
+        "high": 3.56,
+        "low": 1.78
+      },
+      "project": "ktwu01/benchmark-radar",
+      "pull_request": 815,
+      "title": "fix(report): retain generated questions on same-day reruns",
+      "url": "https://github.com/ktwu01/benchmark-radar/pull/815"
     }
   ]
 }
