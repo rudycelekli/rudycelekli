@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 150.0,
-    "high": 239.0,
+    "base": 150.1,
+    "high": 239.1,
     "low": 96.4
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0438
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 82.88,
+    "evidence_window_weeks": 82.89,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 544.0,
+  "engineer_weeks_at_40h": 544.3,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 145.04,
-    "high": 165.76,
-    "low": 124.32
+    "base": 145.06,
+    "high": 165.78,
+    "low": 124.34
   },
   "monthly": [
     {
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 114.3,
-        "high": 186.6,
+        "high": 187.1,
         "low": 70.0
       },
       "modeled_human_direction_hours": {
         "base": 4.42,
         "high": 5.05,
-        "low": 3.79
+        "low": 3.78
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 126.2,
         "high": 206.4,
-        "low": 77.3
+        "low": 77.4
       },
       "modeled_human_direction_hours": {
         "base": 6.41,
-        "high": 7.33,
+        "high": 7.32,
         "low": 5.49
       },
       "month": "2026-07",
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 135.5,
-        "high": 221.2,
+        "high": 221.4,
         "low": 83.0
       },
       "modeled_human_direction_hours": {
         "base": 15.31,
         "high": 17.5,
-        "low": 13.13
+        "low": 13.12
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 173.3,
-        "high": 273.0,
-        "low": 113.7
+        "base": 173.4,
+        "high": 273.1,
+        "low": 113.8
       },
       "modeled_human_direction_hours": {
-        "base": 71.03,
-        "high": 81.18,
-        "low": 60.88
+        "base": 71.06,
+        "high": 81.21,
+        "low": 60.91
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1212,
+      "public_merged_pull_requests": 1213,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 12311.84,
-        "high": 16621.39,
-        "low": 9233.87
+        "base": 12323.46,
+        "high": 16637.08,
+        "low": 9242.58
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1390.39,
-        "high": 1979.63,
-        "low": 962.31
+        "base": 1391.0,
+        "high": 1980.48,
+        "low": 962.74
       }
     }
   ],
-  "public_accepted_pull_requests": 1454,
+  "public_accepted_pull_requests": 1455,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 21759.28,
-    "high": 29717.07,
-    "low": 15977.84
+    "base": 21770.9,
+    "high": 29732.76,
+    "low": 15986.55
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 2839.04,
-    "high": 4281.82,
-    "low": 1915.87
+    "base": 2839.65,
+    "high": 4282.67,
+    "low": 1916.3
   },
-  "updated_at_utc": "2026-10-10",
+  "updated_at_utc": "2026-10-11",
   "window": {
-    "end": "2026-10-10T22:51:23Z",
+    "end": "2026-10-11T00:11:22Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -17141,6 +17141,267 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T18:44:43Z",
+      "evidence": {
+        "additions": 14,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.59,
+        "high": 8.9,
+        "low": 4.94
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 1006,
+      "title": "Make the Backend Architect OpenAPI contract validate",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/1006"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-02T18:44:29Z",
+      "evidence": {
+        "additions": 6,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.2,
+        "high": 9.72,
+        "low": 5.4
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 1005,
+      "title": "Commit graph entities and their source relationships atomically",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/1005"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T18:44:11Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.63,
+        "high": 7.6,
+        "low": 4.22
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 1004,
+      "title": "Strip event handlers on the snapshot root as well as descendants",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/1004"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T18:43:59Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.63,
+        "high": 7.6,
+        "low": 4.22
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 1003,
+      "title": "Read the WeChat login payload at the request helper boundary",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/1003"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T18:43:09Z",
+      "evidence": {
+        "additions": 3,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.86,
+        "high": 7.91,
+        "low": 4.39
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 1001,
+      "title": "Preserve automatic theme selection across page reloads",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/1001"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T18:42:35Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.12,
+        "high": 8.27,
+        "low": 4.59
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 999,
+      "title": "Reject unknown and non-finite audio durations before processing",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/999"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T18:42:22Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.27,
+        "high": 8.47,
+        "low": 4.7
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 998,
+      "title": "Require and consume Feishu callback state before token exchange",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/998"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T18:42:16Z",
+      "evidence": {
+        "additions": 8,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.27,
+        "high": 8.47,
+        "low": 4.7
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 997,
+      "title": "Surface failed or missing IMAP message fetches before parsing",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/997"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T18:41:12Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.47,
+        "high": 8.74,
+        "low": 4.85
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 992,
+      "title": "Apply vendor and spend checks before contractor payment sends",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/992"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
       "category": "reliability_and_qe",
       "created_at": "2026-10-04T06:45:30Z",
       "evidence": {
@@ -17543,296 +17804,6 @@
       "pull_request": 1009,
       "title": "Require expiration and audit subject in Security Architect JWT verification",
       "url": "https://github.com/msitarzewski/agency-agents/pull/1009"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-02T18:44:43Z",
-      "evidence": {
-        "additions": 14,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 6.59,
-        "high": 8.9,
-        "low": 4.94
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 1006,
-      "title": "Make the Backend Architect OpenAPI contract validate",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/1006"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "systems_engineering",
-      "created_at": "2026-10-02T18:44:29Z",
-      "evidence": {
-        "additions": 6,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 7.2,
-        "high": 9.72,
-        "low": 5.4
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 1005,
-      "title": "Commit graph entities and their source relationships atomically",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/1005"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-02T18:44:11Z",
-      "evidence": {
-        "additions": 2,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 5.63,
-        "high": 7.6,
-        "low": 4.22
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 1004,
-      "title": "Strip event handlers on the snapshot root as well as descendants",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/1004"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-02T18:43:59Z",
-      "evidence": {
-        "additions": 2,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 5.63,
-        "high": 7.6,
-        "low": 4.22
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 1003,
-      "title": "Read the WeChat login payload at the request helper boundary",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/1003"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-02T18:43:09Z",
-      "evidence": {
-        "additions": 3,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 5.86,
-        "high": 7.91,
-        "low": 4.39
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 1001,
-      "title": "Preserve automatic theme selection across page reloads",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/1001"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-02T18:42:35Z",
-      "evidence": {
-        "additions": 7,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 6.12,
-        "high": 8.27,
-        "low": 4.59
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 999,
-      "title": "Reject unknown and non-finite audio durations before processing",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/999"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-02T18:42:22Z",
-      "evidence": {
-        "additions": 9,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 6.27,
-        "high": 8.47,
-        "low": 4.7
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 998,
-      "title": "Require and consume Feishu callback state before token exchange",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/998"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-02T18:42:16Z",
-      "evidence": {
-        "additions": 8,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 6.27,
-        "high": 8.47,
-        "low": 4.7
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 997,
-      "title": "Surface failed or missing IMAP message fetches before parsing",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/997"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-02T18:41:12Z",
-      "evidence": {
-        "additions": 12,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 6.47,
-        "high": 8.74,
-        "low": 4.85
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 992,
-      "title": "Apply vendor and spend checks before contractor payment sends",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/992"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-03T03:20:00Z",
-      "evidence": {
-        "additions": 5,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 5.95,
-        "high": 8.04,
-        "low": 4.46
-      },
-      "merged_at": "2026-10-04T21:12:17Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 1011,
-      "title": "Keep discrete inventory order quantities positive for low demand",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/1011"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -18558,6 +18529,35 @@
       "pull_request": 968,
       "title": "Snapshot evidence payloads before hashing and appending",
       "url": "https://github.com/msitarzewski/agency-agents/pull/968"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-03T03:20:00Z",
+      "evidence": {
+        "additions": 5,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.95,
+        "high": 8.04,
+        "low": 4.46
+      },
+      "merged_at": "2026-10-04T21:12:17Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 1011,
+      "title": "Keep discrete inventory order quantities positive for low demand",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/1011"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -37587,6 +37587,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-09-28T14:12:25Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 3,
+        "comments": 5,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.53,
+        "high": 12.87,
+        "low": 7.15
+      },
+      "merged_at": "2026-10-08T21:47:35Z",
+      "modeled_human_direction_hours": {
+        "base": 1.52,
+        "high": 2.13,
+        "low": 1.06
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 3523,
+      "title": "fix(doctor): load MetaHarness modules with file URLs on Windows",
+      "url": "https://github.com/ruvnet/ruflo/pull/3523"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-09-27T17:31:08Z",
       "evidence": {
         "additions": 137,
@@ -38220,35 +38249,6 @@
       "pull_request": 3543,
       "title": "test(init): isolate memory resolver checks from pnpm NODE_PATH",
       "url": "https://github.com/ruvnet/ruflo/pull/3543"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-09-28T14:12:25Z",
-      "evidence": {
-        "additions": 41,
-        "changed_files": 3,
-        "comments": 5,
-        "commits": 3,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.53,
-        "high": 12.87,
-        "low": 7.15
-      },
-      "merged_at": "2026-10-08T21:47:35Z",
-      "modeled_human_direction_hours": {
-        "base": 1.52,
-        "high": 2.13,
-        "low": 1.06
-      },
-      "project": "ruvnet/ruflo",
-      "pull_request": 3523,
-      "title": "fix(doctor): load MetaHarness modules with file URLs on Windows",
-      "url": "https://github.com/ruvnet/ruflo/pull/3523"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -42802,6 +42802,35 @@
       "pull_request": 258,
       "title": "fix: Expose AtlasCloud in guided setup and credential detection",
       "url": "https://github.com/ifixai-ai/iFixAi/pull/258"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-10T16:22:24Z",
+      "evidence": {
+        "additions": 143,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.62,
+        "high": 15.69,
+        "low": 8.71
+      },
+      "merged_at": "2026-10-11T00:11:22Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 4019,
+      "title": "fix(mcp): fence stale resource cache writes after invalidation",
+      "url": "https://github.com/ruvnet/ruflo/pull/4019"
     }
   ]
 }
