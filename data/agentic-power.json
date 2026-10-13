@@ -12,7 +12,7 @@
       "low": 0.0377
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 83.24,
+    "evidence_window_weeks": 83.25,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 645.6,
+  "engineer_weeks_at_40h": 645.9,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 145.67,
-    "high": 166.48,
-    "low": 124.86
+    "base": 145.69,
+    "high": 166.5,
+    "low": 124.88
   },
   "monthly": [
     {
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 124.6,
         "high": 203.7,
-        "low": 76.3
+        "low": 76.4
       },
       "modeled_human_direction_hours": {
         "base": 7.53,
-        "high": 8.61,
+        "high": 8.6,
         "low": 6.45
       },
       "month": "2026-06",
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 157.3,
-        "high": 256.8,
-        "low": 96.3
+        "high": 257.0,
+        "low": 96.4
       },
       "modeled_human_direction_hours": {
         "base": 13.19,
-        "high": 15.08,
-        "low": 11.31
+        "high": 15.07,
+        "low": 11.3
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 207.2,
-        "high": 330.4,
+        "base": 207.4,
+        "high": 330.6,
         "low": 133.1
       },
       "modeled_human_direction_hours": {
-        "base": 18.67,
+        "base": 18.66,
         "high": 21.33,
-        "low": 16.0
+        "low": 15.99
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 199.9,
-        "high": 314.9,
+        "base": 200.0,
+        "high": 315.0,
         "low": 131.2
       },
       "modeled_human_direction_hours": {
-        "base": 81.92,
-        "high": 93.62,
-        "low": 70.22
+        "base": 81.95,
+        "high": 93.66,
+        "low": 70.24
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1622,
+      "public_merged_pull_requests": 1623,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 16377.51,
-        "high": 22110.26,
-        "low": 12283.15
+        "base": 16386.96,
+        "high": 22123.01,
+        "low": 12290.24
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1861.42,
-        "high": 2651.16,
-        "low": 1287.75
+        "base": 1862.7,
+        "high": 2652.95,
+        "low": 1288.65
       }
     }
   ],
-  "public_accepted_pull_requests": 1864,
+  "public_accepted_pull_requests": 1865,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 25824.95,
-    "high": 35205.94,
-    "low": 19027.12
+    "base": 25834.4,
+    "high": 35218.69,
+    "low": 19034.21
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3310.07,
-    "high": 4953.35,
-    "low": 2241.31
+    "base": 3311.35,
+    "high": 4955.14,
+    "low": 2242.21
   },
   "updated_at_utc": "2026-10-13",
   "window": {
-    "end": "2026-10-13T11:19:06Z",
+    "end": "2026-10-13T12:51:45Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -54692,6 +54692,35 @@
       "pull_request": 1101,
       "title": "fix(nudge): respect the preferred delivery channel for every profile",
       "url": "https://github.com/msitarzewski/agency-agents/pull/1101"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T03:40:33Z",
+      "evidence": {
+        "additions": 55,
+        "changed_files": 3,
+        "comments": 4,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.45,
+        "high": 12.75,
+        "low": 7.09
+      },
+      "merged_at": "2026-10-13T12:51:45Z",
+      "modeled_human_direction_hours": {
+        "base": 1.28,
+        "high": 1.79,
+        "low": 0.9
+      },
+      "project": "morluto/rea",
+      "pull_request": 2471,
+      "title": "fix(process): resolve POSIX backslash basenames through PATH",
+      "url": "https://github.com/morluto/rea/pull/2471"
     }
   ]
 }
