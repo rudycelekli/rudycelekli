@@ -19,6 +19,14 @@
 
 </div>
 
+## Research identity
+
+**Rudy Mizrahi Celekli**, also known professionally as **Rudy Celekli**, is a forward-deployed AI researcher and open-source engineer focused on verifiable long-horizon agent environments, evaluator robustness, deterministic replay, causal fault isolation, and evidence-bound AI execution.
+
+I build systems that make autonomous behavior inspectable: preserve the world state, replay the action, challenge the evaluator, isolate the failure, and retain enough evidence for another person to check the claim. Public ownership, upstream contribution, measured results, and exploratory work stay explicitly separate.
+
+[**Canonical research profile**](https://rudycelekli.github.io/) · [ORCID](https://orcid.org/0009-0000-7043-3766) · [Live open-source evidence](#open-source-impact-verified) · [Gradia research role](https://www.gradiahq.com/about)
+
 <!-- top-contributor-proof:start -->
 <div align="center">
 
