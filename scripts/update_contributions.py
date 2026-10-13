@@ -1100,6 +1100,42 @@ def discover_owned_repositories(token: str) -> list[dict[str, object]]:
     return repositories
 
 
+def public_merged_pull_request_activity(
+    repositories: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    """Return every accepted public PR as a deduplicated activity record."""
+    records: dict[str, dict[str, object]] = {}
+    for repository in repositories:
+        full_name = str(repository["full_name"])
+        for pull_request in repository.get("_merged_pull_requests", []):
+            url = str(pull_request["url"])
+            records[url] = {
+                "repository": full_name,
+                "repository_url": str(repository["url"]),
+                "number": int(pull_request["number"]),
+                "title": str(pull_request["title"]),
+                "url": url,
+                "created_at": pull_request.get("createdAt"),
+                "merged_at": pull_request.get("mergedAt"),
+                "additions": int(pull_request["additions"]),
+                "deletions": int(pull_request["deletions"]),
+                "changed_files": int(pull_request["changedFiles"]),
+                "commits": int(pull_request["commits"]["totalCount"]),
+                "comments": int(pull_request["comments"]["totalCount"]),
+                "reviews": int(pull_request["reviews"]["totalCount"]),
+                "attribution": "GitHub-authored and merged pull request",
+            }
+    return sorted(
+        records.values(),
+        key=lambda item: (
+            str(item.get("merged_at") or ""),
+            str(item["repository"]).casefold(),
+            int(item["number"]),
+        ),
+        reverse=True,
+    )
+
+
 def compact(value: int) -> str:
     if value < 1_000:
         return str(value)
@@ -2616,8 +2652,9 @@ def main() -> int:
         {key: value for key, value in repo.items() if not key.startswith("_")}
         for repo in repositories
     ]
+    merged_pull_request_activity = public_merged_pull_request_activity(repositories)
     payload = {
-        "schema_version": 7,
+        "schema_version": 8,
         "source": "GitHub GraphQL and REST APIs",
         "login": LOGIN,
         "updated_at_utc": updated,
@@ -2628,6 +2665,7 @@ def main() -> int:
             "contributor_commits": "The GitHub Contributors API count is used at the highest tier. Before it catches up, directly attributed default-branch commits or GitHub contribution-graph commits are reported with their distinct evidence tier. GitHub indexes can disagree temporarily and may lag by several hours.",
             "contributor_rank": "All-time contributor rank is the login's one-based position in GitHub's Contributors API ordering. The top-profile proof includes only observed ranks 1 through 5 and omits unavailable or pending indexes.",
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
+            "merged_pull_request_activity": "Every public authored merged pull request discovered by the exhaustive date-partitioned GitHub search is retained as a distinct receipt with repository, URL, merge time, code-change statistics, reviews, and comments.",
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",
             "owned_project_ranking": "The profile spotlight ranks the complete discovered set by stars, recent activity, then GitHub-attributed commits. Every qualifying owned repository remains in this evidence file.",
@@ -2636,6 +2674,7 @@ def main() -> int:
             "ownership_boundary": "Repository ownership is reported separately and is never counted as upstream contributor credit or accepted merged-PR work.",
         },
         "repositories": public_repositories,
+        "merged_pull_requests": merged_pull_request_activity,
         "owned_repositories": owned_repositories,
         "owned_project_spotlight_limit": OWNED_PROJECT_DISPLAY_LIMIT,
         "owned_project_exclusions": sorted(OWNED_PROJECT_EXCLUSIONS),

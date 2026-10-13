@@ -183,6 +183,37 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual([item["number"] for item in results], [1, 2])
         self.assertEqual(graphql.call_count, 3)
 
+    def test_public_activity_retains_every_merged_pr_receipt(self):
+        first_repo = repository("upstream/first")
+        second_repo = repository("upstream/second")
+        older = pull_request(first_repo, 11)
+        newer = pull_request(second_repo, 22)
+        newer["mergedAt"] = "2026-10-01T12:00:00Z"
+        repositories = [
+            {
+                "full_name": "upstream/first",
+                "url": first_repo["url"],
+                "_merged_pull_requests": [older],
+            },
+            {
+                "full_name": "upstream/second",
+                "url": second_repo["url"],
+                "_merged_pull_requests": [newer, newer],
+            },
+        ]
+
+        activity = subject.public_merged_pull_request_activity(repositories)
+
+        self.assertEqual(len(activity), 2)
+        self.assertEqual(activity[0]["url"], newer["url"])
+        self.assertEqual(activity[0]["repository"], "upstream/second")
+        self.assertEqual(activity[0]["additions"], 25)
+        self.assertEqual(activity[0]["reviews"], 1)
+        self.assertEqual(
+            activity[0]["attribution"],
+            "GitHub-authored and merged pull request",
+        )
+
     @mock.patch.object(subject, "default_branch_contribution_count")
     @mock.patch.object(subject, "official_contribution_stats")
     @mock.patch.object(subject, "discover_commit_contribution_repositories")
