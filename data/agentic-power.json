@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 180.7,
-    "high": 287.4,
-    "low": 116.5
+    "base": 180.8,
+    "high": 287.5,
+    "low": 116.6
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 658.4,
+  "engineer_weeks_at_40h": 658.7,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 127.1,
-        "high": 207.5,
+        "high": 207.8,
         "low": 77.9
       },
       "modeled_human_direction_hours": {
         "base": 7.38,
         "high": 8.43,
-        "low": 6.33
+        "low": 6.32
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 149.6,
         "high": 244.2,
-        "low": 91.5
+        "low": 91.7
       },
       "modeled_human_direction_hours": {
         "base": 5.41,
-        "high": 6.19,
+        "high": 6.18,
         "low": 4.64
       },
       "month": "2026-07",
@@ -546,7 +546,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 12.93,
-        "high": 14.78,
+        "high": 14.77,
         "low": 11.08
       },
       "month": "2026-08",
@@ -572,7 +572,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 18.29,
-        "high": 20.91,
+        "high": 20.9,
         "low": 15.68
       },
       "month": "2026-09",
@@ -593,43 +593,43 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 202.9,
-        "high": 319.5,
-        "low": 133.1
+        "high": 319.7,
+        "low": 133.2
       },
       "modeled_human_direction_hours": {
-        "base": 83.25,
-        "high": 95.15,
-        "low": 71.36
+        "base": 83.27,
+        "high": 95.17,
+        "low": 71.37
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1672,
+      "public_merged_pull_requests": 1673,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 16888.7,
-        "high": 22800.39,
-        "low": 12666.56
+        "base": 16898.88,
+        "high": 22814.14,
+        "low": 12674.2
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1930.15,
-        "high": 2750.94,
-        "low": 1334.6
+        "base": 1931.01,
+        "high": 2752.14,
+        "low": 1335.2
       }
     }
   ],
-  "public_accepted_pull_requests": 1914,
+  "public_accepted_pull_requests": 1915,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 26336.14,
-    "high": 35896.07,
-    "low": 19410.53
+    "base": 26346.32,
+    "high": 35909.82,
+    "low": 19418.17
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3378.8,
-    "high": 5053.13,
-    "low": 2288.16
+    "base": 3379.66,
+    "high": 5054.33,
+    "low": 2288.76
   },
   "updated_at_utc": "2026-10-13",
   "window": {
@@ -46137,6 +46137,35 @@
       "pull_request": 949,
       "title": "fix(crdt): fingerprint unambiguous convergence state",
       "url": "https://github.com/proffesor-for-testing/agentic-qe/pull/949"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-11T10:50:30Z",
+      "evidence": {
+        "additions": 106,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.18,
+        "high": 13.75,
+        "low": 7.64
+      },
+      "merged_at": "2026-10-11T16:36:58Z",
+      "modeled_human_direction_hours": {
+        "base": 0.86,
+        "high": 1.2,
+        "low": 0.6
+      },
+      "project": "proffesor-for-testing/agentic-qe",
+      "pull_request": 952,
+      "title": "fix(crdt): preserve delivery across trimmed delta history",
+      "url": "https://github.com/proffesor-for-testing/agentic-qe/pull/952"
     },
     {
       "acceptance_basis": "merged pull request",
