@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 175.5,
-    "high": 279.1,
-    "low": 113.1
+    "base": 175.6,
+    "high": 279.3,
+    "low": 113.2
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.038
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 83.18,
+    "evidence_window_weeks": 83.2,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 638.6,
+  "engineer_weeks_at_40h": 639.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 145.56,
-    "high": 166.36,
-    "low": 124.77
+    "base": 145.6,
+    "high": 166.4,
+    "low": 124.8
   },
   "monthly": [
     {
@@ -384,12 +384,12 @@
     {
       "active_repositories": 5,
       "agentic_power_x": {
-        "base": 90.8,
+        "base": 91.6,
         "high": 149.6,
         "low": 55.7
       },
       "modeled_human_direction_hours": {
-        "base": 1.2,
+        "base": 1.19,
         "high": 1.37,
         "low": 1.02
       },
@@ -412,11 +412,11 @@
       "agentic_power_x": {
         "base": 75.3,
         "high": 123.2,
-        "low": 46.1
+        "low": 46.2
       },
       "modeled_human_direction_hours": {
         "base": 2.43,
-        "high": 2.78,
+        "high": 2.77,
         "low": 2.08
       },
       "month": "2026-03",
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 131.9,
         "high": 215.7,
-        "low": 80.7
+        "low": 80.9
       },
       "modeled_human_direction_hours": {
         "base": 3.83,
-        "high": 4.38,
+        "high": 4.37,
         "low": 3.28
       },
       "month": "2026-05",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 123.8,
-        "high": 202.1,
+        "high": 202.4,
         "low": 75.8
       },
       "modeled_human_direction_hours": {
         "base": 7.58,
         "high": 8.66,
-        "low": 6.5
+        "low": 6.49
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -540,12 +540,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 156.2,
+        "base": 156.3,
         "high": 255.2,
         "low": 95.7
       },
       "modeled_human_direction_hours": {
-        "base": 13.28,
+        "base": 13.27,
         "high": 15.17,
         "low": 11.38
       },
@@ -566,13 +566,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 205.9,
+        "base": 206.0,
         "high": 328.3,
-        "low": 132.2
+        "low": 132.3
       },
       "modeled_human_direction_hours": {
-        "base": 18.79,
-        "high": 21.47,
+        "base": 18.78,
+        "high": 21.46,
         "low": 16.1
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 197.8,
-        "high": 311.5,
-        "low": 129.8
+        "base": 197.9,
+        "high": 311.7,
+        "low": 129.9
       },
       "modeled_human_direction_hours": {
-        "base": 81.39,
-        "high": 93.02,
-        "low": 69.77
+        "base": 81.45,
+        "high": 93.09,
+        "low": 69.82
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1588,
+      "public_merged_pull_requests": 1589,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 16097.69,
-        "high": 21732.44,
-        "low": 12073.26
+        "base": 16121.82,
+        "high": 21765.02,
+        "low": 12091.36
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1837.49,
-        "high": 2617.58,
-        "low": 1270.95
+        "base": 1839.4,
+        "high": 2620.25,
+        "low": 1272.29
       }
     }
   ],
-  "public_accepted_pull_requests": 1830,
+  "public_accepted_pull_requests": 1831,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 25545.13,
-    "high": 34828.12,
-    "low": 18817.23
+    "base": 25569.26,
+    "high": 34860.7,
+    "low": 18835.33
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3286.14,
-    "high": 4919.77,
-    "low": 2224.51
+    "base": 3288.05,
+    "high": 4922.44,
+    "low": 2225.85
   },
   "updated_at_utc": "2026-10-13",
   "window": {
-    "end": "2026-10-13T02:24:05Z",
+    "end": "2026-10-13T04:39:27Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -53706,6 +53706,35 @@
       "pull_request": 3732,
       "title": "fix(memory): retain originating turns after long tool workflows",
       "url": "https://github.com/zhayujie/CowAgent/pull/3732"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-11T20:15:09Z",
+      "evidence": {
+        "additions": 799,
+        "changed_files": 12,
+        "comments": 0,
+        "commits": 6,
+        "deletions": 27,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 24.13,
+        "high": 32.58,
+        "low": 18.1
+      },
+      "merged_at": "2026-10-13T04:39:27Z",
+      "modeled_human_direction_hours": {
+        "base": 1.91,
+        "high": 2.67,
+        "low": 1.34
+      },
+      "project": "HelixDB/helix-foundry",
+      "pull_request": 92,
+      "title": "Let dataset owners protect additional sensitive columns",
+      "url": "https://github.com/HelixDB/helix-foundry/pull/92"
     }
   ]
 }
