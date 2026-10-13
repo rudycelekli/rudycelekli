@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 176.2,
-    "high": 280.3,
+    "base": 176.3,
+    "high": 280.4,
     "low": 113.6
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 641.7,
+  "engineer_weeks_at_40h": 642.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 206.5,
-        "high": 329.1,
+        "base": 206.6,
+        "high": 329.4,
         "low": 132.6
       },
       "modeled_human_direction_hours": {
-        "base": 18.74,
+        "base": 18.73,
         "high": 21.41,
-        "low": 16.06
+        "low": 16.05
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 198.6,
-        "high": 312.9,
+        "base": 198.7,
+        "high": 313.0,
         "low": 130.4
       },
       "modeled_human_direction_hours": {
-        "base": 81.66,
-        "high": 93.32,
-        "low": 69.99
+        "base": 81.68,
+        "high": 93.35,
+        "low": 70.01
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1599,
+      "public_merged_pull_requests": 1600,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 16220.38,
-        "high": 21898.1,
-        "low": 12165.31
+        "base": 16231.03,
+        "high": 21912.48,
+        "low": 12173.3
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1848.57,
-        "high": 2633.08,
-        "low": 1278.71
+        "base": 1849.54,
+        "high": 2634.44,
+        "low": 1279.39
       }
     }
   ],
-  "public_accepted_pull_requests": 1841,
+  "public_accepted_pull_requests": 1842,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 25667.82,
-    "high": 34993.78,
-    "low": 18909.28
+    "base": 25678.47,
+    "high": 35008.16,
+    "low": 18917.27
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3297.22,
-    "high": 4935.27,
-    "low": 2232.27
+    "base": 3298.19,
+    "high": 4936.63,
+    "low": 2232.95
   },
   "updated_at_utc": "2026-10-13",
   "window": {
-    "end": "2026-10-13T09:32:54Z",
+    "end": "2026-10-13T09:38:14Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -54025,6 +54025,35 @@
       "pull_request": 1604,
       "title": "fix(loomloom): avoid synthesizing narration from nontext results",
       "url": "https://github.com/harry0703/MoneyPrinterTurbo/pull/1604"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-06T08:05:30Z",
+      "evidence": {
+        "additions": 119,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.65,
+        "high": 14.38,
+        "low": 7.99
+      },
+      "merged_at": "2026-10-13T09:38:14Z",
+      "modeled_human_direction_hours": {
+        "base": 0.97,
+        "high": 1.36,
+        "low": 0.68
+      },
+      "project": "open-compass/VLMEvalKit",
+      "pull_request": 1723,
+      "title": "Preserve JSON serialization of NumPy values on NumPy 2",
+      "url": "https://github.com/open-compass/VLMEvalKit/pull/1723"
     }
   ]
 }
