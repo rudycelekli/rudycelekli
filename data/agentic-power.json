@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 178.6,
-    "high": 284.1,
+    "base": 178.7,
+    "high": 284.2,
     "low": 115.2
   },
   "basis": "operator-calibrated provisional estimate",
@@ -9,10 +9,10 @@
     "allocation_factor_vs_base_proxy": {
       "base": 0.0436,
       "high": 0.0498,
-      "low": 0.0374
+      "low": 0.0373
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 83.26,
+    "evidence_window_weeks": 83.27,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 650.7,
+  "engineer_weeks_at_40h": 651.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 145.71,
-    "high": 166.52,
-    "low": 124.89
+    "base": 145.72,
+    "high": 166.54,
+    "low": 124.91
   },
   "monthly": [
     {
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 134.0,
         "high": 219.0,
-        "low": 82.1
+        "low": 82.3
       },
       "modeled_human_direction_hours": {
         "base": 3.77,
-        "high": 4.31,
+        "high": 4.3,
         "low": 3.23
       },
       "month": "2026-05",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 209.3,
-        "high": 333.5,
+        "base": 209.4,
+        "high": 333.7,
         "low": 134.4
       },
       "modeled_human_direction_hours": {
-        "base": 18.49,
-        "high": 21.13,
-        "low": 15.85
+        "base": 18.48,
+        "high": 21.12,
+        "low": 15.84
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 200.8,
-        "high": 316.3,
+        "base": 200.9,
+        "high": 316.4,
         "low": 131.8
       },
       "modeled_human_direction_hours": {
-        "base": 82.56,
-        "high": 94.36,
-        "low": 70.77
+        "base": 82.6,
+        "high": 94.4,
+        "low": 70.8
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1642,
+      "public_merged_pull_requests": 1643,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 16580.77,
-        "high": 22384.68,
-        "low": 12435.62
+        "base": 16591.73,
+        "high": 22399.48,
+        "low": 12443.84
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 1894.29,
-        "high": 2700.73,
-        "low": 1309.55
+        "base": 1895.65,
+        "high": 2702.63,
+        "low": 1310.5
       }
     }
   ],
-  "public_accepted_pull_requests": 1884,
+  "public_accepted_pull_requests": 1885,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 26028.21,
-    "high": 35480.36,
-    "low": 19179.59
+    "base": 26039.17,
+    "high": 35495.16,
+    "low": 19187.81
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3342.94,
-    "high": 5002.92,
-    "low": 2263.11
+    "base": 3344.3,
+    "high": 5004.82,
+    "low": 2264.06
   },
   "updated_at_utc": "2026-10-13",
   "window": {
-    "end": "2026-10-13T15:50:00Z",
+    "end": "2026-10-13T16:16:22Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -55272,6 +55272,35 @@
       "pull_request": 9778,
       "title": "Accept signed zero in the BigInteger decoder",
       "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9778"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T14:58:51Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 5,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 11,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.96,
+        "high": 14.8,
+        "low": 8.22
+      },
+      "merged_at": "2026-10-13T16:16:22Z",
+      "modeled_human_direction_hours": {
+        "base": 1.36,
+        "high": 1.9,
+        "low": 0.95
+      },
+      "project": "mvschwarz/openrig",
+      "pull_request": 1234,
+      "title": "fix(context): allow literal dots in file path segments",
+      "url": "https://github.com/mvschwarz/openrig/pull/1234"
     }
   ]
 }
