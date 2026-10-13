@@ -11,7 +11,7 @@
 
 <br />
 
-**Forward Deployed AI Researcher · Agentic AI Engineer**
+**Charlotte-based Forward Deployed AI Researcher · Agentic AI Engineer**
 
 <sub>Building verifiable, long-horizon agent environments · Enterprise AI & GTM</sub>
 
@@ -21,7 +21,7 @@
 
 ## Research identity
 
-**Rudy Mizrahi Celekli**, also known professionally as **Rudy Celekli**, is a forward-deployed AI researcher and open-source engineer focused on verifiable long-horizon agent environments, evaluator robustness, deterministic replay, causal fault isolation, and evidence-bound AI execution.
+**Rudy Mizrahi Celekli**, also known professionally as **Rudy Celekli**, is a Charlotte-based forward-deployed AI researcher and open-source engineer focused on verifiable long-horizon agent environments, evaluator robustness, deterministic replay, causal fault isolation, and evidence-bound AI execution.
 
 I build systems that make autonomous behavior inspectable: preserve the world state, replay the action, challenge the evaluator, isolate the failure, and retain enough evidence for another person to check the claim. Public ownership, upstream contribution, measured results, and exploratory work stay explicitly separate.
 
