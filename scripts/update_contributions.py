@@ -2482,12 +2482,12 @@ def render_readme_section(
         "<!-- contribution-stats:start -->",
         "## Open-source impact, verified",
         "",
-        "My upstream work is discovered automatically across public repositories outside my account. A project enters when GitHub verifies at least one attribution signal: its Contributors index, its contribution graph, an authored commit on the default branch, or an authored merged PR on any branch. **GitHub-listed contributor** remains the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. Only merged PRs contribute accepted-line and accepted-file totals; graph credit never converts an open or closed-unmerged PR into accepted work. Stars and forks describe repository reach, not personal credit.",
+        "My upstream work is discovered automatically across public repositories outside my account. A project enters when GitHub verifies at least one attribution signal: its Contributors index, its contribution graph, an authored commit on the default branch, or an authored merged PR on any branch. **GitHub-listed contributor** remains the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. GitHub API rank is the one-based position returned by that repository's Contributors API; **—** means the rank is unavailable or still pending, not that the contribution is unranked. Only merged PRs contribute accepted-line and accepted-file totals; graph credit never converts an open or closed-unmerged PR into accepted work. Stars and forks describe repository reach, not personal credit.",
         "",
         f'<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for {html.escape(", ".join(str(repo["name"]) for repo in repositories))}" />',
         "",
-        "| Project and evidence | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
-        "|:--|--:|--:|--:|--:|--:|",
+        "| Project and evidence | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
+        "|:--|--:|--:|--:|--:|--:|--:|",
     ]
     for repo in repositories:
         tier = str(repo.get("verification_tier") or "github_listed_contributor")
@@ -2505,6 +2505,12 @@ def render_readme_section(
         )
         merged_prs = int(repo["merged_prs"])
         attributed_commits = int(repo["contributor_commits"])
+        contributor_rank = repo.get("contributor_rank")
+        rank_cell = (
+            f"[#{int(contributor_rank):,}]({repo['contributors_url']})"
+            if contributor_rank is not None
+            else "—"
+        )
         accepted_lines = (
             f"+{int(repo['accepted_additions']):,} / "
             f"−{int(repo['accepted_deletions']):,}"
@@ -2517,6 +2523,7 @@ def render_readme_section(
         lines.append(
             f"| **[{repo['name']}]({repo['url']})** · "
             f"[{evidence_label}]({evidence_url}) "
+            f"| {rank_cell} "
             f"| {f'{attributed_commits:,}' if attributed_commits else '—'} "
             f"| [{merged_prs:,}]({repo['pull_requests_url']}) "
             f"| {accepted_lines} "

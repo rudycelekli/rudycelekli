@@ -478,6 +478,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "pull_requests_url": "https://github.com/upstream/project/pulls?q=author%3Arudycelekli+is%3Amerged",
             "verification_tier": "github_listed_contributor",
             "verification_label": "GitHub-listed contributor",
+            "contributor_rank": 2,
             "contributor_commits": 12,
             "merged_prs": 9,
             "accepted_additions": 1_234,
@@ -490,12 +491,13 @@ class ContributionDiscoveryTests(unittest.TestCase):
         section = subject.render_readme_section([repository], [], "2026-10-05")
 
         self.assertIn(
-            "| Project and evidence | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
+            "| Project and evidence | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
             section,
         )
         self.assertIn("[GitHub-listed contributor]", section)
-        self.assertIn("| 12 | [9]", section)
+        self.assertIn("| [#2](https://github.com/upstream/project/graphs/contributors) | 12 | [9]", section)
         self.assertIn("| +1,234 / −56 | 42 | 7,890 ★ · 321 forks |", section)
+        self.assertIn("GitHub API rank is the one-based position", section)
         self.assertNotIn("- **[Upstream Project]", section)
 
         default_only = {
@@ -503,6 +505,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "name": "Default Branch Project",
             "verification_tier": "default_branch_commit_verified",
             "verification_label": "Default-branch commit verified",
+            "contributor_rank": None,
             "contributor_commits": 4,
             "merged_prs": 0,
             "accepted_additions": 0,
@@ -513,7 +516,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             [default_only], [], "2026-10-05"
         )
         self.assertIn("[Default-branch commit verified]", default_section)
-        self.assertIn("| 4 | [0]", default_section)
+        self.assertIn("| — | 4 | [0]", default_section)
         self.assertIn("| — | — | 7,890 ★ · 321 forks |", default_section)
 
         graph_only = {
@@ -521,6 +524,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "name": "Graph Project",
             "verification_tier": "github_contribution_graph_verified",
             "verification_label": "GitHub graph verified",
+            "contributor_rank": None,
             "contribution_graph_evidence_url": "https://github.com/rudycelekli?tab=overview",
             "contributor_commits": 1,
             "merged_prs": 0,
@@ -535,7 +539,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "[GitHub graph verified](https://github.com/rudycelekli?tab=overview)",
             graph_section,
         )
-        self.assertIn("| 1 | [0]", graph_section)
+        self.assertIn("| — | 1 | [0]", graph_section)
         self.assertIn("Only merged PRs contribute accepted-line", graph_section)
 
     @mock.patch.object(subject, "official_contribution_stats")
