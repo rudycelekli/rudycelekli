@@ -1,6 +1,6 @@
 {
   "agentic_power_x": {
-    "base": 192.3,
+    "base": 192.4,
     "high": 305.7,
     "low": 124.2
   },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 701.8,
+  "engineer_weeks_at_40h": 702.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 221.3,
         "high": 352.9,
-        "low": 142.1
+        "low": 142.2
       },
       "modeled_human_direction_hours": {
         "base": 17.48,
-        "high": 19.98,
+        "high": 19.97,
         "low": 14.98
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 215.9,
-        "high": 340.1,
+        "base": 216.0,
+        "high": 340.2,
         "low": 141.7
       },
       "modeled_human_direction_hours": {
-        "base": 86.26,
-        "high": 98.58,
-        "low": 73.94
+        "base": 86.27,
+        "high": 98.6,
+        "low": 73.95
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1854,
+      "public_merged_pull_requests": 1855,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 18624.94,
-        "high": 25144.45,
-        "low": 13968.85
+        "base": 18633.49,
+        "high": 25155.99,
+        "low": 13975.26
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2092.94,
-        "high": 2983.56,
-        "low": 1446.95
+        "base": 2093.67,
+        "high": 2984.58,
+        "low": 1447.46
       }
     }
   ],
-  "public_accepted_pull_requests": 2096,
+  "public_accepted_pull_requests": 2097,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 28072.38,
-    "high": 38240.13,
-    "low": 20712.82
+    "base": 28080.93,
+    "high": 38251.67,
+    "low": 20719.23
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3541.59,
-    "high": 5285.75,
-    "low": 2400.51
+    "base": 3542.32,
+    "high": 5286.77,
+    "low": 2401.02
   },
   "updated_at_utc": "2026-10-14",
   "window": {
-    "end": "2026-10-14T16:33:05Z",
+    "end": "2026-10-14T16:40:25Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -61420,6 +61420,35 @@
       "pull_request": 820,
       "title": "fix(traces): center filtered --around-event on the original event number",
       "url": "https://github.com/Asymptote-Labs/agent-beacon/pull/820"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T07:17:00Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.55,
+        "high": 11.54,
+        "low": 6.41
+      },
+      "merged_at": "2026-10-14T16:40:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "Asymptote-Labs/agent-beacon",
+      "pull_request": 821,
+      "title": "fix(traces): quit on Ctrl+C while entering a search",
+      "url": "https://github.com/Asymptote-Labs/agent-beacon/pull/821"
     }
   ]
 }
