@@ -33,6 +33,7 @@ LOGIN = "rudycelekli"
 OWNED_PROJECT_DISPLAY_LIMIT = 8
 FEATURED_OWNED_PROJECT_LIMIT = 6
 BUILDING_FRONTIER_PAGE_SIZE = 3
+KYA_EVIDENCE_FULL_NAME = f"{LOGIN}/kya-evidence"
 # The profile repository is presentation infrastructure, not a product. The
 # user has also explicitly identified DreamMachine as not their authored work.
 OWNED_PROJECT_EXCLUSIONS = {
@@ -65,6 +66,7 @@ OWNED_PRESENTATION_OVERRIDES = {
     f"{LOGIN}/proofseal": {"name": "ProofSeal"},
     f"{LOGIN}/gradia-guard": {"name": "Gradia Guard"},
     f"{LOGIN}/kin-connect": {"name": "Kin Connect"},
+    KYA_EVIDENCE_FULL_NAME: {"name": "KYA Evidence"},
 }
 ACCENT_PAIRS = (
     ("#2DE2C5", "#4D7CFE"),
@@ -1194,9 +1196,14 @@ def select_featured_owned_projects(
     updated: str,
     limit: int = FEATURED_OWNED_PROJECT_LIMIT,
 ) -> list[dict[str, object]]:
-    """Re-rank the strongest current public projects for the profile top fold."""
+    """Re-rank the public frontier while keeping strategic anchors separate."""
     return sorted(
-        repositories,
+        [
+            repo
+            for repo in repositories
+            if str(repo.get("full_name") or "").casefold()
+            != KYA_EVIDENCE_FULL_NAME.casefold()
+        ],
         key=lambda repo: (
             -owned_project_portfolio_score(repo, updated),
             str(repo.get("full_name") or repo.get("name") or "").casefold(),
@@ -1832,8 +1839,23 @@ def render_hero_svg(
 def render_building_now_svg(
     owned_repositories: list[dict[str, object]], updated: str
 ) -> str:
-    """Render the private product anchor and rotating auto-ranked frontier."""
+    """Render equal strategic anchors and the rotating auto-ranked frontier."""
     featured = select_featured_owned_projects(owned_repositories, updated)
+    kya_repo = next(
+        (
+            repo
+            for repo in owned_repositories
+            if str(repo.get("full_name") or "").casefold()
+            == KYA_EVIDENCE_FULL_NAME.casefold()
+        ),
+        None,
+    )
+    kya_activity = (
+        f"{compact_counted(int(kya_repo['contributor_commits']), 'COMMIT')} · "
+        f"{compact_counted(int(kya_repo['stargazers']), 'STAR')}"
+        if kya_repo
+        else "PUBLIC ALPHA · OPEN PROTOCOL"
+    )
     frontier_pages: list[str] = []
     page_count = max(
         1,
@@ -1898,7 +1920,7 @@ def render_building_now_svg(
     project_names = ", ".join(str(repo["name"]) for repo in featured)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
   <title id="title">What Rudy Celekli is building now</title>
-  <desc id="desc">Gradia is the private product anchor for business-grounded AI agent evaluation. The automatically ranked public frontier currently features {html.escape(project_names)} using repository reach, recent shipping, public releases, attributed work, and project completeness.</desc>
+  <desc id="desc">Gradia and KYA Evidence are equal strategic anchors: one evaluates whether agents can do real business work, while the other proposes portable, scope-bound agent assurance with inspectable evidence. The automatically ranked public frontier currently features {html.escape(project_names)} using repository reach, recent shipping, public releases, attributed work, and project completeness.</desc>
   <defs>
     <style>
       .private-signal {{ stroke-dasharray: 7 10; animation: building-flow 2.8s linear infinite; }}
@@ -1941,23 +1963,30 @@ def render_building_now_svg(
   <rect x="1" y="1" width="1198" height="408" rx="27" fill="none" stroke="#26364D"/>
   <rect x="42" y="30" width="66" height="4" rx="2" fill="url(#building-rule)"/>
   <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="27" font-weight="780">BUILDING, NOW</text>
-  <text x="1158" y="65" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">PRIVATE PRODUCT + AUTO-RANKED PUBLIC FRONTIER · {html.escape(updated)} UTC</text>
+  <text x="1158" y="65" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">STRATEGIC ANCHORS + AUTO-RANKED PUBLIC FRONTIER · {html.escape(updated)} UTC</text>
 
   <g transform="translate(42 103)" font-family="Avenir Next,Segoe UI,sans-serif">
-    <rect width="410" height="246" rx="24" fill="#0A2026" stroke="#2DE2C5" stroke-opacity="0.54"/>
-    <circle cx="342" cy="76" r="98" fill="url(#building-glow)"/>
-    <text x="28" y="37" fill="#6EE7D8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" letter-spacing="1.6">PRIVATE PRODUCT · PUBLIC EVIDENCE</text>
-    <text x="28" y="92" fill="#F8FAFC" font-size="42" font-weight="830">Gradia</text>
-    <text x="28" y="127" fill="#D6E2EE" font-size="17" font-weight="650">Know which AI agents</text>
-    <text x="28" y="151" fill="#D6E2EE" font-size="17" font-weight="650">can actually do your work.</text>
-    <text x="28" y="187" fill="#91A2B8" font-size="12.5">Evaluation grounded in real workflows,</text>
-    <text x="28" y="206" fill="#91A2B8" font-size="12.5">business rules, and inspectable evidence.</text>
-    <circle class="private-pulse" cx="342" cy="124" r="54" fill="none" stroke="#2DE2C5" stroke-opacity=".42"/>
-    <circle class="private-pulse delay" cx="342" cy="124" r="54" fill="none" stroke="#4D7CFE" stroke-opacity=".34"/>
-    <circle class="private-orbit" cx="342" cy="124" r="43" fill="none" stroke="#7FFFEA" stroke-opacity=".34" stroke-dasharray="4 10"/>
-    <path class="private-signal" d="M278 72 H352 V178 H306" fill="none" stroke="#2DE2C5" stroke-width="2"/>
-    <circle cx="278" cy="72" r="5" fill="#2DE2C5"/><circle cx="306" cy="178" r="5" fill="#4D7CFE"/>
-    <text x="28" y="229" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11">GRADIAHQ.COM</text>
+    <g>
+      <rect width="410" height="117" rx="20" fill="#0A2026" stroke="#2DE2C5" stroke-opacity="0.54"/>
+      <circle cx="348" cy="58" r="72" fill="url(#building-glow)"/>
+      <text x="22" y="27" fill="#6EE7D8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5" letter-spacing="1.35">STRATEGIC ANCHOR · PRIVATE PRODUCT</text>
+      <text x="22" y="62" fill="#F8FAFC" font-size="29" font-weight="830">Gradia</text>
+      <text x="22" y="84" fill="#D6E2EE" font-size="12.5" font-weight="650">Know which agents can do real business work.</text>
+      <text x="22" y="104" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5">GRADIAHQ.COM · WORKFLOW-GROUNDED EVALUATION</text>
+      <circle class="private-pulse" cx="354" cy="57" r="31" fill="none" stroke="#2DE2C5" stroke-opacity=".42"/>
+      <circle class="private-orbit" cx="354" cy="57" r="25" fill="none" stroke="#7FFFEA" stroke-opacity=".34" stroke-dasharray="4 8"/>
+      <path class="private-signal" d="M324 42 H363 V76 H337" fill="none" stroke="#2DE2C5" stroke-width="1.5"/>
+    </g>
+    <g transform="translate(0 129)">
+      <rect width="410" height="117" rx="20" fill="#141329" stroke="#9B7CFF" stroke-opacity="0.62"/>
+      <text x="22" y="27" fill="#C4B5FD" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5" letter-spacing="1.35">STRATEGIC ANCHOR · PUBLIC PROTOCOL</text>
+      <text x="22" y="62" fill="#F8FAFC" font-size="29" font-weight="830">KYA Evidence</text>
+      <text x="22" y="84" fill="#D6E2EE" font-size="12.5" font-weight="650">Know Your Agent: exact scope, evidence, policy.</text>
+      <text x="22" y="104" fill="#9B7CFF" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5">{html.escape(kya_activity)} · EXPERIMENTAL REFERENCE</text>
+      <circle class="private-pulse delay" cx="354" cy="57" r="31" fill="none" stroke="#9B7CFF" stroke-opacity=".44"/>
+      <circle class="private-orbit" cx="354" cy="57" r="25" fill="none" stroke="#C4B5FD" stroke-opacity=".42" stroke-dasharray="3 7"/>
+      <path class="private-signal" d="M334 57 L346 69 L373 42" fill="none" stroke="#C4B5FD" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
   </g>
 
   <g transform="translate(494 103)" font-family="Avenir Next,Segoe UI,sans-serif">
@@ -1966,7 +1995,7 @@ def render_building_now_svg(
   </g>
 
   <text x="42" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">SIGNALS: REACH · SHIP RECENCY · RELEASES · ATTRIBUTED WORK · COMPLETENESS</text>
-  <text x="1158" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">{len(featured)} PROJECTS · ROTATES EVERY 8 SEC · RE-RANKED EVERY 30 MIN</text>
+  <text x="1158" y="383" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">2 ANCHORS · {len(featured)} FRONTIER · ROTATES 8 SEC · REFRESH 30 MIN</text>
   <rect x="494" y="396" width="664" height="2" rx="1" fill="#203149"/><rect class="frontier-progress" x="494" y="396" width="664" height="2" rx="1" fill="url(#building-rule)"/>
 </svg>
 """
@@ -1975,7 +2004,7 @@ def render_building_now_svg(
 def render_building_now_readme(
     owned_repositories: list[dict[str, object]], updated: str
 ) -> str:
-    """Render the compact accessible text companion for the top portfolio rail."""
+    """Render strategic anchors and the accessible auto-ranked frontier."""
     featured = select_featured_owned_projects(owned_repositories, updated)
     page_count = max(
         1,
@@ -1989,9 +2018,13 @@ def render_building_now_readme(
         "<!-- building-now:start -->",
         "## Building now",
         "",
-        f'<img src="./assets/building-now.svg" width="100%" alt="Gradia private product and {len(featured)} automatically ranked public projects Rudy is building, shown in {view_label}" />',
+        f'<img src="./assets/building-now.svg" width="100%" alt="Gradia and KYA Evidence as equal strategic anchors beside {len(featured)} automatically ranked public projects Rudy is building, shown in {view_label}" />',
+        "",
+        "**Strategic anchors:**",
         "",
         "**[Gradia](https://www.gradiahq.com)** for business-grounded AI agent evaluation: test real workflows and rules, inspect failures, and compare changes before release.",
+        "",
+        "**[KYA Evidence · Know Your Agent](https://github.com/rudycelekli/kya-evidence)** for portable, scope-bound agent assurance: bind the exact system, accept signed evidence under explicit relying-party policy, and produce an explainable, contestable assessment. This is an experimental reference implementation and standardization path—not an adopted industry standard.",
         "",
         f"**Public frontier, selected automatically and shown in {view_label}:**",
         "",
@@ -2016,7 +2049,7 @@ def render_building_now_readme(
     lines.extend(
         [
             "",
-            f"<sub>Public selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia is intentionally separate because its private repository evidence remains private</sub>",
+            f"<sub>Public frontier selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia and KYA Evidence are intentionally separate strategic anchors; KYA remains in the complete owned-project evidence while Gradia's private repository evidence remains private</sub>",
             "<!-- building-now:end -->",
         ]
     )

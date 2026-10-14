@@ -740,8 +740,21 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertNotIn("Sixth Project", section)
         self.assertNotIn("Pending Project", section)
 
-    def test_building_now_re_ranks_public_projects_and_keeps_gradia_private(self):
+    def test_building_now_keeps_strategic_anchors_outside_ranked_frontier(self):
         projects = [
+            {
+                "name": "KYA Evidence",
+                "full_name": "rudycelekli/kya-evidence",
+                "url": "https://github.com/rudycelekli/kya-evidence",
+                "description": "Know Your Agent assurance protocol reference",
+                "homepage": None,
+                "topics": ["know-your-agent", "agent-assurance"],
+                "stargazers": 2,
+                "forks": 0,
+                "contributor_commits": 90,
+                "pushed_at": "2026-10-07T00:00:00Z",
+                "accent": "#9B7CFF",
+            },
             {
                 "name": "Fresh Project",
                 "full_name": "rudycelekli/fresh-project",
@@ -816,19 +829,24 @@ class ContributionDiscoveryTests(unittest.TestCase):
             [repo["name"] for repo in featured],
             ["Adopted Project", "Small Project"],
         )
-        self.assertIn("PRIVATE PRODUCT · PUBLIC EVIDENCE", svg)
+        self.assertIn("STRATEGIC ANCHOR · PRIVATE PRODUCT", svg)
+        self.assertIn("STRATEGIC ANCHOR · PUBLIC PROTOCOL", svg)
+        self.assertIn("KYA Evidence", svg)
+        self.assertIn("90 COMMITS · 2 STARS · EXPERIMENTAL REFERENCE", svg)
         self.assertIn("PUBLIC FRONTIER / 6 AUTO-RANKED", svg)
         self.assertIn("VIEW 1 / 2", svg)
         self.assertIn("VIEW 2 / 2", svg)
         self.assertIn("frontier-page-two 16s", svg)
-        self.assertIn("ROTATES EVERY 8 SEC", svg)
-        self.assertIn("RE-RANKED EVERY 30 MIN", svg)
+        self.assertIn("ROTATES 8 SEC", svg)
+        self.assertIn("REFRESH 30 MIN", svg)
         self.assertIn("v0.1.0 PRE-RELEASE", svg)
         self.assertIn("prefers-reduced-motion", svg)
         self.assertIn('class="private-orbit"', svg)
         self.assertIn('class="frontier-progress"', svg)
         self.assertIn('class="frontier-row frontier-row-1"', svg)
         self.assertIn("Gradia", readme)
+        self.assertIn("KYA Evidence · Know Your Agent", readme)
+        self.assertIn("not an adopted industry standard", readme)
         self.assertIn("private repository evidence remains private", readme)
         self.assertIn("Adopted Project", readme)
         self.assertIn("v0.1.0 pre-release", readme)
