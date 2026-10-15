@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 194.2,
-    "high": 308.6,
+    "high": 308.7,
     "low": 125.4
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 709.4,
+  "engineer_weeks_at_40h": 709.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -358,12 +358,12 @@
     {
       "active_repositories": 4,
       "agentic_power_x": {
-        "base": 91.8,
+        "base": 93.1,
         "high": 151.3,
         "low": 56.5
       },
       "modeled_human_direction_hours": {
-        "base": 0.73,
+        "base": 0.72,
         "high": 0.83,
         "low": 0.62
       },
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 143.1,
-        "high": 233.4,
+        "high": 234.2,
         "low": 87.8
       },
       "modeled_human_direction_hours": {
         "base": 3.53,
         "high": 4.03,
-        "low": 3.03
+        "low": 3.02
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 134.2,
+        "base": 134.4,
         "high": 219.3,
         "low": 82.3
       },
       "modeled_human_direction_hours": {
-        "base": 6.99,
+        "base": 6.98,
         "high": 7.98,
         "low": 5.99
       },
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 158.1,
         "high": 258.1,
-        "low": 96.7
+        "low": 96.8
       },
       "modeled_human_direction_hours": {
         "base": 5.12,
-        "high": 5.86,
+        "high": 5.85,
         "low": 4.39
       },
       "month": "2026-07",
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 169.5,
         "high": 276.9,
-        "low": 103.8
+        "low": 103.9
       },
       "modeled_human_direction_hours": {
         "base": 12.24,
-        "high": 13.99,
+        "high": 13.98,
         "low": 10.49
       },
       "month": "2026-08",
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 223.4,
+        "base": 223.5,
         "high": 356.2,
         "low": 143.5
       },
       "modeled_human_direction_hours": {
-        "base": 17.32,
+        "base": 17.31,
         "high": 19.79,
         "low": 14.84
       },
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 217.6,
-        "high": 342.8,
+        "base": 217.7,
+        "high": 342.9,
         "low": 142.8
       },
       "modeled_human_direction_hours": {
-        "base": 86.97,
-        "high": 99.4,
-        "low": 74.55
+        "base": 86.99,
+        "high": 99.42,
+        "low": 74.56
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1878,
+      "public_merged_pull_requests": 1879,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 18928.83,
-        "high": 25554.72,
-        "low": 14196.78
+        "base": 18935.59,
+        "high": 25563.84,
+        "low": 14201.85
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2129.91,
-        "high": 3036.5,
-        "low": 1472.42
+        "base": 2131.0,
+        "high": 3038.03,
+        "low": 1473.18
       }
     }
   ],
-  "public_accepted_pull_requests": 2120,
+  "public_accepted_pull_requests": 2121,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 28376.27,
-    "high": 38650.4,
-    "low": 20940.75
+    "base": 28383.03,
+    "high": 38659.52,
+    "low": 20945.82
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3578.56,
-    "high": 5338.69,
-    "low": 2425.98
+    "base": 3579.65,
+    "high": 5340.22,
+    "low": 2426.74
   },
   "updated_at_utc": "2026-10-15",
   "window": {
-    "end": "2026-10-15T07:05:45Z",
+    "end": "2026-10-15T07:46:11Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -62116,6 +62116,35 @@
       "pull_request": 3661,
       "title": "fix(mcp): keep a snapshot open ahead of later calls on the same connection",
       "url": "https://github.com/morluto/rea/pull/3661"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-15T03:58:59Z",
+      "evidence": {
+        "additions": 10,
+        "changed_files": 2,
+        "comments": 4,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.76,
+        "high": 9.12,
+        "low": 5.07
+      },
+      "merged_at": "2026-10-15T07:46:11Z",
+      "modeled_human_direction_hours": {
+        "base": 1.09,
+        "high": 1.53,
+        "low": 0.76
+      },
+      "project": "openclaw/Peekaboo",
+      "pull_request": 1075,
+      "title": "fix(move): reject non-finite --at coordinates",
+      "url": "https://github.com/openclaw/Peekaboo/pull/1075"
     }
   ]
 }
