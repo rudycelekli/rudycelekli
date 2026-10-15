@@ -5,7 +5,7 @@
 <br />
 
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-connect-0B1220?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0A66C2&color=0B1220)](https://www.linkedin.com/in/rudymizrahi/)
-[![Gradia](https://img.shields.io/badge/GRADIA-proof--bound_AI-0B1220?style=for-the-badge&labelColor=13B8A6&color=0B1220)](https://www.gradiahq.com)
+[![Gradia](https://img.shields.io/badge/GRADIA-AI_research_%26_implementation_lab-0B1220?style=for-the-badge&labelColor=13B8A6&color=0B1220)](https://www.gradiahq.com)
 [![ORCID](https://img.shields.io/badge/ORCID-research_record-0B1220?style=for-the-badge&logo=orcid&logoColor=white&labelColor=A6CE39&color=0B1220)](https://orcid.org/0009-0000-7043-3766)
 [![Follow](https://img.shields.io/github/followers/rudycelekli?style=for-the-badge&logo=github&label=FOLLOW&labelColor=7C3AED&color=0B1220)](https://github.com/rudycelekli?tab=followers)
 
@@ -13,9 +13,9 @@
 
 **Charlotte-based Forward Deployed AI Researcher · Agentic AI Engineer**
 
-<sub>Building verifiable, long-horizon agent environments · Enterprise AI & GTM</sub>
+<sub>Building verifiable, long-horizon agent systems · Research, implementation & open source</sub>
 
-[Gradia](https://www.gradiahq.com) · [Snorkel AI](https://snorkel.ai/) · [Axiom Consulting](https://axiomconsulting.ai/)
+[Gradia — AI Research & Implementation Lab](https://www.gradiahq.com) · [Snorkel AI](https://snorkel.ai/) · [AxiomConsulting.ai — A Gradia Company](https://axiomconsulting.ai/)
 
 </div>
 
@@ -46,7 +46,7 @@ I build systems that make autonomous behavior inspectable: preserve the world st
 
 **Strategic anchors:**
 
-**[Gradia](https://www.gradiahq.com)** for business-grounded AI agent evaluation: test real workflows and rules, inspect failures, and compare changes before release.
+**[Gradia — AI Research & Implementation Lab](https://www.gradiahq.com)** connects applied research, evaluation, reusable software, and hands-on enterprise implementation. It is building a verified software factory around **Blocks · Factory · Verify · Workers · Intelligence**, with [AxiomConsulting.ai](https://axiomconsulting.ai/) as its implementation, forward-deployed AI engineering, and architecture arm. The research and evaluation foundation is established; the broader factory products remain in development.
 
 **[KYA Evidence · Know Your Agent](https://github.com/rudycelekli/kya-evidence)** for portable, scope-bound agent assurance: bind the exact system, accept signed evidence under explicit relying-party policy, and produce an explainable, contestable assessment. This is an experimental reference implementation and standardization path—not an adopted industry standard.
 
@@ -59,7 +59,7 @@ I build systems that make autonomous behavior inspectable: preserve the world st
 5. **[Kin Connect](https://github.com/rudycelekli/kin-connect)** · [v0.2.1 pre-release](https://github.com/rudycelekli/kin-connect/releases/tag/v0.2.1): Your agent. Your people. Open-source agent-to-agent introductions for friendship, dating, and collaboration.
 6. **[lifeweave](https://github.com/rudycelekli/lifeweave)** · [v0.1.0-alpha.4 pre-release](https://github.com/rudycelekli/lifeweave/releases/tag/v0.1.0-alpha.4): Local-first proactive intelligent UI for chosen goals, consented evidence and working personal or business surfaces.
 
-<sub>Public frontier selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked 2026-10-15 UTC · Gradia and KYA Evidence are intentionally separate strategic anchors; KYA remains in the complete owned-project evidence while Gradia's private repository evidence remains private</sub>
+<sub>Public frontier selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked 2026-10-15 UTC · Gradia and KYA Evidence are intentionally separate strategic anchors; the broader Gradia factory is described as in development and its private repository evidence remains private</sub>
 <!-- building-now:end -->
 
 ## Watch the operating brief

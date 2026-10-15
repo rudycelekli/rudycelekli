@@ -829,8 +829,9 @@ class ContributionDiscoveryTests(unittest.TestCase):
             [repo["name"] for repo in featured],
             ["Adopted Project", "Small Project"],
         )
-        self.assertIn("STRATEGIC ANCHOR · PRIVATE PRODUCT", svg)
+        self.assertIn("STRATEGIC ANCHOR · AI LAB", svg)
         self.assertIn("STRATEGIC ANCHOR · PUBLIC PROTOCOL", svg)
+        self.assertIn("VERIFIED SOFTWARE FACTORY · IN DEVELOPMENT", svg)
         self.assertIn("KYA Evidence", svg)
         self.assertIn("90 COMMITS · 2 STARS · EXPERIMENTAL REFERENCE", svg)
         self.assertIn("PUBLIC FRONTIER / 6 AUTO-RANKED", svg)
@@ -845,6 +846,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn('class="frontier-progress"', svg)
         self.assertIn('class="frontier-row frontier-row-1"', svg)
         self.assertIn("Gradia", readme)
+        self.assertIn("AI Research & Implementation Lab", readme)
+        self.assertIn("Blocks · Factory · Verify · Workers · Intelligence", readme)
+        self.assertIn("AxiomConsulting.ai", readme)
+        self.assertIn("broader factory products remain in development", readme)
         self.assertIn("KYA Evidence · Know Your Agent", readme)
         self.assertIn("not an adopted industry standard", readme)
         self.assertIn("private repository evidence remains private", readme)

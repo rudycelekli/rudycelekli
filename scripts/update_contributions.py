@@ -1920,7 +1920,7 @@ def render_building_now_svg(
     project_names = ", ".join(str(repo["name"]) for repo in featured)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" role="img" aria-labelledby="title desc">
   <title id="title">What Rudy Celekli is building now</title>
-  <desc id="desc">Gradia and KYA Evidence are equal strategic anchors: one evaluates whether agents can do real business work, while the other proposes portable, scope-bound agent assurance with inspectable evidence. The automatically ranked public frontier currently features {html.escape(project_names)} using repository reach, recent shipping, public releases, attributed work, and project completeness.</desc>
+  <desc id="desc">Gradia and KYA Evidence are equal strategic anchors. Gradia is an AI Research and Implementation Lab building a verified software factory on its existing research and evaluation foundation. KYA Evidence proposes portable, scope-bound agent assurance with inspectable evidence. The automatically ranked public frontier currently features {html.escape(project_names)} using repository reach, recent shipping, public releases, attributed work, and project completeness.</desc>
   <defs>
     <style>
       .private-signal {{ stroke-dasharray: 7 10; animation: building-flow 2.8s linear infinite; }}
@@ -1969,10 +1969,10 @@ def render_building_now_svg(
     <g>
       <rect width="410" height="117" rx="20" fill="#0A2026" stroke="#2DE2C5" stroke-opacity="0.54"/>
       <circle cx="348" cy="58" r="72" fill="url(#building-glow)"/>
-      <text x="22" y="27" fill="#6EE7D8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5" letter-spacing="1.35">STRATEGIC ANCHOR · PRIVATE PRODUCT</text>
+      <text x="22" y="27" fill="#6EE7D8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5" letter-spacing="1.35">STRATEGIC ANCHOR · AI LAB</text>
       <text x="22" y="62" fill="#F8FAFC" font-size="29" font-weight="830">Gradia</text>
-      <text x="22" y="84" fill="#D6E2EE" font-size="12.5" font-weight="650">Know which agents can do real business work.</text>
-      <text x="22" y="104" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5">GRADIAHQ.COM · WORKFLOW-GROUNDED EVALUATION</text>
+      <text x="22" y="84" fill="#D6E2EE" font-size="12.5" font-weight="650">Research, build, verify and implement real workflows.</text>
+      <text x="22" y="104" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5">VERIFIED SOFTWARE FACTORY · IN DEVELOPMENT</text>
       <circle class="private-pulse" cx="354" cy="57" r="31" fill="none" stroke="#2DE2C5" stroke-opacity=".42"/>
       <circle class="private-orbit" cx="354" cy="57" r="25" fill="none" stroke="#7FFFEA" stroke-opacity=".34" stroke-dasharray="4 8"/>
       <path class="private-signal" d="M324 42 H363 V76 H337" fill="none" stroke="#2DE2C5" stroke-width="1.5"/>
@@ -2022,7 +2022,7 @@ def render_building_now_readme(
         "",
         "**Strategic anchors:**",
         "",
-        "**[Gradia](https://www.gradiahq.com)** for business-grounded AI agent evaluation: test real workflows and rules, inspect failures, and compare changes before release.",
+        "**[Gradia — AI Research & Implementation Lab](https://www.gradiahq.com)** connects applied research, evaluation, reusable software, and hands-on enterprise implementation. It is building a verified software factory around **Blocks · Factory · Verify · Workers · Intelligence**, with [AxiomConsulting.ai](https://axiomconsulting.ai/) as its implementation, forward-deployed AI engineering, and architecture arm. The research and evaluation foundation is established; the broader factory products remain in development.",
         "",
         "**[KYA Evidence · Know Your Agent](https://github.com/rudycelekli/kya-evidence)** for portable, scope-bound agent assurance: bind the exact system, accept signed evidence under explicit relying-party policy, and produce an explainable, contestable assessment. This is an experimental reference implementation and standardization path—not an adopted industry standard.",
         "",
@@ -2049,7 +2049,7 @@ def render_building_now_readme(
     lines.extend(
         [
             "",
-            f"<sub>Public frontier selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia and KYA Evidence are intentionally separate strategic anchors; KYA remains in the complete owned-project evidence while Gradia's private repository evidence remains private</sub>",
+            f"<sub>Public frontier selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia and KYA Evidence are intentionally separate strategic anchors; the broader Gradia factory is described as in development and its private repository evidence remains private</sub>",
             "<!-- building-now:end -->",
         ]
     )
@@ -2710,7 +2710,7 @@ def main() -> int:
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",
             "owned_project_ranking": "The profile spotlight ranks the complete discovered set by stars, recent activity, then GitHub-attributed commits. Every qualifying owned repository remains in this evidence file.",
             "release_discovery": "The newest public, non-draft GitHub release or prerelease is discovered for every owned public project. A recent release adds a decaying 150-day launch signal and is linked directly in the profile.",
-            "building_now_ranking": "The top-fold public frontier is re-ranked on every run using repository reach, 120-day shipping recency, recent public releases, attributed commits, and project completeness signals. Gradia remains a separately disclosed private-product anchor and contributes no private repository details.",
+            "building_now_ranking": "The top-fold public frontier is re-ranked on every run using repository reach, 120-day shipping recency, recent public releases, attributed commits, and project completeness signals. Gradia remains a separately disclosed AI Research and Implementation Lab anchor; its verified-software-factory direction is labeled in development and contributes no private repository details.",
             "ownership_boundary": "Repository ownership is reported separately and is never counted as upstream contributor credit or accepted merged-PR work.",
         },
         "repositories": public_repositories,
