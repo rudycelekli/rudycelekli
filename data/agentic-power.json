@@ -1,14 +1,14 @@
 {
   "agentic_power_x": {
-    "base": 199.8,
-    "high": 317.4,
+    "base": 199.9,
+    "high": 317.6,
     "low": 129.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0398,
-      "high": 0.0455,
+      "high": 0.0454,
       "low": 0.0341
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 730.6,
+  "engineer_weeks_at_40h": 731.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -228,12 +228,12 @@
     {
       "active_repositories": 2,
       "agentic_power_x": {
-        "base": 13.9,
+        "base": 14.7,
         "high": 23.3,
         "low": 8.8
       },
       "modeled_human_direction_hours": {
-        "base": 0.18,
+        "base": 0.17,
         "high": 0.2,
         "low": 0.15
       },
@@ -334,11 +334,11 @@
       "agentic_power_x": {
         "base": 115.5,
         "high": 188.4,
-        "low": 70.4
+        "low": 70.8
       },
       "modeled_human_direction_hours": {
         "base": 1.55,
-        "high": 1.78,
+        "high": 1.77,
         "low": 1.33
       },
       "month": "2025-12",
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 118.1,
         "high": 192.7,
-        "low": 72.3
+        "low": 72.4
       },
       "modeled_human_direction_hours": {
         "base": 4.72,
-        "high": 5.4,
+        "high": 5.39,
         "low": 4.05
       },
       "month": "2026-04",
@@ -488,14 +488,14 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 137.8,
-        "high": 224.9,
+        "base": 138.0,
+        "high": 225.3,
         "low": 84.4
       },
       "modeled_human_direction_hours": {
-        "base": 6.81,
+        "base": 6.8,
         "high": 7.78,
-        "low": 5.84
+        "low": 5.83
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 162.2,
         "high": 264.7,
-        "low": 99.2
+        "low": 99.4
       },
       "modeled_human_direction_hours": {
         "base": 4.99,
-        "high": 5.71,
+        "high": 5.7,
         "low": 4.28
       },
       "month": "2026-07",
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 173.9,
+        "base": 174.0,
         "high": 284.2,
-        "low": 106.5
+        "low": 106.6
       },
       "modeled_human_direction_hours": {
-        "base": 11.93,
-        "high": 13.63,
+        "base": 11.92,
+        "high": 13.62,
         "low": 10.22
       },
       "month": "2026-08",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 229.2,
-        "high": 365.3,
-        "low": 147.2
+        "base": 229.5,
+        "high": 365.6,
+        "low": 147.3
       },
       "modeled_human_direction_hours": {
-        "base": 16.88,
-        "high": 19.29,
-        "low": 14.47
+        "base": 16.86,
+        "high": 19.27,
+        "low": 14.46
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 223.1,
-        "high": 351.4,
-        "low": 146.4
+        "base": 223.2,
+        "high": 351.6,
+        "low": 146.5
       },
       "modeled_human_direction_hours": {
-        "base": 88.64,
-        "high": 101.3,
-        "low": 75.97
+        "base": 88.68,
+        "high": 101.35,
+        "low": 76.01
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1956,
+      "public_merged_pull_requests": 1957,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 19775.11,
-        "high": 26697.19,
-        "low": 14831.49
+        "base": 19794.72,
+        "high": 26723.67,
+        "low": 14846.2
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2227.46,
-        "high": 3175.41,
-        "low": 1539.9
+        "base": 2230.33,
+        "high": 3179.43,
+        "low": 1541.91
       }
     }
   ],
-  "public_accepted_pull_requests": 2198,
+  "public_accepted_pull_requests": 2199,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 29222.55,
-    "high": 39792.87,
-    "low": 21575.46
+    "base": 29242.16,
+    "high": 39819.35,
+    "low": 21590.17
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3676.11,
-    "high": 5477.6,
-    "low": 2493.46
+    "base": 3678.98,
+    "high": 5481.62,
+    "low": 2495.47
   },
   "updated_at_utc": "2026-10-15",
   "window": {
-    "end": "2026-10-15T22:02:06Z",
+    "end": "2026-10-15T22:52:36Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -64378,6 +64378,35 @@
       "pull_request": 1316,
       "title": "fix(daemon): read a CRLF SPEC.md's frontmatter intent",
       "url": "https://github.com/mvschwarz/openrig/pull/1316"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-15T20:05:39Z",
+      "evidence": {
+        "additions": 315,
+        "changed_files": 6,
+        "comments": 2,
+        "commits": 10,
+        "deletions": 43,
+        "reviews": 5
+      },
+      "heh": {
+        "base": 19.61,
+        "high": 26.48,
+        "low": 14.71
+      },
+      "merged_at": "2026-10-15T22:52:36Z",
+      "modeled_human_direction_hours": {
+        "base": 2.87,
+        "high": 4.02,
+        "low": 2.01
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4403,
+      "title": "fix(rules-injector): support {a,b} brace alternation in rule globs",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4403"
     }
   ]
 }
