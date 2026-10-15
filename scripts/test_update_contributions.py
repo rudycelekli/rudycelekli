@@ -498,6 +498,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("| [#2](https://github.com/upstream/project/graphs/contributors) | 12 | [9]", section)
         self.assertIn("| +1,234 / −56 | 42 | 7,890 ★ · 321 forks |", section)
         self.assertIn("GitHub API rank is the one-based position", section)
+        self.assertIn(
+            "[Open the live sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)",
+            section,
+        )
         self.assertNotIn("- **[Upstream Project]", section)
 
         default_only = {

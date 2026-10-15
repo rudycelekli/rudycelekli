@@ -85,6 +85,8 @@ My upstream work is discovered automatically across public repositories outside 
 
 <img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for claude-mem, MoneyPrinterTurbo, openrig, iFixAi, marketingskills, Ruflo, agency-agents, Agentic-QE, CowAgent, rea, Peekaboo, OpenGTM, Vibe-Trading, edgequake, agent-beacon, cortexdb, oh-my-claudecode, helix-foundry, anatomy, e2e, hindsight, colibri, open-ontologies, VoiceStudio, open-dots, VLMEvalKit, gods-eye-view, diagram-design, utopia, ghidra, mcp-go, agent-skills, autoharness, CCBaga, benchmark-radar, agent-chrome-relay, openclaw, OpenMontage, trueforge, cost-xray, talorys, ai-job-search, agno, agent-memory, terminal-bench-science, imajev, benchmark-radar-paper, hermes-agent, text-to-cad, goplaces, mcporter, poltergeist" />
 
+**[Open the live sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)** — sort by GitHub contributor rank, merged PRs, attributed commits, accepted line changes, repository stars, or a transparent balanced view.
+
 | Project and evidence | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |
 |:--|--:|--:|--:|--:|--:|--:|
 | **[claude-mem](https://github.com/thedotmack/claude-mem)** · [GitHub-listed contributor](https://github.com/thedotmack/claude-mem/graphs/contributors) | [#2](https://github.com/thedotmack/claude-mem/graphs/contributors) | 195 | [194](https://github.com/thedotmack/claude-mem/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged) | +23,630 / −2,013 | 718 | 100,922 ★ · 8,836 forks |
