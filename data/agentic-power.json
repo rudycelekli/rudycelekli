@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 208.5,
-    "high": 331.1,
+    "high": 331.2,
     "low": 134.8
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 763.6,
+  "engineer_weeks_at_40h": 763.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 152.6,
         "high": 249.1,
-        "low": 93.3
+        "low": 93.6
       },
       "modeled_human_direction_hours": {
         "base": 3.31,
-        "high": 3.79,
+        "high": 3.78,
         "low": 2.84
       },
       "month": "2026-05",
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 143.0,
+        "base": 143.2,
         "high": 233.7,
         "low": 87.7
       },
       "modeled_human_direction_hours": {
-        "base": 6.56,
+        "base": 6.55,
         "high": 7.49,
         "low": 5.62
       },
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 180.5,
+        "base": 180.7,
         "high": 295.2,
-        "low": 110.6
+        "low": 110.7
       },
       "modeled_human_direction_hours": {
-        "base": 11.49,
-        "high": 13.13,
+        "base": 11.48,
+        "high": 13.12,
         "low": 9.84
       },
       "month": "2026-08",
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 238.1,
-        "high": 379.5,
+        "high": 379.8,
         "low": 152.9
       },
       "modeled_human_direction_hours": {
         "base": 16.25,
         "high": 18.57,
-        "low": 13.93
+        "low": 13.92
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 231.8,
-        "high": 365.1,
-        "low": 152.1
+        "base": 231.9,
+        "high": 365.2,
+        "low": 152.2
       },
       "modeled_human_direction_hours": {
-        "base": 91.0,
-        "high": 104.0,
-        "low": 78.0
+        "base": 91.02,
+        "high": 104.03,
+        "low": 78.02
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2096,
+      "public_merged_pull_requests": 2097,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 21095.69,
-        "high": 28480.06,
-        "low": 15821.98
+        "base": 21105.79,
+        "high": 28493.69,
+        "low": 15829.55
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2374.89,
-        "high": 3386.41,
-        "low": 1641.54
+        "base": 2376.47,
+        "high": 3388.62,
+        "low": 1642.65
       }
     }
   ],
-  "public_accepted_pull_requests": 2338,
+  "public_accepted_pull_requests": 2339,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 30543.13,
-    "high": 41575.74,
-    "low": 22565.95
+    "base": 30553.23,
+    "high": 41589.37,
+    "low": 22573.52
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3823.54,
-    "high": 5688.6,
-    "low": 2595.1
+    "base": 3825.12,
+    "high": 5690.81,
+    "low": 2596.21
   },
   "updated_at_utc": "2026-10-16",
   "window": {
-    "end": "2026-10-16T20:15:54Z",
+    "end": "2026-10-16T20:46:46Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -68438,6 +68438,35 @@
       "pull_request": 4420,
       "title": "fix(factory): validate listen --port as an integer in 0-65535",
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4420"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T19:27:56Z",
+      "evidence": {
+        "additions": 26,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 5,
+        "deletions": 6,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.1,
+        "high": 13.63,
+        "low": 7.57
+      },
+      "merged_at": "2026-10-16T20:46:46Z",
+      "modeled_human_direction_hours": {
+        "base": 1.58,
+        "high": 2.21,
+        "low": 1.11
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4417,
+      "title": "fix(doctor): ignore empty OMC_SKIP_HOOKS entries",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4417"
     }
   ]
 }
