@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 204.1,
-    "high": 324.2,
-    "low": 131.9
+    "base": 204.2,
+    "high": 324.3,
+    "low": 132.0
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 747.1,
+  "engineer_weeks_at_40h": 747.3,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 140.5,
+        "base": 140.7,
         "high": 229.6,
         "low": 86.1
       },
       "modeled_human_direction_hours": {
-        "base": 6.68,
+        "base": 6.67,
         "high": 7.63,
         "low": 5.72
       },
@@ -514,14 +514,14 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 165.2,
-        "high": 269.8,
+        "base": 165.5,
+        "high": 270.4,
         "low": 101.3
       },
       "modeled_human_direction_hours": {
-        "base": 4.9,
+        "base": 4.89,
         "high": 5.59,
-        "low": 4.2
+        "low": 4.19
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 177.3,
+        "base": 177.5,
         "high": 289.9,
-        "low": 108.6
+        "low": 108.7
       },
       "modeled_human_direction_hours": {
-        "base": 11.7,
-        "high": 13.37,
+        "base": 11.69,
+        "high": 13.36,
         "low": 10.02
       },
       "month": "2026-08",
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 233.8,
+        "base": 233.9,
         "high": 372.8,
         "low": 150.1
       },
       "modeled_human_direction_hours": {
-        "base": 16.55,
+        "base": 16.54,
         "high": 18.91,
         "low": 14.18
       },
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 227.4,
-        "high": 358.1,
-        "low": 149.2
+        "base": 227.5,
+        "high": 358.3,
+        "low": 149.3
       },
       "modeled_human_direction_hours": {
-        "base": 89.87,
-        "high": 102.7,
-        "low": 77.03
+        "base": 89.88,
+        "high": 102.72,
+        "low": 77.04
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2026,
+      "public_merged_pull_requests": 2027,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 20435.12,
-        "high": 27588.25,
-        "low": 15326.53
+        "base": 20443.95,
+        "high": 27600.17,
+        "low": 15333.15
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2303.25,
-        "high": 3283.85,
-        "low": 1592.12
+        "base": 2304.29,
+        "high": 3285.31,
+        "low": 1592.85
       }
     }
   ],
-  "public_accepted_pull_requests": 2268,
+  "public_accepted_pull_requests": 2269,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 29882.56,
-    "high": 40683.93,
-    "low": 22070.5
+    "base": 29891.39,
+    "high": 40695.85,
+    "low": 22077.12
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3751.9,
-    "high": 5586.04,
-    "low": 2545.68
+    "base": 3752.94,
+    "high": 5587.5,
+    "low": 2546.41
   },
   "updated_at_utc": "2026-10-16",
   "window": {
-    "end": "2026-10-16T08:37:37Z",
+    "end": "2026-10-16T08:42:09Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -66408,6 +66408,35 @@
       "pull_request": 3710,
       "title": "fix(voice): reject MiniMax audio streams that finish with an API error",
       "url": "https://github.com/zhayujie/CowAgent/pull/3710"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-12T13:01:21Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.83,
+        "high": 11.92,
+        "low": 6.62
+      },
+      "merged_at": "2026-10-16T08:42:09Z",
+      "modeled_human_direction_hours": {
+        "base": 1.04,
+        "high": 1.46,
+        "low": 0.73
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3705,
+      "title": "fix(search): require explicit anonymous provider opt-in",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3705"
     }
   ]
 }
