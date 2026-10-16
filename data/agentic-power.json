@@ -1,13 +1,13 @@
 {
   "agentic_power_x": {
     "base": 208.8,
-    "high": 331.5,
+    "high": 331.7,
     "low": 135.0
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0383,
+      "base": 0.0382,
       "high": 0.0437,
       "low": 0.0328
     },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 764.7,
+  "engineer_weeks_at_40h": 765.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 168.6,
         "high": 275.7,
-        "low": 103.2
+        "low": 103.4
       },
       "modeled_human_direction_hours": {
         "base": 4.8,
-        "high": 5.49,
+        "high": 5.48,
         "low": 4.11
       },
       "month": "2026-07",
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 180.9,
-        "high": 295.5,
+        "base": 181.0,
+        "high": 295.8,
         "low": 110.9
       },
       "modeled_human_direction_hours": {
-        "base": 11.47,
+        "base": 11.46,
         "high": 13.1,
-        "low": 9.83
+        "low": 9.82
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 238.5,
-        "high": 380.0,
-        "low": 153.1
+        "high": 380.3,
+        "low": 153.2
       },
       "modeled_human_direction_hours": {
         "base": 16.22,
-        "high": 18.54,
-        "low": 13.91
+        "high": 18.53,
+        "low": 13.9
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 232.0,
-        "high": 365.5,
+        "base": 232.1,
+        "high": 365.6,
         "low": 152.3
       },
       "modeled_human_direction_hours": {
-        "base": 91.11,
-        "high": 104.13,
-        "low": 78.1
+        "base": 91.14,
+        "high": 104.16,
+        "low": 78.12
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2100,
+      "public_merged_pull_requests": 2101,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 21141.54,
-        "high": 28541.94,
-        "low": 15856.36
+        "base": 21153.89,
+        "high": 28558.61,
+        "low": 15865.62
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2381.94,
-        "high": 3396.28,
-        "low": 1646.48
+        "base": 2383.53,
+        "high": 3398.51,
+        "low": 1647.59
       }
     }
   ],
-  "public_accepted_pull_requests": 2342,
+  "public_accepted_pull_requests": 2343,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 30588.98,
-    "high": 41637.62,
-    "low": 22600.33
+    "base": 30601.33,
+    "high": 41654.29,
+    "low": 22609.59
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3830.59,
-    "high": 5698.47,
-    "low": 2600.04
+    "base": 3832.18,
+    "high": 5700.7,
+    "low": 2601.15
   },
   "updated_at_utc": "2026-10-16",
   "window": {
-    "end": "2026-10-16T21:53:51Z",
+    "end": "2026-10-16T22:34:26Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -68554,6 +68554,35 @@
       "pull_request": 1115,
       "title": "fix(tools): exclude unknown altitude from requested aircraft bands",
       "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1115"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T19:11:06Z",
+      "evidence": {
+        "additions": 76,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 6,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.35,
+        "high": 16.67,
+        "low": 9.26
+      },
+      "merged_at": "2026-10-16T22:34:26Z",
+      "modeled_human_direction_hours": {
+        "base": 1.59,
+        "high": 2.23,
+        "low": 1.11
+      },
+      "project": "bilawalsidhu/gods-eye-view",
+      "pull_request": 1117,
+      "title": "fix(street-level): release superseded and unmounted Google viewer work",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1117"
     }
   ]
 }
