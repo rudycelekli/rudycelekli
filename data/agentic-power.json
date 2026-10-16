@@ -1,14 +1,14 @@
 {
   "agentic_power_x": {
-    "base": 204.2,
-    "high": 324.3,
-    "low": 132.0
+    "base": 204.4,
+    "high": 324.7,
+    "low": 132.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.039,
-      "high": 0.0446,
+      "high": 0.0445,
       "low": 0.0334
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 747.3,
+  "engineer_weeks_at_40h": 748.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -202,12 +202,12 @@
     {
       "active_repositories": 3,
       "agentic_power_x": {
-        "base": 18.5,
+        "base": 19.2,
         "high": 30.4,
         "low": 11.7
       },
       "modeled_human_direction_hours": {
-        "base": 0.27,
+        "base": 0.26,
         "high": 0.3,
         "low": 0.23
       },
@@ -333,13 +333,13 @@
       "active_repositories": 8,
       "agentic_power_x": {
         "base": 117.8,
-        "high": 191.3,
+        "high": 192.8,
         "low": 72.0
       },
       "modeled_human_direction_hours": {
         "base": 1.52,
         "high": 1.74,
-        "low": 1.31
+        "low": 1.3
       },
       "month": "2025-12",
       "public_merged_pull_requests": 0,
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 140.7,
         "high": 229.6,
-        "low": 86.1
+        "low": 86.2
       },
       "modeled_human_direction_hours": {
         "base": 6.67,
-        "high": 7.63,
+        "high": 7.62,
         "low": 5.72
       },
       "month": "2026-06",
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 177.5,
-        "high": 289.9,
-        "low": 108.7
+        "base": 177.6,
+        "high": 290.1,
+        "low": 108.8
       },
       "modeled_human_direction_hours": {
-        "base": 11.69,
-        "high": 13.36,
-        "low": 10.02
+        "base": 11.68,
+        "high": 13.35,
+        "low": 10.01
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 233.9,
-        "high": 372.8,
-        "low": 150.1
+        "base": 234.1,
+        "high": 373.1,
+        "low": 150.3
       },
       "modeled_human_direction_hours": {
-        "base": 16.54,
-        "high": 18.91,
-        "low": 14.18
+        "base": 16.53,
+        "high": 18.89,
+        "low": 14.17
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 227.5,
-        "high": 358.3,
-        "low": 149.3
+        "base": 227.7,
+        "high": 358.6,
+        "low": 149.4
       },
       "modeled_human_direction_hours": {
-        "base": 89.88,
-        "high": 102.72,
-        "low": 77.04
+        "base": 89.93,
+        "high": 102.78,
+        "low": 77.09
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2027,
+      "public_merged_pull_requests": 2030,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 20443.95,
-        "high": 27600.17,
-        "low": 15333.15
+        "base": 20475.73,
+        "high": 27643.08,
+        "low": 15356.99
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2304.29,
-        "high": 3285.31,
-        "low": 1592.85
+        "base": 2307.83,
+        "high": 3290.27,
+        "low": 1595.33
       }
     }
   ],
-  "public_accepted_pull_requests": 2269,
+  "public_accepted_pull_requests": 2272,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 29891.39,
-    "high": 40695.85,
-    "low": 22077.12
+    "base": 29923.17,
+    "high": 40738.76,
+    "low": 22100.96
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3752.94,
-    "high": 5587.5,
-    "low": 2546.41
+    "base": 3756.48,
+    "high": 5592.46,
+    "low": 2548.89
   },
   "updated_at_utc": "2026-10-16",
   "window": {
-    "end": "2026-10-16T08:42:09Z",
+    "end": "2026-10-16T09:12:16Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -66437,6 +66437,93 @@
       "pull_request": 3705,
       "title": "fix(search): require explicit anonymous provider opt-in",
       "url": "https://github.com/zhayujie/CowAgent/pull/3705"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-12T13:05:05Z",
+      "evidence": {
+        "additions": 58,
+        "changed_files": 10,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 15,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.84,
+        "high": 17.34,
+        "low": 9.63
+      },
+      "merged_at": "2026-10-16T09:12:01Z",
+      "modeled_human_direction_hours": {
+        "base": 1.53,
+        "high": 2.14,
+        "low": 1.07
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3714,
+      "title": "fix(voice): isolate output files for repeated identical speech",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3714"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-12T13:04:48Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.9,
+        "high": 12.02,
+        "low": 6.68
+      },
+      "merged_at": "2026-10-16T09:12:08Z",
+      "modeled_human_direction_hours": {
+        "base": 0.97,
+        "high": 1.36,
+        "low": 0.68
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3712,
+      "title": "fix(vision): fall back after an empty completion",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3712"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-12T13:15:12Z",
+      "evidence": {
+        "additions": 55,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.04,
+        "high": 13.55,
+        "low": 7.53
+      },
+      "merged_at": "2026-10-16T09:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 1.04,
+        "high": 1.46,
+        "low": 0.73
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3724,
+      "title": "fix(browser): scope snapshots to the requested selector",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3724"
     }
   ]
 }
