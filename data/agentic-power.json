@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 200.0,
-    "high": 317.8,
-    "low": 129.2
+    "base": 200.1,
+    "high": 317.9,
+    "low": 129.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0341
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 83.6,
+    "evidence_window_weeks": 83.61,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 731.6,
+  "engineer_weeks_at_40h": 732.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 146.3,
-    "high": 167.2,
-    "low": 125.4
+    "base": 146.32,
+    "high": 167.22,
+    "low": 125.41
   },
   "monthly": [
     {
@@ -177,13 +177,13 @@
       "active_repositories": 5,
       "agentic_power_x": {
         "base": 31.0,
-        "high": 50.5,
+        "high": 51.7,
         "low": 19.0
       },
       "modeled_human_direction_hours": {
         "base": 0.5,
         "high": 0.57,
-        "low": 0.43
+        "low": 0.42
       },
       "month": "2025-06",
       "public_merged_pull_requests": 0,
@@ -386,11 +386,11 @@
       "agentic_power_x": {
         "base": 101.9,
         "high": 165.9,
-        "low": 62.0
+        "low": 62.5
       },
       "modeled_human_direction_hours": {
         "base": 1.07,
-        "high": 1.23,
+        "high": 1.22,
         "low": 0.92
       },
       "month": "2026-02",
@@ -462,13 +462,13 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 146.9,
+        "base": 147.3,
         "high": 240.6,
-        "low": 90.0
+        "low": 90.2
       },
       "modeled_human_direction_hours": {
-        "base": 3.44,
-        "high": 3.93,
+        "base": 3.43,
+        "high": 3.92,
         "low": 2.94
       },
       "month": "2026-05",
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 162.2,
+        "base": 162.5,
         "high": 265.3,
         "low": 99.4
       },
       "modeled_human_direction_hours": {
-        "base": 4.99,
+        "base": 4.98,
         "high": 5.7,
         "low": 4.27
       },
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 229.5,
-        "high": 365.8,
+        "base": 229.6,
+        "high": 366.1,
         "low": 147.4
       },
       "modeled_human_direction_hours": {
-        "base": 16.86,
+        "base": 16.85,
         "high": 19.26,
-        "low": 14.45
+        "low": 14.44
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 223.3,
-        "high": 351.8,
+        "base": 223.4,
+        "high": 351.9,
         "low": 146.6
       },
       "modeled_human_direction_hours": {
-        "base": 88.73,
-        "high": 101.4,
-        "low": 76.05
+        "base": 88.77,
+        "high": 101.45,
+        "low": 76.08
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 1960,
+      "public_merged_pull_requests": 1962,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 19816.86,
-        "high": 26753.57,
-        "low": 14862.81
+        "base": 19832.64,
+        "high": 26774.88,
+        "low": 14874.65
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2232.52,
-        "high": 3182.49,
-        "low": 1543.44
+        "base": 2234.35,
+        "high": 3185.05,
+        "low": 1544.72
       }
     }
   ],
-  "public_accepted_pull_requests": 2202,
+  "public_accepted_pull_requests": 2204,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 29264.3,
-    "high": 39849.25,
-    "low": 21606.78
+    "base": 29280.08,
+    "high": 39870.56,
+    "low": 21618.62
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3681.17,
-    "high": 5484.68,
-    "low": 2497.0
+    "base": 3683.0,
+    "high": 5487.24,
+    "low": 2498.28
   },
   "updated_at_utc": "2026-10-16",
   "window": {
-    "end": "2026-10-16T00:14:07Z",
+    "end": "2026-10-16T01:20:27Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -64494,6 +64494,64 @@
       "pull_request": 59,
       "title": "fix: resolve a task by its exact title before partial matches",
       "url": "https://github.com/rociiu/talorys/pull/59"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T00:08:43Z",
+      "evidence": {
+        "additions": 29,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.29,
+        "high": 11.19,
+        "low": 6.22
+      },
+      "merged_at": "2026-10-16T01:17:08Z",
+      "modeled_human_direction_hours": {
+        "base": 1.1,
+        "high": 1.54,
+        "low": 0.77
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4406,
+      "title": "fix(rules-injector): read block lists indented level with their key",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4406"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T01:03:36Z",
+      "evidence": {
+        "additions": 23,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.49,
+        "high": 10.12,
+        "low": 5.62
+      },
+      "merged_at": "2026-10-16T01:20:27Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "cathrynlavery/diagram-design",
+      "pull_request": 446,
+      "title": "fix(import): accept whitespace before a Mermaid pipe label",
+      "url": "https://github.com/cathrynlavery/diagram-design/pull/446"
     }
   ]
 }
