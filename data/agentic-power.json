@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 211.3,
-    "high": 335.5,
+    "high": 335.6,
     "low": 136.6
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0325
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 83.84,
+    "evidence_window_weeks": 83.85,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 775.0,
+  "engineer_weeks_at_40h": 775.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 146.72,
-    "high": 167.68,
-    "low": 125.76
+    "base": 146.74,
+    "high": 167.7,
+    "low": 125.77
   },
   "monthly": [
     {
@@ -124,12 +124,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 22.6,
+        "base": 23.0,
         "high": 37.0,
         "low": 14.0
       },
       "modeled_human_direction_hours": {
-        "base": 0.62,
+        "base": 0.61,
         "high": 0.7,
         "low": 0.53
       },
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 144.8,
         "high": 236.7,
-        "low": 88.6
+        "low": 88.8
       },
       "modeled_human_direction_hours": {
         "base": 6.48,
-        "high": 7.41,
+        "high": 7.4,
         "low": 5.55
       },
       "month": "2026-06",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 234.6,
+        "base": 234.7,
         "high": 369.6,
         "low": 154.0
       },
       "modeled_human_direction_hours": {
-        "base": 91.86,
-        "high": 104.98,
-        "low": 78.73
+        "base": 91.88,
+        "high": 105.01,
+        "low": 78.75
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2137,
+      "public_merged_pull_requests": 2138,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 21552.76,
-        "high": 29097.08,
-        "low": 16164.78
+        "base": 21560.9,
+        "high": 29108.06,
+        "low": 16170.88
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2425.5,
-        "high": 3458.42,
-        "low": 1676.58
+        "base": 2426.3,
+        "high": 3459.54,
+        "low": 1677.14
       }
     }
   ],
-  "public_accepted_pull_requests": 2379,
+  "public_accepted_pull_requests": 2380,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 31000.2,
-    "high": 42192.76,
-    "low": 22908.75
+    "base": 31008.34,
+    "high": 42203.74,
+    "low": 22914.85
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3874.15,
-    "high": 5760.61,
-    "low": 2630.14
+    "base": 3874.95,
+    "high": 5761.73,
+    "low": 2630.7
   },
   "updated_at_utc": "2026-10-17",
   "window": {
-    "end": "2026-10-17T16:41:20Z",
+    "end": "2026-10-17T18:04:07Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -69627,6 +69627,35 @@
       "pull_request": 4245,
       "title": "fix(swarm): honor shared worker reservations in agent pools",
       "url": "https://github.com/ruvnet/ruflo/pull/4245"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T13:31:05Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.14,
+        "high": 10.98,
+        "low": 6.1
+      },
+      "merged_at": "2026-10-17T18:04:07Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "MadsLorentzen/ai-job-search",
+      "pull_request": 574,
+      "title": "fix(upstream-triage): suggest dependent cherry-picks in ancestry order",
+      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/574"
     }
   ]
 }
