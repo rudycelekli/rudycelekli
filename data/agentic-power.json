@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 211.7,
-    "high": 336.1,
+    "high": 336.2,
     "low": 136.9
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 776.6,
+  "engineer_weeks_at_40h": 776.7,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 154.5,
         "high": 252.6,
-        "low": 94.6
+        "low": 94.8
       },
       "modeled_human_direction_hours": {
         "base": 3.27,
-        "high": 3.74,
+        "high": 3.73,
         "low": 2.8
       },
       "month": "2026-05",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 145.0,
-        "high": 236.7,
+        "high": 237.1,
         "low": 88.9
       },
       "modeled_human_direction_hours": {
         "base": 6.47,
         "high": 7.39,
-        "low": 5.55
+        "low": 5.54
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 182.9,
-        "high": 298.8,
+        "base": 183.1,
+        "high": 299.1,
         "low": 112.1
       },
       "modeled_human_direction_hours": {
-        "base": 11.34,
+        "base": 11.33,
         "high": 12.95,
-        "low": 9.72
+        "low": 9.71
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 241.2,
-        "high": 384.4,
-        "low": 154.9
+        "base": 241.4,
+        "high": 384.7,
+        "low": 155.0
       },
       "modeled_human_direction_hours": {
-        "base": 16.04,
-        "high": 18.33,
-        "low": 13.75
+        "base": 16.03,
+        "high": 18.32,
+        "low": 13.74
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -594,25 +594,25 @@
       "agentic_power_x": {
         "base": 235.0,
         "high": 370.2,
-        "low": 154.2
+        "low": 154.3
       },
       "modeled_human_direction_hours": {
-        "base": 91.97,
-        "high": 105.11,
-        "low": 78.83
+        "base": 91.99,
+        "high": 105.13,
+        "low": 78.85
       },
       "month": "2026-10",
       "public_merged_pull_requests": 2142,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 21616.16,
-        "high": 29182.65,
-        "low": 16212.34
+        "base": 21621.7,
+        "high": 29190.13,
+        "low": 16216.49
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2432.16,
-        "high": 3468.94,
-        "low": 1680.85
+        "base": 2433.42,
+        "high": 3470.71,
+        "low": 1681.73
       }
     }
   ],
@@ -622,18 +622,18 @@
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 31063.6,
-    "high": 42278.33,
-    "low": 22956.31
+    "base": 31069.14,
+    "high": 42285.81,
+    "low": 22960.46
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3880.81,
-    "high": 5771.13,
-    "low": 2634.41
+    "base": 3882.07,
+    "high": 5772.9,
+    "low": 2635.29
   },
   "updated_at_utc": "2026-10-17",
   "window": {
-    "end": "2026-10-17T19:35:58Z",
+    "end": "2026-10-17T20:02:40Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -69428,35 +69428,6 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-16T21:44:22Z",
-      "evidence": {
-        "additions": 138,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 5,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.58,
-        "high": 14.28,
-        "low": 7.94
-      },
-      "merged_at": "2026-10-17T13:58:56Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "ruvnet/ruflo",
-      "pull_request": 4236,
-      "title": "fix(swarm): release failed and cancelled task workers",
-      "url": "https://github.com/ruvnet/ruflo/pull/4236"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
       "category": "systems_engineering",
       "created_at": "2026-10-16T22:08:06Z",
       "evidence": {
@@ -69772,6 +69743,35 @@
       "pull_request": 1382,
       "title": "fix(wiki): resolve encoded Markdown destinations once",
       "url": "https://github.com/akitaonrails/ai-memory/pull/1382"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T19:04:47Z",
+      "evidence": {
+        "additions": 194,
+        "changed_files": 14,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 29,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 16.12,
+        "high": 21.76,
+        "low": 12.09
+      },
+      "merged_at": "2026-10-17T20:02:40Z",
+      "modeled_human_direction_hours": {
+        "base": 1.87,
+        "high": 2.62,
+        "low": 1.31
+      },
+      "project": "mvschwarz/openrig",
+      "pull_request": 1402,
+      "title": "fix: share CRLF frontmatter boundaries across policy and review readers",
+      "url": "https://github.com/mvschwarz/openrig/pull/1402"
     }
   ]
 }
