@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 208.8,
-    "high": 331.7,
-    "low": 135.0
+    "base": 208.9,
+    "high": 331.8,
+    "low": 135.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0328
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 83.73,
+    "evidence_window_weeks": 83.74,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 765.0,
+  "engineer_weeks_at_40h": 765.4,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 146.53,
-    "high": 167.46,
-    "low": 125.59
+    "base": 146.54,
+    "high": 167.48,
+    "low": 125.61
   },
   "monthly": [
     {
@@ -306,12 +306,12 @@
     {
       "active_repositories": 1,
       "agentic_power_x": {
-        "base": 167.8,
+        "base": 171.6,
         "high": 278.2,
         "low": 103.6
       },
       "modeled_human_direction_hours": {
-        "base": 0.45,
+        "base": 0.44,
         "high": 0.51,
         "low": 0.38
       },
@@ -412,11 +412,11 @@
       "agentic_power_x": {
         "base": 87.1,
         "high": 142.3,
-        "low": 53.4
+        "low": 53.6
       },
       "modeled_human_direction_hours": {
         "base": 2.1,
-        "high": 2.4,
+        "high": 2.39,
         "low": 1.8
       },
       "month": "2026-03",
@@ -462,12 +462,12 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 152.6,
+        "base": 153.1,
         "high": 249.9,
         "low": 93.6
       },
       "modeled_human_direction_hours": {
-        "base": 3.31,
+        "base": 3.3,
         "high": 3.78,
         "low": 2.83
       },
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 143.5,
         "high": 234.1,
-        "low": 87.8
+        "low": 87.9
       },
       "modeled_human_direction_hours": {
         "base": 6.54,
-        "high": 7.48,
+        "high": 7.47,
         "low": 5.61
       },
       "month": "2026-06",
@@ -546,7 +546,7 @@
       },
       "modeled_human_direction_hours": {
         "base": 11.46,
-        "high": 13.1,
+        "high": 13.09,
         "low": 9.82
       },
       "month": "2026-08",
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 238.5,
+        "base": 238.7,
         "high": 380.3,
         "low": 153.2
       },
       "modeled_human_direction_hours": {
-        "base": 16.22,
+        "base": 16.21,
         "high": 18.53,
         "low": 13.9
       },
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 232.1,
-        "high": 365.6,
-        "low": 152.3
+        "base": 232.2,
+        "high": 365.7,
+        "low": 152.4
       },
       "modeled_human_direction_hours": {
-        "base": 91.14,
-        "high": 104.16,
-        "low": 78.12
+        "base": 91.17,
+        "high": 104.2,
+        "low": 78.15
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2101,
+      "public_merged_pull_requests": 2102,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 21153.89,
-        "high": 28558.61,
-        "low": 15865.62
+        "base": 21170.18,
+        "high": 28580.6,
+        "low": 15877.84
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2383.53,
-        "high": 3398.51,
-        "low": 1647.59
+        "base": 2385.21,
+        "high": 3400.86,
+        "low": 1648.77
       }
     }
   ],
-  "public_accepted_pull_requests": 2343,
+  "public_accepted_pull_requests": 2344,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 30601.33,
-    "high": 41654.29,
-    "low": 22609.59
+    "base": 30617.62,
+    "high": 41676.28,
+    "low": 22621.81
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3832.18,
-    "high": 5700.7,
-    "low": 2601.15
+    "base": 3833.86,
+    "high": 5703.05,
+    "low": 2602.33
   },
-  "updated_at_utc": "2026-10-16",
+  "updated_at_utc": "2026-10-17",
   "window": {
-    "end": "2026-10-16T22:34:26Z",
+    "end": "2026-10-17T00:06:34Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -17141,6 +17141,35 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-04T06:45:30Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.2,
+        "high": 7.02,
+        "low": 3.9
+      },
+      "merged_at": "2026-10-04T21:12:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "msitarzewski/agency-agents",
+      "pull_request": 1026,
+      "title": "fix(testing): validate TCO adoption inputs before division",
+      "url": "https://github.com/msitarzewski/agency-agents/pull/1026"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
       "category": "software_engineering",
       "created_at": "2026-10-03T06:29:05Z",
       "evidence": {
@@ -17775,35 +17804,6 @@
       "pull_request": 992,
       "title": "Apply vendor and spend checks before contractor payment sends",
       "url": "https://github.com/msitarzewski/agency-agents/pull/992"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-04T06:45:30Z",
-      "evidence": {
-        "additions": 7,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 5.2,
-        "high": 7.02,
-        "low": 3.9
-      },
-      "merged_at": "2026-10-04T21:12:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "msitarzewski/agency-agents",
-      "pull_request": 1026,
-      "title": "fix(testing): validate TCO adoption inputs before division",
-      "url": "https://github.com/msitarzewski/agency-agents/pull/1026"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -30482,6 +30482,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-04T13:45:52Z",
+      "evidence": {
+        "additions": 132,
+        "changed_files": 5,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.98,
+        "high": 16.17,
+        "low": 8.98
+      },
+      "merged_at": "2026-10-07T04:17:32Z",
+      "modeled_human_direction_hours": {
+        "base": 0.94,
+        "high": 1.32,
+        "low": 0.66
+      },
+      "project": "debpalash/OpenGTM",
+      "pull_request": 41,
+      "title": "fix(formula): preserve literal braces inside quoted strings",
+      "url": "https://github.com/debpalash/OpenGTM/pull/41"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-03T19:31:17Z",
       "evidence": {
         "additions": 110,
@@ -30593,35 +30622,6 @@
       "pull_request": 35,
       "title": "fix(workbook): keep quoted condition operators as data",
       "url": "https://github.com/debpalash/OpenGTM/pull/35"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T13:45:52Z",
-      "evidence": {
-        "additions": 132,
-        "changed_files": 5,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.98,
-        "high": 16.17,
-        "low": 8.98
-      },
-      "merged_at": "2026-10-07T04:17:32Z",
-      "modeled_human_direction_hours": {
-        "base": 0.94,
-        "high": 1.32,
-        "low": 0.66
-      },
-      "project": "debpalash/OpenGTM",
-      "pull_request": 41,
-      "title": "fix(formula): preserve literal braces inside quoted strings",
-      "url": "https://github.com/debpalash/OpenGTM/pull/41"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -31206,35 +31206,6 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-03T12:00:35Z",
-      "evidence": {
-        "additions": 84,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.4,
-        "high": 12.69,
-        "low": 7.05
-      },
-      "merged_at": "2026-10-07T04:17:33Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "debpalash/OpenGTM",
-      "pull_request": 34,
-      "title": "fix(workbook): apply saved function columns by stable ID",
-      "url": "https://github.com/debpalash/OpenGTM/pull/34"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
       "category": "reliability_and_qe",
       "created_at": "2026-10-04T06:45:31Z",
       "evidence": {
@@ -31260,6 +31231,35 @@
       "pull_request": 40,
       "title": "fix(workbook): preserve integer precision in formula conversions",
       "url": "https://github.com/debpalash/OpenGTM/pull/40"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-03T12:00:35Z",
+      "evidence": {
+        "additions": 84,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.4,
+        "high": 12.69,
+        "low": 7.05
+      },
+      "merged_at": "2026-10-07T04:17:33Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "debpalash/OpenGTM",
+      "pull_request": 34,
+      "title": "fix(workbook): apply saved function columns by stable ID",
+      "url": "https://github.com/debpalash/OpenGTM/pull/34"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -35151,6 +35151,470 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-04T22:00:52Z",
+      "evidence": {
+        "additions": 96,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.05,
+        "high": 13.57,
+        "low": 7.54
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 736,
+      "title": "feat(gsc): expose Search Analytics result pages",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/736"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T21:24:41Z",
+      "evidence": {
+        "additions": 124,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.6,
+        "high": 14.31,
+        "low": 7.95
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 734,
+      "title": "feat(firecrawl): inspect paginated crawl output and failures",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/734"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T21:24:00Z",
+      "evidence": {
+        "additions": 147,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.21,
+        "high": 15.13,
+        "low": 8.4
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 733,
+      "title": "feat(plausible): expose cursor and offset pagination",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/733"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T20:12:32Z",
+      "evidence": {
+        "additions": 75,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.57,
+        "high": 12.93,
+        "low": 7.18
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 729,
+      "title": "fix(dub): send supported link tag names",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/729"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T20:12:15Z",
+      "evidence": {
+        "additions": 69,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.99,
+        "high": 12.14,
+        "low": 6.74
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 728,
+      "title": "fix(pendo): preserve literal visitor and account IDs",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/728"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T16:54:01Z",
+      "evidence": {
+        "additions": 112,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.4,
+        "high": 14.04,
+        "low": 7.8
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 726,
+      "title": "fix(amplitude): resolve external IDs before reading user activity",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/726"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T16:46:01Z",
+      "evidence": {
+        "additions": 157,
+        "changed_files": 5,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 13,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.12,
+        "high": 16.36,
+        "low": 9.09
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.82,
+        "high": 1.15,
+        "low": 0.57
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 723,
+      "title": "fix(partnerstack): send supported creation request contracts",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/723"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T16:26:07Z",
+      "evidence": {
+        "additions": 65,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.34,
+        "high": 12.61,
+        "low": 7.01
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 718,
+      "title": "fix(google-ads): allow Cloud project access without a developer token",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/718"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T15:59:33Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.41,
+        "high": 11.36,
+        "low": 6.31
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 716,
+      "title": "fix(mixpanel): fail rejected ingestion operations",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/716"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T15:52:30Z",
+      "evidence": {
+        "additions": 52,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.44,
+        "high": 11.4,
+        "low": 6.33
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 715,
+      "title": "fix(postmark): signal partially rejected email batches",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/715"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T15:43:26Z",
+      "evidence": {
+        "additions": 79,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.6,
+        "high": 12.96,
+        "low": 7.2
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 714,
+      "title": "fix(dataforseo): fail on rejected API tasks",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/714"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T15:13:37Z",
+      "evidence": {
+        "additions": 111,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.27,
+        "high": 15.21,
+        "low": 8.45
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.87,
+        "high": 1.22,
+        "low": 0.61
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 711,
+      "title": "fix(semrush): route backlinks reports to their analytics endpoint",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/711"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T14:39:59Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.9,
+        "high": 10.67,
+        "low": 5.93
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 708,
+      "title": "fix(prospecting): report truncation only when results remain",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/708"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T14:34:32Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.05,
+        "high": 10.86,
+        "low": 6.03
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 707,
+      "title": "fix(snov): use the supported plural prospect search resource",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/707"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T14:32:15Z",
+      "evidence": {
+        "additions": 42,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.18,
+        "high": 11.05,
+        "low": 6.14
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 706,
+      "title": "fix(wistia): authenticate with the documented Bearer token",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/706"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-04T05:55:27Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.29,
+        "high": 9.83,
+        "low": 5.46
+      },
+      "merged_at": "2026-10-08T19:44:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 704,
+      "title": "fix(buffer): preserve explicit false publication flags",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/704"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-03T05:37:00Z",
       "evidence": {
         "additions": 87,
@@ -35818,125 +36282,9 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-04T22:00:52Z",
+      "created_at": "2026-10-04T14:45:06Z",
       "evidence": {
-        "additions": 96,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 4,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.05,
-        "high": 13.57,
-        "low": 7.54
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 736,
-      "title": "feat(gsc): expose Search Analytics result pages",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/736"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T21:24:41Z",
-      "evidence": {
-        "additions": 124,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.6,
-        "high": 14.31,
-        "low": 7.95
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 734,
-      "title": "feat(firecrawl): inspect paginated crawl output and failures",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/734"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T21:24:00Z",
-      "evidence": {
-        "additions": 147,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 11,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.21,
-        "high": 15.13,
-        "low": 8.4
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 733,
-      "title": "feat(plausible): expose cursor and offset pagination",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/733"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T20:12:32Z",
-      "evidence": {
-        "additions": 75,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 5,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.57,
-        "high": 12.93,
-        "low": 7.18
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 729,
-      "title": "fix(dub): send supported link tag names",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/729"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T20:12:15Z",
-      "evidence": {
-        "additions": 69,
+        "additions": 55,
         "changed_files": 2,
         "comments": 0,
         "commits": 1,
@@ -35944,339 +36292,20 @@
         "reviews": 0
       },
       "heh": {
-        "base": 8.99,
-        "high": 12.14,
-        "low": 6.74
+        "base": 8.6,
+        "high": 11.61,
+        "low": 6.45
       },
-      "merged_at": "2026-10-08T19:44:25Z",
+      "merged_at": "2026-10-08T19:44:26Z",
       "modeled_human_direction_hours": {
         "base": 0.61,
         "high": 0.85,
         "low": 0.43
       },
       "project": "coreyhaines31/marketingskills",
-      "pull_request": 728,
-      "title": "fix(pendo): preserve literal visitor and account IDs",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/728"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T16:54:01Z",
-      "evidence": {
-        "additions": 112,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 4,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.4,
-        "high": 14.04,
-        "low": 7.8
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 726,
-      "title": "fix(amplitude): resolve external IDs before reading user activity",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/726"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T16:46:01Z",
-      "evidence": {
-        "additions": 157,
-        "changed_files": 5,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 13,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.12,
-        "high": 16.36,
-        "low": 9.09
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.82,
-        "high": 1.15,
-        "low": 0.57
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 723,
-      "title": "fix(partnerstack): send supported creation request contracts",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/723"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T16:26:07Z",
-      "evidence": {
-        "additions": 65,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 6,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.34,
-        "high": 12.61,
-        "low": 7.01
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 718,
-      "title": "fix(google-ads): allow Cloud project access without a developer token",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/718"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T15:59:33Z",
-      "evidence": {
-        "additions": 50,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.41,
-        "high": 11.36,
-        "low": 6.31
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 716,
-      "title": "fix(mixpanel): fail rejected ingestion operations",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/716"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T15:52:30Z",
-      "evidence": {
-        "additions": 52,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 0,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.44,
-        "high": 11.4,
-        "low": 6.33
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 715,
-      "title": "fix(postmark): signal partially rejected email batches",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/715"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T15:43:26Z",
-      "evidence": {
-        "additions": 79,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.6,
-        "high": 12.96,
-        "low": 7.2
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 714,
-      "title": "fix(dataforseo): fail on rejected API tasks",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/714"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T15:13:37Z",
-      "evidence": {
-        "additions": 111,
-        "changed_files": 4,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 6,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.27,
-        "high": 15.21,
-        "low": 8.45
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.87,
-        "high": 1.22,
-        "low": 0.61
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 711,
-      "title": "fix(semrush): route backlinks reports to their analytics endpoint",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/711"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T14:39:59Z",
-      "evidence": {
-        "additions": 35,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 7.9,
-        "high": 10.67,
-        "low": 5.93
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 708,
-      "title": "fix(prospecting): report truncation only when results remain",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/708"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T14:34:32Z",
-      "evidence": {
-        "additions": 39,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.05,
-        "high": 10.86,
-        "low": 6.03
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 707,
-      "title": "fix(snov): use the supported plural prospect search resource",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/707"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T14:32:15Z",
-      "evidence": {
-        "additions": 42,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.18,
-        "high": 11.05,
-        "low": 6.14
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 706,
-      "title": "fix(wistia): authenticate with the documented Bearer token",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/706"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-04T05:55:27Z",
-      "evidence": {
-        "additions": 44,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 7.29,
-        "high": 9.83,
-        "low": 5.46
-      },
-      "merged_at": "2026-10-08T19:44:25Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 704,
-      "title": "fix(buffer): preserve explicit false publication flags",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/704"
+      "pull_request": 710,
+      "title": "fix(tiktok): signal rejected API requests with a failure exit code",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/710"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -36567,35 +36596,6 @@
       "pull_request": 661,
       "title": "fix(dub): request country and device analytics with grouping",
       "url": "https://github.com/coreyhaines31/marketingskills/pull/661"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T14:45:06Z",
-      "evidence": {
-        "additions": 55,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.6,
-        "high": 11.61,
-        "low": 6.45
-      },
-      "merged_at": "2026-10-08T19:44:26Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 710,
-      "title": "fix(tiktok): signal rejected API requests with a failure exit code",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/710"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -37093,6 +37093,35 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T14:44:34Z",
+      "evidence": {
+        "additions": 58,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.54,
+        "high": 12.87,
+        "low": 7.15
+      },
+      "merged_at": "2026-10-08T19:59:45Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 709,
+      "title": "fix(sync): preserve CRLF skill frontmatter descriptions",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/709"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
       "category": "reliability_and_qe",
       "created_at": "2026-10-03T11:29:21Z",
       "evidence": {
@@ -37147,35 +37176,6 @@
       "pull_request": 699,
       "title": "fix(skills): route CRO email and SEO intents to existing references",
       "url": "https://github.com/coreyhaines31/marketingskills/pull/699"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-04T14:44:34Z",
-      "evidence": {
-        "additions": 58,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.54,
-        "high": 12.87,
-        "low": 7.15
-      },
-      "merged_at": "2026-10-08T19:59:45Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 709,
-      "title": "fix(sync): preserve CRLF skill frontmatter descriptions",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/709"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -37383,35 +37383,6 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-01T01:38:37Z",
-      "evidence": {
-        "additions": 92,
-        "changed_files": 3,
-        "comments": 2,
-        "commits": 2,
-        "deletions": 20,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.81,
-        "high": 13.25,
-        "low": 7.36
-      },
-      "merged_at": "2026-10-08T21:47:34Z",
-      "modeled_human_direction_hours": {
-        "base": 1.04,
-        "high": 1.46,
-        "low": 0.73
-      },
-      "project": "ruvnet/ruflo",
-      "pull_request": 3586,
-      "title": "fix(daemon): honor explicit scheduled worker selection",
-      "url": "https://github.com/ruvnet/ruflo/pull/3586"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
       "category": "systems_engineering",
       "created_at": "2026-10-04T06:36:20Z",
       "evidence": {
@@ -37466,6 +37437,35 @@
       "pull_request": 3679,
       "title": "fix(memory): account for replacement sizes before cache admission",
       "url": "https://github.com/ruvnet/ruflo/pull/3679"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-01T01:38:37Z",
+      "evidence": {
+        "additions": 92,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 20,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.81,
+        "high": 13.25,
+        "low": 7.36
+      },
+      "merged_at": "2026-10-08T21:47:34Z",
+      "modeled_human_direction_hours": {
+        "base": 1.04,
+        "high": 1.46,
+        "low": 0.73
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 3586,
+      "title": "fix(daemon): honor explicit scheduled worker selection",
+      "url": "https://github.com/ruvnet/ruflo/pull/3586"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -37582,6 +37582,35 @@
       "pull_request": 3903,
       "title": "fix(memory): back up the active project stores by default",
       "url": "https://github.com/ruvnet/ruflo/pull/3903"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-28T14:12:25Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 3,
+        "comments": 5,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.53,
+        "high": 12.87,
+        "low": 7.15
+      },
+      "merged_at": "2026-10-08T21:47:35Z",
+      "modeled_human_direction_hours": {
+        "base": 1.52,
+        "high": 2.13,
+        "low": 1.06
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 3523,
+      "title": "fix(doctor): load MetaHarness modules with file URLs on Windows",
+      "url": "https://github.com/ruvnet/ruflo/pull/3523"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -38220,35 +38249,6 @@
       "pull_request": 3543,
       "title": "test(init): isolate memory resolver checks from pnpm NODE_PATH",
       "url": "https://github.com/ruvnet/ruflo/pull/3543"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-09-28T14:12:25Z",
-      "evidence": {
-        "additions": 41,
-        "changed_files": 3,
-        "comments": 5,
-        "commits": 3,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.53,
-        "high": 12.87,
-        "low": 7.15
-      },
-      "merged_at": "2026-10-08T21:47:35Z",
-      "modeled_human_direction_hours": {
-        "base": 1.52,
-        "high": 2.13,
-        "low": 1.06
-      },
-      "project": "ruvnet/ruflo",
-      "pull_request": 3523,
-      "title": "fix(doctor): load MetaHarness modules with file URLs on Windows",
-      "url": "https://github.com/ruvnet/ruflo/pull/3523"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -53508,6 +53508,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-13T00:26:13Z",
+      "evidence": {
+        "additions": 236,
+        "changed_files": 5,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.26,
+        "high": 17.91,
+        "low": 9.95
+      },
+      "merged_at": "2026-10-13T01:10:11Z",
+      "modeled_human_direction_hours": {
+        "base": 0.82,
+        "high": 1.15,
+        "low": 0.57
+      },
+      "project": "liseami/CCBaga",
+      "pull_request": 17,
+      "title": "fix: allow retry after interrupted engine preparation",
+      "url": "https://github.com/liseami/CCBaga/pull/17"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-12T23:27:43Z",
       "evidence": {
         "additions": 125,
@@ -53619,35 +53648,6 @@
       "pull_request": 13,
       "title": "fix: preserve working Linux installations when browser resources are incomplete",
       "url": "https://github.com/liseami/CCBaga/pull/13"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T00:26:13Z",
-      "evidence": {
-        "additions": 236,
-        "changed_files": 5,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 7,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 13.26,
-        "high": 17.91,
-        "low": 9.95
-      },
-      "merged_at": "2026-10-13T01:10:11Z",
-      "modeled_human_direction_hours": {
-        "base": 0.82,
-        "high": 1.15,
-        "low": 0.57
-      },
-      "project": "liseami/CCBaga",
-      "pull_request": 17,
-      "title": "fix: allow retry after interrupted engine preparation",
-      "url": "https://github.com/liseami/CCBaga/pull/17"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -57800,35 +57800,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-09T14:51:26Z",
-      "evidence": {
-        "additions": 96,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.68,
-        "high": 13.06,
-        "low": 7.26
-      },
-      "merged_at": "2026-10-14T01:41:33Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 801,
-      "title": "fix(amplitude): reject invalid ingestion JSON containers",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/801"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-10T16:59:36Z",
       "evidence": {
         "additions": 32,
@@ -58230,6 +58201,35 @@
       "pull_request": 803,
       "title": "fix(sendgrid): reject non-object dynamic template data",
       "url": "https://github.com/coreyhaines31/marketingskills/pull/803"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:51:26Z",
+      "evidence": {
+        "additions": 96,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.68,
+        "high": 13.06,
+        "low": 7.26
+      },
+      "merged_at": "2026-10-14T01:41:33Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 801,
+      "title": "fix(amplitude): reject invalid ingestion JSON containers",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/801"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -60410,180 +60410,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-13T23:43:56Z",
-      "evidence": {
-        "additions": 201,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.46,
-        "high": 16.82,
-        "low": 9.35
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1832,
-      "title": "fix(session): preserve live title updates and synchronize search labels",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1832"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T22:52:41Z",
-      "evidence": {
-        "additions": 87,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 16,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.12,
-        "high": 13.66,
-        "low": 7.59
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1830,
-      "title": "fix(events): preserve share-class tickers in configured RSS routes",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1830"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T22:52:03Z",
-      "evidence": {
-        "additions": 109,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 18,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.12,
-        "high": 15.01,
-        "low": 8.34
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1829,
-      "title": "fix(events): preserve daily calendar dates for timezone-aware inputs",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1829"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T22:11:31Z",
-      "evidence": {
-        "additions": 242,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 28,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 13.09,
-        "high": 17.68,
-        "low": 9.82
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1828,
-      "title": "fix(session): serialize shared search connection operations",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1828"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:59:12Z",
-      "evidence": {
-        "additions": 123,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 23,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.14,
-        "high": 15.04,
-        "low": 8.35
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1827,
-      "title": "fix(session): apply search limits to distinct conversations",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1827"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:51:34Z",
-      "evidence": {
-        "additions": 73,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 7,
-        "reviews": 1
-      },
-      "heh": {
-        "base": 9.22,
-        "high": 12.45,
-        "low": 6.92
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.79,
-        "high": 1.11,
-        "low": 0.55
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1826,
-      "title": "fix(quantlib): keep VPIN bucket completion invariant to volume units",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1826"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-14T04:37:49Z",
       "evidence": {
         "additions": 68,
@@ -60753,6 +60579,180 @@
       "pull_request": 1834,
       "title": "fix(session): anchor search snippets to native FTS matches",
       "url": "https://github.com/HKUDS/Vibe-Trading/pull/1834"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T23:43:56Z",
+      "evidence": {
+        "additions": 201,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.46,
+        "high": 16.82,
+        "low": 9.35
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1832,
+      "title": "fix(session): preserve live title updates and synchronize search labels",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1832"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T22:52:41Z",
+      "evidence": {
+        "additions": 87,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 16,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.12,
+        "high": 13.66,
+        "low": 7.59
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1830,
+      "title": "fix(events): preserve share-class tickers in configured RSS routes",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1830"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T22:52:03Z",
+      "evidence": {
+        "additions": 109,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.12,
+        "high": 15.01,
+        "low": 8.34
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1829,
+      "title": "fix(events): preserve daily calendar dates for timezone-aware inputs",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1829"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T22:11:31Z",
+      "evidence": {
+        "additions": 242,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 28,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.09,
+        "high": 17.68,
+        "low": 9.82
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1828,
+      "title": "fix(session): serialize shared search connection operations",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1828"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:59:12Z",
+      "evidence": {
+        "additions": 123,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 23,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.14,
+        "high": 15.04,
+        "low": 8.35
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1827,
+      "title": "fix(session): apply search limits to distinct conversations",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1827"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:51:34Z",
+      "evidence": {
+        "additions": 73,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.22,
+        "high": 12.45,
+        "low": 6.92
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.79,
+        "high": 1.11,
+        "low": 0.55
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1826,
+      "title": "fix(quantlib): keep VPIN bucket completion invariant to volume units",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1826"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -62556,64 +62556,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-12T16:05:37Z",
-      "evidence": {
-        "additions": 5,
-        "changed_files": 1,
-        "comments": 1,
-        "commits": 1,
-        "deletions": 0,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 5.86,
-        "high": 7.91,
-        "low": 4.39
-      },
-      "merged_at": "2026-10-15T10:54:23Z",
-      "modeled_human_direction_hours": {
-        "base": 0.66,
-        "high": 0.92,
-        "low": 0.46
-      },
-      "project": "NationalSecurityAgency/ghidra",
-      "pull_request": 9848,
-      "title": "Use symbol identity when hashing class namespaces",
-      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9848"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-12T02:04:13Z",
-      "evidence": {
-        "additions": 2,
-        "changed_files": 1,
-        "comments": 1,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 4.75,
-        "high": 6.41,
-        "low": 3.56
-      },
-      "merged_at": "2026-10-15T10:54:23Z",
-      "modeled_human_direction_hours": {
-        "base": 0.66,
-        "high": 0.92,
-        "low": 0.46
-      },
-      "project": "NationalSecurityAgency/ghidra",
-      "pull_request": 9830,
-      "title": "Display FILETIME fractions at their stored 100-nanosecond precision",
-      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9830"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-11T20:35:20Z",
       "evidence": {
         "additions": 3,
@@ -62725,6 +62667,64 @@
       "pull_request": 9777,
       "title": "Close PyGhidra compiler file managers after compilation",
       "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9777"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-12T16:05:37Z",
+      "evidence": {
+        "additions": 5,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.86,
+        "high": 7.91,
+        "low": 4.39
+      },
+      "merged_at": "2026-10-15T10:54:23Z",
+      "modeled_human_direction_hours": {
+        "base": 0.66,
+        "high": 0.92,
+        "low": 0.46
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9848,
+      "title": "Use symbol identity when hashing class namespaces",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9848"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-12T02:04:13Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 4.75,
+        "high": 6.41,
+        "low": 3.56
+      },
+      "merged_at": "2026-10-15T10:54:23Z",
+      "modeled_human_direction_hours": {
+        "base": 0.66,
+        "high": 0.92,
+        "low": 0.46
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9830,
+      "title": "Display FILETIME fractions at their stored 100-nanosecond precision",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9830"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -62899,35 +62899,6 @@
       "pull_request": 1039,
       "title": "fix(terrain): reject out-of-range points at the proxy boundary",
       "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1039"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T16:06:07Z",
-      "evidence": {
-        "additions": 98,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 18,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.4,
-        "high": 14.04,
-        "low": 7.8
-      },
-      "merged_at": "2026-10-15T14:14:34Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "wheresryan22/anatomy",
-      "pull_request": 61,
-      "title": "fix(audit): follow curved strokes between fixed samples",
-      "url": "https://github.com/wheresryan22/anatomy/pull/61"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -63131,6 +63102,35 @@
       "pull_request": 66,
       "title": "drive.mjs: wait for page load, never hang on Chrome",
       "url": "https://github.com/wheresryan22/anatomy/pull/66"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T16:06:07Z",
+      "evidence": {
+        "additions": 98,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.4,
+        "high": 14.04,
+        "low": 7.8
+      },
+      "merged_at": "2026-10-15T14:14:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "wheresryan22/anatomy",
+      "pull_request": 61,
+      "title": "fix(audit): follow curved strokes between fixed samples",
+      "url": "https://github.com/wheresryan22/anatomy/pull/61"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -67022,151 +67022,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-13T23:08:01Z",
-      "evidence": {
-        "additions": 47,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.32,
-        "high": 11.23,
-        "low": 6.24
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2066,
-      "title": "fix(setup): preserve Unicode paths in printed recovery command",
-      "url": "https://github.com/JustVugg/colibri/pull/2066"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T22:08:48Z",
-      "evidence": {
-        "additions": 207,
-        "changed_files": 5,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 4,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.79,
-        "high": 17.26,
-        "low": 9.59
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.82,
-        "high": 1.15,
-        "low": 0.57
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2065,
-      "title": "fix(tools): isolate engine modes from inherited shell settings",
-      "url": "https://github.com/JustVugg/colibri/pull/2065"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:34:58Z",
-      "evidence": {
-        "additions": 97,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 4,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.72,
-        "high": 13.13,
-        "low": 7.29
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2064,
-      "title": "fix(diagnostics): discover current engine binaries",
-      "url": "https://github.com/JustVugg/colibri/pull/2064"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:17:57Z",
-      "evidence": {
-        "additions": 121,
-        "changed_files": 4,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 5,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.95,
-        "high": 14.78,
-        "low": 8.21
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.75,
-        "high": 1.05,
-        "low": 0.52
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2062,
-      "title": "fix(benchmarks): reap stalled engines after mux failures",
-      "url": "https://github.com/JustVugg/colibri/pull/2062"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:02:37Z",
-      "evidence": {
-        "additions": 53,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.57,
-        "high": 11.57,
-        "low": 6.43
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2060,
-      "title": "fix(systemone): reject options without log probability scores",
-      "url": "https://github.com/JustVugg/colibri/pull/2060"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-14T04:42:38Z",
       "evidence": {
         "additions": 167,
@@ -67428,59 +67283,146 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-06T17:21:54Z",
+      "created_at": "2026-10-13T23:08:01Z",
       "evidence": {
-        "additions": 49,
+        "additions": 47,
         "changed_files": 2,
         "comments": 0,
         "commits": 1,
-        "deletions": 2,
+        "deletions": 1,
         "reviews": 0
       },
       "heh": {
-        "base": 8.41,
-        "high": 11.36,
-        "low": 6.31
+        "base": 8.32,
+        "high": 11.23,
+        "low": 6.24
       },
-      "merged_at": "2026-10-16T13:08:17Z",
+      "merged_at": "2026-10-16T13:08:16Z",
       "modeled_human_direction_hours": {
         "base": 0.61,
         "high": 0.85,
         "low": 0.43
       },
       "project": "JustVugg/colibri",
-      "pull_request": 1961,
-      "title": "fix(setup): verify cached files against requested download digests",
-      "url": "https://github.com/JustVugg/colibri/pull/1961"
+      "pull_request": 2066,
+      "title": "fix(setup): preserve Unicode paths in printed recovery command",
+      "url": "https://github.com/JustVugg/colibri/pull/2066"
     },
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-09T08:09:41Z",
+      "created_at": "2026-10-13T22:08:48Z",
       "evidence": {
-        "additions": 64,
-        "changed_files": 2,
+        "additions": 207,
+        "changed_files": 5,
         "comments": 0,
         "commits": 1,
-        "deletions": 2,
+        "deletions": 4,
         "reviews": 0
       },
       "heh": {
-        "base": 8.86,
-        "high": 11.96,
-        "low": 6.64
+        "base": 12.79,
+        "high": 17.26,
+        "low": 9.59
       },
-      "merged_at": "2026-10-16T13:08:17Z",
+      "merged_at": "2026-10-16T13:08:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.82,
+        "high": 1.15,
+        "low": 0.57
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2065,
+      "title": "fix(tools): isolate engine modes from inherited shell settings",
+      "url": "https://github.com/JustVugg/colibri/pull/2065"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:34:58Z",
+      "evidence": {
+        "additions": 97,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.72,
+        "high": 13.13,
+        "low": 7.29
+      },
+      "merged_at": "2026-10-16T13:08:16Z",
       "modeled_human_direction_hours": {
         "base": 0.61,
         "high": 0.85,
         "low": 0.43
       },
       "project": "JustVugg/colibri",
-      "pull_request": 1999,
-      "title": "fix(loader): ignore unrepresentable numeric stop ids",
-      "url": "https://github.com/JustVugg/colibri/pull/1999"
+      "pull_request": 2064,
+      "title": "fix(diagnostics): discover current engine binaries",
+      "url": "https://github.com/JustVugg/colibri/pull/2064"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:17:57Z",
+      "evidence": {
+        "additions": 121,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.95,
+        "high": 14.78,
+        "low": 8.21
+      },
+      "merged_at": "2026-10-16T13:08:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.75,
+        "high": 1.05,
+        "low": 0.52
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2062,
+      "title": "fix(benchmarks): reap stalled engines after mux failures",
+      "url": "https://github.com/JustVugg/colibri/pull/2062"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:02:37Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.57,
+        "high": 11.57,
+        "low": 6.43
+      },
+      "merged_at": "2026-10-16T13:08:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2060,
+      "title": "fix(systemone): reject options without log probability scores",
+      "url": "https://github.com/JustVugg/colibri/pull/2060"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -67602,6 +67544,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-06T17:21:54Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.41,
+        "high": 11.36,
+        "low": 6.31
+      },
+      "merged_at": "2026-10-16T13:08:17Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 1961,
+      "title": "fix(setup): verify cached files against requested download digests",
+      "url": "https://github.com/JustVugg/colibri/pull/1961"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-10T03:50:58Z",
       "evidence": {
         "additions": 51,
@@ -67626,6 +67597,35 @@
       "pull_request": 2006,
       "title": "fix(schema): escape decoded controls as JSON in grammar drafts",
       "url": "https://github.com/JustVugg/colibri/pull/2006"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T08:09:41Z",
+      "evidence": {
+        "additions": 64,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.86,
+        "high": 11.96,
+        "low": 6.64
+      },
+      "merged_at": "2026-10-16T13:08:17Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 1999,
+      "title": "fix(loader): ignore unrepresentable numeric stop ids",
+      "url": "https://github.com/JustVugg/colibri/pull/1999"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -68583,6 +68583,35 @@
       "pull_request": 1117,
       "title": "fix(street-level): release superseded and unmounted Google viewer work",
       "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1117"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T19:28:55Z",
+      "evidence": {
+        "additions": 256,
+        "changed_files": 7,
+        "comments": 2,
+        "commits": 5,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 16.29,
+        "high": 21.99,
+        "low": 12.22
+      },
+      "merged_at": "2026-10-17T00:06:34Z",
+      "modeled_human_direction_hours": {
+        "base": 1.68,
+        "high": 2.35,
+        "low": 1.18
+      },
+      "project": "bilawalsidhu/gods-eye-view",
+      "pull_request": 1118,
+      "title": "fix(tools): identify historical camera fallback imagery",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1118"
     }
   ]
 }
