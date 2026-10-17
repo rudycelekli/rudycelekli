@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 211.2,
-    "high": 335.4,
+    "base": 211.3,
+    "high": 335.5,
     "low": 136.6
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 774.7,
+  "engineer_weeks_at_40h": 775.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 144.8,
-        "high": 236.2,
+        "high": 236.7,
         "low": 88.6
       },
       "modeled_human_direction_hours": {
         "base": 6.48,
         "high": 7.41,
-        "low": 5.56
+        "low": 5.55
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 182.8,
         "high": 298.5,
-        "low": 111.9
+        "low": 112.0
       },
       "modeled_human_direction_hours": {
         "base": 11.35,
-        "high": 12.98,
+        "high": 12.97,
         "low": 9.73
       },
       "month": "2026-08",
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 240.8,
+        "base": 240.9,
         "high": 383.9,
         "low": 154.6
       },
       "modeled_human_direction_hours": {
-        "base": 16.07,
+        "base": 16.06,
         "high": 18.36,
         "low": 13.77
       },
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 234.5,
-        "high": 369.4,
-        "low": 153.9
+        "base": 234.6,
+        "high": 369.6,
+        "low": 154.0
       },
       "modeled_human_direction_hours": {
-        "base": 91.85,
-        "high": 104.97,
+        "base": 91.86,
+        "high": 104.98,
         "low": 78.73
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2136,
+      "public_merged_pull_requests": 2137,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 21540.25,
-        "high": 29080.19,
-        "low": 16155.4
+        "base": 21552.76,
+        "high": 29097.08,
+        "low": 16164.78
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2424.7,
-        "high": 3457.3,
-        "low": 1676.02
+        "base": 2425.5,
+        "high": 3458.42,
+        "low": 1676.58
       }
     }
   ],
-  "public_accepted_pull_requests": 2378,
+  "public_accepted_pull_requests": 2379,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 30987.69,
-    "high": 42175.87,
-    "low": 22899.37
+    "base": 31000.2,
+    "high": 42192.76,
+    "low": 22908.75
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3873.35,
-    "high": 5759.49,
-    "low": 2629.58
+    "base": 3874.15,
+    "high": 5760.61,
+    "low": 2630.14
   },
   "updated_at_utc": "2026-10-17",
   "window": {
-    "end": "2026-10-17T16:14:20Z",
+    "end": "2026-10-17T16:41:20Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -69598,6 +69598,35 @@
       "pull_request": 1186,
       "title": "fix(launches): keep null pad and landing coordinates unknown instead of 0",
       "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1186"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T04:06:12Z",
+      "evidence": {
+        "additions": 194,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 12,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.51,
+        "high": 16.89,
+        "low": 9.38
+      },
+      "merged_at": "2026-10-17T16:41:20Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 4245,
+      "title": "fix(swarm): honor shared worker reservations in agent pools",
+      "url": "https://github.com/ruvnet/ruflo/pull/4245"
     }
   ]
 }
