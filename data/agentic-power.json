@@ -12,7 +12,7 @@
       "low": 0.0327
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 83.77,
+    "evidence_window_weeks": 83.78,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 767.3,
+  "engineer_weeks_at_40h": 767.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 146.6,
-    "high": 167.54,
-    "low": 125.66
+    "base": 146.62,
+    "high": 167.56,
+    "low": 125.67
   },
   "monthly": [
     {
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 143.9,
         "high": 235.0,
-        "low": 88.0
+        "low": 88.2
       },
       "modeled_human_direction_hours": {
         "base": 6.52,
-        "high": 7.46,
+        "high": 7.45,
         "low": 5.59
       },
       "month": "2026-06",
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 181.5,
-        "high": 296.4,
+        "high": 296.7,
         "low": 111.2
       },
       "modeled_human_direction_hours": {
         "base": 11.43,
         "high": 13.06,
-        "low": 9.8
+        "low": 9.79
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -597,43 +597,43 @@
         "low": 152.6
       },
       "modeled_human_direction_hours": {
-        "base": 91.36,
-        "high": 104.42,
-        "low": 78.31
+        "base": 91.39,
+        "high": 104.45,
+        "low": 78.34
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2110,
+      "public_merged_pull_requests": 2111,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 21246.37,
-        "high": 28683.45,
-        "low": 15934.98
+        "base": 21254.97,
+        "high": 28695.06,
+        "low": 15941.43
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2396.32,
-        "high": 3417.6,
-        "low": 1656.14
+        "base": 2397.59,
+        "high": 3419.38,
+        "low": 1657.03
       }
     }
   ],
-  "public_accepted_pull_requests": 2352,
+  "public_accepted_pull_requests": 2353,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 30693.81,
-    "high": 41779.13,
-    "low": 22678.95
+    "base": 30702.41,
+    "high": 41790.74,
+    "low": 22685.4
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3844.97,
-    "high": 5719.79,
-    "low": 2609.7
+    "base": 3846.24,
+    "high": 5721.57,
+    "low": 2610.59
   },
   "updated_at_utc": "2026-10-17",
   "window": {
-    "end": "2026-10-17T05:41:56Z",
+    "end": "2026-10-17T06:45:00Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -68844,6 +68844,35 @@
       "pull_request": 1319,
       "title": "fix(daemon): answer client-fixable queue park/close refusals with 400 instead of 500",
       "url": "https://github.com/mvschwarz/openrig/pull/1319"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T01:04:51Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 4,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.6,
+        "high": 11.61,
+        "low": 6.45
+      },
+      "merged_at": "2026-10-17T06:45:00Z",
+      "modeled_human_direction_hours": {
+        "base": 1.27,
+        "high": 1.78,
+        "low": 0.89
+      },
+      "project": "mvschwarz/openrig",
+      "pull_request": 1342,
+      "title": "fix(daemon): answer 400, not 500, when a route's JSON body is null",
+      "url": "https://github.com/mvschwarz/openrig/pull/1342"
     }
   ]
 }
