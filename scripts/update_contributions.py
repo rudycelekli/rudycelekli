@@ -23,6 +23,8 @@ README = ROOT / "README.md"
 DATA_FILE = ROOT / "data" / "contributions.json"
 HERO_SVG_FILE = ROOT / "assets" / "hero.svg"
 BUILDING_SVG_FILE = ROOT / "assets" / "building-now.svg"
+AUTHORITY_SVG_FILE = ROOT / "assets" / "contributor-authority.svg"
+LATEST_WORK_SVG_FILE = ROOT / "assets" / "latest-verified-work.svg"
 SVG_FILE = ROOT / "assets" / "open-source-contributions.svg"
 IMPACT_SVG_FILE = ROOT / "assets" / "impact-signature.svg"
 OWNED_SVG_FILE = ROOT / "assets" / "owned-public-projects.svg"
@@ -34,6 +36,7 @@ LOGIN = "rudycelekli"
 OWNED_PROJECT_DISPLAY_LIMIT = 8
 FEATURED_OWNED_PROJECT_LIMIT = 6
 BUILDING_FRONTIER_PAGE_SIZE = 3
+README_EVIDENCE_PREVIEW_LIMIT = 10
 KYA_EVIDENCE_FULL_NAME = f"{LOGIN}/kya-evidence"
 # The profile repository is presentation infrastructure, not a product. The
 # user has also explicitly identified DreamMachine as not their authored work.
@@ -2209,55 +2212,27 @@ def render_building_now_svg(
 def render_building_now_readme(
     owned_repositories: list[dict[str, object]], updated: str
 ) -> str:
-    """Render strategic anchors and the accessible auto-ranked frontier."""
+    """Render three flagship systems and a compact auto-ranked frontier."""
     featured = select_featured_owned_projects(owned_repositories, updated)
-    page_count = max(
-        1,
-        (len(featured) + BUILDING_FRONTIER_PAGE_SIZE - 1)
-        // BUILDING_FRONTIER_PAGE_SIZE,
-    )
-    view_label = (
-        "one view" if page_count == 1 else f"{page_count} rotating views"
+    frontier = featured[:4]
+    frontier_links = " · ".join(
+        f"[{repo['name']}]({repo['url']})" for repo in frontier
     )
     lines = [
         "<!-- building-now:start -->",
-        "## Building now",
+        "## Three systems, one research program",
         "",
-        f'<img src="./assets/building-now.svg" width="100%" alt="Gradia and KYA Evidence as equal strategic anchors beside {len(featured)} automatically ranked public projects Rudy is building, shown in {view_label}" />',
+        "| System | Problem | Inspectable response | Maturity |",
+        "|:--|:--|:--|:--|",
+        "| **[Gradia](https://www.gradiahq.com)** | AI implementation is difficult to reproduce, inspect, and improve across long-running work. | A research and implementation lab connecting **Blocks · Factory · Verify · Workers · Intelligence**, with [AxiomConsulting.ai](https://axiomconsulting.ai/) as its forward-deployed implementation arm. | Research foundation established; broader verified-software-factory products remain in development. |",
+        "| **[KYA Evidence](https://github.com/rudycelekli/kya-evidence)** | Agent identity and capability claims are usually broader than their evidence. | A portable, scope-bound Know Your Agent protocol that binds the exact system, evidence, and relying-party policy. | Experimental public reference implementation and standardization path, not an adopted industry standard. |",
+        "| **Proof stack** | Agent output can look plausible while its execution record, evaluator, or regression boundary is wrong. | [Gradia Guard](https://github.com/rudycelekli/gradia-guard) records proof-bound execution, [ProofSeal](https://github.com/rudycelekli/proofseal) retains behavioral claims, and [TestLore](https://github.com/rudycelekli/testlore) turns testing history into reusable quality intelligence. | Public source with linked code, releases, and explicit claim boundaries. |",
         "",
-        "**Strategic anchors:**",
+        f"**Current public frontier:** {frontier_links}",
         "",
-        "**[Gradia — AI Research & Implementation Lab](https://www.gradiahq.com)** connects applied research, evaluation, reusable software, and hands-on enterprise implementation. It is building a verified software factory around **Blocks · Factory · Verify · Workers · Intelligence**, with [AxiomConsulting.ai](https://axiomconsulting.ai/) as its implementation, forward-deployed AI engineering, and architecture arm. The research and evaluation foundation is established; the broader factory products remain in development.",
-        "",
-        "**[KYA Evidence · Know Your Agent](https://github.com/rudycelekli/kya-evidence)** for portable, scope-bound agent assurance: bind the exact system, accept signed evidence under explicit relying-party policy, and produce an explainable, contestable assessment. This is an experimental reference implementation and standardization path—not an adopted industry standard.",
-        "",
-        f"**Public frontier, selected automatically and shown in {view_label}:**",
-        "",
+        f"<sub>Frontier selections are re-ranked every 30 minutes from public reach, shipping recency, releases, attributed work, and repository completeness · last ranked {updated} UTC · private Gradia repository evidence remains private</sub>",
+        "<!-- building-now:end -->",
     ]
-    for index, repo in enumerate(featured, 1):
-        blurb = str(repo["description"]).rstrip(".")
-        blurb = blurb.replace(" — ", ": ").replace(" – ", ": ")
-        blurb = blurb.replace("—", ":").replace("–", "-")
-        release = repo.get("latest_release") or {}
-        release_proof = ""
-        if release.get("url"):
-            release_kind = (
-                "pre-release" if release.get("prerelease") else "release"
-            )
-            release_proof = (
-                f" · [{release.get('tag_name') or 'latest'} {release_kind}]"
-                f"({release['url']})"
-            )
-        lines.append(
-            f"{index}. **[{repo['name']}]({repo['url']})**{release_proof}: {blurb}."
-        )
-    lines.extend(
-        [
-            "",
-            f"<sub>Public frontier selections are re-evaluated every 30 minutes from GitHub reach, shipping and release recency, attributed work, and project completeness · last ranked {updated} UTC · Gradia and KYA Evidence are intentionally separate strategic anchors; the broader Gradia factory is described as in development and its private repository evidence remains private</sub>",
-            "<!-- building-now:end -->",
-        ]
-    )
     return "\n".join(lines)
 
 
@@ -2281,36 +2256,189 @@ def top_five_contributor_repositories(
     )
 
 
+def render_contributor_authority_svg(
+    repositories: list[dict[str, object]], updated: str
+) -> str:
+    """Render a compact authority strip without turning proof into a link wall."""
+    qualified = top_five_contributor_repositories(repositories)
+    rank_counts = {
+        rank: sum(1 for repo in qualified if int(repo["contributor_rank"]) == rank)
+        for rank in range(1, 6)
+    }
+    combined_stars = sum(int(repo.get("stargazers") or 0) for repo in qualified)
+    selected = qualified[:6]
+    project_cells = []
+    for index, repo in enumerate(selected):
+        x = 42 + (index % 3) * 372
+        y = 178 + (index // 3) * 43
+        project_cells.append(
+            f'<g transform="translate({x} {y})">'
+            f'<text fill="#F8FAFC" font-size="13" font-weight="720">{html.escape(ellipsize(str(repo["name"]), 24))}</text>'
+            f'<text x="250" fill="#2DE2C5" font-size="11" text-anchor="end">#{int(repo["contributor_rank"])}</text>'
+            f'<text x="312" fill="#91A2B8" font-size="10" text-anchor="end">{compact(int(repo["stargazers"]))} ★</text>'
+            f'</g>'
+        )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-labelledby="authority-title authority-desc">
+  <title id="authority-title">GitHub contributor authority for Rudy Celekli</title>
+  <desc id="authority-desc">GitHub currently lists Rudy in the all-time top five contributors for {len(qualified)} public repositories: {rank_counts[1]} at rank one, {rank_counts[2]} at rank two, {rank_counts[3]} at rank three, {rank_counts[4]} at rank four, and {rank_counts[5]} at rank five. Repository stars indicate current reach, not personal credit.</desc>
+  <defs>
+    <linearGradient id="authority-canvas" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111E"/><stop offset="1" stop-color="#150B2E"/></linearGradient>
+    <linearGradient id="authority-rule" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2DE2C5"/><stop offset=".52" stop-color="#4D7CFE"/><stop offset="1" stop-color="#9B7CFF"/></linearGradient>
+  </defs>
+  <rect width="1200" height="290" rx="28" fill="url(#authority-canvas)"/>
+  <rect x="1" y="1" width="1198" height="288" rx="27" fill="none" stroke="#26364D"/>
+  <rect x="42" y="30" width="76" height="4" rx="2" fill="url(#authority-rule)"/>
+  <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="27" font-weight="780">UPSTREAM AUTHORITY</text>
+  <text x="1158" y="66" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11.5" text-anchor="end">GITHUB CONTRIBUTORS API · {html.escape(updated)} UTC</text>
+  <g transform="translate(42 108)" font-family="ui-monospace,SFMono-Regular,monospace">
+    <text fill="#2DE2C5" font-size="32" font-weight="780">{len(qualified)}</text><text y="22" fill="#91A2B8" font-size="9.5">TOP-5 POSITIONS</text>
+    <text x="215" fill="#F8FAFC" font-size="32" font-weight="780">{rank_counts[1]}</text><text x="215" y="22" fill="#91A2B8" font-size="9.5">AT #1</text>
+    <text x="392" fill="#9B7CFF" font-size="32" font-weight="780">{rank_counts[2]}</text><text x="392" y="22" fill="#91A2B8" font-size="9.5">AT #2</text>
+    <text x="569" fill="#4D7CFE" font-size="32" font-weight="780">{rank_counts[3]}</text><text x="569" y="22" fill="#91A2B8" font-size="9.5">AT #3</text>
+    <text x="746" fill="#F2A93B" font-size="32" font-weight="780">{rank_counts[4] + rank_counts[5]}</text><text x="746" y="22" fill="#91A2B8" font-size="9.5">AT #4–5</text>
+    <text x="962" fill="#F8FAFC" font-size="32" font-weight="780">{compact(combined_stars)}</text><text x="962" y="22" fill="#91A2B8" font-size="9.5">COMBINED REPO REACH</text>
+  </g>
+  <line x1="42" y1="157" x2="1158" y2="157" stroke="#203149"/>
+  <g font-family="ui-monospace,SFMono-Regular,monospace">{''.join(project_cells)}</g>
+  <text x="1158" y="270" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5" text-anchor="end">STARS = REPOSITORY CONTEXT, NOT PERSONAL CREDIT</text>
+</svg>
+"""
+
+
 def render_top_contributor_readme(
     repositories: list[dict[str, object]], updated: str
 ) -> str:
     """Render compact, API-backed all-time contributor-rank proof near the top."""
     qualified = top_five_contributor_repositories(repositories)
+    selected = qualified[:6]
     lines = [
         "<!-- top-contributor-proof:start -->",
-        '<div align="center">',
+        "## Upstream authority",
         "",
-        "**GitHub all-time Top-5 contributor at**",
+        '<img src="./assets/contributor-authority.svg" width="100%" alt="GitHub Contributors API authority summary with Top-5 contributor positions and selected repositories" />',
         "",
     ]
     if qualified:
-        proof = " &nbsp;·&nbsp; ".join(
+        proof = " · ".join(
             f"[**{repo['name']}**]({repo['url']}) `#{int(repo['contributor_rank'])}` · {compact(int(repo['stargazers']))} ★"
-            for repo in qualified
+            for repo in selected
         )
-        lines.append(proof)
+        lines.extend(
+            [
+                f"**Selected proof:** {proof}",
+                "",
+                f"[Inspect all {len(qualified)} Top-5 positions and their GitHub evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)",
+            ]
+        )
     else:
         lines.append("Contributor-rank evidence is awaiting GitHub's index.")
     lines.extend(
         [
             "",
             f"<sub>All-time rank from GitHub's Contributors API · repository stars are reach, not personal credit · refreshed {updated} UTC</sub>",
-            "",
-            "</div>",
             "<!-- top-contributor-proof:end -->",
         ]
     )
     return "\n".join(lines)
+
+
+def render_latest_verified_work_svg(
+    merged_activity: list[dict[str, object]],
+    owned_repositories: list[dict[str, object]],
+    repositories: list[dict[str, object]],
+    updated: str,
+) -> str:
+    """Render the newest accepted contribution, release, and owned activity."""
+    latest_merged = merged_activity[0] if merged_activity else {}
+    releases = [
+        (repo, repo.get("latest_release") or {})
+        for repo in owned_repositories
+        if (repo.get("latest_release") or {}).get("published_at")
+    ]
+    releases.sort(
+        key=lambda item: str(item[1].get("published_at") or ""), reverse=True
+    )
+    release_repo, latest_release = releases[0] if releases else ({}, {})
+    latest_owned = max(
+        owned_repositories,
+        key=lambda repo: str(repo.get("pushed_at") or ""),
+        default={},
+    )
+
+    merged_title = (
+        f"{latest_merged.get('repository', 'Awaiting evidence')} #{latest_merged.get('number', '')} · "
+        f"{latest_merged.get('title', 'No accepted upstream receipt yet')}"
+    ).strip()
+    merged_lines = wrap_svg_text(merged_title, width=70, lines=2)
+    merged_date = str(latest_merged.get("merged_at") or "")[:10] or "pending"
+    merged_delta = int(latest_merged.get("additions") or 0) + int(
+        latest_merged.get("deletions") or 0
+    )
+    release_title = (
+        f"{release_repo.get('name', 'Awaiting release')} · "
+        f"{latest_release.get('tag_name') or 'No public release yet'}"
+    )
+    release_date = str(latest_release.get("published_at") or "")[:10] or "pending"
+    owned_title = str(latest_owned.get("name") or "Awaiting owned-project activity")
+    owned_date = str(latest_owned.get("pushed_at") or "")[:10] or "pending"
+    owned_context = (
+        f"{compact(int(latest_owned.get('contributor_commits') or 0))} indexed commits · "
+        f"{compact(int(latest_owned.get('stargazers') or 0))} stars"
+    )
+    merged_projects = sum(1 for repo in repositories if int(repo.get("merged_prs") or 0))
+    total_merged = sum(int(repo.get("merged_prs") or 0) for repo in repositories)
+
+    merged_text = "".join(
+        f'<text x="113" y="{151 + index * 17}" fill="#F8FAFC" font-size="12.5" font-weight="680">{html.escape(line)}</text>'
+        for index, line in enumerate(merged_lines)
+    )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="365" viewBox="0 0 1200 365" role="img" aria-labelledby="latest-title latest-desc">
+  <title id="latest-title">Latest verified work by Rudy Celekli</title>
+  <desc id="latest-desc">The newest accepted upstream pull request, public owned-project release, and owned-project activity, refreshed from GitHub every 30 minutes.</desc>
+  <defs>
+    <style>
+      .latest-node {{ animation: latest-pulse 4.8s ease-in-out infinite; }}
+      .latest-node.delay-1 {{ animation-delay: .8s; }}
+      .latest-node.delay-2 {{ animation-delay: 1.6s; }}
+      .latest-scan {{ animation: latest-scan 12s linear infinite; }}
+      @keyframes latest-pulse {{ 0%,100% {{ opacity:.42; }} 50% {{ opacity:1; }} }}
+      @keyframes latest-scan {{ from {{ transform:translateY(0); }} to {{ transform:translateY(204px); }} }}
+      @media (prefers-reduced-motion: reduce) {{ .latest-node, .latest-scan {{ animation:none !important; }} .latest-node {{ opacity:1; }} .latest-scan {{ display:none; }} }}
+    </style>
+    <linearGradient id="latest-canvas" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111E"/><stop offset="1" stop-color="#150B2E"/></linearGradient>
+    <linearGradient id="latest-rule" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2DE2C5"/><stop offset=".52" stop-color="#4D7CFE"/><stop offset="1" stop-color="#9B7CFF"/></linearGradient>
+  </defs>
+  <rect width="1200" height="365" rx="28" fill="url(#latest-canvas)"/>
+  <rect x="1" y="1" width="1198" height="363" rx="27" fill="none" stroke="#26364D"/>
+  <rect x="42" y="30" width="76" height="4" rx="2" fill="url(#latest-rule)"/>
+  <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="27" font-weight="780">LATEST VERIFIED WORK</text>
+  <text x="1158" y="66" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11.5" text-anchor="end">GITHUB · {html.escape(updated)} UTC · REFRESH 30 MIN</text>
+  <line x1="76" y1="121" x2="76" y2="307" stroke="#203149" stroke-width="2"/>
+  <rect class="latest-scan" x="72" y="112" width="8" height="24" rx="4" fill="#2DE2C5" opacity=".26"/>
+  <g font-family="ui-monospace,SFMono-Regular,monospace">
+    <circle class="latest-node" cx="76" cy="143" r="7" fill="#2DE2C5"/>
+    <text x="113" y="128" fill="#2DE2C5" font-size="9.5" letter-spacing="1.1">NEWEST ACCEPTED UPSTREAM</text>
+    {merged_text}
+    <text x="113" y="190" fill="#65758B" font-size="9.5">MERGED {merged_date} · {merged_delta:,} ACCEPTED LINE CHANGES</text>
+
+    <circle class="latest-node delay-1" cx="76" cy="231" r="7" fill="#9B7CFF"/>
+    <text x="113" y="216" fill="#9B7CFF" font-size="9.5" letter-spacing="1.1">LATEST PUBLIC RELEASE</text>
+    <text x="113" y="241" fill="#F8FAFC" font-size="13" font-weight="680">{html.escape(ellipsize(release_title, 72))}</text>
+    <text x="113" y="260" fill="#65758B" font-size="9.5">PUBLISHED {release_date}</text>
+
+    <circle class="latest-node delay-2" cx="76" cy="303" r="7" fill="#4D7CFE"/>
+    <text x="113" y="288" fill="#4D7CFE" font-size="9.5" letter-spacing="1.1">LATEST OWNED-PROJECT ACTIVITY</text>
+    <text x="113" y="313" fill="#F8FAFC" font-size="13" font-weight="680">{html.escape(ellipsize(owned_title, 46))}</text>
+    <text x="470" y="313" fill="#65758B" font-size="9.5">PUSHED {owned_date} · {html.escape(owned_context)}</text>
+  </g>
+  <line x1="824" y1="111" x2="824" y2="324" stroke="#203149"/>
+  <g transform="translate(866 139)" font-family="ui-monospace,SFMono-Regular,monospace">
+    <text fill="#2DE2C5" font-size="31" font-weight="780">{len(repositories)}</text><text y="21" fill="#91A2B8" font-size="9.5">VERIFIED PROJECTS</text>
+    <text y="79" fill="#9B7CFF" font-size="31" font-weight="780">{compact(total_merged)}</text><text y="100" fill="#91A2B8" font-size="9.5">MERGED PRS</text>
+    <text y="158" fill="#F2A93B" font-size="31" font-weight="780">{merged_projects}</text><text y="179" fill="#91A2B8" font-size="9.5">PROJECTS WITH MERGED WORK</text>
+  </g>
+</svg>
+"""
 
 
 def render_profile_walkthrough_svg(
@@ -2934,11 +3062,7 @@ def render_impact_signature_svg(
   <desc id="impact-desc">Distribution and cross-project patterns for {total:,} merged pull requests, classified by deterministic title signals. The categories describe dominant intent and do not replace code-level review.</desc>
   <defs>
     <style>
-      .impact-bar {{ transform-box: fill-box; transform-origin: left center; animation: impact-grow 1.25s cubic-bezier(.16,1,.3,1) both; }}
-      .pattern-readout {{ animation: readout-in .9s cubic-bezier(.16,1,.3,1) both; }}
-      @keyframes impact-grow {{ from {{ opacity: .3; transform: scaleX(.05); }} to {{ opacity: 1; transform: scaleX(1); }} }}
-      @keyframes readout-in {{ from {{ opacity: 0; transform: translateY(8px); }} to {{ opacity: 1; transform: translateY(0); }} }}
-      @media (prefers-reduced-motion: reduce) {{ .impact-bar, .pattern-readout {{ animation: none !important; opacity: 1; transform: none; }} }}
+      .impact-bar, .pattern-readout {{ opacity: 1; }}
     </style>
     <linearGradient id="impact-canvas" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111E"/><stop offset="1" stop-color="#150B2E"/></linearGradient>
     <linearGradient id="impact-rule" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2DE2C5"/><stop offset=".52" stop-color="#4D7CFE"/><stop offset="1" stop-color="#9B7CFF"/></linearGradient>
@@ -3044,29 +3168,25 @@ def render_readme_section(
     owned_repositories: list[dict[str, object]],
     updated: str,
 ) -> str:
-    owned_spotlight = owned_repositories[:OWNED_PROJECT_DISPLAY_LIMIT]
+    preview = repositories[:README_EVIDENCE_PREVIEW_LIMIT]
     lines = [
         "<!-- contribution-stats:start -->",
         "## Open-source impact, verified",
         "",
-        f"My upstream work is discovered automatically across public repositories outside my account. The timeline is rebuilt from individual merged-PR receipts on every refresh, while the amber orbit shows [every public PR authored since 2025 that is open now]({CURRENT_OPEN_PULL_REQUESTS_URL}) and therefore not accepted work. A project enters the verified ledger when GitHub confirms at least one attribution signal: its Contributors index, its contribution graph, an authored commit on the default branch, or an authored merged PR on any branch. **GitHub-listed contributor** remains the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. GitHub API rank is the one-based position returned by that repository's Contributors API; **—** means the rank is unavailable or still pending, not that the contribution is unranked. Only merged PRs contribute accepted-line and accepted-file totals; graph credit never converts an open or closed-unmerged PR into accepted work. Stars and forks describe current repository reach, not personal credit or historical star growth.",
+        f"Every 30 minutes, the ledger discovers public upstream attribution and rebuilds this timeline from individual GitHub receipts. Only merged PRs contribute accepted-code totals. The amber orbit is the [current public open queue]({CURRENT_OPEN_PULL_REQUESTS_URL}), never accepted work. Stars and forks describe repository reach, not personal credit.",
         "",
         f'<img src="./assets/open-source-contributions.svg" width="100%" alt="Animated GitHub upstream timeline showing merged pull requests, open pull requests, unique projects, accepted line changes, and current repository reach through {html.escape(updated)}" />',
         "",
-        "### Impact signature",
-        "",
-        "This view analyzes the dominant change intent in every merged PR title, then looks for concentration, quality-and-trust signals, and cross-project breadth. It is a reproducible title-signal analysis, not a substitute for reviewing the linked code.",
-        "",
         f'<img src="./assets/impact-signature.svg" width="100%" alt="Impact-category distribution and cross-project patterns across accepted upstream pull requests through {html.escape(updated)}" />',
         "",
-        "**[Open the live sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)** — sort by GitHub contributor rank, merged PRs, attributed commits, accepted line changes, repository stars, or a transparent balanced view.",
+        "### Selected evidence",
         "",
-        "Impact categories are derived automatically from merged PR titles using deterministic keyword rules; they summarize the dominant kind of work without replacing the linked PR evidence.",
+        f"The ten highest-signal rows are shown here. **[Open all {len(repositories)} verified projects in the sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)**",
         "",
         "| Project, purpose and evidence | Primary impact | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
         "|:--|:--|--:|--:|--:|--:|--:|--:|",
     ]
-    for repo in repositories:
+    for repo in preview:
         tier = str(repo.get("verification_tier") or "github_listed_contributor")
         evidence_url = (
             repo["contributors_url"]
@@ -3121,27 +3241,13 @@ def render_readme_section(
     lines.extend(
         [
             "",
-            "### Public projects I own",
+            f"<sub>Showing {len(preview)} of {len(repositories)} verified upstream projects · {len(owned_repositories)} qualifying owned public repositories tracked separately · [sortable explorer](https://rudycelekli.github.io/contributions.html) · [machine-readable evidence](./data/contributions.json)</sub>",
             "",
-            "Owned public source is a separate signal: GitHub lists me as the repository owner. These projects are discovered automatically from my public, non-fork, non-archived repositories, then ranked by stars, recent activity, and GitHub-attributed commits. Ownership is not counted as upstream contributor credit.",
-            "",
-            f'<img src="./assets/owned-public-projects.svg" width="100%" alt="Automatically discovered public projects owned by Rudy Celekli: {html.escape(", ".join(str(repo["name"]) for repo in owned_spotlight))}" />',
-            "",
+            "<sub>Impact categories are deterministic dominant-intent signals from merged PR titles, not a substitute for code review. GitHub contributor rank is the API's one-based all-time ordering; unavailable rank is not treated as zero.</sub>",
         ]
     )
-    for repo in owned_spotlight:
-        pushed = str(repo.get("pushed_at") or "")[:10] or "unknown"
-        lines.append(
-            f"- **[{repo['name']}]({repo['url']})**: public owner repository with "
-            f"{counted(int(repo['contributor_commits']), 'GitHub-indexed commit')}. "
-            f"Repository reach: {counted(int(repo['stargazers']), 'star')} and "
-            f"{counted(int(repo['forks']), 'fork')}; last pushed {pushed}."
-        )
     lines.extend(
         [
-            "",
-            f"<sub>Showing {len(owned_spotlight)} of {len(owned_repositories)} qualifying owned public repositories · [browse every public source repository](https://github.com/{LOGIN}?tab=repositories&type=source) · complete evidence retained in [machine-readable data](./data/contributions.json)</sub>",
-            "",
             f"<sub>Last verified {updated} UTC · visual + evidence refreshed every 30 minutes by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>",
             "<!-- contribution-stats:end -->",
         ]
@@ -3153,7 +3259,6 @@ def render_agentic_power_readme(profile: dict[str, object]) -> str:
     power = profile["agentic_power_x"]
     heh = profile["skilled_human_equivalent_hours"]
     direction = profile["modeled_human_direction_hours"]
-    proxy_direction = profile["uncalibrated_github_direction_proxy_hours"]
     calibration = profile["direction_calibration"]
     weeks = float(profile["engineer_weeks_at_40h"])
     public_items = int(profile["public_accepted_pull_requests"])
@@ -3166,16 +3271,14 @@ def render_agentic_power_readme(profile: dict[str, object]) -> str:
             "",
             '<img src="./assets/agentic-power-profile.svg" width="100%" alt="Operator-calibrated provisional Agentic Power since 2025 with a month-by-month timeline" />',
             "",
-            f"**AP ≈ {float(power['base']):.1f}× (operator-calibrated provisional estimate):** approximately "
-            f"{float(heh['base']):,.1f} skilled Human-Equivalent Hours, or {weeks:.1f} engineer-weeks, "
-            f"divided by {float(direction['base']):,.1f} operator-estimated human-direction hours. "
-            f"The transparent scenario range is {float(power['low']):.1f}× to {float(power['high']):.1f}×.",
+            "| Measurement | Current evidence | Confidence boundary |",
+            "|:--|:--|:--|",
+            f"| **Provisional AP** | **{float(power['base']):.1f}×**, with a {float(power['low']):.1f}×–{float(power['high']):.1f}× scenario range | Derived estimate, not a time-tracked audit |",
+            f"| **Accepted-work numerator** | {float(heh['base']):,.1f} skilled Human-Equivalent Hours ({weeks:.1f} engineer-weeks) | Model-based task equivalence from accepted evidence |",
+            f"| **Direction denominator** | {float(direction['base']):,.1f} hours, midpoint of {float(direction['low']):,.1f}–{float(direction['high']):,.1f} | Operator recall: {float(calibration['operator_estimated_hours_per_week']['low']):.1f}–{float(calibration['operator_estimated_hours_per_week']['high']):.1f} active hours per week |",
+            f"| **Evidence coverage** | {public_items:,} merged upstream PRs plus {repository_commits:,} authored default-branch commits across {repository_count} accessible repositories | Private work remains redacted; only accessible repositories are counted |",
             "",
-            f"The evidence base since January 2025 combines **{public_items:,} merged upstream PRs** with **{repository_commits:,} authored, non-merge default-branch commits across {repository_count} currently accessible repositories**: personal, private, employer, and open-source alike. Work such as Gradia is included only as a redacted aggregate: no repository names, commit messages, code, links, employer, or client details are published.",
-            "",
-            f"The conservative GitHub activity proxy produces {float(proxy_direction['base']):,.1f} direction hours because it assigns attention to individual commits and repository-months. Operator recall is **{float(calibration['operator_estimated_hours_per_week']['low']):.1f}–{float(calibration['operator_estimated_hours_per_week']['high']):.1f} active direction hours per week**; across {float(calibration['evidence_window_weeks']):.1f} weeks, that calibrates the denominator to {float(direction['low']):,.1f}–{float(direction['high']):,.1f} hours, with {float(direction['base']):,.1f} as the midpoint.",
-            "",
-            "Direction includes active briefing, steering, reviewing, correcting, and coordinating. It excludes agent runtime and waiting. The calibration is operator-estimated rather than reconstructed from time logs, so this remains **a transparent scenario, not a completed Full Evidence Audit**.",
+            "Direction includes active briefing, steering, review, correction, and coordination. It excludes agent runtime and waiting. This is a transparent scenario with inspectable inputs, not a completed Full Evidence Audit.",
             "",
             "<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence and visuals refreshed every 30 minutes; redacted repository snapshot retained until a private read credential is available</sub>",
             "<!-- agentic-power-profile:end -->",
@@ -3303,6 +3406,19 @@ def main() -> int:
     )
     write_generated(AP_SVG_FILE, render_agentic_power_svg(agentic_power))
     write_generated(HERO_SVG_FILE, render_hero_svg(repositories, agentic_power))
+    write_generated(
+        AUTHORITY_SVG_FILE,
+        render_contributor_authority_svg(repositories, updated),
+    )
+    write_generated(
+        LATEST_WORK_SVG_FILE,
+        render_latest_verified_work_svg(
+            merged_pull_request_activity,
+            owned_repositories,
+            repositories,
+            updated,
+        ),
+    )
     write_generated(
         BUILDING_SVG_FILE,
         render_building_now_svg(owned_repositories, updated),

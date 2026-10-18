@@ -602,7 +602,8 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn('width="396" height="8"', svg)
         self.assertNotIn('width="448" height="8"', svg)
         self.assertIn('x1="661"', svg)
-        self.assertIn("@media (prefers-reduced-motion: reduce)", svg)
+        self.assertIn(".impact-bar, .pattern-readout { opacity: 1; }", svg)
+        self.assertNotIn("@keyframes impact-grow", svg)
 
     def test_impact_signature_compacts_counts_before_they_can_overflow(self):
         analysis = {
@@ -659,13 +660,13 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "**Reliability & correctness**<br><sub>6 of 9 merged PRs</sub>",
             section,
         )
-        self.assertIn("### Impact signature", section)
+        self.assertIn("### Selected evidence", section)
         self.assertIn("./assets/impact-signature.svg", section)
         self.assertIn("| [#2](https://github.com/upstream/project/graphs/contributors) | 12 | [9]", section)
         self.assertIn("| +1,234 / −56 | 42 | 7,890 ★ · 321 forks |", section)
-        self.assertIn("GitHub API rank is the one-based position", section)
+        self.assertIn("GitHub contributor rank is the API's one-based all-time ordering", section)
         self.assertIn(
-            "[Open the live sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)",
+            "[Open all 1 verified projects in the sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)",
             section,
         )
         self.assertNotIn("- **[Upstream Project]", section)
@@ -710,7 +711,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             graph_section,
         )
         self.assertIn("| — | 1 | [0]", graph_section)
-        self.assertIn("Only merged PRs contribute accepted-line", graph_section)
+        self.assertIn("Only merged PRs contribute accepted-code totals", graph_section)
 
     @mock.patch.object(subject, "official_contribution_stats")
     @mock.patch.object(subject, "rest_json")
@@ -910,6 +911,127 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertNotIn("Sixth Project", section)
         self.assertNotIn("Pending Project", section)
 
+    def test_contributor_authority_visual_compresses_top_five_proof(self):
+        repositories = [
+            {
+                "name": "Rank One",
+                "full_name": "upstream/rank-one",
+                "contributor_rank": 1,
+                "stargazers": 1_500,
+            },
+            {
+                "name": "Rank Two",
+                "full_name": "upstream/rank-two",
+                "contributor_rank": 2,
+                "stargazers": 2_500,
+            },
+            {
+                "name": "Rank Six",
+                "full_name": "upstream/rank-six",
+                "contributor_rank": 6,
+                "stargazers": 50_000,
+            },
+        ]
+
+        svg = subject.render_contributor_authority_svg(
+            repositories, "2026-10-18"
+        )
+
+        self.assertIn("UPSTREAM AUTHORITY", svg)
+        self.assertIn("2</text><text y=\"22\"", svg)
+        self.assertIn("TOP-5 POSITIONS", svg)
+        self.assertIn("Rank One", svg)
+        self.assertIn("Rank Two", svg)
+        self.assertNotIn("Rank Six", svg)
+        self.assertIn("4.0k", svg)
+        self.assertNotIn("animation:", svg)
+
+    def test_latest_verified_work_visual_preserves_evidence_boundaries(self):
+        merged_activity = [
+            {
+                "repository": "upstream/project",
+                "number": 42,
+                "title": "fix: preserve replay receipts",
+                "merged_at": "2026-10-18T12:00:00Z",
+                "additions": 25,
+                "deletions": 5,
+            }
+        ]
+        owned = [
+            {
+                "name": "Released Project",
+                "pushed_at": "2026-10-17T10:00:00Z",
+                "contributor_commits": 12,
+                "stargazers": 3,
+                "latest_release": {
+                    "tag_name": "v0.1.0",
+                    "published_at": "2026-10-18T09:00:00Z",
+                },
+            },
+            {
+                "name": "Fresh Activity",
+                "pushed_at": "2026-10-18T11:00:00Z",
+                "contributor_commits": 8,
+                "stargazers": 2,
+            },
+        ]
+        repositories = [
+            {"merged_prs": 7},
+            {"merged_prs": 0},
+            {"merged_prs": 2},
+        ]
+
+        svg = subject.render_latest_verified_work_svg(
+            merged_activity, owned, repositories, "2026-10-18"
+        )
+
+        self.assertIn("LATEST VERIFIED WORK", svg)
+        self.assertIn("NEWEST ACCEPTED UPSTREAM", svg)
+        self.assertIn("upstream/project #42", svg)
+        self.assertIn("30 ACCEPTED LINE CHANGES", svg)
+        self.assertIn("LATEST PUBLIC RELEASE", svg)
+        self.assertIn("Released Project · v0.1.0", svg)
+        self.assertIn("LATEST OWNED-PROJECT ACTIVITY", svg)
+        self.assertIn("Fresh Activity", svg)
+        self.assertIn(">3</text><text y=\"21\"", svg)
+        self.assertIn(">9</text><text y=\"100\"", svg)
+        self.assertIn("prefers-reduced-motion", svg)
+
+    def test_readme_evidence_preview_is_limited_to_ten_rows(self):
+        repositories = []
+        for index in range(11):
+            repositories.append(
+                {
+                    "name": f"Project {index + 1}",
+                    "description": "Verified upstream project",
+                    "url": f"https://github.com/upstream/project-{index + 1}",
+                    "contributors_url": f"https://github.com/upstream/project-{index + 1}/graphs/contributors",
+                    "commits_url": f"https://github.com/upstream/project-{index + 1}/commits",
+                    "pull_requests_url": f"https://github.com/upstream/project-{index + 1}/pulls",
+                    "verification_tier": "github_listed_contributor",
+                    "verification_label": "GitHub-listed contributor",
+                    "contributor_rank": index + 1,
+                    "contributor_commits": 10,
+                    "merged_prs": 5,
+                    "accepted_additions": 100,
+                    "accepted_deletions": 5,
+                    "accepted_changed_files": 8,
+                    "stargazers": 1_000,
+                    "forks": 10,
+                    "impact_category": "Reliability & correctness",
+                    "impact_category_prs": 4,
+                }
+            )
+
+        section = subject.render_readme_section(
+            repositories, [], "2026-10-18"
+        )
+
+        self.assertIn("Project 10", section)
+        self.assertNotIn("Project 11", section)
+        self.assertIn("Showing 10 of 11 verified upstream projects", section)
+        self.assertIn("Open all 11 verified projects", section)
+
     def test_building_now_keeps_strategic_anchors_outside_ranked_frontier(self):
         projects = [
             {
@@ -1016,16 +1138,19 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn('class="frontier-progress"', svg)
         self.assertIn('class="frontier-row frontier-row-1"', svg)
         self.assertIn("Gradia", readme)
-        self.assertIn("AI Research & Implementation Lab", readme)
+        self.assertIn("Three systems, one research program", readme)
+        self.assertIn("research and implementation lab", readme)
         self.assertIn("Blocks · Factory · Verify · Workers · Intelligence", readme)
         self.assertIn("AxiomConsulting.ai", readme)
-        self.assertIn("broader factory products remain in development", readme)
-        self.assertIn("KYA Evidence · Know Your Agent", readme)
+        self.assertIn("broader verified-software-factory products remain in development", readme)
+        self.assertIn("KYA Evidence", readme)
         self.assertIn("not an adopted industry standard", readme)
-        self.assertIn("private repository evidence remains private", readme)
+        self.assertIn("private Gradia repository evidence remains private", readme)
         self.assertIn("Adopted Project", readme)
-        self.assertIn("v0.1.0 pre-release", readme)
-        self.assertIn("Additional Project", readme)
+        self.assertIn("Current public frontier", readme)
+        self.assertIn("Additional Project 3", readme)
+        self.assertNotIn("Additional Project 1", readme)
+        self.assertNotIn("Additional Project 2", readme)
 
     def test_profile_leads_with_upstream_proof_and_runs_twice_hourly(self):
         readme = (subject.ROOT / "README.md").read_text()
@@ -1033,13 +1158,18 @@ class ContributionDiscoveryTests(unittest.TestCase):
             subject.ROOT / ".github" / "workflows" / "refresh-contribution-stats.yml"
         ).read_text()
         self.assertLess(
-            readme.index("<!-- contribution-stats:start -->"),
-            readme.index("## The proof stack"),
+            readme.index("## Upstream authority"),
+            readme.index("## Three systems, one research program"),
         )
         self.assertLess(
-            readme.index("### Public projects I own"),
-            readme.index("## The proof stack"),
+            readme.index("## Latest verified work"),
+            readme.index("<!-- contribution-stats:start -->"),
         )
+        self.assertLess(
+            readme.index("<!-- contribution-stats:start -->"),
+            readme.index("## Agentic power, engineered"),
+        )
+        self.assertLess(len(readme.split()), 2_500)
         self.assertIn('cron: "17,47 * * * *"', workflow)
 
     def test_professional_identity_and_community_links_are_visible(self):
@@ -1051,10 +1181,15 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("https://axiomconsulting.ai/", readme)
         self.assertIn("https://charlotte.aitinkerers.org/", readme)
         self.assertIn("https://agentics.org/leadership/", readme)
-        self.assertIn("./assets/profile-walkthrough.svg", readme)
-        self.assertIn("./assets/building-now.svg", readme)
-        self.assertIn("RuVector’s vector walkthrough", readme)
-        self.assertLess(readme.index("LINKEDIN-connect"), readme.index("## Intelligence"))
+        self.assertIn("./assets/contributor-authority.svg", readme)
+        self.assertIn("./assets/latest-verified-work.svg", readme)
+        self.assertNotIn("./assets/profile-walkthrough.svg", readme)
+        self.assertNotIn("./assets/building-now.svg", readme)
+        self.assertIn("## I build AI systems that can prove what happened.", readme)
+        self.assertLess(
+            readme.index("LINKEDIN-connect"),
+            readme.index("## I build AI systems that can prove what happened."),
+        )
 
 
 if __name__ == "__main__":
