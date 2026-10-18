@@ -483,8 +483,11 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("3 VERIFIED", svg)
         self.assertIn("330", svg)
         self.assertIn("6.0k", svg)
-        self.assertIn("PLAYBACK · SEP 28, 2026", svg)
-        self.assertIn('dur="24s"', svg)
+        self.assertIn("PLAYBACK · SEP 27, 2026", svg)
+        self.assertIn("CURRENT · SEP 28, 2026 · 8 SEC HOLD", svg)
+        self.assertIn('dur="32s"', svg)
+        self.assertIn('keyTimes="0;0.75000;1"', svg)
+        self.assertIn('keyPoints="0;1;1"', svg)
         self.assertIn('calcMode="discrete"', svg)
         self.assertIn('class="playback-static"', svg)
         self.assertIn("ACCEPTED LINE CHANGES", svg)
@@ -497,10 +500,15 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("Stars describe current repository reach", svg)
 
     def test_timeline_frame_sequences_loop_without_multiple_visible_frames(self):
-        self.assertEqual(subject.timeline_frame_values(3, 0), "1;0;0;1")
+        self.assertEqual(subject.timeline_frame_values(3, 0), "1;0;0;0")
         self.assertEqual(subject.timeline_frame_values(3, 1), "0;1;0;0")
-        self.assertEqual(subject.timeline_frame_values(3, 2), "0;0;1;0")
-        self.assertEqual(subject.timeline_frame_key_times(3), "0.00000;0.33333;0.66667;1.00000")
+        self.assertEqual(subject.timeline_frame_values(3, 2), "0;0;1;1")
+        self.assertEqual(
+            subject.timeline_frame_key_times(3),
+            "0.00000;0.37500;0.75000;1.00000",
+        )
+        self.assertEqual(subject.timeline_frame_values(1, 0), "1;1")
+        self.assertEqual(subject.timeline_frame_key_times(1), "0.00000;1.00000")
 
     def test_upstream_timeline_is_rebuilt_from_daily_merged_pr_receipts(self):
         repositories = [

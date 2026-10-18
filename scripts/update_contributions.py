@@ -2773,18 +2773,26 @@ def timeline_path(
 
 
 def timeline_frame_values(frame_count: int, active_index: int) -> str:
-    """Return a discrete looping opacity sequence for one timeline frame."""
+    """Return a discrete opacity sequence with the current frame held at the end."""
     if frame_count <= 1:
         return "1;1"
     values = ["1" if index == active_index else "0" for index in range(frame_count)]
-    values.append("1" if active_index == 0 else "0")
+    values.append("1" if active_index == frame_count - 1 else "0")
     return ";".join(values)
 
 
-def timeline_frame_key_times(frame_count: int) -> str:
-    """Return evenly spaced key times, including the loop-closing endpoint."""
+def timeline_frame_key_times(frame_count: int, hold_fraction: float = 0.25) -> str:
+    """Return key times that reserve the end of each cycle for the current state."""
     frame_count = max(frame_count, 1)
-    return ";".join(f"{index / frame_count:.5f}" for index in range(frame_count + 1))
+    if frame_count == 1:
+        return "0.00000;1.00000"
+    sweep_fraction = 1.0 - hold_fraction
+    starts = [
+        sweep_fraction * index / (frame_count - 1)
+        for index in range(frame_count)
+    ]
+    starts.append(1.0)
+    return ";".join(f"{value:.5f}" for value in starts)
 
 
 def render_svg(
@@ -2806,7 +2814,10 @@ def render_svg(
     )
     denominator = max(len(points) - 1, 1)
     max_daily = max((int(point["daily_merged_prs"]) for point in points), default=0) or 1
-    playback_duration = 24
+    playback_sweep_duration = 24
+    current_hold_duration = 8
+    playback_duration = playback_sweep_duration + current_hold_duration
+    sweep_fraction = playback_sweep_duration / playback_duration
     frame_count = len(points)
     frame_key_times = timeline_frame_key_times(frame_count)
     playback_frames = []
@@ -2831,6 +2842,11 @@ def render_svg(
             )
         date_label = dt.date.fromisoformat(str(point["date"])).strftime("%b %d, %Y")
         frame_values = timeline_frame_values(frame_count, index)
+        state_label = (
+            f"CURRENT · {date_label.upper()} · {current_hold_duration} SEC HOLD"
+            if index == frame_count - 1
+            else f"PLAYBACK · {date_label.upper()}"
+        )
         frame_animation = (
             f'<animate attributeName="opacity" dur="{playback_duration}s" '
             f'repeatCount="indefinite" calcMode="discrete" '
@@ -2838,7 +2854,7 @@ def render_svg(
         )
         playback_frames.append(
             f'<g class="playback-frame" opacity="0">{frame_animation}'
-            f'<text x="1158" y="92" fill="#2DE2C5" font-size="10.5" text-anchor="end">PLAYBACK · {date_label.upper()}</text>'
+            f'<text x="1158" y="92" fill="#2DE2C5" font-size="10.5" text-anchor="end">{state_label}</text>'
             f'<text x="42" y="118" fill="#9B7CFF" font-size="22" font-weight="760">{int(point["cumulative_merged_prs"]):,}</text>'
             f'<text x="459" y="118" fill="#2DE2C5" font-size="22" font-weight="760">{int(point["cumulative_projects"]):,}</text>'
             f'<text x="780" y="118" fill="#F8FAFC" font-size="22" font-weight="760">{compact(int(point["cumulative_line_changes"]))}</text>'
@@ -2938,8 +2954,8 @@ def render_svg(
   </g>
   <g class="playback-animated" opacity=".58">
     <line x1="104" y1="151" x2="104" y2="594" stroke="#2DE2C5" stroke-width="2">
-      <animate attributeName="x1" from="104" to="1105" dur="{playback_duration}s" repeatCount="indefinite"/>
-      <animate attributeName="x2" from="104" to="1105" dur="{playback_duration}s" repeatCount="indefinite"/>
+      <animate attributeName="x1" values="104;1105;1105" keyTimes="0;{sweep_fraction:.5f};1" dur="{playback_duration}s" repeatCount="indefinite" calcMode="linear"/>
+      <animate attributeName="x2" values="104;1105;1105" keyTimes="0;{sweep_fraction:.5f};1" dur="{playback_duration}s" repeatCount="indefinite" calcMode="linear"/>
     </line>
   </g>
   <line class="playhead-static" x1="1105" y1="151" x2="1105" y2="594" stroke="#2DE2C5" stroke-width="2" opacity=".58"/>
@@ -2959,7 +2975,7 @@ def render_svg(
     <path d="{merged_path}" fill="none" stroke="#9B7CFF" stroke-width="3" opacity=".24"/>
     <path id="merged-path" class="trace-reveal slow" d="{merged_path}" fill="none" stroke="#9B7CFF" stroke-width="3" pathLength="1"/>
     <g>{''.join(daily_bars)}</g>
-    <circle class="packet" r="5" fill="#F8FAFC"><animateMotion dur="{playback_duration}s" repeatCount="indefinite"><mpath href="#merged-path"/></animateMotion></circle>
+    <circle class="packet" r="5" fill="#F8FAFC"><animateMotion dur="{playback_duration}s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;{sweep_fraction:.5f};1"><mpath href="#merged-path"/></animateMotion></circle>
     <text x="1124" y="325" fill="#65758B" font-size="9.5">MERGED</text>
 
     <text x="42" y="510" fill="#4D7CFE" font-size="10.5" letter-spacing="1.2">ACCEPTED CODE DELTA</text>
