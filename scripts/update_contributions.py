@@ -41,6 +41,10 @@ OWNED_PROJECT_EXCLUSIONS = {
     f"{LOGIN}/DreamMachine".casefold(),
 }
 PERIOD_START = dt.datetime(2025, 1, 1, tzinfo=dt.timezone.utc)
+CURRENT_OPEN_PULL_REQUESTS_URL = (
+    "https://github.com/search?q=author%3Arudycelekli+is%3Apr+is%3Aopen+"
+    "created%3A%3E%3D2025-01-01&type=pullrequests"
+)
 OPERATOR_DIRECTION_HOURS_PER_WEEK = {
     "low": 1.5,
     "base": 1.75,
@@ -87,6 +91,8 @@ query($query: String!, $cursor: String) {
         createdAt
         mergedAt
         merged
+        state
+        isDraft
         additions
         deletions
         changedFiles
@@ -384,6 +390,21 @@ def rest_json(token: str, url: str) -> object:
                 f"GitHub REST API failed ({error.code}): {detail}"
             ) from error
     raise RuntimeError("GitHub REST API failed after retries")
+
+
+def discover_current_open_pull_request_count(token: str) -> int:
+    """Count every public PR authored in the evidence window that is open now."""
+    query = (
+        f"author:{LOGIN} is:pr is:open is:public "
+        f"created:>={PERIOD_START.date().isoformat()}"
+    )
+    parameters = urllib.parse.urlencode({"q": query, "per_page": 1})
+    payload = rest_json(token, f"https://api.github.com/search/issues?{parameters}")
+    if not isinstance(payload, dict) or "total_count" not in payload:
+        raise RuntimeError("Unexpected GitHub open pull-request search response")
+    if payload.get("incomplete_results"):
+        raise RuntimeError("GitHub open pull-request search returned incomplete results")
+    return int(payload["total_count"])
 
 
 def search_commits_window(
@@ -930,6 +951,11 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
             for pull_request in entry["pull_requests"]
             if bool(pull_request.get("merged"))
         ]
+        open_pull_requests = [
+            pull_request
+            for pull_request in entry["pull_requests"]
+            if str(pull_request.get("state") or "").upper() == "OPEN"
+        ]
         graph_commits = int(entry.get("contribution_graph_commits") or 0)
         listed_commits = None
         contributor_rank = None
@@ -995,6 +1021,10 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
                     f"https://github.com/{full_name}/pulls"
                     f"?q=is%3Apr+author%3A{LOGIN}+is%3Amerged"
                 ),
+                "open_pull_requests_url": (
+                    f"https://github.com/{full_name}/pulls"
+                    f"?q=is%3Apr+author%3A{LOGIN}+is%3Aopen"
+                ),
                 "verification_tier": verification_tier,
                 "verification_label": verification_label,
                 "official_contributor": listed_commits is not None,
@@ -1002,6 +1032,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
                 "default_branch_commits": default_branch_commits,
                 "contributor_commits": contributor_commits,
                 "merged_prs": len(merged),
+                "open_prs": len(open_pull_requests),
                 "accepted_additions": sum(int(item["additions"]) for item in merged),
                 "accepted_deletions": sum(int(item["deletions"]) for item in merged),
                 "accepted_changed_files": sum(
@@ -1010,6 +1041,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
                 "stargazers": int(repository["stargazerCount"]),
                 "forks": int(repository["forkCount"]),
                 "_merged_pull_requests": merged,
+                "_open_pull_requests": open_pull_requests,
             }
         )
 
@@ -1257,14 +1289,6 @@ def wrap_svg_text(value: object, width: int = 64, lines: int = 2) -> list[str]:
         if not wrapped[-1].endswith("…"):
             wrapped[-1] += "…"
     return wrapped or [""]
-
-
-def metric(x: int, label: str, value: str, color: str) -> str:
-    return f"""
-      <g transform="translate({x} 0)">
-        <text y="0" fill="{color}" font-size="31" font-weight="750">{html.escape(value)}</text>
-        <text y="27" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" letter-spacing="0.55">{html.escape(label.upper())}</text>
-      </g>"""
 
 
 def estimate_work_item(repo: dict[str, object], pull_request: dict[str, object]) -> dict[str, object]:
@@ -2302,132 +2326,302 @@ def render_profile_walkthrough_svg(
 """
 
 
-def render_repository_card(
-    repo: dict[str, object], index: int, repository_count: int
+def build_upstream_timeline(
+    repositories: list[dict[str, object]],
+    updated: str,
+    current_open_pull_requests: int | None = None,
+) -> dict[str, object]:
+    """Build daily cumulative upstream evidence from merged PR receipts."""
+    events: list[dict[str, object]] = []
+    for repository in repositories:
+        full_name = str(repository.get("full_name") or repository.get("name") or "")
+        for pull_request in repository.get("_merged_pull_requests", []):
+            merged_at = str(
+                pull_request.get("mergedAt") or pull_request.get("merged_at") or ""
+            )
+            if not merged_at:
+                continue
+            events.append(
+                {
+                    "day": merged_at[:10],
+                    "repository": full_name,
+                    "line_changes": int(pull_request.get("additions") or 0)
+                    + int(pull_request.get("deletions") or 0),
+                }
+            )
+
+    end = dt.date.fromisoformat(updated)
+    if events:
+        first_event = min(dt.date.fromisoformat(str(event["day"])) for event in events)
+        start = min(first_event, end) - dt.timedelta(days=1)
+    else:
+        start = end - dt.timedelta(days=1)
+        for repository in repositories:
+            merged_prs = int(repository.get("merged_prs") or 0)
+            if not merged_prs:
+                continue
+            events.extend(
+                {
+                    "day": end.isoformat(),
+                    "repository": str(
+                        repository.get("full_name") or repository.get("name") or ""
+                    ),
+                    "line_changes": (
+                        int(repository.get("accepted_additions") or 0)
+                        + int(repository.get("accepted_deletions") or 0)
+                        if index == 0
+                        else 0
+                    ),
+                }
+                for index in range(merged_prs)
+            )
+
+    events_by_day: dict[str, list[dict[str, object]]] = {}
+    for event in events:
+        events_by_day.setdefault(str(event["day"]), []).append(event)
+
+    points: list[dict[str, object]] = []
+    repositories_seen: set[str] = set()
+    merged_total = 0
+    line_total = 0
+    day = start
+    while day <= end:
+        day_events = events_by_day.get(day.isoformat(), [])
+        new_projects = 0
+        for event in day_events:
+            repository = str(event["repository"])
+            if repository not in repositories_seen:
+                repositories_seen.add(repository)
+                new_projects += 1
+            merged_total += 1
+            line_total += int(event["line_changes"])
+        points.append(
+            {
+                "date": day.isoformat(),
+                "daily_merged_prs": len(day_events),
+                "daily_line_changes": sum(
+                    int(event["line_changes"]) for event in day_events
+                ),
+                "new_projects": new_projects,
+                "cumulative_merged_prs": merged_total,
+                "cumulative_projects": len(repositories_seen),
+                "cumulative_line_changes": line_total,
+            }
+        )
+        day += dt.timedelta(days=1)
+
+    return {
+        "start_date": start.isoformat(),
+        "end_date": end.isoformat(),
+        "verified_projects": len(repositories),
+        "merged_projects": sum(
+            1 for repository in repositories if int(repository.get("merged_prs") or 0)
+        ),
+        "merged_prs": sum(
+            int(repository.get("merged_prs") or 0) for repository in repositories
+        ),
+        "open_prs": (
+            int(current_open_pull_requests)
+            if current_open_pull_requests is not None
+            else sum(
+                int(repository.get("open_prs") or 0) for repository in repositories
+            )
+        ),
+        "open_prs_in_verified_projects": sum(
+            int(repository.get("open_prs") or 0) for repository in repositories
+        ),
+        "open_pr_scope_start": PERIOD_START.date().isoformat(),
+        "open_pull_requests_url": CURRENT_OPEN_PULL_REQUESTS_URL,
+        "accepted_line_changes": sum(
+            int(repository.get("accepted_additions") or 0)
+            + int(repository.get("accepted_deletions") or 0)
+            for repository in repositories
+        ),
+        "current_repository_reach_stars": sum(
+            int(repository.get("stargazers") or 0) for repository in repositories
+        ),
+        "points": points,
+    }
+
+
+def timeline_path(
+    points: list[dict[str, object]],
+    key: str,
+    x0: float,
+    x1: float,
+    y0: float,
+    y1: float,
 ) -> str:
-    """Render one reusable repository evidence component."""
-    row = index // 2
-    is_single_last = repository_count % 2 == 1 and index == repository_count - 1
-    x = 325 if is_single_last else 42 + (index % 2) * 567
-    y = 112 + row * 258
-    merged = int(repo["merged_prs"])
-    commits = int(repo["contributor_commits"])
-    added = int(repo["accepted_additions"])
-    deleted = int(repo["accepted_deletions"])
-    files = int(repo["accepted_changed_files"])
-    accepted_lines = added + deleted
-    tier = str(repo.get("verification_tier") or "github_listed_contributor")
-    verification_label = str(
-        repo.get("verification_label") or "GitHub-listed contributor"
-    )
-    commit_metric_label = (
-        "indexed commits"
-        if tier == "github_listed_contributor"
-        else "default commits"
-        if tier == "default_branch_commit_verified"
-        else "graph commits"
-        if tier == "github_contribution_graph_verified"
-        else "commit index"
-    )
-    commit_metric_value = compact(commits) if commits else "—"
-    files_metric_value = compact(files) if merged else "—"
-    lines_metric_value = compact(accepted_lines) if merged else "—"
-    description_lines = wrap_svg_text(repo["description"], width=65, lines=2)
-    description = "".join(
-        f'<tspan x="31" dy="{0 if line_index == 0 else 18}">{html.escape(line)}</tspan>'
-        for line_index, line in enumerate(description_lines)
-    )
-    return f"""
-    <g transform="translate({x} {y})">
-      <defs><clipPath id="contribution-card-{index}"><rect width="550" height="240" rx="22"/></clipPath></defs>
-      <rect width="550" height="240" rx="22" fill="#0B1728" stroke="{repo['accent']}" stroke-opacity="0.42"/>
-      <g clip-path="url(#contribution-card-{index})">
-        <rect class="signal" x="31" y="23" width="48" height="3" rx="1.5" fill="{repo['accent']}"/>
-        <text x="31" y="55" fill="#F8FAFC" font-size="22" font-weight="760">{html.escape(ellipsize(repo['name'], 24))}</text>
-        <text x="519" y="52" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11" text-anchor="end">{compact(int(repo['stargazers']))} STARS · {compact(int(repo['forks']))} FORKS</text>
-        <text x="31" y="81" fill="#91A2B8" font-size="12.5">{description}</text>
-        <g transform="translate(31 148)">
-          {metric(0, commit_metric_label, commit_metric_value, str(repo['accent']))}
-          {metric(128, 'merged PRs', compact(merged), str(repo['secondary']))}
-          {metric(250, 'files accepted', files_metric_value, '#F8FAFC')}
-          {metric(380, 'line changes', lines_metric_value, '#F8FAFC')}
-        </g>
-        <line x1="31" y1="194" x2="519" y2="194" stroke="#203149"/>
-        <text x="31" y="222" fill="#91A2B8" font-size="12">{('accepted code' if merged else 'GitHub graph' if tier == 'github_contribution_graph_verified' else 'default branch')}</text>
-        <text x="128" y="222" fill="{repo['accent']}" font-size="14" font-weight="700">{('+' + format(added, ',')) if merged else counted(commits, 'commit')}</text>
-        <text x="216" y="222" fill="#F87171" font-size="14" font-weight="700">{('−' + format(deleted, ',')) if merged else ''}</text>
-        <text x="519" y="222" fill="#65758B" font-size="11.5" text-anchor="end">{html.escape(verification_label)}</text>
-      </g>
-    </g>"""
+    """Map a cumulative evidence series into an SVG polyline path."""
+    maximum = max((int(point[key]) for point in points), default=0) or 1
+    denominator = max(len(points) - 1, 1)
+    commands = []
+    for index, point in enumerate(points):
+        x = x0 + ((x1 - x0) * index / denominator)
+        y = y0 - ((y0 - y1) * int(point[key]) / maximum)
+        commands.append(f"{'M' if index == 0 else 'L'} {x:.1f} {y:.1f}")
+    return " ".join(commands)
 
 
-def render_contribution_footer(
-    repositories: list[dict[str, object]], footer_y: int
+def render_svg(
+    repositories: list[dict[str, object]],
+    updated: str,
+    timeline: dict[str, object] | None = None,
 ) -> str:
-    """Render aggregate proof and freshness as a two-row summary component."""
-    total_merged = sum(int(repo["merged_prs"]) for repo in repositories)
-    total_commits = sum(int(repo["contributor_commits"]) for repo in repositories)
-    total_line_changes = sum(
-        int(repo["accepted_additions"]) + int(repo["accepted_deletions"])
-        for repo in repositories
+    timeline = timeline or build_upstream_timeline(repositories, updated)
+    points = list(timeline["points"])
+    x0, x1 = 104.0, 1105.0
+    projects_path = timeline_path(
+        points, "cumulative_projects", x0, x1, 247.0, 170.0
     )
-    total_stars = sum(int(repo["stargazers"]) for repo in repositories)
-    return f"""
-  <g transform="translate(42 {footer_y})" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12">
-    <g>
-      <text fill="#2DE2C5">{len(repositories)} verified projects</text>
-      <text x="142" fill="#65758B">•</text>
-      <text x="162" fill="#9B7CFF">{total_merged} merged PRs</text>
-      <text x="294" fill="#65758B">•</text>
-      <text x="314" fill="#F8FAFC">{compact(total_commits)} attributed commits</text>
-    </g>
-    <g transform="translate(0 24)">
-      <text fill="#2DE2C5">{total_line_changes:,} accepted line changes</text>
-      <text x="224" fill="#65758B">•</text>
-      <text x="244" fill="#F2A93B">{compact(total_stars)} combined stars</text>
-      <text x="1116" fill="#65758B" text-anchor="end">official evidence · every 30 min</text>
-    </g>
-  </g>"""
+    merged_path = timeline_path(
+        points, "cumulative_merged_prs", x0, x1, 421.0, 292.0
+    )
+    lines_path = timeline_path(
+        points, "cumulative_line_changes", x0, x1, 577.0, 502.0
+    )
+    denominator = max(len(points) - 1, 1)
+    max_daily = max((int(point["daily_merged_prs"]) for point in points), default=0) or 1
+    daily_bars = []
+    milestone_dots = []
+    for index, point in enumerate(points):
+        x = x0 + ((x1 - x0) * index / denominator)
+        daily = int(point["daily_merged_prs"])
+        if daily:
+            height = 8 + (49 * daily / max_daily)
+            daily_bars.append(
+                f'<rect class="daily-bar" x="{x - 2.2:.1f}" y="{464 - height:.1f}" '
+                f'width="4.4" height="{height:.1f}" rx="2.2" '
+                f'style="animation-delay:{index * 0.025:.3f}s"/>'
+            )
+        if int(point["new_projects"]):
+            projects_maximum = max(int(item["cumulative_projects"]) for item in points) or 1
+            y = 247 - (77 * int(point["cumulative_projects"]) / projects_maximum)
+            milestone_dots.append(
+                f'<circle class="project-pulse" cx="{x:.1f}" cy="{y:.1f}" r="3.2" '
+                f'style="animation-delay:{index * 0.04:.3f}s"/>'
+            )
 
+    tick_indices = sorted(
+        {
+            round((len(points) - 1) * fraction / 4)
+            for fraction in range(5)
+        }
+    )
+    date_ticks = []
+    for index in tick_indices:
+        x = x0 + ((x1 - x0) * index / denominator)
+        date_label = dt.date.fromisoformat(str(points[index]["date"])).strftime("%b %d")
+        date_ticks.append(
+            f'<line x1="{x:.1f}" y1="151" x2="{x:.1f}" y2="594" '
+            f'stroke="#203149" stroke-dasharray="2 8"/>'
+            f'<text x="{x:.1f}" y="618" text-anchor="middle">{date_label}</text>'
+        )
 
-def render_svg(repositories: list[dict[str, object]], updated: str) -> str:
-    cards = [
-        render_repository_card(repo, index, len(repositories))
-        for index, repo in enumerate(repositories)
-    ]
-    rows = max(math.ceil(len(repositories) / 2), 1)
-    height = 112 + rows * 240 + max(rows - 1, 0) * 18 + 96
-    footer_y = height - 58
-    footer = render_contribution_footer(repositories, footer_y)
-    project_names = ", ".join(str(repo["name"]) for repo in repositories)
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-labelledby="title desc">
-  <title id="title">Open-source contribution evidence for Rudy Celekli</title>
-  <desc id="desc">GitHub-verified contribution totals for {html.escape(project_names)}. Repository stars and forks describe project reach, not personal contribution.</desc>
+    merged_prs = int(timeline["merged_prs"])
+    open_prs = int(timeline["open_prs"])
+    merged_projects = int(timeline["merged_projects"])
+    verified_projects = int(timeline["verified_projects"])
+    accepted_lines = int(timeline["accepted_line_changes"])
+    stars = int(timeline["current_repository_reach_stars"])
+    start = dt.date.fromisoformat(str(timeline["start_date"])).strftime("%b %d, %Y")
+    end = dt.date.fromisoformat(str(timeline["end_date"])).strftime("%b %d, %Y")
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
+  <title id="title">Animated upstream contribution timeline for Rudy Celekli</title>
+  <desc id="desc">Daily GitHub evidence from {start} through {end}: {merged_prs:,} merged pull requests across {merged_projects} projects, {open_prs:,} public pull requests authored since 2025 and currently open, {accepted_lines:,} accepted line changes, and {stars:,} current repository stars. Open work is not counted as accepted. Stars describe current repository reach, not personal credit.</desc>
   <defs>
     <style>
-      .signal {{ animation: signal-pulse 3.8s ease-in-out infinite; }}
-      @keyframes signal-pulse {{ 0%, 100% {{ opacity: .58; }} 50% {{ opacity: 1; }} }}
-      @media (prefers-reduced-motion: reduce) {{ .signal {{ animation: none; opacity: 1; }} }}
+      .trace-reveal {{ stroke-dasharray: 1; stroke-dashoffset: 1; animation: reveal 2.4s cubic-bezier(.16,1,.3,1) forwards; }}
+      .trace-reveal.slow {{ animation-delay: .35s; }}
+      .daily-bar {{ fill: #4D7CFE; opacity: .72; transform-box: fill-box; transform-origin: center bottom; animation: bar-rise 1.1s cubic-bezier(.16,1,.3,1) both; }}
+      .project-pulse {{ fill: #2DE2C5; opacity: .72; animation: point-pulse 3.6s ease-in-out infinite; }}
+      .open-orbit {{ transform-box: fill-box; transform-origin: center; animation: orbit 8s linear infinite; }}
+      .packet {{ filter: drop-shadow(0 0 7px #9B7CFF); }}
+      .scan {{ animation: scan 7s ease-in-out infinite; }}
+      @keyframes reveal {{ to {{ stroke-dashoffset: 0; }} }}
+      @keyframes bar-rise {{ from {{ opacity: .3; transform: scaleY(.18); }} to {{ opacity: .72; transform: scaleY(1); }} }}
+      @keyframes point-pulse {{ 0%,100% {{ opacity: .52; r: 3.2px; }} 50% {{ opacity: 1; r: 5px; }} }}
+      @keyframes orbit {{ to {{ transform: rotate(360deg); }} }}
+      @keyframes scan {{ 0%,100% {{ opacity: 0; transform: translateX(0); }} 15%,75% {{ opacity: .28; }} 85% {{ opacity: 0; transform: translateX(1000px); }} }}
+      @media (prefers-reduced-motion: reduce) {{
+        .trace-reveal, .daily-bar, .project-pulse, .open-orbit, .scan {{ animation: none !important; }}
+        .trace-reveal {{ stroke-dashoffset: 0; }}
+        .daily-bar, .project-pulse {{ opacity: .82; }}
+        .scan {{ display: none; }}
+        .packet {{ display: none; }}
+      }}
     </style>
     <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#07111E"/>
-      <stop offset="1" stop-color="#150B2E"/>
+      <stop stop-color="#07111E"/><stop offset="1" stop-color="#150B2E"/>
     </linearGradient>
     <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#2DE2C5"/>
-      <stop offset="0.52" stop-color="#4D7CFE"/>
-      <stop offset="1" stop-color="#9B7CFF"/>
+      <stop stop-color="#2DE2C5"/><stop offset=".52" stop-color="#4D7CFE"/><stop offset="1" stop-color="#9B7CFF"/>
     </linearGradient>
+    <linearGradient id="project-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#2DE2C5" stop-opacity=".2"/><stop offset="1" stop-color="#2DE2C5" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
-  <rect width="1200" height="{height}" rx="28" fill="url(#canvas)"/>
-  <rect x="1" y="1" width="1198" height="{height - 2}" rx="27" fill="none" stroke="#26364D"/>
-  <rect x="42" y="32" width="66" height="4" rx="2" fill="url(#rule)"/>
-  <text x="42" y="70" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="29" font-weight="780">OPEN-SOURCE IMPACT, VERIFIED</text>
-  <text x="1158" y="68" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" text-anchor="end">GITHUB · {html.escape(updated)} UTC</text>
-  <g font-family="Avenir Next,Segoe UI,sans-serif">
-    {''.join(cards)}
+  <rect width="1200" height="690" rx="28" fill="url(#canvas)"/>
+  <rect x="1" y="1" width="1198" height="688" rx="27" fill="none" stroke="#26364D"/>
+  <rect x="42" y="30" width="76" height="4" rx="2" fill="url(#rule)"/>
+  <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="29" font-weight="780">UPSTREAM MOMENTUM</text>
+  <text x="42" y="92" fill="#91A2B8" font-family="Avenir Next,Segoe UI,sans-serif" font-size="13">A daily flight recorder of accepted work, expanding project breadth, and the live upstream queue.</text>
+  <text x="1158" y="67" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11.5" text-anchor="end">GITHUB · {html.escape(updated)} UTC · AUTO-REFRESH 30 MIN</text>
+
+  <g transform="translate(42 118)" font-family="ui-monospace,SFMono-Regular,monospace">
+    <text fill="#9B7CFF" font-size="22" font-weight="760">{merged_prs:,}</text><text y="17" fill="#91A2B8" font-size="9.5">MERGED PRS</text>
+    <text x="226" fill="#F2A93B" font-size="22" font-weight="760">{open_prs:,}</text><text x="226" y="17" fill="#91A2B8" font-size="9.5">PUBLIC OPEN · SINCE 2025</text>
+    <text x="417" fill="#2DE2C5" font-size="22" font-weight="760">{merged_projects}</text><text x="417" y="17" fill="#91A2B8" font-size="9.5">MERGED PROJECTS · {verified_projects} VERIFIED</text>
+    <text x="738" fill="#F8FAFC" font-size="22" font-weight="760">{compact(accepted_lines)}</text><text x="738" y="17" fill="#91A2B8" font-size="9.5">LINE CHANGES</text>
+    <text x="1004" fill="#F2A93B" font-size="22" font-weight="760">{compact(stars)}</text><text x="1004" y="17" fill="#91A2B8" font-size="9.5">CURRENT REPO REACH</text>
   </g>
-  {footer}
+
+  <g fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">
+    {''.join(date_ticks)}
+  </g>
+  <g class="scan"><rect x="104" y="151" width="2" height="443" fill="url(#rule)"/></g>
+
+  <g font-family="ui-monospace,SFMono-Regular,monospace">
+    <text x="42" y="174" fill="#2DE2C5" font-size="10.5" letter-spacing="1.2">PROJECT BREADTH</text>
+    <text x="42" y="193" fill="#91A2B8" font-size="10">FIRST ACCEPTED PR PER UPSTREAM</text>
+    <line x1="104" y1="247" x2="1105" y2="247" stroke="#203149"/>
+    <path d="{projects_path}" fill="none" stroke="#2DE2C5" stroke-width="2" opacity=".24"/>
+    <path class="trace-reveal" d="{projects_path}" fill="none" stroke="#2DE2C5" stroke-width="2.5" pathLength="1"/>
+    {''.join(milestone_dots)}
+    <text x="1124" y="177" fill="#2DE2C5" font-size="26" font-weight="760">{merged_projects}</text>
+    <text x="1124" y="195" fill="#65758B" font-size="9.5">PROJECTS</text>
+
+    <text x="42" y="307" fill="#9B7CFF" font-size="10.5" letter-spacing="1.2">ACCEPTED PULL REQUESTS</text>
+    <text x="42" y="326" fill="#91A2B8" font-size="10">CUMULATIVE MERGED · DAILY PULSE BELOW</text>
+    <line x1="104" y1="421" x2="1105" y2="421" stroke="#203149"/>
+    <path d="{merged_path}" fill="none" stroke="#9B7CFF" stroke-width="3" opacity=".24"/>
+    <path id="merged-path" class="trace-reveal slow" d="{merged_path}" fill="none" stroke="#9B7CFF" stroke-width="3" pathLength="1"/>
+    <g>{''.join(daily_bars)}</g>
+    <circle class="packet" r="5" fill="#F8FAFC"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#merged-path"/></animateMotion></circle>
+    <text x="1124" y="307" fill="#9B7CFF" font-size="26" font-weight="760">{compact(merged_prs)}</text>
+    <text x="1124" y="325" fill="#65758B" font-size="9.5">MERGED</text>
+
+    <text x="42" y="510" fill="#4D7CFE" font-size="10.5" letter-spacing="1.2">ACCEPTED CODE DELTA</text>
+    <text x="42" y="529" fill="#91A2B8" font-size="10">ADDITIONS + DELETIONS FROM MERGED PRS</text>
+    <line x1="104" y1="577" x2="1105" y2="577" stroke="#203149"/>
+    <path d="{lines_path}" fill="none" stroke="#4D7CFE" stroke-width="2.5" opacity=".24"/>
+    <path class="trace-reveal slow" d="{lines_path}" fill="none" stroke="#4D7CFE" stroke-width="2.5" pathLength="1"/>
+    <text x="1124" y="509" fill="#4D7CFE" font-size="24" font-weight="760">{compact(accepted_lines)}</text>
+    <text x="1124" y="527" fill="#65758B" font-size="9.5">LINES</text>
+  </g>
+
+  <g transform="translate(1022 348)" font-family="ui-monospace,SFMono-Regular,monospace">
+    <circle cx="44" cy="42" r="36" fill="#F2A93B" fill-opacity=".05" stroke="#F2A93B" stroke-opacity=".22"/>
+    <g class="open-orbit"><circle cx="44" cy="6" r="4" fill="#F2A93B" filter="url(#glow)"/><path d="M44 6 A36 36 0 1 1 43.9 6" fill="none" stroke="#F2A93B" stroke-dasharray="5 9" stroke-opacity=".54"/></g>
+    <text x="44" y="40" text-anchor="middle" fill="#F2A93B" font-size="20" font-weight="760">{open_prs:,}</text>
+    <text x="44" y="56" text-anchor="middle" fill="#91A2B8" font-size="8.5">OPEN NOW</text>
+    <text x="44" y="92" text-anchor="middle" fill="#65758B" font-size="8.5">NOT ACCEPTED</text>
+  </g>
+
+  <line x1="42" y1="640" x2="1158" y2="640" stroke="#203149"/>
+  <text x="42" y="663" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">DETAILS + PROOF LINKS IN THE SORTABLE TABLE BELOW</text>
+  <text x="1158" y="663" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">OPEN ≠ MERGED · STARS = CURRENT REPOSITORY REACH</text>
 </svg>
 """
 
@@ -2515,9 +2709,9 @@ def render_readme_section(
         "<!-- contribution-stats:start -->",
         "## Open-source impact, verified",
         "",
-        "My upstream work is discovered automatically across public repositories outside my account. A project enters when GitHub verifies at least one attribution signal: its Contributors index, its contribution graph, an authored commit on the default branch, or an authored merged PR on any branch. **GitHub-listed contributor** remains the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. GitHub API rank is the one-based position returned by that repository's Contributors API; **—** means the rank is unavailable or still pending, not that the contribution is unranked. Only merged PRs contribute accepted-line and accepted-file totals; graph credit never converts an open or closed-unmerged PR into accepted work. Stars and forks describe repository reach, not personal credit.",
+        f"My upstream work is discovered automatically across public repositories outside my account. The timeline is rebuilt from individual merged-PR receipts on every refresh, while the amber orbit shows [every public PR authored since 2025 that is open now]({CURRENT_OPEN_PULL_REQUESTS_URL}) and therefore not accepted work. A project enters the verified ledger when GitHub confirms at least one attribution signal: its Contributors index, its contribution graph, an authored commit on the default branch, or an authored merged PR on any branch. **GitHub-listed contributor** remains the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. GitHub API rank is the one-based position returned by that repository's Contributors API; **—** means the rank is unavailable or still pending, not that the contribution is unranked. Only merged PRs contribute accepted-line and accepted-file totals; graph credit never converts an open or closed-unmerged PR into accepted work. Stars and forks describe current repository reach, not personal credit or historical star growth.",
         "",
-        f'<img src="./assets/open-source-contributions.svg" width="100%" alt="GitHub-verified contribution statistics for {html.escape(", ".join(str(repo["name"]) for repo in repositories))}" />',
+        f'<img src="./assets/open-source-contributions.svg" width="100%" alt="Animated GitHub upstream timeline showing merged pull requests, open pull requests, unique projects, accepted line changes, and current repository reach through {html.escape(updated)}" />',
         "",
         "**[Open the live sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)** — sort by GitHub contributor rank, merged PRs, attributed commits, accepted line changes, repository stars, or a transparent balanced view.",
         "",
@@ -2659,6 +2853,7 @@ def main() -> int:
         raise RuntimeError(
             "No public upstream repositories passed the merged-PR and official-contributor gates"
         )
+    current_open_pull_requests = discover_current_open_pull_request_count(token)
     owned_repositories = discover_owned_repositories(token)
     if not owned_repositories:
         raise RuntimeError("No qualifying owned public repositories were discovered")
@@ -2695,8 +2890,11 @@ def main() -> int:
         for repo in repositories
     ]
     merged_pull_request_activity = public_merged_pull_request_activity(repositories)
+    upstream_timeline = build_upstream_timeline(
+        repositories, updated, current_open_pull_requests
+    )
     payload = {
-        "schema_version": 8,
+        "schema_version": 9,
         "source": "GitHub GraphQL and REST APIs",
         "login": LOGIN,
         "updated_at_utc": updated,
@@ -2707,8 +2905,10 @@ def main() -> int:
             "contributor_commits": "The GitHub Contributors API count is used at the highest tier. Before it catches up, directly attributed default-branch commits or GitHub contribution-graph commits are reported with their distinct evidence tier. GitHub indexes can disagree temporarily and may lag by several hours.",
             "contributor_rank": "All-time contributor rank is the login's one-based position in GitHub's Contributors API ordering. The top-profile proof includes only observed ranks 1 through 5 and omits unavailable or pending indexes.",
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
+            "open_pull_requests": "Every public pull request authored since 2025 whose current GitHub state is OPEN is reported as a point-in-time queue, including drafts and repositories that have not entered the verified contribution ledger. Open work is never counted as accepted work.",
             "merged_pull_request_activity": "Every public authored merged pull request discovered by the exhaustive date-partitioned GitHub search is retained as a distinct receipt with repository, URL, merge time, code-change statistics, reviews, and comments.",
-            "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit.",
+            "upstream_timeline": "Daily cumulative project breadth, merged pull requests, and accepted line changes are rebuilt from individual merged-PR receipts. Repository stars are shown only as current point-in-time reach because historical star observations are not available.",
+            "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit or historical growth.",
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",
             "owned_project_ranking": "The profile spotlight ranks the complete discovered set by stars, recent activity, then GitHub-attributed commits. Every qualifying owned repository remains in this evidence file.",
             "release_discovery": "The newest public, non-draft GitHub release or prerelease is discovered for every owned public project. A recent release adds a decaying 150-day launch signal and is linked directly in the profile.",
@@ -2717,6 +2917,7 @@ def main() -> int:
         },
         "repositories": public_repositories,
         "merged_pull_requests": merged_pull_request_activity,
+        "upstream_timeline": upstream_timeline,
         "owned_repositories": owned_repositories,
         "owned_project_spotlight_limit": OWNED_PROJECT_DISPLAY_LIMIT,
         "owned_project_exclusions": sorted(OWNED_PROJECT_EXCLUSIONS),
@@ -2726,7 +2927,7 @@ def main() -> int:
     write_generated(
         AP_DATA_FILE, json.dumps(agentic_power, indent=2, sort_keys=True)
     )
-    write_generated(SVG_FILE, render_svg(repositories, updated))
+    write_generated(SVG_FILE, render_svg(repositories, updated, upstream_timeline))
     write_generated(
         OWNED_SVG_FILE,
         render_owned_svg(

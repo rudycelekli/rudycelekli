@@ -85,6 +85,24 @@ class ContributionDiscoveryTests(unittest.TestCase):
         sleep.assert_called_once_with(1)
 
     @mock.patch.object(subject, "rest_json")
+    def test_current_open_pr_count_uses_complete_public_search(self, rest_json):
+        rest_json.return_value = {
+            "total_count": 1_706,
+            "incomplete_results": False,
+            "items": [],
+        }
+
+        count = subject.discover_current_open_pull_request_count("token")
+
+        self.assertEqual(count, 1_706)
+        requested_url = rest_json.call_args.args[1]
+        self.assertIn("search/issues", requested_url)
+        self.assertIn("author%3Arudycelekli", requested_url)
+        self.assertIn("is%3Aopen", requested_url)
+        self.assertIn("is%3Apublic", requested_url)
+        self.assertIn("created%3A%3E%3D2025-01-01", requested_url)
+
+    @mock.patch.object(subject, "rest_json")
     def test_official_contribution_stats_returns_all_time_rank(self, rest_json):
         rest_json.return_value = [
             {"login": "first", "contributions": 90},
@@ -436,7 +454,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         )
         graphql_data.assert_called_once()
 
-    def test_svg_expands_for_new_projects_and_labels_reach(self):
+    def test_svg_renders_upstream_timeline_without_repeating_repository_cards(self):
         repositories = []
         for index in range(3):
             repositories.append(
@@ -452,22 +470,67 @@ class ContributionDiscoveryTests(unittest.TestCase):
                     "accepted_changed_files": 8,
                     "stargazers": 1_000 * (index + 1),
                     "forks": 100 * (index + 1),
+                    "open_prs": index,
                 }
             )
 
         svg = subject.render_svg(repositories, "2026-09-28")
 
-        self.assertIn('height="706"', svg)
-        self.assertIn("3 verified projects", svg)
-        self.assertIn("330 accepted line changes", svg)
-        self.assertIn("6.0k combined stars", svg)
-        self.assertIn("STARS", svg)
-        self.assertIn("attributed commits", svg)
-        self.assertIn("OPEN-SOURCE IMPACT, VERIFIED", svg)
-        self.assertIn('clip-path="url(#contribution-card-0)"', svg)
-        self.assertIn("every 30 min", svg)
-        self.assertIn('transform="translate(0 24)"', svg)
-        self.assertIn("Repository stars and forks describe project reach", svg)
+        self.assertIn('height="690"', svg)
+        self.assertIn("UPSTREAM MOMENTUM", svg)
+        self.assertIn(">6</text><text y=\"17\"", svg)
+        self.assertIn(">3</text><text x=\"226\" y=\"17\"", svg)
+        self.assertIn("3 VERIFIED", svg)
+        self.assertIn("330", svg)
+        self.assertIn("6.0k", svg)
+        self.assertIn("CURRENT REPO REACH", svg)
+        self.assertIn("OPEN NOW", svg)
+        self.assertIn("NOT ACCEPTED", svg)
+        self.assertIn("DETAILS + PROOF LINKS IN THE SORTABLE TABLE BELOW", svg)
+        self.assertNotIn('clip-path="url(#contribution-card-0)"', svg)
+        self.assertIn("@media (prefers-reduced-motion: reduce)", svg)
+        self.assertIn("Stars describe current repository reach", svg)
+
+    def test_upstream_timeline_is_rebuilt_from_daily_merged_pr_receipts(self):
+        repositories = [
+            {
+                "name": "One",
+                "full_name": "upstream/one",
+                "merged_prs": 2,
+                "open_prs": 1,
+                "accepted_additions": 17,
+                "accepted_deletions": 3,
+                "stargazers": 100,
+                "_merged_pull_requests": [
+                    {"mergedAt": "2026-09-26T12:00:00Z", "additions": 10, "deletions": 2},
+                    {"mergedAt": "2026-09-28T12:00:00Z", "additions": 7, "deletions": 1},
+                ],
+            },
+            {
+                "name": "Two",
+                "full_name": "upstream/two",
+                "merged_prs": 1,
+                "open_prs": 2,
+                "accepted_additions": 4,
+                "accepted_deletions": 1,
+                "stargazers": 50,
+                "_merged_pull_requests": [
+                    {"mergedAt": "2026-09-28T18:00:00Z", "additions": 4, "deletions": 1},
+                ],
+            },
+        ]
+
+        timeline = subject.build_upstream_timeline(repositories, "2026-09-28")
+
+        self.assertEqual(timeline["start_date"], "2026-09-25")
+        self.assertEqual(timeline["merged_prs"], 3)
+        self.assertEqual(timeline["open_prs"], 3)
+        self.assertEqual(timeline["merged_projects"], 2)
+        self.assertEqual(timeline["accepted_line_changes"], 25)
+        self.assertEqual(timeline["current_repository_reach_stars"], 150)
+        self.assertEqual(timeline["points"][-1]["cumulative_merged_prs"], 3)
+        self.assertEqual(timeline["points"][-1]["cumulative_projects"], 2)
+        self.assertEqual(timeline["points"][-1]["cumulative_line_changes"], 25)
 
     def test_readme_contribution_proof_is_rendered_as_a_comparable_table(self):
         repository = {
