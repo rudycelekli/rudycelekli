@@ -532,9 +532,34 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual(timeline["points"][-1]["cumulative_projects"], 2)
         self.assertEqual(timeline["points"][-1]["cumulative_line_changes"], 25)
 
+    def test_impact_summary_retains_primary_and_complete_breakdown(self):
+        merged = [
+            {"title": "fix: prevent worker timeout"},
+            {"title": "fix: preserve retry state"},
+            {"title": "test: add replay regression coverage"},
+            {"title": "perf: cache compiled tools"},
+        ]
+
+        impact = subject.summarize_repository_impact(
+            merged, "github_listed_contributor"
+        )
+
+        self.assertEqual(impact["primary"], "Reliability & correctness")
+        self.assertEqual(impact["primary_prs"], 2)
+        self.assertEqual(impact["classified_prs"], 4)
+        self.assertEqual(
+            impact["breakdown"],
+            {
+                "Reliability & correctness": 2,
+                "Testing & evaluation": 1,
+                "Performance & scale": 1,
+            },
+        )
+
     def test_readme_contribution_proof_is_rendered_as_a_comparable_table(self):
         repository = {
             "name": "Upstream Project",
+            "description": "Infrastructure for reliable long-horizon agents",
             "url": "https://github.com/upstream/project",
             "contributors_url": "https://github.com/upstream/project/graphs/contributors",
             "commits_url": "https://github.com/upstream/project/commits?author=rudycelekli",
@@ -549,15 +574,24 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "accepted_changed_files": 42,
             "stargazers": 7_890,
             "forks": 321,
+            "impact_category": "Reliability & correctness",
+            "impact_category_prs": 6,
         }
 
         section = subject.render_readme_section([repository], [], "2026-10-05")
 
         self.assertIn(
-            "| Project and evidence | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
+            "| Project, purpose and evidence | Primary impact | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
             section,
         )
         self.assertIn("[GitHub-listed contributor]", section)
+        self.assertIn(
+            "Infrastructure for reliable long-horizon agents.</sub>", section
+        )
+        self.assertIn(
+            "**Reliability & correctness**<br><sub>6 of 9 merged PRs</sub>",
+            section,
+        )
         self.assertIn("| [#2](https://github.com/upstream/project/graphs/contributors) | 12 | [9]", section)
         self.assertIn("| +1,234 / −56 | 42 | 7,890 ★ · 321 forks |", section)
         self.assertIn("GitHub API rank is the one-based position", section)

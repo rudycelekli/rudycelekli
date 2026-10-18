@@ -660,6 +660,97 @@ def readable_description(value: object) -> str:
     return description
 
 
+IMPACT_CATEGORY_RULES = (
+    (
+        "Security & trust",
+        ("security", "auth", "permission", "credential", "injection", "secret", "vulnerability"),
+    ),
+    (
+        "Testing & evaluation",
+        ("test", "benchmark", "eval", "coverage", "assert", "fixture", "quality"),
+    ),
+    (
+        "Performance & scale",
+        ("performance", "perf:", "latency", "speed", "cache", "parallel", "concurr", "memory leak", "optimiz"),
+    ),
+    (
+        "Reliability & correctness",
+        ("fix", "bug", "error", "validate", "validation", "retry", "timeout", "race", "serialize", "preserve", "reject", "fallback", "crash"),
+    ),
+    (
+        "Agent infrastructure",
+        ("agent", "mcp", "tool", "memory", "orchestrat", "protocol", "skill", "worker"),
+    ),
+    (
+        "Developer experience",
+        ("docs", "readme", "cli", "install", "config", "typing", "types", "developer", "example"),
+    ),
+    (
+        "Product capability",
+        ("feat", "add", "support", "implement", "enable", "introduce", "create"),
+    ),
+)
+
+
+def classify_pull_request_impact(title: object) -> str:
+    """Classify a merged PR title with deterministic, inspectable keyword rules."""
+    lowered = str(title or "").casefold()
+    for category, keywords in IMPACT_CATEGORY_RULES:
+        if any(keyword in lowered for keyword in keywords):
+            return category
+    return "Maintenance & integration"
+
+
+def summarize_repository_impact(
+    merged_pull_requests: list[dict[str, object]], verification_tier: str
+) -> dict[str, object]:
+    """Summarize contribution impact while retaining the complete category mix."""
+    if not merged_pull_requests:
+        category = (
+            "Default-branch engineering"
+            if verification_tier == "default_branch_commit_verified"
+            else "Repository contribution"
+        )
+        return {
+            "primary": category,
+            "primary_prs": 0,
+            "classified_prs": 0,
+            "breakdown": {},
+            "basis": "GitHub commit attribution",
+        }
+
+    counts: dict[str, int] = {}
+    for pull_request in merged_pull_requests:
+        category = classify_pull_request_impact(pull_request.get("title"))
+        counts[category] = counts.get(category, 0) + 1
+    category_order = {
+        category: index for index, (category, _keywords) in enumerate(IMPACT_CATEGORY_RULES)
+    }
+    category_order["Maintenance & integration"] = len(category_order)
+    ordered = sorted(
+        counts.items(),
+        key=lambda item: (-item[1], category_order.get(item[0], 999), item[0]),
+    )
+    primary, primary_count = ordered[0]
+    return {
+        "primary": primary,
+        "primary_prs": primary_count,
+        "classified_prs": len(merged_pull_requests),
+        "breakdown": dict(ordered),
+        "basis": "Merged PR title classification",
+    }
+
+
+def markdown_table_description(value: object, limit: int = 150) -> str:
+    """Return one compact, table-safe repository purpose sentence."""
+    description = html.escape(ellipsize(readable_description(value), limit)).replace(
+        "|", "\\|"
+    )
+    if description and description[-1] not in ".!?…":
+        description += "."
+    return description
+
+
 def search_pull_requests(
     token: str,
     start: dt.date,
@@ -990,6 +1081,7 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
             contributor_commits = 0
         else:
             continue
+        impact = summarize_repository_impact(merged, verification_tier)
         override = PRESENTATION_OVERRIDES.get(full_name, {})
         palette_index = hashlib.sha256(full_name.encode()).digest()[0] % len(
             ACCENT_PAIRS
@@ -1033,6 +1125,11 @@ def discover_repositories(token: str) -> list[dict[str, object]]:
                 "contributor_commits": contributor_commits,
                 "merged_prs": len(merged),
                 "open_prs": len(open_pull_requests),
+                "impact_category": impact["primary"],
+                "impact_category_prs": impact["primary_prs"],
+                "impact_classified_prs": impact["classified_prs"],
+                "impact_breakdown": impact["breakdown"],
+                "impact_basis": impact["basis"],
                 "accepted_additions": sum(int(item["additions"]) for item in merged),
                 "accepted_deletions": sum(int(item["deletions"]) for item in merged),
                 "accepted_changed_files": sum(
@@ -2715,8 +2812,10 @@ def render_readme_section(
         "",
         "**[Open the live sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)** — sort by GitHub contributor rank, merged PRs, attributed commits, accepted line changes, repository stars, or a transparent balanced view.",
         "",
-        "| Project and evidence | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
-        "|:--|--:|--:|--:|--:|--:|--:|",
+        "Impact categories are derived automatically from merged PR titles using deterministic keyword rules; they summarize the dominant kind of work without replacing the linked PR evidence.",
+        "",
+        "| Project, purpose and evidence | Primary impact | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
+        "|:--|:--|--:|--:|--:|--:|--:|--:|",
     ]
     for repo in repositories:
         tier = str(repo.get("verification_tier") or "github_listed_contributor")
@@ -2749,9 +2848,20 @@ def render_readme_section(
         accepted_files = (
             f"{int(repo['accepted_changed_files']):,}" if merged_prs else "—"
         )
+        description = markdown_table_description(repo.get("description"))
+        impact_category = str(
+            repo.get("impact_category") or "Engineering contribution"
+        )
+        impact_category_prs = int(repo.get("impact_category_prs") or 0)
+        impact_basis = (
+            f"{impact_category_prs:,} of {merged_prs:,} merged PRs"
+            if merged_prs
+            else "GitHub commit attribution"
+        )
         lines.append(
             f"| **[{repo['name']}]({repo['url']})** · "
-            f"[{evidence_label}]({evidence_url}) "
+            f"[{evidence_label}]({evidence_url})<br><sub>{description}</sub> "
+            f"| **{impact_category}**<br><sub>{impact_basis}</sub> "
             f"| {rank_cell} "
             f"| {f'{attributed_commits:,}' if attributed_commits else '—'} "
             f"| [{merged_prs:,}]({repo['pull_requests_url']}) "
@@ -2909,6 +3019,7 @@ def main() -> int:
             "merged_pull_request_activity": "Every public authored merged pull request discovered by the exhaustive date-partitioned GitHub search is retained as a distinct receipt with repository, URL, merge time, code-change statistics, reviews, and comments.",
             "upstream_timeline": "Daily cumulative project breadth, merged pull requests, and accepted line changes are rebuilt from individual merged-PR receipts. Repository stars are shown only as current point-in-time reach because historical star observations are not available.",
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit or historical growth.",
+            "impact_categories": "Each merged pull request is assigned one deterministic impact category from its title: security and trust, testing and evaluation, performance and scale, reliability and correctness, agent infrastructure, developer experience, product capability, or maintenance and integration. The table shows the dominant category and the evidence file retains the complete per-project breakdown.",
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",
             "owned_project_ranking": "The profile spotlight ranks the complete discovered set by stars, recent activity, then GitHub-attributed commits. Every qualifying owned repository remains in this evidence file.",
             "release_discovery": "The newest public, non-draft GitHub release or prerelease is discovered for every owned public project. A recent release adds a decaying 150-day launch signal and is linked directly in the profile.",
