@@ -478,11 +478,16 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
         self.assertIn('height="690"', svg)
         self.assertIn("UPSTREAM MOMENTUM", svg)
-        self.assertIn(">6</text><text y=\"17\"", svg)
-        self.assertIn(">3</text><text x=\"226\" y=\"17\"", svg)
+        self.assertIn(">6</text>", svg)
+        self.assertIn(">3</text>", svg)
         self.assertIn("3 VERIFIED", svg)
         self.assertIn("330", svg)
         self.assertIn("6.0k", svg)
+        self.assertIn("PLAYBACK · SEP 28, 2026", svg)
+        self.assertIn('dur="24s"', svg)
+        self.assertIn('calcMode="discrete"', svg)
+        self.assertIn('class="playback-static"', svg)
+        self.assertIn("ACCEPTED LINE CHANGES", svg)
         self.assertIn("CURRENT REPO REACH", svg)
         self.assertIn("OPEN NOW", svg)
         self.assertIn("NOT ACCEPTED", svg)
@@ -490,6 +495,12 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertNotIn('clip-path="url(#contribution-card-0)"', svg)
         self.assertIn("@media (prefers-reduced-motion: reduce)", svg)
         self.assertIn("Stars describe current repository reach", svg)
+
+    def test_timeline_frame_sequences_loop_without_multiple_visible_frames(self):
+        self.assertEqual(subject.timeline_frame_values(3, 0), "1;0;0;1")
+        self.assertEqual(subject.timeline_frame_values(3, 1), "0;1;0;0")
+        self.assertEqual(subject.timeline_frame_values(3, 2), "0;0;1;0")
+        self.assertEqual(subject.timeline_frame_key_times(3), "0.00000;0.33333;0.66667;1.00000")
 
     def test_upstream_timeline_is_rebuilt_from_daily_merged_pr_receipts(self):
         repositories = [
@@ -586,6 +597,11 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("QUALITY + TRUST SIGNAL", svg)
         self.assertIn("IMPACT SIGNATURE", svg)
         self.assertIn("11 CLASSIFIED MERGES", svg)
+        self.assertIn(">MERGED PRS</text>", svg)
+        self.assertIn(">SHARE</text>", svg)
+        self.assertIn('width="396" height="8"', svg)
+        self.assertNotIn('width="448" height="8"', svg)
+        self.assertIn('x1="661"', svg)
         self.assertIn("@media (prefers-reduced-motion: reduce)", svg)
 
     def test_readme_contribution_proof_is_rendered_as_a_comparable_table(self):

@@ -2644,6 +2644,21 @@ def timeline_path(
     return " ".join(commands)
 
 
+def timeline_frame_values(frame_count: int, active_index: int) -> str:
+    """Return a discrete looping opacity sequence for one timeline frame."""
+    if frame_count <= 1:
+        return "1;1"
+    values = ["1" if index == active_index else "0" for index in range(frame_count)]
+    values.append("1" if active_index == 0 else "0")
+    return ";".join(values)
+
+
+def timeline_frame_key_times(frame_count: int) -> str:
+    """Return evenly spaced key times, including the loop-closing endpoint."""
+    frame_count = max(frame_count, 1)
+    return ";".join(f"{index / frame_count:.5f}" for index in range(frame_count + 1))
+
+
 def render_svg(
     repositories: list[dict[str, object]],
     updated: str,
@@ -2663,6 +2678,10 @@ def render_svg(
     )
     denominator = max(len(points) - 1, 1)
     max_daily = max((int(point["daily_merged_prs"]) for point in points), default=0) or 1
+    playback_duration = 24
+    frame_count = len(points)
+    frame_key_times = timeline_frame_key_times(frame_count)
+    playback_frames = []
     daily_bars = []
     milestone_dots = []
     for index, point in enumerate(points):
@@ -2673,7 +2692,7 @@ def render_svg(
             daily_bars.append(
                 f'<rect class="daily-bar" x="{x - 2.2:.1f}" y="{464 - height:.1f}" '
                 f'width="4.4" height="{height:.1f}" rx="2.2" '
-                f'style="animation-delay:{index * 0.025:.3f}s"/>'
+                f'style="animation-delay:{index * 0.12:.3f}s"/>'
             )
         if int(point["new_projects"]):
             projects_maximum = max(int(item["cumulative_projects"]) for item in points) or 1
@@ -2682,6 +2701,24 @@ def render_svg(
                 f'<circle class="project-pulse" cx="{x:.1f}" cy="{y:.1f}" r="3.2" '
                 f'style="animation-delay:{index * 0.04:.3f}s"/>'
             )
+        date_label = dt.date.fromisoformat(str(point["date"])).strftime("%b %d, %Y")
+        frame_values = timeline_frame_values(frame_count, index)
+        frame_animation = (
+            f'<animate attributeName="opacity" dur="{playback_duration}s" '
+            f'repeatCount="indefinite" calcMode="discrete" '
+            f'keyTimes="{frame_key_times}" values="{frame_values}"/>'
+        )
+        playback_frames.append(
+            f'<g class="playback-frame" opacity="0">{frame_animation}'
+            f'<text x="1158" y="92" fill="#2DE2C5" font-size="10.5" text-anchor="end">PLAYBACK · {date_label.upper()}</text>'
+            f'<text x="42" y="118" fill="#9B7CFF" font-size="22" font-weight="760">{int(point["cumulative_merged_prs"]):,}</text>'
+            f'<text x="459" y="118" fill="#2DE2C5" font-size="22" font-weight="760">{int(point["cumulative_projects"]):,}</text>'
+            f'<text x="780" y="118" fill="#F8FAFC" font-size="22" font-weight="760">{compact(int(point["cumulative_line_changes"]))}</text>'
+            f'<text x="1124" y="177" fill="#2DE2C5" font-size="26" font-weight="760">{int(point["cumulative_projects"]):,}</text>'
+            f'<text x="1124" y="307" fill="#9B7CFF" font-size="26" font-weight="760">{compact(int(point["cumulative_merged_prs"]))}</text>'
+            f'<text x="1124" y="509" fill="#4D7CFE" font-size="24" font-weight="760">{compact(int(point["cumulative_line_changes"]))}</text>'
+            f'</g>'
+        )
 
     tick_indices = sorted(
         {
@@ -2712,24 +2749,24 @@ def render_svg(
   <desc id="desc">Daily GitHub evidence from {start} through {end}: {merged_prs:,} merged pull requests across {merged_projects} projects, {open_prs:,} public pull requests authored since 2025 and currently open, {accepted_lines:,} accepted line changes, and {stars:,} current repository stars. Open work is not counted as accepted. Stars describe current repository reach, not personal credit.</desc>
   <defs>
     <style>
-      .trace-reveal {{ stroke-dasharray: 1; stroke-dashoffset: 1; animation: reveal 2.4s cubic-bezier(.16,1,.3,1) forwards; }}
-      .trace-reveal.slow {{ animation-delay: .35s; }}
-      .daily-bar {{ fill: #4D7CFE; opacity: .72; transform-box: fill-box; transform-origin: center bottom; animation: bar-rise 1.1s cubic-bezier(.16,1,.3,1) both; }}
+      .trace-reveal {{ stroke-dasharray: 1; stroke-dashoffset: 1; animation: reveal 6s cubic-bezier(.16,1,.3,1) forwards; }}
+      .trace-reveal.slow {{ animation-delay: .65s; }}
+      .daily-bar {{ fill: #4D7CFE; opacity: .72; transform-box: fill-box; transform-origin: center bottom; animation: bar-rise 1.4s cubic-bezier(.16,1,.3,1) both; }}
       .project-pulse {{ fill: #2DE2C5; opacity: .72; animation: point-pulse 3.6s ease-in-out infinite; }}
-      .open-orbit {{ transform-box: fill-box; transform-origin: center; animation: orbit 8s linear infinite; }}
+      .open-orbit {{ transform-box: fill-box; transform-origin: center; animation: orbit 18s linear infinite; }}
       .packet {{ filter: drop-shadow(0 0 7px #9B7CFF); }}
-      .scan {{ animation: scan 7s ease-in-out infinite; }}
+      .playback-frame {{ pointer-events: none; }}
+      .playback-static, .playhead-static {{ display: none; }}
       @keyframes reveal {{ to {{ stroke-dashoffset: 0; }} }}
       @keyframes bar-rise {{ from {{ opacity: .3; transform: scaleY(.18); }} to {{ opacity: .72; transform: scaleY(1); }} }}
       @keyframes point-pulse {{ 0%,100% {{ opacity: .52; r: 3.2px; }} 50% {{ opacity: 1; r: 5px; }} }}
       @keyframes orbit {{ to {{ transform: rotate(360deg); }} }}
-      @keyframes scan {{ 0%,100% {{ opacity: 0; transform: translateX(0); }} 15%,75% {{ opacity: .28; }} 85% {{ opacity: 0; transform: translateX(1000px); }} }}
       @media (prefers-reduced-motion: reduce) {{
-        .trace-reveal, .daily-bar, .project-pulse, .open-orbit, .scan {{ animation: none !important; }}
+        .trace-reveal, .daily-bar, .project-pulse, .open-orbit {{ animation: none !important; }}
         .trace-reveal {{ stroke-dashoffset: 0; }}
         .daily-bar, .project-pulse {{ opacity: .82; }}
-        .scan {{ display: none; }}
-        .packet {{ display: none; }}
+        .playback-animated, .packet {{ display: none; }}
+        .playback-static, .playhead-static {{ display: block; }}
       }}
     </style>
     <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
@@ -2750,18 +2787,34 @@ def render_svg(
   <text x="42" y="92" fill="#91A2B8" font-family="Avenir Next,Segoe UI,sans-serif" font-size="13">A daily flight recorder of accepted work, expanding project breadth, and the live upstream queue.</text>
   <text x="1158" y="67" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11.5" text-anchor="end">GITHUB · {html.escape(updated)} UTC · AUTO-REFRESH 30 MIN</text>
 
-  <g transform="translate(42 118)" font-family="ui-monospace,SFMono-Regular,monospace">
-    <text fill="#9B7CFF" font-size="22" font-weight="760">{merged_prs:,}</text><text y="17" fill="#91A2B8" font-size="9.5">MERGED PRS</text>
-    <text x="226" fill="#F2A93B" font-size="22" font-weight="760">{open_prs:,}</text><text x="226" y="17" fill="#91A2B8" font-size="9.5">PUBLIC OPEN · SINCE 2025</text>
-    <text x="417" fill="#2DE2C5" font-size="22" font-weight="760">{merged_projects}</text><text x="417" y="17" fill="#91A2B8" font-size="9.5">MERGED PROJECTS · {verified_projects} VERIFIED</text>
-    <text x="738" fill="#F8FAFC" font-size="22" font-weight="760">{compact(accepted_lines)}</text><text x="738" y="17" fill="#91A2B8" font-size="9.5">LINE CHANGES</text>
-    <text x="1004" fill="#F2A93B" font-size="22" font-weight="760">{compact(stars)}</text><text x="1004" y="17" fill="#91A2B8" font-size="9.5">CURRENT REPO REACH</text>
+  <g font-family="ui-monospace,SFMono-Regular,monospace">
+    <text x="42" y="135" fill="#91A2B8" font-size="9.5">MERGED PRS</text>
+    <text x="268" y="118" fill="#F2A93B" font-size="22" font-weight="760">{open_prs:,}</text><text x="268" y="135" fill="#91A2B8" font-size="9.5">PUBLIC OPEN · CURRENT</text>
+    <text x="459" y="135" fill="#91A2B8" font-size="9.5">MERGED PROJECTS · {verified_projects} VERIFIED</text>
+    <text x="780" y="135" fill="#91A2B8" font-size="9.5">ACCEPTED LINE CHANGES</text>
+    <text x="1046" y="118" fill="#F2A93B" font-size="22" font-weight="760">{compact(stars)}</text><text x="1046" y="135" fill="#91A2B8" font-size="9.5">CURRENT REPO REACH</text>
+    <g class="playback-animated">{''.join(playback_frames)}</g>
+    <g class="playback-static">
+      <text x="1158" y="92" fill="#2DE2C5" font-size="10.5" text-anchor="end">CURRENT · {end.upper()}</text>
+      <text x="42" y="118" fill="#9B7CFF" font-size="22" font-weight="760">{merged_prs:,}</text>
+      <text x="459" y="118" fill="#2DE2C5" font-size="22" font-weight="760">{merged_projects}</text>
+      <text x="780" y="118" fill="#F8FAFC" font-size="22" font-weight="760">{compact(accepted_lines)}</text>
+      <text x="1124" y="177" fill="#2DE2C5" font-size="26" font-weight="760">{merged_projects}</text>
+      <text x="1124" y="307" fill="#9B7CFF" font-size="26" font-weight="760">{compact(merged_prs)}</text>
+      <text x="1124" y="509" fill="#4D7CFE" font-size="24" font-weight="760">{compact(accepted_lines)}</text>
+    </g>
   </g>
 
   <g fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">
     {''.join(date_ticks)}
   </g>
-  <g class="scan"><rect x="104" y="151" width="2" height="443" fill="url(#rule)"/></g>
+  <g class="playback-animated" opacity=".58">
+    <line x1="104" y1="151" x2="104" y2="594" stroke="#2DE2C5" stroke-width="2">
+      <animate attributeName="x1" from="104" to="1105" dur="{playback_duration}s" repeatCount="indefinite"/>
+      <animate attributeName="x2" from="104" to="1105" dur="{playback_duration}s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  <line class="playhead-static" x1="1105" y1="151" x2="1105" y2="594" stroke="#2DE2C5" stroke-width="2" opacity=".58"/>
 
   <g font-family="ui-monospace,SFMono-Regular,monospace">
     <text x="42" y="174" fill="#2DE2C5" font-size="10.5" letter-spacing="1.2">PROJECT BREADTH</text>
@@ -2770,7 +2823,6 @@ def render_svg(
     <path d="{projects_path}" fill="none" stroke="#2DE2C5" stroke-width="2" opacity=".24"/>
     <path class="trace-reveal" d="{projects_path}" fill="none" stroke="#2DE2C5" stroke-width="2.5" pathLength="1"/>
     {''.join(milestone_dots)}
-    <text x="1124" y="177" fill="#2DE2C5" font-size="26" font-weight="760">{merged_projects}</text>
     <text x="1124" y="195" fill="#65758B" font-size="9.5">PROJECTS</text>
 
     <text x="42" y="307" fill="#9B7CFF" font-size="10.5" letter-spacing="1.2">ACCEPTED PULL REQUESTS</text>
@@ -2779,8 +2831,7 @@ def render_svg(
     <path d="{merged_path}" fill="none" stroke="#9B7CFF" stroke-width="3" opacity=".24"/>
     <path id="merged-path" class="trace-reveal slow" d="{merged_path}" fill="none" stroke="#9B7CFF" stroke-width="3" pathLength="1"/>
     <g>{''.join(daily_bars)}</g>
-    <circle class="packet" r="5" fill="#F8FAFC"><animateMotion dur="7s" repeatCount="indefinite"><mpath href="#merged-path"/></animateMotion></circle>
-    <text x="1124" y="307" fill="#9B7CFF" font-size="26" font-weight="760">{compact(merged_prs)}</text>
+    <circle class="packet" r="5" fill="#F8FAFC"><animateMotion dur="{playback_duration}s" repeatCount="indefinite"><mpath href="#merged-path"/></animateMotion></circle>
     <text x="1124" y="325" fill="#65758B" font-size="9.5">MERGED</text>
 
     <text x="42" y="510" fill="#4D7CFE" font-size="10.5" letter-spacing="1.2">ACCEPTED CODE DELTA</text>
@@ -2788,7 +2839,6 @@ def render_svg(
     <line x1="104" y1="577" x2="1105" y2="577" stroke="#203149"/>
     <path d="{lines_path}" fill="none" stroke="#4D7CFE" stroke-width="2.5" opacity=".24"/>
     <path class="trace-reveal slow" d="{lines_path}" fill="none" stroke="#4D7CFE" stroke-width="2.5" pathLength="1"/>
-    <text x="1124" y="509" fill="#4D7CFE" font-size="24" font-weight="760">{compact(accepted_lines)}</text>
     <text x="1124" y="527" fill="#65758B" font-size="9.5">LINES</text>
   </g>
 
@@ -2845,12 +2895,14 @@ def render_impact_signature_svg(
         count = int(category["merged_prs"])
         share = float(category["share_pct"])
         projects = int(category["projects_touched"])
-        width = 448 * count / maximum
+        # Keep a permanent gutter between the bar and the count column.
+        # A full-width bar must never camouflage same-color digits.
+        width = 396 * count / maximum
         color = colors.get(str(category["category"]), "#91A2B8")
         category_rows.append(
             f'<text x="42" y="{y}" fill="#F8FAFC" font-size="12.5" font-weight="650">{html.escape(str(category["category"]))}</text>'
             f'<text x="42" y="{y + 16}" fill="#65758B" font-size="9.5">{projects} PROJECTS TOUCHED</text>'
-            f'<rect x="241" y="{y - 11}" width="448" height="8" rx="4" fill="#18263A"/>'
+            f'<rect x="241" y="{y - 11}" width="396" height="8" rx="4" fill="#18263A"/>'
             f'<rect class="impact-bar" x="241" y="{y - 11}" width="{width:.1f}" height="8" rx="4" fill="{color}" style="animation-delay:{index * 0.07:.2f}s"/>'
             f'<text x="716" y="{y}" fill="{color}" font-size="12.5" font-weight="760" text-anchor="end">{count:,}</text>'
             f'<text x="798" y="{y}" fill="#91A2B8" font-size="11" text-anchor="end">{share:.1f}%</text>'
@@ -2898,6 +2950,11 @@ def render_impact_signature_svg(
   <text x="1158" y="67" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11.5" text-anchor="end">{total:,} CLASSIFIED MERGES · {html.escape(updated)} UTC</text>
   <g>{''.join(spectrum_segments)}</g>
   <text x="42" y="153" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5">EXCLUSIVE DOMINANT-INTENT SHARE · SEGMENTS SUM TO 100%</text>
+  <g fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="8.5" letter-spacing=".8">
+    <text x="716" y="158" text-anchor="end">MERGED PRS</text>
+    <text x="798" y="158" text-anchor="end">SHARE</text>
+  </g>
+  <line x1="661" y1="169" x2="661" y2="548" stroke="#203149"/>
   <line x1="818" y1="169" x2="818" y2="548" stroke="#203149"/>
   <g font-family="ui-monospace,SFMono-Regular,monospace">{''.join(category_rows)}</g>
   <g font-family="ui-monospace,SFMono-Regular,monospace">{''.join(pattern_groups)}</g>
