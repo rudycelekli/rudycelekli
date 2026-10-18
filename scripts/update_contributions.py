@@ -2893,6 +2893,7 @@ def render_impact_signature_svg(
     for index, category in enumerate(categories):
         y = 184 + index * 49
         count = int(category["merged_prs"])
+        count_label = f"{count:,}" if count < 100_000 else compact(count)
         share = float(category["share_pct"])
         projects = int(category["projects_touched"])
         # Keep a permanent gutter between the bar and the count column.
@@ -2904,7 +2905,7 @@ def render_impact_signature_svg(
             f'<text x="42" y="{y + 16}" fill="#65758B" font-size="9.5">{projects} PROJECTS TOUCHED</text>'
             f'<rect x="241" y="{y - 11}" width="396" height="8" rx="4" fill="#18263A"/>'
             f'<rect class="impact-bar" x="241" y="{y - 11}" width="{width:.1f}" height="8" rx="4" fill="{color}" style="animation-delay:{index * 0.07:.2f}s"/>'
-            f'<text x="716" y="{y}" fill="{color}" font-size="12.5" font-weight="760" text-anchor="end">{count:,}</text>'
+            f'<text x="716" y="{y}" fill="{color}" font-size="12.5" font-weight="760" text-anchor="end">{count_label}</text>'
             f'<text x="798" y="{y}" fill="#91A2B8" font-size="11" text-anchor="end">{share:.1f}%</text>'
         )
 

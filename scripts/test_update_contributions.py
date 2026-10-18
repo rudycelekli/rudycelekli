@@ -604,6 +604,25 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn('x1="661"', svg)
         self.assertIn("@media (prefers-reduced-motion: reduce)", svg)
 
+    def test_impact_signature_compacts_counts_before_they_can_overflow(self):
+        analysis = {
+            "classified_merged_prs": 1_234_567,
+            "categories": [
+                {
+                    "category": "Reliability & correctness",
+                    "merged_prs": 1_234_567,
+                    "share_pct": 100.0,
+                    "projects_touched": 999,
+                }
+            ],
+            "patterns": [],
+        }
+
+        svg = subject.render_impact_signature_svg(analysis, "2026-10-18")
+
+        self.assertIn(">1.2m</text>", svg)
+        self.assertNotIn(">1,234,567</text>", svg)
+
     def test_readme_contribution_proof_is_rendered_as_a_comparable_table(self):
         repository = {
             "name": "Upstream Project",
