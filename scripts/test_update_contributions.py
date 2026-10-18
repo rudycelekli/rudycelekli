@@ -556,6 +556,38 @@ class ContributionDiscoveryTests(unittest.TestCase):
             },
         )
 
+    def test_impact_analysis_aggregates_share_breadth_and_patterns(self):
+        repositories = [
+            {
+                "full_name": "upstream/one",
+                "impact_category": "Reliability & correctness",
+                "impact_breakdown": {
+                    "Reliability & correctness": 7,
+                    "Testing & evaluation": 2,
+                },
+            },
+            {
+                "full_name": "upstream/two",
+                "impact_category": "Reliability & correctness",
+                "impact_breakdown": {
+                    "Reliability & correctness": 1,
+                    "Security & trust": 1,
+                },
+            },
+        ]
+
+        analysis = subject.build_impact_analysis(repositories)
+        svg = subject.render_impact_signature_svg(analysis, "2026-10-18")
+
+        self.assertEqual(analysis["classified_merged_prs"], 11)
+        self.assertEqual(analysis["categories"][0]["category"], "Reliability & correctness")
+        self.assertEqual(analysis["categories"][0]["projects_touched"], 2)
+        self.assertEqual(analysis["categories"][0]["share_pct"], 72.7)
+        self.assertIn("QUALITY + TRUST SIGNAL", svg)
+        self.assertIn("IMPACT SIGNATURE", svg)
+        self.assertIn("11 CLASSIFIED MERGES", svg)
+        self.assertIn("@media (prefers-reduced-motion: reduce)", svg)
+
     def test_readme_contribution_proof_is_rendered_as_a_comparable_table(self):
         repository = {
             "name": "Upstream Project",
@@ -592,6 +624,8 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "**Reliability & correctness**<br><sub>6 of 9 merged PRs</sub>",
             section,
         )
+        self.assertIn("### Impact signature", section)
+        self.assertIn("./assets/impact-signature.svg", section)
         self.assertIn("| [#2](https://github.com/upstream/project/graphs/contributors) | 12 | [9]", section)
         self.assertIn("| +1,234 / −56 | 42 | 7,890 ★ · 321 forks |", section)
         self.assertIn("GitHub API rank is the one-based position", section)
@@ -792,11 +826,11 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
         self.assertIn("EVIDENCE-FIRST AGENTIC SYSTEMS", svg)
         self.assertIn("Forward deployed AI researcher", svg)
-        self.assertIn("2 VERIFIED PROJECTS", svg)
+        self.assertIn("2 WITH MERGED PRS / 2 VERIFIED", svg)
         self.assertIn("17 MERGED PRS", svg)
         self.assertIn("125 ATTRIBUTED COMMITS", svg)
-        self.assertIn("2,525 ACCEPTED LINES", svg)
-        self.assertIn("1.0k COMBINED STARS", svg)
+        self.assertIn("2,525 ACCEPTED LINE CHANGES", svg)
+        self.assertIn("1.0k CURRENT REPO REACH", svg)
         self.assertIn("51.2× PROVISIONAL AP", svg)
         self.assertIn("MACHINE-COUNTED · 2026-10-06 UTC", svg)
         self.assertIn("prefers-reduced-motion", svg)

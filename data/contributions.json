@@ -1,4 +1,84 @@
 {
+  "impact_analysis": {
+    "active_categories": 8,
+    "categories": [
+      {
+        "category": "Reliability & correctness",
+        "merged_prs": 2027,
+        "primary_for_projects": 48,
+        "projects_touched": 52,
+        "share_pct": 81.3
+      },
+      {
+        "category": "Testing & evaluation",
+        "merged_prs": 123,
+        "primary_for_projects": 1,
+        "projects_touched": 27,
+        "share_pct": 4.9
+      },
+      {
+        "category": "Maintenance & integration",
+        "merged_prs": 105,
+        "primary_for_projects": 7,
+        "projects_touched": 17,
+        "share_pct": 4.2
+      },
+      {
+        "category": "Performance & scale",
+        "merged_prs": 90,
+        "primary_for_projects": 1,
+        "projects_touched": 22,
+        "share_pct": 3.6
+      },
+      {
+        "category": "Security & trust",
+        "merged_prs": 76,
+        "primary_for_projects": 1,
+        "projects_touched": 18,
+        "share_pct": 3.0
+      },
+      {
+        "category": "Product capability",
+        "merged_prs": 34,
+        "primary_for_projects": 0,
+        "projects_touched": 8,
+        "share_pct": 1.4
+      },
+      {
+        "category": "Developer experience",
+        "merged_prs": 24,
+        "primary_for_projects": 1,
+        "projects_touched": 13,
+        "share_pct": 1.0
+      },
+      {
+        "category": "Agent infrastructure",
+        "merged_prs": 13,
+        "primary_for_projects": 0,
+        "projects_touched": 8,
+        "share_pct": 0.5
+      }
+    ],
+    "classified_merged_prs": 2492,
+    "methodology": "Exclusive dominant-intent classification from merged PR titles. Categories sum to merged PRs; they describe title signals, not a full semantic code audit.",
+    "patterns": [
+      {
+        "detail": "2,027 merged PRs across 52 projects",
+        "label": "DOMINANT CHANGE INTENT",
+        "value": "81.3% reliability & correctness"
+      },
+      {
+        "detail": "Reliability, testing and security signals combined",
+        "label": "QUALITY + TRUST SIGNAL",
+        "value": "89.3% of classified merged work"
+      },
+      {
+        "detail": "123 merged PRs carry this signal",
+        "label": "SECONDARY BREADTH",
+        "value": "Testing & evaluation spans 27 projects"
+      }
+    ]
+  },
   "login": "rudycelekli",
   "merged_pull_requests": [
     {

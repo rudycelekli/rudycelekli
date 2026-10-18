@@ -24,6 +24,7 @@ DATA_FILE = ROOT / "data" / "contributions.json"
 HERO_SVG_FILE = ROOT / "assets" / "hero.svg"
 BUILDING_SVG_FILE = ROOT / "assets" / "building-now.svg"
 SVG_FILE = ROOT / "assets" / "open-source-contributions.svg"
+IMPACT_SVG_FILE = ROOT / "assets" / "impact-signature.svg"
 OWNED_SVG_FILE = ROOT / "assets" / "owned-public-projects.svg"
 AP_DATA_FILE = ROOT / "data" / "agentic-power.json"
 AP_SVG_FILE = ROOT / "assets" / "agentic-power-profile.svg"
@@ -738,6 +739,86 @@ def summarize_repository_impact(
         "classified_prs": len(merged_pull_requests),
         "breakdown": dict(ordered),
         "basis": "Merged PR title classification",
+    }
+
+
+def build_impact_analysis(
+    repositories: list[dict[str, object]],
+) -> dict[str, object]:
+    """Aggregate deterministic PR-title impact signals across repositories."""
+    counts: dict[str, int] = {}
+    projects: dict[str, set[str]] = {}
+    primary_projects: dict[str, int] = {}
+    for repository in repositories:
+        full_name = str(repository.get("full_name") or repository.get("name") or "")
+        primary = str(repository.get("impact_category") or "")
+        if primary:
+            primary_projects[primary] = primary_projects.get(primary, 0) + 1
+        for category, value in dict(repository.get("impact_breakdown") or {}).items():
+            count = int(value)
+            if not count:
+                continue
+            counts[str(category)] = counts.get(str(category), 0) + count
+            projects.setdefault(str(category), set()).add(full_name)
+
+    total = sum(counts.values())
+    categories = []
+    for category, count in sorted(counts.items(), key=lambda item: (-item[1], item[0])):
+        categories.append(
+            {
+                "category": category,
+                "merged_prs": count,
+                "share_pct": round((count / total * 100) if total else 0, 1),
+                "projects_touched": len(projects.get(category, set())),
+                "primary_for_projects": primary_projects.get(category, 0),
+            }
+        )
+
+    dominant = categories[0] if categories else {
+        "category": "No classified impact",
+        "merged_prs": 0,
+        "share_pct": 0.0,
+        "projects_touched": 0,
+    }
+    secondary_breadth = max(
+        (item for item in categories if item["category"] != dominant["category"]),
+        key=lambda item: (int(item["projects_touched"]), int(item["merged_prs"])),
+        default=dominant,
+    )
+    quality_categories = {
+        "Reliability & correctness",
+        "Testing & evaluation",
+        "Security & trust",
+    }
+    quality_count = sum(
+        int(item["merged_prs"])
+        for item in categories
+        if item["category"] in quality_categories
+    )
+    quality_share = round((quality_count / total * 100) if total else 0, 1)
+    patterns = [
+        {
+            "label": "DOMINANT CHANGE INTENT",
+            "value": f"{dominant['share_pct']:.1f}% {str(dominant['category']).lower()}",
+            "detail": f"{int(dominant['merged_prs']):,} merged PRs across {int(dominant['projects_touched'])} projects",
+        },
+        {
+            "label": "QUALITY + TRUST SIGNAL",
+            "value": f"{quality_share:.1f}% of classified merged work",
+            "detail": "Reliability, testing and security signals combined",
+        },
+        {
+            "label": "SECONDARY BREADTH",
+            "value": f"{secondary_breadth['category']} spans {int(secondary_breadth['projects_touched'])} projects",
+            "detail": f"{int(secondary_breadth['merged_prs']):,} merged PRs carry this signal",
+        },
+    ]
+    return {
+        "classified_merged_prs": total,
+        "active_categories": len(categories),
+        "categories": categories,
+        "patterns": patterns,
+        "methodology": "Exclusive dominant-intent classification from merged PR titles. Categories sum to merged PRs; they describe title signals, not a full semantic code audit.",
     }
 
 
@@ -1819,6 +1900,9 @@ def render_hero_svg(
 ) -> str:
     """Render the first-screen identity and live proof signal."""
     total_merged = sum(int(repo["merged_prs"]) for repo in repositories)
+    merged_projects = sum(
+        1 for repo in repositories if int(repo.get("merged_prs") or 0)
+    )
     total_commits = sum(int(repo["contributor_commits"]) for repo in repositories)
     total_line_changes = sum(
         int(repo["accepted_additions"]) + int(repo["accepted_deletions"])
@@ -1829,7 +1913,7 @@ def render_hero_svg(
     updated = html.escape(str(profile["updated_at_utc"]))
     return f"""<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Rudy Celekli, evidence-first agentic systems</title>
-  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes {len(repositories)} verified upstream projects, {total_merged} merged pull requests, {total_commits} attributed commits, {total_line_changes:,} accepted line changes, {total_stars} combined repository stars, and a provisional Agentic Power estimate of {agentic_power:.1f} times.</desc>
+  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes {merged_projects} projects with merged pull requests among {len(repositories)} verified upstream repositories, {total_merged} merged pull requests, {total_commits} attributed commits, {total_line_changes:,} accepted line changes, {total_stars} current repository stars, and a provisional Agentic Power estimate of {agentic_power:.1f} times.</desc>
   <defs>
     <style>
       .orbit {{ transform-box: fill-box; transform-origin: center; animation: orbit 20s linear infinite; }}
@@ -1919,8 +2003,8 @@ def render_hero_svg(
     <text class="hero-subtitle" x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="14">Forward deployed AI researcher · Agentic AI engineer · Enterprise AI</text>
     <g class="proof-rail"><line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
     <circle class="proof-live" cx="78" cy="358" r="5" fill="#2DE2C5"/>
-    <text x="94" y="362" fill="#91A2B8" font-size="10.5" letter-spacing=".8">LIVE PROOF · {len(repositories)} VERIFIED PROJECTS · {total_merged:,} MERGED PRS · {compact(total_commits)} ATTRIBUTED COMMITS</text>
-    <text x="94" y="384" fill="#91A2B8" font-size="10.5" letter-spacing=".8">{total_line_changes:,} ACCEPTED LINES · {compact(total_stars)} COMBINED STARS · {agentic_power:.1f}× PROVISIONAL AP</text>
+    <text x="94" y="362" fill="#91A2B8" font-size="10.5" letter-spacing=".8">LIVE PROOF · {merged_projects} WITH MERGED PRS / {len(repositories)} VERIFIED · {total_merged:,} MERGED PRS · {compact(total_commits)} ATTRIBUTED COMMITS</text>
+    <text x="94" y="384" fill="#91A2B8" font-size="10.5" letter-spacing=".8">{total_line_changes:,} ACCEPTED LINE CHANGES · {compact(total_stars)} CURRENT REPO REACH · {agentic_power:.1f}× PROVISIONAL AP</text>
     <text x="664" y="405" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · {updated} UTC</text></g>
   </g>
 
@@ -2723,6 +2807,107 @@ def render_svg(
 """
 
 
+def render_impact_signature_svg(
+    analysis: dict[str, object], updated: str
+) -> str:
+    """Render a compact analytical view of accepted upstream change patterns."""
+    categories = list(analysis.get("categories") or [])
+    patterns = list(analysis.get("patterns") or [])
+    total = int(analysis.get("classified_merged_prs") or 0)
+    colors = {
+        "Reliability & correctness": "#2DE2C5",
+        "Testing & evaluation": "#9B7CFF",
+        "Maintenance & integration": "#65758B",
+        "Performance & scale": "#4D7CFE",
+        "Security & trust": "#F2A93B",
+        "Product capability": "#F8FAFC",
+        "Developer experience": "#AAB8CA",
+        "Agent infrastructure": "#6EE7D8",
+    }
+    spectrum_x = 42.0
+    spectrum_width = 1116.0
+    spectrum_segments = []
+    cursor = spectrum_x
+    for category in categories:
+        count = int(category["merged_prs"])
+        width = spectrum_width * count / max(total, 1)
+        color = colors.get(str(category["category"]), "#91A2B8")
+        spectrum_segments.append(
+            f'<rect x="{cursor:.1f}" y="123" width="{width:.1f}" height="13" '
+            f'fill="{color}" opacity=".9"/>'
+        )
+        cursor += width
+
+    maximum = max((int(item["merged_prs"]) for item in categories), default=1)
+    category_rows = []
+    for index, category in enumerate(categories):
+        y = 184 + index * 49
+        count = int(category["merged_prs"])
+        share = float(category["share_pct"])
+        projects = int(category["projects_touched"])
+        width = 448 * count / maximum
+        color = colors.get(str(category["category"]), "#91A2B8")
+        category_rows.append(
+            f'<text x="42" y="{y}" fill="#F8FAFC" font-size="12.5" font-weight="650">{html.escape(str(category["category"]))}</text>'
+            f'<text x="42" y="{y + 16}" fill="#65758B" font-size="9.5">{projects} PROJECTS TOUCHED</text>'
+            f'<rect x="241" y="{y - 11}" width="448" height="8" rx="4" fill="#18263A"/>'
+            f'<rect class="impact-bar" x="241" y="{y - 11}" width="{width:.1f}" height="8" rx="4" fill="{color}" style="animation-delay:{index * 0.07:.2f}s"/>'
+            f'<text x="716" y="{y}" fill="{color}" font-size="12.5" font-weight="760" text-anchor="end">{count:,}</text>'
+            f'<text x="798" y="{y}" fill="#91A2B8" font-size="11" text-anchor="end">{share:.1f}%</text>'
+        )
+
+    pattern_groups = []
+    for index, pattern in enumerate(patterns[:3]):
+        y = 193 + index * 122
+        value_lines = wrap_svg_text(pattern["value"], width=37, lines=2)
+        detail_lines = wrap_svg_text(pattern["detail"], width=43, lines=2)
+        value_svg = "".join(
+            f'<text x="840" y="{y + 25 + line_index * 21}" fill="#F8FAFC" font-size="16" font-weight="720">{html.escape(line)}</text>'
+            for line_index, line in enumerate(value_lines)
+        )
+        detail_start = y + 70 if len(value_lines) > 1 else y + 49
+        detail_svg = "".join(
+            f'<text x="840" y="{detail_start + line_index * 16}" fill="#91A2B8" font-size="10.5">{html.escape(line)}</text>'
+            for line_index, line in enumerate(detail_lines)
+        )
+        pattern_groups.append(
+            f'<g class="pattern-readout" style="animation-delay:{0.25 + index * 0.15:.2f}s">'
+            f'<text x="840" y="{y}" fill="#2DE2C5" font-size="9.5" letter-spacing="1.2">{html.escape(str(pattern["label"]))}</text>'
+            f'{value_svg}{detail_svg}</g>'
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610" role="img" aria-labelledby="impact-title impact-desc">
+  <title id="impact-title">Accepted upstream impact signature for Rudy Celekli</title>
+  <desc id="impact-desc">Distribution and cross-project patterns for {total:,} merged pull requests, classified by deterministic title signals. The categories describe dominant intent and do not replace code-level review.</desc>
+  <defs>
+    <style>
+      .impact-bar {{ transform-box: fill-box; transform-origin: left center; animation: impact-grow 1.25s cubic-bezier(.16,1,.3,1) both; }}
+      .pattern-readout {{ animation: readout-in .9s cubic-bezier(.16,1,.3,1) both; }}
+      @keyframes impact-grow {{ from {{ opacity: .3; transform: scaleX(.05); }} to {{ opacity: 1; transform: scaleX(1); }} }}
+      @keyframes readout-in {{ from {{ opacity: 0; transform: translateY(8px); }} to {{ opacity: 1; transform: translateY(0); }} }}
+      @media (prefers-reduced-motion: reduce) {{ .impact-bar, .pattern-readout {{ animation: none !important; opacity: 1; transform: none; }} }}
+    </style>
+    <linearGradient id="impact-canvas" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111E"/><stop offset="1" stop-color="#150B2E"/></linearGradient>
+    <linearGradient id="impact-rule" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2DE2C5"/><stop offset=".52" stop-color="#4D7CFE"/><stop offset="1" stop-color="#9B7CFF"/></linearGradient>
+  </defs>
+  <rect width="1200" height="610" rx="28" fill="url(#impact-canvas)"/>
+  <rect x="1" y="1" width="1198" height="608" rx="27" fill="none" stroke="#26364D"/>
+  <rect x="42" y="30" width="76" height="4" rx="2" fill="url(#impact-rule)"/>
+  <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="29" font-weight="780">IMPACT SIGNATURE</text>
+  <text x="42" y="92" fill="#91A2B8" font-family="Avenir Next,Segoe UI,sans-serif" font-size="13">What accepted upstream work changes, classified from merged PR title evidence.</text>
+  <text x="1158" y="67" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11.5" text-anchor="end">{total:,} CLASSIFIED MERGES · {html.escape(updated)} UTC</text>
+  <g>{''.join(spectrum_segments)}</g>
+  <text x="42" y="153" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5">EXCLUSIVE DOMINANT-INTENT SHARE · SEGMENTS SUM TO 100%</text>
+  <line x1="818" y1="169" x2="818" y2="548" stroke="#203149"/>
+  <g font-family="ui-monospace,SFMono-Regular,monospace">{''.join(category_rows)}</g>
+  <g font-family="ui-monospace,SFMono-Regular,monospace">{''.join(pattern_groups)}</g>
+  <line x1="42" y1="566" x2="1158" y2="566" stroke="#203149"/>
+  <text x="42" y="588" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5">TITLE-SIGNAL ANALYSIS · ONE PRIMARY CATEGORY PER MERGED PR · FULL BREAKDOWN IN DATA/CONTRIBUTIONS.JSON</text>
+  <text x="1158" y="588" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="9.5" text-anchor="end">REFRESHES EVERY 30 MIN</text>
+</svg>
+"""
+
+
 def render_owned_project_card(repo: dict[str, object], index: int) -> str:
     """Render one compact, overflow-safe owner-project component."""
     column = index % 3
@@ -2809,6 +2994,12 @@ def render_readme_section(
         f"My upstream work is discovered automatically across public repositories outside my account. The timeline is rebuilt from individual merged-PR receipts on every refresh, while the amber orbit shows [every public PR authored since 2025 that is open now]({CURRENT_OPEN_PULL_REQUESTS_URL}) and therefore not accepted work. A project enters the verified ledger when GitHub confirms at least one attribution signal: its Contributors index, its contribution graph, an authored commit on the default branch, or an authored merged PR on any branch. **GitHub-listed contributor** remains the highest attribution tier and is applied automatically when GitHub's Contributors API catches up. GitHub API rank is the one-based position returned by that repository's Contributors API; **—** means the rank is unavailable or still pending, not that the contribution is unranked. Only merged PRs contribute accepted-line and accepted-file totals; graph credit never converts an open or closed-unmerged PR into accepted work. Stars and forks describe current repository reach, not personal credit or historical star growth.",
         "",
         f'<img src="./assets/open-source-contributions.svg" width="100%" alt="Animated GitHub upstream timeline showing merged pull requests, open pull requests, unique projects, accepted line changes, and current repository reach through {html.escape(updated)}" />',
+        "",
+        "### Impact signature",
+        "",
+        "This view analyzes the dominant change intent in every merged PR title, then looks for concentration, quality-and-trust signals, and cross-project breadth. It is a reproducible title-signal analysis, not a substitute for reviewing the linked code.",
+        "",
+        f'<img src="./assets/impact-signature.svg" width="100%" alt="Impact-category distribution and cross-project patterns across accepted upstream pull requests through {html.escape(updated)}" />',
         "",
         "**[Open the live sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)** — sort by GitHub contributor rank, merged PRs, attributed commits, accepted line changes, repository stars, or a transparent balanced view.",
         "",
@@ -3003,6 +3194,7 @@ def main() -> int:
     upstream_timeline = build_upstream_timeline(
         repositories, updated, current_open_pull_requests
     )
+    impact_analysis = build_impact_analysis(repositories)
     payload = {
         "schema_version": 9,
         "source": "GitHub GraphQL and REST APIs",
@@ -3029,6 +3221,7 @@ def main() -> int:
         "repositories": public_repositories,
         "merged_pull_requests": merged_pull_request_activity,
         "upstream_timeline": upstream_timeline,
+        "impact_analysis": impact_analysis,
         "owned_repositories": owned_repositories,
         "owned_project_spotlight_limit": OWNED_PROJECT_DISPLAY_LIMIT,
         "owned_project_exclusions": sorted(OWNED_PROJECT_EXCLUSIONS),
@@ -3039,6 +3232,9 @@ def main() -> int:
         AP_DATA_FILE, json.dumps(agentic_power, indent=2, sort_keys=True)
     )
     write_generated(SVG_FILE, render_svg(repositories, updated, upstream_timeline))
+    write_generated(
+        IMPACT_SVG_FILE, render_impact_signature_svg(impact_analysis, updated)
+    )
     write_generated(
         OWNED_SVG_FILE,
         render_owned_svg(

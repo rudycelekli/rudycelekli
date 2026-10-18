@@ -85,6 +85,12 @@ My upstream work is discovered automatically across public repositories outside 
 
 <img src="./assets/open-source-contributions.svg" width="100%" alt="Animated GitHub upstream timeline showing merged pull requests, open pull requests, unique projects, accepted line changes, and current repository reach through 2026-10-18" />
 
+### Impact signature
+
+This view analyzes the dominant change intent in every merged PR title, then looks for concentration, quality-and-trust signals, and cross-project breadth. It is a reproducible title-signal analysis, not a substitute for reviewing the linked code.
+
+<img src="./assets/impact-signature.svg" width="100%" alt="Impact-category distribution and cross-project patterns across accepted upstream pull requests through 2026-10-18" />
+
 **[Open the live sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)** — sort by GitHub contributor rank, merged PRs, attributed commits, accepted line changes, repository stars, or a transparent balanced view.
 
 Impact categories are derived automatically from merged PR titles using deterministic keyword rules; they summarize the dominant kind of work without replacing the linked PR evidence.
