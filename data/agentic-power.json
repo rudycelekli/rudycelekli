@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 212.0,
-    "high": 336.6,
+    "base": 212.1,
+    "high": 336.7,
     "low": 137.1
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 778.2,
+  "engineer_weeks_at_40h": 778.4,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 155.0,
-        "high": 252.6,
+        "high": 253.5,
         "low": 94.8
       },
       "modeled_human_direction_hours": {
         "base": 3.26,
         "high": 3.73,
-        "low": 2.8
+        "low": 2.79
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 145.2,
+        "base": 145.5,
         "high": 237.5,
         "low": 89.0
       },
       "modeled_human_direction_hours": {
-        "base": 6.46,
+        "base": 6.45,
         "high": 7.38,
         "low": 5.53
       },
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 170.7,
+        "base": 171.1,
         "high": 279.1,
         "low": 104.7
       },
       "modeled_human_direction_hours": {
-        "base": 4.74,
+        "base": 4.73,
         "high": 5.41,
         "low": 4.06
       },
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 183.4,
-        "high": 299.4,
-        "low": 112.3
+        "high": 299.7,
+        "low": 112.4
       },
       "modeled_human_direction_hours": {
         "base": 11.31,
-        "high": 12.93,
-        "low": 9.7
+        "high": 12.92,
+        "low": 9.69
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 241.7,
-        "high": 385.3,
-        "low": 155.2
+        "base": 241.8,
+        "high": 385.6,
+        "low": 155.3
       },
       "modeled_human_direction_hours": {
-        "base": 16.01,
-        "high": 18.29,
-        "low": 13.72
+        "base": 16.0,
+        "high": 18.28,
+        "low": 13.71
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -597,43 +597,43 @@
         "low": 154.4
       },
       "modeled_human_direction_hours": {
-        "base": 92.14,
-        "high": 105.3,
-        "low": 78.97
+        "base": 92.17,
+        "high": 105.33,
+        "low": 79.0
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2148,
+      "public_merged_pull_requests": 2149,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 21679.19,
-        "high": 29267.74,
-        "low": 16259.6
+        "base": 21687.85,
+        "high": 29279.43,
+        "low": 16266.1
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2441.41,
-        "high": 3481.91,
-        "low": 1687.29
+        "base": 2443.53,
+        "high": 3484.88,
+        "low": 1688.77
       }
     }
   ],
-  "public_accepted_pull_requests": 2390,
+  "public_accepted_pull_requests": 2391,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 31126.63,
-    "high": 42363.42,
-    "low": 23003.57
+    "base": 31135.29,
+    "high": 42375.11,
+    "low": 23010.07
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 3890.06,
-    "high": 5784.1,
-    "low": 2640.85
+    "base": 3892.18,
+    "high": 5787.07,
+    "low": 2642.33
   },
   "updated_at_utc": "2026-10-18",
   "window": {
-    "end": "2026-10-18T01:37:54Z",
+    "end": "2026-10-18T01:38:48Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -69946,6 +69946,35 @@
       "pull_request": 4441,
       "title": "fix(ralphthon): reject invalid --max-waves and --poll-interval values",
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4441"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-10T17:55:32Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 3,
+        "comments": 4,
+        "commits": 3,
+        "deletions": 2,
+        "reviews": 4
+      },
+      "heh": {
+        "base": 8.66,
+        "high": 11.69,
+        "low": 6.5
+      },
+      "merged_at": "2026-10-18T01:38:48Z",
+      "modeled_human_direction_hours": {
+        "base": 2.12,
+        "high": 2.97,
+        "low": 1.48
+      },
+      "project": "tt-a1i/archify",
+      "pull_request": 823,
+      "title": "fix(evidence): preserve whitespace in Git top-level paths",
+      "url": "https://github.com/tt-a1i/archify/pull/823"
     }
   ]
 }
