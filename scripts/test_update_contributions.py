@@ -668,13 +668,13 @@ class ContributionDiscoveryTests(unittest.TestCase):
             "**Reliability & correctness**<br><sub>6 of 9 merged PRs</sub>",
             section,
         )
-        self.assertIn("### Selected evidence", section)
+        self.assertIn("### Complete evidence ledger", section)
         self.assertIn("./assets/impact-signature.svg", section)
         self.assertIn("| [#2](https://github.com/upstream/project/graphs/contributors) | 12 | [9]", section)
         self.assertIn("| +1,234 / −56 | 42 | 7,890 ★ · 321 forks |", section)
         self.assertIn("GitHub contributor rank is the API's one-based all-time ordering", section)
         self.assertIn(
-            "[Open all 1 verified projects in the sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)",
+            "[Open the sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)",
             section,
         )
         self.assertNotIn("- **[Upstream Project]", section)
@@ -1005,7 +1005,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn(">9</text><text y=\"100\"", svg)
         self.assertIn("prefers-reduced-motion", svg)
 
-    def test_readme_evidence_preview_is_limited_to_ten_rows(self):
+    def test_readme_evidence_ledger_includes_every_verified_project(self):
         repositories = []
         for index in range(11):
             repositories.append(
@@ -1036,9 +1036,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
         )
 
         self.assertIn("Project 10", section)
-        self.assertNotIn("Project 11", section)
-        self.assertIn("Showing 10 of 11 verified upstream projects", section)
-        self.assertIn("Open all 11 verified projects", section)
+        self.assertIn("Project 11", section)
+        self.assertIn("All 11 verified upstream projects are shown here", section)
+        self.assertIn("Showing all 11 verified upstream projects", section)
+        self.assertIn("Open the sortable evidence explorer", section)
 
     def test_building_now_keeps_strategic_anchors_outside_ranked_frontier(self):
         projects = [
@@ -1177,7 +1178,9 @@ class ContributionDiscoveryTests(unittest.TestCase):
             readme.index("<!-- contribution-stats:start -->"),
             readme.index("## Agentic power, engineered"),
         )
-        self.assertLess(len(readme.split()), 2_500)
+        self.assertIn("### Complete evidence ledger", readme)
+        self.assertIn("Showing all 64 verified upstream projects", readme)
+        self.assertLess(len(readme.split()), 5_000)
         self.assertIn('cron: "17,47 * * * *"', workflow)
 
     def test_professional_identity_and_community_links_are_visible(self):

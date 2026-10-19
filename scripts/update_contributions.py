@@ -36,7 +36,6 @@ LOGIN = "rudycelekli"
 OWNED_PROJECT_DISPLAY_LIMIT = 8
 FEATURED_OWNED_PROJECT_LIMIT = 6
 BUILDING_FRONTIER_PAGE_SIZE = 3
-README_EVIDENCE_PREVIEW_LIMIT = 10
 KYA_EVIDENCE_FULL_NAME = f"{LOGIN}/kya-evidence"
 # The profile repository is presentation infrastructure, not a product. The
 # user has also explicitly identified DreamMachine as not their authored work.
@@ -3184,7 +3183,6 @@ def render_readme_section(
     owned_repositories: list[dict[str, object]],
     updated: str,
 ) -> str:
-    preview = repositories[:README_EVIDENCE_PREVIEW_LIMIT]
     lines = [
         "<!-- contribution-stats:start -->",
         "## Open-source impact, verified",
@@ -3195,14 +3193,14 @@ def render_readme_section(
         "",
         f'<img src="./assets/impact-signature.svg" width="100%" alt="Impact-category distribution and cross-project patterns across accepted upstream pull requests through {html.escape(updated)}" />',
         "",
-        "### Selected evidence",
+        "### Complete evidence ledger",
         "",
-        f"The ten highest-signal rows are shown here. **[Open all {len(repositories)} verified projects in the sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)**",
+        f"All {len(repositories)} verified upstream projects are shown here. **[Open the sortable evidence explorer →](https://rudycelekli.github.io/contributions.html)**",
         "",
         "| Project, purpose and evidence | Primary impact | GitHub API rank | Attributed commits | Merged PRs | Accepted lines (+ / −) | Files | Repository reach |",
         "|:--|:--|--:|--:|--:|--:|--:|--:|",
     ]
-    for repo in preview:
+    for repo in repositories:
         tier = str(repo.get("verification_tier") or "github_listed_contributor")
         evidence_url = (
             repo["contributors_url"]
@@ -3257,7 +3255,7 @@ def render_readme_section(
     lines.extend(
         [
             "",
-            f"<sub>Showing {len(preview)} of {len(repositories)} verified upstream projects · {len(owned_repositories)} qualifying owned public repositories tracked separately · [sortable explorer](https://rudycelekli.github.io/contributions.html) · [machine-readable evidence](./data/contributions.json)</sub>",
+            f"<sub>Showing all {len(repositories)} verified upstream projects · {len(owned_repositories)} qualifying owned public repositories tracked separately · [sortable explorer](https://rudycelekli.github.io/contributions.html) · [machine-readable evidence](./data/contributions.json)</sub>",
             "",
             "<sub>Impact categories are deterministic dominant-intent signals from merged PR titles, not a substitute for code review. GitHub contributor rank is the API's one-based all-time ordering; unavailable rank is not treated as zero.</sub>",
         ]
