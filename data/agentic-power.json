@@ -1,18 +1,18 @@
 {
   "agentic_power_x": {
-    "base": 221.8,
-    "high": 352.1,
-    "low": 143.5
+    "base": 222.0,
+    "high": 352.4,
+    "low": 143.7
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0362,
+      "base": 0.0361,
       "high": 0.0413,
       "low": 0.031
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.11,
+    "evidence_window_weeks": 84.13,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 816.3,
+  "engineer_weeks_at_40h": 817.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 147.19,
-    "high": 168.22,
-    "low": 126.16
+    "base": 147.23,
+    "high": 168.26,
+    "low": 126.19
   },
   "monthly": [
     {
@@ -386,11 +386,11 @@
       "agentic_power_x": {
         "base": 111.2,
         "high": 181.7,
-        "low": 68.1
+        "low": 68.7
       },
       "modeled_human_direction_hours": {
         "base": 0.98,
-        "high": 1.12,
+        "high": 1.11,
         "low": 0.84
       },
       "month": "2026-02",
@@ -412,11 +412,11 @@
       "agentic_power_x": {
         "base": 92.4,
         "high": 150.7,
-        "low": 56.4
+        "low": 56.7
       },
       "modeled_human_direction_hours": {
         "base": 1.98,
-        "high": 2.27,
+        "high": 2.26,
         "low": 1.7
       },
       "month": "2026-03",
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 130.0,
         "high": 212.1,
-        "low": 79.5
+        "low": 79.6
       },
       "modeled_human_direction_hours": {
         "base": 4.29,
-        "high": 4.91,
+        "high": 4.9,
         "low": 3.68
       },
       "month": "2026-04",
@@ -462,12 +462,12 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 161.4,
+        "base": 161.9,
         "high": 263.9,
         "low": 99.1
       },
       "modeled_human_direction_hours": {
-        "base": 3.13,
+        "base": 3.12,
         "high": 3.57,
         "low": 2.68
       },
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 178.2,
         "high": 291.2,
-        "low": 109.1
+        "low": 109.4
       },
       "modeled_human_direction_hours": {
         "base": 4.54,
-        "high": 5.19,
+        "high": 5.18,
         "low": 3.89
       },
       "month": "2026-07",
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 191.4,
         "high": 312.6,
-        "low": 117.2
+        "low": 117.3
       },
       "modeled_human_direction_hours": {
         "base": 10.84,
-        "high": 12.39,
+        "high": 12.38,
         "low": 9.29
       },
       "month": "2026-08",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 252.2,
-        "high": 402.0,
-        "low": 162.0
+        "base": 252.4,
+        "high": 402.3,
+        "low": 162.1
       },
       "modeled_human_direction_hours": {
-        "base": 15.34,
-        "high": 17.53,
-        "low": 13.15
+        "base": 15.33,
+        "high": 17.52,
+        "low": 13.14
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 244.8,
-        "high": 385.5,
-        "low": 160.6
+        "base": 245.0,
+        "high": 385.8,
+        "low": 160.8
       },
       "modeled_human_direction_hours": {
-        "base": 94.8,
-        "high": 108.34,
-        "low": 81.26
+        "base": 94.86,
+        "high": 108.41,
+        "low": 81.31
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2309,
+      "public_merged_pull_requests": 2312,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 23204.92,
-        "high": 31327.53,
-        "low": 17403.94
+        "base": 23236.96,
+        "high": 31370.77,
+        "low": 17427.96
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2621.11,
-        "high": 3740.55,
-        "low": 1810.65
+        "base": 2624.13,
+        "high": 3744.78,
+        "low": 1812.76
       }
     }
   ],
-  "public_accepted_pull_requests": 2551,
+  "public_accepted_pull_requests": 2554,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 32652.36,
-    "high": 44423.21,
-    "low": 24147.91
+    "base": 32684.4,
+    "high": 44466.45,
+    "low": 24171.93
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4069.76,
-    "high": 6042.74,
-    "low": 2764.21
+    "base": 4072.78,
+    "high": 6046.97,
+    "low": 2766.32
   },
   "updated_at_utc": "2026-10-19",
   "window": {
-    "end": "2026-10-19T13:57:16Z",
+    "end": "2026-10-19T16:31:00Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -74615,6 +74615,93 @@
       "pull_request": 1041,
       "title": "feat(web): clear all browser fixture routes",
       "url": "https://github.com/tester-army/e2e/pull/1041"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T22:24:59Z",
+      "evidence": {
+        "additions": 64,
+        "changed_files": 3,
+        "comments": 4,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.18,
+        "high": 12.39,
+        "low": 6.88
+      },
+      "merged_at": "2026-10-19T16:30:40Z",
+      "modeled_human_direction_hours": {
+        "base": 1.16,
+        "high": 1.62,
+        "low": 0.81
+      },
+      "project": "openclaw/Peekaboo",
+      "pull_request": 1109,
+      "title": "fix(window): treat an exited owner as a closed window",
+      "url": "https://github.com/openclaw/Peekaboo/pull/1109"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-19T13:36:25Z",
+      "evidence": {
+        "additions": 158,
+        "changed_files": 5,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.57,
+        "high": 16.96,
+        "low": 9.42
+      },
+      "merged_at": "2026-10-19T16:30:42Z",
+      "modeled_human_direction_hours": {
+        "base": 0.94,
+        "high": 1.32,
+        "low": 0.66
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1438,
+      "title": "fix(okf): encode directory links in generated bundle indexes",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1438"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-19T15:12:29Z",
+      "evidence": {
+        "additions": 69,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.29,
+        "high": 13.89,
+        "low": 7.72
+      },
+      "merged_at": "2026-10-19T16:31:00Z",
+      "modeled_human_direction_hours": {
+        "base": 0.92,
+        "high": 1.29,
+        "low": 0.64
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1442,
+      "title": "fix(store): keep column filters inside parenthesised search groups",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1442"
     }
   ]
 }
