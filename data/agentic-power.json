@@ -1,14 +1,14 @@
 {
   "agentic_power_x": {
-    "base": 224.9,
-    "high": 356.9,
-    "low": 145.6
+    "base": 225.1,
+    "high": 357.2,
+    "low": 145.7
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0358,
-      "high": 0.0409,
+      "base": 0.0357,
+      "high": 0.0408,
       "low": 0.0306
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 827.9,
+  "engineer_weeks_at_40h": 828.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -334,11 +334,11 @@
       "agentic_power_x": {
         "base": 127.9,
         "high": 208.8,
-        "low": 78.3
+        "low": 78.8
       },
       "modeled_human_direction_hours": {
         "base": 1.4,
-        "high": 1.6,
+        "high": 1.59,
         "low": 1.2
       },
       "month": "2025-12",
@@ -358,12 +358,12 @@
     {
       "active_repositories": 4,
       "agentic_power_x": {
-        "base": 104.7,
+        "base": 106.3,
         "high": 173.7,
         "low": 64.2
       },
       "modeled_human_direction_hours": {
-        "base": 0.64,
+        "base": 0.63,
         "high": 0.73,
         "low": 0.54
       },
@@ -514,14 +514,14 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 180.2,
-        "high": 294.3,
+        "base": 180.6,
+        "high": 295.0,
         "low": 110.4
       },
       "modeled_human_direction_hours": {
-        "base": 4.49,
+        "base": 4.48,
         "high": 5.13,
-        "low": 3.85
+        "low": 3.84
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 193.5,
-        "high": 316.0,
-        "low": 118.5
+        "base": 193.7,
+        "high": 316.4,
+        "low": 118.6
       },
       "modeled_human_direction_hours": {
-        "base": 10.72,
-        "high": 12.25,
-        "low": 9.19
+        "base": 10.71,
+        "high": 12.24,
+        "low": 9.18
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 255.1,
-        "high": 406.6,
+        "base": 255.2,
+        "high": 406.9,
         "low": 163.8
       },
       "modeled_human_direction_hours": {
-        "base": 15.17,
+        "base": 15.16,
         "high": 17.33,
-        "low": 13.0
+        "low": 12.99
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 248.0,
-        "high": 390.6,
-        "low": 162.7
+        "base": 248.2,
+        "high": 390.9,
+        "low": 162.9
       },
       "modeled_human_direction_hours": {
-        "base": 95.45,
-        "high": 109.08,
-        "low": 81.81
+        "base": 95.47,
+        "high": 109.1,
+        "low": 81.83
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2368,
+      "public_merged_pull_requests": 2370,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 23669.42,
-        "high": 31954.66,
-        "low": 17752.27
+        "base": 23691.19,
+        "high": 31984.05,
+        "low": 17768.6
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2669.5,
-        "high": 3808.43,
-        "low": 1844.58
+        "base": 2670.84,
+        "high": 3810.3,
+        "low": 1845.52
       }
     }
   ],
-  "public_accepted_pull_requests": 2610,
+  "public_accepted_pull_requests": 2612,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 33116.86,
-    "high": 45050.34,
-    "low": 24496.24
+    "base": 33138.63,
+    "high": 45079.73,
+    "low": 24512.57
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4118.15,
-    "high": 6110.62,
-    "low": 2798.14
+    "base": 4119.49,
+    "high": 6112.49,
+    "low": 2799.08
   },
   "updated_at_utc": "2026-10-19",
   "window": {
-    "end": "2026-10-19T18:35:22Z",
+    "end": "2026-10-19T18:51:35Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -76326,6 +76326,64 @@
       "pull_request": 1112,
       "title": "fix(docs): keep intraword underscores out of emphasis",
       "url": "https://github.com/openclaw/Peekaboo/pull/1112"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-18T04:57:03Z",
+      "evidence": {
+        "additions": 87,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.4,
+        "high": 14.04,
+        "low": 7.8
+      },
+      "merged_at": "2026-10-19T18:51:25Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 4267,
+      "title": "fix(memory): memory import reports the tool error and partial failures instead of crashing",
+      "url": "https://github.com/ruvnet/ruflo/pull/4267"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-14T23:09:15Z",
+      "evidence": {
+        "additions": 124,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.37,
+        "high": 15.35,
+        "low": 8.53
+      },
+      "merged_at": "2026-10-19T18:51:35Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 4209,
+      "title": "fix(memory): memory_migrate reports what it migrated; force clears the marker that is checked (#4194)",
+      "url": "https://github.com/ruvnet/ruflo/pull/4209"
     }
   ]
 }
