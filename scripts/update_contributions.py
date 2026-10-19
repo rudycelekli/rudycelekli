@@ -2309,7 +2309,6 @@ def render_top_contributor_readme(
 ) -> str:
     """Render compact, API-backed all-time contributor-rank proof near the top."""
     qualified = top_five_contributor_repositories(repositories)
-    selected = qualified[:6]
     lines = [
         "<!-- top-contributor-proof:start -->",
         "## Upstream authority",
@@ -2318,16 +2317,25 @@ def render_top_contributor_readme(
         "",
     ]
     if qualified:
-        proof = " · ".join(
-            f"[**{repo['name']}**]({repo['url']}) `#{int(repo['contributor_rank'])}` · {compact(int(repo['stargazers']))} ★"
-            for repo in selected
+        lines.append(
+            f"**All {len(qualified)} current Top-5 positions:**"
         )
-        lines.extend(
-            [
-                f"**Selected proof:** {proof}",
-                "",
-                f"[Inspect all {len(qualified)} Top-5 positions and their GitHub evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)",
+        lines.append("")
+        for rank in range(1, 6):
+            ranked = [
+                repo
+                for repo in qualified
+                if int(repo["contributor_rank"]) == rank
             ]
+            if not ranked:
+                continue
+            proof = " · ".join(
+                f"[**{repo['name']}**]({repo['url']}) · {compact(int(repo['stargazers']))} ★"
+                for repo in ranked
+            )
+            lines.extend([f"**GitHub rank #{rank}:** {proof}", ""])
+        lines.append(
+            f"[Sort and inspect all {len(qualified)} Top-5 positions with GitHub evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)"
         )
     else:
         lines.append("Contributor-rank evidence is awaiting GitHub's index.")

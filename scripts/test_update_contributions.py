@@ -914,10 +914,31 @@ class ContributionDiscoveryTests(unittest.TestCase):
         )
 
         self.assertIn("Top Project", section)
-        self.assertIn("`#2`", section)
+        self.assertIn("GitHub rank #2", section)
         self.assertIn("12k ★", section)
         self.assertNotIn("Sixth Project", section)
         self.assertNotIn("Pending Project", section)
+
+    def test_top_contributor_proof_never_caps_observed_top_five_positions(self):
+        repositories = [
+            {
+                "name": f"Top Five Project {index + 1}",
+                "full_name": f"upstream/top-five-{index + 1}",
+                "url": f"https://github.com/upstream/top-five-{index + 1}",
+                "contributor_rank": 2,
+                "stargazers": 1_000 + index,
+            }
+            for index in range(8)
+        ]
+
+        section = subject.render_top_contributor_readme(
+            repositories, "2026-10-19"
+        )
+
+        self.assertIn("All 8 current Top-5 positions", section)
+        for index in range(8):
+            self.assertIn(f"Top Five Project {index + 1}", section)
+        self.assertIn("Sort and inspect all 8 Top-5 positions", section)
 
     def test_contributor_authority_visual_compresses_top_five_proof(self):
         repositories = [
@@ -1178,8 +1199,12 @@ class ContributionDiscoveryTests(unittest.TestCase):
             readme.index("<!-- contribution-stats:start -->"),
             readme.index("## Agentic power, engineered"),
         )
+        evidence = json.loads((subject.ROOT / "data" / "contributions.json").read_text())
         self.assertIn("### Complete evidence ledger", readme)
-        self.assertIn("Showing all 64 verified upstream projects", readme)
+        self.assertIn(
+            f"Showing all {len(evidence['repositories'])} verified upstream projects",
+            readme,
+        )
         self.assertLess(len(readme.split()), 5_000)
         self.assertIn('cron: "17,47 * * * *"', workflow)
 

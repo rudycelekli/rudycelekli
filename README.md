@@ -39,9 +39,19 @@ The operating principle is simple: preserve the world state, replay the action, 
 
 <img src="./assets/contributor-authority.svg" width="100%" alt="GitHub Contributors API authority summary with Top-5 contributor positions and selected repositories" />
 
-**Selected proof:** [**iFixAi**](https://github.com/ifixai-ai/iFixAi) `#1` · 30k ★ · [**helix-foundry**](https://github.com/HelixDB/helix-foundry) `#1` · 1.6k ★ · [**agency-agents**](https://github.com/msitarzewski/agency-agents) `#2` · 161k ★ · [**MoneyPrinterTurbo**](https://github.com/harry0703/MoneyPrinterTurbo) `#2` · 133k ★ · [**claude-mem**](https://github.com/thedotmack/claude-mem) `#2` · 102k ★ · [**Ruflo**](https://github.com/ruvnet/ruflo) `#2` · 77k ★
+**All 33 current Top-5 positions:**
 
-[Inspect all 33 Top-5 positions and their GitHub evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)
+**GitHub rank #1:** [**iFixAi**](https://github.com/ifixai-ai/iFixAi) · 30k ★ · [**helix-foundry**](https://github.com/HelixDB/helix-foundry) · 1.6k ★
+
+**GitHub rank #2:** [**agency-agents**](https://github.com/msitarzewski/agency-agents) · 161k ★ · [**MoneyPrinterTurbo**](https://github.com/harry0703/MoneyPrinterTurbo) · 133k ★ · [**claude-mem**](https://github.com/thedotmack/claude-mem) · 102k ★ · [**Ruflo**](https://github.com/ruvnet/ruflo) · 77k ★ · [**marketingskills**](https://github.com/coreyhaines31/marketingskills) · 55k ★ · [**anatomy**](https://github.com/wheresryan22/anatomy) · 16k ★ · [**openrig**](https://github.com/mvschwarz/openrig) · 7.8k ★ · [**Peekaboo**](https://github.com/openclaw/Peekaboo) · 5.3k ★ · [**CCBaga**](https://github.com/liseami/CCBaga) · 2.7k ★ · [**edgequake**](https://github.com/raphaelmansuy/edgequake) · 2.3k ★ · [**Agentic-QE**](https://github.com/proffesor-for-testing/agentic-qe) · 506 ★ · [**cortexdb**](https://github.com/liliang-cn/cortexdb) · 461 ★ · [**imajev**](https://github.com/mohit67890/imajev) · 398 ★ · [**graphicle**](https://github.com/Graphicle-AI/graphicle) · 306 ★ · [**agent-chrome-relay**](https://github.com/aindeev/agent-chrome-relay) · 292 ★ · [**OpenGTM**](https://github.com/debpalash/OpenGTM) · 61 ★
+
+**GitHub rank #3:** [**diagram-design**](https://github.com/cathrynlavery/diagram-design) · 58k ★ · [**e2e**](https://github.com/tester-army/e2e) · 11k ★ · [**autoharness**](https://github.com/tigerless-labs/autoharness) · 11k ★ · [**open-dots**](https://github.com/Anil-matcha/open-dots) · 5.9k ★ · [**cost-xray**](https://github.com/tigerless-labs/cost-xray) · 5.8k ★ · [**talorys**](https://github.com/rociiu/talorys) · 1.3k ★ · [**open-ontologies**](https://github.com/fabio-rovai/open-ontologies) · 1.1k ★
+
+**GitHub rank #4:** [**rea**](https://github.com/morluto/rea) · 329k ★ · [**gods-eye-view**](https://github.com/bilawalsidhu/gods-eye-view) · 58k ★ · [**ai-job-search**](https://github.com/MadsLorentzen/ai-job-search) · 55k ★ · [**CowAgent**](https://github.com/zhayujie/CowAgent) · 47k ★ · [**oh-my-claudecode**](https://github.com/Yeachan-Heo/oh-my-claudecode) · 40k ★ · [**leantoken**](https://github.com/morluto/leantoken) · 108 ★
+
+**GitHub rank #5:** [**utopia**](https://github.com/deeplethe/utopia) · 8.4k ★ · [**harnessrouter**](https://github.com/HarnessRouter/harnessrouter) · 3.1k ★
+
+[Sort and inspect all 33 Top-5 positions with GitHub evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)
 
 <sub>All-time rank from GitHub's Contributors API · repository stars are reach, not personal credit · refreshed 2026-10-19 UTC</sub>
 <!-- top-contributor-proof:end -->
