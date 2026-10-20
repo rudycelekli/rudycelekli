@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 225.6,
-    "high": 358.0,
-    "low": 146.0
+    "base": 225.7,
+    "high": 358.1,
+    "low": 146.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0305
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.17,
+    "evidence_window_weeks": 84.18,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 830.6,
+  "engineer_weeks_at_40h": 831.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 147.3,
-    "high": 168.34,
-    "low": 126.25
+    "base": 147.31,
+    "high": 168.36,
+    "low": 126.27
   },
   "monthly": [
     {
@@ -540,12 +540,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 194.2,
+        "base": 194.4,
         "high": 317.4,
         "low": 119.0
       },
       "modeled_human_direction_hours": {
-        "base": 10.68,
+        "base": 10.67,
         "high": 12.2,
         "low": 9.15
       },
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 256.1,
+        "base": 256.2,
         "high": 408.2,
         "low": 164.5
       },
       "modeled_human_direction_hours": {
-        "base": 15.11,
+        "base": 15.1,
         "high": 17.26,
         "low": 12.95
       },
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 248.5,
-        "high": 391.3,
+        "base": 248.6,
+        "high": 391.5,
         "low": 163.1
       },
       "modeled_human_direction_hours": {
-        "base": 95.7,
-        "high": 109.37,
-        "low": 82.03
+        "base": 95.73,
+        "high": 109.4,
+        "low": 82.05
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2377,
+      "public_merged_pull_requests": 2379,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 23777.1,
-        "high": 32100.05,
-        "low": 17833.05
+        "base": 23794.18,
+        "high": 32123.11,
+        "low": 17845.85
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2687.09,
-        "high": 3834.25,
-        "low": 1856.49
+        "base": 2688.31,
+        "high": 3835.95,
+        "low": 1857.35
       }
     }
   ],
-  "public_accepted_pull_requests": 2619,
+  "public_accepted_pull_requests": 2621,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 33224.54,
-    "high": 45195.73,
-    "low": 24577.02
+    "base": 33241.62,
+    "high": 45218.79,
+    "low": 24589.82
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4135.74,
-    "high": 6136.44,
-    "low": 2810.05
+    "base": 4136.96,
+    "high": 6138.14,
+    "low": 2810.91
   },
   "updated_at_utc": "2026-10-20",
   "window": {
-    "end": "2026-10-20T00:00:42Z",
+    "end": "2026-10-20T01:46:31Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -76587,6 +76587,64 @@
       "pull_request": 314,
       "title": "fix(export): preserve stylesheet media conditions",
       "url": "https://github.com/cathrynlavery/diagram-design/pull/314"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T06:36:16Z",
+      "evidence": {
+        "additions": 55,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.54,
+        "high": 11.53,
+        "low": 6.4
+      },
+      "merged_at": "2026-10-20T01:46:22Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 3685,
+      "title": "fix(embeddings): serialize persistent cache initialization",
+      "url": "https://github.com/ruvnet/ruflo/pull/3685"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-04T06:36:07Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.54,
+        "high": 11.53,
+        "low": 6.4
+      },
+      "merged_at": "2026-10-20T01:46:31Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 3681,
+      "title": "fix(embeddings): use collision-resistant persistent cache keys",
+      "url": "https://github.com/ruvnet/ruflo/pull/3681"
     }
   ]
 }
