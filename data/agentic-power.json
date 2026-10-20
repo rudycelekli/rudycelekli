@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 227.9,
-    "high": 361.7,
-    "low": 147.6
+    "base": 227.8,
+    "high": 361.6,
+    "low": 147.5
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0303
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.25,
+    "evidence_window_weeks": 84.26,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 840.2,
+  "engineer_weeks_at_40h": 839.9,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 147.44,
-    "high": 168.5,
-    "low": 126.38
+    "base": 147.46,
+    "high": 168.52,
+    "low": 126.39
   },
   "monthly": [
     {
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 132.7,
         "high": 216.8,
-        "low": 81.3
+        "low": 81.5
       },
       "modeled_human_direction_hours": {
         "base": 4.2,
-        "high": 4.8,
+        "high": 4.79,
         "low": 3.6
       },
       "month": "2026-04",
@@ -462,12 +462,12 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 165.1,
+        "base": 165.7,
         "high": 270.0,
         "low": 101.3
       },
       "modeled_human_direction_hours": {
-        "base": 3.06,
+        "base": 3.05,
         "high": 3.49,
         "low": 2.62
       },
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 182.3,
+        "base": 182.7,
         "high": 298.1,
         "low": 111.7
       },
       "modeled_human_direction_hours": {
-        "base": 4.44,
+        "base": 4.43,
         "high": 5.07,
         "low": 3.8
       },
@@ -540,12 +540,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 195.7,
+        "base": 195.9,
         "high": 319.9,
         "low": 119.9
       },
       "modeled_human_direction_hours": {
-        "base": 10.6,
+        "base": 10.59,
         "high": 12.11,
         "low": 9.08
       },
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 258.1,
         "high": 411.4,
-        "low": 165.6
+        "low": 165.7
       },
       "modeled_human_direction_hours": {
         "base": 14.99,
-        "high": 17.14,
+        "high": 17.13,
         "low": 12.85
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 251.1,
-        "high": 395.5,
-        "low": 164.8
+        "base": 250.9,
+        "high": 395.1,
+        "low": 164.6
       },
       "modeled_human_direction_hours": {
-        "base": 96.23,
-        "high": 109.98,
-        "low": 82.48
+        "base": 96.26,
+        "high": 110.01,
+        "low": 82.51
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2419,
+      "public_merged_pull_requests": 2418,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 24160.51,
-        "high": 32617.7,
-        "low": 18120.64
+        "base": 24147.96,
+        "high": 32600.76,
+        "low": 18111.22
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2722.18,
-        "high": 3883.35,
-        "low": 1881.01
+        "base": 2723.57,
+        "high": 3886.5,
+        "low": 1881.58
       }
     }
   ],
-  "public_accepted_pull_requests": 2661,
+  "public_accepted_pull_requests": 2660,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 33607.95,
-    "high": 45713.38,
-    "low": 24864.61
+    "base": 33595.4,
+    "high": 45696.44,
+    "low": 24855.19
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4170.83,
-    "high": 6185.54,
-    "low": 2834.57
+    "base": 4172.22,
+    "high": 6188.69,
+    "low": 2835.14
   },
   "updated_at_utc": "2026-10-20",
   "window": {
-    "end": "2026-10-20T13:06:36Z",
+    "end": "2026-10-20T14:30:37Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -71720,35 +71720,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-17T16:20:19Z",
-      "evidence": {
-        "additions": 111,
-        "changed_files": 4,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 12,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.89,
-        "high": 14.7,
-        "low": 8.17
-      },
-      "merged_at": "2026-10-18T08:52:36Z",
-      "modeled_human_direction_hours": {
-        "base": 0.75,
-        "high": 1.05,
-        "low": 0.52
-      },
-      "project": "zhayujie/CowAgent",
-      "pull_request": 3781,
-      "title": "fix: report MCP transport failures as failed tool calls",
-      "url": "https://github.com/zhayujie/CowAgent/pull/3781"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-17T16:47:41Z",
       "evidence": {
         "additions": 112,
@@ -73774,35 +73745,6 @@
       "pull_request": 2125,
       "title": "fix(olmoe): guard unused dense-FP16 state in portable adapters",
       "url": "https://github.com/JustVugg/colibri/pull/2125"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-17T15:27:29Z",
-      "evidence": {
-        "additions": 150,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 7,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.84,
-        "high": 14.63,
-        "low": 8.13
-      },
-      "merged_at": "2026-10-19T07:02:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2145,
-      "title": "fix(inkling): exclude pinned slots from acquisition rounds",
-      "url": "https://github.com/JustVugg/colibri/pull/2145"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -77805,6 +77747,35 @@
       "pull_request": 1910,
       "title": "fix(alpha-bench): reject top=0 instead of silently using 20",
       "url": "https://github.com/HKUDS/Vibe-Trading/pull/1910"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T22:17:45Z",
+      "evidence": {
+        "additions": 51,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.18,
+        "high": 12.39,
+        "low": 6.88
+      },
+      "merged_at": "2026-10-20T14:30:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.75,
+        "high": 1.05,
+        "low": 0.52
+      },
+      "project": "antchfx/xpath",
+      "pull_request": 162,
+      "title": "Make position() agree with numeric predicates",
+      "url": "https://github.com/antchfx/xpath/pull/162"
     }
   ]
 }
