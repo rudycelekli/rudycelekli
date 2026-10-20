@@ -2646,8 +2646,9 @@ def build_upstream_timeline(
     repositories: list[dict[str, object]],
     updated: str,
     current_open_pull_requests: int | None = None,
+    previous_timeline: dict[str, object] | None = None,
 ) -> dict[str, object]:
-    """Build daily cumulative upstream evidence from merged PR receipts."""
+    """Build daily evidence and preserve point-in-time queue/reach observations."""
     events: list[dict[str, object]] = []
     for repository in repositories:
         full_name = str(repository.get("full_name") or repository.get("name") or "")
@@ -2696,6 +2697,56 @@ def build_upstream_timeline(
     for event in events:
         events_by_day.setdefault(str(event["day"]), []).append(event)
 
+    # The accepted/current receipts let us reconstruct a conservative historical
+    # queue: PRs that were eventually merged plus PRs that are still open. Closed,
+    # unmerged PRs are intentionally not invented. The current point is replaced
+    # with GitHub's exhaustive current-open search count below.
+    queue_intervals: list[tuple[dt.date, dt.date]] = []
+    for repository in repositories:
+        for pull_request in repository.get("_merged_pull_requests", []):
+            created_at = str(
+                pull_request.get("createdAt") or pull_request.get("created_at") or ""
+            )
+            merged_at = str(
+                pull_request.get("mergedAt") or pull_request.get("merged_at") or ""
+            )
+            if created_at and merged_at:
+                queue_intervals.append(
+                    (dt.date.fromisoformat(created_at[:10]), dt.date.fromisoformat(merged_at[:10]))
+                )
+        for pull_request in repository.get("_open_pull_requests", []):
+            created_at = str(
+                pull_request.get("createdAt") or pull_request.get("created_at") or ""
+            )
+            if created_at:
+                queue_intervals.append((dt.date.fromisoformat(created_at[:10]), end))
+
+    current_open = (
+        int(current_open_pull_requests)
+        if current_open_pull_requests is not None
+        else sum(int(repository.get("open_prs") or 0) for repository in repositories)
+    )
+    current_reach = sum(
+        int(repository.get("stargazers") or 0) for repository in repositories
+    )
+    observations_by_date: dict[str, dict[str, int | str]] = {}
+    for observation in (previous_timeline or {}).get("observations", []):
+        if not isinstance(observation, dict) or not observation.get("date"):
+            continue
+        observations_by_date[str(observation["date"])] = {
+            "date": str(observation["date"]),
+            "open_prs": int(observation.get("open_prs") or 0),
+            "repository_reach_stars": int(
+                observation.get("repository_reach_stars") or 0
+            ),
+        }
+    observations_by_date[end.isoformat()] = {
+        "date": end.isoformat(),
+        "open_prs": current_open,
+        "repository_reach_stars": current_reach,
+    }
+    observations = [observations_by_date[key] for key in sorted(observations_by_date)][-366:]
+
     points: list[dict[str, object]] = []
     repositories_seen: set[str] = set()
     merged_total = 0
@@ -2711,6 +2762,10 @@ def build_upstream_timeline(
                 new_projects += 1
             merged_total += 1
             line_total += int(event["line_changes"])
+        observation = observations_by_date.get(day.isoformat())
+        reconstructed_open = sum(
+            1 for opened, closed in queue_intervals if opened <= day <= closed
+        )
         points.append(
             {
                 "date": day.isoformat(),
@@ -2722,6 +2777,15 @@ def build_upstream_timeline(
                 "cumulative_merged_prs": merged_total,
                 "cumulative_projects": len(repositories_seen),
                 "cumulative_line_changes": line_total,
+                "open_prs": (
+                    current_open if day == end else reconstructed_open
+                ),
+                "open_prs_observed": bool(observation),
+                "repository_reach_stars": (
+                    int(observation["repository_reach_stars"])
+                    if observation
+                    else None
+                ),
             }
         )
         day += dt.timedelta(days=1)
@@ -2736,13 +2800,7 @@ def build_upstream_timeline(
         "merged_prs": sum(
             int(repository.get("merged_prs") or 0) for repository in repositories
         ),
-        "open_prs": (
-            int(current_open_pull_requests)
-            if current_open_pull_requests is not None
-            else sum(
-                int(repository.get("open_prs") or 0) for repository in repositories
-            )
-        ),
+        "open_prs": current_open,
         "open_prs_in_verified_projects": sum(
             int(repository.get("open_prs") or 0) for repository in repositories
         ),
@@ -2753,9 +2811,9 @@ def build_upstream_timeline(
             + int(repository.get("accepted_deletions") or 0)
             for repository in repositories
         ),
-        "current_repository_reach_stars": sum(
-            int(repository.get("stargazers") or 0) for repository in repositories
-        ),
+        "current_repository_reach_stars": current_reach,
+        "observations": observations,
+        "reach_observed_since": observations[0]["date"],
         "points": points,
     }
 
@@ -2776,6 +2834,25 @@ def timeline_path(
         x = x0 + ((x1 - x0) * index / denominator)
         y = y0 - ((y0 - y1) * int(point[key]) / maximum)
         commands.append(f"{'M' if index == 0 else 'L'} {x:.1f} {y:.1f}")
+    return " ".join(commands)
+
+
+def timeline_observed_path(
+    points: list[dict[str, object]], key: str, x0: float, x1: float, y0: float, y1: float
+) -> str:
+    """Map only observed values, leaving unknown history visibly absent."""
+    observed = [(index, int(point[key])) for index, point in enumerate(points) if point.get(key) is not None]
+    if not observed:
+        return ""
+    maximum = max(value for _, value in observed) or 1
+    minimum = min(value for _, value in observed)
+    span = max(maximum - minimum, 1)
+    denominator = max(len(points) - 1, 1)
+    commands = []
+    for index, value in observed:
+        x = x0 + ((x1 - x0) * index / denominator)
+        y = y0 - ((y0 - y1) * (value - minimum) / span)
+        commands.append(f"{'M' if not commands else 'L'} {x:.1f} {y:.1f}")
     return " ".join(commands)
 
 
@@ -2819,6 +2896,10 @@ def render_svg(
     lines_path = timeline_path(
         points, "cumulative_line_changes", x0, x1, 577.0, 502.0
     )
+    open_path = timeline_path(points, "open_prs", x0, x1, 421.0, 348.0)
+    reach_path = timeline_observed_path(
+        points, "repository_reach_stars", x0, x1, 577.0, 536.0
+    )
     denominator = max(len(points) - 1, 1)
     max_daily = max((int(point["daily_merged_prs"]) for point in points), default=0) or 1
     playback_sweep_duration = 24
@@ -2830,6 +2911,14 @@ def render_svg(
     playback_frames = []
     daily_bars = []
     milestone_dots = []
+    reach_dots = []
+    observed_reach_values = [
+        int(point["repository_reach_stars"])
+        for point in points
+        if point.get("repository_reach_stars") is not None
+    ]
+    reach_minimum = min(observed_reach_values, default=0)
+    reach_span = max(max(observed_reach_values, default=0) - reach_minimum, 1)
     for index, point in enumerate(points):
         x = x0 + ((x1 - x0) * index / denominator)
         daily = int(point["daily_merged_prs"])
@@ -2847,8 +2936,18 @@ def render_svg(
                 f'<circle class="project-pulse" cx="{x:.1f}" cy="{y:.1f}" r="3.2" '
                 f'style="animation-delay:{index * 0.04:.3f}s"/>'
             )
+        if point.get("repository_reach_stars") is not None:
+            reach_value = int(point["repository_reach_stars"])
+            reach_y = 577 - (41 * (reach_value - reach_minimum) / reach_span)
+            reach_dots.append(
+                f'<circle cx="{x:.1f}" cy="{reach_y:.1f}" r="3.5" '
+                f'fill="#F2A93B" filter="url(#glow)"/>'
+            )
         date_label = dt.date.fromisoformat(str(point["date"])).strftime("%b %d, %Y")
         frame_values = timeline_frame_values(frame_count, index)
+        point_open = int(point.get("open_prs") or 0)
+        point_reach = point.get("repository_reach_stars")
+        reach_label = compact(int(point_reach)) if point_reach is not None else "—"
         state_label = (
             f"CURRENT · {date_label.upper()} · {current_hold_duration} SEC HOLD"
             if index == frame_count - 1
@@ -2863,11 +2962,15 @@ def render_svg(
             f'<g class="playback-frame" opacity="0">{frame_animation}'
             f'<text x="1158" y="92" fill="#2DE2C5" font-size="10.5" text-anchor="end">{state_label}</text>'
             f'<text x="42" y="118" fill="#9B7CFF" font-size="22" font-weight="760">{int(point["cumulative_merged_prs"]):,}</text>'
+            f'<text x="268" y="118" fill="#F2A93B" font-size="22" font-weight="760">{point_open:,}</text>'
             f'<text x="459" y="118" fill="#2DE2C5" font-size="22" font-weight="760">{int(point["cumulative_projects"]):,}</text>'
             f'<text x="780" y="118" fill="#F8FAFC" font-size="22" font-weight="760">{compact(int(point["cumulative_line_changes"]))}</text>'
+            f'<text x="1046" y="118" fill="#F2A93B" font-size="22" font-weight="760">{reach_label}</text>'
             f'<text x="1124" y="177" fill="#2DE2C5" font-size="26" font-weight="760">{int(point["cumulative_projects"]):,}</text>'
             f'<text x="1124" y="307" fill="#9B7CFF" font-size="26" font-weight="760">{compact(int(point["cumulative_merged_prs"]))}</text>'
+            f'<text x="1124" y="382" fill="#F2A93B" font-size="18" font-weight="760">{point_open:,}</text>'
             f'<text x="1124" y="509" fill="#4D7CFE" font-size="24" font-weight="760">{compact(int(point["cumulative_line_changes"]))}</text>'
+            f'<text x="1124" y="553" fill="#F2A93B" font-size="18" font-weight="760">{reach_label}</text>'
             f'</g>'
         )
 
@@ -2897,7 +3000,7 @@ def render_svg(
     end = dt.date.fromisoformat(str(timeline["end_date"])).strftime("%b %d, %Y")
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
   <title id="title">Animated upstream contribution timeline for Rudy Celekli</title>
-  <desc id="desc">Daily GitHub evidence from {start} through {end}: {merged_prs:,} merged pull requests across {merged_projects} projects, {open_prs:,} public pull requests authored since 2025 and currently open, {accepted_lines:,} accepted line changes, and {stars:,} current repository stars. Open work is not counted as accepted. Stars describe current repository reach, not personal credit.</desc>
+  <desc id="desc">Daily GitHub evidence from {start} through {end}: {merged_prs:,} merged pull requests across {merged_projects} projects, a dated public open-pull-request queue, {accepted_lines:,} accepted line changes, and observed repository reach currently totaling {stars:,} stars. Open work is not counted as accepted. Reach is recorded only from real point-in-time observations and is not personal credit.</desc>
   <defs>
     <style>
       .trace-reveal {{ stroke-dasharray: 1; stroke-dashoffset: 1; animation: reveal 6s cubic-bezier(.16,1,.3,1) forwards; }}
@@ -2940,19 +3043,23 @@ def render_svg(
 
   <g font-family="ui-monospace,SFMono-Regular,monospace">
     <text x="42" y="135" fill="#91A2B8" font-size="9.5">MERGED PRS</text>
-    <text x="268" y="118" fill="#F2A93B" font-size="22" font-weight="760">{open_prs:,}</text><text x="268" y="135" fill="#91A2B8" font-size="9.5">PUBLIC OPEN · CURRENT</text>
+    <text x="268" y="135" fill="#91A2B8" font-size="9.5">PUBLIC OPEN · AT DATE</text>
     <text x="459" y="135" fill="#91A2B8" font-size="9.5">MERGED PROJECTS · {verified_projects} VERIFIED</text>
     <text x="780" y="135" fill="#91A2B8" font-size="9.5">ACCEPTED LINE CHANGES</text>
-    <text x="1046" y="118" fill="#F2A93B" font-size="22" font-weight="760">{compact(stars)}</text><text x="1046" y="135" fill="#91A2B8" font-size="9.5">CURRENT REPO REACH</text>
+    <text x="1046" y="135" fill="#91A2B8" font-size="9.5">OBSERVED REPO REACH</text>
     <g class="playback-animated">{''.join(playback_frames)}</g>
     <g class="playback-static">
       <text x="1158" y="92" fill="#2DE2C5" font-size="10.5" text-anchor="end">CURRENT · {end.upper()}</text>
       <text x="42" y="118" fill="#9B7CFF" font-size="22" font-weight="760">{merged_prs:,}</text>
+      <text x="268" y="118" fill="#F2A93B" font-size="22" font-weight="760">{open_prs:,}</text>
       <text x="459" y="118" fill="#2DE2C5" font-size="22" font-weight="760">{merged_projects}</text>
       <text x="780" y="118" fill="#F8FAFC" font-size="22" font-weight="760">{compact(accepted_lines)}</text>
+      <text x="1046" y="118" fill="#F2A93B" font-size="22" font-weight="760">{compact(stars)}</text>
       <text x="1124" y="177" fill="#2DE2C5" font-size="26" font-weight="760">{merged_projects}</text>
       <text x="1124" y="307" fill="#9B7CFF" font-size="26" font-weight="760">{compact(merged_prs)}</text>
+      <text x="1124" y="382" fill="#F2A93B" font-size="18" font-weight="760">{open_prs:,}</text>
       <text x="1124" y="509" fill="#4D7CFE" font-size="24" font-weight="760">{compact(accepted_lines)}</text>
+      <text x="1124" y="553" fill="#F2A93B" font-size="18" font-weight="760">{compact(stars)}</text>
     </g>
   </g>
 
@@ -2981,29 +3088,26 @@ def render_svg(
     <line x1="104" y1="421" x2="1105" y2="421" stroke="#203149"/>
     <path d="{merged_path}" fill="none" stroke="#9B7CFF" stroke-width="3" opacity=".24"/>
     <path id="merged-path" class="trace-reveal slow" d="{merged_path}" fill="none" stroke="#9B7CFF" stroke-width="3" pathLength="1"/>
+    <path d="{open_path}" fill="none" stroke="#F2A93B" stroke-width="2" stroke-dasharray="6 5" opacity=".82"/>
     <g>{''.join(daily_bars)}</g>
     <circle class="packet" r="5" fill="#F8FAFC"><animateMotion dur="{playback_duration}s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;1" keyTimes="0;{sweep_fraction:.5f};1"><mpath href="#merged-path"/></animateMotion></circle>
     <text x="1124" y="325" fill="#65758B" font-size="9.5">MERGED</text>
+    <text x="1124" y="398" fill="#65758B" font-size="8.5">OPEN QUEUE</text>
 
     <text x="42" y="510" fill="#4D7CFE" font-size="10.5" letter-spacing="1.2">ACCEPTED CODE DELTA</text>
     <text x="42" y="529" fill="#91A2B8" font-size="10">ADDITIONS + DELETIONS FROM MERGED PRS</text>
     <line x1="104" y1="577" x2="1105" y2="577" stroke="#203149"/>
     <path d="{lines_path}" fill="none" stroke="#4D7CFE" stroke-width="2.5" opacity=".24"/>
     <path class="trace-reveal slow" d="{lines_path}" fill="none" stroke="#4D7CFE" stroke-width="2.5" pathLength="1"/>
+    <path d="{reach_path}" fill="none" stroke="#F2A93B" stroke-width="2" opacity=".9"/>
+    {''.join(reach_dots)}
     <text x="1124" y="527" fill="#65758B" font-size="9.5">LINES</text>
-  </g>
-
-  <g transform="translate(1022 348)" font-family="ui-monospace,SFMono-Regular,monospace">
-    <circle cx="44" cy="42" r="36" fill="#F2A93B" fill-opacity=".05" stroke="#F2A93B" stroke-opacity=".22"/>
-    <g class="open-orbit"><circle cx="44" cy="6" r="4" fill="#F2A93B" filter="url(#glow)"/><path d="M44 6 A36 36 0 1 1 43.9 6" fill="none" stroke="#F2A93B" stroke-dasharray="5 9" stroke-opacity=".54"/></g>
-    <text x="44" y="40" text-anchor="middle" fill="#F2A93B" font-size="20" font-weight="760">{open_prs:,}</text>
-    <text x="44" y="56" text-anchor="middle" fill="#91A2B8" font-size="8.5">OPEN NOW</text>
-    <text x="44" y="92" text-anchor="middle" fill="#65758B" font-size="8.5">NOT ACCEPTED</text>
+    <text x="1124" y="568" fill="#65758B" font-size="8.5">REACH</text>
   </g>
 
   <line x1="42" y1="640" x2="1158" y2="640" stroke="#203149"/>
   <text x="42" y="663" fill="#2DE2C5" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5">DETAILS + PROOF LINKS IN THE SORTABLE TABLE BELOW</text>
-  <text x="1158" y="663" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">OPEN ≠ MERGED · STARS = CURRENT REPOSITORY REACH</text>
+  <text x="1158" y="663" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10.5" text-anchor="end">OPEN = RECEIPT QUEUE · REACH OBSERVED SINCE {timeline['reach_observed_since']}</text>
 </svg>
 """
 
@@ -3374,8 +3478,15 @@ def main() -> int:
         for repo in repositories
     ]
     merged_pull_request_activity = public_merged_pull_request_activity(repositories)
+    previous_timeline: dict[str, object] = {}
+    if DATA_FILE.exists():
+        try:
+            previous_payload = json.loads(DATA_FILE.read_text())
+            previous_timeline = dict(previous_payload.get("upstream_timeline") or {})
+        except (OSError, ValueError, TypeError):
+            previous_timeline = {}
     upstream_timeline = build_upstream_timeline(
-        repositories, updated, current_open_pull_requests
+        repositories, updated, current_open_pull_requests, previous_timeline
     )
     impact_analysis = build_impact_analysis(repositories)
     payload = {
@@ -3392,7 +3503,7 @@ def main() -> int:
             "accepted_code": "Additions, deletions, and changed files from merged pull requests only.",
             "open_pull_requests": "Every public pull request authored since 2025 whose current GitHub state is OPEN is reported as a point-in-time queue, including drafts and repositories that have not entered the verified contribution ledger. Open work is never counted as accepted work.",
             "merged_pull_request_activity": "Every public authored merged pull request discovered by the exhaustive date-partitioned GitHub search is retained as a distinct receipt with repository, URL, merge time, code-change statistics, reviews, and comments.",
-            "upstream_timeline": "Daily cumulative project breadth, merged pull requests, and accepted line changes are rebuilt from individual merged-PR receipts. Repository stars are shown only as current point-in-time reach because historical star observations are not available.",
+            "upstream_timeline": "Daily cumulative project breadth, merged pull requests, and accepted line changes are rebuilt from individual merged-PR receipts. The dated open queue is reconstructed from accepted and currently open PR receipts, with the current point replaced by the exhaustive GitHub open-PR count. Repository reach is persisted as point-in-time observations on each refresh; dates before observation began remain unknown rather than backfilled.",
             "repository_reach": "Stars and forks are current repository-level context, not personal contribution credit or historical growth.",
             "impact_categories": "Each merged pull request is assigned one deterministic impact category from its title: security and trust, testing and evaluation, performance and scale, reliability and correctness, agent infrastructure, developer experience, product capability, or maintenance and integration. The table shows the dominant category and the evidence file retains the complete per-project breakdown.",
             "owned_project_discovery": "Every public, non-fork, non-archived, active source repository owned by the login is discovered automatically on each run, except the profile repository and explicit authorship exclusions.",

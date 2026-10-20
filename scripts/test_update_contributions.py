@@ -491,13 +491,14 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn('calcMode="discrete"', svg)
         self.assertIn('class="playback-static"', svg)
         self.assertIn("ACCEPTED LINE CHANGES", svg)
-        self.assertIn("CURRENT REPO REACH", svg)
-        self.assertIn("OPEN NOW", svg)
-        self.assertIn("NOT ACCEPTED", svg)
+        self.assertIn("OBSERVED REPO REACH", svg)
+        self.assertIn("PUBLIC OPEN · AT DATE", svg)
+        self.assertIn("OPEN QUEUE", svg)
+        self.assertIn("REACH OBSERVED SINCE", svg)
         self.assertIn("DETAILS + PROOF LINKS IN THE SORTABLE TABLE BELOW", svg)
         self.assertNotIn('clip-path="url(#contribution-card-0)"', svg)
         self.assertIn("@media (prefers-reduced-motion: reduce)", svg)
-        self.assertIn("Stars describe current repository reach", svg)
+        self.assertIn("Reach is recorded only from real point-in-time observations", svg)
 
     def test_timeline_frame_sequences_loop_without_multiple_visible_frames(self):
         self.assertEqual(subject.timeline_frame_values(3, 0), "1;0;0;0")
@@ -547,9 +548,63 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual(timeline["merged_projects"], 2)
         self.assertEqual(timeline["accepted_line_changes"], 25)
         self.assertEqual(timeline["current_repository_reach_stars"], 150)
+        self.assertEqual(timeline["points"][-1]["open_prs"], 3)
+        self.assertEqual(timeline["points"][-1]["repository_reach_stars"], 150)
+        self.assertEqual(timeline["reach_observed_since"], "2026-09-28")
         self.assertEqual(timeline["points"][-1]["cumulative_merged_prs"], 3)
         self.assertEqual(timeline["points"][-1]["cumulative_projects"], 2)
         self.assertEqual(timeline["points"][-1]["cumulative_line_changes"], 25)
+
+    def test_upstream_timeline_preserves_real_reach_and_open_queue_observations(self):
+        repositories = [
+            {
+                "name": "One",
+                "full_name": "upstream/one",
+                "merged_prs": 1,
+                "open_prs": 2,
+                "accepted_additions": 5,
+                "accepted_deletions": 1,
+                "stargazers": 125,
+                "_merged_pull_requests": [
+                    {
+                        "createdAt": "2026-09-25T10:00:00Z",
+                        "mergedAt": "2026-09-27T12:00:00Z",
+                        "additions": 5,
+                        "deletions": 1,
+                    }
+                ],
+                "_open_pull_requests": [
+                    {"createdAt": "2026-09-27T08:00:00Z"},
+                    {"createdAt": "2026-09-28T08:00:00Z"},
+                ],
+            }
+        ]
+        previous = {
+            "observations": [
+                {
+                    "date": "2026-09-27",
+                    "open_prs": 1,
+                    "repository_reach_stars": 120,
+                }
+            ]
+        }
+
+        timeline = subject.build_upstream_timeline(
+            repositories, "2026-09-28", 7, previous
+        )
+
+        self.assertEqual(
+            timeline["observations"],
+            [
+                {"date": "2026-09-27", "open_prs": 1, "repository_reach_stars": 120},
+                {"date": "2026-09-28", "open_prs": 7, "repository_reach_stars": 125},
+            ],
+        )
+        by_date = {point["date"]: point for point in timeline["points"]}
+        self.assertIsNone(by_date["2026-09-26"]["repository_reach_stars"])
+        self.assertEqual(by_date["2026-09-27"]["repository_reach_stars"], 120)
+        self.assertEqual(by_date["2026-09-28"]["repository_reach_stars"], 125)
+        self.assertEqual(by_date["2026-09-28"]["open_prs"], 7)
 
     def test_impact_summary_retains_primary_and_complete_breakdown(self):
         merged = [
