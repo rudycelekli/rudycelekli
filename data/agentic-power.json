@@ -1,13 +1,13 @@
 {
   "agentic_power_x": {
-    "base": 227.0,
-    "high": 360.3,
+    "base": 227.2,
+    "high": 360.5,
     "low": 147.0
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0355,
+      "base": 0.0354,
       "high": 0.0405,
       "low": 0.0304
     },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 836.8,
+  "engineer_weeks_at_40h": 837.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -99,13 +99,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 41.4,
-        "high": 67.4,
+        "high": 68.2,
         "low": 25.4
       },
       "modeled_human_direction_hours": {
         "base": 0.93,
         "high": 1.06,
-        "low": 0.8
+        "low": 0.79
       },
       "month": "2025-03",
       "public_merged_pull_requests": 0,
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 154.6,
+        "base": 154.8,
         "high": 252.6,
         "low": 94.8
       },
       "modeled_human_direction_hours": {
-        "base": 6.07,
+        "base": 6.06,
         "high": 6.93,
         "low": 5.2
       },
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 195.2,
+        "base": 195.3,
         "high": 318.8,
-        "low": 119.5
+        "low": 119.6
       },
       "modeled_human_direction_hours": {
-        "base": 10.63,
-        "high": 12.15,
+        "base": 10.62,
+        "high": 12.14,
         "low": 9.11
       },
       "month": "2026-08",
@@ -566,13 +566,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 257.3,
+        "base": 257.4,
         "high": 410.1,
-        "low": 165.2
+        "low": 165.3
       },
       "modeled_human_direction_hours": {
-        "base": 15.04,
-        "high": 17.19,
+        "base": 15.03,
+        "high": 17.18,
         "low": 12.89
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 250.1,
-        "high": 393.9,
-        "low": 164.1
+        "base": 250.2,
+        "high": 394.1,
+        "low": 164.2
       },
       "modeled_human_direction_hours": {
-        "base": 96.06,
-        "high": 109.78,
-        "low": 82.34
+        "base": 96.08,
+        "high": 109.8,
+        "low": 82.35
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2404,
+      "public_merged_pull_requests": 2406,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 24023.97,
-        "high": 32433.36,
-        "low": 18018.22
+        "base": 24040.98,
+        "high": 32456.33,
+        "low": 18030.98
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2709.3,
-        "high": 3865.3,
-        "low": 1872.02
+        "base": 2710.76,
+        "high": 3867.34,
+        "low": 1873.04
       }
     }
   ],
-  "public_accepted_pull_requests": 2646,
+  "public_accepted_pull_requests": 2648,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 33471.41,
-    "high": 45529.04,
-    "low": 24762.19
+    "base": 33488.42,
+    "high": 45552.01,
+    "low": 24774.95
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4157.95,
-    "high": 6167.49,
-    "low": 2825.58
+    "base": 4159.41,
+    "high": 6169.53,
+    "low": 2826.6
   },
   "updated_at_utc": "2026-10-20",
   "window": {
-    "end": "2026-10-20T11:18:10Z",
+    "end": "2026-10-20T11:53:45Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -77370,6 +77370,64 @@
       "pull_request": 1759,
       "title": "fix(caption): apply official COCO tokenization before scoring",
       "url": "https://github.com/open-compass/VLMEvalKit/pull/1759"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-10T20:12:15Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.66,
+        "high": 10.35,
+        "low": 5.75
+      },
+      "merged_at": "2026-10-20T11:35:41Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "open-compass/VLMEvalKit",
+      "pull_request": 1747,
+      "title": "fix(smp): create remote table cache before downloading",
+      "url": "https://github.com/open-compass/VLMEvalKit/pull/1747"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T20:09:25Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.35,
+        "high": 12.62,
+        "low": 7.01
+      },
+      "merged_at": "2026-10-20T11:53:45Z",
+      "modeled_human_direction_hours": {
+        "base": 0.85,
+        "high": 1.19,
+        "low": 0.59
+      },
+      "project": "open-compass/VLMEvalKit",
+      "pull_request": 1760,
+      "title": "fix(spatial): reject tagged answer labels embedded in words",
+      "url": "https://github.com/open-compass/VLMEvalKit/pull/1760"
     }
   ]
 }
