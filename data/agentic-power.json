@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 227.8,
-    "high": 361.6,
-    "low": 147.5
+    "base": 228.0,
+    "high": 361.8,
+    "low": 147.6
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0303
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.26,
+    "evidence_window_weeks": 84.27,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 839.9,
+  "engineer_weeks_at_40h": 840.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 147.46,
-    "high": 168.52,
-    "low": 126.39
+    "base": 147.47,
+    "high": 168.54,
+    "low": 126.41
   },
   "monthly": [
     {
@@ -436,14 +436,14 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 132.7,
-        "high": 216.8,
+        "base": 133.1,
+        "high": 217.4,
         "low": 81.5
       },
       "modeled_human_direction_hours": {
-        "base": 4.2,
+        "base": 4.19,
         "high": 4.79,
-        "low": 3.6
+        "low": 3.59
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 155.1,
+        "base": 155.3,
         "high": 253.6,
         "low": 95.0
       },
       "modeled_human_direction_hours": {
-        "base": 6.05,
+        "base": 6.04,
         "high": 6.91,
         "low": 5.18
       },
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 182.7,
         "high": 298.1,
-        "low": 111.7
+        "low": 112.0
       },
       "modeled_human_direction_hours": {
         "base": 4.43,
-        "high": 5.07,
+        "high": 5.06,
         "low": 3.8
       },
       "month": "2026-07",
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 195.9,
-        "high": 319.9,
-        "low": 119.9
+        "base": 196.1,
+        "high": 320.2,
+        "low": 120.0
       },
       "modeled_human_direction_hours": {
-        "base": 10.59,
-        "high": 12.11,
-        "low": 9.08
+        "base": 10.58,
+        "high": 12.1,
+        "low": 9.07
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 258.1,
-        "high": 411.4,
-        "low": 165.7
+        "base": 258.3,
+        "high": 411.7,
+        "low": 165.8
       },
       "modeled_human_direction_hours": {
-        "base": 14.99,
-        "high": 17.13,
-        "low": 12.85
+        "base": 14.98,
+        "high": 17.12,
+        "low": 12.84
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 250.9,
-        "high": 395.1,
-        "low": 164.6
+        "base": 251.0,
+        "high": 395.3,
+        "low": 164.7
       },
       "modeled_human_direction_hours": {
-        "base": 96.26,
-        "high": 110.01,
-        "low": 82.51
+        "base": 96.32,
+        "high": 110.08,
+        "low": 82.56
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2418,
+      "public_merged_pull_requests": 2421,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 24147.96,
-        "high": 32600.76,
-        "low": 18111.22
+        "base": 24175.2,
+        "high": 32637.53,
+        "low": 18131.64
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2723.57,
-        "high": 3886.5,
-        "low": 1881.58
+        "base": 2727.59,
+        "high": 3893.32,
+        "low": 1884.0
       }
     }
   ],
-  "public_accepted_pull_requests": 2660,
+  "public_accepted_pull_requests": 2663,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 33595.4,
-    "high": 45696.44,
-    "low": 24855.19
+    "base": 33622.64,
+    "high": 45733.21,
+    "low": 24875.61
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4172.22,
-    "high": 6188.69,
-    "low": 2835.14
+    "base": 4176.24,
+    "high": 6195.51,
+    "low": 2837.56
   },
   "updated_at_utc": "2026-10-20",
   "window": {
-    "end": "2026-10-20T14:30:37Z",
+    "end": "2026-10-20T16:24:34Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -77776,6 +77776,93 @@
       "pull_request": 162,
       "title": "Make position() agree with numeric predicates",
       "url": "https://github.com/antchfx/xpath/pull/162"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T22:33:03Z",
+      "evidence": {
+        "additions": 83,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.85,
+        "high": 13.3,
+        "low": 7.39
+      },
+      "merged_at": "2026-10-20T16:17:18Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "benbjohnson/litestream",
+      "pull_request": 1579,
+      "title": "fix(db): keep read lock alive after caller context is cancelled",
+      "url": "https://github.com/benbjohnson/litestream/pull/1579"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-20T03:05:59Z",
+      "evidence": {
+        "additions": 59,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.69,
+        "high": 11.73,
+        "low": 6.51
+      },
+      "merged_at": "2026-10-20T16:24:33Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1475,
+      "title": "fix: preserve dotted Windows executable names in PATHEXT lookup",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1475"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-20T02:37:02Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.7,
+        "high": 11.74,
+        "low": 6.52
+      },
+      "merged_at": "2026-10-20T16:24:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1474,
+      "title": "fix: omit compaction footer from CRLF SessionStart excerpts",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1474"
     }
   ]
 }
