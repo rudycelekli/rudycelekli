@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 227.6,
-    "high": 361.2,
-    "low": 147.3
+    "base": 227.8,
+    "high": 361.5,
+    "low": 147.5
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 839.0,
+  "engineer_weeks_at_40h": 839.7,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -204,11 +204,11 @@
       "agentic_power_x": {
         "base": 20.8,
         "high": 33.3,
-        "low": 12.5
+        "low": 13.0
       },
       "modeled_human_direction_hours": {
         "base": 0.24,
-        "high": 0.28,
+        "high": 0.27,
         "low": 0.21
       },
       "month": "2025-07",
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 165.1,
         "high": 270.0,
-        "low": 101.1
+        "low": 101.3
       },
       "modeled_human_direction_hours": {
         "base": 3.06,
-        "high": 3.5,
+        "high": 3.49,
         "low": 2.62
       },
       "month": "2026-05",
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 155.1,
         "high": 253.1,
-        "low": 94.9
+        "low": 95.0
       },
       "modeled_human_direction_hours": {
         "base": 6.05,
-        "high": 6.92,
+        "high": 6.91,
         "low": 5.19
       },
       "month": "2026-06",
@@ -515,13 +515,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 182.3,
-        "high": 297.4,
+        "high": 298.1,
         "low": 111.7
       },
       "modeled_human_direction_hours": {
         "base": 4.44,
         "high": 5.07,
-        "low": 3.81
+        "low": 3.8
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 195.5,
+        "base": 195.7,
         "high": 319.5,
-        "low": 119.8
+        "low": 119.9
       },
       "modeled_human_direction_hours": {
-        "base": 10.61,
-        "high": 12.12,
+        "base": 10.6,
+        "high": 12.11,
         "low": 9.09
       },
       "month": "2026-08",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 257.8,
-        "high": 410.7,
-        "low": 165.5
+        "base": 257.9,
+        "high": 411.1,
+        "low": 165.6
       },
       "modeled_human_direction_hours": {
-        "base": 15.01,
-        "high": 17.15,
-        "low": 12.87
+        "base": 15.0,
+        "high": 17.14,
+        "low": 12.86
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 250.7,
-        "high": 394.9,
-        "low": 164.5
+        "base": 250.9,
+        "high": 395.2,
+        "low": 164.6
       },
       "modeled_human_direction_hours": {
-        "base": 96.17,
-        "high": 109.91,
-        "low": 82.43
+        "base": 96.21,
+        "high": 109.96,
+        "low": 82.47
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2414,
+      "public_merged_pull_requests": 2417,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 24112.04,
-        "high": 32552.27,
-        "low": 18084.28
+        "base": 24138.78,
+        "high": 32588.37,
+        "low": 18104.34
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2717.71,
-        "high": 3877.1,
-        "low": 1877.89
+        "base": 2720.82,
+        "high": 3881.45,
+        "low": 1880.06
       }
     }
   ],
-  "public_accepted_pull_requests": 2656,
+  "public_accepted_pull_requests": 2659,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 33559.48,
-    "high": 45647.95,
-    "low": 24828.25
+    "base": 33586.22,
+    "high": 45684.05,
+    "low": 24848.31
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4166.36,
-    "high": 6179.29,
-    "low": 2831.45
+    "base": 4169.47,
+    "high": 6183.64,
+    "low": 2833.62
   },
   "updated_at_utc": "2026-10-20",
   "window": {
-    "end": "2026-10-20T13:02:03Z",
+    "end": "2026-10-20T13:06:36Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -77660,6 +77660,93 @@
       "pull_request": 1915,
       "title": "fix(validation): annualise standalone revalidation with the run's bars per year",
       "url": "https://github.com/HKUDS/Vibe-Trading/pull/1915"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-18T16:11:25Z",
+      "evidence": {
+        "additions": 86,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.72,
+        "high": 13.12,
+        "low": 7.29
+      },
+      "merged_at": "2026-10-20T13:06:20Z",
+      "modeled_human_direction_hours": {
+        "base": 1.05,
+        "high": 1.47,
+        "low": 0.73
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1918,
+      "title": "fix(alpha-bench): skip insufficient IC samples instead of emitting NaN",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1918"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:04:45Z",
+      "evidence": {
+        "additions": 37,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.47,
+        "high": 11.44,
+        "low": 6.36
+      },
+      "merged_at": "2026-10-20T13:06:27Z",
+      "modeled_human_direction_hours": {
+        "base": 1.03,
+        "high": 1.44,
+        "low": 0.72
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1911,
+      "title": "fix(journal): reject an unknown analysis_type instead of returning an empty ok result",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1911"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:01:19Z",
+      "evidence": {
+        "additions": 37,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.55,
+        "high": 11.54,
+        "low": 6.41
+      },
+      "merged_at": "2026-10-20T13:06:36Z",
+      "modeled_human_direction_hours": {
+        "base": 1.03,
+        "high": 1.44,
+        "low": 0.72
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1910,
+      "title": "fix(alpha-bench): reject top=0 instead of silently using 20",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1910"
     }
   ]
 }
