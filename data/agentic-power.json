@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 228.5,
-    "high": 362.5,
+    "high": 362.6,
     "low": 147.9
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0302
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.35,
+    "evidence_window_weeks": 84.36,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 843.1,
+  "engineer_weeks_at_40h": 843.3,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 147.61,
-    "high": 168.7,
-    "low": 126.52
+    "base": 147.63,
+    "high": 168.72,
+    "low": 126.54
   },
   "monthly": [
     {
@@ -385,13 +385,13 @@
       "active_repositories": 5,
       "agentic_power_x": {
         "base": 114.7,
-        "high": 186.1,
+        "high": 188.4,
         "low": 70.0
       },
       "modeled_human_direction_hours": {
         "base": 0.95,
         "high": 1.09,
-        "low": 0.82
+        "low": 0.81
       },
       "month": "2026-02",
       "public_merged_pull_requests": 0,
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 196.4,
-        "high": 320.6,
+        "high": 320.9,
         "low": 120.3
       },
       "modeled_human_direction_hours": {
         "base": 10.56,
         "high": 12.07,
-        "low": 9.06
+        "low": 9.05
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 251.4,
-        "high": 396.0,
+        "base": 251.5,
+        "high": 396.1,
         "low": 165.0
       },
       "modeled_human_direction_hours": {
-        "base": 96.56,
-        "high": 110.35,
-        "low": 82.76
+        "base": 96.58,
+        "high": 110.38,
+        "low": 82.78
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2431,
+      "public_merged_pull_requests": 2432,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 24275.5,
-        "high": 32772.95,
-        "low": 18206.87
+        "base": 24286.02,
+        "high": 32787.16,
+        "low": 18214.76
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2739.68,
-        "high": 3910.27,
-        "low": 1892.44
+        "base": 2740.84,
+        "high": 3911.89,
+        "low": 1893.25
       }
     }
   ],
-  "public_accepted_pull_requests": 2673,
+  "public_accepted_pull_requests": 2674,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 33722.94,
-    "high": 45868.63,
-    "low": 24950.84
+    "base": 33733.46,
+    "high": 45882.84,
+    "low": 24958.73
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4188.33,
-    "high": 6212.46,
-    "low": 2846.0
+    "base": 4189.49,
+    "high": 6214.08,
+    "low": 2846.81
   },
   "updated_at_utc": "2026-10-21",
   "window": {
-    "end": "2026-10-21T06:44:20Z",
+    "end": "2026-10-21T07:14:24Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -78153,6 +78153,35 @@
       "pull_request": 1948,
       "title": "fix(attribution): honor the recorded run annualisation",
       "url": "https://github.com/HKUDS/Vibe-Trading/pull/1948"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-21T06:15:11Z",
+      "evidence": {
+        "additions": 72,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.52,
+        "high": 14.21,
+        "low": 7.89
+      },
+      "merged_at": "2026-10-21T07:14:24Z",
+      "modeled_human_direction_hours": {
+        "base": 1.16,
+        "high": 1.62,
+        "low": 0.81
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4473,
+      "title": "fix(hooks): honor trailing commas in agent model JSONC",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4473"
     }
   ]
 }
