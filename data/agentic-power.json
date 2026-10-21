@@ -1,18 +1,18 @@
 {
   "agentic_power_x": {
-    "base": 231.0,
-    "high": 366.5,
-    "low": 149.5
+    "base": 231.1,
+    "high": 366.7,
+    "low": 149.6
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0349,
+      "base": 0.0348,
       "high": 0.0398,
       "low": 0.0299
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.41,
+    "evidence_window_weeks": 84.42,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 852.9,
+  "engineer_weeks_at_40h": 853.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 147.72,
-    "high": 168.82,
-    "low": 126.61
+    "base": 147.74,
+    "high": 168.84,
+    "low": 126.63
   },
   "monthly": [
     {
@@ -176,12 +176,12 @@
     {
       "active_repositories": 5,
       "agentic_power_x": {
-        "base": 35.2,
+        "base": 36.0,
         "high": 58.6,
         "low": 21.7
       },
       "modeled_human_direction_hours": {
-        "base": 0.44,
+        "base": 0.43,
         "high": 0.5,
         "low": 0.37
       },
@@ -334,11 +334,11 @@
       "agentic_power_x": {
         "base": 131.6,
         "high": 214.2,
-        "low": 80.3
+        "low": 80.8
       },
       "modeled_human_direction_hours": {
         "base": 1.36,
-        "high": 1.56,
+        "high": 1.55,
         "low": 1.17
       },
       "month": "2025-12",
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 157.4,
         "high": 257.1,
-        "low": 96.3
+        "low": 96.4
       },
       "modeled_human_direction_hours": {
         "base": 5.96,
-        "high": 6.82,
+        "high": 6.81,
         "low": 5.11
       },
       "month": "2026-06",
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 198.5,
-        "high": 324.1,
+        "base": 198.7,
+        "high": 324.5,
         "low": 121.6
       },
       "modeled_human_direction_hours": {
-        "base": 10.45,
+        "base": 10.44,
         "high": 11.94,
-        "low": 8.96
+        "low": 8.95
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,13 +566,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 261.6,
+        "base": 261.8,
         "high": 417.2,
-        "low": 168.0
+        "low": 168.1
       },
       "modeled_human_direction_hours": {
-        "base": 14.79,
-        "high": 16.9,
+        "base": 14.78,
+        "high": 16.89,
         "low": 12.67
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 253.7,
-        "high": 399.7,
-        "low": 166.5
+        "base": 253.9,
+        "high": 399.9,
+        "low": 166.6
       },
       "modeled_human_direction_hours": {
-        "base": 97.22,
-        "high": 111.1,
-        "low": 83.33
+        "base": 97.26,
+        "high": 111.15,
+        "low": 83.36
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2478,
+      "public_merged_pull_requests": 2481,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 24668.77,
-        "high": 33303.86,
-        "low": 18501.78
+        "base": 24695.09,
+        "high": 33339.4,
+        "low": 18521.52
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2788.73,
-        "high": 3981.32,
-        "low": 1925.94
+        "base": 2791.17,
+        "high": 3984.74,
+        "low": 1927.64
       }
     }
   ],
-  "public_accepted_pull_requests": 2720,
+  "public_accepted_pull_requests": 2723,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 34116.21,
-    "high": 46399.54,
-    "low": 25245.75
+    "base": 34142.53,
+    "high": 46435.08,
+    "low": 25265.49
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4237.38,
-    "high": 6283.51,
-    "low": 2879.5
+    "base": 4239.82,
+    "high": 6286.93,
+    "low": 2881.2
   },
   "updated_at_utc": "2026-10-21",
   "window": {
-    "end": "2026-10-21T16:51:25Z",
+    "end": "2026-10-21T17:24:53Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -62257,10 +62257,10 @@
         "high": 1.12,
         "low": 0.56
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 560,
       "title": "fix(rank): expire preserved past deadlines before shortlisting",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/560"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/560"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -69652,10 +69652,10 @@
         "high": 1.12,
         "low": 0.56
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 574,
       "title": "fix(upstream-triage): suggest dependent cherry-picks in ancestry order",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/574"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/574"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70145,10 +70145,10 @@
         "high": 1.9,
         "low": 0.95
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 589,
       "title": "docs(portal-clis): correct Danish CLI installation paths",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/589"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/589"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70174,10 +70174,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 577,
       "title": "fix(jobbank-search): retain all documented repeated filter values",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/577"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/577"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70203,10 +70203,10 @@
         "high": 1.9,
         "low": 0.95
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 567,
       "title": "fix(linkedin-search): preserve description paragraph and list breaks",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/567"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/567"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70232,10 +70232,10 @@
         "high": 2.0,
         "low": 1.0
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 581,
       "title": "test(portal-clis): isolate valid flag controls from live services",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/581"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/581"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70261,10 +70261,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 568,
       "title": "fix(freehire-search): require values for named search options",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/568"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/568"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70290,10 +70290,10 @@
         "high": 2.3,
         "low": 1.15
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 573,
       "title": "fix(portal-clis): reject missing Danish option values before dispatch",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/573"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/573"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70319,10 +70319,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 575,
       "title": "fix(salary): validate metadata before rendering lookups",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/575"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/575"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70348,10 +70348,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 576,
       "title": "fix(salary): skip whitespace-only workbook company rows",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/576"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/576"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70377,10 +70377,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 584,
       "title": "fix(salary): distinguish absent indexes from suppression",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/584"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/584"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70406,10 +70406,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 590,
       "title": "fix(salary): skip chart-only workbook tabs",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/590"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/590"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70435,10 +70435,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 571,
       "title": "fix(salary): prefer exact workbook identity headers",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/571"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/571"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70464,10 +70464,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 592,
       "title": "fix(salary): parse Unicode whitespace grouping",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/592"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/592"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70493,10 +70493,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 572,
       "title": "fix(salary): reject non-finite workbook numbers",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/572"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/572"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70522,10 +70522,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 583,
       "title": "fix(upstream): flag incomplete framework comparisons",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/583"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/583"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70551,10 +70551,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 585,
       "title": "fix(upstream): distinguish new paths from fork deletions",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/585"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/585"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70580,10 +70580,10 @@
         "high": 1.97,
         "low": 0.99
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 591,
       "title": "fix(upstream): preserve selected refs in companion commands",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/591"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/591"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70609,10 +70609,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 570,
       "title": "fix(salary): preserve Unicode company identity in lookups",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/570"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/570"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70638,10 +70638,10 @@
         "high": 1.81,
         "low": 0.9
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 579,
       "title": "docs(jobindex-search): align search examples with the actual CLI contract",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/579"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/579"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70667,10 +70667,10 @@
         "high": 1.97,
         "low": 0.99
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 580,
       "title": "fix(reset): clear document entries while preserving scaffolds",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/580"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/580"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70725,10 +70725,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 578,
       "title": "fix(framework-version): distinguish marker changes from YAML formatting",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/578"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/578"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70754,10 +70754,10 @@
         "high": 1.88,
         "low": 0.94
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 586,
       "title": "fix(jobnet-search): preserve full occupation identifiers in tables",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/586"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/586"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -71131,10 +71131,10 @@
         "high": 1.12,
         "low": 0.56
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 626,
       "title": "fix(job-key): report a non-object state file in --audit instead of a traceback",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/626"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/626"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -75626,10 +75626,10 @@
         "high": 1.54,
         "low": 0.77
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 648,
       "title": "fix(freehire-search): reject --description-format on detail instead of ignoring it",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/648"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/648"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -75655,10 +75655,10 @@
         "high": 1.54,
         "low": 0.77
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 634,
       "title": "fix(job-key): report a non-string url in --audit instead of a traceback",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/634"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/634"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -75684,10 +75684,10 @@
         "high": 1.54,
         "low": 0.77
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 635,
       "title": "fix(rank): report malformed scoring results in apply instead of a traceback",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/635"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/635"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -75713,10 +75713,10 @@
         "high": 1.79,
         "low": 0.9
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 639,
       "title": "fix(rank): report a tracker that is not UTF-8 instead of a traceback",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/639"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/639"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76061,10 +76061,10 @@
         "high": 1.79,
         "low": 0.9
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 641,
       "title": "fix(rank): keep every --exclude key out of the sweep when the list has spaces",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/641"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/641"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76090,10 +76090,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 643,
       "title": "fix(salary): collapse line breaks in wrapped workbook headers",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/643"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/643"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76119,10 +76119,10 @@
         "high": 1.71,
         "low": 0.85
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 644,
       "title": "fix(salary): skip prose notes tabs instead of listing sentences as companies",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/644"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/644"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76148,10 +76148,10 @@
         "high": 1.79,
         "low": 0.9
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 645,
       "title": "fix(linkedin-search): reject an unknown --remote mode instead of searching every workplace type",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/645"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/645"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76177,10 +76177,10 @@
         "high": 1.54,
         "low": 0.77
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 646,
       "title": "fix(linkedin-search): require a value for --query instead of dropping the keywords",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/646"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/646"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76206,10 +76206,10 @@
         "high": 1.54,
         "low": 0.77
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 647,
       "title": "fix(jobindex-search): reject a --sort other than score or date instead of sending it to the portal",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/647"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/647"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76235,10 +76235,10 @@
         "high": 1.74,
         "low": 0.87
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 649,
       "title": "fix(jobnet-search): filter search by the ESCO occupation that occupations prints",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/649"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/649"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76264,10 +76264,10 @@
         "high": 1.74,
         "low": 0.87
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 650,
       "title": "fix(jobdanmark-search): filter search by the administrative regions locations returns",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/650"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/650"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -76293,10 +76293,10 @@
         "high": 1.54,
         "low": 0.77
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 656,
       "title": "fix(upstream-triage): skip new upstream files inside a directory the fork removed",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/656"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/656"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -77888,10 +77888,10 @@
         "high": 2.72,
         "low": 1.36
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 569,
       "title": "fix(upstream-triage): distinguish subject hints from patch matches",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/569"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/569"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -77917,10 +77917,10 @@
         "high": 2.55,
         "low": 1.27
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 587,
       "title": "fix(upstream): use UTF-8 for framework version checks",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/587"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/587"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -77946,10 +77946,10 @@
         "high": 2.55,
         "low": 1.27
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 588,
       "title": "fix(rank): round weighted scores without binary drift",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/588"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/588"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -77975,10 +77975,10 @@
         "high": 2.3,
         "low": 1.15
       },
-      "project": "MadsLorentzen/ai-job-search",
+      "project": "ai-job-search-dev/ai-job-search",
       "pull_request": 640,
       "title": "fix(rank): reject an unknown veto verdict instead of shortlisting the job",
-      "url": "https://github.com/MadsLorentzen/ai-job-search/pull/640"
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/640"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -79516,6 +79516,93 @@
       "pull_request": 1118,
       "title": "fix(cli): check bundle references have the expected file kind",
       "url": "https://github.com/mvschwarz/openrig/pull/1118"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-21T06:18:12Z",
+      "evidence": {
+        "additions": 56,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 20,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.47,
+        "high": 11.44,
+        "low": 6.35
+      },
+      "merged_at": "2026-10-21T17:23:50Z",
+      "modeled_human_direction_hours": {
+        "base": 0.86,
+        "high": 1.2,
+        "low": 0.6
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1950,
+      "title": "fix(quantlib): keep decimal tail probabilities at their documented rank",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1950"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-21T05:19:51Z",
+      "evidence": {
+        "additions": 76,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.2,
+        "high": 12.42,
+        "low": 6.9
+      },
+      "merged_at": "2026-10-21T17:24:28Z",
+      "modeled_human_direction_hours": {
+        "base": 0.79,
+        "high": 1.11,
+        "low": 0.55
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1949,
+      "title": "fix(valuation): preserve literal text in workbook exports",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1949"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-21T06:23:54Z",
+      "evidence": {
+        "additions": 92,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.65,
+        "high": 11.68,
+        "low": 6.49
+      },
+      "merged_at": "2026-10-21T17:24:53Z",
+      "modeled_human_direction_hours": {
+        "base": 0.79,
+        "high": 1.11,
+        "low": 0.55
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1951,
+      "title": "fix(report-audit): exclude fenced examples from financial claims",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1951"
     }
   ]
 }
