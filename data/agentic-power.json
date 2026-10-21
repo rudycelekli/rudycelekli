@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
     "base": 229.0,
-    "high": 363.3,
-    "low": 148.2
+    "high": 363.4,
+    "low": 148.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0301
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.36,
+    "evidence_window_weeks": 84.37,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 845.1,
+  "engineer_weeks_at_40h": 845.4,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 147.63,
-    "high": 168.72,
-    "low": 126.54
+    "base": 147.65,
+    "high": 168.74,
+    "low": 126.56
   },
   "monthly": [
     {
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 166.2,
-        "high": 271.0,
+        "high": 272.1,
         "low": 101.9
       },
       "modeled_human_direction_hours": {
         "base": 3.04,
         "high": 3.47,
-        "low": 2.61
+        "low": 2.6
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 155.9,
         "high": 254.6,
-        "low": 95.5
+        "low": 95.6
       },
       "modeled_human_direction_hours": {
         "base": 6.02,
-        "high": 6.88,
+        "high": 6.87,
         "low": 5.16
       },
       "month": "2026-06",
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 196.8,
         "high": 321.6,
-        "low": 120.5
+        "low": 120.6
       },
       "modeled_human_direction_hours": {
         "base": 10.54,
-        "high": 12.05,
+        "high": 12.04,
         "low": 9.03
       },
       "month": "2026-08",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 251.9,
-        "high": 396.7,
-        "low": 165.3
+        "base": 252.0,
+        "high": 396.9,
+        "low": 165.4
       },
       "modeled_human_direction_hours": {
-        "base": 96.69,
-        "high": 110.51,
-        "low": 82.88
+        "base": 96.72,
+        "high": 110.53,
+        "low": 82.9
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2439,
+      "public_merged_pull_requests": 2440,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 24355.73,
-        "high": 32881.26,
-        "low": 18267.03
+        "base": 24369.43,
+        "high": 32899.76,
+        "low": 18277.31
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2750.08,
-        "high": 3924.82,
-        "low": 1899.7
+        "base": 2751.05,
+        "high": 3926.18,
+        "low": 1900.38
       }
     }
   ],
-  "public_accepted_pull_requests": 2681,
+  "public_accepted_pull_requests": 2682,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 33803.17,
-    "high": 45976.94,
-    "low": 25011.0
+    "base": 33816.87,
+    "high": 45995.44,
+    "low": 25021.28
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4198.73,
-    "high": 6227.01,
-    "low": 2853.26
+    "base": 4199.7,
+    "high": 6228.37,
+    "low": 2853.94
   },
   "updated_at_utc": "2026-10-21",
   "window": {
-    "end": "2026-10-21T08:12:18Z",
+    "end": "2026-10-21T09:22:08Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -78385,6 +78385,35 @@
       "pull_request": 1103,
       "title": "fix(server): process the final stdio message when it has no trailing newline",
       "url": "https://github.com/mark3labs/mcp-go/pull/1103"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-21T06:09:18Z",
+      "evidence": {
+        "additions": 266,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 12,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.7,
+        "high": 18.5,
+        "low": 10.28
+      },
+      "merged_at": "2026-10-21T09:22:08Z",
+      "modeled_human_direction_hours": {
+        "base": 0.97,
+        "high": 1.36,
+        "low": 0.68
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3811,
+      "title": "fix(bash): preserve short multiline Python commands on Windows",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3811"
     }
   ]
 }
