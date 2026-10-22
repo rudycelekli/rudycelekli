@@ -1,14 +1,14 @@
 {
   "agentic_power_x": {
-    "base": 238.9,
-    "high": 378.9,
-    "low": 154.7
+    "base": 239.8,
+    "high": 380.4,
+    "low": 155.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0338,
-      "high": 0.0387,
+      "high": 0.0386,
       "low": 0.029
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 883.4,
+  "engineer_weeks_at_40h": 886.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -98,12 +98,12 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 43.3,
+        "base": 43.8,
         "high": 70.9,
         "low": 26.7
       },
       "modeled_human_direction_hours": {
-        "base": 0.89,
+        "base": 0.88,
         "high": 1.01,
         "low": 0.76
       },
@@ -359,13 +359,13 @@
       "active_repositories": 4,
       "agentic_power_x": {
         "base": 111.7,
-        "high": 180.4,
+        "high": 183.9,
         "low": 68.0
       },
       "modeled_human_direction_hours": {
         "base": 0.6,
         "high": 0.69,
-        "low": 0.52
+        "low": 0.51
       },
       "month": "2026-01",
       "public_merged_pull_requests": 0,
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 138.7,
+        "base": 139.0,
         "high": 226.9,
         "low": 85.0
       },
       "modeled_human_direction_hours": {
-        "base": 4.02,
+        "base": 4.01,
         "high": 4.59,
         "low": 3.44
       },
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 173.0,
-        "high": 281.8,
+        "high": 282.9,
         "low": 105.9
       },
       "modeled_human_direction_hours": {
         "base": 2.92,
         "high": 3.34,
-        "low": 2.51
+        "low": 2.5
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -488,13 +488,13 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 162.0,
+        "base": 162.3,
         "high": 264.8,
-        "low": 99.2
+        "low": 99.4
       },
       "modeled_human_direction_hours": {
-        "base": 5.79,
-        "high": 6.62,
+        "base": 5.78,
+        "high": 6.61,
         "low": 4.96
       },
       "month": "2026-06",
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 204.6,
+        "base": 204.8,
         "high": 334.2,
-        "low": 125.3
+        "low": 125.4
       },
       "modeled_human_direction_hours": {
-        "base": 10.14,
-        "high": 11.59,
+        "base": 10.13,
+        "high": 11.58,
         "low": 8.69
       },
       "month": "2026-08",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 269.6,
-        "high": 429.8,
-        "low": 173.1
+        "base": 269.8,
+        "high": 430.1,
+        "low": 173.2
       },
       "modeled_human_direction_hours": {
-        "base": 14.35,
-        "high": 16.4,
-        "low": 12.3
+        "base": 14.34,
+        "high": 16.39,
+        "low": 12.29
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 261.7,
-        "high": 412.2,
-        "low": 171.8
+        "base": 263.0,
+        "high": 414.2,
+        "low": 172.6
       },
       "modeled_human_direction_hours": {
-        "base": 98.92,
-        "high": 113.05,
-        "low": 84.79
+        "base": 98.95,
+        "high": 113.09,
+        "low": 84.82
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2595,
+      "public_merged_pull_requests": 2596,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 25889.8,
-        "high": 34952.2,
-        "low": 19417.52
+        "base": 26023.75,
+        "high": 35133.04,
+        "low": 19517.98
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2923.92,
-        "high": 4170.45,
-        "low": 2020.61
+        "base": 2927.11,
+        "high": 4174.92,
+        "low": 2022.84
       }
     }
   ],
-  "public_accepted_pull_requests": 2837,
+  "public_accepted_pull_requests": 2838,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 35337.24,
-    "high": 48047.88,
-    "low": 26161.49
+    "base": 35471.19,
+    "high": 48228.72,
+    "low": 26261.95
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4372.57,
-    "high": 6472.64,
-    "low": 2974.17
+    "base": 4375.76,
+    "high": 6477.11,
+    "low": 2976.4
   },
   "updated_at_utc": "2026-10-22",
   "window": {
-    "end": "2026-10-22T11:56:52Z",
+    "end": "2026-10-22T12:20:25Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -82909,6 +82909,35 @@
       "pull_request": 1190,
       "title": "fix(code-intelligence): identify cached code analyses by content",
       "url": "https://github.com/proffesor-for-testing/agentic-qe/pull/1190"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T21:55:56Z",
+      "evidence": {
+        "additions": 15612,
+        "changed_files": 353,
+        "comments": 1,
+        "commits": 123,
+        "deletions": 3037,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 133.95,
+        "high": 180.84,
+        "low": 100.46
+      },
+      "merged_at": "2026-10-22T12:20:25Z",
+      "modeled_human_direction_hours": {
+        "base": 3.19,
+        "high": 4.47,
+        "low": 2.23
+      },
+      "project": "proffesor-for-testing/agentic-qe",
+      "pull_request": 1131,
+      "title": "fix(mcp,cli): reject invalid priorities in task_orchestrate and aqe task list (#1117)",
+      "url": "https://github.com/proffesor-for-testing/agentic-qe/pull/1131"
     }
   ]
 }
