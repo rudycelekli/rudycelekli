@@ -25,6 +25,8 @@ jobs:
         run: python -m unittest discover -s scripts -p 'test_*.py'
 
       - name: Refresh GitHub contribution evidence
+        id: refresh
+        continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PRIVATE_GITHUB_TOKEN: ${{ secrets.AP_REPOSITORY_TOKEN }}
@@ -33,7 +35,21 @@ jobs:
           REQUIRE_PROFILE_UPSTREAM_EXCLUSIONS: "true"
         run: python scripts/update_contributions.py
 
+      # A refresh that stops partway leaves some artifacts rewritten and others
+      # stale, which must never be published as one coherent evidence set. The
+      # partial run is discarded so the last fully verified evidence stays live
+      # and the profile stays complete, and the freshness gate fails the job if
+      # that retained evidence has aged past its bound.
+      - name: Retain the last verified evidence
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          echo "::warning::Refresh did not complete. Discarding the partial run and retaining the last verified evidence."
+          git checkout -- .
+          git clean -fd
+          python scripts/update_contributions.py --check-published-freshness
+
       - name: Commit verified changes
+        if: steps.refresh.outcome == 'success'
         run: |
           if git diff --quiet; then
             echo "Contribution evidence is already current."

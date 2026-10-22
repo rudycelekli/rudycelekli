@@ -44,6 +44,15 @@ OWNED_PROJECT_EXCLUSIONS = {
     f"{LOGIN}/DreamMachine".casefold(),
 }
 PERIOD_START = dt.datetime(2025, 1, 1, tzinfo=dt.timezone.utc)
+# GitHub search stops serving results past this cap regardless of the count it
+# reports, so a window that reaches it must be split to stay exhaustive.
+SEARCH_RESULT_CAP = 1_000
+# GitHub reports issueCount from an eventually consistent index that can lag or
+# briefly return a degraded value under sustained search load.
+SEARCH_RECOUNT_ATTEMPTS = 3
+# How long the already-published evidence may stand in for a refresh that could
+# not complete before the staleness is treated as a failure rather than a gap.
+MAX_PUBLISHED_EVIDENCE_AGE_DAYS = 2
 CURRENT_OPEN_PULL_REQUESTS_URL = (
     "https://github.com/search?q=author%3Arudycelekli+is%3Apr+is%3Aopen+"
     "created%3A%3E%3D2025-01-01&type=pullrequests"
@@ -840,6 +849,7 @@ def search_pull_requests(
     end: dt.date,
     *,
     merged_only: bool,
+    recount_attempt: int = 0,
 ) -> list[dict[str, object]]:
     """Exhaust GitHub PR search, splitting date windows above its result cap."""
     status = " is:merged" if merged_only else ""
@@ -848,38 +858,70 @@ def search_pull_requests(
         f"is:pr author:{LOGIN}{status} "
         f"{date_field}:{start.isoformat()}..{end.isoformat()}"
     )
+    def split_window() -> list[dict[str, object]]:
+        midpoint = start + (end - start) // 2
+        return search_pull_requests(
+            token, start, midpoint, merged_only=merged_only
+        ) + search_pull_requests(
+            token,
+            midpoint + dt.timedelta(days=1),
+            end,
+            merged_only=merged_only,
+        )
+
     cursor = None
     pull_requests: list[dict[str, object]] = []
-    expected_total = 0
+    reported_total: int | None = None
 
     while True:
         result = graphql(token, {"query": query, "cursor": cursor})
-        expected_total = int(result["issueCount"])
-        if expected_total > 1_000:
-            if start == end:
-                raise RuntimeError(
-                    f"More than 1,000 matching PRs occurred on {start}; "
-                    "GitHub search cannot exhaust this day"
-                )
-            midpoint = start + (end - start) // 2
-            return search_pull_requests(
-                token, start, midpoint, merged_only=merged_only
-            ) + search_pull_requests(
-                token,
-                midpoint + dt.timedelta(days=1),
-                end,
-                merged_only=merged_only,
-            )
+        if reported_total is None:
+            # Only the first page sizes the window. GitHub serves issueCount
+            # from an eventually consistent index, so a later page disagreeing
+            # is index drift and must not invalidate receipts already served.
+            reported_total = int(result["issueCount"])
+            if reported_total > SEARCH_RESULT_CAP:
+                if start == end:
+                    raise RuntimeError(
+                        f"More than {SEARCH_RESULT_CAP:,} matching PRs occurred "
+                        f"on {start}; GitHub search cannot exhaust this day"
+                    )
+                return split_window()
         pull_requests.extend(node for node in result["nodes"] if node)
         page = result["pageInfo"]
         if not page["hasNextPage"]:
             break
         cursor = page["endCursor"]
 
-    if len(pull_requests) != expected_total:
+    # Reaching the cap means the window may have been truncated even though the
+    # reported count claimed it would fit. Split instead of publishing fewer
+    # receipts than exist.
+    if len(pull_requests) >= SEARCH_RESULT_CAP and start != end:
+        return split_window()
+
+    if len(pull_requests) < reported_total:
+        # Genuinely short of the reported total: the index may still be
+        # settling, so recount the window before giving up on it.
+        if recount_attempt < SEARCH_RECOUNT_ATTEMPTS:
+            time.sleep(min(2**recount_attempt, 8))
+            return search_pull_requests(
+                token,
+                start,
+                end,
+                merged_only=merged_only,
+                recount_attempt=recount_attempt + 1,
+            )
         raise RuntimeError(
-            f"Expected {expected_total} matching PRs for {LOGIN}, "
-            f"received {len(pull_requests)}"
+            f"Expected {reported_total} matching PRs for {LOGIN} between "
+            f"{start} and {end}, received {len(pull_requests)} after "
+            f"{SEARCH_RECOUNT_ATTEMPTS} recounts"
+        )
+    if len(pull_requests) > reported_total:
+        print(
+            f"warning: GitHub reported {reported_total} matching PRs for "
+            f"{LOGIN} between {start} and {end} but served "
+            f"{len(pull_requests)}; keeping every served receipt",
+            file=sys.stderr,
         )
     return pull_requests
 
@@ -3597,5 +3639,46 @@ def main() -> int:
     return 0
 
 
+def published_evidence_age_days() -> int | None:
+    """Return how many days old the committed contribution evidence is."""
+    if not DATA_FILE.exists():
+        return None
+    try:
+        payload = json.loads(DATA_FILE.read_text())
+        published = dt.date.fromisoformat(str(payload["updated_at_utc"]))
+    except (OSError, ValueError, TypeError, KeyError):
+        return None
+    return (dt.datetime.now(dt.timezone.utc).date() - published).days
+
+
+def check_published_freshness() -> int:
+    """Accept retaining published evidence only while it is still current.
+
+    A refresh writes every artifact or none, and the workflow commits nothing
+    when it fails, so the previously verified evidence stays live and the
+    profile stays complete. That substitution is bounded: once the committed
+    evidence ages past MAX_PUBLISHED_EVIDENCE_AGE_DAYS it is reported as a
+    failure instead of being presented as current.
+    """
+    age = published_evidence_age_days()
+    if age is None:
+        print(
+            "No published contribution evidence is available to retain",
+            file=sys.stderr,
+        )
+        return 1
+    if age > MAX_PUBLISHED_EVIDENCE_AGE_DAYS:
+        print(
+            f"Published contribution evidence is {age} days old, beyond the "
+            f"{MAX_PUBLISHED_EVIDENCE_AGE_DAYS}-day retention bound",
+            file=sys.stderr,
+        )
+        return 1
+    print(f"Retaining published contribution evidence from {age} day(s) ago.")
+    return 0
+
+
 if __name__ == "__main__":
+    if "--check-published-freshness" in sys.argv[1:]:
+        raise SystemExit(check_published_freshness())
     raise SystemExit(main())
