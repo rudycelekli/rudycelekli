@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 236.9,
-    "high": 375.8,
+    "base": 237.0,
+    "high": 376.0,
     "low": 153.5
   },
   "basis": "operator-calibrated provisional estimate",
@@ -9,7 +9,7 @@
     "allocation_factor_vs_base_proxy": {
       "base": 0.034,
       "high": 0.0389,
-      "low": 0.0292
+      "low": 0.0291
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
     "evidence_window_weeks": 84.51,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 876.0,
+  "engineer_weeks_at_40h": 876.3,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -178,11 +178,11 @@
       "agentic_power_x": {
         "base": 36.9,
         "high": 60.3,
-        "low": 22.1
+        "low": 22.6
       },
       "modeled_human_direction_hours": {
         "base": 0.42,
-        "high": 0.49,
+        "high": 0.48,
         "low": 0.36
       },
       "month": "2025-06",
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 268.3,
         "high": 427.7,
-        "low": 172.2
+        "low": 172.3
       },
       "modeled_human_direction_hours": {
         "base": 14.42,
-        "high": 16.49,
+        "high": 16.48,
         "low": 12.36
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 259.5,
-        "high": 408.7,
-        "low": 170.3
+        "base": 259.6,
+        "high": 408.8,
+        "low": 170.4
       },
       "modeled_human_direction_hours": {
-        "base": 98.62,
-        "high": 112.71,
-        "low": 84.54
+        "base": 98.64,
+        "high": 112.73,
+        "low": 84.55
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2563,
+      "public_merged_pull_requests": 2564,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 25592.32,
-        "high": 34550.61,
-        "low": 19194.4
+        "base": 25605.19,
+        "high": 34567.98,
+        "low": 19204.05
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2899.91,
-        "high": 4136.9,
-        "low": 2003.78
+        "base": 2901.36,
+        "high": 4138.93,
+        "low": 2004.79
       }
     }
   ],
-  "public_accepted_pull_requests": 2805,
+  "public_accepted_pull_requests": 2806,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 35039.76,
-    "high": 47646.29,
-    "low": 25938.37
+    "base": 35052.63,
+    "high": 47663.66,
+    "low": 25948.02
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4348.56,
-    "high": 6439.09,
-    "low": 2957.34
+    "base": 4350.01,
+    "high": 6441.12,
+    "low": 2958.35
   },
   "updated_at_utc": "2026-10-22",
   "window": {
-    "end": "2026-10-22T08:38:56Z",
+    "end": "2026-10-22T08:50:23Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -81981,6 +81981,35 @@
       "pull_request": 1728,
       "title": "fix(codescripts): name the real character in a script-name refusal",
       "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1728"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T03:32:30Z",
+      "evidence": {
+        "additions": 119,
+        "changed_files": 8,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 34,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 12.87,
+        "high": 17.37,
+        "low": 9.65
+      },
+      "merged_at": "2026-10-22T08:50:23Z",
+      "modeled_human_direction_hours": {
+        "base": 1.45,
+        "high": 2.03,
+        "low": 1.01
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1727,
+      "title": "fix(cli): keep truncated table cells on a rune boundary",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1727"
     }
   ]
 }
