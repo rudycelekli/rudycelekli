@@ -201,6 +201,186 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertEqual([item["number"] for item in results], [1, 2])
         self.assertEqual(graphql.call_count, 3)
 
+    @mock.patch.object(subject.time, "sleep")
+    @mock.patch.object(subject, "graphql")
+    def test_served_receipts_survive_a_count_that_under_reports_them(
+        self, graphql, sleep
+    ):
+        served = [pull_request(repository("upstream/served"), index) for index in (1, 2)]
+        graphql.side_effect = [
+            # The reported count lags behind what search actually serves. Every
+            # served receipt is real evidence, so the lagging count must not
+            # discard it -- only a short result is worth recounting.
+            {
+                "issueCount": 1,
+                "pageInfo": {"hasNextPage": True, "endCursor": "page-2"},
+                "nodes": [served[0]],
+            },
+            {
+                "issueCount": 1,
+                "pageInfo": {"hasNextPage": False, "endCursor": None},
+                "nodes": [served[1]],
+            },
+        ]
+        with mock.patch("sys.stderr", io.StringIO()) as captured:
+            results = subject.search_merged_pull_requests(
+                "token", subject.dt.date(2026, 1, 1), subject.dt.date(2026, 1, 2)
+            )
+
+        self.assertEqual([item["number"] for item in results], [1, 2])
+        self.assertEqual(graphql.call_count, 2)
+        self.assertFalse(sleep.called)
+        self.assertIn("keeping every served receipt", captured.getvalue())
+
+    @mock.patch.object(subject.time, "sleep")
+    @mock.patch.object(subject, "graphql")
+    def test_window_size_is_fixed_by_the_first_page_not_a_later_recount(
+        self, graphql, sleep
+    ):
+        served = [pull_request(repository("upstream/served"), index) for index in (1, 2)]
+        graphql.side_effect = [
+            {
+                "issueCount": 2,
+                "pageInfo": {"hasNextPage": True, "endCursor": "page-2"},
+                "nodes": [served[0]],
+            },
+            # A later page inflates the count while the index is settling.
+            # Resizing the window from it would discard a complete result.
+            {
+                "issueCount": 50,
+                "pageInfo": {"hasNextPage": False, "endCursor": None},
+                "nodes": [served[1]],
+            },
+        ]
+
+        results = subject.search_merged_pull_requests(
+            "token", subject.dt.date(2026, 1, 1), subject.dt.date(2026, 1, 2)
+        )
+
+        self.assertEqual([item["number"] for item in results], [1, 2])
+        self.assertEqual(graphql.call_count, 2)
+        self.assertFalse(sleep.called)
+
+    @mock.patch.object(subject.time, "sleep")
+    @mock.patch.object(subject, "graphql")
+    def test_short_window_is_recounted_before_it_is_reported_as_a_failure(
+        self, graphql, sleep
+    ):
+        complete = [
+            pull_request(repository("upstream/complete"), index) for index in (1, 2)
+        ]
+        graphql.side_effect = [
+            # First pass loses a receipt the reported count still expects.
+            {
+                "issueCount": 2,
+                "pageInfo": {"hasNextPage": False, "endCursor": None},
+                "nodes": [complete[0]],
+            },
+            {
+                "issueCount": 2,
+                "pageInfo": {"hasNextPage": True, "endCursor": "page-2"},
+                "nodes": [complete[0]],
+            },
+            {
+                "issueCount": 2,
+                "pageInfo": {"hasNextPage": False, "endCursor": None},
+                "nodes": [complete[1]],
+            },
+        ]
+
+        results = subject.search_merged_pull_requests(
+            "token", subject.dt.date(2026, 1, 1), subject.dt.date(2026, 1, 2)
+        )
+
+        self.assertEqual([item["number"] for item in results], [1, 2])
+        self.assertTrue(sleep.called)
+
+    @mock.patch.object(subject.time, "sleep")
+    @mock.patch.object(subject, "graphql")
+    def test_persistently_short_window_still_fails_rather_than_underreport(
+        self, graphql, sleep
+    ):
+        graphql.return_value = {
+            "issueCount": 5,
+            "pageInfo": {"hasNextPage": False, "endCursor": None},
+            "nodes": [pull_request(repository("upstream/short"), 1)],
+        }
+
+        with self.assertRaises(RuntimeError) as caught:
+            subject.search_merged_pull_requests(
+                "token", subject.dt.date(2026, 1, 1), subject.dt.date(2026, 1, 2)
+            )
+
+        self.assertIn("received 1", str(caught.exception))
+        self.assertEqual(
+            graphql.call_count, subject.SEARCH_RECOUNT_ATTEMPTS + 1
+        )
+
+    @mock.patch.object(subject, "graphql")
+    def test_window_reaching_the_result_cap_is_split_even_when_counted_lower(
+        self, graphql
+    ):
+        capped = [
+            {
+                "issueCount": subject.SEARCH_RESULT_CAP,
+                "pageInfo": {"hasNextPage": False, "endCursor": None},
+                "nodes": [
+                    pull_request(repository("upstream/capped"), index)
+                    for index in range(subject.SEARCH_RESULT_CAP)
+                ],
+            }
+        ]
+        halves = [
+            {
+                "issueCount": 1,
+                "pageInfo": {"hasNextPage": False, "endCursor": None},
+                "nodes": [pull_request(repository("upstream/left"), 9_001)],
+            },
+            {
+                "issueCount": 1,
+                "pageInfo": {"hasNextPage": False, "endCursor": None},
+                "nodes": [pull_request(repository("upstream/right"), 9_002)],
+            },
+        ]
+        graphql.side_effect = capped + halves
+
+        results = subject.search_merged_pull_requests(
+            "token", subject.dt.date(2026, 1, 1), subject.dt.date(2026, 1, 2)
+        )
+
+        self.assertEqual([item["number"] for item in results], [9_001, 9_002])
+        self.assertEqual(graphql.call_count, 3)
+
+    def test_published_evidence_is_retained_only_while_it_is_current(self):
+        today = subject.dt.datetime.now(subject.dt.timezone.utc).date()
+        bound = subject.MAX_PUBLISHED_EVIDENCE_AGE_DAYS
+        cases = {
+            today: 0,
+            today - subject.dt.timedelta(days=bound): 0,
+            today - subject.dt.timedelta(days=bound + 1): 1,
+        }
+        for published, expected in cases.items():
+            with tempfile.TemporaryDirectory() as directory:
+                data_file = Path(directory) / "contributions.json"
+                data_file.write_text(
+                    json.dumps({"updated_at_utc": published.isoformat()})
+                )
+                with mock.patch.object(subject, "DATA_FILE", data_file):
+                    with mock.patch("sys.stdout", io.StringIO()), mock.patch(
+                        "sys.stderr", io.StringIO()
+                    ):
+                        status = subject.check_published_freshness()
+                self.assertEqual(
+                    status, expected, f"published {published} expected {expected}"
+                )
+
+    def test_missing_published_evidence_cannot_be_retained(self):
+        with tempfile.TemporaryDirectory() as directory:
+            absent = Path(directory) / "contributions.json"
+            with mock.patch.object(subject, "DATA_FILE", absent):
+                with mock.patch("sys.stderr", io.StringIO()):
+                    self.assertEqual(subject.check_published_freshness(), 1)
+
     def test_public_activity_retains_every_merged_pr_receipt(self):
         first_repo = repository("upstream/first")
         second_repo = repository("upstream/second")
