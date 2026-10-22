@@ -1,13 +1,13 @@
 {
   "agentic_power_x": {
-    "base": 235.9,
-    "high": 374.3,
-    "low": 152.8
+    "base": 236.1,
+    "high": 374.6,
+    "low": 152.9
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0342,
+      "base": 0.0341,
       "high": 0.039,
       "low": 0.0293
     },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 872.2,
+  "engineer_weeks_at_40h": 872.9,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -437,13 +437,13 @@
       "active_repositories": 18,
       "agentic_power_x": {
         "base": 137.7,
-        "high": 224.3,
+        "high": 224.9,
         "low": 84.3
       },
       "modeled_human_direction_hours": {
         "base": 4.05,
         "high": 4.63,
-        "low": 3.48
+        "low": 3.47
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 160.7,
         "high": 262.2,
-        "low": 98.3
+        "low": 98.5
       },
       "modeled_human_direction_hours": {
         "base": 5.84,
-        "high": 6.68,
+        "high": 6.67,
         "low": 5.01
       },
       "month": "2026-06",
@@ -514,13 +514,13 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 188.6,
+        "base": 189.1,
         "high": 308.7,
-        "low": 115.6
+        "low": 115.8
       },
       "modeled_human_direction_hours": {
-        "base": 4.29,
-        "high": 4.9,
+        "base": 4.28,
+        "high": 4.89,
         "low": 3.67
       },
       "month": "2026-07",
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 202.6,
-        "high": 330.8,
-        "low": 124.1
+        "base": 202.8,
+        "high": 331.2,
+        "low": 124.2
       },
       "modeled_human_direction_hours": {
-        "base": 10.24,
-        "high": 11.7,
-        "low": 8.78
+        "base": 10.23,
+        "high": 11.69,
+        "low": 8.77
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 267.0,
-        "high": 425.6,
-        "low": 171.4
+        "base": 267.2,
+        "high": 426.0,
+        "low": 171.7
       },
       "modeled_human_direction_hours": {
-        "base": 14.49,
-        "high": 16.56,
-        "low": 12.42
+        "base": 14.48,
+        "high": 16.54,
+        "low": 12.41
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 258.6,
-        "high": 407.2,
-        "low": 169.7
+        "base": 258.7,
+        "high": 407.6,
+        "low": 169.8
       },
       "modeled_human_direction_hours": {
-        "base": 98.39,
-        "high": 112.45,
-        "low": 84.34
+        "base": 98.44,
+        "high": 112.5,
+        "low": 84.37
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2548,
+      "public_merged_pull_requests": 2551,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 25440.31,
-        "high": 34345.4,
-        "low": 19080.4
+        "base": 25470.32,
+        "high": 34385.9,
+        "low": 19102.91
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2880.6,
-        "high": 4109.87,
-        "low": 1990.26
+        "base": 2884.31,
+        "high": 4115.06,
+        "low": 1992.86
       }
     }
   ],
-  "public_accepted_pull_requests": 2790,
+  "public_accepted_pull_requests": 2793,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 34887.75,
-    "high": 47441.08,
-    "low": 25824.37
+    "base": 34917.76,
+    "high": 47481.58,
+    "low": 25846.88
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4329.25,
-    "high": 6412.06,
-    "low": 2943.82
+    "base": 4332.96,
+    "high": 6417.25,
+    "low": 2946.42
   },
   "updated_at_utc": "2026-10-22",
   "window": {
-    "end": "2026-10-22T06:45:10Z",
+    "end": "2026-10-22T06:58:13Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -81546,6 +81546,93 @@
       "pull_request": 551,
       "title": "produced files: a non-ASCII name is listed as the agent wrote it, so the gateway can fetch it",
       "url": "https://github.com/HarnessRouter/harnessrouter/pull/551"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T03:53:16Z",
+      "evidence": {
+        "additions": 64,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.33,
+        "high": 12.59,
+        "low": 7.0
+      },
+      "merged_at": "2026-10-22T06:50:16Z",
+      "modeled_human_direction_hours": {
+        "base": 1.03,
+        "high": 1.44,
+        "low": 0.72
+      },
+      "project": "HarnessRouter/harnessrouter",
+      "pull_request": 547,
+      "title": "sql: a schema the row cap cut short says truncated",
+      "url": "https://github.com/HarnessRouter/harnessrouter/pull/547"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T03:54:23Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.51,
+        "high": 12.83,
+        "low": 7.13
+      },
+      "merged_at": "2026-10-22T06:54:02Z",
+      "modeled_human_direction_hours": {
+        "base": 1.27,
+        "high": 1.78,
+        "low": 0.89
+      },
+      "project": "HarnessRouter/harnessrouter",
+      "pull_request": 548,
+      "title": "browser: the reaper's idle clock counts the person's takeover, so a human browsing is not stopped under them",
+      "url": "https://github.com/HarnessRouter/harnessrouter/pull/548"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T04:29:28Z",
+      "evidence": {
+        "additions": 88,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 11.17,
+        "high": 15.08,
+        "low": 8.38
+      },
+      "merged_at": "2026-10-22T06:58:13Z",
+      "modeled_human_direction_hours": {
+        "base": 1.41,
+        "high": 1.97,
+        "low": 0.99
+      },
+      "project": "HarnessRouter/harnessrouter",
+      "pull_request": 552,
+      "title": "environments: an apt version's epoch is part of a package spec",
+      "url": "https://github.com/HarnessRouter/harnessrouter/pull/552"
     }
   ]
 }
