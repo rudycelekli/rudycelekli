@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 233.0,
-    "high": 369.7,
+    "base": 233.1,
+    "high": 369.8,
     "low": 150.9
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 861.1,
+  "engineer_weeks_at_40h": 861.4,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -280,12 +280,12 @@
     {
       "active_repositories": 2,
       "agentic_power_x": {
-        "base": 18.8,
+        "base": 20.0,
         "high": 32.3,
         "low": 11.7
       },
       "modeled_human_direction_hours": {
-        "base": 0.16,
+        "base": 0.15,
         "high": 0.18,
         "low": 0.13
       },
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 263.6,
+        "base": 263.7,
         "high": 420.2,
         "low": 169.3
       },
       "modeled_human_direction_hours": {
-        "base": 14.68,
+        "base": 14.67,
         "high": 16.77,
         "low": 12.58
       },
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 255.9,
-        "high": 403.0,
-        "low": 167.9
+        "base": 256.0,
+        "high": 403.1,
+        "low": 168.0
       },
       "modeled_human_direction_hours": {
-        "base": 97.69,
-        "high": 111.65,
-        "low": 83.74
+        "base": 97.7,
+        "high": 111.66,
+        "low": 83.75
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2510,
+      "public_merged_pull_requests": 2511,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 24997.38,
-        "high": 33747.44,
-        "low": 18748.21
+        "base": 25006.96,
+        "high": 33760.37,
+        "low": 18755.4
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 2823.14,
-        "high": 4029.51,
-        "low": 1949.99
+        "base": 2824.11,
+        "high": 4030.87,
+        "low": 1950.67
       }
     }
   ],
-  "public_accepted_pull_requests": 2752,
+  "public_accepted_pull_requests": 2753,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 34444.82,
-    "high": 46843.12,
-    "low": 25492.18
+    "base": 34454.4,
+    "high": 46856.05,
+    "low": 25499.37
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4271.79,
-    "high": 6331.7,
-    "low": 2903.55
+    "base": 4272.76,
+    "high": 6333.06,
+    "low": 2904.23
   },
   "updated_at_utc": "2026-10-22",
   "window": {
-    "end": "2026-10-22T02:54:29Z",
+    "end": "2026-10-22T03:00:16Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -80444,6 +80444,35 @@
       "pull_request": 1751,
       "title": "fix(matching): require standalone labels in verbose answers",
       "url": "https://github.com/open-compass/VLMEvalKit/pull/1751"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-10T20:17:20Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 4,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.58,
+        "high": 12.93,
+        "low": 7.19
+      },
+      "merged_at": "2026-10-22T03:00:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.97,
+        "high": 1.36,
+        "low": 0.68
+      },
+      "project": "open-compass/VLMEvalKit",
+      "pull_request": 1748,
+      "title": "fix(smp): preserve table format for remote query URLs",
+      "url": "https://github.com/open-compass/VLMEvalKit/pull/1748"
     }
   ]
 }
