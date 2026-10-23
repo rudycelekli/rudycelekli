@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 247.9,
-    "high": 393.1,
+    "high": 393.2,
     "low": 160.7
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 918.5,
+  "engineer_weeks_at_40h": 918.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 165.8,
-        "high": 270.3,
+        "high": 270.8,
         "low": 101.5
       },
       "modeled_human_direction_hours": {
         "base": 5.66,
         "high": 6.47,
-        "low": 4.86
+        "low": 4.85
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 209.1,
-        "high": 341.3,
+        "high": 341.7,
         "low": 128.1
       },
       "modeled_human_direction_hours": {
         "base": 9.92,
         "high": 11.34,
-        "low": 8.51
+        "low": 8.5
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 275.6,
-        "high": 439.0,
+        "high": 439.4,
         "low": 176.9
       },
       "modeled_human_direction_hours": {
         "base": 14.04,
         "high": 16.05,
-        "low": 12.04
+        "low": 12.03
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 272.2,
-        "high": 428.8,
-        "low": 178.6
+        "base": 272.3,
+        "high": 428.9,
+        "low": 178.7
       },
       "modeled_human_direction_hours": {
-        "base": 100.26,
-        "high": 114.59,
-        "low": 85.94
+        "base": 100.27,
+        "high": 114.6,
+        "low": 85.95
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2692,
+      "public_merged_pull_requests": 2693,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27294.18,
-        "high": 36848.1,
-        "low": 20470.75
+        "base": 27302.9,
+        "high": 36859.88,
+        "low": 20477.29
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3028.45,
-        "high": 4316.68,
-        "low": 2093.77
+        "base": 3029.18,
+        "high": 4317.7,
+        "low": 2094.28
       }
     }
   ],
-  "public_accepted_pull_requests": 2934,
+  "public_accepted_pull_requests": 2935,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 36741.62,
-    "high": 49943.78,
-    "low": 27214.72
+    "base": 36750.34,
+    "high": 49955.56,
+    "low": 27221.26
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4477.1,
-    "high": 6618.87,
-    "low": 3047.33
+    "base": 4477.83,
+    "high": 6619.89,
+    "low": 3047.84
   },
   "updated_at_utc": "2026-10-23",
   "window": {
-    "end": "2026-10-23T16:35:45Z",
+    "end": "2026-10-23T17:11:14Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -85722,6 +85722,35 @@
       "pull_request": 234,
       "title": "fix: require exact paths for carried skill subfile pointers",
       "url": "https://github.com/tigerless-labs/autoharness/pull/234"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-23T04:43:41Z",
+      "evidence": {
+        "additions": 99,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.72,
+        "high": 11.78,
+        "low": 6.54
+      },
+      "merged_at": "2026-10-23T17:11:14Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1971,
+      "title": "fix(metrics): measure the annualisation factor over the fractional span",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1971"
     }
   ]
 }
