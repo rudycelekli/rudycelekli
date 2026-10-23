@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 247.0,
-    "high": 391.7,
+    "high": 391.8,
     "low": 160.1
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0284
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.59,
+    "evidence_window_weeks": 84.63,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 914.0,
+  "engineer_weeks_at_40h": 914.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.03,
-    "high": 169.18,
-    "low": 126.89
+    "base": 148.1,
+    "high": 169.26,
+    "low": 126.94
   },
   "monthly": [
     {
@@ -177,13 +177,13 @@
       "active_repositories": 5,
       "agentic_power_x": {
         "base": 37.8,
-        "high": 62.0,
+        "high": 60.3,
         "low": 23.1
       },
       "modeled_human_direction_hours": {
         "base": 0.41,
         "high": 0.47,
-        "low": 0.35
+        "low": 0.36
       },
       "month": "2025-06",
       "public_merged_pull_requests": 0,
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 274.8,
-        "high": 438.3,
+        "high": 438.0,
         "low": 176.5
       },
       "modeled_human_direction_hours": {
         "base": 14.08,
         "high": 16.09,
-        "low": 12.06
+        "low": 12.07
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 271.2,
-        "high": 427.2,
-        "low": 178.0
+        "base": 271.3,
+        "high": 427.3,
+        "low": 178.1
       },
       "modeled_human_direction_hours": {
-        "base": 99.96,
-        "high": 114.24,
-        "low": 85.68
+        "base": 100.02,
+        "high": 114.31,
+        "low": 85.73
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2672,
+      "public_merged_pull_requests": 2675,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27112.28,
-        "high": 36602.5,
-        "low": 20334.32
+        "base": 27137.57,
+        "high": 36636.64,
+        "low": 20353.29
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3012.0,
-        "high": 4293.69,
-        "low": 2082.23
+        "base": 3013.83,
+        "high": 4296.24,
+        "low": 2083.52
       }
     }
   ],
-  "public_accepted_pull_requests": 2914,
+  "public_accepted_pull_requests": 2917,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 36559.72,
-    "high": 49698.18,
-    "low": 27078.29
+    "base": 36585.01,
+    "high": 49732.32,
+    "low": 27097.26
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4460.65,
-    "high": 6595.88,
-    "low": 3035.79
+    "base": 4462.48,
+    "high": 6598.43,
+    "low": 3037.08
   },
   "updated_at_utc": "2026-10-23",
   "window": {
-    "end": "2026-10-22T22:57:10Z",
+    "end": "2026-10-23T04:32:14Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -85142,6 +85142,93 @@
       "pull_request": 1529,
       "title": "fix(llm): report an empty Responses answer as empty content, not a serde error",
       "url": "https://github.com/akitaonrails/ai-memory/pull/1529"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T17:24:03Z",
+      "evidence": {
+        "additions": 29,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.62,
+        "high": 10.29,
+        "low": 5.72
+      },
+      "merged_at": "2026-10-23T04:32:14Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1964,
+      "title": "fix(entities): read dot digit grouping the way comma grouping is read",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1964"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T16:58:51Z",
+      "evidence": {
+        "additions": 93,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.59,
+        "high": 12.94,
+        "low": 7.19
+      },
+      "merged_at": "2026-10-23T04:32:14Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1963,
+      "title": "fix(combination): report no IC spread for a single observation",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1963"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T16:30:23Z",
+      "evidence": {
+        "additions": 38,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.08,
+        "high": 10.91,
+        "low": 6.06
+      },
+      "merged_at": "2026-10-23T04:32:14Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1962,
+      "title": "fix(governance): verify the whole history before sealing a ledger segment",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1962"
     }
   ]
 }
