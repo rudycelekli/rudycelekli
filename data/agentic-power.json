@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 247.4,
-    "high": 392.4,
+    "base": 247.5,
+    "high": 392.5,
     "low": 160.4
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0284
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.65,
+    "evidence_window_weeks": 84.69,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 916.3,
+  "engineer_weeks_at_40h": 917.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.14,
-    "high": 169.3,
-    "low": 126.98
+    "base": 148.21,
+    "high": 169.38,
+    "low": 127.03
   },
   "monthly": [
     {
@@ -594,46 +594,46 @@
       "agentic_power_x": {
         "base": 271.8,
         "high": 428.1,
-        "low": 178.3
+        "low": 178.4
       },
       "modeled_human_direction_hours": {
-        "base": 100.11,
-        "high": 114.41,
-        "low": 85.8
+        "base": 100.18,
+        "high": 114.49,
+        "low": 85.87
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2682,
+      "public_merged_pull_requests": 2685,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27206.52,
-        "high": 36729.73,
-        "low": 20404.99
+        "base": 27230.91,
+        "high": 36762.67,
+        "low": 20423.28
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3019.17,
-        "high": 4303.71,
-        "low": 2087.27
+        "base": 3021.5,
+        "high": 4306.96,
+        "low": 2088.91
       }
     }
   ],
-  "public_accepted_pull_requests": 2924,
+  "public_accepted_pull_requests": 2927,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 36653.96,
-    "high": 49825.41,
-    "low": 27148.96
+    "base": 36678.35,
+    "high": 49858.35,
+    "low": 27167.25
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4467.82,
-    "high": 6605.9,
-    "low": 3040.83
+    "base": 4470.15,
+    "high": 6609.15,
+    "low": 3042.47
   },
   "updated_at_utc": "2026-10-23",
   "window": {
-    "end": "2026-10-23T08:57:20Z",
+    "end": "2026-10-23T15:38:37Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -85432,6 +85432,93 @@
       "pull_request": 102,
       "title": "fix(leads): analyze a clean hostname in the domain-intel endpoint",
       "url": "https://github.com/debpalash/OpenGTM/pull/102"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:12Z",
+      "evidence": {
+        "additions": 24,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.4,
+        "high": 10.0,
+        "low": 5.55
+      },
+      "merged_at": "2026-10-23T15:37:27Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 219,
+      "title": "fix(dispatch): ignore valid JSON that is not a hook object",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/219"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:34Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.45,
+        "high": 12.76,
+        "low": 7.09
+      },
+      "merged_at": "2026-10-23T15:38:02Z",
+      "modeled_human_direction_hours": {
+        "base": 1.11,
+        "high": 1.55,
+        "low": 0.78
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 227,
+      "title": "fix(ledger): validate archived symbol names before reading",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/227"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:58:08Z",
+      "evidence": {
+        "additions": 26,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.54,
+        "high": 10.18,
+        "low": 5.65
+      },
+      "merged_at": "2026-10-23T15:38:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 240,
+      "title": "fix: retain distinct evidence slices with a full content hash",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/240"
     }
   ]
 }
