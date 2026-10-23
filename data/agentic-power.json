@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 247.2,
-    "high": 392.0,
-    "low": 160.2
+    "base": 247.3,
+    "high": 392.2,
+    "low": 160.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 915.3,
+  "engineer_weeks_at_40h": 915.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -332,12 +332,12 @@
     {
       "active_repositories": 8,
       "agentic_power_x": {
-        "base": 137.7,
+        "base": 138.8,
         "high": 225.8,
         "low": 84.7
       },
       "modeled_human_direction_hours": {
-        "base": 1.3,
+        "base": 1.29,
         "high": 1.48,
         "low": 1.11
       },
@@ -359,13 +359,13 @@
       "active_repositories": 4,
       "agentic_power_x": {
         "base": 113.6,
-        "high": 183.9,
+        "high": 187.6,
         "low": 70.0
       },
       "modeled_human_direction_hours": {
         "base": 0.59,
         "high": 0.67,
-        "low": 0.51
+        "low": 0.5
       },
       "month": "2026-01",
       "public_merged_pull_requests": 0,
@@ -384,12 +384,12 @@
     {
       "active_repositories": 5,
       "agentic_power_x": {
-        "base": 121.1,
+        "base": 122.5,
         "high": 198.2,
         "low": 74.8
       },
       "modeled_human_direction_hours": {
-        "base": 0.9,
+        "base": 0.89,
         "high": 1.02,
         "low": 0.77
       },
@@ -437,13 +437,13 @@
       "active_repositories": 18,
       "agentic_power_x": {
         "base": 141.5,
-        "high": 230.9,
+        "high": 231.6,
         "low": 86.7
       },
       "modeled_human_direction_hours": {
         "base": 3.94,
         "high": 4.5,
-        "low": 3.38
+        "low": 3.37
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -488,14 +488,14 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 165.2,
-        "high": 269.7,
+        "base": 165.5,
+        "high": 270.3,
         "low": 101.2
       },
       "modeled_human_direction_hours": {
-        "base": 5.68,
+        "base": 5.67,
         "high": 6.49,
-        "low": 4.87
+        "low": 4.86
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 208.7,
         "high": 340.9,
-        "low": 127.7
+        "low": 127.8
       },
       "modeled_human_direction_hours": {
         "base": 9.94,
-        "high": 11.37,
+        "high": 11.36,
         "low": 8.52
       },
       "month": "2026-08",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 271.5,
-        "high": 427.7,
-        "low": 178.2
+        "base": 271.7,
+        "high": 427.8,
+        "low": 178.3
       },
       "modeled_human_direction_hours": {
-        "base": 100.06,
-        "high": 114.35,
-        "low": 85.76
+        "base": 100.07,
+        "high": 114.37,
+        "low": 85.78
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2678,
+      "public_merged_pull_requests": 2680,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27166.45,
-        "high": 36675.63,
-        "low": 20374.95
+        "base": 27184.02,
+        "high": 36699.35,
+        "low": 20388.12
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3015.85,
-        "high": 4299.06,
-        "low": 2084.94
+        "base": 3017.26,
+        "high": 4301.03,
+        "low": 2085.93
       }
     }
   ],
-  "public_accepted_pull_requests": 2920,
+  "public_accepted_pull_requests": 2922,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 36613.89,
-    "high": 49771.31,
-    "low": 27118.92
+    "base": 36631.46,
+    "high": 49795.03,
+    "low": 27132.09
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4464.5,
-    "high": 6601.25,
-    "low": 3038.5
+    "base": 4465.91,
+    "high": 6603.22,
+    "low": 3039.49
   },
   "updated_at_utc": "2026-10-23",
   "window": {
-    "end": "2026-10-23T06:22:58Z",
+    "end": "2026-10-23T07:08:47Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -85316,6 +85316,64 @@
       "pull_request": 101,
       "title": "fix(sheets): store pushed values as text instead of evaluating formulas",
       "url": "https://github.com/debpalash/OpenGTM/pull/101"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-14T23:19:49Z",
+      "evidence": {
+        "additions": 59,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.86,
+        "high": 11.96,
+        "low": 6.64
+      },
+      "merged_at": "2026-10-23T07:08:31Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "HelixDB/helix-foundry",
+      "pull_request": 127,
+      "title": "Report the HTTP status when an SDK error response is not JSON",
+      "url": "https://github.com/HelixDB/helix-foundry/pull/127"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-14T23:21:48Z",
+      "evidence": {
+        "additions": 34,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.71,
+        "high": 11.76,
+        "low": 6.53
+      },
+      "merged_at": "2026-10-23T07:08:47Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "HelixDB/helix-foundry",
+      "pull_request": 128,
+      "title": "Keep the answer of a run that finishes while Stop is on its way",
+      "url": "https://github.com/HelixDB/helix-foundry/pull/128"
     }
   ]
 }
