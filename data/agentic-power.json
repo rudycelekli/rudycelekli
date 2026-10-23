@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 247.3,
-    "high": 392.2,
+    "base": 247.4,
+    "high": 392.3,
     "low": 160.3
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 915.8,
+  "engineer_weeks_at_40h": 916.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 165.5,
         "high": 270.3,
-        "low": 101.2
+        "low": 101.4
       },
       "modeled_human_direction_hours": {
         "base": 5.67,
-        "high": 6.49,
+        "high": 6.48,
         "low": 4.86
       },
       "month": "2026-06",
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 194.5,
         "high": 317.4,
-        "low": 119.0
+        "low": 119.3
       },
       "modeled_human_direction_hours": {
         "base": 4.16,
-        "high": 4.76,
+        "high": 4.75,
         "low": 3.57
       },
       "month": "2026-07",
@@ -566,13 +566,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 275.0,
+        "base": 275.2,
         "high": 438.3,
-        "low": 176.6
+        "low": 176.7
       },
       "modeled_human_direction_hours": {
-        "base": 14.07,
-        "high": 16.08,
+        "base": 14.06,
+        "high": 16.07,
         "low": 12.06
       },
       "month": "2026-09",
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 271.7,
-        "high": 427.8,
+        "high": 428.0,
         "low": 178.3
       },
       "modeled_human_direction_hours": {
-        "base": 100.07,
-        "high": 114.37,
-        "low": 85.78
+        "base": 100.08,
+        "high": 114.38,
+        "low": 85.79
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2680,
+      "public_merged_pull_requests": 2681,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27184.02,
-        "high": 36699.35,
-        "low": 20388.12
+        "base": 27195.88,
+        "high": 36715.36,
+        "low": 20397.01
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3017.26,
-        "high": 4301.03,
-        "low": 2085.93
+        "base": 3018.25,
+        "high": 4302.42,
+        "low": 2086.62
       }
     }
   ],
-  "public_accepted_pull_requests": 2922,
+  "public_accepted_pull_requests": 2923,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 36631.46,
-    "high": 49795.03,
-    "low": 27132.09
+    "base": 36643.32,
+    "high": 49811.04,
+    "low": 27140.98
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4465.91,
-    "high": 6603.22,
-    "low": 3039.49
+    "base": 4466.9,
+    "high": 6604.61,
+    "low": 3040.18
   },
   "updated_at_utc": "2026-10-23",
   "window": {
-    "end": "2026-10-23T07:08:47Z",
+    "end": "2026-10-23T07:19:30Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -85374,6 +85374,35 @@
       "pull_request": 128,
       "title": "Keep the answer of a run that finishes while Stop is on its way",
       "url": "https://github.com/HelixDB/helix-foundry/pull/128"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T04:00:46Z",
+      "evidence": {
+        "additions": 142,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.86,
+        "high": 16.01,
+        "low": 8.89
+      },
+      "merged_at": "2026-10-23T07:19:30Z",
+      "modeled_human_direction_hours": {
+        "base": 0.99,
+        "high": 1.39,
+        "low": 0.69
+      },
+      "project": "retentioneering/retentioneering-tools",
+      "pull_request": 187,
+      "title": "fix(conversion): count paths, not anchor positions, with occurrence=\"all\"",
+      "url": "https://github.com/retentioneering/retentioneering-tools/pull/187"
     }
   ]
 }
