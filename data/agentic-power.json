@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 249.0,
-    "high": 394.9,
+    "high": 394.8,
     "low": 161.4
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0283
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.73,
+    "evidence_window_weeks": 84.74,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 923.1,
+  "engineer_weeks_at_40h": 923.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.28,
-    "high": 169.46,
-    "low": 127.09
+    "base": 148.29,
+    "high": 169.48,
+    "low": 127.11
   },
   "monthly": [
     {
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 209.8,
         "high": 342.5,
-        "low": 128.5
+        "low": 128.4
       },
       "modeled_human_direction_hours": {
         "base": 9.89,
-        "high": 11.3,
+        "high": 11.31,
         "low": 8.48
       },
       "month": "2026-08",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 273.5,
-        "high": 430.7,
-        "low": 179.5
+        "base": 273.4,
+        "high": 430.6,
+        "low": 179.4
       },
       "modeled_human_direction_hours": {
-        "base": 100.47,
-        "high": 114.82,
-        "low": 86.12
+        "base": 100.48,
+        "high": 114.84,
+        "low": 86.13
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2711,
+      "public_merged_pull_requests": 2710,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27476.3,
-        "high": 37094.0,
-        "low": 20607.36
+        "base": 27473.52,
+        "high": 37090.24,
+        "low": 20605.27
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3044.59,
-        "high": 4339.28,
-        "low": 2105.06
+        "base": 3044.36,
+        "high": 4338.96,
+        "low": 2104.9
       }
     }
   ],
-  "public_accepted_pull_requests": 2953,
+  "public_accepted_pull_requests": 2952,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 36923.74,
-    "high": 50189.68,
-    "low": 27351.33
+    "base": 36920.96,
+    "high": 50185.92,
+    "low": 27349.24
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4493.24,
-    "high": 6641.47,
-    "low": 3058.62
+    "base": 4493.01,
+    "high": 6641.15,
+    "low": 3058.46
   },
   "updated_at_utc": "2026-10-23",
   "window": {
-    "end": "2026-10-23T21:23:24Z",
+    "end": "2026-10-23T23:12:58Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -78883,35 +78883,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-18T04:46:27Z",
-      "evidence": {
-        "additions": 0,
-        "changed_files": 2,
-        "comments": 1,
-        "commits": 1,
-        "deletions": 6,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 6.3,
-        "high": 8.51,
-        "low": 4.73
-      },
-      "merged_at": "2026-10-21T11:30:01Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "Sumanth077/Hands-On-AI-Engineering",
-      "pull_request": 155,
-      "title": "fix(stock_portfolio_analyst): remove unresolved merge conflict markers",
-      "url": "https://github.com/Sumanth077/Hands-On-AI-Engineering/pull/155"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-18T04:46:20Z",
       "evidence": {
         "additions": 0,
@@ -80183,35 +80154,6 @@
       "pull_request": 1517,
       "title": "fix(hooks): keep the shell bundle's requests off environment proxies",
       "url": "https://github.com/akitaonrails/ai-memory/pull/1517"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-21T20:09:08Z",
-      "evidence": {
-        "additions": 8,
-        "changed_files": 1,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 8,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 5.65,
-        "high": 7.63,
-        "low": 4.24
-      },
-      "merged_at": "2026-10-21T22:37:30Z",
-      "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1516,
-      "title": "test(hooks): parenthesise the case patterns bash 3.2 cannot parse",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1516"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -86273,6 +86215,35 @@
       "pull_request": 573,
       "title": "share: a share link survives a transient index failure instead of 404ing for ten seconds",
       "url": "https://github.com/HarnessRouter/harnessrouter/pull/573"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T22:34:44Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 12,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.17,
+        "high": 12.38,
+        "low": 6.88
+      },
+      "merged_at": "2026-10-23T23:12:58Z",
+      "modeled_human_direction_hours": {
+        "base": 1.04,
+        "high": 1.46,
+        "low": 0.73
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4542,
+      "title": "fix(teleport): read PR and issue URLs with a trailing slash or sub-page",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4542"
     }
   ]
 }
