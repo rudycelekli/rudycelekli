@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
     "base": 247.4,
-    "high": 392.3,
-    "low": 160.3
+    "high": 392.4,
+    "low": 160.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0284
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.64,
+    "evidence_window_weeks": 84.65,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 916.1,
+  "engineer_weeks_at_40h": 916.3,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.12,
-    "high": 169.28,
-    "low": 126.96
+    "base": 148.14,
+    "high": 169.3,
+    "low": 126.98
   },
   "monthly": [
     {
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 275.2,
-        "high": 438.3,
+        "high": 438.7,
         "low": 176.7
       },
       "modeled_human_direction_hours": {
         "base": 14.06,
         "high": 16.07,
-        "low": 12.06
+        "low": 12.05
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 271.7,
-        "high": 428.0,
-        "low": 178.3
+        "base": 271.8,
+        "high": 428.1,
+        "low": 178.4
       },
       "modeled_human_direction_hours": {
-        "base": 100.08,
-        "high": 114.38,
-        "low": 85.79
+        "base": 100.1,
+        "high": 114.4,
+        "low": 85.8
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2681,
+      "public_merged_pull_requests": 2682,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27195.88,
-        "high": 36715.36,
-        "low": 20397.01
+        "base": 27206.52,
+        "high": 36729.73,
+        "low": 20404.99
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3018.25,
-        "high": 4302.42,
-        "low": 2086.62
+        "base": 3018.93,
+        "high": 4303.37,
+        "low": 2087.1
       }
     }
   ],
-  "public_accepted_pull_requests": 2923,
+  "public_accepted_pull_requests": 2924,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 36643.32,
-    "high": 49811.04,
-    "low": 27140.98
+    "base": 36653.96,
+    "high": 49825.41,
+    "low": 27148.96
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4466.9,
-    "high": 6604.61,
-    "low": 3040.18
+    "base": 4467.58,
+    "high": 6605.56,
+    "low": 3040.66
   },
   "updated_at_utc": "2026-10-23",
   "window": {
-    "end": "2026-10-23T07:19:30Z",
+    "end": "2026-10-23T08:57:20Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -85403,6 +85403,35 @@
       "pull_request": 187,
       "title": "fix(conversion): count paths, not anchor positions, with occurrence=\"all\"",
       "url": "https://github.com/retentioneering/retentioneering-tools/pull/187"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-14T23:23:55Z",
+      "evidence": {
+        "additions": 120,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.64,
+        "high": 14.37,
+        "low": 7.98
+      },
+      "merged_at": "2026-10-23T08:57:20Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "debpalash/OpenGTM",
+      "pull_request": 102,
+      "title": "fix(leads): analyze a clean hostname in the domain-intel endpoint",
+      "url": "https://github.com/debpalash/OpenGTM/pull/102"
     }
   ]
 }
