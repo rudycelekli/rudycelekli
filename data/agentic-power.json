@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 250.9,
-    "high": 397.9,
-    "low": 162.6
+    "base": 251.0,
+    "high": 398.0,
+    "low": 162.7
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0281
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.78,
+    "evidence_window_weeks": 84.8,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 930.6,
+  "engineer_weeks_at_40h": 931.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.37,
-    "high": 169.56,
-    "low": 127.17
+    "base": 148.4,
+    "high": 169.6,
+    "low": 127.2
   },
   "monthly": [
     {
@@ -384,12 +384,12 @@
     {
       "active_repositories": 5,
       "agentic_power_x": {
-        "base": 122.5,
+        "base": 123.9,
         "high": 200.8,
         "low": 75.5
       },
       "modeled_human_direction_hours": {
-        "base": 0.89,
+        "base": 0.88,
         "high": 1.01,
         "low": 0.76
       },
@@ -412,11 +412,11 @@
       "agentic_power_x": {
         "base": 101.7,
         "high": 166.4,
-        "low": 62.2
+        "low": 62.5
       },
       "modeled_human_direction_hours": {
         "base": 1.8,
-        "high": 2.06,
+        "high": 2.05,
         "low": 1.54
       },
       "month": "2026-03",
@@ -462,12 +462,12 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 177.9,
+        "base": 178.5,
         "high": 291.1,
         "low": 109.2
       },
       "modeled_human_direction_hours": {
-        "base": 2.84,
+        "base": 2.83,
         "high": 3.24,
         "low": 2.43
       },
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 196.4,
+        "base": 196.9,
         "high": 320.9,
         "low": 120.5
       },
       "modeled_human_direction_hours": {
-        "base": 4.12,
+        "base": 4.11,
         "high": 4.7,
         "low": 3.53
       },
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 278.2,
-        "high": 443.1,
+        "high": 443.5,
         "low": 178.6
       },
       "modeled_human_direction_hours": {
         "base": 13.91,
         "high": 15.9,
-        "low": 11.93
+        "low": 11.92
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 275.5,
-        "high": 433.8,
+        "base": 275.6,
+        "high": 434.0,
         "low": 180.8
       },
       "modeled_human_direction_hours": {
-        "base": 100.84,
-        "high": 115.25,
-        "low": 86.44
+        "base": 100.89,
+        "high": 115.3,
+        "low": 86.48
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2737,
+      "public_merged_pull_requests": 2740,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27778.21,
-        "high": 37501.62,
-        "low": 20833.82
+        "base": 27801.45,
+        "high": 37532.99,
+        "low": 20851.25
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3073.9,
-        "high": 4380.34,
-        "low": 2125.57
+        "base": 3076.27,
+        "high": 4383.67,
+        "low": 2127.22
       }
     }
   ],
-  "public_accepted_pull_requests": 2979,
+  "public_accepted_pull_requests": 2982,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 37225.65,
-    "high": 50597.3,
-    "low": 27577.79
+    "base": 37248.89,
+    "high": 50628.67,
+    "low": 27595.22
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4522.55,
-    "high": 6682.53,
-    "low": 3079.13
+    "base": 4524.92,
+    "high": 6685.86,
+    "low": 3080.78
   },
   "updated_at_utc": "2026-10-24",
   "window": {
-    "end": "2026-10-24T06:05:45Z",
+    "end": "2026-10-24T09:17:29Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -87027,6 +87027,93 @@
       "pull_request": 1406,
       "title": "A written date with an ordinal day is read, so \"March 17th, 2020\" and \"2nd March 2020\" become those days instead of no value",
       "url": "https://github.com/deeplethe/utopia/pull/1406"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T21:36:48Z",
+      "evidence": {
+        "additions": 86,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.49,
+        "high": 12.82,
+        "low": 7.12
+      },
+      "merged_at": "2026-10-24T09:14:36Z",
+      "modeled_human_direction_hours": {
+        "base": 0.79,
+        "high": 1.11,
+        "low": 0.55
+      },
+      "project": "heygen-com/hyperframes",
+      "pull_request": 5725,
+      "title": "fix(cli): preserve UTF-8 BOM project configuration settings",
+      "url": "https://github.com/heygen-com/hyperframes/pull/5725"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T20:55:01Z",
+      "evidence": {
+        "additions": 10,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.69,
+        "high": 9.03,
+        "low": 5.02
+      },
+      "merged_at": "2026-10-24T09:17:29Z",
+      "modeled_human_direction_hours": {
+        "base": 0.79,
+        "high": 1.11,
+        "low": 0.55
+      },
+      "project": "heygen-com/hyperframes",
+      "pull_request": 5723,
+      "title": "fix(cli): preserve string fallback for non-JSON error values",
+      "url": "https://github.com/heygen-com/hyperframes/pull/5723"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T20:28:14Z",
+      "evidence": {
+        "additions": 16,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.06,
+        "high": 9.52,
+        "low": 5.29
+      },
+      "merged_at": "2026-10-24T09:17:29Z",
+      "modeled_human_direction_hours": {
+        "base": 0.79,
+        "high": 1.11,
+        "low": 0.55
+      },
+      "project": "heygen-com/hyperframes",
+      "pull_request": 5721,
+      "title": "fix(cli): prevent feedback URL crashes at emoji truncation boundaries",
+      "url": "https://github.com/heygen-com/hyperframes/pull/5721"
     }
   ]
 }
