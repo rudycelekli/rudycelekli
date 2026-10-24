@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 250.3,
-    "high": 396.9,
-    "low": 162.2
+    "base": 250.4,
+    "high": 397.1,
+    "low": 162.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 928.1,
+  "engineer_weeks_at_40h": 928.4,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 177.9,
-        "high": 289.9,
+        "high": 291.1,
         "low": 108.8
       },
       "modeled_human_direction_hours": {
         "base": 2.84,
         "high": 3.25,
-        "low": 2.44
+        "low": 2.43
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -515,13 +515,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 196.4,
-        "high": 320.0,
+        "high": 320.9,
         "low": 120.3
       },
       "modeled_human_direction_hours": {
         "base": 4.12,
         "high": 4.71,
-        "low": 3.54
+        "low": 3.53
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 210.6,
-        "high": 343.7,
+        "high": 344.1,
         "low": 129.0
       },
       "modeled_human_direction_hours": {
         "base": 9.85,
         "high": 11.26,
-        "low": 8.45
+        "low": 8.44
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 274.9,
-        "high": 432.9,
+        "high": 433.1,
         "low": 180.4
       },
       "modeled_human_direction_hours": {
-        "base": 100.69,
-        "high": 115.07,
-        "low": 86.31
+        "base": 100.71,
+        "high": 115.1,
+        "low": 86.32
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2727,
+      "public_merged_pull_requests": 2728,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27676.22,
-        "high": 37363.91,
-        "low": 20757.3
+        "base": 27690.08,
+        "high": 37382.62,
+        "low": 20767.7
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3062.94,
-        "high": 4364.97,
-        "low": 2117.89
+        "base": 3064.67,
+        "high": 4367.39,
+        "low": 2119.1
       }
     }
   ],
-  "public_accepted_pull_requests": 2969,
+  "public_accepted_pull_requests": 2970,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 37123.66,
-    "high": 50459.59,
-    "low": 27501.27
+    "base": 37137.52,
+    "high": 50478.3,
+    "low": 27511.67
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4511.59,
-    "high": 6667.16,
-    "low": 3071.45
+    "base": 4513.32,
+    "high": 6669.58,
+    "low": 3072.66
   },
   "updated_at_utc": "2026-10-24",
   "window": {
-    "end": "2026-10-24T01:16:30Z",
+    "end": "2026-10-24T01:40:41Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -86737,6 +86737,35 @@
       "pull_request": 5711,
       "title": "fix(cli): exclude rendering flags from tween tail warnings",
       "url": "https://github.com/heygen-com/hyperframes/pull/5711"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T23:38:39Z",
+      "evidence": {
+        "additions": 101,
+        "changed_files": 6,
+        "comments": 2,
+        "commits": 6,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.86,
+        "high": 18.71,
+        "low": 10.4
+      },
+      "merged_at": "2026-10-24T01:40:41Z",
+      "modeled_human_direction_hours": {
+        "base": 1.73,
+        "high": 2.42,
+        "low": 1.21
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4549,
+      "title": "fix(providers): parse remote URLs that end in a slash",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4549"
     }
   ]
 }
