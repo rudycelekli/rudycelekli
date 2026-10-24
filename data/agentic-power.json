@@ -1,13 +1,13 @@
 {
   "agentic_power_x": {
-    "base": 251.4,
-    "high": 398.7,
+    "base": 251.5,
+    "high": 398.8,
     "low": 163.0
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0328,
+      "base": 0.0327,
       "high": 0.0374,
       "low": 0.0281
     },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 932.9,
+  "engineer_weeks_at_40h": 933.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 167.5,
         "high": 273.7,
-        "low": 102.5
+        "low": 102.6
       },
       "modeled_human_direction_hours": {
         "base": 5.6,
-        "high": 6.41,
+        "high": 6.4,
         "low": 4.8
       },
       "month": "2026-06",
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 211.3,
-        "high": 344.9,
+        "high": 345.3,
         "low": 129.4
       },
       "modeled_human_direction_hours": {
         "base": 9.82,
         "high": 11.22,
-        "low": 8.42
+        "low": 8.41
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 278.6,
         "high": 443.8,
-        "low": 178.8
+        "low": 178.9
       },
       "modeled_human_direction_hours": {
         "base": 13.89,
-        "high": 15.88,
+        "high": 15.87,
         "low": 11.91
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 276.0,
-        "high": 434.8,
-        "low": 181.1
+        "base": 276.1,
+        "high": 434.9,
+        "low": 181.2
       },
       "modeled_human_direction_hours": {
-        "base": 100.96,
-        "high": 115.39,
-        "low": 86.54
+        "base": 100.98,
+        "high": 115.4,
+        "low": 86.55
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2748,
+      "public_merged_pull_requests": 2749,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 27869.74,
-        "high": 37625.17,
-        "low": 20902.46
+        "base": 27880.27,
+        "high": 37639.38,
+        "low": 20910.36
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3082.29,
-        "high": 4392.1,
-        "low": 2131.42
+        "base": 3083.28,
+        "high": 4393.49,
+        "low": 2132.11
       }
     }
   ],
-  "public_accepted_pull_requests": 2990,
+  "public_accepted_pull_requests": 2991,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 37317.18,
-    "high": 50720.85,
-    "low": 27646.43
+    "base": 37327.71,
+    "high": 50735.06,
+    "low": 27654.33
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4530.94,
-    "high": 6694.29,
-    "low": 3084.98
+    "base": 4531.93,
+    "high": 6695.68,
+    "low": 3085.67
   },
   "updated_at_utc": "2026-10-24",
   "window": {
-    "end": "2026-10-24T11:22:03Z",
+    "end": "2026-10-24T12:15:14Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -87346,6 +87346,35 @@
       "pull_request": 92,
       "title": "Redact an unlabeled provider key in installer output",
       "url": "https://github.com/rociiu/talorys/pull/92"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T04:30:13Z",
+      "evidence": {
+        "additions": 61,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.53,
+        "high": 14.21,
+        "low": 7.9
+      },
+      "merged_at": "2026-10-24T12:15:14Z",
+      "modeled_human_direction_hours": {
+        "base": 0.99,
+        "high": 1.39,
+        "low": 0.69
+      },
+      "project": "retentioneering/retentioneering-tools",
+      "pull_request": 189,
+      "title": "fix(describe): report the missing-segment level instead of dropping it",
+      "url": "https://github.com/retentioneering/retentioneering-tools/pull/189"
     }
   ]
 }
