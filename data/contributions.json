@@ -7,7 +7,7 @@
         "merged_prs": 2425,
         "primary_for_projects": 52,
         "projects_touched": 59,
-        "share_pct": 81.5
+        "share_pct": 81.4
       },
       {
         "category": "Testing & evaluation",
@@ -18,10 +18,10 @@
       },
       {
         "category": "Maintenance & integration",
-        "merged_prs": 134,
+        "merged_prs": 136,
         "primary_for_projects": 6,
         "projects_touched": 20,
-        "share_pct": 4.5
+        "share_pct": 4.6
       },
       {
         "category": "Performance & scale",
@@ -59,13 +59,13 @@
         "share_pct": 0.6
       }
     ],
-    "classified_merged_prs": 2977,
+    "classified_merged_prs": 2979,
     "methodology": "Exclusive dominant-intent classification from merged PR titles. Categories sum to merged PRs; they describe title signals, not a full semantic code audit.",
     "patterns": [
       {
         "detail": "2,425 merged PRs across 59 projects",
         "label": "DOMINANT CHANGE INTENT",
-        "value": "81.5% reliability & correctness"
+        "value": "81.4% reliability & correctness"
       },
       {
         "detail": "Reliability, testing and security signals combined",
@@ -81,6 +81,38 @@
   },
   "login": "rudycelekli",
   "merged_pull_requests": [
+    {
+      "additions": 44,
+      "attribution": "GitHub-authored and merged pull request",
+      "changed_files": 1,
+      "comments": 0,
+      "commits": 2,
+      "created_at": "2026-10-24T02:59:23Z",
+      "deletions": 2,
+      "merged_at": "2026-10-24T06:05:45Z",
+      "number": 1406,
+      "repository": "deeplethe/utopia",
+      "repository_url": "https://github.com/deeplethe/utopia",
+      "reviews": 1,
+      "title": "A written date with an ordinal day is read, so \"March 17th, 2020\" and \"2nd March 2020\" become those days instead of no value",
+      "url": "https://github.com/deeplethe/utopia/pull/1406"
+    },
+    {
+      "additions": 13,
+      "attribution": "GitHub-authored and merged pull request",
+      "changed_files": 1,
+      "comments": 0,
+      "commits": 2,
+      "created_at": "2026-10-24T02:19:01Z",
+      "deletions": 2,
+      "merged_at": "2026-10-24T06:00:17Z",
+      "number": 1402,
+      "repository": "deeplethe/utopia",
+      "repository_url": "https://github.com/deeplethe/utopia",
+      "reviews": 1,
+      "title": "An approximate figure that starts with a capital is still read, so \"About 350 people\" becomes 350 instead of no value",
+      "url": "https://github.com/deeplethe/utopia/pull/1402"
+    },
     {
       "additions": 6,
       "attribution": "GitHub-authored and merged pull request",
@@ -47917,6 +47949,30 @@
     },
     {
       "accent": "#9B7CFF",
+      "contributor_commits": 6,
+      "created_at": "2026-10-24T05:28:23Z",
+      "description": "Adversarial evaluation for Gradia: synthetic twins, witnessed tasks, and benchmark traces released after the fix window.",
+      "forks": 0,
+      "full_name": "rudycelekli/gradia-range",
+      "homepage": "https://www.gradiahq.com",
+      "language": "Python",
+      "latest_release": null,
+      "name": "gradia-range",
+      "ownership": "owner",
+      "pushed_at": "2026-10-24T06:35:41Z",
+      "secondary": "#F2A93B",
+      "stargazers": 0,
+      "topics": [
+        "benchmarking",
+        "evaluation",
+        "evidence",
+        "verifiable-ai"
+      ],
+      "url": "https://github.com/rudycelekli/gradia-range",
+      "visibility": "public"
+    },
+    {
+      "accent": "#9B7CFF",
       "contributor_commits": 8,
       "created_at": "2026-10-13T03:27:05Z",
       "description": "Canonical research profile for Rudy Mizrahi Celekli: verifiable AI agents, evaluator robustness, and open-source evidence.",
@@ -47927,7 +47983,7 @@
       "latest_release": null,
       "name": "rudycelekli.github.io",
       "ownership": "owner",
-      "pushed_at": "2026-10-24T05:43:57Z",
+      "pushed_at": "2026-10-24T06:32:02Z",
       "secondary": "#F2A93B",
       "stargazers": 0,
       "topics": [
@@ -47938,30 +47994,6 @@
         "structured-data"
       ],
       "url": "https://github.com/rudycelekli/rudycelekli.github.io",
-      "visibility": "public"
-    },
-    {
-      "accent": "#9B7CFF",
-      "contributor_commits": 4,
-      "created_at": "2026-10-24T05:28:23Z",
-      "description": "Adversarial evaluation for Gradia: synthetic twins, witnessed tasks, and benchmark traces released after the fix window.",
-      "forks": 0,
-      "full_name": "rudycelekli/gradia-range",
-      "homepage": "https://www.gradiahq.com",
-      "language": "Multi-language",
-      "latest_release": null,
-      "name": "gradia-range",
-      "ownership": "owner",
-      "pushed_at": "2026-10-24T05:43:36Z",
-      "secondary": "#F2A93B",
-      "stargazers": 0,
-      "topics": [
-        "benchmarking",
-        "evaluation",
-        "evidence",
-        "verifiable-ai"
-      ],
-      "url": "https://github.com/rudycelekli/gradia-range",
       "visibility": "public"
     },
     {
@@ -48462,7 +48494,7 @@
       "open_pull_requests_url": "https://github.com/thedotmack/claude-mem/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/thedotmack/claude-mem/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 102621,
+      "stargazers": 102628,
       "url": "https://github.com/thedotmack/claude-mem",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48503,7 +48535,7 @@
       "open_pull_requests_url": "https://github.com/mvschwarz/openrig/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/mvschwarz/openrig/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 8143,
+      "stargazers": 8144,
       "url": "https://github.com/mvschwarz/openrig",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48522,7 +48554,7 @@
       "contributors_url": "https://github.com/harry0703/MoneyPrinterTurbo/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Generate HD short videos from a topic or keyword with an automated AI workflow.",
-      "forks": 21306,
+      "forks": 21307,
       "full_name": "harry0703/MoneyPrinterTurbo",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -48543,7 +48575,7 @@
       "open_pull_requests_url": "https://github.com/harry0703/MoneyPrinterTurbo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/harry0703/MoneyPrinterTurbo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 134633,
+      "stargazers": 134640,
       "url": "https://github.com/harry0703/MoneyPrinterTurbo",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48562,7 +48594,7 @@
       "contributors_url": "https://github.com/ifixai-ai/iFixAi/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Independent Auditing of AI Agents. Run by human or the agent itself, to answer the most crucial question in the AI Agent Economy. Is the agent doing what is supposed to do? With iFixAi you can have this answer in less than 120 seconds.",
-      "forks": 1713,
+      "forks": 1714,
       "full_name": "ifixai-ai/iFixAi",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -48582,7 +48614,7 @@
       "open_pull_requests_url": "https://github.com/ifixai-ai/iFixAi/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/ifixai-ai/iFixAi/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#2DE2C5",
-      "stargazers": 33843,
+      "stargazers": 33858,
       "url": "https://github.com/ifixai-ai/iFixAi",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48621,7 +48653,7 @@
       "open_pull_requests_url": "https://github.com/zhayujie/CowAgent/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/zhayujie/CowAgent/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#2DE2C5",
-      "stargazers": 47524,
+      "stargazers": 47528,
       "url": "https://github.com/zhayujie/CowAgent",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48640,7 +48672,7 @@
       "contributors_url": "https://github.com/msitarzewski/agency-agents/graphs/contributors",
       "default_branch_commits": 0,
       "description": "A complete AI agency at your fingertips - From frontend wizards to Reddit community ninjas, from whimsy injectors to reality checkers. Each agent is a specialized expert with personality, processes, and proven deliverables.",
-      "forks": 26393,
+      "forks": 26394,
       "full_name": "msitarzewski/agency-agents",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -48663,7 +48695,7 @@
       "open_pull_requests_url": "https://github.com/msitarzewski/agency-agents/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/msitarzewski/agency-agents/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 163551,
+      "stargazers": 163560,
       "url": "https://github.com/msitarzewski/agency-agents",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48682,7 +48714,7 @@
       "contributors_url": "https://github.com/coreyhaines31/marketingskills/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
-      "forks": 8316,
+      "forks": 8317,
       "full_name": "coreyhaines31/marketingskills",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -48704,7 +48736,7 @@
       "open_pull_requests_url": "https://github.com/coreyhaines31/marketingskills/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/coreyhaines31/marketingskills/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 56259,
+      "stargazers": 56262,
       "url": "https://github.com/coreyhaines31/marketingskills",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48723,7 +48755,7 @@
       "contributors_url": "https://github.com/ruvnet/ruflo/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Agent orchestration & autonomous workflows",
-      "forks": 9255,
+      "forks": 9257,
       "full_name": "ruvnet/ruflo",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -48743,7 +48775,7 @@
       "open_pull_requests_url": "https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/ruvnet/ruflo/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 78829,
+      "stargazers": 78838,
       "url": "https://github.com/ruvnet/ruflo",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48817,7 +48849,7 @@
       "open_pull_requests_url": "https://github.com/akitaonrails/ai-memory/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/akitaonrails/ai-memory/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 13101,
+      "stargazers": 13111,
       "url": "https://github.com/akitaonrails/ai-memory",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48855,7 +48887,7 @@
       "open_pull_requests_url": "https://github.com/HKUDS/Vibe-Trading/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/HKUDS/Vibe-Trading/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 36454,
+      "stargazers": 36458,
       "url": "https://github.com/HKUDS/Vibe-Trading",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48874,7 +48906,7 @@
       "contributors_url": "https://github.com/morluto/rea/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "forks": 93593,
+      "forks": 93643,
       "full_name": "morluto/rea",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -48892,7 +48924,7 @@
       "open_pull_requests_url": "https://github.com/morluto/rea/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/morluto/rea/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 374226,
+      "stargazers": 374403,
       "url": "https://github.com/morluto/rea",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48906,7 +48938,7 @@
       "contribution_graph_commits": 88,
       "contribution_graph_evidence_url": "https://github.com/rudycelekli?tab=overview&from=2026-10-01&to=2026-10-31",
       "contribution_graph_latest_at": "2026-10-23T07:00:00Z",
-      "contributor_commits": 81,
+      "contributor_commits": 88,
       "contributor_rank": 3,
       "contributors_url": "https://github.com/Yeachan-Heo/oh-my-claudecode/graphs/contributors",
       "default_branch_commits": 0,
@@ -48929,7 +48961,7 @@
       "open_pull_requests_url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 40215,
+      "stargazers": 40213,
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -48968,7 +49000,7 @@
       "open_pull_requests_url": "https://github.com/JustVugg/colibri/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/JustVugg/colibri/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#2DE2C5",
-      "stargazers": 43644,
+      "stargazers": 43647,
       "url": "https://github.com/JustVugg/colibri",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49042,7 +49074,7 @@
       "open_pull_requests_url": "https://github.com/Asymptote-Labs/agent-beacon/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/Asymptote-Labs/agent-beacon/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 2714,
+      "stargazers": 2715,
       "url": "https://github.com/Asymptote-Labs/agent-beacon",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49135,7 +49167,7 @@
       "contributors_url": "https://github.com/ai-job-search-dev/ai-job-search/graphs/contributors",
       "default_branch_commits": 0,
       "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
-      "forks": 19914,
+      "forks": 19919,
       "full_name": "ai-job-search-dev/ai-job-search",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -49153,7 +49185,7 @@
       "open_pull_requests_url": "https://github.com/ai-job-search-dev/ai-job-search/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/ai-job-search-dev/ai-job-search/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#2DE2C5",
-      "stargazers": 64170,
+      "stargazers": 64186,
       "url": "https://github.com/ai-job-search-dev/ai-job-search",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49172,7 +49204,7 @@
       "contributors_url": "https://github.com/tester-army/e2e/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Next generation e2e testing framework for web and mobile apps.",
-      "forks": 615,
+      "forks": 617,
       "full_name": "tester-army/e2e",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -49192,7 +49224,7 @@
       "open_pull_requests_url": "https://github.com/tester-army/e2e/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/tester-army/e2e/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 11807,
+      "stargazers": 11808,
       "url": "https://github.com/tester-army/e2e",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49211,7 +49243,7 @@
       "contributors_url": "https://github.com/wheresryan22/anatomy/graphs/contributors",
       "default_branch_commits": 0,
       "description": "An agent skill for creating detailed, interactive isometric illustrations of real-world machines and complex systems. Generates polished SVGs with optional WebGL shaders and 3D effects.",
-      "forks": 1556,
+      "forks": 1557,
       "full_name": "wheresryan22/anatomy",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -49232,7 +49264,7 @@
       "open_pull_requests_url": "https://github.com/wheresryan22/anatomy/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/wheresryan22/anatomy/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 19783,
+      "stargazers": 19800,
       "url": "https://github.com/wheresryan22/anatomy",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49307,7 +49339,7 @@
       "open_pull_requests_url": "https://github.com/fabio-rovai/open-ontologies/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/fabio-rovai/open-ontologies/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 1318,
+      "stargazers": 1319,
       "url": "https://github.com/fabio-rovai/open-ontologies",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49345,7 +49377,7 @@
       "open_pull_requests_url": "https://github.com/bilawalsidhu/gods-eye-view/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/bilawalsidhu/gods-eye-view/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 59408,
+      "stargazers": 59412,
       "url": "https://github.com/bilawalsidhu/gods-eye-view",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49535,7 +49567,7 @@
       "open_pull_requests_url": "https://github.com/vectorize-io/hindsight/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/vectorize-io/hindsight/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 53207,
+      "stargazers": 53223,
       "url": "https://github.com/vectorize-io/hindsight",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49554,7 +49586,7 @@
       "contributors_url": "https://github.com/cathrynlavery/diagram-design/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-      "forks": 3905,
+      "forks": 3907,
       "full_name": "cathrynlavery/diagram-design",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -49570,7 +49602,7 @@
       "open_pull_requests_url": "https://github.com/cathrynlavery/diagram-design/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/cathrynlavery/diagram-design/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 60422,
+      "stargazers": 60430,
       "url": "https://github.com/cathrynlavery/diagram-design",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49606,7 +49638,7 @@
       "open_pull_requests_url": "https://github.com/tigerless-labs/autoharness/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/tigerless-labs/autoharness/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 10659,
+      "stargazers": 10662,
       "url": "https://github.com/tigerless-labs/autoharness",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49660,7 +49692,7 @@
       "contributors_url": "https://github.com/debpalash/VoiceStudio/graphs/contributors",
       "default_branch_commits": 0,
       "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative \u2014 voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
-      "forks": 9231,
+      "forks": 9239,
       "full_name": "debpalash/VoiceStudio",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -49677,7 +49709,7 @@
       "open_pull_requests_url": "https://github.com/debpalash/VoiceStudio/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/debpalash/VoiceStudio/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 83647,
+      "stargazers": 83696,
       "url": "https://github.com/debpalash/VoiceStudio",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49696,7 +49728,7 @@
       "contributors_url": "https://github.com/Anil-matcha/open-duet/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Open-source, self-hosted alternative to Claude Duet: AI coworkers (named agents) with instructions, memory, routines, their own isolated computer, and your approval before they act. Also an alternative to OpenAI Dots, Meta Muse, Grok Bot, Manus Cue and ChatGPT agent.",
-      "forks": 758,
+      "forks": 759,
       "full_name": "Anil-matcha/open-duet",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -49714,7 +49746,7 @@
       "open_pull_requests_url": "https://github.com/Anil-matcha/open-duet/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/Anil-matcha/open-duet/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 6118,
+      "stargazers": 6119,
       "url": "https://github.com/Anil-matcha/open-duet",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49733,7 +49765,7 @@
       "contributors_url": "https://github.com/NationalSecurityAgency/ghidra/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Ghidra is a software reverse engineering (SRE) framework",
-      "forks": 10526,
+      "forks": 10529,
       "full_name": "NationalSecurityAgency/ghidra",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -49752,16 +49784,16 @@
       "open_pull_requests_url": "https://github.com/NationalSecurityAgency/ghidra/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/NationalSecurityAgency/ghidra/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 93722,
+      "stargazers": 93732,
       "url": "https://github.com/NationalSecurityAgency/ghidra",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
     },
     {
       "accent": "#4D7CFE",
-      "accepted_additions": 349,
-      "accepted_changed_files": 23,
-      "accepted_deletions": 34,
+      "accepted_additions": 406,
+      "accepted_changed_files": 25,
+      "accepted_deletions": 38,
       "commits_url": "https://github.com/deeplethe/utopia/commits?author=rudycelekli",
       "contribution_graph_commits": 13,
       "contribution_graph_evidence_url": "https://github.com/rudycelekli?tab=overview&from=2026-10-01&to=2026-10-31",
@@ -49777,17 +49809,17 @@
       "impact_breakdown": {
         "Agent infrastructure": 1,
         "Developer experience": 1,
-        "Maintenance & integration": 8,
+        "Maintenance & integration": 10,
         "Reliability & correctness": 4,
         "Testing & evaluation": 1
       },
       "impact_category": "Maintenance & integration",
-      "impact_category_prs": 8,
-      "impact_classified_prs": 15,
-      "merged_prs": 15,
+      "impact_category_prs": 10,
+      "impact_classified_prs": 17,
+      "merged_prs": 17,
       "name": "utopia",
       "official_contributor": true,
-      "open_prs": 7,
+      "open_prs": 5,
       "open_pull_requests_url": "https://github.com/deeplethe/utopia/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/deeplethe/utopia/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
@@ -49827,7 +49859,7 @@
       "open_pull_requests_url": "https://github.com/calesthio/OpenMontage/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/calesthio/OpenMontage/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#2DE2C5",
-      "stargazers": 71241,
+      "stargazers": 71247,
       "url": "https://github.com/calesthio/OpenMontage",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49898,7 +49930,7 @@
       "open_pull_requests_url": "https://github.com/liseami/CCBaga/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/liseami/CCBaga/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#2DE2C5",
-      "stargazers": 2936,
+      "stargazers": 2938,
       "url": "https://github.com/liseami/CCBaga",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -49954,7 +49986,7 @@
       "contributors_url": "https://github.com/addyosmani/agent-skills/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Production-grade engineering skills for AI coding agents.",
-      "forks": 11473,
+      "forks": 11478,
       "full_name": "addyosmani/agent-skills",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -49972,7 +50004,7 @@
       "open_pull_requests_url": "https://github.com/addyosmani/agent-skills/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/addyosmani/agent-skills/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 109975,
+      "stargazers": 109980,
       "url": "https://github.com/addyosmani/agent-skills",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50026,7 +50058,7 @@
       "contributors_url": "https://github.com/tt-a1i/archify/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-      "forks": 5968,
+      "forks": 5971,
       "full_name": "tt-a1i/archify",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -50043,7 +50075,7 @@
       "open_pull_requests_url": "https://github.com/tt-a1i/archify/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/tt-a1i/archify/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#2DE2C5",
-      "stargazers": 88379,
+      "stargazers": 88391,
       "url": "https://github.com/tt-a1i/archify",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50116,7 +50148,7 @@
       "open_pull_requests_url": "https://github.com/tigerless-labs/agent-memory/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/tigerless-labs/agent-memory/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 4713,
+      "stargazers": 4714,
       "url": "https://github.com/tigerless-labs/agent-memory",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50165,7 +50197,7 @@
       "contribution_graph_commits": 5,
       "contribution_graph_evidence_url": "https://github.com/rudycelekli?tab=overview&from=2026-10-01&to=2026-10-31",
       "contribution_graph_latest_at": "2026-10-23T07:00:00Z",
-      "contributor_commits": 4,
+      "contributor_commits": 5,
       "contributor_rank": 2,
       "contributors_url": "https://github.com/Graphicle-AI/graphicle/graphs/contributors",
       "default_branch_commits": 0,
@@ -50205,7 +50237,7 @@
       "contributors_url": "https://github.com/openclaw/openclaw/graphs/contributors",
       "default_branch_commits": 4,
       "description": "The AI that really does things. Any OS. Any Platform. The lobster way. \ud83e\udd9e",
-      "forks": 82573,
+      "forks": 82575,
       "full_name": "openclaw/openclaw",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -50221,7 +50253,7 @@
       "open_pull_requests_url": "https://github.com/openclaw/openclaw/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/openclaw/openclaw/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 392894,
+      "stargazers": 392900,
       "url": "https://github.com/openclaw/openclaw",
       "verification_label": "Default-branch commit verified",
       "verification_tier": "default_branch_commit_verified"
@@ -50257,7 +50289,7 @@
       "open_pull_requests_url": "https://github.com/truefoundry/trueforge/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/truefoundry/trueforge/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 6349,
+      "stargazers": 6350,
       "url": "https://github.com/truefoundry/trueforge",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50328,7 +50360,7 @@
       "open_pull_requests_url": "https://github.com/heygen-com/hyperframes/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/heygen-com/hyperframes/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 70942,
+      "stargazers": 70964,
       "url": "https://github.com/heygen-com/hyperframes",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50468,7 +50500,7 @@
       "open_pull_requests_url": "https://github.com/HKUDS/nanobot/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/HKUDS/nanobot/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 49314,
+      "stargazers": 49315,
       "url": "https://github.com/HKUDS/nanobot",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50487,7 +50519,7 @@
       "contributors_url": "https://github.com/agno-agi/agno/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Build, run, and manage agent platforms.",
-      "forks": 6178,
+      "forks": 6179,
       "full_name": "agno-agi/agno",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -50503,7 +50535,7 @@
       "open_pull_requests_url": "https://github.com/agno-agi/agno/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/agno-agi/agno/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#2DE2C5",
-      "stargazers": 42874,
+      "stargazers": 42875,
       "url": "https://github.com/agno-agi/agno",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50538,7 +50570,7 @@
       "open_pull_requests_url": "https://github.com/benbjohnson/litestream/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/benbjohnson/litestream/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 14522,
+      "stargazers": 14521,
       "url": "https://github.com/benbjohnson/litestream",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50557,7 +50589,7 @@
       "contributors_url": "https://github.com/xerj-org/xerj/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Local-first search engine and MCP server for AI agents. One Rust binary indexes code, docs, logs, JSONL/CSV and PDFs for BM25 full-text, vector and hybrid search, code search without grep, agent memory and RAG. Elasticsearch-compatible API; Corpus Hub serves hundreds of reference memory corpora.",
-      "forks": 992,
+      "forks": 995,
       "full_name": "xerj-org/xerj",
       "impact_basis": "Merged PR title classification",
       "impact_breakdown": {
@@ -50573,7 +50605,7 @@
       "open_pull_requests_url": "https://github.com/xerj-org/xerj/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/xerj-org/xerj/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 14267,
+      "stargazers": 14278,
       "url": "https://github.com/xerj-org/xerj",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50837,7 +50869,7 @@
       "contributors_url": "https://github.com/Graphify-Labs/graphify/graphs/contributors",
       "default_branch_commits": 0,
       "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
-      "forks": 12798,
+      "forks": 12799,
       "full_name": "Graphify-Labs/graphify",
       "impact_basis": "GitHub commit attribution",
       "impact_breakdown": {},
@@ -50851,7 +50883,7 @@
       "open_pull_requests_url": "https://github.com/Graphify-Labs/graphify/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/Graphify-Labs/graphify/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 133999,
+      "stargazers": 134013,
       "url": "https://github.com/Graphify-Labs/graphify",
       "verification_label": "GitHub-listed contributor",
       "verification_tier": "github_listed_contributor"
@@ -50870,7 +50902,7 @@
       "contributors_url": "https://github.com/NousResearch/hermes-agent/graphs/contributors",
       "default_branch_commits": 4,
       "description": "The agent that grows with you",
-      "forks": 56093,
+      "forks": 56099,
       "full_name": "NousResearch/hermes-agent",
       "impact_basis": "GitHub commit attribution",
       "impact_breakdown": {},
@@ -50884,7 +50916,7 @@
       "open_pull_requests_url": "https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/NousResearch/hermes-agent/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#F2A93B",
-      "stargazers": 256581,
+      "stargazers": 256595,
       "url": "https://github.com/NousResearch/hermes-agent",
       "verification_label": "Default-branch commit verified",
       "verification_tier": "default_branch_commit_verified"
@@ -50917,7 +50949,7 @@
       "open_pull_requests_url": "https://github.com/earthtojake/text-to-cad/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/earthtojake/text-to-cad/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#9B7CFF",
-      "stargazers": 22805,
+      "stargazers": 22808,
       "url": "https://github.com/earthtojake/text-to-cad",
       "verification_label": "GitHub graph verified",
       "verification_tier": "github_contribution_graph_verified"
@@ -50950,7 +50982,7 @@
       "open_pull_requests_url": "https://github.com/cursor/plugins/pulls?q=is%3Apr+author%3Arudycelekli+is%3Aopen",
       "pull_requests_url": "https://github.com/cursor/plugins/pulls?q=is%3Apr+author%3Arudycelekli+is%3Amerged",
       "secondary": "#4D7CFE",
-      "stargazers": 13812,
+      "stargazers": 13818,
       "url": "https://github.com/cursor/plugins",
       "verification_label": "GitHub graph verified",
       "verification_tier": "github_contribution_graph_verified"
@@ -51059,11 +51091,11 @@
   "source": "GitHub GraphQL and REST APIs",
   "updated_at_utc": "2026-10-24",
   "upstream_timeline": {
-    "accepted_line_changes": 386819,
-    "current_repository_reach_stars": 2973396,
+    "accepted_line_changes": 386880,
+    "current_repository_reach_stars": 2973874,
     "end_date": "2026-10-24",
     "merged_projects": 65,
-    "merged_prs": 2977,
+    "merged_prs": 2979,
     "observations": [
       {
         "date": "2026-10-20",
@@ -51087,13 +51119,13 @@
       },
       {
         "date": "2026-10-24",
-        "open_prs": 1988,
-        "repository_reach_stars": 2973396
+        "open_prs": 1986,
+        "repository_reach_stars": 2973874
       }
     ],
     "open_pr_scope_start": "2025-01-01",
-    "open_prs": 1988,
-    "open_prs_in_verified_projects": 901,
+    "open_prs": 1986,
+    "open_prs_in_verified_projects": 899,
     "open_pull_requests_url": "https://github.com/search?q=author%3Arudycelekli+is%3Apr+is%3Aopen+created%3A%3E%3D2025-01-01&type=pullrequests",
     "points": [
       {
@@ -51517,16 +51549,16 @@
         "repository_reach_stars": 2969805
       },
       {
-        "cumulative_line_changes": 386819,
-        "cumulative_merged_prs": 2977,
+        "cumulative_line_changes": 386880,
+        "cumulative_merged_prs": 2979,
         "cumulative_projects": 65,
-        "daily_line_changes": 1077,
-        "daily_merged_prs": 14,
+        "daily_line_changes": 1138,
+        "daily_merged_prs": 16,
         "date": "2026-10-24",
         "new_projects": 0,
-        "open_prs": 1988,
+        "open_prs": 1986,
         "open_prs_observed": true,
-        "repository_reach_stars": 2973396
+        "repository_reach_stars": 2973874
       }
     ],
     "reach_observed_since": "2026-10-20",
