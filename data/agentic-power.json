@@ -1,13 +1,13 @@
 {
   "agentic_power_x": {
-    "base": 254.7,
-    "high": 403.8,
-    "low": 165.1
+    "base": 254.9,
+    "high": 404.1,
+    "low": 165.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0324,
+      "base": 0.0323,
       "high": 0.037,
       "low": 0.0277
     },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 946.3,
+  "engineer_weeks_at_40h": 947.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -280,12 +280,12 @@
     {
       "active_repositories": 2,
       "agentic_power_x": {
-        "base": 20.0,
+        "base": 21.4,
         "high": 35.0,
         "low": 12.4
       },
       "modeled_human_direction_hours": {
-        "base": 0.15,
+        "base": 0.14,
         "high": 0.17,
         "low": 0.12
       },
@@ -488,14 +488,14 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 169.4,
-        "high": 276.5,
-        "low": 103.8
+        "base": 169.7,
+        "high": 277.1,
+        "low": 103.9
       },
       "modeled_human_direction_hours": {
-        "base": 5.54,
-        "high": 6.33,
-        "low": 4.75
+        "base": 5.53,
+        "high": 6.32,
+        "low": 4.74
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 213.9,
-        "high": 349.1,
-        "low": 130.9
+        "high": 349.5,
+        "low": 131.1
       },
       "modeled_human_direction_hours": {
         "base": 9.7,
-        "high": 11.09,
-        "low": 8.32
+        "high": 11.08,
+        "low": 8.31
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 281.8,
-        "high": 449.1,
-        "low": 181.0
+        "base": 282.0,
+        "high": 449.5,
+        "low": 181.1
       },
       "modeled_human_direction_hours": {
-        "base": 13.73,
-        "high": 15.69,
-        "low": 11.77
+        "base": 13.72,
+        "high": 15.68,
+        "low": 11.76
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 279.2,
-        "high": 439.8,
-        "low": 183.2
+        "base": 279.4,
+        "high": 440.1,
+        "low": 183.4
       },
       "modeled_human_direction_hours": {
-        "base": 101.74,
-        "high": 116.27,
-        "low": 87.2
+        "base": 101.77,
+        "high": 116.31,
+        "low": 87.23
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2799,
+      "public_merged_pull_requests": 2803,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 28405.49,
-        "high": 38348.44,
-        "low": 21304.29
+        "base": 28436.07,
+        "high": 38389.74,
+        "low": 21327.24
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3143.02,
-        "high": 4479.47,
-        "low": 2173.14
+        "base": 3146.38,
+        "high": 4484.19,
+        "low": 2175.5
       }
     }
   ],
-  "public_accepted_pull_requests": 3041,
+  "public_accepted_pull_requests": 3045,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 37852.93,
-    "high": 51444.12,
-    "low": 28048.26
+    "base": 37883.51,
+    "high": 51485.42,
+    "low": 28071.21
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4591.67,
-    "high": 6781.66,
-    "low": 3126.7
+    "base": 4595.03,
+    "high": 6786.38,
+    "low": 3129.06
   },
   "updated_at_utc": "2026-10-25",
   "window": {
-    "end": "2026-10-25T07:27:16Z",
+    "end": "2026-10-25T07:51:16Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -88825,6 +88825,122 @@
       "pull_request": 1761,
       "title": "fix(logs): don't panic masking a JWT with a short signature",
       "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1761"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T22:04:19Z",
+      "evidence": {
+        "additions": 24,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.55,
+        "high": 10.2,
+        "low": 5.67
+      },
+      "merged_at": "2026-10-25T07:36:19Z",
+      "modeled_human_direction_hours": {
+        "base": 0.84,
+        "high": 1.18,
+        "low": 0.59
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1410,
+      "title": "A MySQL YEAR or BIT column reads as its number, so a fiscal year of 2024 is not null",
+      "url": "https://github.com/deeplethe/utopia/pull/1410"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T22:31:09Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.51,
+        "high": 10.14,
+        "low": 5.63
+      },
+      "merged_at": "2026-10-25T07:41:17Z",
+      "modeled_human_direction_hours": {
+        "base": 0.84,
+        "high": 1.18,
+        "low": 0.59
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1416,
+      "title": "A typeset minus sign reads as negative, so \"\u22123.2%\" becomes -3.2 instead of no value",
+      "url": "https://github.com/deeplethe/utopia/pull/1416"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T22:32:55Z",
+      "evidence": {
+        "additions": 23,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.55,
+        "high": 10.2,
+        "low": 5.67
+      },
+      "merged_at": "2026-10-25T07:45:43Z",
+      "modeled_human_direction_hours": {
+        "base": 0.84,
+        "high": 1.18,
+        "low": 0.59
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1417,
+      "title": "A declared unit with its currency first is read in its magnitude, so \"$5 billion\" under \"USD million\" is 5000",
+      "url": "https://github.com/deeplethe/utopia/pull/1417"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T22:38:39Z",
+      "evidence": {
+        "additions": 32,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.97,
+        "high": 10.76,
+        "low": 5.98
+      },
+      "merged_at": "2026-10-25T07:51:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.84,
+        "high": 1.18,
+        "low": 0.59
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1419,
+      "title": "An ontology term named in Chinese takes its key from its English label, so ex:\u516c\u53f8 labelled \"Company\" imports as company",
+      "url": "https://github.com/deeplethe/utopia/pull/1419"
     }
   ]
 }
