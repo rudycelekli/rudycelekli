@@ -12,7 +12,7 @@
       "low": 0.0277
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.92,
+    "evidence_window_weeks": 84.93,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 946.1,
+  "engineer_weeks_at_40h": 946.3,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.61,
-    "high": 169.84,
-    "low": 127.38
+    "base": 148.63,
+    "high": 169.86,
+    "low": 127.4
   },
   "monthly": [
     {
@@ -597,43 +597,43 @@
         "low": 183.2
       },
       "modeled_human_direction_hours": {
-        "base": 101.71,
-        "high": 116.24,
-        "low": 87.18
+        "base": 101.74,
+        "high": 116.27,
+        "low": 87.2
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2798,
+      "public_merged_pull_requests": 2799,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 28397.78,
-        "high": 38338.04,
-        "low": 21298.51
+        "base": 28405.49,
+        "high": 38348.44,
+        "low": 21304.29
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3141.63,
-        "high": 4477.53,
-        "low": 2172.18
+        "base": 3143.02,
+        "high": 4479.47,
+        "low": 2173.14
       }
     }
   ],
-  "public_accepted_pull_requests": 3040,
+  "public_accepted_pull_requests": 3041,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 37845.22,
-    "high": 51433.72,
-    "low": 28042.48
+    "base": 37852.93,
+    "high": 51444.12,
+    "low": 28048.26
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4590.28,
-    "high": 6779.72,
-    "low": 3125.74
+    "base": 4591.67,
+    "high": 6781.66,
+    "low": 3126.7
   },
   "updated_at_utc": "2026-10-25",
   "window": {
-    "end": "2026-10-25T06:45:15Z",
+    "end": "2026-10-25T07:27:16Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -88515,7 +88515,7 @@
       "evidence": {
         "additions": 39,
         "changed_files": 1,
-        "comments": 0,
+        "comments": 1,
         "commits": 1,
         "deletions": 4,
         "reviews": 0
@@ -88527,9 +88527,9 @@
       },
       "merged_at": "2026-10-25T05:23:59Z",
       "modeled_human_direction_hours": {
-        "base": 0.54,
-        "high": 0.76,
-        "low": 0.38
+        "base": 0.66,
+        "high": 0.92,
+        "low": 0.46
       },
       "project": "Graphicle-AI/graphicle",
       "pull_request": 11,
@@ -88544,7 +88544,7 @@
       "evidence": {
         "additions": 147,
         "changed_files": 3,
-        "comments": 0,
+        "comments": 1,
         "commits": 2,
         "deletions": 11,
         "reviews": 0
@@ -88556,9 +88556,9 @@
       },
       "merged_at": "2026-10-25T05:23:59Z",
       "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
+        "base": 0.92,
+        "high": 1.29,
+        "low": 0.64
       },
       "project": "Graphicle-AI/graphicle",
       "pull_request": 10,
@@ -88796,6 +88796,35 @@
       "pull_request": 1762,
       "title": "fix(logs): mask sk-proj/sk-svcacct/sk-admin OpenAI keys",
       "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1762"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:59:43Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 2,
+        "comments": 3,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.71,
+        "high": 10.4,
+        "low": 5.78
+      },
+      "merged_at": "2026-10-25T07:27:16Z",
+      "modeled_human_direction_hours": {
+        "base": 1.15,
+        "high": 1.61,
+        "low": 0.8
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1761,
+      "title": "fix(logs): don't panic masking a JWT with a short signature",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1761"
     }
   ]
 }
