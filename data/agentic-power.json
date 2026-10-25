@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 253.7,
-    "high": 402.2,
-    "low": 164.5
+    "base": 253.8,
+    "high": 402.5,
+    "low": 164.6
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0278
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.91,
+    "evidence_window_weeks": 84.92,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 942.3,
+  "engineer_weeks_at_40h": 943.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.59,
-    "high": 169.82,
-    "low": 127.36
+    "base": 148.61,
+    "high": 169.84,
+    "low": 127.38
   },
   "monthly": [
     {
@@ -411,13 +411,13 @@
       "active_repositories": 13,
       "agentic_power_x": {
         "base": 102.8,
-        "high": 167.5,
+        "high": 168.6,
         "low": 63.1
       },
       "modeled_human_direction_hours": {
         "base": 1.78,
         "high": 2.03,
-        "low": 1.53
+        "low": 1.52
       },
       "month": "2026-03",
       "public_merged_pull_requests": 0,
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 144.8,
         "high": 236.5,
-        "low": 88.5
+        "low": 88.7
       },
       "modeled_human_direction_hours": {
         "base": 3.85,
-        "high": 4.41,
+        "high": 4.4,
         "low": 3.3
       },
       "month": "2026-04",
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 179.8,
-        "high": 293.5,
+        "high": 294.7,
         "low": 110.2
       },
       "modeled_human_direction_hours": {
         "base": 2.81,
         "high": 3.21,
-        "low": 2.41
+        "low": 2.4
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 168.8,
+        "base": 169.1,
         "high": 276.0,
         "low": 103.4
       },
       "modeled_human_direction_hours": {
-        "base": 5.56,
+        "base": 5.55,
         "high": 6.35,
         "low": 4.76
       },
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 198.8,
         "high": 324.6,
-        "low": 121.6
+        "low": 121.8
       },
       "modeled_human_direction_hours": {
         "base": 4.07,
-        "high": 4.66,
+        "high": 4.65,
         "low": 3.49
       },
       "month": "2026-07",
@@ -566,13 +566,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 281.0,
+        "base": 281.2,
         "high": 448.0,
-        "low": 180.4
+        "low": 180.5
       },
       "modeled_human_direction_hours": {
-        "base": 13.77,
-        "high": 15.74,
+        "base": 13.76,
+        "high": 15.73,
         "low": 11.8
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 278.1,
-        "high": 438.1,
-        "low": 182.5
+        "base": 278.3,
+        "high": 438.4,
+        "low": 182.6
       },
       "modeled_human_direction_hours": {
-        "base": 101.56,
-        "high": 116.06,
-        "low": 87.05
+        "base": 101.6,
+        "high": 116.11,
+        "low": 87.08
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2788,
+      "public_merged_pull_requests": 2791,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 28245.61,
-        "high": 38132.62,
-        "low": 21184.4
+        "base": 28275.84,
+        "high": 38173.42,
+        "low": 21207.07
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3127.68,
-        "high": 4458.0,
-        "low": 2162.42
+        "base": 3130.63,
+        "high": 4462.13,
+        "low": 2164.49
       }
     }
   ],
-  "public_accepted_pull_requests": 3030,
+  "public_accepted_pull_requests": 3033,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 37693.05,
-    "high": 51228.3,
-    "low": 27928.37
+    "base": 37723.28,
+    "high": 51269.1,
+    "low": 27951.04
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4576.33,
-    "high": 6760.19,
-    "low": 3115.98
+    "base": 4579.28,
+    "high": 6764.32,
+    "low": 3118.05
   },
   "updated_at_utc": "2026-10-25",
   "window": {
-    "end": "2026-10-25T04:45:40Z",
+    "end": "2026-10-25T05:27:34Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -88506,6 +88506,93 @@
       "pull_request": 1351,
       "title": "fix(ais): keep a tracked vessel's motion when static data arrives",
       "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1351"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T21:59:05Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.8,
+        "high": 10.53,
+        "low": 5.85
+      },
+      "merged_at": "2026-10-25T05:23:59Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "Graphicle-AI/graphicle",
+      "pull_request": 11,
+      "title": "fix(service): allow plain HTTP to every loopback address",
+      "url": "https://github.com/Graphicle-AI/graphicle/pull/11"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T04:31:30Z",
+      "evidence": {
+        "additions": 147,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.71,
+        "high": 15.8,
+        "low": 8.78
+      },
+      "merged_at": "2026-10-25T05:23:59Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "Graphicle-AI/graphicle",
+      "pull_request": 10,
+      "title": "fix: keep Retry-After when the service says the budget is spent",
+      "url": "https://github.com/Graphicle-AI/graphicle/pull/10"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-24T04:34:21Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 6,
+        "comments": 2,
+        "commits": 5,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.72,
+        "high": 14.47,
+        "low": 8.04
+      },
+      "merged_at": "2026-10-25T05:27:34Z",
+      "modeled_human_direction_hours": {
+        "base": 1.61,
+        "high": 2.25,
+        "low": 1.13
+      },
+      "project": "bilawalsidhu/gods-eye-view",
+      "pull_request": 1354,
+      "title": "fix(firms): drop the decimal when fire power rounds to 10 MW",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1354"
     }
   ]
 }
