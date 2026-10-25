@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 257.2,
-    "high": 407.7,
-    "low": 166.8
+    "base": 257.3,
+    "high": 408.0,
+    "low": 166.9
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0275
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.98,
+    "evidence_window_weeks": 84.99,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 956.2,
+  "engineer_weeks_at_40h": 956.9,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.72,
-    "high": 169.96,
-    "low": 127.47
+    "base": 148.73,
+    "high": 169.98,
+    "low": 127.48
   },
   "monthly": [
     {
@@ -437,13 +437,13 @@
       "active_repositories": 18,
       "agentic_power_x": {
         "base": 146.3,
-        "high": 238.7,
+        "high": 239.4,
         "low": 89.7
       },
       "modeled_human_direction_hours": {
         "base": 3.81,
         "high": 4.35,
-        "low": 3.27
+        "low": 3.26
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 170.9,
-        "high": 278.9,
-        "low": 104.6
+        "high": 279.5,
+        "low": 104.7
       },
       "modeled_human_direction_hours": {
         "base": 5.49,
-        "high": 6.28,
-        "low": 4.71
+        "high": 6.27,
+        "low": 4.7
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 200.8,
+        "base": 201.3,
         "high": 328.4,
         "low": 123.1
       },
       "modeled_human_direction_hours": {
-        "base": 4.03,
+        "base": 4.02,
         "high": 4.6,
         "low": 3.45
       },
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 215.6,
-        "high": 352.0,
+        "high": 352.5,
         "low": 132.1
       },
       "modeled_human_direction_hours": {
         "base": 9.62,
         "high": 10.99,
-        "low": 8.25
+        "low": 8.24
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 284.3,
-        "high": 453.0,
-        "low": 182.5
+        "high": 453.4,
+        "low": 182.6
       },
       "modeled_human_direction_hours": {
         "base": 13.61,
-        "high": 15.56,
-        "low": 11.67
+        "high": 15.55,
+        "low": 11.66
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 281.7,
-        "high": 443.7,
-        "low": 184.9
+        "base": 281.9,
+        "high": 444.0,
+        "low": 185.0
       },
       "modeled_human_direction_hours": {
-        "base": 102.22,
-        "high": 116.83,
-        "low": 87.62
+        "base": 102.26,
+        "high": 116.87,
+        "low": 87.65
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2845,
+      "public_merged_pull_requests": 2848,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 28798.66,
-        "high": 38879.25,
-        "low": 21599.21
+        "base": 28827.32,
+        "high": 38917.94,
+        "low": 21620.71
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3185.28,
-        "high": 4539.78,
-        "low": 2202.38
+        "base": 3187.79,
+        "high": 4543.29,
+        "low": 2204.14
       }
     }
   ],
-  "public_accepted_pull_requests": 3087,
+  "public_accepted_pull_requests": 3090,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 38246.1,
-    "high": 51974.93,
-    "low": 28343.18
+    "base": 38274.76,
+    "high": 52013.62,
+    "low": 28364.68
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4633.93,
-    "high": 6841.97,
-    "low": 3155.94
+    "base": 4636.44,
+    "high": 6845.48,
+    "low": 3157.7
   },
   "updated_at_utc": "2026-10-25",
   "window": {
-    "end": "2026-10-25T16:51:11Z",
+    "end": "2026-10-25T17:27:34Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -79869,6 +79869,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-21T21:38:27Z",
+      "evidence": {
+        "additions": 88,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 11,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.03,
+        "high": 13.54,
+        "low": 7.52
+      },
+      "merged_at": "2026-10-21T22:14:03Z",
+      "modeled_human_direction_hours": {
+        "base": 0.98,
+        "high": 1.37,
+        "low": 0.69
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4497,
+      "title": "fix(notifications): reject non-positive reply poll interval and rate limit",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4497"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-21T21:44:24Z",
       "evidence": {
         "additions": 111,
@@ -90159,6 +90188,64 @@
       "pull_request": 4600,
       "title": "fix(pre-tool-enforcer): stop truncating OMC_PRE_TOOL_ADVISORY_COOLDOWN_MS",
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4600"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T15:41:38Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.58,
+        "high": 11.58,
+        "low": 6.44
+      },
+      "merged_at": "2026-10-25T17:27:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1706,
+      "title": "fix(web): carry a migration archive size that rounds up a unit",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1706"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T15:41:21Z",
+      "evidence": {
+        "additions": 68,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.05,
+        "high": 13.57,
+        "low": 7.54
+      },
+      "merged_at": "2026-10-25T17:27:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1705,
+      "title": "fix(backup): carry a size that rounds up to the next unit",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1705"
     }
   ]
 }
