@@ -1,15 +1,15 @@
 {
   "agentic_power_x": {
-    "base": 254.6,
-    "high": 403.6,
-    "low": 165.0
+    "base": 254.7,
+    "high": 403.8,
+    "low": 165.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0324,
       "high": 0.037,
-      "low": 0.0278
+      "low": 0.0277
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
     "evidence_window_weeks": 84.92,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 945.7,
+  "engineer_weeks_at_40h": 946.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -334,11 +334,11 @@
       "agentic_power_x": {
         "base": 142.1,
         "high": 232.0,
-        "low": 86.4
+        "low": 87.0
       },
       "modeled_human_direction_hours": {
         "base": 1.26,
-        "high": 1.45,
+        "high": 1.44,
         "low": 1.08
       },
       "month": "2025-12",
@@ -358,12 +358,12 @@
     {
       "active_repositories": 4,
       "agentic_power_x": {
-        "base": 115.5,
+        "base": 117.5,
         "high": 191.4,
         "low": 71.1
       },
       "modeled_human_direction_hours": {
-        "base": 0.58,
+        "base": 0.57,
         "high": 0.66,
         "low": 0.49
       },
@@ -410,12 +410,12 @@
     {
       "active_repositories": 13,
       "agentic_power_x": {
-        "base": 102.8,
+        "base": 103.4,
         "high": 168.6,
         "low": 63.1
       },
       "modeled_human_direction_hours": {
-        "base": 1.78,
+        "base": 1.77,
         "high": 2.03,
         "low": 1.52
       },
@@ -437,13 +437,13 @@
       "active_repositories": 18,
       "agentic_power_x": {
         "base": 145.2,
-        "high": 236.5,
+        "high": 237.2,
         "low": 88.9
       },
       "modeled_human_direction_hours": {
         "base": 3.84,
         "high": 4.39,
-        "low": 3.3
+        "low": 3.29
       },
       "month": "2026-04",
       "public_merged_pull_requests": 0,
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 213.6,
+        "base": 213.9,
         "high": 349.1,
-        "low": 130.8
+        "low": 130.9
       },
       "modeled_human_direction_hours": {
-        "base": 9.71,
-        "high": 11.1,
+        "base": 9.7,
+        "high": 11.09,
         "low": 8.32
       },
       "month": "2026-08",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 281.6,
-        "high": 448.7,
-        "low": 180.8
+        "base": 281.8,
+        "high": 449.1,
+        "low": 181.0
       },
       "modeled_human_direction_hours": {
-        "base": 13.74,
-        "high": 15.7,
-        "low": 11.78
+        "base": 13.73,
+        "high": 15.69,
+        "low": 11.77
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 279.1,
-        "high": 439.6,
+        "base": 279.2,
+        "high": 439.8,
         "low": 183.2
       },
       "modeled_human_direction_hours": {
-        "base": 101.69,
-        "high": 116.22,
-        "low": 87.16
+        "base": 101.71,
+        "high": 116.24,
+        "low": 87.18
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2796,
+      "public_merged_pull_requests": 2798,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 28381.33,
-        "high": 38315.84,
-        "low": 21286.18
+        "base": 28397.78,
+        "high": 38338.04,
+        "low": 21298.51
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3139.57,
-        "high": 4474.65,
-        "low": 2170.74
+        "base": 3141.63,
+        "high": 4477.53,
+        "low": 2172.18
       }
     }
   ],
-  "public_accepted_pull_requests": 3038,
+  "public_accepted_pull_requests": 3040,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 37828.77,
-    "high": 51411.52,
-    "low": 28030.15
+    "base": 37845.22,
+    "high": 51433.72,
+    "low": 28042.48
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4588.22,
-    "high": 6776.84,
-    "low": 3124.3
+    "base": 4590.28,
+    "high": 6779.72,
+    "low": 3125.74
   },
   "updated_at_utc": "2026-10-25",
   "window": {
-    "end": "2026-10-25T06:39:52Z",
+    "end": "2026-10-25T06:45:15Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -88738,6 +88738,64 @@
       "pull_request": 1340,
       "title": "fix(search): read hemisphere letters separated from the number",
       "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1340"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:58:46Z",
+      "evidence": {
+        "additions": 45,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 14,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.66,
+        "high": 11.69,
+        "low": 6.49
+      },
+      "merged_at": "2026-10-25T06:44:53Z",
+      "modeled_human_direction_hours": {
+        "base": 1.03,
+        "high": 1.44,
+        "low": 0.72
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1760,
+      "title": "fix(logs): mask JWTs before the high-entropy pattern can split them",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1760"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T03:01:15Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.79,
+        "high": 10.51,
+        "low": 5.84
+      },
+      "merged_at": "2026-10-25T06:45:15Z",
+      "modeled_human_direction_hours": {
+        "base": 1.03,
+        "high": 1.44,
+        "low": 0.72
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1762,
+      "title": "fix(logs): mask sk-proj/sk-svcacct/sk-admin OpenAI keys",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1762"
     }
   ]
 }
