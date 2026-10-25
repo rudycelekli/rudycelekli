@@ -12,7 +12,7 @@
       "low": 0.0275
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 84.96,
+    "evidence_window_weeks": 84.98,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 955.0,
+  "engineer_weeks_at_40h": 955.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.68,
-    "high": 169.92,
-    "low": 127.44
+    "base": 148.72,
+    "high": 169.96,
+    "low": 127.47
   },
   "monthly": [
     {
@@ -515,13 +515,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 200.8,
-        "high": 327.4,
+        "high": 328.4,
         "low": 122.9
       },
       "modeled_human_direction_hours": {
         "base": 4.03,
         "high": 4.61,
-        "low": 3.46
+        "low": 3.45
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -597,43 +597,43 @@
         "low": 184.7
       },
       "modeled_human_direction_hours": {
-        "base": 102.14,
-        "high": 116.73,
-        "low": 87.55
+        "base": 102.18,
+        "high": 116.77,
+        "low": 87.58
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2840,
+      "public_merged_pull_requests": 2841,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 28753.14,
-        "high": 38817.81,
-        "low": 21565.07
+        "base": 28762.03,
+        "high": 38829.81,
+        "low": 21571.74
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3179.32,
-        "high": 4531.43,
-        "low": 2198.21
+        "base": 3180.55,
+        "high": 4533.15,
+        "low": 2199.07
       }
     }
   ],
-  "public_accepted_pull_requests": 3082,
+  "public_accepted_pull_requests": 3083,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 38200.58,
-    "high": 51913.49,
-    "low": 28309.04
+    "base": 38209.47,
+    "high": 51925.49,
+    "low": 28315.71
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4627.97,
-    "high": 6833.62,
-    "low": 3151.77
+    "base": 4629.2,
+    "high": 6835.34,
+    "low": 3152.63
   },
   "updated_at_utc": "2026-10-25",
   "window": {
-    "end": "2026-10-25T12:24:50Z",
+    "end": "2026-10-25T15:55:18Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -90014,6 +90014,35 @@
       "pull_request": 90,
       "title": "Keep a checkbox inside a code sample from becoming a task",
       "url": "https://github.com/rociiu/talorys/pull/90"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T15:31:43Z",
+      "evidence": {
+        "additions": 10,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.89,
+        "high": 12.0,
+        "low": 6.67
+      },
+      "merged_at": "2026-10-25T15:55:18Z",
+      "modeled_human_direction_hours": {
+        "base": 1.23,
+        "high": 1.72,
+        "low": 0.86
+      },
+      "project": "bilawalsidhu/gods-eye-view",
+      "pull_request": 1385,
+      "title": "fix(directions): show a 59.6-second leg as 1 min, not 60 s",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1385"
     }
   ]
 }
