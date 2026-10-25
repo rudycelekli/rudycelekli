@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 258.5,
-    "high": 409.9,
+    "base": 258.6,
+    "high": 410.0,
     "low": 167.7
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 961.4,
+  "engineer_weeks_at_40h": 961.7,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 285.8,
         "high": 455.3,
-        "low": 183.4
+        "low": 183.5
       },
       "modeled_human_direction_hours": {
         "base": 13.54,
-        "high": 15.48,
+        "high": 15.47,
         "low": 11.61
       },
       "month": "2026-09",
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 283.1,
-        "high": 445.8,
-        "low": 185.7
+        "high": 445.9,
+        "low": 185.8
       },
       "modeled_human_direction_hours": {
-        "base": 102.49,
-        "high": 117.14,
-        "low": 87.85
+        "base": 102.5,
+        "high": 117.15,
+        "low": 87.86
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2872,
+      "public_merged_pull_requests": 2873,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 29009.9,
-        "high": 39164.47,
-        "low": 21757.66
+        "base": 29020.34,
+        "high": 39178.56,
+        "low": 21765.49
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3209.89,
-        "high": 4575.35,
-        "low": 2219.27
+        "base": 3210.81,
+        "high": 4576.64,
+        "low": 2219.91
       }
     }
   ],
-  "public_accepted_pull_requests": 3114,
+  "public_accepted_pull_requests": 3115,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 38457.34,
-    "high": 52260.15,
-    "low": 28501.63
+    "base": 38467.78,
+    "high": 52274.24,
+    "low": 28509.46
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4658.54,
-    "high": 6877.54,
-    "low": 3172.83
+    "base": 4659.46,
+    "high": 6878.83,
+    "low": 3173.47
   },
   "updated_at_utc": "2026-10-25",
   "window": {
-    "end": "2026-10-25T19:53:34Z",
+    "end": "2026-10-25T20:15:36Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -90942,6 +90942,35 @@
       "pull_request": 470,
       "title": "fix(heatmap): read a quoted greater-than in markup",
       "url": "https://github.com/cathrynlavery/diagram-design/pull/470"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T19:53:17Z",
+      "evidence": {
+        "additions": 104,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 14,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.44,
+        "high": 14.09,
+        "low": 7.83
+      },
+      "merged_at": "2026-10-25T20:15:36Z",
+      "modeled_human_direction_hours": {
+        "base": 0.92,
+        "high": 1.29,
+        "low": 0.64
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4607,
+      "title": "fix(omc-orchestrator): keep the first git status entry's path intact",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4607"
     }
   ]
 }
