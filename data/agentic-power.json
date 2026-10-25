@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
     "base": 257.3,
-    "high": 407.9,
-    "low": 166.8
+    "high": 408.0,
+    "low": 166.9
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 956.6,
+  "engineer_weeks_at_40h": 956.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 170.9,
-        "high": 278.9,
+        "high": 279.5,
         "low": 104.7
       },
       "modeled_human_direction_hours": {
         "base": 5.49,
         "high": 6.27,
-        "low": 4.71
+        "low": 4.7
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 200.8,
+        "base": 201.3,
         "high": 328.4,
         "low": 123.1
       },
       "modeled_human_direction_hours": {
-        "base": 4.03,
+        "base": 4.02,
         "high": 4.6,
         "low": 3.45
       },
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 281.8,
+        "base": 281.9,
         "high": 443.9,
-        "low": 184.9
+        "low": 185.0
       },
       "modeled_human_direction_hours": {
-        "base": 102.25,
-        "high": 116.86,
-        "low": 87.64
+        "base": 102.26,
+        "high": 116.87,
+        "low": 87.66
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2847,
+      "public_merged_pull_requests": 2848,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 28817.29,
-        "high": 38904.4,
-        "low": 21613.19
+        "base": 28825.75,
+        "high": 38915.82,
+        "low": 21619.53
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3186.81,
-        "high": 4541.92,
-        "low": 2203.45
+        "base": 3188.09,
+        "high": 4543.71,
+        "low": 2204.35
       }
     }
   ],
-  "public_accepted_pull_requests": 3089,
+  "public_accepted_pull_requests": 3090,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 38264.73,
-    "high": 52000.08,
-    "low": 28357.16
+    "base": 38273.19,
+    "high": 52011.5,
+    "low": 28363.5
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4635.46,
-    "high": 6844.11,
-    "low": 3157.01
+    "base": 4636.74,
+    "high": 6845.9,
+    "low": 3157.91
   },
   "updated_at_utc": "2026-10-25",
   "window": {
-    "end": "2026-10-25T17:27:34Z",
+    "end": "2026-10-25T18:10:33Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -90217,6 +90217,35 @@
       "pull_request": 1705,
       "title": "fix(backup): carry a size that rounds up to the next unit",
       "url": "https://github.com/akitaonrails/ai-memory/pull/1705"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:17:43Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 3,
+        "comments": 3,
+        "commits": 3,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.46,
+        "high": 11.42,
+        "low": 6.34
+      },
+      "merged_at": "2026-10-25T18:10:33Z",
+      "modeled_human_direction_hours": {
+        "base": 1.28,
+        "high": 1.79,
+        "low": 0.9
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4601,
+      "title": "fix(hud): show token counts that round up to 1000k in millions",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4601"
     }
   ]
 }
