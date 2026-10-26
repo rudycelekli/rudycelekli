@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 259.3,
-    "high": 411.2,
+    "base": 259.4,
+    "high": 411.3,
     "low": 168.2
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0273
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.06,
+    "evidence_window_weeks": 85.07,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 965.2,
+  "engineer_weeks_at_40h": 965.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.86,
-    "high": 170.12,
-    "low": 127.59
+    "base": 148.87,
+    "high": 170.14,
+    "low": 127.6
   },
   "monthly": [
     {
@@ -412,11 +412,11 @@
       "agentic_power_x": {
         "base": 104.6,
         "high": 170.8,
-        "low": 64.0
+        "low": 64.4
       },
       "modeled_human_direction_hours": {
         "base": 1.75,
-        "high": 2.0,
+        "high": 1.99,
         "low": 1.5
       },
       "month": "2026-03",
@@ -540,12 +540,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 217.2,
+        "base": 217.5,
         "high": 355.0,
         "low": 133.1
       },
       "modeled_human_direction_hours": {
-        "base": 9.55,
+        "base": 9.54,
         "high": 10.91,
         "low": 8.18
       },
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 286.4,
         "high": 456.5,
-        "low": 183.9
+        "low": 184.0
       },
       "modeled_human_direction_hours": {
         "base": 13.51,
-        "high": 15.44,
+        "high": 15.43,
         "low": 11.58
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 283.9,
-        "high": 447.1,
+        "base": 284.0,
+        "high": 447.2,
         "low": 186.3
       },
       "modeled_human_direction_hours": {
-        "base": 102.72,
-        "high": 117.4,
-        "low": 88.05
+        "base": 102.74,
+        "high": 117.42,
+        "low": 88.07
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2887,
+      "public_merged_pull_requests": 2889,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 29158.58,
-        "high": 39365.21,
-        "low": 21869.2
+        "base": 29173.24,
+        "high": 39385.0,
+        "low": 21880.2
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3225.63,
-        "high": 4597.38,
-        "low": 2230.28
+        "base": 3226.71,
+        "high": 4598.9,
+        "low": 2231.04
       }
     }
   ],
-  "public_accepted_pull_requests": 3129,
+  "public_accepted_pull_requests": 3131,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 38606.02,
-    "high": 52460.89,
-    "low": 28613.17
+    "base": 38620.68,
+    "high": 52480.68,
+    "low": 28624.17
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4674.28,
-    "high": 6899.57,
-    "low": 3183.84
+    "base": 4675.36,
+    "high": 6901.09,
+    "low": 3184.6
   },
   "updated_at_utc": "2026-10-26",
   "window": {
-    "end": "2026-10-26T05:19:42Z",
+    "end": "2026-10-26T06:50:38Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -91377,6 +91377,64 @@
       "pull_request": 6464,
       "title": "fix(media): accept data URLs that capitalize the base64 token",
       "url": "https://github.com/HKUDS/nanobot/pull/6464"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:04:03Z",
+      "evidence": {
+        "additions": 17,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.86,
+        "high": 9.26,
+        "low": 5.15
+      },
+      "merged_at": "2026-10-26T06:50:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "Graphicle-AI/graphicle",
+      "pull_request": 12,
+      "title": "fix: read OLLAMA_HOST when its scheme is not lowercase",
+      "url": "https://github.com/Graphicle-AI/graphicle/pull/12"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:04:10Z",
+      "evidence": {
+        "additions": 42,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.8,
+        "high": 10.53,
+        "low": 5.85
+      },
+      "merged_at": "2026-10-26T06:50:38Z",
+      "modeled_human_direction_hours": {
+        "base": 0.54,
+        "high": 0.76,
+        "low": 0.38
+      },
+      "project": "Graphicle-AI/graphicle",
+      "pull_request": 13,
+      "title": "fix: accept the Host header browsers send on port 80",
+      "url": "https://github.com/Graphicle-AI/graphicle/pull/13"
     }
   ]
 }
