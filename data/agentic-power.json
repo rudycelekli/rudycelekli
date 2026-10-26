@@ -1,18 +1,18 @@
 {
   "agentic_power_x": {
     "base": 265.7,
-    "high": 421.1,
-    "low": 172.3
+    "high": 421.2,
+    "low": 172.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0313,
+      "base": 0.0312,
       "high": 0.0357,
       "low": 0.0268
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.14,
+    "evidence_window_weeks": 85.16,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 989.6,
+  "engineer_weeks_at_40h": 990.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.0,
-    "high": 170.28,
-    "low": 127.71
+    "base": 149.03,
+    "high": 170.32,
+    "low": 127.74
   },
   "monthly": [
     {
@@ -125,13 +125,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 27.5,
-        "high": 44.5,
+        "high": 45.6,
         "low": 16.9
       },
       "modeled_human_direction_hours": {
         "base": 0.51,
         "high": 0.58,
-        "low": 0.44
+        "low": 0.43
       },
       "month": "2025-04",
       "public_merged_pull_requests": 0,
@@ -358,12 +358,12 @@
     {
       "active_repositories": 4,
       "agentic_power_x": {
-        "base": 119.6,
+        "base": 121.8,
         "high": 195.4,
         "low": 74.4
       },
       "modeled_human_direction_hours": {
-        "base": 0.56,
+        "base": 0.55,
         "high": 0.63,
         "low": 0.48
       },
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 187.1,
-        "high": 304.9,
+        "high": 306.2,
         "low": 114.5
       },
       "modeled_human_direction_hours": {
         "base": 2.7,
         "high": 3.09,
-        "low": 2.32
+        "low": 2.31
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 175.4,
+        "base": 175.7,
         "high": 286.8,
         "low": 107.5
       },
       "modeled_human_direction_hours": {
-        "base": 5.35,
+        "base": 5.34,
         "high": 6.11,
         "low": 4.58
       },
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 221.4,
+        "base": 221.6,
         "high": 361.7,
-        "low": 135.6
+        "low": 135.7
       },
       "modeled_human_direction_hours": {
-        "base": 9.37,
-        "high": 10.71,
+        "base": 9.36,
+        "high": 10.7,
         "low": 8.03
       },
       "month": "2026-08",
@@ -566,13 +566,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 291.8,
+        "base": 292.0,
         "high": 465.3,
-        "low": 187.4
+        "low": 187.5
       },
       "modeled_human_direction_hours": {
-        "base": 13.26,
-        "high": 15.15,
+        "base": 13.25,
+        "high": 15.14,
         "low": 11.36
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 290.5,
-        "high": 457.6,
+        "base": 290.6,
+        "high": 457.7,
         "low": 190.7
       },
       "modeled_human_direction_hours": {
-        "base": 103.72,
-        "high": 118.54,
-        "low": 88.9
+        "base": 103.78,
+        "high": 118.6,
+        "low": 88.95
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2996,
+      "public_merged_pull_requests": 2998,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 30135.38,
-        "high": 40683.96,
-        "low": 22601.8
+        "base": 30156.15,
+        "high": 40712.0,
+        "low": 22617.38
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3318.8,
-        "high": 4728.89,
-        "low": 2295.06
+        "base": 3322.2,
+        "high": 4733.65,
+        "low": 2297.44
       }
     }
   ],
-  "public_accepted_pull_requests": 3238,
+  "public_accepted_pull_requests": 3240,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 39582.82,
-    "high": 53779.64,
-    "low": 29345.77
+    "base": 39603.59,
+    "high": 53807.68,
+    "low": 29361.35
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4767.45,
-    "high": 7031.08,
-    "low": 3248.62
+    "base": 4770.85,
+    "high": 7035.84,
+    "low": 3251.0
   },
   "updated_at_utc": "2026-10-26",
   "window": {
-    "end": "2026-10-26T19:17:48Z",
+    "end": "2026-10-26T21:41:57Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -94538,6 +94538,64 @@
       "pull_request": 1076,
       "title": "fix(inventory): redact auth-scheme credentials and secrets inside definition strings",
       "url": "https://github.com/Asymptote-Labs/agent-beacon/pull/1076"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T04:05:03Z",
+      "evidence": {
+        "additions": 60,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 10.12,
+        "high": 13.66,
+        "low": 7.59
+      },
+      "merged_at": "2026-10-26T21:36:49Z",
+      "modeled_human_direction_hours": {
+        "base": 1.7,
+        "high": 2.38,
+        "low": 1.19
+      },
+      "project": "cathrynlavery/diagram-design",
+      "pull_request": 469,
+      "title": "fix(import): report an outer Excalidraw group",
+      "url": "https://github.com/cathrynlavery/diagram-design/pull/469"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T04:04:56Z",
+      "evidence": {
+        "additions": 73,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 10,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 10.65,
+        "high": 14.38,
+        "low": 7.99
+      },
+      "merged_at": "2026-10-26T21:41:57Z",
+      "modeled_human_direction_hours": {
+        "base": 1.7,
+        "high": 2.38,
+        "low": 1.19
+      },
+      "project": "cathrynlavery/diagram-design",
+      "pull_request": 468,
+      "title": "fix(import): keep angle brackets in draw.io labels",
+      "url": "https://github.com/cathrynlavery/diagram-design/pull/468"
     }
   ]
 }
