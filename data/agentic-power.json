@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 259.4,
-    "high": 411.3,
+    "high": 411.2,
     "low": 168.2
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0273
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.07,
+    "evidence_window_weeks": 85.1,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 965.5,
+  "engineer_weeks_at_40h": 965.7,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 148.87,
-    "high": 170.14,
-    "low": 127.6
+    "base": 148.92,
+    "high": 170.2,
+    "low": 127.65
   },
   "monthly": [
     {
@@ -412,11 +412,11 @@
       "agentic_power_x": {
         "base": 104.6,
         "high": 170.8,
-        "low": 64.4
+        "low": 64.0
       },
       "modeled_human_direction_hours": {
         "base": 1.75,
-        "high": 1.99,
+        "high": 2.0,
         "low": 1.5
       },
       "month": "2026-03",
@@ -515,13 +515,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 202.3,
-        "high": 331.3,
+        "high": 330.3,
         "low": 124.0
       },
       "modeled_human_direction_hours": {
         "base": 4.0,
         "high": 4.57,
-        "low": 3.42
+        "low": 3.43
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -540,12 +540,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 217.5,
+        "base": 217.2,
         "high": 355.0,
         "low": 133.1
       },
       "modeled_human_direction_hours": {
-        "base": 9.54,
+        "base": 9.55,
         "high": 10.91,
         "low": 8.18
       },
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 286.4,
         "high": 456.5,
-        "low": 184.0
+        "low": 183.9
       },
       "modeled_human_direction_hours": {
         "base": 13.51,
-        "high": 15.43,
+        "high": 15.44,
         "low": 11.58
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 284.0,
-        "high": 447.2,
+        "base": 283.9,
+        "high": 447.1,
         "low": 186.3
       },
       "modeled_human_direction_hours": {
-        "base": 102.74,
-        "high": 117.42,
-        "low": 88.07
+        "base": 102.79,
+        "high": 117.47,
+        "low": 88.11
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2889,
+      "public_merged_pull_requests": 2890,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 29173.24,
-        "high": 39385.0,
-        "low": 21880.2
+        "base": 29181.59,
+        "high": 39396.27,
+        "low": 21886.46
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3226.71,
-        "high": 4598.9,
-        "low": 2231.04
+        "base": 3227.62,
+        "high": 4600.17,
+        "low": 2231.68
       }
     }
   ],
-  "public_accepted_pull_requests": 3131,
+  "public_accepted_pull_requests": 3132,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 38620.68,
-    "high": 52480.68,
-    "low": 28624.17
+    "base": 38629.03,
+    "high": 52491.95,
+    "low": 28630.43
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4675.36,
-    "high": 6901.09,
-    "low": 3184.6
+    "base": 4676.27,
+    "high": 6902.36,
+    "low": 3185.24
   },
   "updated_at_utc": "2026-10-26",
   "window": {
-    "end": "2026-10-26T06:50:38Z",
+    "end": "2026-10-26T11:39:43Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -91435,6 +91435,35 @@
       "pull_request": 13,
       "title": "fix: accept the Host header browsers send on port 80",
       "url": "https://github.com/Graphicle-AI/graphicle/pull/13"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T01:59:48Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.35,
+        "high": 11.27,
+        "low": 6.26
+      },
+      "merged_at": "2026-10-26T11:39:43Z",
+      "modeled_human_direction_hours": {
+        "base": 0.91,
+        "high": 1.27,
+        "low": 0.64
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1749,
+      "title": "fix(shellwrap): mask glued docker env forms inside a command string",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1749"
     }
   ]
 }
