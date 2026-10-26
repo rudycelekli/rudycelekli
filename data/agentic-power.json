@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 265.5,
-    "high": 420.8,
-    "low": 172.2
+    "base": 265.7,
+    "high": 421.1,
+    "low": 172.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 988.9,
+  "engineer_weeks_at_40h": 989.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -334,11 +334,11 @@
       "agentic_power_x": {
         "base": 146.7,
         "high": 238.7,
-        "low": 89.5
+        "low": 90.1
       },
       "modeled_human_direction_hours": {
         "base": 1.22,
-        "high": 1.4,
+        "high": 1.39,
         "low": 1.05
       },
       "month": "2025-12",
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 175.4,
-        "high": 286.2,
+        "high": 286.8,
         "low": 107.5
       },
       "modeled_human_direction_hours": {
         "base": 5.35,
         "high": 6.11,
-        "low": 4.59
+        "low": 4.58
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 291.8,
-        "high": 464.9,
-        "low": 187.3
+        "high": 465.3,
+        "low": 187.4
       },
       "modeled_human_direction_hours": {
         "base": 13.26,
-        "high": 15.16,
-        "low": 11.37
+        "high": 15.15,
+        "low": 11.36
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 290.4,
-        "high": 457.4,
-        "low": 190.6
+        "base": 290.5,
+        "high": 457.6,
+        "low": 190.7
       },
       "modeled_human_direction_hours": {
-        "base": 103.7,
-        "high": 118.51,
-        "low": 88.88
+        "base": 103.72,
+        "high": 118.54,
+        "low": 88.9
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 2994,
+      "public_merged_pull_requests": 2996,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 30110.06,
-        "high": 40649.77,
-        "low": 22582.81
+        "base": 30135.38,
+        "high": 40683.96,
+        "low": 22601.8
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3316.3,
-        "high": 4725.39,
-        "low": 2293.31
+        "base": 3318.8,
+        "high": 4728.89,
+        "low": 2295.06
       }
     }
   ],
-  "public_accepted_pull_requests": 3236,
+  "public_accepted_pull_requests": 3238,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 39557.5,
-    "high": 53745.45,
-    "low": 29326.78
+    "base": 39582.82,
+    "high": 53779.64,
+    "low": 29345.77
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4764.95,
-    "high": 7027.58,
-    "low": 3246.87
+    "base": 4767.45,
+    "high": 7031.08,
+    "low": 3248.62
   },
   "updated_at_utc": "2026-10-26",
   "window": {
-    "end": "2026-10-26T19:05:52Z",
+    "end": "2026-10-26T19:17:48Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -94480,6 +94480,64 @@
       "pull_request": 1070,
       "title": "fix(harness): keep codex config sections whose header has a comment",
       "url": "https://github.com/Asymptote-Labs/agent-beacon/pull/1070"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T17:47:23Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 3,
+        "comments": 3,
+        "commits": 3,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.97,
+        "high": 12.11,
+        "low": 6.73
+      },
+      "merged_at": "2026-10-26T19:10:13Z",
+      "modeled_human_direction_hours": {
+        "base": 1.28,
+        "high": 1.79,
+        "low": 0.9
+      },
+      "project": "Kentucky-ai/opentakeoff",
+      "pull_request": 567,
+      "title": "fix(captures): keep relative ages inside their time buckets",
+      "url": "https://github.com/Kentucky-ai/opentakeoff/pull/567"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:30:56Z",
+      "evidence": {
+        "additions": 281,
+        "changed_files": 9,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 93,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 16.35,
+        "high": 22.08,
+        "low": 12.26
+      },
+      "merged_at": "2026-10-26T19:17:48Z",
+      "modeled_human_direction_hours": {
+        "base": 1.22,
+        "high": 1.71,
+        "low": 0.85
+      },
+      "project": "Asymptote-Labs/agent-beacon",
+      "pull_request": 1076,
+      "title": "fix(inventory): redact auth-scheme credentials and secrets inside definition strings",
+      "url": "https://github.com/Asymptote-Labs/agent-beacon/pull/1076"
     }
   ]
 }
