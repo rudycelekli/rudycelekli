@@ -1,6 +1,6 @@
 {
   "agentic_power_x": {
-    "base": 270.4,
+    "base": 270.5,
     "high": 428.6,
     "low": 175.5
   },
@@ -12,7 +12,7 @@
       "low": 0.0266
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.21,
+    "evidence_window_weeks": 85.22,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1008.1,
+  "engineer_weeks_at_40h": 1008.4,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.12,
-    "high": 170.42,
-    "low": 127.81
+    "base": 149.13,
+    "high": 170.44,
+    "low": 127.83
   },
   "monthly": [
     {
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 296.6,
-        "high": 467.2,
+        "base": 296.7,
+        "high": 467.3,
         "low": 194.7
       },
       "modeled_human_direction_hours": {
-        "base": 104.1,
-        "high": 118.97,
-        "low": 89.23
+        "base": 104.11,
+        "high": 118.99,
+        "low": 89.24
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3011,
+      "public_merged_pull_requests": 3012,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 30878.09,
-        "high": 41686.63,
-        "low": 23158.83
+        "base": 30886.72,
+        "high": 41698.28,
+        "low": 23165.3
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3349.5,
-        "high": 4771.85,
-        "low": 2316.55
+        "base": 3350.11,
+        "high": 4772.7,
+        "low": 2316.98
       }
     }
   ],
-  "public_accepted_pull_requests": 3253,
+  "public_accepted_pull_requests": 3254,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 40325.53,
-    "high": 54782.31,
-    "low": 29902.8
+    "base": 40334.16,
+    "high": 54793.96,
+    "low": 29909.27
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4798.15,
-    "high": 7074.04,
-    "low": 3270.11
+    "base": 4798.76,
+    "high": 7074.89,
+    "low": 3270.54
   },
   "updated_at_utc": "2026-10-27",
   "window": {
-    "end": "2026-10-27T07:37:11Z",
+    "end": "2026-10-27T08:01:26Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -94973,6 +94973,35 @@
       "pull_request": 1414,
       "title": "A Trino decimal reads as a number, so SUM(amount) is 1234.5 instead of \"1234.50\"",
       "url": "https://github.com/deeplethe/utopia/pull/1414"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-20T07:10:42Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.63,
+        "high": 11.65,
+        "low": 6.47
+      },
+      "merged_at": "2026-10-27T08:01:26Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "open-compass/VLMEvalKit",
+      "pull_request": 1784,
+      "title": "fix(inference): reuse MMBench V11 JSON prediction tables",
+      "url": "https://github.com/open-compass/VLMEvalKit/pull/1784"
     }
   ]
 }
