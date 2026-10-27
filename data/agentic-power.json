@@ -1,15 +1,15 @@
 {
   "agentic_power_x": {
-    "base": 265.9,
-    "high": 421.4,
-    "low": 172.5
+    "base": 267.3,
+    "high": 423.7,
+    "low": 173.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0312,
       "high": 0.0357,
-      "low": 0.0268
+      "low": 0.0267
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
     "evidence_window_weeks": 85.18,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 990.8,
+  "engineer_weeks_at_40h": 996.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -333,13 +333,13 @@
       "active_repositories": 8,
       "agentic_power_x": {
         "base": 146.7,
-        "high": 238.7,
+        "high": 241.0,
         "low": 90.1
       },
       "modeled_human_direction_hours": {
         "base": 1.22,
         "high": 1.39,
-        "low": 1.05
+        "low": 1.04
       },
       "month": "2025-12",
       "public_merged_pull_requests": 0,
@@ -436,13 +436,13 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 150.3,
+        "base": 150.7,
         "high": 245.4,
-        "low": 92.0
+        "low": 92.3
       },
       "modeled_human_direction_hours": {
-        "base": 3.71,
-        "high": 4.24,
+        "base": 3.7,
+        "high": 4.23,
         "low": 3.18
       },
       "month": "2026-04",
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 187.1,
         "high": 306.2,
-        "low": 114.5
+        "low": 114.8
       },
       "modeled_human_direction_hours": {
         "base": 2.7,
-        "high": 3.09,
+        "high": 3.08,
         "low": 2.31
       },
       "month": "2026-05",
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 175.7,
         "high": 286.8,
-        "low": 107.5
+        "low": 107.7
       },
       "modeled_human_direction_hours": {
         "base": 5.34,
-        "high": 6.11,
+        "high": 6.1,
         "low": 4.58
       },
       "month": "2026-06",
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 206.4,
         "high": 337.2,
-        "low": 126.4
+        "low": 126.7
       },
       "modeled_human_direction_hours": {
         "base": 3.92,
-        "high": 4.48,
+        "high": 4.47,
         "low": 3.36
       },
       "month": "2026-07",
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 221.6,
+        "base": 221.9,
         "high": 362.1,
-        "low": 135.7
+        "low": 135.8
       },
       "modeled_human_direction_hours": {
-        "base": 9.36,
-        "high": 10.7,
+        "base": 9.35,
+        "high": 10.69,
         "low": 8.02
       },
       "month": "2026-08",
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 292.0,
-        "high": 465.7,
-        "low": 187.5
+        "base": 292.2,
+        "high": 466.1,
+        "low": 187.7
       },
       "modeled_human_direction_hours": {
-        "base": 13.25,
-        "high": 15.14,
-        "low": 11.35
+        "base": 13.24,
+        "high": 15.13,
+        "low": 11.34
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 290.7,
-        "high": 457.9,
-        "low": 190.8
+        "base": 292.7,
+        "high": 461.0,
+        "low": 192.1
       },
       "modeled_human_direction_hours": {
-        "base": 103.82,
-        "high": 118.65,
-        "low": 88.99
+        "base": 103.86,
+        "high": 118.7,
+        "low": 89.02
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3000,
+      "public_merged_pull_requests": 3001,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 30182.68,
-        "high": 40747.82,
-        "low": 22637.28
+        "base": 30399.55,
+        "high": 41040.6,
+        "low": 22799.94
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3324.32,
-        "high": 4736.61,
-        "low": 2298.93
+        "base": 3328.17,
+        "high": 4742.0,
+        "low": 2301.62
       }
     }
   ],
-  "public_accepted_pull_requests": 3242,
+  "public_accepted_pull_requests": 3243,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 39630.12,
-    "high": 53843.5,
-    "low": 29381.25
+    "base": 39846.99,
+    "high": 54136.28,
+    "low": 29543.91
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4772.97,
-    "high": 7038.8,
-    "low": 3252.49
+    "base": 4776.82,
+    "high": 7044.19,
+    "low": 3255.18
   },
   "updated_at_utc": "2026-10-27",
   "window": {
-    "end": "2026-10-27T01:10:31Z",
+    "end": "2026-10-27T02:16:16Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -94654,6 +94654,35 @@
       "pull_request": 4255,
       "title": "fix(models): assemble multiline provider SSE packets",
       "url": "https://github.com/Tencent/WeKnora/pull/4255"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-26T07:00:25Z",
+      "evidence": {
+        "additions": 51803,
+        "changed_files": 959,
+        "comments": 5,
+        "commits": 190,
+        "deletions": 8903,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 216.87,
+        "high": 292.78,
+        "low": 162.66
+      },
+      "merged_at": "2026-10-27T02:16:16Z",
+      "modeled_human_direction_hours": {
+        "base": 3.85,
+        "high": 5.39,
+        "low": 2.69
+      },
+      "project": "morluto/rea",
+      "pull_request": 7203,
+      "title": "fix(browser): keep opaque cookie partitions unaligned",
+      "url": "https://github.com/morluto/rea/pull/7203"
     }
   ]
 }
