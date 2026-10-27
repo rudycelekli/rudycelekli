@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 269.9,
-    "high": 427.8,
-    "low": 175.1
+    "base": 270.0,
+    "high": 427.9,
+    "low": 175.2
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0267
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.2,
+    "evidence_window_weeks": 85.21,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1006.1,
+  "engineer_weeks_at_40h": 1006.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.1,
-    "high": 170.4,
-    "low": 127.8
+    "base": 149.12,
+    "high": 170.42,
+    "low": 127.81
   },
   "monthly": [
     {
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 296.2,
-        "high": 466.5,
+        "base": 296.3,
+        "high": 466.6,
         "low": 194.4
       },
       "modeled_human_direction_hours": {
-        "base": 103.98,
-        "high": 118.83,
-        "low": 89.12
+        "base": 104.0,
+        "high": 118.86,
+        "low": 89.14
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3004,
+      "public_merged_pull_requests": 3005,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 30797.51,
-        "high": 41577.84,
-        "low": 23098.41
+        "base": 30811.38,
+        "high": 41596.56,
+        "low": 23108.81
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3338.32,
-        "high": 4756.21,
-        "low": 2308.72
+        "base": 3339.24,
+        "high": 4757.5,
+        "low": 2309.36
       }
     }
   ],
-  "public_accepted_pull_requests": 3246,
+  "public_accepted_pull_requests": 3247,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 40244.95,
-    "high": 54673.52,
-    "low": 29842.38
+    "base": 40258.82,
+    "high": 54692.24,
+    "low": 29852.78
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4786.97,
-    "high": 7058.4,
-    "low": 3262.28
+    "base": 4787.89,
+    "high": 7059.69,
+    "low": 3262.92
   },
   "updated_at_utc": "2026-10-27",
   "window": {
-    "end": "2026-10-27T05:30:24Z",
+    "end": "2026-10-27T06:41:41Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -94770,6 +94770,35 @@
       "pull_request": 7206,
       "title": "fix(harmony): classify exact manifest names once",
       "url": "https://github.com/morluto/rea/pull/7206"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-06T08:14:42Z",
+      "evidence": {
+        "additions": 191,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.87,
+        "high": 18.72,
+        "low": 10.4
+      },
+      "merged_at": "2026-10-27T06:41:41Z",
+      "modeled_human_direction_hours": {
+        "base": 0.92,
+        "high": 1.29,
+        "low": 0.64
+      },
+      "project": "open-compass/VLMEvalKit",
+      "pull_request": 1735,
+      "title": "Use canonical V2PBench video paths for decoding and cache validation",
+      "url": "https://github.com/open-compass/VLMEvalKit/pull/1735"
     }
   ]
 }
