@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
     "base": 270.5,
-    "high": 428.6,
+    "high": 428.7,
     "low": 175.5
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1008.4,
+  "engineer_weeks_at_40h": 1008.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -540,13 +540,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 222.6,
+        "base": 222.8,
         "high": 363.9,
-        "low": 136.4
+        "low": 136.5
       },
       "modeled_human_direction_hours": {
-        "base": 9.32,
-        "high": 10.65,
+        "base": 9.31,
+        "high": 10.64,
         "low": 7.98
       },
       "month": "2026-08",
@@ -597,43 +597,43 @@
         "low": 194.7
       },
       "modeled_human_direction_hours": {
-        "base": 104.11,
+        "base": 104.12,
         "high": 118.99,
-        "low": 89.24
+        "low": 89.25
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3012,
+      "public_merged_pull_requests": 3013,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 30886.72,
-        "high": 41698.28,
-        "low": 23165.3
+        "base": 30893.13,
+        "high": 41706.93,
+        "low": 23170.11
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3350.11,
-        "high": 4772.7,
-        "low": 2316.98
+        "base": 3350.77,
+        "high": 4773.62,
+        "low": 2317.44
       }
     }
   ],
-  "public_accepted_pull_requests": 3254,
+  "public_accepted_pull_requests": 3255,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 40334.16,
-    "high": 54793.96,
-    "low": 29909.27
+    "base": 40340.57,
+    "high": 54802.61,
+    "low": 29914.08
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4798.76,
-    "high": 7074.89,
-    "low": 3270.54
+    "base": 4799.42,
+    "high": 7075.81,
+    "low": 3271.0
   },
   "updated_at_utc": "2026-10-27",
   "window": {
-    "end": "2026-10-27T08:01:26Z",
+    "end": "2026-10-27T09:14:03Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -95002,6 +95002,35 @@
       "pull_request": 1784,
       "title": "fix(inference): reuse MMBench V11 JSON prediction tables",
       "url": "https://github.com/open-compass/VLMEvalKit/pull/1784"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-12T17:08:54Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.41,
+        "high": 8.65,
+        "low": 4.81
+      },
+      "merged_at": "2026-10-27T09:14:03Z",
+      "modeled_human_direction_hours": {
+        "base": 0.66,
+        "high": 0.92,
+        "low": 0.46
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9851,
+      "title": "Preserve template namespaces before terminal angle operators",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9851"
     }
   ]
 }
