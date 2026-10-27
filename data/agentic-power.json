@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 270.5,
-    "high": 428.7,
-    "low": 175.5
+    "base": 270.6,
+    "high": 428.8,
+    "low": 175.6
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1008.8,
+  "engineer_weeks_at_40h": 1009.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 151.1,
         "high": 247.0,
-        "low": 92.5
+        "low": 92.7
       },
       "modeled_human_direction_hours": {
         "base": 3.69,
-        "high": 4.22,
+        "high": 4.21,
         "low": 3.16
       },
       "month": "2026-04",
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 207.5,
         "high": 339.2,
-        "low": 127.0
+        "low": 127.3
       },
       "modeled_human_direction_hours": {
         "base": 3.9,
-        "high": 4.46,
+        "high": 4.45,
         "low": 3.34
       },
       "month": "2026-07",
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 222.8,
         "high": 363.9,
-        "low": 136.4
+        "low": 136.5
       },
       "modeled_human_direction_hours": {
         "base": 9.31,
-        "high": 10.65,
+        "high": 10.64,
         "low": 7.98
       },
       "month": "2026-08",
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 293.6,
-        "high": 467.8,
+        "high": 468.2,
         "low": 188.5
       },
       "modeled_human_direction_hours": {
         "base": 13.18,
         "high": 15.06,
-        "low": 11.3
+        "low": 11.29
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 296.7,
-        "high": 467.4,
-        "low": 194.7
+        "base": 296.8,
+        "high": 467.5,
+        "low": 194.8
       },
       "modeled_human_direction_hours": {
-        "base": 104.15,
-        "high": 119.03,
-        "low": 89.27
+        "base": 104.16,
+        "high": 119.04,
+        "low": 89.28
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3014,
+      "public_merged_pull_requests": 3015,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 30903.68,
-        "high": 41721.17,
-        "low": 23178.02
+        "base": 30913.47,
+        "high": 41734.38,
+        "low": 23185.36
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3351.69,
-        "high": 4774.91,
-        "low": 2318.08
+        "base": 3352.85,
+        "high": 4776.53,
+        "low": 2318.89
       }
     }
   ],
-  "public_accepted_pull_requests": 3256,
+  "public_accepted_pull_requests": 3257,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 40351.12,
-    "high": 54816.85,
-    "low": 29921.99
+    "base": 40360.91,
+    "high": 54830.06,
+    "low": 29929.33
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4800.34,
-    "high": 7077.1,
-    "low": 3271.64
+    "base": 4801.5,
+    "high": 7078.72,
+    "low": 3272.45
   },
   "updated_at_utc": "2026-10-27",
   "window": {
-    "end": "2026-10-27T11:56:45Z",
+    "end": "2026-10-27T12:33:52Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -79028,35 +79028,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-18T04:45:39Z",
-      "evidence": {
-        "additions": 0,
-        "changed_files": 2,
-        "comments": 1,
-        "commits": 1,
-        "deletions": 14,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 6.88,
-        "high": 9.29,
-        "low": 5.16
-      },
-      "merged_at": "2026-10-21T11:32:27Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "Sumanth077/Hands-On-AI-Engineering",
-      "pull_request": 149,
-      "title": "fix(github_intelligence_agent): remove unresolved merge conflict markers",
-      "url": "https://github.com/Sumanth077/Hands-On-AI-Engineering/pull/149"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-13T17:37:43Z",
       "evidence": {
         "additions": 52,
@@ -79081,6 +79052,35 @@
       "pull_request": 1758,
       "title": "fix(vizwiz): request short and unanswerable responses",
       "url": "https://github.com/open-compass/VLMEvalKit/pull/1758"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T04:45:39Z",
+      "evidence": {
+        "additions": 0,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 14,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.88,
+        "high": 9.29,
+        "low": 5.16
+      },
+      "merged_at": "2026-10-21T11:32:27Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "Sumanth077/Hands-On-AI-Engineering",
+      "pull_request": 149,
+      "title": "fix(github_intelligence_agent): remove unresolved merge conflict markers",
+      "url": "https://github.com/Sumanth077/Hands-On-AI-Engineering/pull/149"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -95060,6 +95060,35 @@
       "pull_request": 1807,
       "title": "fix(MedQ): enforce judge score bounds without truncating numeric tokens",
       "url": "https://github.com/open-compass/VLMEvalKit/pull/1807"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:03Z",
+      "evidence": {
+        "additions": 66,
+        "changed_files": 3,
+        "comments": 3,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.79,
+        "high": 13.21,
+        "low": 7.34
+      },
+      "merged_at": "2026-10-27T12:33:52Z",
+      "modeled_human_direction_hours": {
+        "base": 1.16,
+        "high": 1.62,
+        "low": 0.81
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 216,
+      "title": "fix(capture): include truncation markers in byte budgets",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/216"
     }
   ]
 }
