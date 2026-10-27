@@ -631,7 +631,7 @@
     "high": 7035.84,
     "low": 3251.0
   },
-  "updated_at_utc": "2026-10-26",
+  "updated_at_utc": "2026-10-27",
   "window": {
     "end": "2026-10-26T21:41:57Z",
     "start": "2025-03-09T15:30:23.000-04:00"
@@ -9283,6 +9283,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-01T03:18:06Z",
+      "evidence": {
+        "additions": 190,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 15,
+        "reviews": 6
+      },
+      "heh": {
+        "base": 13.34,
+        "high": 18.01,
+        "low": 10.01
+      },
+      "merged_at": "2026-10-01T16:21:07Z",
+      "modeled_human_direction_hours": {
+        "base": 2.31,
+        "high": 3.23,
+        "low": 1.62
+      },
+      "project": "debpalash/VoiceStudio",
+      "pull_request": 2484,
+      "title": "fix(storage): account for partial sidecar installations",
+      "url": "https://github.com/debpalash/VoiceStudio/pull/2484"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-09-30T04:42:21Z",
       "evidence": {
         "additions": 273,
@@ -9336,93 +9365,6 @@
       "pull_request": 2456,
       "title": "fix(download): validate HTTP response ranges before writing segments",
       "url": "https://github.com/debpalash/VoiceStudio/pull/2456"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-01T03:18:06Z",
-      "evidence": {
-        "additions": 190,
-        "changed_files": 4,
-        "comments": 2,
-        "commits": 3,
-        "deletions": 15,
-        "reviews": 6
-      },
-      "heh": {
-        "base": 13.34,
-        "high": 18.01,
-        "low": 10.01
-      },
-      "merged_at": "2026-10-01T16:21:07Z",
-      "modeled_human_direction_hours": {
-        "base": 2.31,
-        "high": 3.23,
-        "low": 1.62
-      },
-      "project": "debpalash/VoiceStudio",
-      "pull_request": 2484,
-      "title": "fix(storage): account for partial sidecar installations",
-      "url": "https://github.com/debpalash/VoiceStudio/pull/2484"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-09-30T04:42:13Z",
-      "evidence": {
-        "additions": 49,
-        "changed_files": 4,
-        "comments": 2,
-        "commits": 2,
-        "deletions": 7,
-        "reviews": 3
-      },
-      "heh": {
-        "base": 8.77,
-        "high": 11.84,
-        "low": 6.58
-      },
-      "merged_at": "2026-10-01T16:21:27Z",
-      "modeled_human_direction_hours": {
-        "base": 1.65,
-        "high": 2.31,
-        "low": 1.15
-      },
-      "project": "debpalash/VoiceStudio",
-      "pull_request": 2455,
-      "title": "fix(pronunciation): bind Unicode matches to their lexicon entry",
-      "url": "https://github.com/debpalash/VoiceStudio/pull/2455"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-09-30T04:42:09Z",
-      "evidence": {
-        "additions": 54,
-        "changed_files": 4,
-        "comments": 2,
-        "commits": 2,
-        "deletions": 8,
-        "reviews": 4
-      },
-      "heh": {
-        "base": 9.94,
-        "high": 13.42,
-        "low": 7.46
-      },
-      "merged_at": "2026-10-01T16:21:27Z",
-      "modeled_human_direction_hours": {
-        "base": 1.83,
-        "high": 2.56,
-        "low": 1.28
-      },
-      "project": "debpalash/VoiceStudio",
-      "pull_request": 2454,
-      "title": "fix(import): resolve percent-encoded EPUB member references",
-      "url": "https://github.com/debpalash/VoiceStudio/pull/2454"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -9539,6 +9481,64 @@
       "pull_request": 2470,
       "title": "fix(stream): preserve literal sentence markers in user text",
       "url": "https://github.com/debpalash/VoiceStudio/pull/2470"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-09-30T04:42:13Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 7,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 8.77,
+        "high": 11.84,
+        "low": 6.58
+      },
+      "merged_at": "2026-10-01T16:21:27Z",
+      "modeled_human_direction_hours": {
+        "base": 1.65,
+        "high": 2.31,
+        "low": 1.15
+      },
+      "project": "debpalash/VoiceStudio",
+      "pull_request": 2455,
+      "title": "fix(pronunciation): bind Unicode matches to their lexicon entry",
+      "url": "https://github.com/debpalash/VoiceStudio/pull/2455"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-30T04:42:09Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 8,
+        "reviews": 4
+      },
+      "heh": {
+        "base": 9.94,
+        "high": 13.42,
+        "low": 7.46
+      },
+      "merged_at": "2026-10-01T16:21:27Z",
+      "modeled_human_direction_hours": {
+        "base": 1.83,
+        "high": 2.56,
+        "low": 1.28
+      },
+      "project": "debpalash/VoiceStudio",
+      "pull_request": 2454,
+      "title": "fix(import): resolve percent-encoded EPUB member references",
+      "url": "https://github.com/debpalash/VoiceStudio/pull/2454"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -37383,6 +37383,35 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-01T01:38:37Z",
+      "evidence": {
+        "additions": 92,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 20,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.81,
+        "high": 13.25,
+        "low": 7.36
+      },
+      "merged_at": "2026-10-08T21:47:34Z",
+      "modeled_human_direction_hours": {
+        "base": 1.04,
+        "high": 1.46,
+        "low": 0.73
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 3586,
+      "title": "fix(daemon): honor explicit scheduled worker selection",
+      "url": "https://github.com/ruvnet/ruflo/pull/3586"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
       "category": "systems_engineering",
       "created_at": "2026-10-04T06:36:20Z",
       "evidence": {
@@ -37437,35 +37466,6 @@
       "pull_request": 3679,
       "title": "fix(memory): account for replacement sizes before cache admission",
       "url": "https://github.com/ruvnet/ruflo/pull/3679"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-01T01:38:37Z",
-      "evidence": {
-        "additions": 92,
-        "changed_files": 3,
-        "comments": 2,
-        "commits": 2,
-        "deletions": 20,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.81,
-        "high": 13.25,
-        "low": 7.36
-      },
-      "merged_at": "2026-10-08T21:47:34Z",
-      "modeled_human_direction_hours": {
-        "base": 1.04,
-        "high": 1.46,
-        "low": 0.73
-      },
-      "project": "ruvnet/ruflo",
-      "pull_request": 3586,
-      "title": "fix(daemon): honor explicit scheduled worker selection",
-      "url": "https://github.com/ruvnet/ruflo/pull/3586"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -53508,6 +53508,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-13T00:26:13Z",
+      "evidence": {
+        "additions": 236,
+        "changed_files": 5,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.26,
+        "high": 17.91,
+        "low": 9.95
+      },
+      "merged_at": "2026-10-13T01:10:11Z",
+      "modeled_human_direction_hours": {
+        "base": 0.82,
+        "high": 1.15,
+        "low": 0.57
+      },
+      "project": "liseami/CCBaga",
+      "pull_request": 17,
+      "title": "fix: allow retry after interrupted engine preparation",
+      "url": "https://github.com/liseami/CCBaga/pull/17"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-12T23:27:43Z",
       "evidence": {
         "additions": 125,
@@ -53619,35 +53648,6 @@
       "pull_request": 13,
       "title": "fix: preserve working Linux installations when browser resources are incomplete",
       "url": "https://github.com/liseami/CCBaga/pull/13"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T00:26:13Z",
-      "evidence": {
-        "additions": 236,
-        "changed_files": 5,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 7,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 13.26,
-        "high": 17.91,
-        "low": 9.95
-      },
-      "merged_at": "2026-10-13T01:10:11Z",
-      "modeled_human_direction_hours": {
-        "base": 0.82,
-        "high": 1.15,
-        "low": 0.57
-      },
-      "project": "liseami/CCBaga",
-      "pull_request": 17,
-      "title": "fix: allow retry after interrupted engine preparation",
-      "url": "https://github.com/liseami/CCBaga/pull/17"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -57800,35 +57800,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-09T14:51:26Z",
-      "evidence": {
-        "additions": 96,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.68,
-        "high": 13.06,
-        "low": 7.26
-      },
-      "merged_at": "2026-10-14T01:41:33Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "coreyhaines31/marketingskills",
-      "pull_request": 801,
-      "title": "fix(amplitude): reject invalid ingestion JSON containers",
-      "url": "https://github.com/coreyhaines31/marketingskills/pull/801"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-10T16:59:36Z",
       "evidence": {
         "additions": 32,
@@ -58230,6 +58201,35 @@
       "pull_request": 803,
       "title": "fix(sendgrid): reject non-object dynamic template data",
       "url": "https://github.com/coreyhaines31/marketingskills/pull/803"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:51:26Z",
+      "evidence": {
+        "additions": 96,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.68,
+        "high": 13.06,
+        "low": 7.26
+      },
+      "merged_at": "2026-10-14T01:41:33Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 801,
+      "title": "fix(amplitude): reject invalid ingestion JSON containers",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/801"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -60410,180 +60410,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-13T23:43:56Z",
-      "evidence": {
-        "additions": 201,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.46,
-        "high": 16.82,
-        "low": 9.35
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1832,
-      "title": "fix(session): preserve live title updates and synchronize search labels",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1832"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T22:52:41Z",
-      "evidence": {
-        "additions": 87,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 16,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.12,
-        "high": 13.66,
-        "low": 7.59
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1830,
-      "title": "fix(events): preserve share-class tickers in configured RSS routes",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1830"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T22:52:03Z",
-      "evidence": {
-        "additions": 109,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 18,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.12,
-        "high": 15.01,
-        "low": 8.34
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1829,
-      "title": "fix(events): preserve daily calendar dates for timezone-aware inputs",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1829"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T22:11:31Z",
-      "evidence": {
-        "additions": 242,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 28,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 13.09,
-        "high": 17.68,
-        "low": 9.82
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1828,
-      "title": "fix(session): serialize shared search connection operations",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1828"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:59:12Z",
-      "evidence": {
-        "additions": 123,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 23,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.14,
-        "high": 15.04,
-        "low": 8.35
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1827,
-      "title": "fix(session): apply search limits to distinct conversations",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1827"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:51:34Z",
-      "evidence": {
-        "additions": 73,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 7,
-        "reviews": 1
-      },
-      "heh": {
-        "base": 9.22,
-        "high": 12.45,
-        "low": 6.92
-      },
-      "merged_at": "2026-10-14T14:32:37Z",
-      "modeled_human_direction_hours": {
-        "base": 0.79,
-        "high": 1.11,
-        "low": 0.55
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1826,
-      "title": "fix(quantlib): keep VPIN bucket completion invariant to volume units",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1826"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-14T04:37:49Z",
       "evidence": {
         "additions": 68,
@@ -60753,6 +60579,180 @@
       "pull_request": 1834,
       "title": "fix(session): anchor search snippets to native FTS matches",
       "url": "https://github.com/HKUDS/Vibe-Trading/pull/1834"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T23:43:56Z",
+      "evidence": {
+        "additions": 201,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.46,
+        "high": 16.82,
+        "low": 9.35
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1832,
+      "title": "fix(session): preserve live title updates and synchronize search labels",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1832"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T22:52:41Z",
+      "evidence": {
+        "additions": 87,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 16,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.12,
+        "high": 13.66,
+        "low": 7.59
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1830,
+      "title": "fix(events): preserve share-class tickers in configured RSS routes",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1830"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T22:52:03Z",
+      "evidence": {
+        "additions": 109,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.12,
+        "high": 15.01,
+        "low": 8.34
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1829,
+      "title": "fix(events): preserve daily calendar dates for timezone-aware inputs",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1829"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T22:11:31Z",
+      "evidence": {
+        "additions": 242,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 28,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.09,
+        "high": 17.68,
+        "low": 9.82
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1828,
+      "title": "fix(session): serialize shared search connection operations",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1828"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:59:12Z",
+      "evidence": {
+        "additions": 123,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 23,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.14,
+        "high": 15.04,
+        "low": 8.35
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1827,
+      "title": "fix(session): apply search limits to distinct conversations",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1827"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:51:34Z",
+      "evidence": {
+        "additions": 73,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.22,
+        "high": 12.45,
+        "low": 6.92
+      },
+      "merged_at": "2026-10-14T14:32:37Z",
+      "modeled_human_direction_hours": {
+        "base": 0.79,
+        "high": 1.11,
+        "low": 0.55
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1826,
+      "title": "fix(quantlib): keep VPIN bucket completion invariant to volume units",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1826"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -62323,6 +62323,64 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-14T22:05:29Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.48,
+        "high": 10.09,
+        "low": 5.61
+      },
+      "merged_at": "2026-10-15T10:20:36Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1862,
+      "title": "fix(backtest): classify separated USDC/BUSD pairs (BTC-USDC, ETH/USDC) as crypto",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1862"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-14T22:04:19Z",
+      "evidence": {
+        "additions": 93,
+        "changed_files": 5,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.79,
+        "high": 13.22,
+        "low": 7.35
+      },
+      "merged_at": "2026-10-15T10:20:36Z",
+      "modeled_human_direction_hours": {
+        "base": 0.82,
+        "high": 1.15,
+        "low": 0.57
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1861,
+      "title": "fix(backtest): keep digit-leading crypto bases (1INCH, 1000PEPE) on crypto rules",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1861"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
       "category": "software_engineering",
       "created_at": "2026-10-15T05:47:06Z",
       "evidence": {
@@ -62468,64 +62526,6 @@
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-14T22:05:29Z",
-      "evidence": {
-        "additions": 53,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 0,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 7.48,
-        "high": 10.09,
-        "low": 5.61
-      },
-      "merged_at": "2026-10-15T10:20:36Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1862,
-      "title": "fix(backtest): classify separated USDC/BUSD pairs (BTC-USDC, ETH/USDC) as crypto",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1862"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-14T22:04:19Z",
-      "evidence": {
-        "additions": 93,
-        "changed_files": 5,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 9,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.79,
-        "high": 13.22,
-        "low": 7.35
-      },
-      "merged_at": "2026-10-15T10:20:36Z",
-      "modeled_human_direction_hours": {
-        "base": 0.82,
-        "high": 1.15,
-        "low": 0.57
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1861,
-      "title": "fix(backtest): keep digit-leading crypto bases (1INCH, 1000PEPE) on crypto rules",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1861"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
       "category": "software_engineering",
       "created_at": "2026-10-15T03:52:34Z",
       "evidence": {
@@ -62551,64 +62551,6 @@
       "pull_request": 4390,
       "title": "fix(state-manager): match list and cleanup glob patterns literally",
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4390"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-12T16:05:37Z",
-      "evidence": {
-        "additions": 5,
-        "changed_files": 1,
-        "comments": 1,
-        "commits": 1,
-        "deletions": 0,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 5.86,
-        "high": 7.91,
-        "low": 4.39
-      },
-      "merged_at": "2026-10-15T10:54:23Z",
-      "modeled_human_direction_hours": {
-        "base": 0.66,
-        "high": 0.92,
-        "low": 0.46
-      },
-      "project": "NationalSecurityAgency/ghidra",
-      "pull_request": 9848,
-      "title": "Use symbol identity when hashing class namespaces",
-      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9848"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-12T02:04:13Z",
-      "evidence": {
-        "additions": 2,
-        "changed_files": 1,
-        "comments": 1,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 4.75,
-        "high": 6.41,
-        "low": 3.56
-      },
-      "merged_at": "2026-10-15T10:54:23Z",
-      "modeled_human_direction_hours": {
-        "base": 0.66,
-        "high": 0.92,
-        "low": 0.46
-      },
-      "project": "NationalSecurityAgency/ghidra",
-      "pull_request": 9830,
-      "title": "Display FILETIME fractions at their stored 100-nanosecond precision",
-      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9830"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -62725,6 +62667,64 @@
       "pull_request": 9777,
       "title": "Close PyGhidra compiler file managers after compilation",
       "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9777"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-12T16:05:37Z",
+      "evidence": {
+        "additions": 5,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.86,
+        "high": 7.91,
+        "low": 4.39
+      },
+      "merged_at": "2026-10-15T10:54:23Z",
+      "modeled_human_direction_hours": {
+        "base": 0.66,
+        "high": 0.92,
+        "low": 0.46
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9848,
+      "title": "Use symbol identity when hashing class namespaces",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9848"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-12T02:04:13Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 4.75,
+        "high": 6.41,
+        "low": 3.56
+      },
+      "merged_at": "2026-10-15T10:54:23Z",
+      "modeled_human_direction_hours": {
+        "base": 0.66,
+        "high": 0.92,
+        "low": 0.46
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9830,
+      "title": "Display FILETIME fractions at their stored 100-nanosecond precision",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9830"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -62904,122 +62904,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-13T16:06:07Z",
-      "evidence": {
-        "additions": 98,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 18,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.4,
-        "high": 14.04,
-        "low": 7.8
-      },
-      "merged_at": "2026-10-15T14:14:34Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "wheresryan22/anatomy",
-      "pull_request": 61,
-      "title": "fix(audit): follow curved strokes between fixed samples",
-      "url": "https://github.com/wheresryan22/anatomy/pull/61"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-15T05:43:22Z",
-      "evidence": {
-        "additions": 36,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.29,
-        "high": 11.19,
-        "low": 6.22
-      },
-      "merged_at": "2026-10-15T14:14:34Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "wheresryan22/anatomy",
-      "pull_request": 74,
-      "title": "turn-build: reject star polygons as non-convex prisms",
-      "url": "https://github.com/wheresryan22/anatomy/pull/74"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-15T05:41:53Z",
-      "evidence": {
-        "additions": 35,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.32,
-        "high": 11.24,
-        "low": 6.24
-      },
-      "merged_at": "2026-10-15T14:14:34Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "wheresryan22/anatomy",
-      "pull_request": 73,
-      "title": "turn-audit: sample clips through their final instant, not past it",
-      "url": "https://github.com/wheresryan22/anatomy/pull/73"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-15T05:37:53Z",
-      "evidence": {
-        "additions": 32,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.17,
-        "high": 11.03,
-        "low": 6.13
-      },
-      "merged_at": "2026-10-15T14:14:34Z",
-      "modeled_human_direction_hours": {
-        "base": 0.68,
-        "high": 0.95,
-        "low": 0.48
-      },
-      "project": "wheresryan22/anatomy",
-      "pull_request": 72,
-      "title": "turn-build: ignore repeated vertices when rounding a prism polygon",
-      "url": "https://github.com/wheresryan22/anatomy/pull/72"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-14T21:40:42Z",
       "evidence": {
         "additions": 35,
@@ -63131,6 +63015,122 @@
       "pull_request": 66,
       "title": "drive.mjs: wait for page load, never hang on Chrome",
       "url": "https://github.com/wheresryan22/anatomy/pull/66"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T16:06:07Z",
+      "evidence": {
+        "additions": 98,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.4,
+        "high": 14.04,
+        "low": 7.8
+      },
+      "merged_at": "2026-10-15T14:14:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "wheresryan22/anatomy",
+      "pull_request": 61,
+      "title": "fix(audit): follow curved strokes between fixed samples",
+      "url": "https://github.com/wheresryan22/anatomy/pull/61"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-15T05:43:22Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.29,
+        "high": 11.19,
+        "low": 6.22
+      },
+      "merged_at": "2026-10-15T14:14:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "wheresryan22/anatomy",
+      "pull_request": 74,
+      "title": "turn-build: reject star polygons as non-convex prisms",
+      "url": "https://github.com/wheresryan22/anatomy/pull/74"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-15T05:41:53Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.32,
+        "high": 11.24,
+        "low": 6.24
+      },
+      "merged_at": "2026-10-15T14:14:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "wheresryan22/anatomy",
+      "pull_request": 73,
+      "title": "turn-audit: sample clips through their final instant, not past it",
+      "url": "https://github.com/wheresryan22/anatomy/pull/73"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-15T05:37:53Z",
+      "evidence": {
+        "additions": 32,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.17,
+        "high": 11.03,
+        "low": 6.13
+      },
+      "merged_at": "2026-10-15T14:14:34Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "wheresryan22/anatomy",
+      "pull_request": 72,
+      "title": "turn-build: ignore repeated vertices when rounding a prism polygon",
+      "url": "https://github.com/wheresryan22/anatomy/pull/72"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -67022,151 +67022,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-13T23:08:01Z",
-      "evidence": {
-        "additions": 47,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.32,
-        "high": 11.23,
-        "low": 6.24
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2066,
-      "title": "fix(setup): preserve Unicode paths in printed recovery command",
-      "url": "https://github.com/JustVugg/colibri/pull/2066"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T22:08:48Z",
-      "evidence": {
-        "additions": 207,
-        "changed_files": 5,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 4,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.79,
-        "high": 17.26,
-        "low": 9.59
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.82,
-        "high": 1.15,
-        "low": 0.57
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2065,
-      "title": "fix(tools): isolate engine modes from inherited shell settings",
-      "url": "https://github.com/JustVugg/colibri/pull/2065"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:34:58Z",
-      "evidence": {
-        "additions": 97,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 4,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.72,
-        "high": 13.13,
-        "low": 7.29
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2064,
-      "title": "fix(diagnostics): discover current engine binaries",
-      "url": "https://github.com/JustVugg/colibri/pull/2064"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:17:57Z",
-      "evidence": {
-        "additions": 121,
-        "changed_files": 4,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 5,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.95,
-        "high": 14.78,
-        "low": 8.21
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.75,
-        "high": 1.05,
-        "low": 0.52
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2062,
-      "title": "fix(benchmarks): reap stalled engines after mux failures",
-      "url": "https://github.com/JustVugg/colibri/pull/2062"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-13T21:02:37Z",
-      "evidence": {
-        "additions": 53,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.57,
-        "high": 11.57,
-        "low": 6.43
-      },
-      "merged_at": "2026-10-16T13:08:16Z",
-      "modeled_human_direction_hours": {
-        "base": 0.61,
-        "high": 0.85,
-        "low": 0.43
-      },
-      "project": "JustVugg/colibri",
-      "pull_request": 2060,
-      "title": "fix(systemone): reject options without log probability scores",
-      "url": "https://github.com/JustVugg/colibri/pull/2060"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-14T04:42:38Z",
       "evidence": {
         "additions": 167,
@@ -67428,59 +67283,146 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-06T17:21:54Z",
+      "created_at": "2026-10-13T23:08:01Z",
       "evidence": {
-        "additions": 49,
+        "additions": 47,
         "changed_files": 2,
         "comments": 0,
         "commits": 1,
-        "deletions": 2,
+        "deletions": 1,
         "reviews": 0
       },
       "heh": {
-        "base": 8.41,
-        "high": 11.36,
-        "low": 6.31
+        "base": 8.32,
+        "high": 11.23,
+        "low": 6.24
       },
-      "merged_at": "2026-10-16T13:08:17Z",
+      "merged_at": "2026-10-16T13:08:16Z",
       "modeled_human_direction_hours": {
         "base": 0.61,
         "high": 0.85,
         "low": 0.43
       },
       "project": "JustVugg/colibri",
-      "pull_request": 1961,
-      "title": "fix(setup): verify cached files against requested download digests",
-      "url": "https://github.com/JustVugg/colibri/pull/1961"
+      "pull_request": 2066,
+      "title": "fix(setup): preserve Unicode paths in printed recovery command",
+      "url": "https://github.com/JustVugg/colibri/pull/2066"
     },
     {
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-09T08:09:41Z",
+      "created_at": "2026-10-13T22:08:48Z",
       "evidence": {
-        "additions": 64,
-        "changed_files": 2,
+        "additions": 207,
+        "changed_files": 5,
         "comments": 0,
         "commits": 1,
-        "deletions": 2,
+        "deletions": 4,
         "reviews": 0
       },
       "heh": {
-        "base": 8.86,
-        "high": 11.96,
-        "low": 6.64
+        "base": 12.79,
+        "high": 17.26,
+        "low": 9.59
       },
-      "merged_at": "2026-10-16T13:08:17Z",
+      "merged_at": "2026-10-16T13:08:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.82,
+        "high": 1.15,
+        "low": 0.57
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2065,
+      "title": "fix(tools): isolate engine modes from inherited shell settings",
+      "url": "https://github.com/JustVugg/colibri/pull/2065"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:34:58Z",
+      "evidence": {
+        "additions": 97,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.72,
+        "high": 13.13,
+        "low": 7.29
+      },
+      "merged_at": "2026-10-16T13:08:16Z",
       "modeled_human_direction_hours": {
         "base": 0.61,
         "high": 0.85,
         "low": 0.43
       },
       "project": "JustVugg/colibri",
-      "pull_request": 1999,
-      "title": "fix(loader): ignore unrepresentable numeric stop ids",
-      "url": "https://github.com/JustVugg/colibri/pull/1999"
+      "pull_request": 2064,
+      "title": "fix(diagnostics): discover current engine binaries",
+      "url": "https://github.com/JustVugg/colibri/pull/2064"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:17:57Z",
+      "evidence": {
+        "additions": 121,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.95,
+        "high": 14.78,
+        "low": 8.21
+      },
+      "merged_at": "2026-10-16T13:08:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.75,
+        "high": 1.05,
+        "low": 0.52
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2062,
+      "title": "fix(benchmarks): reap stalled engines after mux failures",
+      "url": "https://github.com/JustVugg/colibri/pull/2062"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:02:37Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.57,
+        "high": 11.57,
+        "low": 6.43
+      },
+      "merged_at": "2026-10-16T13:08:16Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2060,
+      "title": "fix(systemone): reject options without log probability scores",
+      "url": "https://github.com/JustVugg/colibri/pull/2060"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -67602,6 +67544,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-06T17:21:54Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.41,
+        "high": 11.36,
+        "low": 6.31
+      },
+      "merged_at": "2026-10-16T13:08:17Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 1961,
+      "title": "fix(setup): verify cached files against requested download digests",
+      "url": "https://github.com/JustVugg/colibri/pull/1961"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-10T03:50:58Z",
       "evidence": {
         "additions": 51,
@@ -67626,6 +67597,35 @@
       "pull_request": 2006,
       "title": "fix(schema): escape decoded controls as JSON in grammar drafts",
       "url": "https://github.com/JustVugg/colibri/pull/2006"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T08:09:41Z",
+      "evidence": {
+        "additions": 64,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.86,
+        "high": 11.96,
+        "low": 6.64
+      },
+      "merged_at": "2026-10-16T13:08:17Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 1999,
+      "title": "fix(loader): ignore unrepresentable numeric stop ids",
+      "url": "https://github.com/JustVugg/colibri/pull/1999"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -70009,6 +70009,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-18T00:41:42Z",
+      "evidence": {
+        "additions": 56,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.66,
+        "high": 11.69,
+        "low": 6.49
+      },
+      "merged_at": "2026-10-18T04:08:04Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 1908,
+      "title": "fix(swarm): tolerate a half-written final line in read_events",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1908"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-17T22:44:03Z",
       "evidence": {
         "additions": 12,
@@ -70091,35 +70120,6 @@
       "pull_request": 1904,
       "title": "fix(config): honor VIBE_TRADING_HOME for autopilot runs, alpha-bench cache/reports and gildata codes",
       "url": "https://github.com/HKUDS/Vibe-Trading/pull/1904"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-18T00:41:42Z",
-      "evidence": {
-        "additions": 56,
-        "changed_files": 2,
-        "comments": 1,
-        "commits": 1,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.66,
-        "high": 11.69,
-        "low": 6.49
-      },
-      "merged_at": "2026-10-18T04:08:04Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "HKUDS/Vibe-Trading",
-      "pull_request": 1908,
-      "title": "fix(swarm): tolerate a half-written final line in read_events",
-      "url": "https://github.com/HKUDS/Vibe-Trading/pull/1908"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -81870,35 +81870,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-12T01:13:43Z",
-      "evidence": {
-        "additions": 13,
-        "changed_files": 1,
-        "comments": 4,
-        "commits": 1,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 6.59,
-        "high": 8.9,
-        "low": 4.94
-      },
-      "merged_at": "2026-10-22T08:25:53Z",
-      "modeled_human_direction_hours": {
-        "base": 1.02,
-        "high": 1.43,
-        "low": 0.71
-      },
-      "project": "NationalSecurityAgency/ghidra",
-      "pull_request": 9828,
-      "title": "Preserve PDB enum underlying widths and signed values",
-      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9828"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-11T22:05:24Z",
       "evidence": {
         "additions": 10,
@@ -81923,6 +81894,35 @@
       "pull_request": 9814,
       "title": "Resolve PDB complex primitive widths and decode their listing values",
       "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9814"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-12T01:13:43Z",
+      "evidence": {
+        "additions": 13,
+        "changed_files": 1,
+        "comments": 4,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.59,
+        "high": 8.9,
+        "low": 4.94
+      },
+      "merged_at": "2026-10-22T08:25:53Z",
+      "modeled_human_direction_hours": {
+        "base": 1.02,
+        "high": 1.43,
+        "low": 0.71
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9828,
+      "title": "Preserve PDB enum underlying widths and signed values",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9828"
     },
     {
       "acceptance_basis": "merged pull request",
@@ -83755,441 +83755,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-22T13:56:15Z",
-      "evidence": {
-        "additions": 184,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.17,
-        "high": 16.43,
-        "low": 9.13
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1595,
-      "title": "fix(wiki): conform a page restored from a checkpoint to OKF on disk",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1595"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T13:55:56Z",
-      "evidence": {
-        "additions": 184,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 29,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.27,
-        "high": 16.56,
-        "low": 9.2
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1594,
-      "title": "fix(install-mcp): build the printed Codex table with the TOML writer",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1594"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "reliability_and_qe",
-      "created_at": "2026-10-22T13:47:09Z",
-      "evidence": {
-        "additions": 116,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.92,
-        "high": 13.39,
-        "low": 7.44
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1593,
-      "title": "fix(install-mcp): store an explicit key for the FreeBuff bridge instead of writing it into its config",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1593"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T06:17:04Z",
-      "evidence": {
-        "additions": 221,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 65,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 13.31,
-        "high": 17.97,
-        "low": 9.98
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1581,
-      "title": "fix(serve): stop retrying a deterministic provider failure on the session consolidation queue",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1581"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T03:17:01Z",
-      "evidence": {
-        "additions": 154,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.65,
-        "high": 15.73,
-        "low": 8.74
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1576,
-      "title": "fix(hooks): deliver the compaction recap under an external capture owner",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1576"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T03:12:18Z",
-      "evidence": {
-        "additions": 91,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 9,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.2,
-        "high": 13.77,
-        "low": 7.65
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1575,
-      "title": "fix(move-project): keep --force and --on-conflict in the re-run command",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1575"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T02:53:13Z",
-      "evidence": {
-        "additions": 80,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 6,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.87,
-        "high": 13.33,
-        "low": 7.4
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1574,
-      "title": "fix(purge-project): keep --force in the re-run command the refusal prints",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1574"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T02:38:34Z",
-      "evidence": {
-        "additions": 107,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 9,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.55,
-        "high": 14.24,
-        "low": 7.91
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1573,
-      "title": "fix(status): report the recovery journal error while the server is down",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1573"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T02:36:16Z",
-      "evidence": {
-        "additions": 68,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 0,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.41,
-        "high": 12.7,
-        "low": 7.06
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1572,
-      "title": "fix(run): parse the copilot harness name back out of the recovery journal",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1572"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T02:28:44Z",
-      "evidence": {
-        "additions": 62,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 21,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.15,
-        "high": 13.7,
-        "low": 7.61
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1571,
-      "title": "fix(api): stop caching an actor-scoped search response",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1571"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T02:20:47Z",
-      "evidence": {
-        "additions": 215,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 20,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 12.6,
-        "high": 17.01,
-        "low": 9.45
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1570,
-      "title": "fix(workstream): skip an oversized session header instead of failing on its cut character",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1570"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T02:09:08Z",
-      "evidence": {
-        "additions": 37,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 3,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.55,
-        "high": 11.54,
-        "low": 6.41
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1569,
-      "title": "fix(importer): skip a workbook's non-worksheet sheets instead of failing the import",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1569"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T02:07:28Z",
-      "evidence": {
-        "additions": 35,
-        "changed_files": 2,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 1,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 8.4,
-        "high": 11.34,
-        "low": 6.3
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.73,
-        "high": 1.02,
-        "low": 0.51
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1568,
-      "title": "fix(importer): ignore a UTF-8 BOM at the start of a text document",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1568"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T02:01:33Z",
-      "evidence": {
-        "additions": 128,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 10,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.34,
-        "high": 15.3,
-        "low": 8.5
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1567,
-      "title": "fix(desktop): read the setup child's stderr alongside its stdout",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1567"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
-      "created_at": "2026-10-22T01:46:48Z",
-      "evidence": {
-        "additions": 149,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 11.58,
-        "high": 15.63,
-        "low": 8.68
-      },
-      "merged_at": "2026-10-22T22:57:09Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1566,
-      "title": "fix(consolidate): run the cross-scope link guard on dream-pass merges",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1566"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-21T23:40:11Z",
       "evidence": {
         "additions": 87,
@@ -84620,6 +84185,441 @@
       "pull_request": 1543,
       "title": "fix(llm): stop treating a Codex `response.incomplete` event as a transient 502",
       "url": "https://github.com/akitaonrails/ai-memory/pull/1543"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T13:56:15Z",
+      "evidence": {
+        "additions": 184,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.17,
+        "high": 16.43,
+        "low": 9.13
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1595,
+      "title": "fix(wiki): conform a page restored from a checkpoint to OKF on disk",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1595"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T13:55:56Z",
+      "evidence": {
+        "additions": 184,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 29,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.27,
+        "high": 16.56,
+        "low": 9.2
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1594,
+      "title": "fix(install-mcp): build the printed Codex table with the TOML writer",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1594"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-22T13:47:09Z",
+      "evidence": {
+        "additions": 116,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.92,
+        "high": 13.39,
+        "low": 7.44
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1593,
+      "title": "fix(install-mcp): store an explicit key for the FreeBuff bridge instead of writing it into its config",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1593"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T06:17:04Z",
+      "evidence": {
+        "additions": 221,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 65,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.31,
+        "high": 17.97,
+        "low": 9.98
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1581,
+      "title": "fix(serve): stop retrying a deterministic provider failure on the session consolidation queue",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1581"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T03:17:01Z",
+      "evidence": {
+        "additions": 154,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.65,
+        "high": 15.73,
+        "low": 8.74
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1576,
+      "title": "fix(hooks): deliver the compaction recap under an external capture owner",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1576"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T03:12:18Z",
+      "evidence": {
+        "additions": 91,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.2,
+        "high": 13.77,
+        "low": 7.65
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1575,
+      "title": "fix(move-project): keep --force and --on-conflict in the re-run command",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1575"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T02:53:13Z",
+      "evidence": {
+        "additions": 80,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.87,
+        "high": 13.33,
+        "low": 7.4
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1574,
+      "title": "fix(purge-project): keep --force in the re-run command the refusal prints",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1574"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T02:38:34Z",
+      "evidence": {
+        "additions": 107,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.55,
+        "high": 14.24,
+        "low": 7.91
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1573,
+      "title": "fix(status): report the recovery journal error while the server is down",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1573"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T02:36:16Z",
+      "evidence": {
+        "additions": 68,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.41,
+        "high": 12.7,
+        "low": 7.06
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1572,
+      "title": "fix(run): parse the copilot harness name back out of the recovery journal",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1572"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T02:28:44Z",
+      "evidence": {
+        "additions": 62,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 21,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.15,
+        "high": 13.7,
+        "low": 7.61
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1571,
+      "title": "fix(api): stop caching an actor-scoped search response",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1571"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T02:20:47Z",
+      "evidence": {
+        "additions": 215,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 20,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.6,
+        "high": 17.01,
+        "low": 9.45
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1570,
+      "title": "fix(workstream): skip an oversized session header instead of failing on its cut character",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1570"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T02:09:08Z",
+      "evidence": {
+        "additions": 37,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.55,
+        "high": 11.54,
+        "low": 6.41
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1569,
+      "title": "fix(importer): skip a workbook's non-worksheet sheets instead of failing the import",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1569"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T02:07:28Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.4,
+        "high": 11.34,
+        "low": 6.3
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1568,
+      "title": "fix(importer): ignore a UTF-8 BOM at the start of a text document",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1568"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T02:01:33Z",
+      "evidence": {
+        "additions": 128,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.34,
+        "high": 15.3,
+        "low": 8.5
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1567,
+      "title": "fix(desktop): read the setup child's stderr alongside its stdout",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1567"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-22T01:46:48Z",
+      "evidence": {
+        "additions": 149,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.58,
+        "high": 15.63,
+        "low": 8.68
+      },
+      "merged_at": "2026-10-22T22:57:09Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1566,
+      "title": "fix(consolidate): run the cross-scope link guard on dream-pass merges",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1566"
     },
     {
       "acceptance_basis": "merged pull request",
