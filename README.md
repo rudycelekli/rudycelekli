@@ -9,6 +9,18 @@
 [![ORCID](https://img.shields.io/badge/ORCID-research_record-0B1220?style=for-the-badge&logo=orcid&logoColor=white&labelColor=A6CE39&color=0B1220)](https://orcid.org/0009-0000-7043-3766)
 [![Follow](https://img.shields.io/github/followers/rudycelekli?style=for-the-badge&logo=github&label=FOLLOW&labelColor=7C3AED&color=0B1220)](https://github.com/rudycelekli?tab=followers)
 
+<!-- star-history-badge:start -->
+<p align="center">
+  <a href="https://www.star-history.com/rudycelekli">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/badge?user=rudycelekli&amp;year=2026&amp;theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/badge?user=rudycelekli&amp;year=2026" />
+      <img src="https://api.star-history.com/badge?user=rudycelekli&amp;year=2026" width="259" height="64" alt="Star History Top Committer ranking for 2026" />
+    </picture>
+  </a>
+</p>
+<!-- star-history-badge:end -->
+
 **Charlotte-based Forward Deployed AI Researcher · Agentic AI Engineer**
 
 <sub>Building verifiable, long-horizon agent systems · Research, implementation, and open source</sub>
