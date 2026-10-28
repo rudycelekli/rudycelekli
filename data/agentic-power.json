@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 271.7,
-    "high": 430.6,
-    "low": 176.3
+    "base": 271.8,
+    "high": 430.8,
+    "low": 176.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0265
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.31,
+    "evidence_window_weeks": 85.33,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1014.2,
+  "engineer_weeks_at_40h": 1014.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.29,
-    "high": 170.62,
-    "low": 127.97
+    "base": 149.33,
+    "high": 170.66,
+    "low": 128.0
   },
   "monthly": [
     {
@@ -385,13 +385,13 @@
       "active_repositories": 5,
       "agentic_power_x": {
         "base": 131.3,
-        "high": 211.9,
+        "high": 214.9,
         "low": 80.3
       },
       "modeled_human_direction_hours": {
         "base": 0.83,
         "high": 0.95,
-        "low": 0.72
+        "low": 0.71
       },
       "month": "2026-02",
       "public_merged_pull_requests": 0,
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 177.4,
         "high": 290.0,
-        "low": 108.6
+        "low": 108.7
       },
       "modeled_human_direction_hours": {
         "base": 5.29,
-        "high": 6.05,
+        "high": 6.04,
         "low": 4.53
       },
       "month": "2026-06",
@@ -515,13 +515,13 @@
       "active_repositories": 7,
       "agentic_power_x": {
         "base": 208.6,
-        "high": 340.2,
+        "high": 341.3,
         "low": 127.9
       },
       "modeled_human_direction_hours": {
         "base": 3.88,
         "high": 4.43,
-        "low": 3.33
+        "low": 3.32
       },
       "month": "2026-07",
       "public_merged_pull_requests": 0,
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 295.1,
         "high": 470.3,
-        "low": 189.4
+        "low": 189.5
       },
       "modeled_human_direction_hours": {
         "base": 13.11,
-        "high": 14.99,
+        "high": 14.98,
         "low": 11.24
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 297.8,
-        "high": 469.0,
-        "low": 195.4
+        "base": 297.9,
+        "high": 469.2,
+        "low": 195.5
       },
       "modeled_human_direction_hours": {
-        "base": 104.5,
-        "high": 119.43,
-        "low": 89.57
+        "base": 104.55,
+        "high": 119.49,
+        "low": 89.62
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3035,
+      "public_merged_pull_requests": 3038,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 31118.63,
-        "high": 42011.42,
-        "low": 23339.25
+        "base": 31144.87,
+        "high": 42046.84,
+        "low": 23358.93
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3379.82,
-        "high": 4815.49,
-        "low": 2337.36
+        "base": 3382.52,
+        "high": 4819.26,
+        "low": 2339.25
       }
     }
   ],
-  "public_accepted_pull_requests": 3277,
+  "public_accepted_pull_requests": 3280,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 40566.07,
-    "high": 55107.1,
-    "low": 30083.22
+    "base": 40592.31,
+    "high": 55142.52,
+    "low": 30102.9
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4828.47,
-    "high": 7117.68,
-    "low": 3290.92
+    "base": 4831.17,
+    "high": 7121.45,
+    "low": 3292.81
   },
   "updated_at_utc": "2026-10-28",
   "window": {
-    "end": "2026-10-27T23:31:38Z",
+    "end": "2026-10-28T03:02:32Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -95669,6 +95669,93 @@
       "pull_request": 1037,
       "title": "feat(locator): support hasNotText filters across engines",
       "url": "https://github.com/tester-army/e2e/pull/1037"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T23:07:32Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.93,
+        "high": 12.06,
+        "low": 6.7
+      },
+      "merged_at": "2026-10-28T03:02:32Z",
+      "modeled_human_direction_hours": {
+        "base": 0.98,
+        "high": 1.37,
+        "low": 0.69
+      },
+      "project": "liseami/CCBaga",
+      "pull_request": 55,
+      "title": "fix(network): escape known_hosts paths for OpenSSH",
+      "url": "https://github.com/liseami/CCBaga/pull/55"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T23:04:58Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.86,
+        "high": 11.96,
+        "low": 6.64
+      },
+      "merged_at": "2026-10-28T03:02:32Z",
+      "modeled_human_direction_hours": {
+        "base": 0.86,
+        "high": 1.2,
+        "low": 0.6
+      },
+      "project": "liseami/CCBaga",
+      "pull_request": 54,
+      "title": "fix(linux): keep a POSIX region override after the codeset",
+      "url": "https://github.com/liseami/CCBaga/pull/54"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-23T23:00:22Z",
+      "evidence": {
+        "additions": 70,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.45,
+        "high": 11.4,
+        "low": 6.34
+      },
+      "merged_at": "2026-10-28T03:02:32Z",
+      "modeled_human_direction_hours": {
+        "base": 0.86,
+        "high": 1.2,
+        "low": 0.6
+      },
+      "project": "liseami/CCBaga",
+      "pull_request": 53,
+      "title": "fix(browser): accept an explicit default proxy port",
+      "url": "https://github.com/liseami/CCBaga/pull/53"
     }
   ]
 }
