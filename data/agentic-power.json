@@ -1,15 +1,15 @@
 {
   "agentic_power_x": {
-    "base": 274.2,
-    "high": 434.5,
-    "low": 177.9
+    "base": 274.4,
+    "high": 434.8,
+    "low": 178.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0306,
       "high": 0.035,
-      "low": 0.0263
+      "low": 0.0262
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
     "evidence_window_weeks": 85.49,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1025.5,
+  "engineer_weeks_at_40h": 1026.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -333,13 +333,13 @@
       "active_repositories": 8,
       "agentic_power_x": {
         "base": 149.2,
-        "high": 243.3,
+        "high": 245.7,
         "low": 91.5
       },
       "modeled_human_direction_hours": {
         "base": 1.2,
         "high": 1.37,
-        "low": 1.03
+        "low": 1.02
       },
       "month": "2025-12",
       "public_merged_pull_requests": 0,
@@ -436,13 +436,13 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 153.2,
+        "base": 153.6,
         "high": 250.2,
-        "low": 93.8
+        "low": 94.0
       },
       "modeled_human_direction_hours": {
-        "base": 3.64,
-        "high": 4.16,
+        "base": 3.63,
+        "high": 4.15,
         "low": 3.12
       },
       "month": "2026-04",
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 190.7,
         "high": 311.6,
-        "low": 116.7
+        "low": 117.1
       },
       "modeled_human_direction_hours": {
         "base": 2.65,
-        "high": 3.03,
+        "high": 3.02,
         "low": 2.27
       },
       "month": "2026-05",
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 297.9,
-        "high": 474.5,
-        "low": 191.2
+        "high": 474.9,
+        "low": 191.3
       },
       "modeled_human_direction_hours": {
         "base": 12.99,
-        "high": 14.85,
-        "low": 11.14
+        "high": 14.84,
+        "low": 11.13
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 300.0,
-        "high": 472.6,
-        "low": 196.9
+        "base": 300.2,
+        "high": 472.9,
+        "low": 197.0
       },
       "modeled_human_direction_hours": {
-        "base": 105.23,
-        "high": 120.27,
-        "low": 90.2
+        "base": 105.26,
+        "high": 120.29,
+        "low": 90.22
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3091,
+      "public_merged_pull_requests": 3094,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 31572.98,
-        "high": 42624.83,
-        "low": 23679.96
+        "base": 31601.34,
+        "high": 42663.1,
+        "low": 23701.22
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3435.36,
-        "high": 4894.42,
-        "low": 2375.81
+        "base": 3437.87,
+        "high": 4897.93,
+        "low": 2377.57
       }
     }
   ],
-  "public_accepted_pull_requests": 3333,
+  "public_accepted_pull_requests": 3336,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 41020.42,
-    "high": 55720.51,
-    "low": 30423.93
+    "base": 41048.78,
+    "high": 55758.78,
+    "low": 30445.19
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4884.01,
-    "high": 7196.61,
-    "low": 3329.37
+    "base": 4886.52,
+    "high": 7200.12,
+    "low": 3331.13
   },
   "updated_at_utc": "2026-10-29",
   "window": {
-    "end": "2026-10-29T05:35:45Z",
+    "end": "2026-10-29T06:39:10Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -88134,6 +88134,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-24T21:57:12Z",
+      "evidence": {
+        "additions": 60,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 12,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.87,
+        "high": 13.32,
+        "low": 7.4
+      },
+      "merged_at": "2026-10-24T22:28:50Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 1673,
+      "title": "fix(scope): name the workspace when a write hits an ambiguous project",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/1673"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-21T05:34:37Z",
       "evidence": {
         "additions": 76,
@@ -95848,6 +95877,35 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
+      "created_at": "2026-10-24T04:29:06Z",
+      "evidence": {
+        "additions": 90,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.37,
+        "high": 13.99,
+        "low": 7.77
+      },
+      "merged_at": "2026-10-28T11:19:31Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "open-compass/VLMEvalKit",
+      "pull_request": 1805,
+      "title": "fix(tdbench): read rotation results in every PRED_FORMAT",
+      "url": "https://github.com/open-compass/VLMEvalKit/pull/1805"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
       "created_at": "2026-10-25T17:38:29Z",
       "evidence": {
         "additions": 483,
@@ -97293,6 +97351,35 @@
       "pull_request": 2051,
       "title": "fix(factors): raise GTJA #17 to the signed 5-day close change",
       "url": "https://github.com/HKUDS/Vibe-Trading/pull/2051"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T05:36:57Z",
+      "evidence": {
+        "additions": 42,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.12,
+        "high": 10.96,
+        "low": 6.09
+      },
+      "merged_at": "2026-10-29T06:39:10Z",
+      "modeled_human_direction_hours": {
+        "base": 0.91,
+        "high": 1.27,
+        "low": 0.64
+      },
+      "project": "mvschwarz/openrig",
+      "pull_request": 2249,
+      "title": "fix(ui): show completed mission labels after proof acceptance",
+      "url": "https://github.com/mvschwarz/openrig/pull/2249"
     }
   ]
 }
