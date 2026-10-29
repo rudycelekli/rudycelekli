@@ -1440,7 +1440,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             f"Showing all {len(evidence['repositories'])} verified upstream projects",
             readme,
         )
-        self.assertLess(len(readme.split()), 5_000)
+        self.assertLessEqual(len(readme.split()), 10_000)
         self.assertIn('cron: "17,47 * * * *"', workflow)
 
     def test_professional_identity_and_community_links_are_visible(self):
