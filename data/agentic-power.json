@@ -12,7 +12,7 @@
       "low": 0.0263
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.48,
+    "evidence_window_weeks": 85.49,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1025.3,
+  "engineer_weeks_at_40h": 1025.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.59,
-    "high": 170.96,
-    "low": 128.22
+    "base": 149.61,
+    "high": 170.98,
+    "low": 128.23
   },
   "monthly": [
     {
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 300.0,
-        "high": 472.5,
+        "high": 472.6,
         "low": 196.9
       },
       "modeled_human_direction_hours": {
-        "base": 105.21,
-        "high": 120.24,
-        "low": 90.18
+        "base": 105.23,
+        "high": 120.27,
+        "low": 90.2
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3090,
+      "public_merged_pull_requests": 3091,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 31564.73,
-        "high": 42613.69,
-        "low": 23673.77
+        "base": 31572.98,
+        "high": 42624.83,
+        "low": 23679.96
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3434.45,
-        "high": 4893.15,
-        "low": 2375.17
+        "base": 3435.36,
+        "high": 4894.42,
+        "low": 2375.81
       }
     }
   ],
-  "public_accepted_pull_requests": 3332,
+  "public_accepted_pull_requests": 3333,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 41012.17,
-    "high": 55709.37,
-    "low": 30417.74
+    "base": 41020.42,
+    "high": 55720.51,
+    "low": 30423.93
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4883.1,
-    "high": 7195.34,
-    "low": 3328.73
+    "base": 4884.01,
+    "high": 7196.61,
+    "low": 3329.37
   },
   "updated_at_utc": "2026-10-29",
   "window": {
-    "end": "2026-10-29T04:54:35Z",
+    "end": "2026-10-29T05:35:45Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -97264,6 +97264,35 @@
       "pull_request": 713,
       "title": "fix(constraint-driven-development): Vitest coverage needs its provider installed",
       "url": "https://github.com/addyosmani/agent-skills/pull/713"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T15:16:50Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.25,
+        "high": 11.14,
+        "low": 6.19
+      },
+      "merged_at": "2026-10-29T05:35:45Z",
+      "modeled_human_direction_hours": {
+        "base": 0.91,
+        "high": 1.27,
+        "low": 0.64
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 2051,
+      "title": "fix(factors): raise GTJA #17 to the signed 5-day close change",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/2051"
     }
   ]
 }
