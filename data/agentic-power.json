@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 274.8,
-    "high": 435.4,
-    "low": 178.3
+    "base": 274.9,
+    "high": 435.7,
+    "low": 178.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0262
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.5,
+    "evidence_window_weeks": 85.51,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1027.8,
+  "engineer_weeks_at_40h": 1028.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.62,
-    "high": 171.0,
-    "low": 128.25
+    "base": 149.64,
+    "high": 171.02,
+    "low": 128.27
   },
   "monthly": [
     {
@@ -307,13 +307,13 @@
       "active_repositories": 1,
       "agentic_power_x": {
         "base": 209.7,
-        "high": 341.0,
+        "high": 352.3,
         "low": 128.9
       },
       "modeled_human_direction_hours": {
         "base": 0.36,
         "high": 0.41,
-        "low": 0.31
+        "low": 0.3
       },
       "month": "2025-11",
       "public_merged_pull_requests": 0,
@@ -412,11 +412,11 @@
       "agentic_power_x": {
         "base": 108.9,
         "high": 177.9,
-        "low": 66.7
+        "low": 67.1
       },
       "modeled_human_direction_hours": {
         "base": 1.68,
-        "high": 1.92,
+        "high": 1.91,
         "low": 1.44
       },
       "month": "2026-03",
@@ -463,13 +463,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 191.4,
-        "high": 311.6,
+        "high": 313.0,
         "low": 117.1
       },
       "modeled_human_direction_hours": {
         "base": 2.64,
         "high": 3.02,
-        "low": 2.27
+        "low": 2.26
       },
       "month": "2026-05",
       "public_merged_pull_requests": 0,
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 210.7,
+        "base": 211.3,
         "high": 344.4,
         "low": 129.3
       },
       "modeled_human_direction_hours": {
-        "base": 3.84,
+        "base": 3.83,
         "high": 4.38,
         "low": 3.29
       },
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 226.2,
-        "high": 369.5,
+        "base": 226.5,
+        "high": 370.0,
         "low": 138.7
       },
       "modeled_human_direction_hours": {
-        "base": 9.17,
+        "base": 9.16,
         "high": 10.47,
-        "low": 7.86
+        "low": 7.85
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 298.3,
-        "high": 475.4,
-        "low": 191.6
+        "base": 298.5,
+        "high": 475.8,
+        "low": 191.7
       },
       "modeled_human_direction_hours": {
-        "base": 12.97,
-        "high": 14.82,
-        "low": 11.12
+        "base": 12.96,
+        "high": 14.81,
+        "low": 11.11
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 300.6,
-        "high": 473.5,
-        "low": 197.3
+        "base": 300.8,
+        "high": 473.7,
+        "low": 197.4
       },
       "modeled_human_direction_hours": {
-        "base": 105.33,
-        "high": 120.38,
-        "low": 90.28
+        "base": 105.38,
+        "high": 120.43,
+        "low": 90.32
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3100,
+      "public_merged_pull_requests": 3103,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 31666.15,
-        "high": 42750.61,
-        "low": 23749.85
+        "base": 31693.8,
+        "high": 42787.94,
+        "low": 23770.59
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3444.7,
-        "high": 4907.51,
-        "low": 2382.34
+        "base": 3448.65,
+        "high": 4913.04,
+        "low": 2385.11
       }
     }
   ],
-  "public_accepted_pull_requests": 3342,
+  "public_accepted_pull_requests": 3345,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 41113.59,
-    "high": 55846.29,
-    "low": 30493.82
+    "base": 41141.24,
+    "high": 55883.62,
+    "low": 30514.56
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4893.35,
-    "high": 7209.7,
-    "low": 3335.9
+    "base": 4897.3,
+    "high": 7215.23,
+    "low": 3338.67
   },
   "updated_at_utc": "2026-10-29",
   "window": {
-    "end": "2026-10-29T07:30:32Z",
+    "end": "2026-10-29T09:51:08Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -97554,6 +97554,93 @@
       "pull_request": 3813,
       "title": "fix(modelscope): tolerate unsolicited empty-choices stream chunks",
       "url": "https://github.com/zhayujie/CowAgent/pull/3813"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T15:12:32Z",
+      "evidence": {
+        "additions": 42,
+        "changed_files": 2,
+        "comments": 3,
+        "commits": 2,
+        "deletions": 7,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.85,
+        "high": 11.95,
+        "low": 6.64
+      },
+      "merged_at": "2026-10-29T09:37:46Z",
+      "modeled_human_direction_hours": {
+        "base": 1.27,
+        "high": 1.78,
+        "low": 0.89
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1782,
+      "title": "fix(httpapi): refuse config-to-secret for values that embed a reference",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1782"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T22:13:29Z",
+      "evidence": {
+        "additions": 72,
+        "changed_files": 4,
+        "comments": 3,
+        "commits": 2,
+        "deletions": 7,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.4,
+        "high": 14.04,
+        "low": 7.8
+      },
+      "merged_at": "2026-10-29T09:37:55Z",
+      "modeled_human_direction_hours": {
+        "base": 1.41,
+        "high": 1.97,
+        "low": 0.99
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1778,
+      "title": "fix(isolation): detect the runtime of Windows launchers with an .exe/.cmd suffix",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1778"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:54:35Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 3,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.4,
+        "high": 11.34,
+        "low": 6.3
+      },
+      "merged_at": "2026-10-29T09:51:08Z",
+      "modeled_human_direction_hours": {
+        "base": 1.27,
+        "high": 1.78,
+        "low": 0.89
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1757,
+      "title": "fix(oauth): drop the query string from the legacy metadata discovery URL",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1757"
     }
   ]
 }
