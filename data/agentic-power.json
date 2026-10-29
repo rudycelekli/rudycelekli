@@ -1,13 +1,13 @@
 {
   "agentic_power_x": {
     "base": 276.2,
-    "high": 437.7,
+    "high": 437.8,
     "low": 179.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.0305,
+      "base": 0.0304,
       "high": 0.0348,
       "low": 0.0261
     },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1033.6,
+  "engineer_weeks_at_40h": 1033.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 299.5,
+        "base": 299.7,
         "high": 477.5,
         "low": 192.4
       },
       "modeled_human_direction_hours": {
-        "base": 12.92,
+        "base": 12.91,
         "high": 14.76,
         "low": 11.07
       },
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 302.1,
-        "high": 475.8,
-        "low": 198.2
+        "base": 302.2,
+        "high": 476.0,
+        "low": 198.3
       },
       "modeled_human_direction_hours": {
-        "base": 105.58,
+        "base": 105.59,
         "high": 120.67,
         "low": 90.5
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3120,
+      "public_merged_pull_requests": 3121,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 31896.38,
-        "high": 43061.39,
-        "low": 23922.5
+        "base": 31906.02,
+        "high": 43074.4,
+        "low": 23929.73
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3467.26,
-        "high": 4940.27,
-        "low": 2397.75
+        "base": 3468.06,
+        "high": 4941.39,
+        "low": 2398.31
       }
     }
   ],
-  "public_accepted_pull_requests": 3362,
+  "public_accepted_pull_requests": 3363,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 41343.82,
-    "high": 56157.07,
-    "low": 30666.47
+    "base": 41353.46,
+    "high": 56170.08,
+    "low": 30673.7
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4915.91,
-    "high": 7242.46,
-    "low": 3351.31
+    "base": 4916.71,
+    "high": 7243.58,
+    "low": 3351.87
   },
   "updated_at_utc": "2026-10-29",
   "window": {
-    "end": "2026-10-29T14:08:02Z",
+    "end": "2026-10-29T14:36:33Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -98134,6 +98134,35 @@
       "pull_request": 4537,
       "title": "fix(setup): preserve permissions during atomic configuration updates",
       "url": "https://github.com/morluto/jacobian/pull/4537"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-09T15:50:25Z",
+      "evidence": {
+        "additions": 32,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.64,
+        "high": 13.01,
+        "low": 7.23
+      },
+      "merged_at": "2026-10-29T14:36:33Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "tigerless-labs/agent-memory",
+      "pull_request": 69,
+      "title": "fix(core): continue packing memory index after an oversized entry",
+      "url": "https://github.com/tigerless-labs/agent-memory/pull/69"
     }
   ]
 }
