@@ -1,15 +1,15 @@
 {
   "agentic_power_x": {
-    "base": 274.4,
-    "high": 434.8,
-    "low": 178.1
+    "base": 274.2,
+    "high": 434.6,
+    "low": 178.0
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0306,
       "high": 0.035,
-      "low": 0.0262
+      "low": 0.0263
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
     "evidence_window_weeks": 85.49,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1026.2,
+  "engineer_weeks_at_40h": 1025.7,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 153.6,
+        "base": 153.2,
         "high": 250.2,
         "low": 94.0
       },
       "modeled_human_direction_hours": {
-        "base": 3.63,
+        "base": 3.64,
         "high": 4.15,
         "low": 3.12
       },
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 190.7,
         "high": 311.6,
-        "low": 117.1
+        "low": 116.7
       },
       "modeled_human_direction_hours": {
         "base": 2.65,
-        "high": 3.02,
+        "high": 3.03,
         "low": 2.27
       },
       "month": "2026-05",
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 297.9,
         "high": 474.9,
-        "low": 191.3
+        "low": 191.2
       },
       "modeled_human_direction_hours": {
         "base": 12.99,
-        "high": 14.84,
+        "high": 14.85,
         "low": 11.13
       },
       "month": "2026-09",
@@ -592,44 +592,44 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 300.2,
-        "high": 472.9,
-        "low": 197.0
+        "base": 300.1,
+        "high": 472.6,
+        "low": 196.9
       },
       "modeled_human_direction_hours": {
-        "base": 105.26,
-        "high": 120.29,
-        "low": 90.22
+        "base": 105.24,
+        "high": 120.28,
+        "low": 90.21
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3094,
+      "public_merged_pull_requests": 3092,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 31601.34,
-        "high": 42663.1,
-        "low": 23701.22
+        "base": 31581.1,
+        "high": 42635.79,
+        "low": 23686.05
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3437.87,
-        "high": 4897.93,
-        "low": 2377.57
+        "base": 3436.39,
+        "high": 4895.86,
+        "low": 2376.53
       }
     }
   ],
-  "public_accepted_pull_requests": 3336,
+  "public_accepted_pull_requests": 3334,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 41048.78,
-    "high": 55758.78,
-    "low": 30445.19
+    "base": 41028.54,
+    "high": 55731.47,
+    "low": 30430.02
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4886.52,
-    "high": 7200.12,
-    "low": 3331.13
+    "base": 4885.04,
+    "high": 7198.05,
+    "low": 3330.09
   },
   "updated_at_utc": "2026-10-29",
   "window": {
@@ -88134,35 +88134,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-24T21:57:12Z",
-      "evidence": {
-        "additions": 60,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 12,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 9.87,
-        "high": 13.32,
-        "low": 7.4
-      },
-      "merged_at": "2026-10-24T22:28:50Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "akitaonrails/ai-memory",
-      "pull_request": 1673,
-      "title": "fix(scope): name the workspace when a write hits an ambiguous project",
-      "url": "https://github.com/akitaonrails/ai-memory/pull/1673"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-21T05:34:37Z",
       "evidence": {
         "additions": 76,
@@ -95877,35 +95848,6 @@
       "acceptance_basis": "merged pull request",
       "accepted": true,
       "category": "software_engineering",
-      "created_at": "2026-10-24T04:29:06Z",
-      "evidence": {
-        "additions": 90,
-        "changed_files": 3,
-        "comments": 0,
-        "commits": 2,
-        "deletions": 2,
-        "reviews": 0
-      },
-      "heh": {
-        "base": 10.37,
-        "high": 13.99,
-        "low": 7.77
-      },
-      "merged_at": "2026-10-28T11:19:31Z",
-      "modeled_human_direction_hours": {
-        "base": 0.8,
-        "high": 1.12,
-        "low": 0.56
-      },
-      "project": "open-compass/VLMEvalKit",
-      "pull_request": 1805,
-      "title": "fix(tdbench): read rotation results in every PRED_FORMAT",
-      "url": "https://github.com/open-compass/VLMEvalKit/pull/1805"
-    },
-    {
-      "acceptance_basis": "merged pull request",
-      "accepted": true,
-      "category": "software_engineering",
       "created_at": "2026-10-25T17:38:29Z",
       "evidence": {
         "additions": 483,
@@ -97360,7 +97302,7 @@
       "evidence": {
         "additions": 42,
         "changed_files": 2,
-        "comments": 1,
+        "comments": 2,
         "commits": 1,
         "deletions": 0,
         "reviews": 1
@@ -97372,9 +97314,9 @@
       },
       "merged_at": "2026-10-29T06:39:10Z",
       "modeled_human_direction_hours": {
-        "base": 0.91,
-        "high": 1.27,
-        "low": 0.64
+        "base": 1.03,
+        "high": 1.44,
+        "low": 0.72
       },
       "project": "mvschwarz/openrig",
       "pull_request": 2249,
