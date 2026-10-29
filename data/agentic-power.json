@@ -1,18 +1,18 @@
 {
   "agentic_power_x": {
-    "base": 274.2,
-    "high": 434.6,
-    "low": 178.0
+    "base": 274.4,
+    "high": 434.8,
+    "low": 178.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0306,
       "high": 0.035,
-      "low": 0.0263
+      "low": 0.0262
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.49,
+    "evidence_window_weeks": 85.5,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1025.7,
+  "engineer_weeks_at_40h": 1026.3,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.61,
-    "high": 170.98,
-    "low": 128.23
+    "base": 149.62,
+    "high": 171.0,
+    "low": 128.25
   },
   "monthly": [
     {
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 153.2,
+        "base": 153.6,
         "high": 250.2,
         "low": 94.0
       },
       "modeled_human_direction_hours": {
-        "base": 3.64,
+        "base": 3.63,
         "high": 4.15,
         "low": 3.12
       },
@@ -464,11 +464,11 @@
       "agentic_power_x": {
         "base": 190.7,
         "high": 311.6,
-        "low": 116.7
+        "low": 117.1
       },
       "modeled_human_direction_hours": {
         "base": 2.65,
-        "high": 3.03,
+        "high": 3.02,
         "low": 2.27
       },
       "month": "2026-05",
@@ -568,11 +568,11 @@
       "agentic_power_x": {
         "base": 297.9,
         "high": 474.9,
-        "low": 191.2
+        "low": 191.3
       },
       "modeled_human_direction_hours": {
         "base": 12.99,
-        "high": 14.85,
+        "high": 14.84,
         "low": 11.13
       },
       "month": "2026-09",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 300.1,
-        "high": 472.6,
-        "low": 196.9
+        "base": 300.2,
+        "high": 472.8,
+        "low": 197.0
       },
       "modeled_human_direction_hours": {
-        "base": 105.24,
-        "high": 120.28,
-        "low": 90.21
+        "base": 105.27,
+        "high": 120.31,
+        "low": 90.24
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3092,
+      "public_merged_pull_requests": 3094,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 31581.1,
-        "high": 42635.79,
-        "low": 23686.05
+        "base": 31604.17,
+        "high": 42666.95,
+        "low": 23703.36
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3436.39,
-        "high": 4895.86,
-        "low": 2376.53
+        "base": 3438.64,
+        "high": 4899.01,
+        "low": 2378.1
       }
     }
   ],
-  "public_accepted_pull_requests": 3334,
+  "public_accepted_pull_requests": 3336,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 41028.54,
-    "high": 55731.47,
-    "low": 30430.02
+    "base": 41051.61,
+    "high": 55762.63,
+    "low": 30447.33
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4885.04,
-    "high": 7198.05,
-    "low": 3330.09
+    "base": 4887.29,
+    "high": 7201.2,
+    "low": 3331.66
   },
   "updated_at_utc": "2026-10-29",
   "window": {
-    "end": "2026-10-29T06:39:10Z",
+    "end": "2026-10-29T07:29:54Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -97322,6 +97322,64 @@
       "pull_request": 2249,
       "title": "fix(ui): show completed mission labels after proof acceptance",
       "url": "https://github.com/mvschwarz/openrig/pull/2249"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-21T04:11:44Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.38,
+        "high": 12.67,
+        "low": 7.04
+      },
+      "merged_at": "2026-10-29T07:29:48Z",
+      "modeled_human_direction_hours": {
+        "base": 1.09,
+        "high": 1.53,
+        "low": 0.76
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3802,
+      "title": "fix(browser): match managed profile paths without sibling-prefix collisions",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3802"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-21T05:38:38Z",
+      "evidence": {
+        "additions": 243,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.69,
+        "high": 18.49,
+        "low": 10.27
+      },
+      "merged_at": "2026-10-29T07:29:54Z",
+      "modeled_human_direction_hours": {
+        "base": 1.16,
+        "high": 1.62,
+        "low": 0.81
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3807,
+      "title": "fix(scheduler): preserve edits made during task execution",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3807"
     }
   ]
 }
