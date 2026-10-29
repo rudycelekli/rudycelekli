@@ -1,6 +1,6 @@
 {
   "agentic_power_x": {
-    "base": 276.2,
+    "base": 276.3,
     "high": 437.8,
     "low": 179.3
   },
@@ -12,7 +12,7 @@
       "low": 0.0261
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.54,
+    "evidence_window_weeks": 85.55,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1033.8,
+  "engineer_weeks_at_40h": 1034.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.7,
-    "high": 171.08,
-    "low": 128.31
+    "base": 149.71,
+    "high": 171.1,
+    "low": 128.32
   },
   "monthly": [
     {
@@ -597,43 +597,43 @@
         "low": 198.3
       },
       "modeled_human_direction_hours": {
-        "base": 105.59,
-        "high": 120.67,
-        "low": 90.5
+        "base": 105.61,
+        "high": 120.69,
+        "low": 90.52
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3121,
+      "public_merged_pull_requests": 3122,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 31906.02,
-        "high": 43074.4,
-        "low": 23929.73
+        "base": 31913.21,
+        "high": 43084.1,
+        "low": 23935.12
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3468.06,
-        "high": 4941.39,
-        "low": 2398.31
+        "base": 3468.72,
+        "high": 4942.31,
+        "low": 2398.77
       }
     }
   ],
-  "public_accepted_pull_requests": 3363,
+  "public_accepted_pull_requests": 3364,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 41353.46,
-    "high": 56170.08,
-    "low": 30673.7
+    "base": 41360.65,
+    "high": 56179.78,
+    "low": 30679.09
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4916.71,
-    "high": 7243.58,
-    "low": 3351.87
+    "base": 4917.37,
+    "high": 7244.5,
+    "low": 3352.33
   },
   "updated_at_utc": "2026-10-29",
   "window": {
-    "end": "2026-10-29T14:36:33Z",
+    "end": "2026-10-29T15:37:39Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -98163,6 +98163,35 @@
       "pull_request": 69,
       "title": "fix(core): continue packing memory index after an oversized entry",
       "url": "https://github.com/tigerless-labs/agent-memory/pull/69"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-11T21:25:06Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.19,
+        "high": 9.7,
+        "low": 5.39
+      },
+      "merged_at": "2026-10-29T15:37:39Z",
+      "modeled_human_direction_hours": {
+        "base": 0.66,
+        "high": 0.92,
+        "low": 0.46
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9808,
+      "title": "Preserve Unicode code points when encoding edited string representations",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9808"
     }
   ]
 }
