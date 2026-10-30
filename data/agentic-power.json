@@ -2,7 +2,7 @@
   "agentic_power_x": {
     "base": 280.9,
     "high": 445.1,
-    "low": 182.3
+    "low": 182.4
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0257
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.67,
+    "evidence_window_weeks": 85.68,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1052.8,
+  "engineer_weeks_at_40h": 1053.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.92,
-    "high": 171.34,
-    "low": 128.5
+    "base": 149.94,
+    "high": 171.36,
+    "low": 128.52
   },
   "monthly": [
     {
@@ -333,13 +333,13 @@
       "active_repositories": 8,
       "agentic_power_x": {
         "base": 153.0,
-        "high": 248.1,
+        "high": 250.6,
         "low": 93.5
       },
       "modeled_human_direction_hours": {
         "base": 1.17,
         "high": 1.34,
-        "low": 1.01
+        "low": 1.0
       },
       "month": "2025-12",
       "public_merged_pull_requests": 0,
@@ -597,43 +597,43 @@
         "low": 201.4
       },
       "modeled_human_direction_hours": {
-        "base": 106.41,
-        "high": 121.62,
-        "low": 91.21
+        "base": 106.43,
+        "high": 121.64,
+        "low": 91.23
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3160,
+      "public_merged_pull_requests": 3161,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 32662.82,
-        "high": 44096.08,
-        "low": 24497.33
+        "base": 32671.16,
+        "high": 44107.35,
+        "low": 24503.59
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3543.04,
-        "high": 5048.77,
-        "low": 2449.85
+        "base": 3543.84,
+        "high": 5049.89,
+        "low": 2450.41
       }
     }
   ],
-  "public_accepted_pull_requests": 3402,
+  "public_accepted_pull_requests": 3403,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 42110.26,
-    "high": 57191.76,
-    "low": 31241.3
+    "base": 42118.6,
+    "high": 57203.03,
+    "low": 31247.56
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4991.69,
-    "high": 7350.96,
-    "low": 3403.41
+    "base": 4992.49,
+    "high": 7352.08,
+    "low": 3403.97
   },
   "updated_at_utc": "2026-10-30",
   "window": {
-    "end": "2026-10-30T12:22:52Z",
+    "end": "2026-10-30T13:18:58Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -99294,6 +99294,35 @@
       "pull_request": 838,
       "title": "fix: reset enabled services draft when discarding unsaved preferences",
       "url": "https://github.com/orestbida/cookieconsent/pull/838"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T21:28:23Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.34,
+        "high": 11.27,
+        "low": 6.26
+      },
+      "merged_at": "2026-10-30T13:18:58Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "tigerless-labs/agent-memory",
+      "pull_request": 93,
+      "title": "Preserve supported storage settings while upgrading legacy configuration",
+      "url": "https://github.com/tigerless-labs/agent-memory/pull/93"
     }
   ]
 }
