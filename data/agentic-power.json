@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 280.4,
-    "high": 444.3,
-    "low": 182.0
+    "base": 280.5,
+    "high": 444.4,
+    "low": 182.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -12,7 +12,7 @@
       "low": 0.0258
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.65,
+    "evidence_window_weeks": 85.66,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1050.9,
+  "engineer_weeks_at_40h": 1051.1,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.89,
-    "high": 171.3,
-    "low": 128.48
+    "base": 149.91,
+    "high": 171.32,
+    "low": 128.49
   },
   "monthly": [
     {
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 230.0,
-        "high": 375.2,
+        "high": 375.7,
         "low": 140.8
       },
       "modeled_human_direction_hours": {
         "base": 9.02,
         "high": 10.31,
-        "low": 7.74
+        "low": 7.73
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 306.6,
+        "base": 306.7,
         "high": 483.0,
         "low": 201.2
       },
       "modeled_human_direction_hours": {
-        "base": 106.27,
-        "high": 121.46,
-        "low": 91.09
+        "base": 106.29,
+        "high": 121.48,
+        "low": 91.11
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3155,
+      "public_merged_pull_requests": 3156,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 32587.3,
-        "high": 43994.12,
-        "low": 24440.69
+        "base": 32596.01,
+        "high": 44005.88,
+        "low": 24447.22
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3530.04,
-        "high": 5029.36,
-        "low": 2441.16
+        "base": 3530.84,
+        "high": 5030.48,
+        "low": 2441.72
       }
     }
   ],
-  "public_accepted_pull_requests": 3397,
+  "public_accepted_pull_requests": 3398,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 42034.74,
-    "high": 57089.8,
-    "low": 31184.66
+    "base": 42043.45,
+    "high": 57101.56,
+    "low": 31191.19
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4978.69,
-    "high": 7331.55,
-    "low": 3394.72
+    "base": 4979.49,
+    "high": 7332.67,
+    "low": 3395.28
   },
   "updated_at_utc": "2026-10-30",
   "window": {
-    "end": "2026-10-30T08:38:18Z",
+    "end": "2026-10-30T10:15:57Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -99149,6 +99149,35 @@
       "pull_request": 4193,
       "title": "Generate code-switched clinical dialogues",
       "url": "https://github.com/maziyarpanahi/openmed/pull/4193"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T16:15:46Z",
+      "evidence": {
+        "additions": 34,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.71,
+        "high": 11.76,
+        "low": 6.53
+      },
+      "merged_at": "2026-10-30T10:15:57Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "tigerless-labs/agent-memory",
+      "pull_request": 79,
+      "title": "Keep current reference and experience truth out of legacy migration",
+      "url": "https://github.com/tigerless-labs/agent-memory/pull/79"
     }
   ]
 }
