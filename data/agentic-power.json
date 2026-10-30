@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 280.5,
-    "high": 444.4,
+    "base": 280.6,
+    "high": 444.6,
     "low": 182.1
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1051.1,
+  "engineer_weeks_at_40h": 1051.4,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -99,13 +99,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 48.7,
-        "high": 79.3,
+        "high": 80.4,
         "low": 29.9
       },
       "modeled_human_direction_hours": {
         "base": 0.79,
         "high": 0.9,
-        "low": 0.68
+        "low": 0.67
       },
       "month": "2025-03",
       "public_merged_pull_requests": 0,
@@ -332,12 +332,12 @@
     {
       "active_repositories": 8,
       "agentic_power_x": {
-        "base": 151.7,
+        "base": 153.0,
         "high": 248.1,
         "low": 93.5
       },
       "modeled_human_direction_hours": {
-        "base": 1.18,
+        "base": 1.17,
         "high": 1.34,
         "low": 1.01
       },
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 182.2,
-        "high": 297.2,
-        "low": 111.5
+        "high": 297.9,
+        "low": 111.7
       },
       "modeled_human_direction_hours": {
         "base": 5.15,
-        "high": 5.89,
-        "low": 4.42
+        "high": 5.88,
+        "low": 4.41
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 303.0,
+        "base": 303.2,
         "high": 483.2,
         "low": 194.6
       },
       "modeled_human_direction_hours": {
-        "base": 12.77,
+        "base": 12.76,
         "high": 14.59,
         "low": 10.94
       },
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 306.7,
-        "high": 483.0,
-        "low": 201.2
+        "high": 483.2,
+        "low": 201.3
       },
       "modeled_human_direction_hours": {
-        "base": 106.29,
-        "high": 121.48,
-        "low": 91.11
+        "base": 106.31,
+        "high": 121.49,
+        "low": 91.12
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3156,
+      "public_merged_pull_requests": 3157,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 32596.01,
-        "high": 44005.88,
-        "low": 24447.22
+        "base": 32610.33,
+        "high": 44025.21,
+        "low": 24457.96
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3530.84,
-        "high": 5030.48,
-        "low": 2441.72
+        "base": 3532.43,
+        "high": 5032.71,
+        "low": 2442.83
       }
     }
   ],
-  "public_accepted_pull_requests": 3398,
+  "public_accepted_pull_requests": 3399,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 42043.45,
-    "high": 57101.56,
-    "low": 31191.19
+    "base": 42057.77,
+    "high": 57120.89,
+    "low": 31201.93
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4979.49,
-    "high": 7332.67,
-    "low": 3395.28
+    "base": 4981.08,
+    "high": 7334.9,
+    "low": 3396.39
   },
   "updated_at_utc": "2026-10-30",
   "window": {
-    "end": "2026-10-30T10:15:57Z",
+    "end": "2026-10-30T10:54:09Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -99178,6 +99178,35 @@
       "pull_request": 79,
       "title": "Keep current reference and experience truth out of legacy migration",
       "url": "https://github.com/tigerless-labs/agent-memory/pull/79"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T22:11:53Z",
+      "evidence": {
+        "additions": 168,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 6,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 14.32,
+        "high": 19.33,
+        "low": 10.74
+      },
+      "merged_at": "2026-10-30T10:54:09Z",
+      "modeled_human_direction_hours": {
+        "base": 1.59,
+        "high": 2.23,
+        "low": 1.11
+      },
+      "project": "smart-mcp-proxy/mcpproxy-go",
+      "pull_request": 1777,
+      "title": "fix(docker): recognise docker.exe and backslash paths as a direct docker run",
+      "url": "https://github.com/smart-mcp-proxy/mcpproxy-go/pull/1777"
     }
   ]
 }
