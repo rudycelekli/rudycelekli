@@ -1,13 +1,13 @@
 {
   "agentic_power_x": {
-    "base": 282.0,
-    "high": 446.7,
-    "low": 183.0
+    "base": 282.1,
+    "high": 446.9,
+    "low": 183.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
-      "base": 0.03,
+      "base": 0.0299,
       "high": 0.0342,
       "low": 0.0257
     },
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1057.2,
+  "engineer_weeks_at_40h": 1057.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -281,13 +281,13 @@
       "active_repositories": 2,
       "agentic_power_x": {
         "base": 23.1,
-        "high": 35.0,
+        "high": 38.2,
         "low": 14.0
       },
       "modeled_human_direction_hours": {
         "base": 0.13,
         "high": 0.15,
-        "low": 0.12
+        "low": 0.11
       },
       "month": "2025-10",
       "public_merged_pull_requests": 0,
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 156.6,
+        "base": 157.0,
         "high": 255.9,
         "low": 96.1
       },
       "modeled_human_direction_hours": {
-        "base": 3.56,
+        "base": 3.55,
         "high": 4.06,
         "low": 3.05
       },
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 182.9,
+        "base": 183.3,
         "high": 299.2,
         "low": 112.1
       },
       "modeled_human_direction_hours": {
-        "base": 5.13,
+        "base": 5.12,
         "high": 5.86,
         "low": 4.39
       },
@@ -516,11 +516,11 @@
       "agentic_power_x": {
         "base": 215.2,
         "high": 351.8,
-        "low": 131.7
+        "low": 132.0
       },
       "modeled_human_direction_hours": {
         "base": 3.76,
-        "high": 4.3,
+        "high": 4.29,
         "low": 3.22
       },
       "month": "2026-07",
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 231.0,
-        "high": 377.2,
+        "high": 377.7,
         "low": 141.5
       },
       "modeled_human_direction_hours": {
         "base": 8.98,
         "high": 10.26,
-        "low": 7.7
+        "low": 7.69
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 308.1,
-        "high": 485.3,
-        "low": 202.2
+        "base": 308.2,
+        "high": 485.5,
+        "low": 202.3
       },
       "modeled_human_direction_hours": {
-        "base": 106.58,
-        "high": 121.81,
-        "low": 91.36
+        "base": 106.6,
+        "high": 121.82,
+        "low": 91.37
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3178,
+      "public_merged_pull_requests": 3179,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 32839.02,
-        "high": 44333.97,
-        "low": 24629.49
+        "base": 32855.65,
+        "high": 44356.42,
+        "low": 24641.96
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3558.25,
-        "high": 5070.04,
-        "low": 2460.52
+        "base": 3559.79,
+        "high": 5072.2,
+        "low": 2461.6
       }
     }
   ],
-  "public_accepted_pull_requests": 3420,
+  "public_accepted_pull_requests": 3421,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 42286.46,
-    "high": 57429.65,
-    "low": 31373.46
+    "base": 42303.09,
+    "high": 57452.1,
+    "low": 31385.93
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5006.9,
-    "high": 7372.23,
-    "low": 3414.08
+    "base": 5008.44,
+    "high": 7374.39,
+    "low": 3415.16
   },
   "updated_at_utc": "2026-10-30",
   "window": {
-    "end": "2026-10-30T16:19:02Z",
+    "end": "2026-10-30T16:53:46Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -99816,6 +99816,35 @@
       "pull_request": 1126,
       "title": "fix(mcp): preserve numeric request IDs without rounding",
       "url": "https://github.com/Asymptote-Labs/agent-beacon/pull/1126"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-30T05:33:46Z",
+      "evidence": {
+        "additions": 352,
+        "changed_files": 11,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 73,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 16.63,
+        "high": 22.45,
+        "low": 12.47
+      },
+      "merged_at": "2026-10-30T16:53:46Z",
+      "modeled_human_direction_hours": {
+        "base": 1.54,
+        "high": 2.16,
+        "low": 1.08
+      },
+      "project": "Asymptote-Labs/agent-beacon",
+      "pull_request": 1128,
+      "title": "fix(ci): override inherited per-signal OTLP routing",
+      "url": "https://github.com/Asymptote-Labs/agent-beacon/pull/1128"
     }
   ]
 }
