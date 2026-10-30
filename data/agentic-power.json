@@ -12,7 +12,7 @@
       "low": 0.0258
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.61,
+    "evidence_window_weeks": 85.65,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1050.2,
+  "engineer_weeks_at_40h": 1050.9,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 149.82,
-    "high": 171.22,
-    "low": 128.41
+    "base": 149.89,
+    "high": 171.3,
+    "low": 128.48
   },
   "monthly": [
     {
@@ -99,13 +99,13 @@
       "active_repositories": 10,
       "agentic_power_x": {
         "base": 48.7,
-        "high": 80.4,
+        "high": 79.3,
         "low": 29.9
       },
       "modeled_human_direction_hours": {
         "base": 0.79,
         "high": 0.9,
-        "low": 0.67
+        "low": 0.68
       },
       "month": "2025-03",
       "public_merged_pull_requests": 0,
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 182.2,
-        "high": 297.9,
+        "high": 297.2,
         "low": 111.5
       },
       "modeled_human_direction_hours": {
         "base": 5.15,
         "high": 5.89,
-        "low": 4.41
+        "low": 4.42
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -541,13 +541,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 230.0,
-        "high": 375.7,
+        "high": 375.2,
         "low": 140.8
       },
       "modeled_human_direction_hours": {
         "base": 9.02,
         "high": 10.31,
-        "low": 7.73
+        "low": 7.74
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 306.6,
-        "high": 482.9,
+        "high": 483.0,
         "low": 201.2
       },
       "modeled_human_direction_hours": {
-        "base": 106.21,
-        "high": 121.38,
-        "low": 91.04
+        "base": 106.27,
+        "high": 121.46,
+        "low": 91.09
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3154,
+      "public_merged_pull_requests": 3155,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 32562.56,
-        "high": 43960.72,
-        "low": 24422.13
+        "base": 32587.3,
+        "high": 43994.12,
+        "low": 24440.69
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3528.19,
-        "high": 5026.77,
-        "low": 2439.87
+        "base": 3530.04,
+        "high": 5029.36,
+        "low": 2441.16
       }
     }
   ],
-  "public_accepted_pull_requests": 3396,
+  "public_accepted_pull_requests": 3397,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 42010.0,
-    "high": 57056.4,
-    "low": 31166.1
+    "base": 42034.74,
+    "high": 57089.8,
+    "low": 31184.66
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 4976.84,
-    "high": 7328.96,
-    "low": 3393.43
+    "base": 4978.69,
+    "high": 7331.55,
+    "low": 3394.72
   },
   "updated_at_utc": "2026-10-30",
   "window": {
-    "end": "2026-10-30T01:28:49Z",
+    "end": "2026-10-30T08:38:18Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -99120,6 +99120,35 @@
       "pull_request": 4502,
       "title": "fix(evals): reject changed numeric probe values",
       "url": "https://github.com/headroomlabs-ai/headroom/pull/4502"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T12:26:15Z",
+      "evidence": {
+        "additions": 728,
+        "changed_files": 6,
+        "comments": 1,
+        "commits": 13,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 24.74,
+        "high": 33.4,
+        "low": 18.56
+      },
+      "merged_at": "2026-10-30T08:38:18Z",
+      "modeled_human_direction_hours": {
+        "base": 1.85,
+        "high": 2.59,
+        "low": 1.29
+      },
+      "project": "maziyarpanahi/openmed",
+      "pull_request": 4193,
+      "title": "Generate code-switched clinical dialogues",
+      "url": "https://github.com/maziyarpanahi/openmed/pull/4193"
     }
   ]
 }
