@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 281.9,
-    "high": 446.7,
-    "low": 183.0
+    "base": 282.0,
+    "high": 446.8,
+    "low": 183.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1058.0,
+  "engineer_weeks_at_40h": 1058.2,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -592,48 +592,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 308.1,
-        "high": 485.3,
+        "base": 308.2,
+        "high": 485.4,
         "low": 202.2
       },
       "modeled_human_direction_hours": {
         "base": 106.7,
-        "high": 121.94,
-        "low": 91.45
+        "high": 121.95,
+        "low": 91.46
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3181,
+      "public_merged_pull_requests": 3182,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 32872.84,
-        "high": 44379.62,
-        "low": 24654.85
+        "base": 32881.44,
+        "high": 44391.23,
+        "low": 24661.3
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3561.25,
-        "high": 5074.24,
-        "low": 2462.62
+        "base": 3561.98,
+        "high": 5075.26,
+        "low": 2463.13
       }
     }
   ],
-  "public_accepted_pull_requests": 3423,
+  "public_accepted_pull_requests": 3424,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 42320.28,
-    "high": 57475.3,
-    "low": 31398.82
+    "base": 42328.88,
+    "high": 57486.91,
+    "low": 31405.27
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5009.9,
-    "high": 7376.43,
-    "low": 3416.18
+    "base": 5010.63,
+    "high": 7377.45,
+    "low": 3416.69
   },
   "updated_at_utc": "2026-10-31",
   "window": {
-    "end": "2026-10-31T05:01:31Z",
+    "end": "2026-10-31T05:25:56Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -99903,6 +99903,35 @@
       "pull_request": 174,
       "title": "Reject invalid argument counts in XPath functions",
       "url": "https://github.com/antchfx/xpath/pull/174"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T04:40:44Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 17,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.6,
+        "high": 11.61,
+        "low": 6.45
+      },
+      "merged_at": "2026-10-31T05:25:56Z",
+      "modeled_human_direction_hours": {
+        "base": 0.73,
+        "high": 1.02,
+        "low": 0.51
+      },
+      "project": "antchfx/xpath",
+      "pull_request": 175,
+      "title": "Accept node-set suffixes in ends-with",
+      "url": "https://github.com/antchfx/xpath/pull/175"
     }
   ]
 }
