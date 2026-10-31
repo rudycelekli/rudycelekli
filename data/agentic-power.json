@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 284.5,
-    "high": 450.7,
-    "low": 184.7
+    "base": 284.6,
+    "high": 450.8,
+    "low": 184.8
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1067.8,
+  "engineer_weeks_at_40h": 1068.0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -540,12 +540,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 232.3,
+        "base": 232.6,
         "high": 379.6,
         "low": 142.4
       },
       "modeled_human_direction_hours": {
-        "base": 8.93,
+        "base": 8.92,
         "high": 10.2,
         "low": 7.65
       },
@@ -593,47 +593,47 @@
       "active_repositories": 0,
       "agentic_power_x": {
         "base": 310.9,
-        "high": 489.7,
-        "low": 204.0
+        "high": 489.8,
+        "low": 204.1
       },
       "modeled_human_direction_hours": {
-        "base": 107.0,
-        "high": 122.28,
-        "low": 91.71
+        "base": 107.01,
+        "high": 122.29,
+        "low": 91.72
       },
       "month": "2026-10",
-      "public_merged_pull_requests": 3223,
+      "public_merged_pull_requests": 3224,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 33262.76,
-        "high": 44906.04,
-        "low": 24947.29
+        "base": 33274.36,
+        "high": 44921.7,
+        "low": 24955.99
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 3593.53,
-        "high": 5120.56,
-        "low": 2484.85
+        "base": 3594.33,
+        "high": 5121.68,
+        "low": 2485.41
       }
     }
   ],
-  "public_accepted_pull_requests": 3465,
+  "public_accepted_pull_requests": 3466,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 42710.2,
-    "high": 58001.72,
-    "low": 31691.26
+    "base": 42721.8,
+    "high": 58017.38,
+    "low": 31699.96
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5042.18,
-    "high": 7422.75,
-    "low": 3438.41
+    "base": 5042.98,
+    "high": 7423.87,
+    "low": 3438.97
   },
   "updated_at_utc": "2026-10-31",
   "window": {
-    "end": "2026-10-31T08:49:39Z",
+    "end": "2026-10-31T09:02:04Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -101121,6 +101121,35 @@
       "pull_request": 2199,
       "title": "fix(documents): retain picture shapes in PPTX fallback",
       "url": "https://github.com/HKUDS/DeepTutor/pull/2199"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-31T05:41:52Z",
+      "evidence": {
+        "additions": 142,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.6,
+        "high": 15.66,
+        "low": 8.7
+      },
+      "merged_at": "2026-10-31T09:02:04Z",
+      "modeled_human_direction_hours": {
+        "base": 0.8,
+        "high": 1.12,
+        "low": 0.56
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2236,
+      "title": "fix(documents): follow PPTX presentation slide order in fallbacks",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2236"
     }
   ]
 }
