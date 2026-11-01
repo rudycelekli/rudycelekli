@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 284.5,
-    "high": 450.8,
+    "base": 284.4,
+    "high": 450.7,
     "low": 184.7
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0255
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 85.88,
+    "evidence_window_weeks": 85.94,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1069.1,
+  "engineer_weeks_at_40h": 1069.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 150.29,
-    "high": 171.76,
-    "low": 128.82
+    "base": 150.39,
+    "high": 171.88,
+    "low": 128.91
   },
   "monthly": [
     {
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 306.6,
+        "base": 306.3,
         "high": 488.6,
         "low": 196.8
       },
       "modeled_human_direction_hours": {
-        "base": 12.62,
+        "base": 12.63,
         "high": 14.43,
         "low": 10.82
       },
@@ -597,8 +597,8 @@
         "low": 204.0
       },
       "modeled_human_direction_hours": {
-        "base": 107.17,
-        "high": 122.48,
+        "base": 107.18,
+        "high": 122.49,
         "low": 91.86
       },
       "month": "2026-10",
@@ -618,48 +618,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 0.0,
-        "high": 0.0,
-        "low": 0.0
+        "base": 133.3,
+        "high": 225.0,
+        "low": 90.9
       },
       "modeled_human_direction_hours": {
-        "base": 0.0,
-        "high": 0.0,
-        "low": 0.0
+        "base": 0.1,
+        "high": 0.11,
+        "low": 0.08
       },
       "month": "2026-11",
-      "public_merged_pull_requests": 0,
+      "public_merged_pull_requests": 1,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 0.0,
-        "high": 0.0,
-        "low": 0.0
+        "base": 13.33,
+        "high": 18.0,
+        "low": 10.0
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 0.0,
-        "high": 0.0,
-        "low": 0.0
+        "base": 3.32,
+        "high": 5.85,
+        "low": 1.92
       }
     }
   ],
-  "public_accepted_pull_requests": 3470,
+  "public_accepted_pull_requests": 3471,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 42764.99,
-    "high": 58075.68,
-    "low": 31732.34
+    "base": 42778.32,
+    "high": 58093.68,
+    "low": 31742.34
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5049.21,
-    "high": 7433.8,
-    "low": 3442.92
+    "base": 5052.53,
+    "high": 7439.65,
+    "low": 3444.84
   },
   "updated_at_utc": "2026-11-01",
   "window": {
-    "end": "2026-10-31T22:35:47Z",
+    "end": "2026-11-01T09:38:02Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -101292,6 +101292,35 @@
       "pull_request": 182,
       "title": "fix(collapse_events): detect runs in index order, not tied timestamp order",
       "url": "https://github.com/retentioneering/retentioneering-tools/pull/182"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T04:44:04Z",
+      "evidence": {
+        "additions": 122,
+        "changed_files": 7,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 21,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.33,
+        "high": 18.0,
+        "low": 10.0
+      },
+      "merged_at": "2026-11-01T09:38:02Z",
+      "modeled_human_direction_hours": {
+        "base": 1.32,
+        "high": 1.85,
+        "low": 0.92
+      },
+      "project": "retentioneering/retentioneering-tools",
+      "pull_request": 193,
+      "title": "fix(collapse_events): honour agg=\"sum\" and reject agg names we do not know",
+      "url": "https://github.com/retentioneering/retentioneering-tools/pull/193"
     }
   ]
 }
