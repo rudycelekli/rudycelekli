@@ -1,18 +1,18 @@
 {
   "agentic_power_x": {
-    "base": 286.5,
-    "high": 453.8,
-    "low": 186.0
+    "base": 286.6,
+    "high": 454.0,
+    "low": 186.1
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
     "allocation_factor_vs_base_proxy": {
       "base": 0.0296,
       "high": 0.0338,
-      "low": 0.0254
+      "low": 0.0253
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 86.08,
+    "evidence_window_weeks": 86.1,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1078.8,
+  "engineer_weeks_at_40h": 1079.5,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 150.64,
-    "high": 172.16,
-    "low": 129.12
+    "base": 150.67,
+    "high": 172.2,
+    "low": 129.15
   },
   "monthly": [
     {
@@ -307,13 +307,13 @@
       "active_repositories": 1,
       "agentic_power_x": {
         "base": 222.1,
-        "high": 352.3,
+        "high": 364.5,
         "low": 135.5
       },
       "modeled_human_direction_hours": {
         "base": 0.34,
         "high": 0.39,
-        "low": 0.3
+        "low": 0.29
       },
       "month": "2025-11",
       "public_merged_pull_requests": 0,
@@ -358,12 +358,12 @@
     {
       "active_repositories": 4,
       "agentic_power_x": {
-        "base": 126.4,
+        "base": 128.8,
         "high": 208.4,
         "low": 78.2
       },
       "modeled_human_direction_hours": {
-        "base": 0.53,
+        "base": 0.52,
         "high": 0.6,
         "low": 0.45
       },
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 233.9,
-        "high": 382.1,
+        "base": 234.1,
+        "high": 382.6,
         "low": 143.4
       },
       "modeled_human_direction_hours": {
-        "base": 8.87,
+        "base": 8.86,
         "high": 10.13,
-        "low": 7.6
+        "low": 7.59
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,13 +566,13 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 308.3,
+        "base": 308.5,
         "high": 491.7,
-        "low": 198.0
+        "low": 198.1
       },
       "modeled_human_direction_hours": {
-        "base": 12.55,
-        "high": 14.34,
+        "base": 12.54,
+        "high": 14.33,
         "low": 10.75
       },
       "month": "2026-09",
@@ -592,14 +592,14 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 312.8,
-        "high": 492.7,
-        "low": 205.3
+        "base": 313.0,
+        "high": 493.1,
+        "low": 205.4
       },
       "modeled_human_direction_hours": {
-        "base": 106.51,
-        "high": 121.72,
-        "low": 91.29
+        "base": 106.43,
+        "high": 121.63,
+        "low": 91.22
       },
       "month": "2026-10",
       "public_merged_pull_requests": 3228,
@@ -618,48 +618,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 303.3,
-        "high": 476.4,
-        "low": 198.0
+        "base": 291.5,
+        "high": 461.2,
+        "low": 191.8
       },
       "modeled_human_direction_hours": {
-        "base": 1.28,
-        "high": 1.47,
-        "low": 1.1
+        "base": 1.43,
+        "high": 1.63,
+        "low": 1.22
       },
       "month": "2026-11",
-      "public_merged_pull_requests": 36,
+      "public_merged_pull_requests": 39,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 388.2,
-        "high": 524.02,
-        "low": 291.11
+        "base": 416.84,
+        "high": 562.68,
+        "low": 312.58
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 43.38,
-        "high": 66.69,
-        "low": 28.36
+        "base": 48.26,
+        "high": 74.72,
+        "low": 31.38
       }
     }
   ],
-  "public_accepted_pull_requests": 3506,
+  "public_accepted_pull_requests": 3509,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 43153.19,
-    "high": 58599.7,
-    "low": 32023.45
+    "base": 43181.83,
+    "high": 58638.36,
+    "low": 32044.92
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5092.59,
-    "high": 7500.49,
-    "low": 3471.28
+    "base": 5097.47,
+    "high": 7508.52,
+    "low": 3474.3
   },
   "updated_at_utc": "2026-11-02",
   "window": {
-    "end": "2026-11-02T08:14:18Z",
+    "end": "2026-11-02T12:26:30Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -102336,6 +102336,93 @@
       "pull_request": 5203,
       "title": "fix(context): preserve authored marker examples during refresh",
       "url": "https://github.com/thedotmack/claude-mem/pull/5203"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:09Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.66,
+        "high": 11.69,
+        "low": 6.49
+      },
+      "merged_at": "2026-11-02T12:20:58Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 218,
+      "title": "fix(hook): retain layer identity when counting exact skill reads",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/218"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:29Z",
+      "evidence": {
+        "additions": 69,
+        "changed_files": 4,
+        "comments": 3,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.19,
+        "high": 13.76,
+        "low": 7.64
+      },
+      "merged_at": "2026-11-02T12:24:47Z",
+      "modeled_human_direction_hours": {
+        "base": 1.23,
+        "high": 1.72,
+        "low": 0.86
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 225,
+      "title": "fix(hook): keep healthy index entries when one skill cannot be read",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/225"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:05Z",
+      "evidence": {
+        "additions": 67,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.79,
+        "high": 13.21,
+        "low": 7.34
+      },
+      "merged_at": "2026-11-02T12:26:30Z",
+      "modeled_human_direction_hours": {
+        "base": 1.04,
+        "high": 1.46,
+        "low": 0.73
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 217,
+      "title": "fix(capture): enforce digest budgets on UTF-8 output",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/217"
     }
   ]
 }
