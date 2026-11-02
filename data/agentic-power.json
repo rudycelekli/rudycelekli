@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 289.2,
-    "high": 458.1,
-    "low": 187.8
+    "base": 289.3,
+    "high": 458.3,
+    "low": 187.9
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1089.9,
+  "engineer_weeks_at_40h": 1090.3,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -410,12 +410,12 @@
     {
       "active_repositories": 13,
       "agentic_power_x": {
-        "base": 113.7,
+        "base": 114.4,
         "high": 185.7,
         "low": 70.0
       },
       "modeled_human_direction_hours": {
-        "base": 1.61,
+        "base": 1.6,
         "high": 1.83,
         "low": 1.38
       },
@@ -436,12 +436,12 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 160.2,
+        "base": 160.7,
         "high": 261.9,
         "low": 98.3
       },
       "modeled_human_direction_hours": {
-        "base": 3.48,
+        "base": 3.47,
         "high": 3.97,
         "low": 2.98
       },
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 187.3,
         "high": 306.2,
-        "low": 114.6
+        "low": 114.8
       },
       "modeled_human_direction_hours": {
         "base": 5.01,
-        "high": 5.73,
+        "high": 5.72,
         "low": 4.29
       },
       "month": "2026-06",
@@ -540,12 +540,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 236.3,
+        "base": 236.5,
         "high": 386.2,
         "low": 144.8
       },
       "modeled_human_direction_hours": {
-        "base": 8.78,
+        "base": 8.77,
         "high": 10.03,
         "low": 7.52
       },
@@ -566,12 +566,12 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 311.5,
+        "base": 311.8,
         "high": 496.8,
         "low": 200.1
       },
       "modeled_human_direction_hours": {
-        "base": 12.42,
+        "base": 12.41,
         "high": 14.19,
         "low": 10.64
       },
@@ -592,14 +592,14 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 316.0,
-        "high": 497.8,
-        "low": 207.4
+        "base": 316.1,
+        "high": 498.0,
+        "low": 207.5
       },
       "modeled_human_direction_hours": {
-        "base": 105.42,
-        "high": 120.48,
-        "low": 90.36
+        "base": 105.39,
+        "high": 120.45,
+        "low": 90.33
       },
       "month": "2026-10",
       "public_merged_pull_requests": 3228,
@@ -618,48 +618,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 285.1,
-        "high": 448.0,
-        "low": 186.8
+        "base": 287.2,
+        "high": 452.0,
+        "low": 188.5
       },
       "modeled_human_direction_hours": {
-        "base": 2.91,
-        "high": 3.33,
-        "low": 2.5
+        "base": 2.95,
+        "high": 3.37,
+        "low": 2.53
       },
       "month": "2026-11",
-      "public_merged_pull_requests": 81,
+      "public_merged_pull_requests": 83,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 829.64,
-        "high": 1119.95,
-        "low": 622.19
+        "base": 847.16,
+        "high": 1143.6,
+        "low": 635.33
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 99.45,
-        "high": 152.39,
-        "low": 65.16
+        "base": 100.88,
+        "high": 154.39,
+        "low": 66.16
       }
     }
   ],
-  "public_accepted_pull_requests": 3551,
+  "public_accepted_pull_requests": 3553,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 43594.63,
-    "high": 59195.63,
-    "low": 32354.53
+    "base": 43612.15,
+    "high": 59219.28,
+    "low": 32367.67
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5148.66,
-    "high": 7586.19,
-    "low": 3508.08
+    "base": 5150.09,
+    "high": 7588.19,
+    "low": 3509.08
   },
   "updated_at_utc": "2026-11-02",
   "window": {
-    "end": "2026-11-02T18:47:38Z",
+    "end": "2026-11-02T19:51:50Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -103641,6 +103641,64 @@
       "pull_request": 923,
       "title": "Allow overlapping Bot audiences in shared-app approvals",
       "url": "https://github.com/CopilotKit/OpenBot/pull/923"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T19:16:13Z",
+      "evidence": {
+        "additions": 47,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.02,
+        "high": 12.17,
+        "low": 6.76
+      },
+      "merged_at": "2026-11-02T19:51:50Z",
+      "modeled_human_direction_hours": {
+        "base": 0.75,
+        "high": 1.05,
+        "low": 0.52
+      },
+      "project": "haydenschmitty/floorplan",
+      "pull_request": 65,
+      "title": "Put Django urls included under a prefix at their full path",
+      "url": "https://github.com/haydenschmitty/floorplan/pull/65"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T15:15:51Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.5,
+        "high": 11.48,
+        "low": 6.38
+      },
+      "merged_at": "2026-11-02T19:51:50Z",
+      "modeled_human_direction_hours": {
+        "base": 0.68,
+        "high": 0.95,
+        "low": 0.48
+      },
+      "project": "haydenschmitty/floorplan",
+      "pull_request": 62,
+      "title": "Don't treat a /* inside a string as a comment",
+      "url": "https://github.com/haydenschmitty/floorplan/pull/62"
     }
   ]
 }
