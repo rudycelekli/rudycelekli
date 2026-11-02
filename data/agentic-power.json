@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 288.2,
-    "high": 456.6,
-    "low": 187.2
+    "base": 288.4,
+    "high": 456.8,
+    "low": 187.3
   },
   "basis": "operator-calibrated provisional estimate",
   "direction_calibration": {
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1086.0,
+  "engineer_weeks_at_40h": 1086.6,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -126,11 +126,11 @@
       "agentic_power_x": {
         "base": 29.2,
         "high": 47.8,
-        "low": 17.8
+        "low": 18.1
       },
       "modeled_human_direction_hours": {
         "base": 0.48,
-        "high": 0.55,
+        "high": 0.54,
         "low": 0.41
       },
       "month": "2025-04",
@@ -438,11 +438,11 @@
       "agentic_power_x": {
         "base": 159.7,
         "high": 261.0,
-        "low": 97.8
+        "low": 98.1
       },
       "modeled_human_direction_hours": {
         "base": 3.49,
-        "high": 3.99,
+        "high": 3.98,
         "low": 2.99
       },
       "month": "2026-04",
@@ -488,12 +488,12 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 186.5,
+        "base": 186.9,
         "high": 304.8,
         "low": 114.4
       },
       "modeled_human_direction_hours": {
-        "base": 5.03,
+        "base": 5.02,
         "high": 5.74,
         "low": 4.31
       },
@@ -514,12 +514,12 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 219.3,
+        "base": 219.9,
         "high": 358.5,
         "low": 134.6
       },
       "modeled_human_direction_hours": {
-        "base": 3.69,
+        "base": 3.68,
         "high": 4.21,
         "low": 3.16
       },
@@ -540,14 +540,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 235.5,
-        "high": 384.7,
+        "base": 235.7,
+        "high": 385.2,
         "low": 144.3
       },
       "modeled_human_direction_hours": {
-        "base": 8.81,
+        "base": 8.8,
         "high": 10.06,
-        "low": 7.55
+        "low": 7.54
       },
       "month": "2026-08",
       "public_merged_pull_requests": 0,
@@ -566,14 +566,14 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 310.5,
-        "high": 495.0,
-        "low": 199.4
+        "base": 310.8,
+        "high": 495.4,
+        "low": 199.5
       },
       "modeled_human_direction_hours": {
-        "base": 12.46,
-        "high": 14.24,
-        "low": 10.68
+        "base": 12.45,
+        "high": 14.23,
+        "low": 10.67
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,14 +592,14 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 315.0,
-        "high": 496.1,
-        "low": 206.7
+        "base": 315.1,
+        "high": 496.4,
+        "low": 206.8
       },
       "modeled_human_direction_hours": {
-        "base": 105.78,
-        "high": 120.89,
-        "low": 90.66
+        "base": 105.72,
+        "high": 120.82,
+        "low": 90.62
       },
       "month": "2026-10",
       "public_merged_pull_requests": 3228,
@@ -618,48 +618,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 282.9,
-        "high": 445.2,
+        "base": 282.8,
+        "high": 444.8,
         "low": 185.1
       },
       "modeled_human_direction_hours": {
-        "base": 2.39,
-        "high": 2.74,
-        "low": 2.05
+        "base": 2.47,
+        "high": 2.83,
+        "low": 2.12
       },
       "month": "2026-11",
-      "public_merged_pull_requests": 69,
+      "public_merged_pull_requests": 71,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 676.12,
-        "high": 912.7,
-        "low": 507.04
+        "base": 698.6,
+        "high": 943.04,
+        "low": 523.89
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 81.51,
-        "high": 126.09,
-        "low": 53.02
+        "base": 84.27,
+        "high": 129.95,
+        "low": 54.95
       }
     }
   ],
-  "public_accepted_pull_requests": 3539,
+  "public_accepted_pull_requests": 3541,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 43441.11,
-    "high": 58988.38,
-    "low": 32239.38
+    "base": 43463.59,
+    "high": 59018.72,
+    "low": 32256.23
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5130.72,
-    "high": 7559.89,
-    "low": 3495.94
+    "base": 5133.48,
+    "high": 7563.75,
+    "low": 3497.87
   },
   "updated_at_utc": "2026-11-02",
   "window": {
-    "end": "2026-11-02T17:18:51Z",
+    "end": "2026-11-02T17:40:35Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -103293,6 +103293,64 @@
       "pull_request": 389,
       "title": "fix(policy-lab): preserve repair and comparison outcomes in Markdown",
       "url": "https://github.com/ifixai-ai/iFixAi/pull/389"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T14:11:58Z",
+      "evidence": {
+        "additions": 80,
+        "changed_files": 6,
+        "comments": 3,
+        "commits": 4,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.3,
+        "high": 16.6,
+        "low": 9.22
+      },
+      "merged_at": "2026-11-02T17:40:00Z",
+      "modeled_human_direction_hours": {
+        "base": 1.61,
+        "high": 2.25,
+        "low": 1.13
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5289,
+      "title": "fix(import): read whitespace-formatted Claude transcripts and usage",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5289"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T15:21:13Z",
+      "evidence": {
+        "additions": 96,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.18,
+        "high": 13.74,
+        "low": 7.63
+      },
+      "merged_at": "2026-11-02T17:40:35Z",
+      "modeled_human_direction_hours": {
+        "base": 1.15,
+        "high": 1.61,
+        "low": 0.8
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5295,
+      "title": "fix(setup): deduplicate legacy Gemini usage across migration copies",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5295"
     }
   ]
 }
