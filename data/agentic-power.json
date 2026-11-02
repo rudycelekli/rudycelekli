@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 286.6,
-    "high": 454.0,
+    "base": 286.7,
+    "high": 454.1,
     "low": 186.1
   },
   "basis": "operator-calibrated provisional estimate",
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1079.5,
+  "engineer_weeks_at_40h": 1079.7,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -462,12 +462,12 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 197.4,
+        "base": 198.1,
         "high": 323.0,
         "low": 121.1
       },
       "modeled_human_direction_hours": {
-        "base": 2.56,
+        "base": 2.55,
         "high": 2.92,
         "low": 2.19
       },
@@ -489,13 +489,13 @@
       "active_repositories": 20,
       "agentic_power_x": {
         "base": 185.4,
-        "high": 302.7,
+        "high": 303.4,
         "low": 113.6
       },
       "modeled_human_direction_hours": {
         "base": 5.06,
         "high": 5.78,
-        "low": 4.34
+        "low": 4.33
       },
       "month": "2026-06",
       "public_merged_pull_requests": 0,
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 234.1,
         "high": 382.6,
-        "low": 143.4
+        "low": 143.5
       },
       "modeled_human_direction_hours": {
         "base": 8.86,
-        "high": 10.13,
+        "high": 10.12,
         "low": 7.59
       },
       "month": "2026-08",
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 308.5,
-        "high": 491.7,
+        "high": 492.2,
         "low": 198.1
       },
       "modeled_human_direction_hours": {
         "base": 12.54,
         "high": 14.33,
-        "low": 10.75
+        "low": 10.74
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,14 +592,14 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 313.0,
+        "base": 313.1,
         "high": 493.1,
-        "low": 205.4
+        "low": 205.5
       },
       "modeled_human_direction_hours": {
-        "base": 106.43,
-        "high": 121.63,
-        "low": 91.22
+        "base": 106.42,
+        "high": 121.62,
+        "low": 91.21
       },
       "month": "2026-10",
       "public_merged_pull_requests": 3228,
@@ -618,48 +618,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 291.5,
-        "high": 461.2,
-        "low": 191.8
+        "base": 294.9,
+        "high": 462.3,
+        "low": 193.0
       },
       "modeled_human_direction_hours": {
-        "base": 1.43,
-        "high": 1.63,
-        "low": 1.22
+        "base": 1.44,
+        "high": 1.65,
+        "low": 1.24
       },
       "month": "2026-11",
-      "public_merged_pull_requests": 39,
+      "public_merged_pull_requests": 40,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 416.84,
-        "high": 562.68,
-        "low": 312.58
+        "base": 424.63,
+        "high": 573.19,
+        "low": 318.42
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 48.26,
-        "high": 74.72,
-        "low": 31.38
+        "base": 48.87,
+        "high": 75.57,
+        "low": 31.81
       }
     }
   ],
-  "public_accepted_pull_requests": 3509,
+  "public_accepted_pull_requests": 3510,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 43181.83,
-    "high": 58638.36,
-    "low": 32044.92
+    "base": 43189.62,
+    "high": 58648.87,
+    "low": 32050.76
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5097.47,
-    "high": 7508.52,
-    "low": 3474.3
+    "base": 5098.08,
+    "high": 7509.37,
+    "low": 3474.73
   },
   "updated_at_utc": "2026-11-02",
   "window": {
-    "end": "2026-11-02T12:26:30Z",
+    "end": "2026-11-02T12:30:30Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -102423,6 +102423,35 @@
       "pull_request": 217,
       "title": "fix(capture): enforce digest budgets on UTF-8 output",
       "url": "https://github.com/tigerless-labs/autoharness/pull/217"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:58:18Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.79,
+        "high": 10.51,
+        "low": 5.84
+      },
+      "merged_at": "2026-11-02T12:30:30Z",
+      "modeled_human_direction_hours": {
+        "base": 0.61,
+        "high": 0.85,
+        "low": 0.43
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 244,
+      "title": "fix(stage): report queue write failures to callers",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/244"
     }
   ]
 }
