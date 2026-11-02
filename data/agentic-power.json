@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 286.4,
-    "high": 453.7,
+    "base": 286.5,
+    "high": 453.8,
     "low": 186.0
   },
   "basis": "operator-calibrated provisional estimate",
@@ -12,7 +12,7 @@
       "low": 0.0254
     },
     "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 86.07,
+    "evidence_window_weeks": 86.08,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -20,7 +20,7 @@
     },
     "status": "estimated from operator recall; not reconstructed from time logs"
   },
-  "engineer_weeks_at_40h": 1078.4,
+  "engineer_weeks_at_40h": 1078.8,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
     "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
@@ -38,9 +38,9 @@
     "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
   },
   "modeled_human_direction_hours": {
-    "base": 150.62,
-    "high": 172.14,
-    "low": 129.1
+    "base": 150.64,
+    "high": 172.16,
+    "low": 129.12
   },
   "monthly": [
     {
@@ -332,12 +332,12 @@
     {
       "active_repositories": 8,
       "agentic_power_x": {
-        "base": 154.3,
+        "base": 155.7,
         "high": 253.1,
         "low": 94.9
       },
       "modeled_human_direction_hours": {
-        "base": 1.16,
+        "base": 1.15,
         "high": 1.32,
         "low": 0.99
       },
@@ -490,11 +490,11 @@
       "agentic_power_x": {
         "base": 185.4,
         "high": 302.7,
-        "low": 113.4
+        "low": 113.6
       },
       "modeled_human_direction_hours": {
         "base": 5.06,
-        "high": 5.79,
+        "high": 5.78,
         "low": 4.34
       },
       "month": "2026-06",
@@ -542,11 +542,11 @@
       "agentic_power_x": {
         "base": 233.9,
         "high": 382.1,
-        "low": 143.2
+        "low": 143.4
       },
       "modeled_human_direction_hours": {
         "base": 8.87,
-        "high": 10.14,
+        "high": 10.13,
         "low": 7.6
       },
       "month": "2026-08",
@@ -567,13 +567,13 @@
       "active_repositories": 14,
       "agentic_power_x": {
         "base": 308.3,
-        "high": 491.3,
+        "high": 491.7,
         "low": 198.0
       },
       "modeled_human_direction_hours": {
         "base": 12.55,
         "high": 14.34,
-        "low": 10.76
+        "low": 10.75
       },
       "month": "2026-09",
       "public_merged_pull_requests": 242,
@@ -592,14 +592,14 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 312.7,
-        "high": 492.5,
-        "low": 205.2
+        "base": 312.8,
+        "high": 492.7,
+        "low": 205.3
       },
       "modeled_human_direction_hours": {
-        "base": 106.55,
-        "high": 121.77,
-        "low": 91.33
+        "base": 106.51,
+        "high": 121.72,
+        "low": 91.29
       },
       "month": "2026-10",
       "public_merged_pull_requests": 3228,
@@ -618,48 +618,48 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 307.2,
-        "high": 482.5,
-        "low": 202.0
+        "base": 303.3,
+        "high": 476.4,
+        "low": 198.0
       },
       "modeled_human_direction_hours": {
-        "base": 1.21,
-        "high": 1.38,
-        "low": 1.04
+        "base": 1.28,
+        "high": 1.47,
+        "low": 1.1
       },
       "month": "2026-11",
-      "public_merged_pull_requests": 35,
+      "public_merged_pull_requests": 36,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
-        "base": 371.7,
-        "high": 501.75,
-        "low": 278.74
+        "base": 388.2,
+        "high": 524.02,
+        "low": 291.11
       },
       "uncalibrated_github_direction_proxy_hours": {
-        "base": 40.82,
-        "high": 63.11,
-        "low": 26.57
+        "base": 43.38,
+        "high": 66.69,
+        "low": 28.36
       }
     }
   ],
-  "public_accepted_pull_requests": 3505,
+  "public_accepted_pull_requests": 3506,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
   "schema_version": 1,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
-    "base": 43136.69,
-    "high": 58577.43,
-    "low": 32011.08
+    "base": 43153.19,
+    "high": 58599.7,
+    "low": 32023.45
   },
   "uncalibrated_github_direction_proxy_hours": {
-    "base": 5090.03,
-    "high": 7496.91,
-    "low": 3469.49
+    "base": 5092.59,
+    "high": 7500.49,
+    "low": 3471.28
   },
   "updated_at_utc": "2026-11-02",
   "window": {
-    "end": "2026-11-02T07:48:09Z",
+    "end": "2026-11-02T08:14:18Z",
     "start": "2025-03-09T15:30:23.000-04:00"
   },
   "work_items": [
@@ -102307,6 +102307,35 @@
       "pull_request": 5212,
       "title": "fix(codex): update equivalent quoted TOML settings",
       "url": "https://github.com/thedotmack/claude-mem/pull/5212"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-30T07:04:23Z",
+      "evidence": {
+        "additions": 314,
+        "changed_files": 5,
+        "comments": 3,
+        "commits": 5,
+        "deletions": 22,
+        "reviews": 5
+      },
+      "heh": {
+        "base": 16.5,
+        "high": 22.27,
+        "low": 12.37
+      },
+      "merged_at": "2026-11-02T08:14:18Z",
+      "modeled_human_direction_hours": {
+        "base": 2.56,
+        "high": 3.58,
+        "low": 1.79
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5203,
+      "title": "fix(context): preserve authored marker examples during refresh",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5203"
     }
   ]
 }
