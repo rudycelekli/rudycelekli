@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.17,
-    "high": 89.95,
-    "low": 49.01
+    "base": 66.18,
+    "high": 89.96,
+    "low": 49.02
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1118.3,
+  "engineer_weeks_at_40h": 1118.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 542.3,
-        "high": 733.09,
-        "low": 405.75
+        "base": 542.39,
+        "high": 733.21,
+        "low": 405.81
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4353,
+      "public_authored_pr_commits": 4354,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3180,
+      "public_prs_with_work": 3181,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33622.44,
-        "high": 45451.78,
-        "low": 25156.4
+        "base": 33627.93,
+        "high": 45459.19,
+        "low": 25160.51
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 44,
-      "public_merged_pull_requests": 98,
+      "public_merged_pull_requests": 99,
       "public_prs_with_work": 37,
       "repository_default_branch_commits": 426,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 831,
   "owned_public_through_utc": "2026-11-03",
-  "public_accepted_merge_events": 3568,
-  "public_accepted_pull_requests": 3567,
+  "public_accepted_merge_events": 3569,
+  "public_accepted_pull_requests": 3568,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44733.52,
-    "high": 60805.15,
-    "low": 33133.63
+    "base": 44739.01,
+    "high": 60812.56,
+    "low": 33137.74
   },
   "updated_at_utc": "2026-11-03",
   "window": {
@@ -118362,6 +118362,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Validate embedding vectors before replacing cached projections",
       "url": "https://github.com/tigerless-labs/agent-memory/pull/88",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-11T15:28:14Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 5.49,
+        "high": 7.41,
+        "low": 4.11
+      },
+      "merged_at": "2026-11-03T19:39:43Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.49,
+          "high": 7.41,
+          "low": 4.11
+        }
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9781,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Ignore commented Java-home overrides in PyGhidra launch properties",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9781",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
