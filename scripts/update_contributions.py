@@ -1962,8 +1962,8 @@ def render_hero_svg(
     total_stars = sum(int(repo["stargazers"]) for repo in repositories)
     updated = html.escape(str(profile["updated_at_utc"]))
     return f"""<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Rudy Celekli: making open source reliable enough to trust</title>
-  <desc id="desc">Forward deployed AI researcher and agentic AI engineer on a mission to make open source reliable enough to trust, one repository at a time. Live evidence includes {merged_projects} projects with merged pull requests among {len(repositories)} verified upstream repositories, {total_merged} merged pull requests, {total_commits} attributed commits, {total_line_changes:,} accepted line changes, {total_stars} current repository stars.</desc>
+  <title id="title">Rudy Celekli: AI research, verifiable systems, and reliable open source</title>
+  <desc id="desc">Forward deployed AI researcher and engineer building verifiable long-horizon agent systems and working to make open source reliable enough to trust, one repository at a time. Live evidence includes {merged_projects} projects with merged pull requests among {len(repositories)} verified upstream repositories, {total_merged} merged pull requests, {total_commits} attributed commits, {total_line_changes:,} accepted line changes, {total_stars} current repository stars.</desc>
   <defs>
     <style>
       .orbit {{ transform-box: fill-box; transform-origin: center; animation: orbit 20s linear infinite; }}
@@ -2046,11 +2046,11 @@ def render_hero_svg(
   <g clip-path="url(#hero-visual-clip)"><rect class="scan-beam" x="690" y="46" width="1.5" height="320" fill="#7FFFEA"/><rect class="scan-beam" x="691.5" y="46" width="34" height="320" fill="#2DE2C5" fill-opacity=".035"/></g>
 
   <g font-family="ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace">
-    <text class="hero-kicker" x="72" y="64" fill="#2DE2C5" font-size="13" font-weight="700" letter-spacing="3">RUDY CELEKLI / RELIABILITY &amp; CORRECTNESS</text>
-    <text class="hero-line hero-line-1" x="72" y="138" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">Making open source</text>
-    <text class="hero-line hero-line-2" x="72" y="195" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">reliable enough</text>
-    <text class="hero-line hero-line-3" x="72" y="252" fill="#2DE2C5" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">to trust.</text>
-    <text class="hero-subtitle" x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="20">One repository at a time.</text>
+    <text class="hero-kicker" x="72" y="64" fill="#2DE2C5" font-size="13" font-weight="700" letter-spacing="3">RUDY CELEKLI / AI RESEARCH &amp; SYSTEMS</text>
+    <text class="hero-line hero-line-1" x="72" y="138" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">I build AI systems</text>
+    <text class="hero-line hero-line-2" x="72" y="195" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">that can prove</text>
+    <text class="hero-line hero-line-3" x="72" y="252" fill="#2DE2C5" font-family="Avenir Next,Segoe UI,sans-serif" font-size="48" font-weight="780" letter-spacing="-1.6">what happened.</text>
+    <text class="hero-subtitle" x="72" y="304" fill="#AAB8CA" font-family="Avenir Next,Segoe UI,sans-serif" font-size="18">Making open source reliable enough to trust.</text>
     <g class="proof-rail"><line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
     <circle class="proof-live" cx="78" cy="358" r="5" fill="#2DE2C5"/>
     <text x="94" y="362" fill="#91A2B8" font-size="10.5" letter-spacing=".8">LIVE PROOF · {merged_projects} WITH MERGED PRS / {len(repositories)} VERIFIED · {total_merged:,} MERGED PRS · {compact(total_commits)} ATTRIBUTED COMMITS</text>

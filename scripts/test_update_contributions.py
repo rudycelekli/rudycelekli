@@ -1198,7 +1198,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
 
         svg = subject.render_hero_svg(repositories, profile)
 
-        self.assertIn("RELIABILITY &amp; CORRECTNESS", svg)
+        self.assertIn("AI RESEARCH &amp; SYSTEMS", svg)
         self.assertIn("Forward deployed AI researcher", svg)
         self.assertIn("2 WITH MERGED PRS / 2 VERIFIED", svg)
         self.assertIn("17 MERGED PRS", svg)
@@ -1553,10 +1553,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertNotIn("./assets/latest-verified-work.svg", readme)
         self.assertNotIn("./assets/profile-walkthrough.svg", readme)
         self.assertNotIn("./assets/building-now.svg", readme)
-        self.assertIn("## Making open source reliable enough to trust.", readme)
+        self.assertIn("## I build AI systems that can prove what happened.", readme)
         self.assertLess(
             readme.index("LINKEDIN-connect"),
-            readme.index("## Making open source reliable enough to trust."),
+            readme.index("## I build AI systems that can prove what happened."),
         )
 
 

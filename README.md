@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Rudy Celekli: making open source reliable enough to trust, one repository at a time" />
+<img src="./assets/hero.svg" width="100%" alt="Rudy Celekli: AI research, verifiable agent systems, and reliable open source" />
 
 <br />
 
@@ -29,11 +29,13 @@
 
 </div>
 
-## Making open source reliable enough to trust.
+## I build AI systems that can prove what happened.
 
-**One repository at a time.**
+**On a mission to make open source reliable enough to trust. One repository at a time.**
 
-I am **Rudy Mizrahi Celekli**, also known professionally as **Rudy Celekli**. I focus on reliability, correctness, and evidence-bound AI systems.
+I am **Rudy Mizrahi Celekli**, also known professionally as **Rudy Celekli**. I research and build long-horizon agent systems, evaluation environments, and evidence-bound execution, with a focus on evaluator robustness, deterministic replay, and causal fault isolation.
+
+The work has two connected fronts: building AI systems whose behavior can be inspected, and strengthening the open-source foundations those systems rely on.
 
 Open source is shared infrastructure. A silent data error, a misleading evaluation, or an agent that fails without a useful trace can become someone else's production problem.
 
@@ -41,7 +43,7 @@ I work on those failure points: reproduce the problem, fix the cause, add a regr
 
 An accepted fix improves a shared dependency. A regression test helps maintainers keep that failure from returning. My goal is fewer inherited failures and software people can depend on.
 
-My research applies the same standard to long-horizon agents, evaluator robustness, deterministic replay, and causal fault isolation. Ownership, contribution, measured results, and exploratory work remain distinct.
+Research, owned products, upstream contributions, and measured results remain explicitly separate.
 
 [**Canonical research profile**](https://rudycelekli.github.io/) · [**Model-readable evidence**](https://rudycelekli.github.io/llms.txt) · [**ORCID**](https://orcid.org/0009-0000-7043-3766) · [**Gradia research role**](https://www.gradiahq.com/about)
 

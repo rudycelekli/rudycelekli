@@ -14,7 +14,7 @@ Present an evidence-first professional identity around reliable open-source soft
 
 ## Mission
 
-Making open source reliable enough to trust, one repository at a time. Explain the work through reproducible failures, fixes accepted upstream, and regression tests that help maintainers keep those failures fixed. Reliability and correctness support trust and safety; individual patches do not establish whole-system safety or measured downstream benefit.
+Build and research AI systems that can prove what happened, while making open source reliable enough to trust, one repository at a time. Present the two connected fronts: verifiable agent systems and dependable shared software foundations. Explain the work through reproducible failures, fixes accepted upstream, and regression tests that help maintainers keep those failures fixed. Reliability and correctness support trust and safety; individual patches do not establish whole-system safety or measured downstream benefit.
 
 ## Brand Personality
 
