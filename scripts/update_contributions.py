@@ -18,6 +18,12 @@ import urllib.request
 from pathlib import Path
 
 
+if __package__:
+    from . import agentic_work
+else:
+    import agentic_work
+
+
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 DATA_FILE = ROOT / "data" / "contributions.json"
@@ -32,6 +38,8 @@ AP_DATA_FILE = ROOT / "data" / "agentic-power.json"
 AP_SVG_FILE = ROOT / "assets" / "agentic-power-profile.svg"
 WALKTHROUGH_SVG_FILE = ROOT / "assets" / "profile-walkthrough.svg"
 REPOSITORY_DATA_FILE = ROOT / "data" / "repository-work-aggregate.json"
+PR_TIMING_FILE = ROOT / "data" / "public-pr-work-timing.json"
+OWNED_WORK_FILE = ROOT / "data" / "owned-repository-work.json"
 LOGIN = "rudycelekli"
 OWNED_PROJECT_DISPLAY_LIMIT = 8
 FEATURED_OWNED_PROJECT_LIMIT = 6
@@ -57,11 +65,7 @@ CURRENT_OPEN_PULL_REQUESTS_URL = (
     "https://github.com/search?q=author%3Arudycelekli+is%3Apr+is%3Aopen+"
     "created%3A%3E%3D2025-01-01&type=pullrequests"
 )
-OPERATOR_DIRECTION_HOURS_PER_WEEK = {
-    "low": 1.5,
-    "base": 1.75,
-    "high": 2.0,
-}
+
 # Cosmetic copy/color overrides only. Inclusion is always discovered from GitHub.
 PRESENTATION_OVERRIDES = {
     "ruvnet/ruflo": {
@@ -1646,301 +1650,89 @@ def estimate_work_item(
     }
 
 
-def calculate_agentic_power(
-    repositories: list[dict[str, object]],
-    updated: str,
-    repository_aggregate: dict[str, object] | None,
-) -> dict[str, object]:
-    work_items = [
-        estimate_work_item(repo, pull_request)
-        for repo in repositories
-        for pull_request in repo["_merged_pull_requests"]
-        if "2025-01-01T00:00:00Z" <= str(pull_request["mergedAt"])
-        and str(pull_request["mergedAt"])[:10] <= updated
-    ]
-    work_items.sort(key=lambda item: str(item["merged_at"]))
-
-    updated_date = dt.date.fromisoformat(updated)
-    months: list[str] = []
-    cursor = dt.date(PERIOD_START.year, PERIOD_START.month, 1)
-    while cursor <= updated_date:
-        months.append(cursor.strftime("%Y-%m"))
-        cursor = (
-            dt.date(cursor.year + 1, 1, 1)
-            if cursor.month == 12
-            else dt.date(cursor.year, cursor.month + 1, 1)
-        )
-    monthly: list[dict[str, object]] = []
-    repository_monthly = (repository_aggregate or {}).get("monthly", {})
-    for month in months:
-        public_items = [
-            item for item in work_items if str(item["merged_at"]).startswith(month)
-        ]
-        public_projects = len({str(item["project"]) for item in public_items})
-        public_setup = {
-            "low": 1.0 * public_projects,
-            "base": 2.0 * public_projects,
-            "high": 4.0 * public_projects,
-        }
-        repository_work = (
-            repository_monthly.get(month, {})
-            if isinstance(repository_monthly, dict)
-            else {}
-        )
-        repository_heh = repository_work.get("skilled_human_equivalent_hours", {})
-        repository_direction = repository_work.get("modeled_human_direction_hours", {})
-        month_heh = {
-            key: round(
-                sum(float(item["heh"][key]) for item in public_items)
-                + float(repository_heh.get(key, 0.0)),
-                2,
-            )
-            for key in ("low", "base", "high")
-        }
-        month_proxy_direction = {
-            key: round(
-                sum(
-                    float(item["modeled_human_direction_hours"][key])
-                    for item in public_items
-                )
-                + public_setup[key]
-                + float(repository_direction.get(key, 0.0)),
-                2,
-            )
-            for key in ("low", "base", "high")
-        }
-        monthly.append(
-            {
-                "month": month,
-                "public_merged_pull_requests": len(public_items),
-                "repository_default_branch_commits": int(
-                    repository_work.get("default_branch_non_merge_commits", 0)
-                ),
-                "active_repositories": int(
-                    repository_work.get("active_repositories", 0)
-                ),
-                "skilled_human_equivalent_hours": month_heh,
-                "uncalibrated_github_direction_proxy_hours": month_proxy_direction,
-            }
-        )
-
-    heh = {
-        key: round(
-            sum(
-                float(month["skilled_human_equivalent_hours"][key]) for month in monthly
-            ),
-            2,
-        )
-        for key in ("low", "base", "high")
-    }
-    proxy_direction = {
-        key: round(
-            sum(
-                float(month["uncalibrated_github_direction_proxy_hours"][key])
-                for month in monthly
-            ),
-            2,
-        )
-        for key in ("low", "base", "high")
-    }
-    starts = [str(item["created_at"]) for item in work_items]
-    ends = [str(item["merged_at"]) for item in work_items]
-    if repository_aggregate and repository_aggregate.get("window"):
-        if repository_aggregate["window"].get("start"):
-            starts.append(str(repository_aggregate["window"]["start"]))
-        if repository_aggregate["window"].get("end"):
-            ends.append(str(repository_aggregate["window"]["end"]))
-
-    def as_utc(value: str) -> dt.datetime:
-        return dt.datetime.fromisoformat(value.replace("Z", "+00:00")).astimezone(
-            dt.timezone.utc
-        )
-
-    # A fixed weekly assumption is apportioned by elapsed calendar time, never
-    # by the share of work observed in the entire dataset. New work in October
-    # must not rewrite September's denominator.
-    as_of_end = dt.datetime.combine(
-        updated_date + dt.timedelta(days=1), dt.time(), dt.timezone.utc
+def calculate_agentic_power(repositories, updated, repository_aggregate, timings=None):
+    """Reconstruct the rolling twelve authored-work months at 2h/day direction."""
+    return agentic_work.calculate_profile(
+        repositories, updated, repository_aggregate, timings, estimate_work_item, LOGIN
     )
-    first_date = (
-        max(PERIOD_START.date(), min(as_utc(value).date() for value in starts))
-        if starts
-        else as_of_end.date()
-    )
-    direction_start = dt.datetime.combine(first_date, dt.time(), dt.timezone.utc)
-    evidence_weeks = round(
-        max(0.0, (as_of_end - direction_start).total_seconds() / 604_800), 4
-    )
-    for month in monthly:
-        month_start = dt.datetime.fromisoformat(str(month["month"]) + "-01").replace(
-            tzinfo=dt.timezone.utc
-        )
-        next_month = (
-            month_start.replace(year=month_start.year + 1, month=1)
-            if month_start.month == 12
-            else month_start.replace(month=month_start.month + 1)
-        )
-        elapsed_days = max(
-            0.0,
-            (
-                min(next_month, as_of_end) - max(month_start, direction_start)
-            ).total_seconds()
-            / 86_400,
-        )
-        calibrated = {
-            key: round(elapsed_days / 7 * OPERATOR_DIRECTION_HOURS_PER_WEEK[key], 2)
-            for key in ("low", "base", "high")
-        }
-        month["direction_calendar_days"] = round(elapsed_days, 4)
-        month["partial_month"] = as_of_end < next_month
-        month["modeled_human_direction_hours"] = calibrated
-        month_heh = month["skilled_human_equivalent_hours"]
-        month["agentic_power_x"] = {
-            "low": (
-                round(float(month_heh["low"]) / calibrated["high"], 1)
-                if calibrated["high"]
-                else 0.0
-            ),
-            "base": (
-                round(float(month_heh["base"]) / calibrated["base"], 1)
-                if calibrated["base"]
-                else 0.0
-            ),
-            "high": (
-                round(float(month_heh["high"]) / calibrated["low"], 1)
-                if calibrated["low"]
-                else 0.0
-            ),
-        }
-    direction = {
-        key: round(
-            sum(
-                float(month["modeled_human_direction_hours"][key]) for month in monthly
-            ),
-            2,
-        )
-        for key in ("low", "base", "high")
-    }
-    agentic_power = {
-        "low": round(heh["low"] / direction["high"], 1) if direction["high"] else 0.0,
-        "base": round(heh["base"] / direction["base"], 1) if direction["base"] else 0.0,
-        "high": round(heh["high"] / direction["low"], 1) if direction["low"] else 0.0,
-    }
-    repository_commits = int(
-        (repository_aggregate or {}).get("default_branch_non_merge_commits", 0)
-    )
-    repository_count = int((repository_aggregate or {}).get("repository_count", 0))
-    return {
-        "schema_version": 2,
-        "framework": {
-            "name": "The Agentic Power Framework",
-            "version": "1.4.0 draft",
-            "author": "Dr. Mark Allen / HeroForge.AI",
-            "url": "https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/",
-            "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
-        },
-        "updated_at_utc": updated,
-        "basis": "modeled scenario using operator-recalled weekly direction",
-        "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
-        "window": {
-            "start": min(starts) if starts else None,
-            "end": max(ends) if ends else None,
-        },
-        "public_accepted_pull_requests": len(work_items),
-        "repository_default_branch_non_merge_commits": repository_commits,
-        "repository_count": repository_count,
-        "repository_snapshot_updated_at_utc": (repository_aggregate or {}).get(
-            "updated_at_utc"
-        ),
-        "skilled_human_equivalent_hours": heh,
-        "uncalibrated_github_direction_proxy_hours": proxy_direction,
-        "direction_calibration": {
-            "allocation_method": "elapsed-calendar-time-v2",
-            "coverage_start_utc": direction_start.date().isoformat(),
-            "coverage_through_utc": updated,
-            "operator_estimated_hours_per_week": OPERATOR_DIRECTION_HOURS_PER_WEEK,
-            "evidence_window_weeks": evidence_weeks,
-            "basis": "Operator recall of 1.5 to 2.0 active direction hours per week, applied uniformly to elapsed calendar days; not measured time.",
-            "status": "estimated from operator recall; not reconstructed from time logs",
-        },
-        "modeled_human_direction_hours": direction,
-        "agentic_power_x": agentic_power,
-        "engineer_weeks_at_40h": round(heh["base"] / 40, 1),
-        "monthly": monthly,
-        "methodology": {
-            "acceptance": "Public work uses authored merged PRs in the verified upstream ledger. The retained repository lane uses authored non-merge default-branch commits, a presence proxy rather than independent maintainer acceptance.",
-            "heh": "HEH is an unvalidated heuristic: PR-title category baselines plus file/commit counts and nonlinear change size; default-branch commits use title-prefix classes. It is not measured effort, time saved, downstream value, or a controlled human baseline.",
-            "direction_proxy": "The conservative GitHub proxy assigns briefing/review/correction allowances to accepted work plus an explicit per-active-repository-month setup, coordination, and maintenance allowance.",
-            "direction_calibration": "Weekly operator recall (1.5–2.0 hours, midpoint 1.75) is applied to each month’s elapsed calendar days. Later work does not rescale completed months. Historical evidence additions and model revisions can still change estimates. The current month is partial.",
-            "history": "Calendar denominators do not depend on later work. Historical receipts and model revisions may change reconstructed values; they are not as-known-at-the-time observations.",
-            "repository_snapshot": "The redacted lane retains its own snapshot date. Its published aggregate cannot independently prove deduplication against newly discovered public projects; it is not a live private-work count.",
-            "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction. This is a sensitivity scenario, not a statistical confidence interval.",
-            "privacy": "Repository names, commit messages, URLs, code, employer, and client details from the redacted lane are not published.",
-            "limitation": "The 1.5-to-2.0-hours-per-week calibration is operator-estimated, not reconstructed from time logs. Default-branch presence is a repository-level acceptance proxy. Only repositories currently accessible to the supplied credential can be counted. This is not a completed Full Evidence Audit.",
-        },
-        "work_items": work_items,
-    }
 
 
-def render_agentic_power_svg(profile: dict[str, object]) -> str:
-    """Show dated acceptance receipts; leave the modeled ratio in the method note."""
+def render_agentic_power_svg(profile):
+    """Plot independent monthly AP values against modeled work, on zero baselines."""
     monthly = profile["monthly"]
-    # Start at the first recorded public merge; do not fabricate a pre-history
-    # from modeled private-work hours or imply that absent receipts prove no work.
-    first_merge = next(
-        (
-            i
-            for i, month in enumerate(monthly)
-            if int(month["public_merged_pull_requests"])
-        ),
-        len(monthly),
+
+    def limit(value):
+        if value <= 0:
+            return 1.0
+        unit = 10 ** math.floor(math.log10(value))
+        return math.ceil(value / unit) * unit
+
+    max_heh = limit(
+        max(row["skilled_human_equivalent_hours"]["base"] for row in monthly)
     )
-    monthly = monthly[first_merge:]
-    years = sorted({str(month["month"])[:4] for month in monthly})
-    maximum = (
-        max((int(month["public_merged_pull_requests"]) for month in monthly), default=0)
-        or 1
-    )
-    panels = []
-    for row, year in enumerate(years):
-        baseline = 268 + row * 176
-        year_months = [
-            month for month in monthly if str(month["month"]).startswith(year)
-        ]
-        bars = []
-        for index, month in enumerate(year_months):
-            x = 136 + 1022 / len(year_months) * (index + 0.5)
-            count = int(month["public_merged_pull_requests"])
-            height = 94 * count / maximum
-            partial = bool(month.get("partial_month"))
-            label = (
-                dt.datetime.strptime(str(month["month"]), "%Y-%m")
-                .strftime("%b")
-                .upper()
-            )
-            bars.append(
-                f'<rect x="{x - 20}" y="{baseline - height:.1f}" width="40" height="{height:.1f}" rx="3" fill="#2DE2C5" fill-opacity="{0.45 if partial else 0.85}"/>'
-                f'<text x="{x}" y="{baseline - height - 10:.1f}" text-anchor="middle" fill="#CBD5E1" font-size="12">{count:,}</text>'
-                f'<text x="{x}" y="{baseline + 24}" text-anchor="middle" fill="#94A3B8" font-size="11">{label}{"*" if partial else ""}</text>'
-            )
-        panels.append(
-            f'<text x="42" y="{baseline - 80}" fill="#F8FAFC" font-size="20" font-weight="700">{year}</text>'
-            f'<line x1="136" y1="{baseline}" x2="1158" y2="{baseline}" stroke="#26364D"/>'
-            + "".join(bars)
+    max_ap = limit(max((row["agentic_power_x"]["base"] or 0) for row in monthly))
+    left, right, top, baseline = 105, 1100, 215, 455
+    bars, points, path, ticks = [], [], [], []
+    connected = False
+    for index, row in enumerate(monthly):
+        x = left + (right - left) * (index + 0.5) / 12
+        heh = row["skilled_human_equivalent_hours"]["base"]
+        ap = row["agentic_power_x"]["base"]
+        height = (baseline - top) * heh / max_heh
+        incomplete = row["coverage_status"] != "complete"
+        bars.append(
+            f'<rect x="{x-20:.1f}" y="{baseline-height:.1f}" width="40" height="{height:.1f}" rx="3" fill="#2DE2C5" fill-opacity=".35" stroke="#2DE2C5" stroke-dasharray="{"3 3" if incomplete else "none"}"/>'
         )
-    height = 190 + 176 * len(years)
-    footer = height - 35
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-labelledby="title desc">
-  <title id="title">Agentic Power: observed upstream work and separate model assumptions</title>
-  <desc id="desc">Monthly counts of authored merged upstream pull requests, not monthly productivity multipliers. Current month is partial. The Agentic Power scenario and assumptions are in the accompanying methodology.</desc>
-  <rect width="1200" height="{height}" rx="24" fill="#0B1220"/>
-  <rect x="1" y="1" width="1198" height="{height - 2}" rx="23" fill="none" stroke="#26364D"/>
+        if ap is not None:
+            y = baseline - (baseline - top) * ap / max_ap
+            path.append(f'{"L" if connected else "M"} {x:.1f} {y:.1f}')
+            connected = True
+            points.append(
+                f'<circle cx="{x:.1f}" cy="{y:.1f}" r="4" fill="{"#0B1220" if incomplete else "#F2A93B"}" stroke="#F2A93B" stroke-width="2"/>'
+                f'<text x="{x:.1f}" y="{y-11:.1f}" fill="#F8C66E" text-anchor="middle" font-size="11">{ap:.2f}×</text>'
+            )
+        else:
+            connected = False
+        label = dt.datetime.strptime(row["month"], "%Y-%m").strftime("%b %y").upper()
+        ticks.append(
+            f'<text x="{x:.1f}" y="481" fill="#94A3B8" text-anchor="middle" font-size="11">{label}{"*" if row["partial_month"] else ""}</text>'
+        )
+    grid = []
+    for fraction in (0, 0.5, 1):
+        y = baseline - (baseline - top) * fraction
+        grid.append(
+            f'<line x1="{left}" y1="{y}" x2="{right}" y2="{y}" stroke="#26364D"/>'
+            f'<text x="90" y="{y+4}" fill="#94A3B8" text-anchor="end" font-size="11">{compact(max_heh*fraction)}</text>'
+            f'<text x="1115" y="{y+4}" fill="#94A3B8" font-size="11">{max_ap*fraction:g}×</text>'
+        )
+    private_date = profile.get("owned_private_through_utc") or "unavailable"
+    public_date = profile.get("owned_public_through_utc") or "unavailable"
+    summary_label = (
+        "12-month ratio"
+        if profile.get("coverage_status") == "complete"
+        else "Recorded-work ratio (partial evidence)"
+    )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="590" viewBox="0 0 1200 590" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic Power over the last twelve calendar months</title>
+  <desc id="desc">Bars are modeled Human-Equivalent Hours allocated to authored work months. The line is each month's HEH divided by two assumed direction hours per elapsed day, never cumulative. Hollow points and dashed bars mark incomplete owned-repository coverage. The current month is partial.</desc>
+  <rect width="1200" height="590" rx="24" fill="#0B1220"/>
+  <rect x="1" y="1" width="1198" height="588" rx="23" fill="none" stroke="#26364D"/>
   <g font-family="Avenir Next,Segoe UI,sans-serif">
-    <text x="42" y="61" fill="#F8FAFC" font-size="27" font-weight="750">WORK ACCEPTED UPSTREAM</text>
-    <text x="42" y="94" fill="#94A3B8" font-size="15">Merged PRs by month. The leverage estimate is separate from this observed history.</text>
-    <text x="1158" y="124" fill="#94A3B8" font-size="12" text-anchor="end">AS OF {html.escape(str(profile['updated_at_utc']))} UTC · SAME SCALE ACROSS YEARS</text>
-    {"".join(panels)}
-    <text x="42" y="{footer}" fill="#94A3B8" font-size="13">* Partial month. Counts can change when older receipts are discovered. Merge counts do not measure downstream benefit.</text>
+    <text x="42" y="61" fill="#F8FAFC" font-size="27" font-weight="750">AGENTIC POWER · LAST 12 MONTHS</text>
+    <text x="1158" y="59" fill="#94A3B8" font-size="12" text-anchor="end">AS OF {html.escape(profile['updated_at_utc'])} UTC</text>
+    <text x="42" y="94" fill="#94A3B8" font-size="15">Each month stands on its own: estimated work ÷ assumed human direction.</text>
+    <text x="42" y="135" fill="#E2E8F0" font-size="19">{summary_label}: {profile['agentic_power_x']['base']:.2f}×</text>
+    <text x="1158" y="135" fill="#E2E8F0" text-anchor="end" font-size="17">2 h/day · approximately 14 h/week</text>
+    <text x="42" y="180" fill="#2DE2C5" font-size="12">BARS: MODELED HEH (LEFT)</text>
+    <text x="1158" y="180" fill="#F2A93B" text-anchor="end" font-size="12">LINE: MONTHLY AP (RIGHT)</text>
+    {"".join(grid)}
+    {"".join(bars)}
+    <path d="{' '.join(path)}" fill="none" stroke="#F2A93B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    {"".join(points)}
+    {"".join(ticks)}
+    <text x="42" y="523" fill="#94A3B8" font-size="13">* Month to date. Later acceptance revises the authored month, not every historical denominator.</text>
+    <text x="42" y="548" fill="#94A3B8" font-size="12">Owned-repo snapshots: public {html.escape(public_date)} · private {html.escape(private_date)}. Dashed/hollow marks mean partial evidence.</text>
+    <text x="42" y="573" fill="#94A3B8" font-size="12">HEH is a task-equivalence model, not measured labor, time saved, or downstream impact. Sources and monthly inputs below.</text>
   </g>
 </svg>
 """
@@ -3429,37 +3221,48 @@ def render_readme_section(
     return "\n".join(lines)
 
 
-def render_agentic_power_readme(profile: dict[str, object]) -> str:
-    power = profile["agentic_power_x"]
-    heh = profile["skilled_human_equivalent_hours"]
-    direction = profile["modeled_human_direction_hours"]
-    calibration = profile["direction_calibration"]
-    snapshot = profile.get("repository_snapshot_updated_at_utc") or "unknown date"
+def render_agentic_power_readme(profile):
+    rows = []
+    for month in profile["monthly"]:
+        ap = month["agentic_power_x"]["base"]
+        value = f"{ap:.2f}×" if ap is not None else "unavailable"
+        qualifier = " (partial month)" if month["partial_month"] else ""
+        if month["coverage_status"] != "complete":
+            qualifier += " (partial evidence)"
+        rows.append(
+            f"| {month['month']}{qualifier} | {month['public_prs_with_work']:,} | {month['owned_public_commits']:,} / {month['owned_private_commits']:,} | {month['skilled_human_equivalent_hours']['base']:,.2f} | {month['direction_hours']:g} | {value} |"
+        )
+    private_date = profile.get("owned_private_through_utc") or "unavailable"
+    public_date = profile.get("owned_public_through_utc") or "unavailable"
     return "\n".join(
         [
             "<!-- agentic-power-profile:start -->",
-            "### Accepted work over time",
+            '<img src="./assets/agentic-power-profile.svg?model=3" width="100%" alt="Last twelve months of modeled Agentic Power: monthly HEH divided by two direction hours per elapsed day, with current month and incomplete coverage marked" />',
             "",
-            '<img src="./assets/agentic-power-profile.svg" width="100%" alt="Monthly authored merged upstream PR counts, with the current month marked partial; model assumptions are separate below" />',
+            "**Direction assumption: 2 hours a day, approximately 14 hours a week.** A full 30-day month uses 60 hours; a 31-day month uses 62. The current month uses elapsed UTC dates only. The line is monthly AP, not cumulative AP.",
             "",
-            "The chart counts merged upstream PRs. A merge records maintainer acceptance; it does not establish adoption, user benefit, or time saved.",
+            "Accepted PR work follows its attributed authored months, with explicitly counted creation-month fallbacks below. Later merges can backfill those work months. Owned default-branch commits follow their UTC authored dates; duplicate implementation commits are excluded across both lanes.",
             "",
             "<details>",
-            "<summary>Agentic Power: estimate, assumptions, and limitations</summary>",
+            "<summary>Monthly inputs, coverage, and calculation method</summary>",
             "",
-            "| Model input | Value | What it establishes |",
-            "|:--|:--|:--|",
-            f"| HEH task-equivalence estimate | {float(heh['base']):,.1f} hours | Heuristic from titles and change statistics, not measured engineering effort |",
-            f"| Human direction assumption | {float(direction['base']):,.1f} hours; {float(calibration['operator_estimated_hours_per_week']['low']):.1f}–{float(calibration['operator_estimated_hours_per_week']['high']):.1f} h/week | Operator recall applied to elapsed calendar days, not a time log |",
-            f"| Resulting scenario | {float(power['base']):.1f}×; sensitivity range {float(power['low']):.1f}×–{float(power['high']):.1f}× | A ratio of two estimates, not audited productivity or a statistical confidence interval |",
-            f"| Public acceptance receipts | {int(profile['public_accepted_pull_requests']):,} merged upstream PRs | Linked GitHub evidence |",
-            f"| Retained repository snapshot | {int(profile['repository_default_branch_non_merge_commits']):,} authored default-branch commits across {int(profile['repository_count'])} accessible repos, dated {snapshot} | Authorship and branch presence; not independent upstream acceptance or a live private-work count |",
+            "| Work month | Accepted PRs with work | Own commits, public / private | Modeled HEH | Direction h | AP |",
+            "|:--|--:|--:|--:|--:|--:|",
+            *rows,
             "",
-            "Direction includes briefing, steering, review, correction, and coordination. Actual direction time, rework, costs, and downstream outcomes have not been audited. The redacted repository snapshot cannot be independently checked or deduplicated against newly discovered public projects from the published aggregate alone.",
+            f"Public owned-repository evidence through **{public_date}**; private owned-repository evidence through **{private_date}**. A missing or stale private refresh is marked per month, not filled with zeros or interpolated from an old monthly aggregate.",
             "",
-            "Method v2 allocates the weekly assumption by calendar time. New work no longer rescales completed months. Earlier evidence or model corrections can still revise history; this is a reconstruction, not a record of what was known at each date. The current month is partial.",
+            f"Public PR timing fallback: **{profile['creation_month_proxy_prs']} PRs** use their creation month because no attributed non-merge commit timeline is available. Other PRs are allocated in proportion to attributed commit counts in each UTC month; each PR's estimated hours are computed once and conserved across those allocations.",
             "",
-            "[Framework and attribution](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [Inputs and calculation](./data/agentic-power.json) · [Evidence explorer](https://rudycelekli.github.io/contributions.html)",
+            "HEH is estimated task-equivalent effort: PR-title categories and change statistics for accepted upstream work, and conventional-title classes for owned default-branch commits. Authorship dates are attribution evidence, not a timesheet. Owned default-branch presence is an acceptance proxy, not independent maintainer review. These models do not establish measured labor, time saved, or downstream impact.",
+            "",
+            f"Reuse excluded: {profile.get('public_reused_commit_entries_excluded', 0):,} repeated public-PR commit entries and {profile['excluded_owned_pr_overlap_commits']:,} owned commits already covered by PR work. The first accepted PR receives implementation credit; later PR estimates count only the proportion of newly credited implementation commits, with no additional integration-effort estimate.",
+            "",
+            "The 12-month AP is total modeled HEH divided by total assumed direction hours, not an average of the monthly multipliers. When coverage is incomplete, the aggregate is labeled recorded-work only, not an account-wide total. The model rolls forward automatically; new activity does not rescale other months. Historical evidence corrections and later acceptance can revise the affected work months.",
+            "",
+            "Private repository names, raw commit SHAs, exact dates, URLs, code, and commit text stay private. One-way commit digests support deduplication against public PRs. The scope is personally owned non-fork repositories plus public upstream contributions; employer/client organization repositories, forks, the profile repository, and explicit authorship exceptions are excluded.",
+            "",
+            "[Framework and attribution](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [Method](./docs/agentic-power.md) · [Monthly calculations](./data/agentic-power.json) · [Redacted owned-work receipts](./data/owned-repository-work.json) · [Public PR commit timelines](./data/public-pr-work-timing.json) · [Evidence explorer](https://rudycelekli.github.io/contributions.html)",
             "",
             "</details>",
             "<!-- agentic-power-profile:end -->",
@@ -3500,34 +3303,34 @@ def main() -> int:
     owned_repositories = discover_owned_repositories(token)
     if not owned_repositories:
         raise RuntimeError("No qualifying owned public repositories were discovered")
-    private_token = os.environ.get("PRIVATE_GITHUB_TOKEN")
-    raw_exclusions = os.environ.get("AP_EXCLUDED_REPOSITORIES", "")
-    excluded = {
-        value.strip().casefold()
-        for value in raw_exclusions.split(",")
-        if value.strip()
-    }
-    excluded.update(str(repo["full_name"]).casefold() for repo in repositories)
-    if private_token:
-        if not raw_exclusions.strip():
-            raise RuntimeError(
-                "AP_EXCLUDED_REPOSITORIES is required when refreshing the "
-                "access-controlled repository aggregate"
-            )
-        repository_aggregate = collect_repository_aggregate(
-            private_token, updated, excluded
-        )
-        REPOSITORY_DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
-        REPOSITORY_DATA_FILE.write_text(
-            json.dumps(repository_aggregate, indent=2, sort_keys=True) + "\n"
-        )
-    elif REPOSITORY_DATA_FILE.exists():
-        repository_aggregate = json.loads(REPOSITORY_DATA_FILE.read_text())
-    else:
-        repository_aggregate = None
-    agentic_power = calculate_agentic_power(
-        repositories, updated, repository_aggregate
+
+    def read_cache(path):
+        return json.loads(path.read_text()) if path.exists() else None
+
+    def save_timing(value):
+        write_generated(PR_TIMING_FILE, json.dumps(value, indent=2, sort_keys=True))
+
+    timings = agentic_work.collect_pr_timelines(
+        token,
+        repositories,
+        read_cache(PR_TIMING_FILE),
+        graphql_data,
+        save_timing,
+        rest_json,
     )
+    save_timing(timings)
+    private_token = os.environ.get("PRIVATE_GITHUB_TOKEN")
+    owned_work = agentic_work.collect_owned_history(
+        private_token or token,
+        updated,
+        LOGIN,
+        graphql_data,
+        cached=read_cache(OWNED_WORK_FILE),
+        include_private=bool(private_token),
+        exclusions={value.casefold() for value in OWNED_PROJECT_EXCLUSIONS},
+    )
+    write_generated(OWNED_WORK_FILE, json.dumps(owned_work, indent=2, sort_keys=True))
+    agentic_power = calculate_agentic_power(repositories, updated, owned_work, timings)
     public_repositories = [
         {key: value for key, value in repo.items() if not key.startswith("_")}
         for repo in repositories
@@ -3577,9 +3380,7 @@ def main() -> int:
     }
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     write_generated(DATA_FILE, json.dumps(payload, indent=2, sort_keys=True))
-    write_generated(
-        AP_DATA_FILE, json.dumps(agentic_power, indent=2, sort_keys=True)
-    )
+    write_generated(AP_DATA_FILE, json.dumps(agentic_power, indent=2, sort_keys=True))
     write_generated(SVG_FILE, render_svg(repositories, updated, upstream_timeline))
     write_generated(
         IMPACT_SVG_FILE, render_impact_signature_svg(impact_analysis, updated)
@@ -3613,13 +3414,9 @@ def main() -> int:
     )
     write_generated(
         WALKTHROUGH_SVG_FILE,
-        render_profile_walkthrough_svg(
-            repositories, owned_repositories, agentic_power
-        ),
+        render_profile_walkthrough_svg(repositories, owned_repositories, agentic_power),
     )
-    update_readme(
-        "agentic-power-profile", render_agentic_power_readme(agentic_power)
-    )
+    update_readme("agentic-power-profile", render_agentic_power_readme(agentic_power))
     update_readme(
         "building-now", render_building_now_readme(owned_repositories, updated)
     )

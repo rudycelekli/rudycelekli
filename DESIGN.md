@@ -64,9 +64,9 @@ Dark-profile translation:
 - Four-lever capability rail: Delegate, Orchestrate, Verify, Improve.
 - Human-judgment boundary: goals and constraints enter from the left.
 - Evidence gate: only accepted, replayable work counts at the output.
-- Agentic Power remains an inspectable scenario in an expandable methodology note, with modeled HEH, recalled direction time, sensitivity assumptions, and the retained repository snapshot date. It is not a headline proof metric or audited productivity claim.
-- The visible monthly chart shows authored merged upstream PR counts from the first recorded public merge, preserves intervening months, uses one zero-based scale across years, and marks the current month partial. Do not graph reconstructed AP as observed history.
-- Direction method v2 applies the weekly recall assumption to elapsed calendar days. New work does not rescale completed months; discovered historical receipts or model revisions can still change a reconstruction. Preserve the GitHub proxy separately for comparison.
+- Agentic Power is a modeled monthly ratio, shown as an independent line over the last twelve calendar months, with HEH bars on a separately labeled zero-based axis. Keep the two-hours-per-day direction assumption, scope, snapshot dates, and incomplete-coverage marks visible. It is not audited productivity.
+- The visible monthly chart covers personally owned repositories and accepted public upstream work. Allocate accepted PR HEH to authored commit months, credit identical implementation once, and mark the current month partial. The line is monthly, not cumulative.
+- Direction method v3 uses two hours per elapsed UTC calendar date, approximately fourteen hours per week. Later acceptance backfills authored work months without rescaling other denominators. Private coverage requires its own lower and upper bounds; do not invent missing history.
 - Semantic SVG motion: evidence signals flow, operating stages activate in sequence, and charts reveal their series; all motion stops under `prefers-reduced-motion`.
 - Layer motion by purpose: one staged entrance establishes hierarchy, routed packets and state changes explain the proof flow, and restrained scans or orbital traces supply ambience. Keep meaningful content visible at frame zero so static renderers never produce an empty panel.
 - Responsive SVG copy: wrap or clamp repository names and descriptions inside their own bounds and preserve a readable text equivalent in the README.
@@ -85,7 +85,7 @@ Dark-profile translation:
 3. Evidence thesis and proof loop.
 4. Verified upstream contribution proof, followed by explicitly labeled owned public projects.
 5. Flagship proof stack.
-6. Observed monthly acceptance counts with Agentic Power assumptions in an expandable method note.
+6. Rolling twelve-month modeled Agentic Power, with monthly inputs and source boundaries in an expandable note.
 7. Agentic operating model and framework attribution.
 8. Research questions, tools, linked community leadership, and current work.
 9. Closing invitation with one clear professional conversation path.
@@ -95,7 +95,7 @@ Dark-profile translation:
 - Short declarative headings.
 - Prefer operational verbs: delegate, orchestrate, verify, improve.
 - Distinguish capability from measured output.
-- Keep Agentic Power multipliers in the method note alongside scope, sensitivity assumptions, and audit limitations. A sensitivity range is not a statistical confidence interval. Retained redacted aggregates have a dated coverage boundary and cannot establish current private-work totals or independently prove overlap exclusions.
+- Label Agentic Power as modeled effort per assumed direction hour. A sensitivity range is not a confidence interval. Use one-way commit digests to remove public/owned overlap without publishing private identities; retain dated per-lane coverage when private refresh is unavailable.
 - Treat human judgment, acceptance criteria, and authority boundaries as core system components.
 
 ## Agent Build Instructions

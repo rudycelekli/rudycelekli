@@ -8,97 +8,6 @@ from unittest import mock
 from scripts import update_contributions as subject
 
 
-class AgenticPowerHistoryTests(unittest.TestCase):
-    def repo(self, month="2026-09", count=1):
-        raw = repository("example/engine")
-        prs = []
-        for number in range(1, count + 1):
-            pr = pull_request(raw, number)
-            pr.update(
-                createdAt=f"{month}-01T00:00:00Z", mergedAt=f"{month}-02T00:00:00Z"
-            )
-            prs.append(pr)
-        return {"full_name": "example/engine", "_merged_pull_requests": prs}
-
-    def test_completed_month_is_not_recalibrated_by_later_work(self):
-        repo = self.repo()
-        before = subject.calculate_agentic_power([repo], "2026-09-30", None)
-        later = self.repo("2026-10", 30)
-        after = subject.calculate_agentic_power(
-            [
-                {
-                    **repo,
-                    "_merged_pull_requests": repo["_merged_pull_requests"]
-                    + later["_merged_pull_requests"],
-                }
-            ],
-            "2026-10-31",
-            None,
-        )
-        month_before = next(m for m in before["monthly"] if m["month"] == "2026-09")
-        month_after = next(m for m in after["monthly"] if m["month"] == "2026-09")
-        self.assertEqual(
-            month_before["skilled_human_equivalent_hours"],
-            month_after["skilled_human_equivalent_hours"],
-        )
-        self.assertEqual(
-            month_before["modeled_human_direction_hours"],
-            month_after["modeled_human_direction_hours"],
-        )
-        self.assertEqual(
-            month_before["agentic_power_x"], month_after["agentic_power_x"]
-        )
-
-    def test_calendar_hours_and_overall_totals_agree(self):
-        profile = subject.calculate_agentic_power([self.repo()], "2026-10-03", None)
-        september, october = profile["monthly"][-2:]
-        self.assertEqual(september["modeled_human_direction_hours"]["base"], 7.5)
-        self.assertEqual(october["modeled_human_direction_hours"]["base"], 0.75)
-        self.assertTrue(october["partial_month"])
-        self.assertFalse(september["partial_month"])
-        for key in ("low", "base", "high"):
-            self.assertAlmostEqual(
-                profile["modeled_human_direction_hours"][key],
-                sum(
-                    m["modeled_human_direction_hours"][key] for m in profile["monthly"]
-                ),
-                places=2,
-            )
-
-    def test_no_evidence_has_no_ratio_and_cannot_crash(self):
-        profile = subject.calculate_agentic_power([], "2026-11-03", None)
-        self.assertEqual(
-            profile["agentic_power_x"], {"low": 0.0, "base": 0.0, "high": 0.0}
-        )
-
-    def test_leap_month_and_partial_year_boundary_use_calendar_days(self):
-        profile = subject.calculate_agentic_power(
-            [self.repo("2028-02")], "2028-03-01", None
-        )
-        self.assertEqual(profile["monthly"][-2]["direction_calendar_days"], 29)
-        self.assertEqual(profile["monthly"][-1]["direction_calendar_days"], 1)
-        self.assertEqual(profile["modeled_human_direction_hours"]["base"], 7.5)
-
-    def test_future_receipts_do_not_enter_an_earlier_snapshot(self):
-        profile = subject.calculate_agentic_power(
-            [self.repo("2026-12")], "2026-11-03", None
-        )
-        self.assertEqual(profile["public_accepted_pull_requests"], 0)
-        self.assertEqual(profile["skilled_human_equivalent_hours"]["base"], 0)
-
-    def test_graph_uses_observed_counts_and_method_discloses_snapshot_age(self):
-        profile = subject.calculate_agentic_power([self.repo()], "2026-10-03", None)
-        profile["repository_snapshot_updated_at_utc"] = "2026-09-27"
-        svg = subject.render_agentic_power_svg(profile)
-        note = subject.render_agentic_power_readme(profile)
-        self.assertIn("Merged PRs by month", svg)
-        self.assertNotIn("LINE = AP", svg)
-        self.assertNotIn("×", svg)
-        self.assertIn("2026-09-27", note)
-        self.assertIn("ratio of two estimates", note)
-        self.assertIn("cannot be independently checked or deduplicated", note)
-        self.assertIn("<details>", note)
-
 
 def pull_request(repository, number=1, merged=True):
     return {
@@ -1527,7 +1436,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
         self.assertIn("./assets/impact-signature.svg", readme)
         self.assertLess(
             readme.index("<!-- contribution-stats:start -->"),
-            readme.index("## Agentic work and measurement"),
+            readme.index("## Agentic Power over time"),
         )
         evidence = json.loads(
             (subject.ROOT / "data" / "contributions.json").read_text()

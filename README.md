@@ -205,33 +205,48 @@ All 93 verified upstream projects are shown here. **[Open the sortable evidence 
 <sub>Last verified 2026-11-03 UTC · visual + evidence refreshed every 30 minutes by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
 <!-- contribution-stats:end -->
 
-## Agentic work and measurement
+## Agentic Power over time
 
-[Agentic Power](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) compares estimated task-equivalent work with human direction. The public merge history below is observable; the leverage scenario uses assumptions that are documented separately.
+[Agentic Power](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) compares modeled task-equivalent work with human direction. This rolling view covers the last 12 calendar months, using authored work in my own repositories and accepted public upstream contributions.
 
 <!-- agentic-power-profile:start -->
-### Accepted work over time
+<img src="./assets/agentic-power-profile.svg?model=3" width="100%" alt="Last twelve months of modeled Agentic Power: monthly HEH divided by two direction hours per elapsed day, with current month and incomplete coverage marked" />
 
-<img src="./assets/agentic-power-profile.svg" width="100%" alt="Monthly authored merged upstream PR counts, with the current month marked partial; model assumptions are separate below" />
+**Direction assumption: 2 hours a day, approximately 14 hours a week.** A full 30-day month uses 60 hours; a 31-day month uses 62. The current month uses elapsed UTC dates only. The line is monthly AP, not cumulative AP.
 
-The chart counts merged upstream PRs. A merge records maintainer acceptance; it does not establish adoption, user benefit, or time saved.
+Accepted PR work follows its attributed authored months, with explicitly counted creation-month fallbacks below. Later merges can backfill those work months. Owned default-branch commits follow their UTC authored dates; duplicate implementation commits are excluded across both lanes.
 
 <details>
-<summary>Agentic Power: estimate, assumptions, and limitations</summary>
+<summary>Monthly inputs, coverage, and calculation method</summary>
 
-| Model input | Value | What it establishes |
-|:--|:--|:--|
-| HEH task-equivalence estimate | 43,664.1 hours | Heuristic from titles and change statistics, not measured engineering effort |
-| Human direction assumption | 151.2 hours; 1.5–2.0 h/week | Operator recall applied to elapsed calendar days, not a time log |
-| Resulting scenario | 288.7×; sensitivity range 187.5×–457.4× | A ratio of two estimates, not audited productivity or a statistical confidence interval |
-| Public acceptance receipts | 3,559 merged upstream PRs | Linked GitHub evidence |
-| Retained repository snapshot | 6,532 authored default-branch commits across 109 accessible repos, dated 2026-09-27 | Authorship and branch presence; not independent upstream acceptance or a live private-work count |
+| Work month | Accepted PRs with work | Own commits, public / private | Modeled HEH | Direction h | AP |
+|:--|--:|--:|--:|--:|--:|
+| 2025-12 | 0 | 0 / 107 | 169.50 | 62 | 2.73× |
+| 2026-01 | 0 | 0 / 53 | 48.50 | 62 | 0.78× |
+| 2026-02 | 0 | 0 / 191 | 102.50 | 56 | 1.83× |
+| 2026-03 | 0 | 24 / 321 | 185.50 | 62 | 2.99× |
+| 2026-04 | 0 | 0 / 731 | 506.00 | 60 | 8.43× |
+| 2026-05 | 0 | 3 / 392 | 507.50 | 62 | 8.19× |
+| 2026-06 | 0 | 161 / 925 | 893.25 | 60 | 14.89× |
+| 2026-07 | 0 | 0 / 839 | 788.75 | 62 | 12.72× |
+| 2026-08 | 0 | 62 / 1,227 | 1,875.75 | 62 | 30.25× |
+| 2026-09 | 372 | 141 / 1,574 | 5,480.08 | 60 | 91.33× |
+| 2026-10 | 3,172 | 433 / 1,316 | 33,555.59 | 62 | 541.22× |
+| 2026-11 (partial month) | 36 | 0 / 419 | 542.24 | 6 | 90.37× |
 
-Direction includes briefing, steering, review, correction, and coordination. Actual direction time, rework, costs, and downstream outcomes have not been audited. The redacted repository snapshot cannot be independently checked or deduplicated against newly discovered public projects from the published aggregate alone.
+Public owned-repository evidence through **2026-11-03**; private owned-repository evidence through **2026-11-03**. A missing or stale private refresh is marked per month, not filled with zeros or interpolated from an old monthly aggregate.
 
-Method v2 allocates the weekly assumption by calendar time. New work no longer rescales completed months. Earlier evidence or model corrections can still revise history; this is a reconstruction, not a record of what was known at each date. The current month is partial.
+Public PR timing fallback: **17 PRs** use their creation month because no attributed non-merge commit timeline is available. Other PRs are allocated in proportion to attributed commit counts in each UTC month; each PR's estimated hours are computed once and conserved across those allocations.
 
-[Framework and attribution](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [Inputs and calculation](./data/agentic-power.json) · [Evidence explorer](https://rudycelekli.github.io/contributions.html)
+HEH is estimated task-equivalent effort: PR-title categories and change statistics for accepted upstream work, and conventional-title classes for owned default-branch commits. Authorship dates are attribution evidence, not a timesheet. Owned default-branch presence is an acceptance proxy, not independent maintainer review. These models do not establish measured labor, time saved, or downstream impact.
+
+Reuse excluded: 328 repeated public-PR commit entries and 0 owned commits already covered by PR work. The first accepted PR receives implementation credit; later PR estimates count only the proportion of newly credited implementation commits, with no additional integration-effort estimate.
+
+The 12-month AP is total modeled HEH divided by total assumed direction hours, not an average of the monthly multipliers. When coverage is incomplete, the aggregate is labeled recorded-work only, not an account-wide total. The model rolls forward automatically; new activity does not rescale other months. Historical evidence corrections and later acceptance can revise the affected work months.
+
+Private repository names, raw commit SHAs, exact dates, URLs, code, and commit text stay private. One-way commit digests support deduplication against public PRs. The scope is personally owned non-fork repositories plus public upstream contributions; employer/client organization repositories, forks, the profile repository, and explicit authorship exceptions are excluded.
+
+[Framework and attribution](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [Method](./docs/agentic-power.md) · [Monthly calculations](./data/agentic-power.json) · [Redacted owned-work receipts](./data/owned-repository-work.json) · [Public PR commit timelines](./data/public-pr-work-timing.json) · [Evidence explorer](https://rudycelekli.github.io/contributions.html)
 
 </details>
 <!-- agentic-power-profile:end -->
