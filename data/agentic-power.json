@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.08,
-    "high": 89.83,
-    "low": 48.95
+    "base": 66.16,
+    "high": 89.93,
+    "low": 49.0
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1116.8,
+  "engineer_weeks_at_40h": 1118.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 541.32,
-        "high": 731.78,
-        "low": 405.02
+        "base": 542.15,
+        "high": 732.9,
+        "low": 405.64
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4346,
+      "public_authored_pr_commits": 4352,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3173,
+      "public_prs_with_work": 3179,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33562.06,
-        "high": 45370.27,
-        "low": 25111.11
+        "base": 33613.52,
+        "high": 45439.74,
+        "low": 25149.71
       }
     },
     {
       "agentic_power_x": {
-        "base": 92.12,
-        "high": 126.17,
-        "low": 67.3
+        "base": 92.29,
+        "high": 126.4,
+        "low": 67.41
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -415,26 +415,26 @@
       "month": "2026-11",
       "owned_private_commits": 419,
       "owned_private_coverage": "complete",
-      "owned_public_commits": 5,
+      "owned_public_commits": 7,
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 44,
-      "public_merged_pull_requests": 91,
+      "public_merged_pull_requests": 97,
       "public_prs_with_work": 37,
-      "repository_default_branch_commits": 424,
+      "repository_default_branch_commits": 426,
       "skilled_human_equivalent_hours": {
-        "base": 552.75,
-        "high": 757.0,
-        "low": 403.78
+        "base": 553.75,
+        "high": 758.4,
+        "low": 404.48
       }
     }
   ],
   "owned_private_commits": 8095,
   "owned_private_through_utc": "2026-11-03",
-  "owned_public_commits": 829,
+  "owned_public_commits": 831,
   "owned_public_through_utc": "2026-11-03",
-  "public_accepted_merge_events": 3561,
-  "public_accepted_pull_requests": 3560,
+  "public_accepted_merge_events": 3567,
+  "public_accepted_pull_requests": 3566,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -443,13 +443,13 @@
   ],
   "public_reused_commit_entries_excluded": 328,
   "repository_count": 93,
-  "repository_default_branch_non_merge_commits": 8924,
+  "repository_default_branch_non_merge_commits": 8926,
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44672.14,
-    "high": 60722.24,
-    "low": 33087.64
+    "base": 44724.6,
+    "high": 60793.11,
+    "low": 33126.94
   },
   "updated_at_utc": "2026-11-03",
   "window": {
@@ -118131,6 +118131,204 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(chat): keep a # that ends a Markdown heading word",
       "url": "https://github.com/Anil-matcha/open-duet/pull/199",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T22:24:25Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.16,
+        "high": 9.67,
+        "low": 5.37
+      },
+      "merged_at": "2026-11-03T16:58:17Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.16,
+          "high": 9.67,
+          "low": 5.37
+        }
+      },
+      "project": "Anil-matcha/open-duet",
+      "pull_request": 200,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(chat): keep balanced parentheses in Markdown link targets",
+      "url": "https://github.com/Anil-matcha/open-duet/pull/200",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T23:08:14Z",
+      "evidence": {
+        "additions": 3,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.1,
+        "high": 8.24,
+        "low": 4.58
+      },
+      "merged_at": "2026-11-03T17:07:27Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.1,
+          "high": 8.24,
+          "low": 4.58
+        }
+      },
+      "project": "Anil-matcha/open-duet",
+      "pull_request": 201,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sentinel): redact UNC paths in health-scan titles",
+      "url": "https://github.com/Anil-matcha/open-duet/pull/201",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T04:41:02Z",
+      "evidence": {
+        "additions": 51,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.57,
+        "high": 11.57,
+        "low": 6.43
+      },
+      "merged_at": "2026-11-03T17:07:41Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.57,
+          "high": 11.57,
+          "low": 6.43
+        }
+      },
+      "project": "Anil-matcha/open-duet",
+      "pull_request": 205,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Allow a prefix when ; or > is only inside quotes",
+      "url": "https://github.com/Anil-matcha/open-duet/pull/205",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-24T04:19:32Z",
+      "evidence": {
+        "additions": 110,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.13,
+        "high": 15.02,
+        "low": 8.35
+      },
+      "merged_at": "2026-11-03T17:08:02Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 11.13,
+          "high": 15.02,
+          "low": 8.35
+        }
+      },
+      "project": "Anil-matcha/open-duet",
+      "pull_request": 203,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Don't treat a dated example inside a code fence as a memory",
+      "url": "https://github.com/Anil-matcha/open-duet/pull/203",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-23T23:08:17Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.75,
+        "high": 11.81,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-03T17:08:19Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.75,
+          "high": 11.81,
+          "low": 6.56
+        }
+      },
+      "project": "Anil-matcha/open-duet",
+      "pull_request": 202,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(memory): keep a comma inside a quoted topic alias",
+      "url": "https://github.com/Anil-matcha/open-duet/pull/202",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-09T16:01:05Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.75,
+        "high": 13.16,
+        "low": 7.31
+      },
+      "merged_at": "2026-11-03T17:14:50Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.75,
+          "high": 13.16,
+          "low": 7.31
+        }
+      },
+      "project": "tigerless-labs/agent-memory",
+      "pull_request": 74,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(core): apply evidence-date validation to direct memory corrections",
+      "url": "https://github.com/tigerless-labs/agent-memory/pull/74",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
