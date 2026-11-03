@@ -76,8 +76,8 @@ changes can revise affected months. This is a reconstruction, not an as-known-at
 the-time historical record or a timesheet.
 
 Public and private owned lanes carry separate `from` and `through` bounds. A month
-is complete only when both lanes cover its entire required interval. Missing weeks
-are never invented by interpolating a monthly aggregate. Partial coverage is marked
+is complete only when both lanes cover its entire required interval. Unobserved months
+are never filled with zeros or invented from a legacy aggregate. Partial coverage is marked
 in the chart; a zero-work month with unavailable evidence has no AP point. An
 aggregate with incomplete coverage is labeled recorded-work only, not an account-wide
 total. The prior broad repository aggregate is retained as a legacy artifact and

@@ -2,6 +2,7 @@ import copy
 import datetime as dt
 import json
 import unittest
+import traceback
 from unittest import mock
 
 from scripts import agentic_work as work
@@ -552,7 +553,7 @@ class PinnedOwnedHistoryTests(unittest.TestCase):
 
     def test_incomplete_inventory_and_history_are_rejected(self):
         api = mock.Mock(return_value=self.inventory(count=2))
-        with self.assertRaisesRegex(RuntimeError, "inventory"):
+        with self.assertRaisesRegex(RuntimeError, "private details withheld"):
             work.collect_owned_history(
                 "token", "2026-11-03", "rudycelekli", api, include_private=True
             )
@@ -562,10 +563,27 @@ class PinnedOwnedHistoryTests(unittest.TestCase):
                 {"r0": {"object": {"history": self.connection([self.node("a" * 40)])}}},
             ]
         )
-        with self.assertRaisesRegex(RuntimeError, "Incomplete pinned"):
+        with self.assertRaisesRegex(RuntimeError, "private details withheld"):
             work.collect_owned_history(
                 "token", "2026-11-03", "rudycelekli", api, include_private=True
             )
+
+    def test_private_api_errors_do_not_leak_repository_names_in_public_logs(self):
+        api = mock.Mock(
+            side_effect=RuntimeError("Could not resolve PRIVATE_REPOSITORY_NAME")
+        )
+        try:
+            work.collect_owned_history(
+                "token", "2026-11-03", "rudycelekli", api, include_private=True
+            )
+        except RuntimeError as error:
+            output = "".join(
+                traceback.format_exception(type(error), error, error.__traceback__)
+            )
+            self.assertIn("private details withheld", output)
+            self.assertNotIn("PRIVATE_REPOSITORY_NAME", output)
+        else:
+            self.fail("Failed private collection must not be accepted")
 
     def test_public_collector_refuses_private_identity_disclosure(self):
         with self.assertRaisesRegex(RuntimeError, "private repository"):

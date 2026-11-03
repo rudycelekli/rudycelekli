@@ -614,7 +614,7 @@ def calculate_profile(repositories, updated, owned, timings, estimator, login):
     }
 
 
-def collect_owned_history(
+def _collect_owned_history(
     token, updated, login, graphql, cached=None, include_private=False, exclusions=()
 ):
     """Collect authored commits from pinned default-branch heads, without search limits."""
@@ -731,3 +731,19 @@ def collect_owned_history(
     )
     aggregate["default_branch_snapshots_verified"] = len(selected)
     return aggregate
+
+
+def collect_owned_history(
+    token, updated, login, graphql, cached=None, include_private=False, exclusions=()
+):
+    """Keep private API diagnostics out of public workflow logs."""
+    try:
+        return _collect_owned_history(
+            token, updated, login, graphql, cached, include_private, exclusions
+        )
+    except Exception:
+        if include_private:
+            raise RuntimeError(
+                "Owned-history collection failed; private details withheld"
+            ) from None
+        raise
