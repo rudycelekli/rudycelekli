@@ -1650,10 +1650,10 @@ def estimate_work_item(
     }
 
 
-def calculate_agentic_power(repositories, updated, repository_aggregate, timings=None):
+def calculate_agentic_power(repositories, updated, owned_work, timings=None):
     """Reconstruct the rolling twelve authored-work months at 2h/day direction."""
     return agentic_work.calculate_profile(
-        repositories, updated, repository_aggregate, timings, estimate_work_item, LOGIN
+        repositories, updated, owned_work, timings, estimate_work_item, LOGIN
     )
 
 
@@ -3440,12 +3440,12 @@ def main() -> int:
         f"{len(owned_repositories)} discovered, "
         f"{min(len(owned_repositories), OWNED_PROJECT_DISPLAY_LIMIT)} spotlighted"
     )
-    if repository_aggregate:
-        print(
-            "Updated redacted repository evidence since 2025: "
-            f"{repository_aggregate['default_branch_non_merge_commits']} commits across "
-            f"{repository_aggregate['repository_count']} repositories"
-        )
+    print(
+        "Updated owned repository work: "
+        f"{len(owned_work['receipts'])} redacted commit receipts; "
+        f"public through {owned_work.get('public_through_utc') or 'unavailable'}, "
+        f"private through {owned_work.get('private_through_utc') or 'unavailable'}"
+    )
     return 0
 
 
