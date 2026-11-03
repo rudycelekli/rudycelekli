@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.07,
-    "high": 89.81,
-    "low": 48.94
+    "base": 66.08,
+    "high": 89.83,
+    "low": 48.95
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1116.6,
+  "engineer_weeks_at_40h": 1116.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 541.22,
-        "high": 731.64,
-        "low": 404.94
+        "base": 541.32,
+        "high": 731.78,
+        "low": 405.02
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4345,
+      "public_authored_pr_commits": 4346,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3172,
+      "public_prs_with_work": 3173,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33555.59,
-        "high": 45361.53,
-        "low": 25106.26
+        "base": 33562.06,
+        "high": 45370.27,
+        "low": 25111.11
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 44,
-      "public_merged_pull_requests": 90,
+      "public_merged_pull_requests": 91,
       "public_prs_with_work": 37,
       "repository_default_branch_commits": 424,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 829,
   "owned_public_through_utc": "2026-11-03",
-  "public_accepted_merge_events": 3560,
-  "public_accepted_pull_requests": 3559,
+  "public_accepted_merge_events": 3561,
+  "public_accepted_pull_requests": 3560,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44665.67,
-    "high": 60713.5,
-    "low": 33082.79
+    "base": 44672.14,
+    "high": 60722.24,
+    "low": 33087.64
   },
   "updated_at_utc": "2026-11-03",
   "window": {
@@ -118098,6 +118098,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Clear the attribute cursor when moving to the root",
       "url": "https://github.com/antchfx/xmlquery/pull/142",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T22:17:11Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.47,
+        "high": 8.74,
+        "low": 4.85
+      },
+      "merged_at": "2026-11-03T16:58:09Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.47,
+          "high": 8.74,
+          "low": 4.85
+        }
+      },
+      "project": "Anil-matcha/open-duet",
+      "pull_request": 199,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(chat): keep a # that ends a Markdown heading word",
+      "url": "https://github.com/Anil-matcha/open-duet/pull/199",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
