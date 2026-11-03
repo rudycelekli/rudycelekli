@@ -103,3 +103,43 @@ Run local regression checks with:
 ```sh
 python3 -m unittest discover -s scripts -p 'test_*.py'
 ```
+
+### Refresh reliability
+
+Scheduled and manual runs use `scripts/refresh_profile.py`. Collection runs in a
+separate temporary checkout of the explicit serving inputs, with a 22-minute
+limit. It cannot rewrite the published checkout while fetching evidence. A
+completion receipt binds the attempt ID, evidence date and hashes of all 14
+serving files. Before promotion, the supervisor checks every file, SVG syntax,
+JSON structure, UTC dates, the contiguous 12-month window, direction hours,
+monthly and aggregate ratios, coverage bounds and private receipt redaction.
+
+Only a complete validated bundle is promoted. The workflow publishes it in one
+Git commit. A collector failure, timeout or rejected bundle retains the prior
+artifacts and publishes a small status note instead. `data/refresh-health.json`
+records the attempt, last successful collection, served snapshot date and safe
+failure category. A failed refresh still fails the Actions job after retention;
+retention is not reported as fresh collection. Data older than two days is marked
+stale when a failed run retains it. Private coverage keeps its actual collection
+date even when the public refresh succeeds.
+
+A per-checkout process lock and Actions concurrency group prevent overlapping
+refreshes. Checkout changes detected before promotion abort the update; normal
+Git push conflicts fail safely rather than force-pushing. Temporary output paths
+are unique and a failed copy rolls back this run's writes. Raw collector
+diagnostics are discarded rather than exposed in public workflow logs.
+
+Run the same prepublication check locally with:
+
+```sh
+python scripts/refresh_profile.py --validate-only
+python -m unittest discover -s scripts -p 'test_*.py'
+```
+
+This protects the published evidence from ordinary refresh failures. It cannot
+guarantee GitHub availability, credentials, scheduled job execution, storage or
+correctness of upstream data. The visible snapshot date remains the authority
+when automation stops entirely. Retry a failed workflow after resolving its safe
+failure category; do not edit dates to simulate a successful refresh. Private
+collection still requires the separately configured read-only
+`AP_REPOSITORY_TOKEN`; the supervisor does not create or broaden credentials.

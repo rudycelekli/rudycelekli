@@ -3287,6 +3287,26 @@ def write_generated(path: Path, content: str) -> None:
     path.write_text("\n".join(line.rstrip() for line in content.splitlines()) + "\n")
 
 
+def published_artifact_paths():
+    """The complete generated serving bundle; code and credentials are excluded."""
+    return (
+        README,
+        DATA_FILE,
+        AP_DATA_FILE,
+        OWNED_WORK_FILE,
+        PR_TIMING_FILE,
+        HERO_SVG_FILE,
+        BUILDING_SVG_FILE,
+        AUTHORITY_SVG_FILE,
+        LATEST_WORK_SVG_FILE,
+        SVG_FILE,
+        IMPACT_SVG_FILE,
+        OWNED_SVG_FILE,
+        AP_SVG_FILE,
+        WALKTHROUGH_SVG_FILE,
+    )
+
+
 def main() -> int:
     token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     if not token:
@@ -3446,6 +3466,24 @@ def main() -> int:
         f"public through {owned_work.get('public_through_utc') or 'unavailable'}, "
         f"private through {owned_work.get('private_through_utc') or 'unavailable'}"
     )
+    receipt_path = os.environ.get("PROFILE_REFRESH_RECEIPT_PATH")
+    if receipt_path:
+        attempt = os.environ.get("PROFILE_REFRESH_ATTEMPT_ID")
+        if not attempt:
+            raise RuntimeError("A refresh receipt requires its attempt ID")
+        receipt = {
+            "attempt_id": attempt,
+            "snapshot_date": updated,
+            "sha256": {
+                str(path.relative_to(ROOT)): hashlib.sha256(
+                    path.read_bytes()
+                ).hexdigest()
+                for path in published_artifact_paths()
+            },
+        }
+        write_generated(
+            Path(receipt_path), json.dumps(receipt, indent=2, sort_keys=True)
+        )
     return 0
 
 

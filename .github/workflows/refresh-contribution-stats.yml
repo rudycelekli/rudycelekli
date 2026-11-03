@@ -15,7 +15,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
       - name: Check out profile
         uses: actions/checkout@v7
@@ -36,30 +36,25 @@ jobs:
           PRIVATE_GITHUB_TOKEN: ${{ secrets.AP_REPOSITORY_TOKEN }}
           PROFILE_UPSTREAM_EXCLUSIONS: ${{ secrets.PROFILE_UPSTREAM_EXCLUSIONS }}
           REQUIRE_PROFILE_UPSTREAM_EXCLUSIONS: "true"
-        run: python scripts/update_contributions.py
-
-      # A refresh that stops partway leaves some artifacts rewritten and others
-      # stale, which must never be published as one coherent evidence set. The
-      # partial run is discarded so the last fully verified evidence stays live
-      # and the profile stays complete, and the freshness gate fails the job if
-      # that retained evidence has aged past its bound.
-      - name: Retain the last verified evidence
-        if: steps.refresh.outcome == 'failure'
-        run: |
-          echo "::warning::Refresh did not complete. Discarding the partial run and retaining the last verified evidence."
-          git checkout -- .
-          git clean -fd
-          python scripts/update_contributions.py --check-published-freshness
+        run: python scripts/refresh_profile.py
 
       - name: Commit verified changes
-        if: steps.refresh.outcome == 'success'
+        if: always() && steps.refresh.outcome != 'skipped'
         run: |
+          python scripts/refresh_profile.py --validate-only
           if git diff --quiet; then
             echo "Contribution evidence is already current."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md data/contributions.json data/agentic-power.json data/repository-work-aggregate.json data/owned-repository-work.json data/public-pr-work-timing.json assets/hero.svg assets/building-now.svg assets/contributor-authority.svg assets/latest-verified-work.svg assets/open-source-contributions.svg assets/impact-signature.svg assets/owned-public-projects.svg assets/agentic-power-profile.svg assets/profile-walkthrough.svg
+          git add README.md data/contributions.json data/refresh-health.json data/agentic-power.json data/repository-work-aggregate.json data/owned-repository-work.json data/public-pr-work-timing.json assets/hero.svg assets/building-now.svg assets/contributor-authority.svg assets/latest-verified-work.svg assets/open-source-contributions.svg assets/impact-signature.svg assets/owned-public-projects.svg assets/agentic-power-profile.svg assets/profile-walkthrough.svg
           git commit -m "chore: refresh contribution stats"
           git push
+
+      # Retaining a snapshot preserves the profile, but is not a fresh refresh.
+      - name: Report unsuccessful collection
+        if: always() && steps.refresh.outcome == 'failure'
+        run: |
+          echo "::error::Refresh failed. Previous evidence was retained; inspect refresh-health.json and retry the workflow."
+          exit 1

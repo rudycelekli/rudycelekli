@@ -84,7 +84,13 @@ class RefreshEntryPointTests(unittest.TestCase):
             stack.enter_context(mock.patch.object(source.dt, "datetime", SnapshotTime))
             stack.enter_context(
                 mock.patch.dict(
-                    os.environ, {"GITHUB_TOKEN": "test-credential"}, clear=True
+                    os.environ,
+                    {
+                        "GITHUB_TOKEN": "test-credential",
+                        "PROFILE_REFRESH_RECEIPT_PATH": str(root / "completion.json"),
+                        "PROFILE_REFRESH_ATTEMPT_ID": "integration-test",
+                    },
+                    clear=True,
                 )
             )
             source.README.write_text(readme)
@@ -131,6 +137,20 @@ class RefreshEntryPointTests(unittest.TestCase):
             output = io.StringIO()
             with contextlib.redirect_stdout(output):
                 self.assertEqual(source.main(), 0)
+            proof = json.loads((root / "completion.json").read_text())
+            self.assertEqual(proof["attempt_id"], "integration-test")
+            self.assertEqual(
+                set(proof["sha256"]),
+                {
+                    str(path.relative_to(root))
+                    for path in source.published_artifact_paths()
+                },
+            )
+            for name, expected in proof["sha256"].items():
+                self.assertEqual(
+                    source.hashlib.sha256((root / name).read_bytes()).hexdigest(),
+                    expected,
+                )
             result = json.loads(source.AP_DATA_FILE.read_text())
             self.assertEqual(len(result["monthly"]), 12)
             self.assertEqual(result["direction_calibration"]["hours_per_day"], 2)
