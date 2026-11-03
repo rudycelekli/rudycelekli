@@ -64,15 +64,16 @@ Dark-profile translation:
 - Four-lever capability rail: Delegate, Orchestrate, Verify, Improve.
 - Human-judgment boundary: goals and constraints enter from the left.
 - Evidence gate: only accepted, replayable work counts at the output.
-- Live Agentic Power equation: modeled HEH, operator-estimated human direction, central AP, and a visible uncertainty range. Preserve the conservative GitHub direction proxy in the evidence data for comparison.
-- Two-row month-over-month timeline from January 2025 onward: accepted HEH bars plus a modeled AP line.
+- Agentic Power remains an inspectable scenario in an expandable methodology note, with modeled HEH, recalled direction time, sensitivity assumptions, and the retained repository snapshot date. It is not a headline proof metric or audited productivity claim.
+- The visible monthly chart shows authored merged upstream PR counts from the first recorded public merge, preserves intervening months, uses one zero-based scale across years, and marks the current month partial. Do not graph reconstructed AP as observed history.
+- Direction method v2 applies the weekly recall assumption to elapsed calendar days. New work does not rescale completed months; discovered historical receipts or model revisions can still change a reconstruction. Preserve the GitHub proxy separately for comparison.
 - Semantic SVG motion: evidence signals flow, operating stages activate in sequence, and charts reveal their series; all motion stops under `prefers-reduced-motion`.
 - Layer motion by purpose: one staged entrance establishes hierarchy, routed packets and state changes explain the proof flow, and restrained scans or orbital traces supply ambience. Keep meaningful content visible at frame zero so static renderers never produce an empty panel.
 - Responsive SVG copy: wrap or clamp repository names and descriptions inside their own bounds and preserve a readable text equivalent in the README.
 - Auto-discovered contribution constellation: qualifying upstream projects flow into a two-column evidence layout with current stars and forks labeled as project reach, never personal credit.
 - Auto-discovered owner-project spotlight: public, non-fork, active source repositories use a compact three-column layout and explicit OWNER labels. Preserve the complete qualifying set in machine-readable evidence while keeping the visible profile selective and scannable.
 - Seven-chapter operating brief: a 35-second, pure-SVG profile walkthrough moves from thesis through Direct, Orchestrate, Verify, Improve, live proof, and invitation. Pull its proof figures from the contribution and Agentic Power datasets, preserve a complete reduced-motion frame, and keep the artwork original. Narrative-format inspiration: RuVector's vector walkthrough.
-- Live evidence hero: the first screen pairs the positioning statement with a restrained machine-counted proof rail. It refreshes merged PRs, accepted lines, provisional AP, and evidence date from the same source data as the detailed sections. Keep proof secondary to the thesis rather than turning the hero into a metric dashboard.
+- Live evidence hero: the first screen pairs the positioning statement with a restrained machine-counted proof rail. It refreshes merged PRs, accepted lines, and evidence date; modeled AP belongs in the method note. Keep proof secondary to the thesis rather than turning the hero into a metric dashboard.
 - Top contributor proof: directly beneath the identity rail, list only repositories where GitHub's all-time Contributors API currently ranks Rudy from 1 through 5. Show the observed rank and current repository stars, label stars as reach rather than personal credit, and omit pending or unavailable indexes.
 - Building-now frontier: place Gradia as a clearly labeled private-product anchor beside six automatically re-ranked public owner projects, presented as two calm rotating ledger views of three. Rank public work from inspectable GitHub signals, including a decaying launch boost for each project's newest public release or prerelease. Show the release tag in the ledger, keep private repository details out, preserve the strongest three as the reduced-motion fallback, and use an asymmetric anchor-plus-ledger composition rather than a repeated card grid.
 - Attribution link: directly credit the Agentic Power Framework and its author.
@@ -84,7 +85,7 @@ Dark-profile translation:
 3. Evidence thesis and proof loop.
 4. Verified upstream contribution proof, followed by explicitly labeled owned public projects.
 5. Flagship proof stack.
-6. Live modeled Agentic Power snapshot with evidence and caveats.
+6. Observed monthly acceptance counts with Agentic Power assumptions in an expandable method note.
 7. Agentic operating model and framework attribution.
 8. Research questions, tools, linked community leadership, and current work.
 9. Closing invitation with one clear professional conversation path.
@@ -94,7 +95,7 @@ Dark-profile translation:
 - Short declarative headings.
 - Prefer operational verbs: delegate, orchestrate, verify, improve.
 - Distinguish capability from measured output.
-- Never publish an Agentic Power multiplier without visible evidence scope, assumptions, uncertainty, and audit limitations.
+- Keep Agentic Power multipliers in the method note alongside scope, sensitivity assumptions, and audit limitations. A sensitivity range is not a statistical confidence interval. Retained redacted aggregates have a dated coverage boundary and cannot establish current private-work totals or independently prove overlap exclusions.
 - Treat human judgment, acceptance criteria, and authority boundaries as core system components.
 
 ## Agent Build Instructions

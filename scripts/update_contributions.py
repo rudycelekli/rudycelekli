@@ -675,7 +675,15 @@ def readable_description(value: object) -> str:
 IMPACT_CATEGORY_RULES = (
     (
         "Security & trust",
-        ("security", "auth", "permission", "credential", "injection", "secret", "vulnerability"),
+        (
+            "security",
+            "auth",
+            "permission",
+            "credential",
+            "injection",
+            "secret",
+            "vulnerability",
+        ),
     ),
     (
         "Testing & evaluation",
@@ -683,11 +691,35 @@ IMPACT_CATEGORY_RULES = (
     ),
     (
         "Performance & scale",
-        ("performance", "perf:", "latency", "speed", "cache", "parallel", "concurr", "memory leak", "optimiz"),
+        (
+            "performance",
+            "perf:",
+            "latency",
+            "speed",
+            "cache",
+            "parallel",
+            "concurr",
+            "memory leak",
+            "optimiz",
+        ),
     ),
     (
         "Reliability & correctness",
-        ("fix", "bug", "error", "validate", "validation", "retry", "timeout", "race", "serialize", "preserve", "reject", "fallback", "crash"),
+        (
+            "fix",
+            "bug",
+            "error",
+            "validate",
+            "validation",
+            "retry",
+            "timeout",
+            "race",
+            "serialize",
+            "preserve",
+            "reject",
+            "fallback",
+            "crash",
+        ),
     ),
     (
         "Agent infrastructure",
@@ -695,7 +727,17 @@ IMPACT_CATEGORY_RULES = (
     ),
     (
         "Developer experience",
-        ("docs", "readme", "cli", "install", "config", "typing", "types", "developer", "example"),
+        (
+            "docs",
+            "readme",
+            "cli",
+            "install",
+            "config",
+            "typing",
+            "types",
+            "developer",
+            "example",
+        ),
     ),
     (
         "Product capability",
@@ -1513,7 +1555,9 @@ def wrap_svg_text(value: object, width: int = 64, lines: int = 2) -> list[str]:
     return wrapped or [""]
 
 
-def estimate_work_item(repo: dict[str, object], pull_request: dict[str, object]) -> dict[str, object]:
+def estimate_work_item(
+    repo: dict[str, object], pull_request: dict[str, object]
+) -> dict[str, object]:
     """Build a transparent modeled AP work item from one accepted pull request."""
     title = str(pull_request["title"])
     lowered = title.casefold()
@@ -1554,7 +1598,7 @@ def estimate_work_item(repo: dict[str, object], pull_request: dict[str, object])
     reviews = int(pull_request["reviews"]["totalCount"])
     churn = additions + deletions
 
-    # HEH uses the accepted outcome type plus inspected complexity signals. It is
+    # HEH uses a title category plus visible change statistics. It is
     # not a conversion from lines of code to hours.
     heh_base = (
         outcome_base_hours
@@ -1611,7 +1655,8 @@ def calculate_agentic_power(
         estimate_work_item(repo, pull_request)
         for repo in repositories
         for pull_request in repo["_merged_pull_requests"]
-        if str(pull_request["mergedAt"]) >= "2025-01-01T00:00:00Z"
+        if "2025-01-01T00:00:00Z" <= str(pull_request["mergedAt"])
+        and str(pull_request["mergedAt"])[:10] <= updated
     ]
     work_items.sort(key=lambda item: str(item["merged_at"]))
 
@@ -1643,9 +1688,7 @@ def calculate_agentic_power(
             else {}
         )
         repository_heh = repository_work.get("skilled_human_equivalent_hours", {})
-        repository_direction = repository_work.get(
-            "modeled_human_direction_hours", {}
-        )
+        repository_direction = repository_work.get("modeled_human_direction_hours", {})
         month_heh = {
             key: round(
                 sum(float(item["heh"][key]) for item in public_items)
@@ -1683,7 +1726,9 @@ def calculate_agentic_power(
 
     heh = {
         key: round(
-            sum(float(month["skilled_human_equivalent_hours"][key]) for month in monthly),
+            sum(
+                float(month["skilled_human_equivalent_hours"][key]) for month in monthly
+            ),
             2,
         )
         for key in ("low", "base", "high")
@@ -1711,60 +1756,82 @@ def calculate_agentic_power(
             dt.timezone.utc
         )
 
-    evidence_weeks = round(
-        (as_utc(max(ends)) - as_utc(min(starts))).total_seconds() / 604_800,
-        2,
+    # A fixed weekly assumption is apportioned by elapsed calendar time, never
+    # by the share of work observed in the entire dataset. New work in October
+    # must not rewrite September's denominator.
+    as_of_end = dt.datetime.combine(
+        updated_date + dt.timedelta(days=1), dt.time(), dt.timezone.utc
     )
-    operator_direction = {
-        key: evidence_weeks * OPERATOR_DIRECTION_HOURS_PER_WEEK[key]
-        for key in ("low", "base", "high")
-    }
-    direction_calibration = {
-        key: (
-            operator_direction[key] / proxy_direction["base"]
-            if proxy_direction["base"]
-            else 1.0
-        )
-        for key in ("low", "base", "high")
-    }
+    first_date = (
+        max(PERIOD_START.date(), min(as_utc(value).date() for value in starts))
+        if starts
+        else as_of_end.date()
+    )
+    direction_start = dt.datetime.combine(first_date, dt.time(), dt.timezone.utc)
+    evidence_weeks = round(
+        max(0.0, (as_of_end - direction_start).total_seconds() / 604_800), 4
+    )
     for month in monthly:
-        proxy_share = (
-            float(month["uncalibrated_github_direction_proxy_hours"]["base"])
-            / proxy_direction["base"]
-            if proxy_direction["base"]
-            else 0.0
+        month_start = dt.datetime.fromisoformat(str(month["month"]) + "-01").replace(
+            tzinfo=dt.timezone.utc
+        )
+        next_month = (
+            month_start.replace(year=month_start.year + 1, month=1)
+            if month_start.month == 12
+            else month_start.replace(month=month_start.month + 1)
+        )
+        elapsed_days = max(
+            0.0,
+            (
+                min(next_month, as_of_end) - max(month_start, direction_start)
+            ).total_seconds()
+            / 86_400,
         )
         calibrated = {
-            key: round(operator_direction[key] * proxy_share, 2)
+            key: round(elapsed_days / 7 * OPERATOR_DIRECTION_HOURS_PER_WEEK[key], 2)
             for key in ("low", "base", "high")
         }
+        month["direction_calendar_days"] = round(elapsed_days, 4)
+        month["partial_month"] = as_of_end < next_month
         month["modeled_human_direction_hours"] = calibrated
         month_heh = month["skilled_human_equivalent_hours"]
         month["agentic_power_x"] = {
-            "low": round(float(month_heh["low"]) / calibrated["high"], 1)
-            if calibrated["high"]
-            else 0.0,
-            "base": round(float(month_heh["base"]) / calibrated["base"], 1)
-            if calibrated["base"]
-            else 0.0,
-            "high": round(float(month_heh["high"]) / calibrated["low"], 1)
-            if calibrated["low"]
-            else 0.0,
+            "low": (
+                round(float(month_heh["low"]) / calibrated["high"], 1)
+                if calibrated["high"]
+                else 0.0
+            ),
+            "base": (
+                round(float(month_heh["base"]) / calibrated["base"], 1)
+                if calibrated["base"]
+                else 0.0
+            ),
+            "high": (
+                round(float(month_heh["high"]) / calibrated["low"], 1)
+                if calibrated["low"]
+                else 0.0
+            ),
         }
     direction = {
-        key: round(operator_direction[key], 2) for key in ("low", "base", "high")
+        key: round(
+            sum(
+                float(month["modeled_human_direction_hours"][key]) for month in monthly
+            ),
+            2,
+        )
+        for key in ("low", "base", "high")
     }
     agentic_power = {
-        "low": round(heh["low"] / direction["high"], 1),
-        "base": round(heh["base"] / direction["base"], 1),
-        "high": round(heh["high"] / direction["low"], 1),
+        "low": round(heh["low"] / direction["high"], 1) if direction["high"] else 0.0,
+        "base": round(heh["base"] / direction["base"], 1) if direction["base"] else 0.0,
+        "high": round(heh["high"] / direction["low"], 1) if direction["low"] else 0.0,
     }
     repository_commits = int(
         (repository_aggregate or {}).get("default_branch_non_merge_commits", 0)
     )
     repository_count = int((repository_aggregate or {}).get("repository_count", 0))
     return {
-        "schema_version": 1,
+        "schema_version": 2,
         "framework": {
             "name": "The Agentic Power Framework",
             "version": "1.4.0 draft",
@@ -1773,7 +1840,7 @@ def calculate_agentic_power(
             "formula": "AP = Skilled Human-Equivalent Hours / Human Direction Hours",
         },
         "updated_at_utc": updated,
-        "basis": "operator-calibrated provisional estimate",
+        "basis": "modeled scenario using operator-recalled weekly direction",
         "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
         "window": {
             "start": min(starts) if starts else None,
@@ -1782,16 +1849,18 @@ def calculate_agentic_power(
         "public_accepted_pull_requests": len(work_items),
         "repository_default_branch_non_merge_commits": repository_commits,
         "repository_count": repository_count,
+        "repository_snapshot_updated_at_utc": (repository_aggregate or {}).get(
+            "updated_at_utc"
+        ),
         "skilled_human_equivalent_hours": heh,
         "uncalibrated_github_direction_proxy_hours": proxy_direction,
         "direction_calibration": {
-            "allocation_factor_vs_base_proxy": {
-                key: round(direction_calibration[key], 4)
-                for key in ("low", "base", "high")
-            },
+            "allocation_method": "elapsed-calendar-time-v2",
+            "coverage_start_utc": direction_start.date().isoformat(),
+            "coverage_through_utc": updated,
             "operator_estimated_hours_per_week": OPERATOR_DIRECTION_HOURS_PER_WEEK,
             "evidence_window_weeks": evidence_weeks,
-            "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
+            "basis": "Operator recall of 1.5 to 2.0 active direction hours per week, applied uniformly to elapsed calendar days; not measured time.",
             "status": "estimated from operator recall; not reconstructed from time logs",
         },
         "modeled_human_direction_hours": direction,
@@ -1799,11 +1868,13 @@ def calculate_agentic_power(
         "engineer_weeks_at_40h": round(heh["base"] / 40, 1),
         "monthly": monthly,
         "methodology": {
-            "acceptance": "Upstream work must be merged in a project that passes the GitHub Contributors API gate. Other repository work must be an authored non-merge commit on the default branch.",
-            "heh": "Merged pull requests use outcome-category baselines adjusted by files, commits, and nonlinear change complexity. Default-branch work uses conservative conventional-commit outcome classes. Line count alone never establishes HEH.",
+            "acceptance": "Public work uses authored merged PRs in the verified upstream ledger. The retained repository lane uses authored non-merge default-branch commits, a presence proxy rather than independent maintainer acceptance.",
+            "heh": "HEH is an unvalidated heuristic: PR-title category baselines plus file/commit counts and nonlinear change size; default-branch commits use title-prefix classes. It is not measured effort, time saved, downstream value, or a controlled human baseline.",
             "direction_proxy": "The conservative GitHub proxy assigns briefing/review/correction allowances to accepted work plus an explicit per-active-repository-month setup, coordination, and maintenance allowance.",
-            "direction_calibration": "The published direction denominator is calibrated to the operator-provided estimate of approximately 1.5 to 2.0 active direction hours per week, with 1.75 hours as the midpoint. Monthly allocation follows the relative shape of the conservative GitHub proxy because autonomous batches do not require separate human direction for every commit.",
-            "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction.",
+            "direction_calibration": "Weekly operator recall (1.5–2.0 hours, midpoint 1.75) is applied to each month’s elapsed calendar days. Later work does not rescale completed months. Historical evidence additions and model revisions can still change estimates. The current month is partial.",
+            "history": "Calendar denominators do not depend on later work. Historical receipts and model revisions may change reconstructed values; they are not as-known-at-the-time observations.",
+            "repository_snapshot": "The redacted lane retains its own snapshot date. Its published aggregate cannot independently prove deduplication against newly discovered public projects; it is not a live private-work count.",
+            "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction. This is a sensitivity scenario, not a statistical confidence interval.",
             "privacy": "Repository names, commit messages, URLs, code, employer, and client details from the redacted lane are not published.",
             "limitation": "The 1.5-to-2.0-hours-per-week calibration is operator-estimated, not reconstructed from time logs. Default-branch presence is a repository-level acceptance proxy. Only repositories currently accessible to the supplied credential can be counted. This is not a completed Full Evidence Audit.",
         },
@@ -1812,128 +1883,64 @@ def calculate_agentic_power(
 
 
 def render_agentic_power_svg(profile: dict[str, object]) -> str:
-    heh = profile["skilled_human_equivalent_hours"]
-    direction = profile["modeled_human_direction_hours"]
-    power = profile["agentic_power_x"]
-    weeks = float(profile["engineer_weeks_at_40h"])
-    public_items = int(profile["public_accepted_pull_requests"])
-    repository_commits = int(profile["repository_default_branch_non_merge_commits"])
-    repository_count = int(profile["repository_count"])
+    """Show dated acceptance receipts; leave the modeled ratio in the method note."""
     monthly = profile["monthly"]
-    calibration = profile["direction_calibration"]
-    max_heh = max(
-        (float(month["skilled_human_equivalent_hours"]["base"]) for month in monthly),
-        default=1.0,
+    # Start at the first recorded public merge; do not fabricate a pre-history
+    # from modeled private-work hours or imply that absent receipts prove no work.
+    first_merge = next(
+        (
+            i
+            for i, month in enumerate(monthly)
+            if int(month["public_merged_pull_requests"])
+        ),
+        len(monthly),
     )
-    max_ap = max(
-        (float(month["agentic_power_x"]["base"]) for month in monthly),
-        default=1.0,
+    monthly = monthly[first_merge:]
+    years = sorted({str(month["month"])[:4] for month in monthly})
+    maximum = (
+        max((int(month["public_merged_pull_requests"]) for month in monthly), default=0)
+        or 1
     )
-    panels: list[str] = []
-    for year, title_y, baseline in (("2025", 294, 418), ("2026", 482, 606)):
+    panels = []
+    for row, year in enumerate(years):
+        baseline = 268 + row * 176
         year_months = [
             month for month in monthly if str(month["month"]).startswith(year)
         ]
-        if not year_months:
-            continue
-        plot_left = 120.0
-        plot_width = 1038.0
-        column_width = plot_width / len(year_months)
-        chart_points: list[str] = []
-        line_points: list[str] = []
+        bars = []
         for index, month in enumerate(year_months):
-            center = plot_left + column_width * (index + 0.5)
-            month_heh = float(month["skilled_human_equivalent_hours"]["base"])
-            month_ap = float(month["agentic_power_x"]["base"])
-            bar_height = 78 * month_heh / max_heh if max_heh else 0
-            bar_y = baseline - bar_height
-            point_y = baseline - (78 * month_ap / max_ap if max_ap else 0)
-            line_points.append(f"{center:.1f},{point_y:.1f}")
-            bar_width = min(42.0, column_width * 0.48)
-            chart_points.append(
-                f"""
-      <rect class="ap-bar" style="animation-delay:{index * 0.08:.2f}s" x="{center - bar_width / 2:.1f}" y="{bar_y:.1f}" width="{bar_width:.1f}" height="{bar_height:.1f}" rx="7" fill="#2DE2C5" fill-opacity="0.22" stroke="#2DE2C5" stroke-opacity="0.50"/>
-      <circle class="ap-point" style="animation-delay:{index * 0.14:.2f}s" cx="{center:.1f}" cy="{point_y:.1f}" r="4.5" fill="#F2A93B" stroke="#07111E" stroke-width="3"/>
-      <text x="{center:.1f}" y="{point_y - 10:.1f}" fill="#F8C66E" font-size="11" font-weight="760" text-anchor="middle">{month_ap:.1f}×</text>
-      <text x="{center:.1f}" y="{baseline + 22:.1f}" fill="#91A2B8" font-size="11" letter-spacing="0.8" text-anchor="middle">{dt.datetime.strptime(str(month['month']), '%Y-%m').strftime('%b').upper()}</text>"""
+            x = 136 + 1022 / len(year_months) * (index + 0.5)
+            count = int(month["public_merged_pull_requests"])
+            height = 94 * count / maximum
+            partial = bool(month.get("partial_month"))
+            label = (
+                dt.datetime.strptime(str(month["month"]), "%Y-%m")
+                .strftime("%b")
+                .upper()
+            )
+            bars.append(
+                f'<rect x="{x - 20}" y="{baseline - height:.1f}" width="40" height="{height:.1f}" rx="3" fill="#2DE2C5" fill-opacity="{0.45 if partial else 0.85}"/>'
+                f'<text x="{x}" y="{baseline - height - 10:.1f}" text-anchor="middle" fill="#CBD5E1" font-size="12">{count:,}</text>'
+                f'<text x="{x}" y="{baseline + 24}" text-anchor="middle" fill="#94A3B8" font-size="11">{label}{"*" if partial else ""}</text>'
             )
         panels.append(
-            f"""
-  <g font-family="Inter,Segoe UI,sans-serif">
-    <text x="42" y="{title_y}" fill="#F8FAFC" font-size="17" font-weight="780">{year}</text>
-    <text x="42" y="{title_y + 20}" fill="#65758B" font-size="11">MONTHLY</text>
-    <line x1="120" y1="{baseline}" x2="1158" y2="{baseline}" stroke="#26364D"/>
-    <polyline class="ap-line" pathLength="1" points="{' '.join(line_points)}" fill="none" stroke="#F2A93B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
-    {''.join(chart_points)}
-  </g>"""
+            f'<text x="42" y="{baseline - 80}" fill="#F8FAFC" font-size="20" font-weight="700">{year}</text>'
+            f'<line x1="136" y1="{baseline}" x2="1158" y2="{baseline}" stroke="#26364D"/>'
+            + "".join(bars)
         )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690" role="img" aria-labelledby="title desc">
-  <title id="title">Modeled Agentic Power profile for Rudy Celekli</title>
-  <desc id="desc">An operator-calibrated provisional estimate since 2025 of {power['base']} times Agentic Power, including {public_items} merged upstream pull requests and {repository_commits} redacted default-branch commits, with a month-by-month timeline.</desc>
-  <defs>
-    <style>
-      .ap-line {{ stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw-line 1.8s ease-out forwards; }}
-      .ap-bar {{ opacity: 1; animation: breathe-bar 4s ease-in-out infinite; }}
-      .ap-point {{ animation: point-pulse 3s ease-in-out infinite; }}
-      @keyframes draw-line {{ to {{ stroke-dashoffset: 0; }} }}
-      @keyframes breathe-bar {{ 0%, 100% {{ opacity: .62; }} 50% {{ opacity: 1; }} }}
-      @keyframes point-pulse {{ 0%, 100% {{ opacity: .68; }} 50% {{ opacity: 1; }} }}
-      @media (prefers-reduced-motion: reduce) {{
-        .ap-line, .ap-bar, .ap-point {{ animation: none; opacity: 1; stroke-dashoffset: 0; }}
-      }}
-    </style>
-    <linearGradient id="ap-bg" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#07111E"/>
-      <stop offset="1" stop-color="#150B2E"/>
-    </linearGradient>
-    <linearGradient id="ap-line" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#2DE2C5"/>
-      <stop offset="0.52" stop-color="#4D7CFE"/>
-      <stop offset="1" stop-color="#9B7CFF"/>
-    </linearGradient>
-  </defs>
-  <rect width="1200" height="690" rx="28" fill="url(#ap-bg)"/>
-  <rect x="1" y="1" width="1198" height="688" rx="27" fill="none" stroke="#26364D"/>
-  <rect x="42" y="32" width="72" height="4" rx="2" fill="url(#ap-line)"/>
-  <text x="42" y="67" fill="#F8FAFC" font-family="Inter,Segoe UI,sans-serif" font-size="28" font-weight="780">LIVE AGENTIC POWER SNAPSHOT</text>
-  <text x="1158" y="64" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="12" text-anchor="end">OPERATOR CALIBRATED · {html.escape(str(profile['updated_at_utc']))} UTC</text>
-
-  <g transform="translate(42 112)" font-family="Inter,Segoe UI,sans-serif">
-    <text x="0" y="54" fill="#2DE2C5" font-size="52" font-weight="800">{float(heh['base']):,.1f}</text>
-    <text x="0" y="82" fill="#91A2B8" font-size="12" letter-spacing="1.4">SKILLED HEH</text>
-    <text x="221" y="52" fill="#65758B" font-size="40">÷</text>
-    <text x="286" y="54" fill="#9B7CFF" font-size="52" font-weight="800">{float(direction['base']):,.1f}</text>
-    <text x="286" y="82" fill="#91A2B8" font-size="10.5" letter-spacing="0.9">OPERATOR-EST. DIRECTION HOURS</text>
-    <text x="522" y="52" fill="#65758B" font-size="40">=</text>
-    <text x="596" y="58" fill="#F2A93B" font-size="68" font-weight="850">{float(power['base']):.1f}×</text>
-    <text x="600" y="86" fill="#F8C66E" font-size="12" letter-spacing="1.4">PROVISIONAL AP</text>
-  </g>
-
-  <g transform="translate(868 103)" font-family="Inter,Segoe UI,sans-serif">
-    <rect width="290" height="130" rx="18" fill="#0B1728" stroke="#9B7CFF" stroke-opacity="0.42"/>
-    <text x="22" y="31" fill="#C4B5FD" font-size="12" font-weight="750" letter-spacing="1.3">CALIBRATED RANGE</text>
-    <text x="22" y="73" fill="#F8FAFC" font-size="27" font-weight="780">{float(power['low']):.1f}× to {float(power['high']):.1f}×</text>
-    <text x="22" y="101" fill="#91A2B8" font-size="13">{float(calibration['operator_estimated_hours_per_week']['low']):.1f}–{float(calibration['operator_estimated_hours_per_week']['high']):.1f} direction h/week</text>
-    <text x="22" y="119" fill="#65758B" font-size="12">Not a completed evidence audit</text>
-  </g>
-
-  <line x1="42" y1="256" x2="1158" y2="256" stroke="#26364D"/>
-  <text x="42" y="276" fill="#65758B" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" letter-spacing="1">MONTH OVER MONTH · JAN 2025 TO PRESENT</text>
-  <g transform="translate(1158 276)" font-family="ui-monospace,SFMono-Regular,monospace" font-size="10" text-anchor="end">
-    <text x="-122" fill="#2DE2C5">BAR = ACCEPTED HEH</text>
-    <text fill="#F2A93B">LINE = AP</text>
-  </g>
-  {''.join(panels)}
-  <line x1="42" y1="648" x2="1158" y2="648" stroke="#26364D"/>
-  <g transform="translate(42 674)" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11">
-    <text fill="#2DE2C5">{public_items} merged upstream PRs</text>
-    <text x="169" fill="#65758B">•</text>
-    <text x="190" fill="#9B7CFF">{repository_commits:,} redacted default-branch commits</text>
-    <text x="439" fill="#65758B">•</text>
-    <text x="460" fill="#F8FAFC">{repository_count} accessible repos</text>
-    <text x="580" fill="#65758B">•</text>
-    <text x="601" fill="#F8FAFC">{weeks:.1f} engineer-weeks</text>
-    <text x="1116" fill="#65758B" text-anchor="end">AP = HEH ÷ human direction</text>
+    height = 190 + 176 * len(years)
+    footer = height - 35
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="{height}" viewBox="0 0 1200 {height}" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic Power: observed upstream work and separate model assumptions</title>
+  <desc id="desc">Monthly counts of authored merged upstream pull requests, not monthly productivity multipliers. Current month is partial. The Agentic Power scenario and assumptions are in the accompanying methodology.</desc>
+  <rect width="1200" height="{height}" rx="24" fill="#0B1220"/>
+  <rect x="1" y="1" width="1198" height="{height - 2}" rx="23" fill="none" stroke="#26364D"/>
+  <g font-family="Avenir Next,Segoe UI,sans-serif">
+    <text x="42" y="61" fill="#F8FAFC" font-size="27" font-weight="750">WORK ACCEPTED UPSTREAM</text>
+    <text x="42" y="94" fill="#94A3B8" font-size="15">Merged PRs by month. The leverage estimate is separate from this observed history.</text>
+    <text x="1158" y="124" fill="#94A3B8" font-size="12" text-anchor="end">AS OF {html.escape(str(profile['updated_at_utc']))} UTC · SAME SCALE ACROSS YEARS</text>
+    {"".join(panels)}
+    <text x="42" y="{footer}" fill="#94A3B8" font-size="13">* Partial month. Counts can change when older receipts are discovered. Merge counts do not measure downstream benefit.</text>
   </g>
 </svg>
 """
@@ -1953,11 +1960,10 @@ def render_hero_svg(
         for repo in repositories
     )
     total_stars = sum(int(repo["stargazers"]) for repo in repositories)
-    agentic_power = float(profile["agentic_power_x"]["base"])
     updated = html.escape(str(profile["updated_at_utc"]))
     return f"""<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Rudy Celekli, evidence-first agentic systems</title>
-  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes {merged_projects} projects with merged pull requests among {len(repositories)} verified upstream repositories, {total_merged} merged pull requests, {total_commits} attributed commits, {total_line_changes:,} accepted line changes, {total_stars} current repository stars, and a provisional Agentic Power estimate of {agentic_power:.1f} times.</desc>
+  <desc id="desc">Forward deployed AI researcher and agentic AI engineer building systems that can prove what happened. Live evidence includes {merged_projects} projects with merged pull requests among {len(repositories)} verified upstream repositories, {total_merged} merged pull requests, {total_commits} attributed commits, {total_line_changes:,} accepted line changes, {total_stars} current repository stars.</desc>
   <defs>
     <style>
       .orbit {{ transform-box: fill-box; transform-origin: center; animation: orbit 20s linear infinite; }}
@@ -2048,7 +2054,7 @@ def render_hero_svg(
     <g class="proof-rail"><line x1="72" y1="333" x2="664" y2="333" stroke="#26364D"/>
     <circle class="proof-live" cx="78" cy="358" r="5" fill="#2DE2C5"/>
     <text x="94" y="362" fill="#91A2B8" font-size="10.5" letter-spacing=".8">LIVE PROOF · {merged_projects} WITH MERGED PRS / {len(repositories)} VERIFIED · {total_merged:,} MERGED PRS · {compact(total_commits)} ATTRIBUTED COMMITS</text>
-    <text x="94" y="384" fill="#91A2B8" font-size="10.5" letter-spacing=".8">{total_line_changes:,} ACCEPTED LINE CHANGES · {compact(total_stars)} CURRENT REPO REACH · {agentic_power:.1f}× PROVISIONAL AP</text>
+    <text x="94" y="384" fill="#91A2B8" font-size="10.5" letter-spacing=".8">{total_line_changes:,} ACCEPTED LINE CHANGES · {compact(total_stars)} CURRENT REPO REACH</text>
     <text x="664" y="405" fill="#65758B" font-size="9.5" letter-spacing="1" text-anchor="end">MACHINE-COUNTED · {updated} UTC</text></g>
   </g>
 
@@ -3341,9 +3347,7 @@ def render_readme_section(
         "<!-- contribution-stats:start -->",
         "## Open-source impact, verified",
         "",
-        f"Every 30 minutes, the ledger discovers public upstream attribution and rebuilds this timeline from individual GitHub receipts. Only merged PRs contribute accepted-code totals. The amber orbit is the [current public open queue]({CURRENT_OPEN_PULL_REQUESTS_URL}), never accepted work. Stars and forks describe repository reach, not personal credit.",
-        "",
-        f'<img src="./assets/open-source-contributions.svg" width="100%" alt="Animated GitHub upstream timeline showing merged pull requests, open pull requests, unique projects, accepted line changes, and current repository reach through {html.escape(updated)}" />',
+        "Accepted upstream work, grouped by the problem addressed. Categories come from PR titles; each project links to the merged changes for inspection. Only merged PRs contribute accepted-code totals.",
         "",
         f'<img src="./assets/impact-signature.svg" width="100%" alt="Impact-category distribution and cross-project patterns across accepted upstream pull requests through {html.escape(updated)}" />',
         "",
@@ -3359,11 +3363,15 @@ def render_readme_section(
         evidence_url = (
             repo["contributors_url"]
             if tier == "github_listed_contributor"
-            else repo["commits_url"]
-            if tier == "default_branch_commit_verified"
-            else repo.get("contribution_graph_evidence_url") or repo["url"]
-            if tier == "github_contribution_graph_verified"
-            else repo["pull_requests_url"]
+            else (
+                repo["commits_url"]
+                if tier == "default_branch_commit_verified"
+                else (
+                    repo.get("contribution_graph_evidence_url") or repo["url"]
+                    if tier == "github_contribution_graph_verified"
+                    else repo["pull_requests_url"]
+                )
+            )
         )
         evidence_label = str(
             repo.get("verification_label") or "GitHub-listed contributor"
@@ -3386,9 +3394,7 @@ def render_readme_section(
             f"{int(repo['accepted_changed_files']):,}" if merged_prs else "—"
         )
         description = markdown_table_description(repo.get("description"))
-        impact_category = str(
-            repo.get("impact_category") or "Engineering contribution"
-        )
+        impact_category = str(repo.get("impact_category") or "Engineering contribution")
         impact_category_prs = int(repo.get("impact_category_prs") or 0)
         impact_basis = (
             f"{impact_category_prs:,} of {merged_prs:,} merged PRs"
@@ -3428,27 +3434,34 @@ def render_agentic_power_readme(profile: dict[str, object]) -> str:
     heh = profile["skilled_human_equivalent_hours"]
     direction = profile["modeled_human_direction_hours"]
     calibration = profile["direction_calibration"]
-    weeks = float(profile["engineer_weeks_at_40h"])
-    public_items = int(profile["public_accepted_pull_requests"])
-    repository_commits = int(profile["repository_default_branch_non_merge_commits"])
-    repository_count = int(profile["repository_count"])
+    snapshot = profile.get("repository_snapshot_updated_at_utc") or "unknown date"
     return "\n".join(
         [
             "<!-- agentic-power-profile:start -->",
-            "### Live Agentic Power snapshot",
+            "### Accepted work over time",
             "",
-            '<img src="./assets/agentic-power-profile.svg" width="100%" alt="Operator-calibrated provisional Agentic Power since 2025 with a month-by-month timeline" />',
+            '<img src="./assets/agentic-power-profile.svg" width="100%" alt="Monthly authored merged upstream PR counts, with the current month marked partial; model assumptions are separate below" />',
             "",
-            "| Measurement | Current evidence | Confidence boundary |",
+            "The chart counts merged upstream PRs. A merge records maintainer acceptance; it does not establish adoption, user benefit, or time saved.",
+            "",
+            "<details>",
+            "<summary>Agentic Power: estimate, assumptions, and limitations</summary>",
+            "",
+            "| Model input | Value | What it establishes |",
             "|:--|:--|:--|",
-            f"| **Provisional AP** | **{float(power['base']):.1f}×**, with a {float(power['low']):.1f}×–{float(power['high']):.1f}× scenario range | Derived estimate, not a time-tracked audit |",
-            f"| **Accepted-work numerator** | {float(heh['base']):,.1f} skilled Human-Equivalent Hours ({weeks:.1f} engineer-weeks) | Model-based task equivalence from accepted evidence |",
-            f"| **Direction denominator** | {float(direction['base']):,.1f} hours, midpoint of {float(direction['low']):,.1f}–{float(direction['high']):,.1f} | Operator recall: {float(calibration['operator_estimated_hours_per_week']['low']):.1f}–{float(calibration['operator_estimated_hours_per_week']['high']):.1f} active hours per week |",
-            f"| **Evidence coverage** | {public_items:,} merged upstream PRs plus {repository_commits:,} authored default-branch commits across {repository_count} accessible repositories | Private work remains redacted; only accessible repositories are counted |",
+            f"| HEH task-equivalence estimate | {float(heh['base']):,.1f} hours | Heuristic from titles and change statistics, not measured engineering effort |",
+            f"| Human direction assumption | {float(direction['base']):,.1f} hours; {float(calibration['operator_estimated_hours_per_week']['low']):.1f}–{float(calibration['operator_estimated_hours_per_week']['high']):.1f} h/week | Operator recall applied to elapsed calendar days, not a time log |",
+            f"| Resulting scenario | {float(power['base']):.1f}×; sensitivity range {float(power['low']):.1f}×–{float(power['high']):.1f}× | A ratio of two estimates, not audited productivity or a statistical confidence interval |",
+            f"| Public acceptance receipts | {int(profile['public_accepted_pull_requests']):,} merged upstream PRs | Linked GitHub evidence |",
+            f"| Retained repository snapshot | {int(profile['repository_default_branch_non_merge_commits']):,} authored default-branch commits across {int(profile['repository_count'])} accessible repos, dated {snapshot} | Authorship and branch presence; not independent upstream acceptance or a live private-work count |",
             "",
-            "Direction includes active briefing, steering, review, correction, and coordination. It excludes agent runtime and waiting. This is a transparent scenario with inspectable inputs, not a completed Full Evidence Audit.",
+            "Direction includes briefing, steering, review, correction, and coordination. Actual direction time, rework, costs, and downstream outcomes have not been audited. The redacted repository snapshot cannot be independently checked or deduplicated against newly discovered public projects from the published aggregate alone.",
             "",
-            "<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence and visuals refreshed every 30 minutes; redacted repository snapshot retained until a private read credential is available</sub>",
+            "Method v2 allocates the weekly assumption by calendar time. New work no longer rescales completed months. Earlier evidence or model corrections can still revise history; this is a reconstruction, not a record of what was known at each date. The current month is partial.",
+            "",
+            "[Framework and attribution](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [Inputs and calculation](./data/agentic-power.json) · [Evidence explorer](https://rudycelekli.github.io/contributions.html)",
+            "",
+            "</details>",
             "<!-- agentic-power-profile:end -->",
         ]
     )

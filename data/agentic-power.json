@@ -1,18 +1,16 @@
 {
   "agentic_power_x": {
-    "base": 289.4,
-    "high": 458.4,
-    "low": 187.9
+    "base": 288.7,
+    "high": 457.4,
+    "low": 187.5
   },
-  "basis": "operator-calibrated provisional estimate",
+  "basis": "modeled scenario using operator-recalled weekly direction",
   "direction_calibration": {
-    "allocation_factor_vs_base_proxy": {
-      "base": 0.0292,
-      "high": 0.0334,
-      "low": 0.0251
-    },
-    "basis": "Operator estimate of approximately 1.5 to 2.0 active direction hours per week across the evidence window; 1.75 hours is the midpoint.",
-    "evidence_window_weeks": 86.22,
+    "allocation_method": "elapsed-calendar-time-v2",
+    "basis": "Operator recall of 1.5 to 2.0 active direction hours per week, applied uniformly to elapsed calendar days; not measured time.",
+    "coverage_start_utc": "2025-03-09",
+    "coverage_through_utc": "2026-11-03",
+    "evidence_window_weeks": 86.4286,
     "operator_estimated_hours_per_week": {
       "base": 1.75,
       "high": 2.0,
@@ -29,18 +27,20 @@
     "version": "1.4.0 draft"
   },
   "methodology": {
-    "acceptance": "Upstream work must be merged in a project that passes the GitHub Contributors API gate. Other repository work must be an authored non-merge commit on the default branch.",
-    "direction_calibration": "The published direction denominator is calibrated to the operator-provided estimate of approximately 1.5 to 2.0 active direction hours per week, with 1.75 hours as the midpoint. Monthly allocation follows the relative shape of the conservative GitHub proxy because autonomous batches do not require separate human direction for every commit.",
+    "acceptance": "Public work uses authored merged PRs in the verified upstream ledger. The retained repository lane uses authored non-merge default-branch commits, a presence proxy rather than independent maintainer acceptance.",
+    "direction_calibration": "Weekly operator recall (1.5\u20132.0 hours, midpoint 1.75) is applied to each month\u2019s elapsed calendar days. Later work does not rescale completed months. Historical evidence additions and model revisions can still change estimates. The current month is partial.",
     "direction_proxy": "The conservative GitHub proxy assigns briefing/review/correction allowances to accepted work plus an explicit per-active-repository-month setup, coordination, and maintenance allowance.",
-    "heh": "Merged pull requests use outcome-category baselines adjusted by files, commits, and nonlinear change complexity. Default-branch work uses conservative conventional-commit outcome classes. Line count alone never establishes HEH.",
+    "heh": "HEH is an unvalidated heuristic: PR-title category baselines plus file/commit counts and nonlinear change size; default-branch commits use title-prefix classes. It is not measured effort, time saved, downstream value, or a controlled human baseline.",
+    "history": "Calendar denominators do not depend on later work. Historical receipts and model revisions may change reconstructed values; they are not as-known-at-the-time observations.",
     "limitation": "The 1.5-to-2.0-hours-per-week calibration is operator-estimated, not reconstructed from time logs. Default-branch presence is a repository-level acceptance proxy. Only repositories currently accessible to the supplied credential can be counted. This is not a completed Full Evidence Audit.",
     "privacy": "Repository names, commit messages, URLs, code, employer, and client details from the redacted lane are not published.",
-    "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction."
+    "range": "Low AP = low HEH / high direction; high AP = high HEH / low direction. This is a sensitivity scenario, not a statistical confidence interval.",
+    "repository_snapshot": "The redacted lane retains its own snapshot date. Its published aggregate cannot independently prove deduplication against newly discovered public projects; it is not a live private-work count."
   },
   "modeled_human_direction_hours": {
-    "base": 150.88,
-    "high": 172.44,
-    "low": 129.33
+    "base": 151.25,
+    "high": 172.88,
+    "low": 129.62
   },
   "monthly": [
     {
@@ -50,12 +50,14 @@
         "high": 0.0,
         "low": 0.0
       },
+      "direction_calendar_days": 0.0,
       "modeled_human_direction_hours": {
         "base": 0.0,
         "high": 0.0,
         "low": 0.0
       },
       "month": "2025-01",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
@@ -76,12 +78,14 @@
         "high": 0.0,
         "low": 0.0
       },
+      "direction_calendar_days": 0.0,
       "modeled_human_direction_hours": {
         "base": 0.0,
         "high": 0.0,
         "low": 0.0
       },
       "month": "2025-02",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
@@ -98,16 +102,18 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 50.7,
-        "high": 81.7,
-        "low": 31.0
+        "base": 6.7,
+        "high": 10.9,
+        "low": 4.1
       },
+      "direction_calendar_days": 23.0,
       "modeled_human_direction_hours": {
-        "base": 0.76,
-        "high": 0.87,
-        "low": 0.66
+        "base": 5.75,
+        "high": 6.57,
+        "low": 4.93
       },
       "month": "2025-03",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 77,
       "skilled_human_equivalent_hours": {
@@ -124,16 +130,18 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 29.8,
-        "high": 47.8,
-        "low": 18.1
+        "base": 1.9,
+        "high": 3.0,
+        "low": 1.1
       },
+      "direction_calendar_days": 30.0,
       "modeled_human_direction_hours": {
-        "base": 0.47,
-        "high": 0.54,
-        "low": 0.41
+        "base": 7.5,
+        "high": 8.57,
+        "low": 6.43
       },
       "month": "2025-04",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 28,
       "skilled_human_equivalent_hours": {
@@ -150,16 +158,18 @@
     {
       "active_repositories": 1,
       "agentic_power_x": {
-        "base": 21.4,
-        "high": 35.0,
-        "low": 15.0
+        "base": 0.2,
+        "high": 0.3,
+        "low": 0.1
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 0.07,
-        "high": 0.07,
-        "low": 0.06
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2025-05",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 3,
       "skilled_human_equivalent_hours": {
@@ -176,16 +186,18 @@
     {
       "active_repositories": 5,
       "agentic_power_x": {
-        "base": 43.1,
-        "high": 70.0,
-        "low": 25.8
+        "base": 2.1,
+        "high": 3.4,
+        "low": 1.3
       },
+      "direction_calendar_days": 30.0,
       "modeled_human_direction_hours": {
-        "base": 0.36,
-        "high": 0.42,
-        "low": 0.31
+        "base": 7.5,
+        "high": 8.57,
+        "low": 6.43
       },
       "month": "2025-06",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 31,
       "skilled_human_equivalent_hours": {
@@ -202,16 +214,18 @@
     {
       "active_repositories": 3,
       "agentic_power_x": {
-        "base": 25.0,
-        "high": 41.2,
-        "low": 15.2
+        "base": 0.6,
+        "high": 1.1,
+        "low": 0.4
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 0.2,
-        "high": 0.23,
-        "low": 0.17
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2025-07",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 10,
       "skilled_human_equivalent_hours": {
@@ -228,16 +242,18 @@
     {
       "active_repositories": 2,
       "agentic_power_x": {
-        "base": 19.2,
-        "high": 31.8,
-        "low": 11.7
+        "base": 0.3,
+        "high": 0.5,
+        "low": 0.2
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 0.13,
-        "high": 0.15,
-        "low": 0.11
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2025-08",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 5,
       "skilled_human_equivalent_hours": {
@@ -258,12 +274,14 @@
         "high": 0.0,
         "low": 0.0
       },
+      "direction_calendar_days": 30.0,
       "modeled_human_direction_hours": {
-        "base": 0.0,
-        "high": 0.0,
-        "low": 0.0
+        "base": 7.5,
+        "high": 8.57,
+        "low": 6.43
       },
       "month": "2025-09",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
@@ -280,16 +298,18 @@
     {
       "active_repositories": 2,
       "agentic_power_x": {
-        "base": 23.1,
-        "high": 38.2,
-        "low": 14.0
+        "base": 0.4,
+        "high": 0.6,
+        "low": 0.2
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 0.13,
-        "high": 0.15,
-        "low": 0.11
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2025-10",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 6,
       "skilled_human_equivalent_hours": {
@@ -306,16 +326,18 @@
     {
       "active_repositories": 1,
       "agentic_power_x": {
-        "base": 222.1,
-        "high": 364.5,
-        "low": 135.5
+        "base": 10.1,
+        "high": 16.4,
+        "low": 6.2
       },
+      "direction_calendar_days": 30.0,
       "modeled_human_direction_hours": {
-        "base": 0.34,
-        "high": 0.39,
-        "low": 0.29
+        "base": 7.5,
+        "high": 8.57,
+        "low": 6.43
       },
       "month": "2025-11",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 45,
       "skilled_human_equivalent_hours": {
@@ -332,16 +354,18 @@
     {
       "active_repositories": 8,
       "agentic_power_x": {
-        "base": 157.0,
-        "high": 255.7,
-        "low": 96.4
+        "base": 23.1,
+        "high": 37.7,
+        "low": 14.1
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 1.14,
-        "high": 1.3,
-        "low": 0.98
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2025-12",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 120,
       "skilled_human_equivalent_hours": {
@@ -358,16 +382,18 @@
     {
       "active_repositories": 4,
       "agentic_power_x": {
-        "base": 128.8,
-        "high": 208.4,
-        "low": 79.5
+        "base": 8.6,
+        "high": 14.1,
+        "low": 5.3
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 0.52,
-        "high": 0.59,
-        "low": 0.45
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2026-01",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 90,
       "skilled_human_equivalent_hours": {
@@ -384,16 +410,18 @@
     {
       "active_repositories": 5,
       "agentic_power_x": {
-        "base": 138.0,
-        "high": 224.4,
-        "low": 84.8
+        "base": 15.6,
+        "high": 25.4,
+        "low": 9.5
       },
+      "direction_calendar_days": 28.0,
       "modeled_human_direction_hours": {
-        "base": 0.79,
-        "high": 0.9,
-        "low": 0.68
+        "base": 7.0,
+        "high": 8.0,
+        "low": 6.0
       },
       "month": "2026-02",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 198,
       "skilled_human_equivalent_hours": {
@@ -410,16 +438,18 @@
     {
       "active_repositories": 13,
       "agentic_power_x": {
-        "base": 114.4,
-        "high": 187.0,
-        "low": 70.0
+        "base": 23.6,
+        "high": 38.6,
+        "low": 14.5
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 1.6,
-        "high": 1.83,
-        "low": 1.37
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2026-03",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 346,
       "skilled_human_equivalent_hours": {
@@ -436,16 +466,18 @@
     {
       "active_repositories": 18,
       "agentic_power_x": {
-        "base": 160.7,
-        "high": 262.8,
-        "low": 98.3
+        "base": 74.3,
+        "high": 121.4,
+        "low": 45.5
       },
+      "direction_calendar_days": 30.0,
       "modeled_human_direction_hours": {
-        "base": 3.47,
-        "high": 3.97,
-        "low": 2.97
+        "base": 7.5,
+        "high": 8.57,
+        "low": 6.43
       },
       "month": "2026-04",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 830,
       "skilled_human_equivalent_hours": {
@@ -462,16 +494,18 @@
     {
       "active_repositories": 10,
       "agentic_power_x": {
-        "base": 199.7,
-        "high": 326.0,
-        "low": 122.4
+        "base": 65.2,
+        "high": 106.5,
+        "low": 39.9
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 2.53,
-        "high": 2.89,
-        "low": 2.17
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2026-05",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 390,
       "skilled_human_equivalent_hours": {
@@ -488,16 +522,18 @@
     {
       "active_repositories": 20,
       "agentic_power_x": {
-        "base": 187.7,
-        "high": 306.2,
-        "low": 114.8
+        "base": 125.1,
+        "high": 204.3,
+        "low": 76.6
       },
+      "direction_calendar_days": 30.0,
       "modeled_human_direction_hours": {
-        "base": 5.0,
-        "high": 5.72,
-        "low": 4.29
+        "base": 7.5,
+        "high": 8.57,
+        "low": 6.43
       },
       "month": "2026-06",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 1084,
       "skilled_human_equivalent_hours": {
@@ -514,16 +550,18 @@
     {
       "active_repositories": 7,
       "agentic_power_x": {
-        "base": 220.5,
-        "high": 360.8,
-        "low": 135.2
+        "base": 104.4,
+        "high": 170.6,
+        "low": 63.9
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 3.67,
-        "high": 4.19,
-        "low": 3.14
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2026-07",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 838,
       "skilled_human_equivalent_hours": {
@@ -540,16 +578,18 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 236.8,
-        "high": 386.7,
-        "low": 144.9
+        "base": 267.7,
+        "high": 437.4,
+        "low": 163.9
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 8.76,
-        "high": 10.02,
-        "low": 7.51
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2026-08",
+      "partial_month": false,
       "public_merged_pull_requests": 0,
       "repository_default_branch_commits": 1415,
       "skilled_human_equivalent_hours": {
@@ -566,16 +606,18 @@
     {
       "active_repositories": 14,
       "agentic_power_x": {
-        "base": 312.0,
-        "high": 497.3,
-        "low": 200.4
+        "base": 515.9,
+        "high": 822.1,
+        "low": 331.3
       },
+      "direction_calendar_days": 30.0,
       "modeled_human_direction_hours": {
-        "base": 12.4,
-        "high": 14.17,
-        "low": 10.63
+        "base": 7.5,
+        "high": 8.57,
+        "low": 6.43
       },
       "month": "2026-09",
+      "partial_month": false,
       "public_merged_pull_requests": 242,
       "repository_default_branch_commits": 1016,
       "skilled_human_equivalent_hours": {
@@ -592,16 +634,18 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 316.5,
-        "high": 498.5,
-        "low": 207.7
+        "base": 4299.0,
+        "high": 6774.1,
+        "low": 2820.4
       },
+      "direction_calendar_days": 31.0,
       "modeled_human_direction_hours": {
-        "base": 105.26,
-        "high": 120.3,
-        "low": 90.23
+        "base": 7.75,
+        "high": 8.86,
+        "low": 6.64
       },
       "month": "2026-10",
+      "partial_month": false,
       "public_merged_pull_requests": 3228,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
@@ -618,16 +662,18 @@
     {
       "active_repositories": 0,
       "agentic_power_x": {
-        "base": 274.9,
-        "high": 433.5,
-        "low": 180.3
+        "base": 1198.8,
+        "high": 1896.4,
+        "low": 784.0
       },
+      "direction_calendar_days": 3.0,
       "modeled_human_direction_hours": {
-        "base": 3.27,
-        "high": 3.74,
-        "low": 2.8
+        "base": 0.75,
+        "high": 0.86,
+        "low": 0.64
       },
       "month": "2026-11",
+      "partial_month": true,
       "public_merged_pull_requests": 89,
       "repository_default_branch_commits": 0,
       "skilled_human_equivalent_hours": {
@@ -645,7 +691,8 @@
   "public_accepted_pull_requests": 3559,
   "repository_count": 109,
   "repository_default_branch_non_merge_commits": 6532,
-  "schema_version": 1,
+  "repository_snapshot_updated_at_utc": "2026-09-27",
+  "schema_version": 2,
   "scope": "Merged upstream pull requests plus redacted default-branch work from accessible repositories since 2025",
   "skilled_human_equivalent_hours": {
     "base": 43664.06,

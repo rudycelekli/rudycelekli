@@ -82,18 +82,10 @@ The operating principle is simple: preserve the world state, replay the action, 
 <sub>Frontier selections are re-ranked every 30 minutes from public reach, shipping recency, releases, attributed work, and repository completeness · last ranked 2026-11-03 UTC · private Gradia repository evidence remains private</sub>
 <!-- building-now:end -->
 
-## Latest verified work
-
-<img src="./assets/latest-verified-work.svg" width="100%" alt="Latest accepted upstream pull request, public release, and owned-project activity" />
-
-<sub>This is a generated point-in-time pulse. A merge is accepted upstream work; a release is public shipping evidence; repository activity alone is neither.</sub>
-
 <!-- contribution-stats:start -->
 ## Open-source impact, verified
 
-Every 30 minutes, the ledger discovers public upstream attribution and rebuilds this timeline from individual GitHub receipts. Only merged PRs contribute accepted-code totals. The amber orbit is the [current public open queue](https://github.com/search?q=author%3Arudycelekli+is%3Apr+is%3Aopen+created%3A%3E%3D2025-01-01&type=pullrequests), never accepted work. Stars and forks describe repository reach, not personal credit.
-
-<img src="./assets/open-source-contributions.svg" width="100%" alt="Animated GitHub upstream timeline showing merged pull requests, open pull requests, unique projects, accepted line changes, and current repository reach through 2026-11-03" />
+Accepted upstream work, grouped by the problem addressed. Categories come from PR titles; each project links to the merged changes for inspection. Only merged PRs contribute accepted-code totals.
 
 <img src="./assets/impact-signature.svg" width="100%" alt="Impact-category distribution and cross-project patterns across accepted upstream pull requests through 2026-11-03" />
 
@@ -203,25 +195,35 @@ All 93 verified upstream projects are shown here. **[Open the sortable evidence 
 <sub>Last verified 2026-11-03 UTC · visual + evidence refreshed every 30 minutes by [GitHub Actions](./.github/workflows/refresh-contribution-stats.yml) · [machine-readable evidence](./data/contributions.json)</sub>
 <!-- contribution-stats:end -->
 
-## Agentic power, engineered
+## Agentic work and measurement
 
-[Agentic Power](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) asks how much accepted skilled work one hour of human direction can command. I expose the numerator, denominator, assumptions, and uncertainty because a large multiplier without its evidence boundary is not a serious measurement.
+[Agentic Power](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) compares estimated task-equivalent work with human direction. The public merge history below is observable; the leverage scenario uses assumptions that are documented separately.
 
 <!-- agentic-power-profile:start -->
-### Live Agentic Power snapshot
+### Accepted work over time
 
-<img src="./assets/agentic-power-profile.svg" width="100%" alt="Operator-calibrated provisional Agentic Power since 2025 with a month-by-month timeline" />
+<img src="./assets/agentic-power-profile.svg" width="100%" alt="Monthly authored merged upstream PR counts, with the current month marked partial; model assumptions are separate below" />
 
-| Measurement | Current evidence | Confidence boundary |
+The chart counts merged upstream PRs. A merge records maintainer acceptance; it does not establish adoption, user benefit, or time saved.
+
+<details>
+<summary>Agentic Power: estimate, assumptions, and limitations</summary>
+
+| Model input | Value | What it establishes |
 |:--|:--|:--|
-| **Provisional AP** | **289.4×**, with a 187.9×–458.4× scenario range | Derived estimate, not a time-tracked audit |
-| **Accepted-work numerator** | 43,664.1 skilled Human-Equivalent Hours (1091.6 engineer-weeks) | Model-based task equivalence from accepted evidence |
-| **Direction denominator** | 150.9 hours, midpoint of 129.3–172.4 | Operator recall: 1.5–2.0 active hours per week |
-| **Evidence coverage** | 3,559 merged upstream PRs plus 6,532 authored default-branch commits across 109 accessible repositories | Private work remains redacted; only accessible repositories are counted |
+| HEH task-equivalence estimate | 43,664.1 hours | Heuristic from titles and change statistics, not measured engineering effort |
+| Human direction assumption | 151.2 hours; 1.5–2.0 h/week | Operator recall applied to elapsed calendar days, not a time log |
+| Resulting scenario | 288.7×; sensitivity range 187.5×–457.4× | A ratio of two estimates, not audited productivity or a statistical confidence interval |
+| Public acceptance receipts | 3,559 merged upstream PRs | Linked GitHub evidence |
+| Retained repository snapshot | 6,532 authored default-branch commits across 109 accessible repos, dated 2026-09-27 | Authorship and branch presence; not independent upstream acceptance or a live private-work count |
 
-Direction includes active briefing, steering, review, correction, and coordination. It excludes agent runtime and waiting. This is a transparent scenario with inspectable inputs, not a completed Full Evidence Audit.
+Direction includes briefing, steering, review, correction, and coordination. Actual direction time, rework, costs, and downstream outcomes have not been audited. The redacted repository snapshot cannot be independently checked or deduplicated against newly discovered public projects from the published aggregate alone.
 
-<sub>[Framework and formula](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [calculation evidence](./data/agentic-power.json) · public upstream evidence and visuals refreshed every 30 minutes; redacted repository snapshot retained until a private read credential is available</sub>
+Method v2 allocates the weekly assumption by calendar time. New work no longer rescales completed months. Earlier evidence or model corrections can still revise history; this is a reconstruction, not a record of what was known at each date. The current month is partial.
+
+[Framework and attribution](https://heroforge-agentic-power.artful-fly-4358.chatgpt.site/) · [Inputs and calculation](./data/agentic-power.json) · [Evidence explorer](https://rudycelekli.github.io/contributions.html)
+
+</details>
 <!-- agentic-power-profile:end -->
 
 ## Operating principles
