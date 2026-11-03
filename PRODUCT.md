@@ -10,7 +10,11 @@ Technical collaborators, open-source maintainers, AI researchers, community buil
 
 ## Product Purpose
 
-Present an evidence-first professional identity around trustworthy agentic systems. Success means a visitor can distinguish named, officially verified upstream contributions from privacy-preserving aggregate work, understand Rudy's approach to agentic engineering, and inspect the evidence and assumptions behind material claims.
+Present an evidence-first professional identity around reliable open-source software and trustworthy agentic systems. Success means a visitor can distinguish named, officially verified upstream contributions from privacy-preserving aggregate work, understand Rudy's approach to agentic engineering, and inspect the evidence and assumptions behind material claims.
+
+## Mission
+
+Making open source reliable enough to trust, one repository at a time. Explain the work through reproducible failures, fixes accepted upstream, and regression tests that help maintainers keep those failures fixed. Reliability and correctness support trust and safety; individual patches do not establish whole-system safety or measured downstream benefit.
 
 ## Brand Personality
 
