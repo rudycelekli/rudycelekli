@@ -86,7 +86,7 @@ never mixed into this approved scope.
 ## Automatic refresh
 
 The existing twice-hourly GitHub Actions workflow refreshes public PRs and public
-owned work. Accepted public PR timelines are cached; new PRs are collected as needed.
+owned work. Manual and scheduled refreshes are serialized to avoid competing pushes. Accepted public PR timelines are cached; new PRs are collected as needed.
 The rolling twelve-month window advances automatically.
 
 Private owned histories can refresh automatically when the repository has an
