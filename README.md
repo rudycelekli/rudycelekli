@@ -47,11 +47,11 @@ The operating principle is simple: preserve the world state, replay the action, 
 | **Building the Charlotte AI community** | [AI Tinkerers Charlotte](https://charlotte.aitinkerers.org/) |
 
 <!-- top-contributor-proof:start -->
-## Upstream authority
+## Repositories where I’m a top contributor
 
-<img src="./assets/contributor-authority.svg" width="100%" alt="GitHub Contributors API authority summary with Top-5 contributor positions and selected repositories" />
+<img src="./assets/contributor-authority.svg" width="100%" alt="GitHub top-five contributor ranks across repositories" />
 
-**All 48 current Top-5 positions:**
+**Currently ranked in the Top 5 across 48 repositories.**
 
 **GitHub rank #1:** [**iFixAi**](https://github.com/ifixai-ai/iFixAi) · 43k ★ · [**harness2**](https://github.com/google-research/harness2) · 22k ★
 
@@ -63,7 +63,7 @@ The operating principle is simple: preserve the world state, replay the action, 
 
 **GitHub rank #5:** [**rea**](https://github.com/morluto/rea) · 425k ★ · [**agent-skills**](https://github.com/addyosmani/agent-skills) · 113k ★ · [**gods-eye-view**](https://github.com/bilawalsidhu/gods-eye-view) · 62k ★ · [**mcp-go**](https://github.com/mark3labs/mcp-go) · 9.2k ★ · [**agent-beacon**](https://github.com/Asymptote-Labs/agent-beacon) · 3.2k ★ · [**mcpproxy-go**](https://github.com/smart-mcp-proxy/mcpproxy-go) · 406 ★
 
-[Sort and inspect all 48 Top-5 positions with GitHub evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)
+[Explore these 48 repositories and their contribution evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)
 
 <sub>All-time rank from GitHub's Contributors API · repository stars are reach, not personal credit · refreshed 2026-11-03 UTC</sub>
 <!-- top-contributor-proof:end -->

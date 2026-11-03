@@ -1265,10 +1265,10 @@ class ContributionDiscoveryTests(unittest.TestCase):
             repositories, "2026-10-19"
         )
 
-        self.assertIn("All 8 current Top-5 positions", section)
+        self.assertIn("Currently ranked in the Top 5 across 8 repositories.", section)
         for index in range(8):
             self.assertIn(f"Top Five Project {index + 1}", section)
-        self.assertIn("Sort and inspect all 8 Top-5 positions", section)
+        self.assertIn("Explore these 8 repositories and their contribution evidence", section)
 
     def test_contributor_authority_visual_compresses_top_five_proof(self):
         repositories = [
@@ -1296,9 +1296,9 @@ class ContributionDiscoveryTests(unittest.TestCase):
             repositories, "2026-10-18"
         )
 
-        self.assertIn("UPSTREAM AUTHORITY", svg)
+        self.assertIn("TOP CONTRIBUTOR REPOSITORIES", svg)
         self.assertIn("2</text><text y=\"22\"", svg)
-        self.assertIn("TOP-5 POSITIONS", svg)
+        self.assertIn("REPOS · TOP 5", svg)
         self.assertIn("Rank One", svg)
         self.assertIn("Rank Two", svg)
         self.assertNotIn("Rank Six", svg)
@@ -1518,7 +1518,7 @@ class ContributionDiscoveryTests(unittest.TestCase):
             subject.ROOT / ".github" / "workflows" / "refresh-contribution-stats.yml"
         ).read_text()
         self.assertLess(
-            readme.index("## Upstream authority"),
+            readme.index("## Repositories where I’m a top contributor"),
             readme.index("## Three systems, one research program"),
         )
         self.assertNotIn("## Latest verified work", readme)

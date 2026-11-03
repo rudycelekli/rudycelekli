@@ -2335,10 +2335,10 @@ def render_contributor_authority_svg(
   <rect width="1200" height="290" rx="28" fill="url(#authority-canvas)"/>
   <rect x="1" y="1" width="1198" height="288" rx="27" fill="none" stroke="#26364D"/>
   <rect x="42" y="30" width="76" height="4" rx="2" fill="url(#authority-rule)"/>
-  <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="27" font-weight="780">UPSTREAM AUTHORITY</text>
+  <text x="42" y="67" fill="#F8FAFC" font-family="Avenir Next,Segoe UI,sans-serif" font-size="27" font-weight="780">TOP CONTRIBUTOR REPOSITORIES</text>
   <text x="1158" y="66" fill="#91A2B8" font-family="ui-monospace,SFMono-Regular,monospace" font-size="11.5" text-anchor="end">GITHUB CONTRIBUTORS API · {html.escape(updated)} UTC</text>
   <g transform="translate(42 108)" font-family="ui-monospace,SFMono-Regular,monospace">
-    <text fill="#2DE2C5" font-size="32" font-weight="780">{len(qualified)}</text><text y="22" fill="#91A2B8" font-size="9.5">TOP-5 POSITIONS</text>
+    <text fill="#2DE2C5" font-size="32" font-weight="780">{len(qualified)}</text><text y="22" fill="#91A2B8" font-size="9.5">REPOS · TOP 5</text>
     <text x="215" fill="#F8FAFC" font-size="32" font-weight="780">{rank_counts[1]}</text><text x="215" y="22" fill="#91A2B8" font-size="9.5">AT #1</text>
     <text x="392" fill="#9B7CFF" font-size="32" font-weight="780">{rank_counts[2]}</text><text x="392" y="22" fill="#91A2B8" font-size="9.5">AT #2</text>
     <text x="569" fill="#4D7CFE" font-size="32" font-weight="780">{rank_counts[3]}</text><text x="569" y="22" fill="#91A2B8" font-size="9.5">AT #3</text>
@@ -2359,14 +2359,14 @@ def render_top_contributor_readme(
     qualified = top_five_contributor_repositories(repositories)
     lines = [
         "<!-- top-contributor-proof:start -->",
-        "## Upstream authority",
+        "## Repositories where I’m a top contributor",
         "",
-        '<img src="./assets/contributor-authority.svg" width="100%" alt="GitHub Contributors API authority summary with Top-5 contributor positions and selected repositories" />',
+        '<img src="./assets/contributor-authority.svg" width="100%" alt="GitHub top-five contributor ranks across repositories" />',
         "",
     ]
     if qualified:
         lines.append(
-            f"**All {len(qualified)} current Top-5 positions:**"
+            f"**Currently ranked in the Top 5 across {len(qualified)} repositories.**"
         )
         lines.append("")
         for rank in range(1, 6):
@@ -2383,7 +2383,7 @@ def render_top_contributor_readme(
             )
             lines.extend([f"**GitHub rank #{rank}:** {proof}", ""])
         lines.append(
-            f"[Sort and inspect all {len(qualified)} Top-5 positions with GitHub evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)"
+            f"[Explore these {len(qualified)} repositories and their contribution evidence →](https://rudycelekli.github.io/contributions.html?sort=rank&top5=1)"
         )
     else:
         lines.append("Contributor-rank evidence is awaiting GitHub's index.")
