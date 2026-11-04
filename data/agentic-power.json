@@ -1,12 +1,12 @@
 {
   "agentic_power_x": {
-    "base": 66.19,
-    "high": 89.97,
-    "low": 49.03
+    "base": 66.0,
+    "high": 89.71,
+    "low": 48.88
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
-  "coverage_status": "complete",
+  "coverage_status": "partial",
   "creation_month_proxy_prs": 17,
   "direction_calibration": {
     "allocation_method": "two hours per elapsed calendar day; independent of contribution volume",
@@ -39,9 +39,9 @@
   },
   "model_version": "rolling-12-months-authored-work-v3",
   "modeled_human_direction_hours": {
-    "base": 676.0,
-    "high": 676.0,
-    "low": 676.0
+    "base": 678.0,
+    "high": 678.0,
+    "low": 678.0
   },
   "monthly": [
     {
@@ -398,23 +398,23 @@
     },
     {
       "agentic_power_x": {
-        "base": 93.29,
-        "high": 127.8,
-        "low": 68.11
+        "base": 69.97,
+        "high": 95.85,
+        "low": 51.09
       },
-      "coverage_status": "complete",
+      "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
-      "direction_calendar_days": 3,
-      "direction_hours": 6.0,
-      "elapsed_days": 3,
+      "direction_calendar_days": 4,
+      "direction_hours": 8.0,
+      "elapsed_days": 4,
       "modeled_human_direction_hours": {
-        "base": 6.0,
-        "high": 6.0,
-        "low": 6.0
+        "base": 8.0,
+        "high": 8.0,
+        "low": 8.0
       },
       "month": "2026-11",
       "owned_private_commits": 419,
-      "owned_private_coverage": "complete",
+      "owned_private_coverage": "partial",
       "owned_public_commits": 19,
       "owned_public_coverage": "complete",
       "partial_month": true,
@@ -432,7 +432,7 @@
   "owned_private_commits": 8095,
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 843,
-  "owned_public_through_utc": "2026-11-03",
+  "owned_public_through_utc": "2026-11-04",
   "public_accepted_merge_events": 3569,
   "public_accepted_pull_requests": 3568,
   "public_prs_excluded_as_reused_implementation": [
@@ -451,11 +451,11 @@
     "high": 60820.96,
     "low": 33141.94
   },
-  "updated_at_utc": "2026-11-03",
+  "updated_at_utc": "2026-11-04",
   "window": {
     "calendar_months": 12,
     "start": "2025-12-01",
-    "through": "2026-11-03"
+    "through": "2026-11-04"
   },
   "work_items": [
     {
