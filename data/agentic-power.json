@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.08,
-    "high": 89.82,
-    "low": 48.95
+    "base": 66.12,
+    "high": 89.88,
+    "low": 48.98
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1120.1,
+  "engineer_weeks_at_40h": 1120.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 77.19,
-        "high": 105.62,
-        "low": 56.48
+        "base": 80.85,
+        "high": 110.56,
+        "low": 59.22
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 26,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 50,
-      "public_merged_pull_requests": 104,
-      "public_prs_with_work": 42,
+      "public_authored_pr_commits": 54,
+      "public_merged_pull_requests": 106,
+      "public_prs_with_work": 44,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
-        "base": 617.52,
-        "high": 844.97,
-        "low": 451.84
+        "base": 646.78,
+        "high": 884.48,
+        "low": 473.79
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3574,
-  "public_accepted_pull_requests": 3573,
+  "public_accepted_merge_events": 3576,
+  "public_accepted_pull_requests": 3575,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44802.78,
-    "high": 60899.13,
-    "low": 33185.1
+    "base": 44832.04,
+    "high": 60938.64,
+    "low": 33207.05
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -118560,6 +118560,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(setup): preserve hook prompts when session reads are incomplete",
       "url": "https://github.com/thedotmack/claude-mem/pull/5301",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T20:12:20Z",
+      "evidence": {
+        "additions": 95,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.81,
+        "high": 13.25,
+        "low": 7.36
+      },
+      "merged_at": "2026-11-04T06:05:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.81,
+          "high": 13.25,
+          "low": 7.36
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5304,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(prompt-import): recognize OpenCode tool inputs as agent-authored",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5304",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T16:24:00Z",
+      "evidence": {
+        "additions": 468,
+        "changed_files": 5,
+        "comments": 3,
+        "commits": 7,
+        "deletions": 46,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 19.45,
+        "high": 26.26,
+        "low": 14.59
+      },
+      "merged_at": "2026-11-04T06:33:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 19.45,
+          "high": 26.26,
+          "low": 14.59
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5296,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(adoption): preserve actual checkout paths before remapping memories",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5296",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
