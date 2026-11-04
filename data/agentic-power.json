@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.27,
-    "high": 90.08,
-    "low": 49.09
+    "base": 66.33,
+    "high": 90.15,
+    "low": 49.13
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1123.4,
+  "engineer_weeks_at_40h": 1124.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 543.77,
-        "high": 735.08,
-        "low": 406.85
+        "base": 544.32,
+        "high": 735.82,
+        "low": 407.26
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4366,
+      "public_authored_pr_commits": 4372,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3193,
+      "public_prs_with_work": 3199,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33713.66,
-        "high": 45574.95,
-        "low": 25224.82
+        "base": 33747.69,
+        "high": 45620.9,
+        "low": 25250.31
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 56,
-      "public_merged_pull_requests": 120,
+      "public_merged_pull_requests": 126,
       "public_prs_with_work": 46,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3590,
-  "public_accepted_pull_requests": 3589,
+  "public_accepted_merge_events": 3596,
+  "public_accepted_pull_requests": 3595,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44934.44,
-    "high": 61076.91,
-    "low": 33283.86
+    "base": 44968.47,
+    "high": 61122.86,
+    "low": 33309.35
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -119088,6 +119088,204 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(shared): isolate rate limiter reset for empty keys",
       "url": "https://github.com/ruvnet/ruflo/pull/4647",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T17:46:24Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.49,
+        "high": 7.41,
+        "low": 4.11
+      },
+      "merged_at": "2026-11-04T11:36:03Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.49,
+          "high": 7.41,
+          "low": 4.11
+        }
+      },
+      "project": "Nutlope/hallmark",
+      "pull_request": 87,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Read --scope as a flag instead of a slug",
+      "url": "https://github.com/Nutlope/hallmark/pull/87",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:38:19Z",
+      "evidence": {
+        "additions": 6,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.12,
+        "high": 8.27,
+        "low": 4.59
+      },
+      "merged_at": "2026-11-04T11:36:20Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.12,
+          "high": 8.27,
+          "low": 4.59
+        }
+      },
+      "project": "Nutlope/hallmark",
+      "pull_request": 81,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Match draw --job synonyms as whole words",
+      "url": "https://github.com/Nutlope/hallmark/pull/81",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:39:05Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.49,
+        "high": 7.41,
+        "low": 4.11
+      },
+      "merged_at": "2026-11-04T11:36:38Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.49,
+          "high": 7.41,
+          "low": 4.11
+        }
+      },
+      "project": "Nutlope/hallmark",
+      "pull_request": 83,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Include gate 85 in the app-scope skip list",
+      "url": "https://github.com/Nutlope/hallmark/pull/83",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T17:47:20Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.49,
+        "high": 7.41,
+        "low": 4.11
+      },
+      "merged_at": "2026-11-04T11:36:54Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.49,
+          "high": 7.41,
+          "low": 4.11
+        }
+      },
+      "project": "Nutlope/hallmark",
+      "pull_request": 88,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Name the theme in the app scaffold command",
+      "url": "https://github.com/Nutlope/hallmark/pull/88",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:38:42Z",
+      "evidence": {
+        "additions": 3,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.95,
+        "high": 8.04,
+        "low": 4.46
+      },
+      "merged_at": "2026-11-04T11:37:09Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.95,
+          "high": 8.04,
+          "low": 4.46
+        }
+      },
+      "project": "Nutlope/hallmark",
+      "pull_request": 82,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Give the jazz-club night field its own id",
+      "url": "https://github.com/Nutlope/hallmark/pull/82",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T17:41:49Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.49,
+        "high": 7.41,
+        "low": 4.11
+      },
+      "merged_at": "2026-11-04T11:37:25Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.49,
+          "high": 7.41,
+          "low": 4.11
+        }
+      },
+      "project": "Nutlope/hallmark",
+      "pull_request": 86,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Run the mechanical width checks at 1440 too",
+      "url": "https://github.com/Nutlope/hallmark/pull/86",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
