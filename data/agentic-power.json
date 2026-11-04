@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.48,
-    "high": 90.36,
-    "low": 49.24
+    "base": 66.49,
+    "high": 90.38,
+    "low": 49.25
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1126.8,
+  "engineer_weeks_at_40h": 1127.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 545.48,
-        "high": 737.39,
-        "low": 408.13
+        "base": 545.64,
+        "high": 737.6,
+        "low": 408.25
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4381,
+      "public_authored_pr_commits": 4382,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3207,
+      "public_prs_with_work": 3208,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33819.55,
-        "high": 45717.9,
-        "low": 25304.2
+        "base": 33829.57,
+        "high": 45731.42,
+        "low": 25311.71
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 60,
-      "public_merged_pull_requests": 138,
+      "public_merged_pull_requests": 139,
       "public_prs_with_work": 50,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3608,
-  "public_accepted_pull_requests": 3607,
+  "public_accepted_merge_events": 3609,
+  "public_accepted_pull_requests": 3608,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45070.67,
-    "high": 61260.82,
-    "low": 33385.98
+    "base": 45080.69,
+    "high": 61274.34,
+    "low": 33393.49
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -119682,6 +119682,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: preserve nested paths when reporting recursive matches",
       "url": "https://github.com/bee-san/pyWhat/pull/295",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-28T06:41:58Z",
+      "evidence": {
+        "additions": 71,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.02,
+        "high": 13.52,
+        "low": 7.51
+      },
+      "merged_at": "2026-11-04T19:36:21Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.02,
+          "high": 13.52,
+          "low": 7.51
+        }
+      },
+      "project": "bee-san/pyWhat",
+      "pull_request": 296,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: read complete supported file signatures",
+      "url": "https://github.com/bee-san/pyWhat/pull/296",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
