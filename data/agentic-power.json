@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.49,
-    "high": 90.38,
-    "low": 49.25
+    "base": 66.54,
+    "high": 90.44,
+    "low": 49.29
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1127.0,
+  "engineer_weeks_at_40h": 1127.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 86.72,
-        "high": 118.49,
-        "low": 63.63
+        "base": 90.52,
+        "high": 123.61,
+        "low": 66.47
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 26,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 60,
-      "public_merged_pull_requests": 139,
-      "public_prs_with_work": 50,
+      "public_authored_pr_commits": 65,
+      "public_merged_pull_requests": 143,
+      "public_prs_with_work": 54,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
-        "base": 693.79,
-        "high": 947.95,
-        "low": 509.03
+        "base": 724.14,
+        "high": 988.91,
+        "low": 531.8
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3609,
-  "public_accepted_pull_requests": 3608,
+  "public_accepted_merge_events": 3613,
+  "public_accepted_pull_requests": 3612,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45080.69,
-    "high": 61274.34,
-    "low": 33393.49
+    "base": 45111.04,
+    "high": 61315.3,
+    "low": 33416.26
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -119715,6 +119715,138 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: read complete supported file signatures",
       "url": "https://github.com/bee-san/pyWhat/pull/296",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:43:03Z",
+      "evidence": {
+        "additions": 11,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.76,
+        "high": 9.12,
+        "low": 5.07
+      },
+      "merged_at": "2026-11-04T22:39:14Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.76,
+          "high": 9.12,
+          "low": 5.07
+        }
+      },
+      "project": "The-PR-Agent/pr-agent",
+      "pull_request": 4667,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(routing): skip overflowing model limits",
+      "url": "https://github.com/The-PR-Agent/pr-agent/pull/4667",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:53:55Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.81,
+        "high": 10.54,
+        "low": 5.86
+      },
+      "merged_at": "2026-11-04T22:40:05Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.81,
+          "high": 10.54,
+          "low": 5.86
+        }
+      },
+      "project": "The-PR-Agent/pr-agent",
+      "pull_request": 4669,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(review): keep invalid chunk scores out of conservative reduction",
+      "url": "https://github.com/The-PR-Agent/pr-agent/pull/4669",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-04T18:59:45Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.86,
+        "high": 9.26,
+        "low": 5.15
+      },
+      "merged_at": "2026-11-04T22:55:30Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.86,
+          "high": 9.26,
+          "low": 5.15
+        }
+      },
+      "project": "The-PR-Agent/pr-agent",
+      "pull_request": 4672,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(azure): preserve physical lines in suggestion ranges and reconciliation",
+      "url": "https://github.com/The-PR-Agent/pr-agent/pull/4672",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:53:35Z",
+      "evidence": {
+        "additions": 42,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.92,
+        "high": 12.04,
+        "low": 6.69
+      },
+      "merged_at": "2026-11-04T22:55:44Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.92,
+          "high": 12.04,
+          "low": 6.69
+        }
+      },
+      "project": "The-PR-Agent/pr-agent",
+      "pull_request": 4668,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(diff): preserve Git line boundaries in supplied diff parsing",
+      "url": "https://github.com/The-PR-Agent/pr-agent/pull/4668",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
