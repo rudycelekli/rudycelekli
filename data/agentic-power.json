@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.0,
-    "high": 89.71,
-    "low": 48.89
+    "base": 66.03,
+    "high": 89.75,
+    "low": 48.91
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1118.7,
+  "engineer_weeks_at_40h": 1119.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 70.41,
-        "high": 96.46,
-        "low": 51.39
+        "base": 72.81,
+        "high": 99.7,
+        "low": 53.19
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 26,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 44,
-      "public_merged_pull_requests": 99,
-      "public_prs_with_work": 37,
+      "public_authored_pr_commits": 46,
+      "public_merged_pull_requests": 101,
+      "public_prs_with_work": 39,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
-        "base": 563.25,
-        "high": 771.7,
-        "low": 411.13
+        "base": 582.46,
+        "high": 797.63,
+        "low": 425.54
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3569,
-  "public_accepted_pull_requests": 3568,
+  "public_accepted_merge_events": 3571,
+  "public_accepted_pull_requests": 3570,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44748.51,
-    "high": 60825.86,
-    "low": 33144.39
+    "base": 44767.72,
+    "high": 60851.79,
+    "low": 33158.8
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -118395,6 +118395,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Ignore commented Java-home overrides in PyGhidra launch properties",
       "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9781",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T19:50:11Z",
+      "evidence": {
+        "additions": 134,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.47,
+        "high": 14.13,
+        "low": 7.85
+      },
+      "merged_at": "2026-11-04T02:49:11Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.47,
+          "high": 14.13,
+          "low": 7.85
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5303,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(prompt-import): read the configured Codex and OpenCode profiles",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5303",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-03T02:18:08Z",
+      "evidence": {
+        "additions": 59,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.74,
+        "high": 11.8,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-04T02:49:39Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.74,
+          "high": 11.8,
+          "low": 6.56
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5309,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(search): match relative backslash evidence in folder queries",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5309",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
