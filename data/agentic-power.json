@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.25,
-    "high": 90.05,
-    "low": 49.07
+    "base": 66.27,
+    "high": 90.08,
+    "low": 49.09
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1122.9,
+  "engineer_weeks_at_40h": 1123.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 80.85,
-        "high": 110.56,
-        "low": 59.22
+        "base": 82.93,
+        "high": 113.37,
+        "low": 60.79
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 26,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 54,
-      "public_merged_pull_requests": 118,
-      "public_prs_with_work": 44,
+      "public_authored_pr_commits": 56,
+      "public_merged_pull_requests": 120,
+      "public_prs_with_work": 46,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
-        "base": 646.78,
-        "high": 884.48,
-        "low": 473.79
+        "base": 663.45,
+        "high": 906.99,
+        "low": 486.29
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3588,
-  "public_accepted_pull_requests": 3587,
+  "public_accepted_merge_events": 3590,
+  "public_accepted_pull_requests": 3589,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44917.77,
-    "high": 61054.4,
-    "low": 33271.36
+    "base": 44934.44,
+    "high": 61076.91,
+    "low": 33283.86
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -119022,6 +119022,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(config): accept documented lowercase script modes",
       "url": "https://github.com/bee-san/RustScan/pull/964",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T17:11:48Z",
+      "evidence": {
+        "additions": 37,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.51,
+        "high": 11.49,
+        "low": 6.38
+      },
+      "merged_at": "2026-11-04T09:53:16Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.51,
+          "high": 11.49,
+          "low": 6.38
+        }
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 4646,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(shared): match complete HTTP status tokens in retry predicates",
+      "url": "https://github.com/ruvnet/ruflo/pull/4646",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T17:11:48Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.16,
+        "high": 11.02,
+        "low": 6.12
+      },
+      "merged_at": "2026-11-04T09:53:16Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.16,
+          "high": 11.02,
+          "low": 6.12
+        }
+      },
+      "project": "ruvnet/ruflo",
+      "pull_request": 4647,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(shared): isolate rate limiter reset for empty keys",
+      "url": "https://github.com/ruvnet/ruflo/pull/4647",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
