@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.38,
-    "high": 90.22,
-    "low": 49.17
+    "base": 66.44,
+    "high": 90.3,
+    "low": 49.21
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1125.1,
+  "engineer_weeks_at_40h": 1126.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 544.73,
-        "high": 736.38,
-        "low": 407.57
+        "base": 545.15,
+        "high": 736.95,
+        "low": 407.89
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4375,
+      "public_authored_pr_commits": 4379,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3202,
+      "public_prs_with_work": 3205,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33773.46,
-        "high": 45655.68,
-        "low": 25269.64
+        "base": 33799.54,
+        "high": 45690.88,
+        "low": 25289.19
       }
     },
     {
       "agentic_power_x": {
-        "base": 84.14,
-        "high": 115.01,
-        "low": 61.7
+        "base": 85.78,
+        "high": 117.22,
+        "low": 62.92
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 26,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 57,
-      "public_merged_pull_requests": 130,
-      "public_prs_with_work": 47,
+      "public_authored_pr_commits": 59,
+      "public_merged_pull_requests": 135,
+      "public_prs_with_work": 49,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
-        "base": 673.15,
-        "high": 920.09,
-        "low": 493.56
+        "base": 686.25,
+        "high": 937.77,
+        "low": 503.38
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3600,
-  "public_accepted_pull_requests": 3599,
+  "public_accepted_merge_events": 3605,
+  "public_accepted_pull_requests": 3604,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45003.94,
-    "high": 61170.74,
-    "low": 33335.95
+    "base": 45043.12,
+    "high": 61223.62,
+    "low": 33365.32
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -119418,6 +119418,171 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(counters): serialize session resets and clears with increments",
       "url": "https://github.com/tigerless-labs/autoharness/pull/228",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:27Z",
+      "evidence": {
+        "additions": 85,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.67,
+        "high": 14.4,
+        "low": 8.0
+      },
+      "merged_at": "2026-11-04T16:41:14Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.67,
+          "high": 14.4,
+          "low": 8.0
+        }
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 224,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(dispatch): apply child-agent backstops to curator events",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/224",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:32Z",
+      "evidence": {
+        "additions": 26,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.36,
+        "high": 11.29,
+        "low": 6.27
+      },
+      "merged_at": "2026-11-04T16:42:08Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.36,
+          "high": 11.29,
+          "low": 6.27
+        }
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 226,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(lib): reject trailing newlines in filesystem identifiers",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/226",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-09T14:58:20Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.05,
+        "high": 9.51,
+        "low": 5.28
+      },
+      "merged_at": "2026-11-04T16:43:25Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.05,
+          "high": 9.51,
+          "low": 5.28
+        }
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 245,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(metrics): tolerate malformed run account shapes",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/245",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:25:58Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.55,
+        "high": 8.84,
+        "low": 4.91
+      },
+      "merged_at": "2026-11-04T17:00:43Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.55,
+          "high": 8.84,
+          "low": 4.91
+        }
+      },
+      "project": "milind-soni/OpenMausBot",
+      "pull_request": 4147,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(logins): mask a held password in its form-urlencoded spelling",
+      "url": "https://github.com/milind-soni/OpenMausBot/pull/4147",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:27:01Z",
+      "evidence": {
+        "additions": 8,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.55,
+        "high": 8.84,
+        "low": 4.91
+      },
+      "merged_at": "2026-11-04T17:00:43Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.55,
+          "high": 8.84,
+          "low": 4.91
+        }
+      },
+      "project": "milind-soni/OpenMausBot",
+      "pull_request": 4148,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(table): keep negative numbers numeric in a copied or downloaded table",
+      "url": "https://github.com/milind-soni/OpenMausBot/pull/4148",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
