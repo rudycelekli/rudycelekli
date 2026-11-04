@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.12,
-    "high": 89.88,
-    "low": 48.98
+    "base": 66.21,
+    "high": 89.99,
+    "low": 49.04
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1120.8,
+  "engineer_weeks_at_40h": 1122.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 542.39,
-        "high": 733.21,
-        "low": 405.81
+        "base": 543.29,
+        "high": 734.43,
+        "low": 406.49
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4354,
+      "public_authored_pr_commits": 4362,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3181,
+      "public_prs_with_work": 3189,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33627.93,
-        "high": 45459.19,
-        "low": 25160.51
+        "base": 33683.87,
+        "high": 45534.72,
+        "low": 25202.47
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 54,
-      "public_merged_pull_requests": 106,
+      "public_merged_pull_requests": 114,
       "public_prs_with_work": 44,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3576,
-  "public_accepted_pull_requests": 3575,
+  "public_accepted_merge_events": 3584,
+  "public_accepted_pull_requests": 3583,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44832.04,
-    "high": 60938.64,
-    "low": 33207.05
+    "base": 44887.98,
+    "high": 61014.17,
+    "low": 33249.01
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -118626,6 +118626,270 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(adoption): preserve actual checkout paths before remapping memories",
       "url": "https://github.com/thedotmack/claude-mem/pull/5296",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T22:51:49Z",
+      "evidence": {
+        "additions": 11,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.82,
+        "high": 9.21,
+        "low": 5.12
+      },
+      "merged_at": "2026-11-04T07:48:44Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.82,
+          "high": 9.21,
+          "low": 5.12
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 176,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: refuse superscript Windows device names in a torrent",
+      "url": "https://github.com/anmolkapil/plexo/pull/176",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T01:56:02Z",
+      "evidence": {
+        "additions": 13,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.88,
+        "high": 9.29,
+        "low": 5.16
+      },
+      "merged_at": "2026-11-04T07:48:56Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.88,
+          "high": 9.29,
+          "low": 5.16
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 177,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: refuse a redirect without a Location during link probing",
+      "url": "https://github.com/anmolkapil/plexo/pull/177",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:00:58Z",
+      "evidence": {
+        "additions": 14,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.11,
+        "high": 9.6,
+        "low": 5.33
+      },
+      "merged_at": "2026-11-04T07:49:09Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.11,
+          "high": 9.6,
+          "low": 5.33
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 178,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: decode a link's file name when an earlier folder has a bad escape",
+      "url": "https://github.com/anmolkapil/plexo/pull/178",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:02:35Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.82,
+        "high": 9.21,
+        "low": 5.12
+      },
+      "merged_at": "2026-11-04T07:49:21Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.82,
+          "high": 9.21,
+          "low": 5.12
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 179,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: refuse torrent files that differ only by Unicode normalization",
+      "url": "https://github.com/anmolkapil/plexo/pull/179",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:14:57Z",
+      "evidence": {
+        "additions": 3,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.21,
+        "high": 8.38,
+        "low": 4.65
+      },
+      "merged_at": "2026-11-04T07:49:32Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.21,
+          "high": 8.38,
+          "low": 4.65
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 181,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: name the file from the link when Content-Disposition has filename=\"\"",
+      "url": "https://github.com/anmolkapil/plexo/pull/181",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:16:22Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.26,
+        "high": 9.8,
+        "low": 5.45
+      },
+      "merged_at": "2026-11-04T07:49:44Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.26,
+          "high": 9.8,
+          "low": 5.45
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 182,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: don't call a file or host named with TLS or SSL a certificate problem",
+      "url": "https://github.com/anmolkapil/plexo/pull/182",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:18:23Z",
+      "evidence": {
+        "additions": 8,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.62,
+        "high": 8.94,
+        "low": 4.97
+      },
+      "merged_at": "2026-11-04T07:49:56Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.62,
+          "high": 8.94,
+          "low": 4.97
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 183,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: keep spaces in an unquoted Content-Disposition filename",
+      "url": "https://github.com/anmolkapil/plexo/pull/183",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T04:34:14Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 12,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.22,
+        "high": 11.1,
+        "low": 6.16
+      },
+      "merged_at": "2026-11-04T07:50:07Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.22,
+          "high": 11.1,
+          "low": 6.16
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 185,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: shorten a download path under home when the name's accents differ",
+      "url": "https://github.com/anmolkapil/plexo/pull/185",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
