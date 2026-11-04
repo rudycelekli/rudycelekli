@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.33,
-    "high": 90.15,
-    "low": 49.13
+    "base": 66.34,
+    "high": 90.17,
+    "low": 49.14
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1124.2,
+  "engineer_weeks_at_40h": 1124.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 544.32,
-        "high": 735.82,
-        "low": 407.26
+        "base": 544.47,
+        "high": 736.03,
+        "low": 407.38
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4372,
+      "public_authored_pr_commits": 4373,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3199,
+      "public_prs_with_work": 3200,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33747.69,
-        "high": 45620.9,
-        "low": 25250.31
+        "base": 33757.09,
+        "high": 45633.58,
+        "low": 25257.36
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 56,
-      "public_merged_pull_requests": 126,
+      "public_merged_pull_requests": 127,
       "public_prs_with_work": 46,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3596,
-  "public_accepted_pull_requests": 3595,
+  "public_accepted_merge_events": 3597,
+  "public_accepted_pull_requests": 3596,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44968.47,
-    "high": 61122.86,
-    "low": 33309.35
+    "base": 44977.87,
+    "high": 61135.54,
+    "low": 33316.4
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -119286,6 +119286,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Run the mechanical width checks at 1440 too",
       "url": "https://github.com/Nutlope/hallmark/pull/86",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-28T06:23:10Z",
+      "evidence": {
+        "additions": 38,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.4,
+        "high": 12.68,
+        "low": 7.05
+      },
+      "merged_at": "2026-11-04T15:01:39Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.4,
+          "high": 12.68,
+          "low": 7.05
+        }
+      },
+      "project": "bee-san/pyWhat",
+      "pull_request": 294,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: identify file signatures from contents rather than filenames",
+      "url": "https://github.com/bee-san/pyWhat/pull/294",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
