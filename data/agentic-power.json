@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.35,
-    "high": 90.19,
-    "low": 49.15
+    "base": 66.38,
+    "high": 90.22,
+    "low": 49.17
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1124.7,
+  "engineer_weeks_at_40h": 1125.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 544.47,
-        "high": 736.03,
-        "low": 407.38
+        "base": 544.73,
+        "high": 736.38,
+        "low": 407.57
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4373,
+      "public_authored_pr_commits": 4375,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3200,
+      "public_prs_with_work": 3202,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33757.09,
-        "high": 45633.58,
-        "low": 25257.36
+        "base": 33773.46,
+        "high": 45655.68,
+        "low": 25269.64
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 57,
-      "public_merged_pull_requests": 128,
+      "public_merged_pull_requests": 130,
       "public_prs_with_work": 47,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3598,
-  "public_accepted_pull_requests": 3597,
+  "public_accepted_merge_events": 3600,
+  "public_accepted_pull_requests": 3599,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44987.57,
-    "high": 61148.64,
-    "low": 33323.67
+    "base": 45003.94,
+    "high": 61170.74,
+    "low": 33335.95
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -119352,6 +119352,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "window: honour postMessage's targetOrigin",
       "url": "https://github.com/lightpanda-io/browser/pull/4382",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:24Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.25,
+        "high": 11.14,
+        "low": 6.19
+      },
+      "merged_at": "2026-11-04T16:07:13Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.25,
+          "high": 11.14,
+          "low": 6.19
+        }
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 223,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(spawn): preserve process launch failures in run accounts",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/223",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T14:57:37Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.12,
+        "high": 10.96,
+        "low": 6.09
+      },
+      "merged_at": "2026-11-04T16:08:13Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.12,
+          "high": 10.96,
+          "low": 6.09
+        }
+      },
+      "project": "tigerless-labs/autoharness",
+      "pull_request": 228,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(counters): serialize session resets and clears with increments",
+      "url": "https://github.com/tigerless-labs/autoharness/pull/228",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
