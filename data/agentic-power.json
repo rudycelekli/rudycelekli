@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.34,
-    "high": 90.17,
-    "low": 49.14
+    "base": 66.35,
+    "high": 90.19,
+    "low": 49.15
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1124.4,
+  "engineer_weeks_at_40h": 1124.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 82.93,
-        "high": 113.37,
-        "low": 60.79
+        "base": 84.14,
+        "high": 115.01,
+        "low": 61.7
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 26,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 56,
-      "public_merged_pull_requests": 127,
-      "public_prs_with_work": 46,
+      "public_authored_pr_commits": 57,
+      "public_merged_pull_requests": 128,
+      "public_prs_with_work": 47,
       "repository_default_branch_commits": 445,
       "skilled_human_equivalent_hours": {
-        "base": 663.45,
-        "high": 906.99,
-        "low": 486.29
+        "base": 673.15,
+        "high": 920.09,
+        "low": 493.56
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 850,
   "owned_public_through_utc": "2026-11-04",
-  "public_accepted_merge_events": 3597,
-  "public_accepted_pull_requests": 3596,
+  "public_accepted_merge_events": 3598,
+  "public_accepted_pull_requests": 3597,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 44977.87,
-    "high": 61135.54,
-    "low": 33316.4
+    "base": 44987.57,
+    "high": 61148.64,
+    "low": 33323.67
   },
   "updated_at_utc": "2026-11-04",
   "window": {
@@ -119319,6 +119319,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: identify file signatures from contents rather than filenames",
       "url": "https://github.com/bee-san/pyWhat/pull/294",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T14:00:39Z",
+      "evidence": {
+        "additions": 96,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.7,
+        "high": 13.1,
+        "low": 7.27
+      },
+      "merged_at": "2026-11-04T15:44:04Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.7,
+          "high": 13.1,
+          "low": 7.27
+        }
+      },
+      "project": "lightpanda-io/browser",
+      "pull_request": 4382,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "window: honour postMessage's targetOrigin",
+      "url": "https://github.com/lightpanda-io/browser/pull/4382",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
