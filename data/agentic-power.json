@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.88,
-    "high": 90.9,
-    "low": 49.54
+    "base": 67.14,
+    "high": 91.25,
+    "low": 49.74
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1136.9,
+  "engineer_weeks_at_40h": 1141.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 94.68,
-        "high": 128.98,
-        "low": 69.84
+        "base": 112.55,
+        "high": 153.11,
+        "low": 83.25
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 40,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 94,
-      "public_merged_pull_requests": 180,
-      "public_prs_with_work": 77,
+      "public_authored_pr_commits": 117,
+      "public_merged_pull_requests": 203,
+      "public_prs_with_work": 100,
       "repository_default_branch_commits": 459,
       "skilled_human_equivalent_hours": {
-        "base": 946.78,
-        "high": 1289.84,
-        "low": 698.44
+        "base": 1125.47,
+        "high": 1531.09,
+        "low": 832.48
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 864,
   "owned_public_through_utc": "2026-11-05",
-  "public_accepted_merge_events": 3650,
-  "public_accepted_pull_requests": 3649,
+  "public_accepted_merge_events": 3673,
+  "public_accepted_pull_requests": 3672,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45476.4,
-    "high": 61808.93,
-    "low": 33689.95
+    "base": 45655.09,
+    "high": 62050.18,
+    "low": 33823.99
   },
   "updated_at_utc": "2026-11-05",
   "window": {
@@ -121068,6 +121068,765 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(ui): preserve existing Pi providers on name collisions",
       "url": "https://github.com/JustVugg/colibri/pull/2550",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-05T03:14:40Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.0,
+        "high": 9.45,
+        "low": 5.25
+      },
+      "merged_at": "2026-11-05T19:03:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.0,
+          "high": 9.45,
+          "low": 5.25
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2444,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(video_lesson): match the Settings Edge voice against the lesson language",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2444",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:15:30Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.58,
+        "high": 10.23,
+        "low": 5.69
+      },
+      "merged_at": "2026-11-05T19:03:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.58,
+          "high": 10.23,
+          "low": 5.69
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2342,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(voice): read an escaped percent in math as \"percent\"",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2342",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:15:39Z",
+      "evidence": {
+        "additions": 16,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.11,
+        "high": 9.6,
+        "low": 5.33
+      },
+      "merged_at": "2026-11-05T19:03:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.11,
+          "high": 9.6,
+          "low": 5.33
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2343,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(book): keep flash-card newlines inside the Markdown table row",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2343",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-02T06:15:46Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.18,
+        "high": 9.7,
+        "low": 5.39
+      },
+      "merged_at": "2026-11-05T19:03:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.18,
+          "high": 9.7,
+          "low": 5.39
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2344,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mastery): resolve a module name fragment to the most specific match",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2344",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:15:54Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.79,
+        "high": 10.51,
+        "low": 5.84
+      },
+      "merged_at": "2026-11-05T19:03:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.79,
+          "high": 10.51,
+          "low": 5.84
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2345,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(web_source): recognize unlisted regional locales in URL language prefix",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2345",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:16:01Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.41,
+        "high": 11.36,
+        "low": 6.31
+      },
+      "merged_at": "2026-11-05T19:03:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.41,
+          "high": 11.36,
+          "low": 6.31
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2346,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(api): honor a data: URL's declared MIME for quiz-answer images",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2346",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:16:09Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.9,
+        "high": 10.67,
+        "low": 5.93
+      },
+      "merged_at": "2026-11-05T19:03:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.9,
+          "high": 10.67,
+          "low": 5.93
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2347,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(llm): use the resolved attachment MIME for store-URL images",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2347",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:16:17Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.71,
+        "high": 10.4,
+        "low": 5.78
+      },
+      "merged_at": "2026-11-05T19:03:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.71,
+          "high": 10.4,
+          "low": 5.78
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2348,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(partners): drop <style>/<script> bodies in email HTML-to-text",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2348",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T06:16:24Z",
+      "evidence": {
+        "additions": 117,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.11,
+        "high": 13.65,
+        "low": 7.58
+      },
+      "merged_at": "2026-11-05T19:03:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.11,
+          "high": 13.65,
+          "low": 7.58
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2349,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(runtime): apply the tool-call id fallback in run_labeled_step",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2349",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-01T14:37:24Z",
+      "evidence": {
+        "additions": 62,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 22,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.67,
+        "high": 11.71,
+        "low": 6.51
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.67,
+          "high": 11.71,
+          "low": 6.51
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2307,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(rag): count LightRAG docs from the native workspace store",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2307",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-01T14:37:31Z",
+      "evidence": {
+        "additions": 32,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.79,
+        "high": 11.86,
+        "low": 6.59
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.79,
+          "high": 11.86,
+          "low": 6.59
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2308,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(memory): keep footnote-like tokens in entry text on round-trip",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2308",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:37:38Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.86,
+        "high": 10.61,
+        "low": 5.9
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.86,
+          "high": 10.61,
+          "low": 5.9
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2309,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(llm): make the tool-format-error regex marker actually match",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2309",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:37:45Z",
+      "evidence": {
+        "additions": 38,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.12,
+        "high": 10.96,
+        "low": 6.09
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.12,
+          "high": 10.96,
+          "low": 6.09
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2310,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(llm): detect response_format value rejections that omit the param name",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2310",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:37:51Z",
+      "evidence": {
+        "additions": 17,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.06,
+        "high": 9.52,
+        "low": 5.29
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.06,
+          "high": 9.52,
+          "low": 5.29
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2311,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(ingestion): separate EPUB table cells during text extraction",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2311",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:49:05Z",
+      "evidence": {
+        "additions": 19,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.31,
+        "high": 9.87,
+        "low": 5.48
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.31,
+          "high": 9.87,
+          "low": 5.48
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2312,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(web): keep a code block open at an info-bearing inner fence",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2312",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:49:12Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.82,
+        "high": 9.21,
+        "low": 5.12
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.82,
+          "high": 9.21,
+          "low": 5.12
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2313,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(notes): drop fenced-code info string from Anki export body",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2313",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:49:19Z",
+      "evidence": {
+        "additions": 19,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.21,
+        "high": 9.74,
+        "low": 5.41
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.21,
+          "high": 9.74,
+          "low": 5.41
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2314,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): do not crash the chat REPL on a malformed /notebook add ref",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2314",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:49:25Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.82,
+        "high": 10.56,
+        "low": 5.87
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.82,
+          "high": 10.56,
+          "low": 5.87
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2315,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(partners): slugify partner id when migrating a legacy TutorBot",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2315",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-01T14:49:32Z",
+      "evidence": {
+        "additions": 51,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.44,
+        "high": 10.05,
+        "low": 5.58
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.44,
+          "high": 10.05,
+          "low": 5.58
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2316,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(co_writer): don't italicize intra-word underscores in DOCX export",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2316",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:49:39Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.54,
+        "high": 10.18,
+        "low": 5.65
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.54,
+          "high": 10.18,
+          "low": 5.65
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2317,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): decode non-UTF-8 markdown in notebook add-md/replace-md",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2317",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:49:46Z",
+      "evidence": {
+        "additions": 61,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.8,
+        "high": 11.88,
+        "low": 6.6
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.8,
+          "high": 11.88,
+          "low": 6.6
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2318,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(tools): raise ValueError, not TypeError, on a None LLM response",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2318",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:49:53Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.56,
+        "high": 10.21,
+        "low": 5.67
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.56,
+          "high": 10.21,
+          "low": 5.67
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2319,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(events): clear the get_event_bus cache in EventBus.reset",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2319",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-02T06:15:22Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.9,
+        "high": 9.32,
+        "low": 5.18
+      },
+      "merged_at": "2026-11-05T19:03:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.9,
+          "high": 9.32,
+          "low": 5.18
+        }
+      },
+      "project": "HKUDS/DeepTutor",
+      "pull_request": 2341,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(voice): speak a \\circ superscript as degrees",
+      "url": "https://github.com/HKUDS/DeepTutor/pull/2341",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
