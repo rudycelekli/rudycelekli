@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.54,
-    "high": 90.44,
-    "low": 49.29
+    "base": 66.61,
+    "high": 90.54,
+    "low": 49.34
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1131.2,
+  "engineer_weeks_at_40h": 1132.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 546.23,
-        "high": 738.4,
-        "low": 408.7
+        "base": 546.57,
+        "high": 738.86,
+        "low": 408.95
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4386,
+      "public_authored_pr_commits": 4388,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3212,
+      "public_prs_with_work": 3214,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33866.12,
-        "high": 45780.77,
-        "low": 25339.12
+        "base": 33887.44,
+        "high": 45809.56,
+        "low": 25355.11
       }
     },
     {
       "agentic_power_x": {
-        "base": 82.28,
-        "high": 112.25,
-        "low": 60.55
+        "base": 85.06,
+        "high": 116.0,
+        "low": 62.63
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 40,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 79,
-      "public_merged_pull_requests": 158,
-      "public_prs_with_work": 65,
+      "public_authored_pr_commits": 82,
+      "public_merged_pull_requests": 163,
+      "public_prs_with_work": 68,
       "repository_default_branch_commits": 459,
       "skilled_human_equivalent_hours": {
-        "base": 822.79,
-        "high": 1122.45,
-        "low": 605.46
+        "base": 850.65,
+        "high": 1160.05,
+        "low": 626.34
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 864,
   "owned_public_through_utc": "2026-11-05",
-  "public_accepted_merge_events": 3628,
-  "public_accepted_pull_requests": 3627,
+  "public_accepted_merge_events": 3633,
+  "public_accepted_pull_requests": 3632,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45246.24,
-    "high": 61498.19,
-    "low": 33517.33
+    "base": 45295.42,
+    "high": 61564.58,
+    "low": 33554.2
   },
   "updated_at_utc": "2026-11-05",
   "window": {
@@ -120342,6 +120342,171 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(improve): preserve literal data in already aligned replacements",
       "url": "https://github.com/The-PR-Agent/pr-agent/pull/4674",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:30:20Z",
+      "evidence": {
+        "additions": 65,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.86,
+        "high": 11.96,
+        "low": 6.64
+      },
+      "merged_at": "2026-11-05T08:37:25Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.86,
+          "high": 11.96,
+          "low": 6.64
+        }
+      },
+      "project": "The-PR-Agent/pr-agent",
+      "pull_request": 4662,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(review): preserve distinct ticket identities across chunks",
+      "url": "https://github.com/The-PR-Agent/pr-agent/pull/4662",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-04T15:44:57Z",
+      "evidence": {
+        "additions": 29,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 29,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.98,
+        "high": 10.77,
+        "low": 5.98
+      },
+      "merged_at": "2026-11-05T09:10:24Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.98,
+          "high": 10.77,
+          "low": 5.98
+        }
+      },
+      "project": "proffesor-for-testing/agentic-qe",
+      "pull_request": 1372,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): keep generated tests out of execution outcomes",
+      "url": "https://github.com/proffesor-for-testing/agentic-qe/pull/1372",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-27T17:33:16Z",
+      "evidence": {
+        "additions": 115,
+        "changed_files": 5,
+        "comments": 3,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.12,
+        "high": 15.01,
+        "low": 8.34
+      },
+      "merged_at": "2026-11-05T09:31:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 11.12,
+          "high": 15.01,
+          "low": 8.34
+        }
+      },
+      "project": "morluto/rea",
+      "pull_request": 7530,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(pe): classify valid DOS targets as unsupported",
+      "url": "https://github.com/morluto/rea/pull/7530",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-27T17:30:15Z",
+      "evidence": {
+        "additions": 106,
+        "changed_files": 3,
+        "comments": 3,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.2,
+        "high": 13.78,
+        "low": 7.65
+      },
+      "merged_at": "2026-11-05T09:32:21Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.2,
+          "high": 13.78,
+          "low": 7.65
+        }
+      },
+      "project": "morluto/rea",
+      "pull_request": 7528,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(native): reject nonzero reserved ELF dynamic symbols",
+      "url": "https://github.com/morluto/rea/pull/7528",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T15:42:48Z",
+      "evidence": {
+        "additions": 159,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.02,
+        "high": 14.87,
+        "low": 8.26
+      },
+      "merged_at": "2026-11-05T09:38:36Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.02,
+          "high": 14.87,
+          "low": 8.26
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5369,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(prompt-import): decode JSON tool strings while preserving raw input",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5369",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
