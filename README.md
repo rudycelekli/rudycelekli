@@ -47,6 +47,16 @@ Research, owned products, upstream contributions, and measured results remain ex
 
 [**Canonical research profile**](https://rudycelekli.github.io/) · [**Model-readable evidence**](https://rudycelekli.github.io/llms.txt) · [**ORCID**](https://orcid.org/0009-0000-7043-3766) · [**Gradia research role**](https://www.gradiahq.com/about)
 
+### Engineering case studies
+
+[**Read the source-linked case studies →**](https://rudycelekli.github.io/engineering/)
+
+- **Reject incomplete test evidence:** require a current-run Vitest report and a matching process verdict. [Case study](https://rudycelekli.github.io/engineering/vitest-execution-evidence.html) · [Merged Agentic QE #712](https://github.com/proffesor-for-testing/agentic-qe/pull/712).
+- **Preserve exact Git source lines:** keep Unicode separators inside physical diff lines. [Case study](https://rudycelekli.github.io/engineering/git-physical-line-boundaries.html) · [Merged PR-Agent #4668](https://github.com/The-PR-Agent/pr-agent/pull/4668).
+- **Validate AI review scores:** ignore out-of-range chunk scores while preserving valid zero. [Case study](https://rudycelekli.github.io/engineering/review-score-validation.html) · [Merged PR-Agent #4669](https://github.com/The-PR-Agent/pr-agent/pull/4669).
+
+Each case separates the code change, original validation and limits. Upstream merge is acceptance evidence, not proof of customer deployment.
+
 ### Start with the evidence you need
 
 | If you are… | Start here |
