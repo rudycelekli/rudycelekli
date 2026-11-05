@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.43,
-    "high": 90.29,
-    "low": 49.21
+    "base": 66.45,
+    "high": 90.32,
+    "low": 49.23
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1129.3,
+  "engineer_weeks_at_40h": 1129.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 74.74,
-        "high": 102.06,
-        "low": 54.89
+        "base": 76.47,
+        "high": 104.41,
+        "low": 56.19
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 40,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 68,
-      "public_merged_pull_requests": 149,
-      "public_prs_with_work": 56,
+      "public_authored_pr_commits": 70,
+      "public_merged_pull_requests": 151,
+      "public_prs_with_work": 58,
       "repository_default_branch_commits": 459,
       "skilled_human_equivalent_hours": {
-        "base": 747.38,
-        "high": 1020.63,
-        "low": 548.88
+        "base": 764.73,
+        "high": 1044.06,
+        "low": 561.9
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 864,
   "owned_public_through_utc": "2026-11-05",
-  "public_accepted_merge_events": 3619,
-  "public_accepted_pull_requests": 3618,
+  "public_accepted_merge_events": 3621,
+  "public_accepted_pull_requests": 3620,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45170.83,
-    "high": 61396.37,
-    "low": 33460.75
+    "base": 45188.18,
+    "high": 61419.8,
+    "low": 33473.77
   },
   "updated_at_utc": "2026-11-05",
   "window": {
@@ -120045,6 +120045,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(transforms): stop the dense-line elider cutting Chinese, Japanese and Thai prose",
       "url": "https://github.com/headroomlabs-ai/headroom/pull/4295",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-05T03:57:03Z",
+      "evidence": {
+        "additions": 80,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.27,
+        "high": 12.52,
+        "low": 6.96
+      },
+      "merged_at": "2026-11-05T04:56:36Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.27,
+          "high": 12.52,
+          "low": 6.96
+        }
+      },
+      "project": "beenuar/AiSOC",
+      "pull_request": 1706,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(connectors): end the Duo poll window where Duo's logs are available",
+      "url": "https://github.com/beenuar/AiSOC/pull/1706",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T17:12:02Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.08,
+        "high": 10.91,
+        "low": 6.06
+      },
+      "merged_at": "2026-11-05T05:19:38Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.08,
+          "high": 10.91,
+          "low": 6.06
+        }
+      },
+      "project": "max-sixty/worktrunk",
+      "pull_request": 4668,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Retry failed plugin worktree lookups instead of caching misses",
+      "url": "https://github.com/max-sixty/worktrunk/pull/4668",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
