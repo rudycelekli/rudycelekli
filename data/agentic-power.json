@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.37,
-    "high": 90.2,
-    "low": 49.16
+    "base": 66.38,
+    "high": 90.22,
+    "low": 49.17
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1128.2,
+  "engineer_weeks_at_40h": 1128.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 545.64,
-        "high": 737.6,
-        "low": 408.25
+        "base": 545.73,
+        "high": 737.73,
+        "low": 408.33
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4382,
+      "public_authored_pr_commits": 4383,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3208,
+      "public_prs_with_work": 3209,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33829.57,
-        "high": 45731.42,
-        "low": 25311.71
+        "base": 33835.56,
+        "high": 45739.5,
+        "low": 25316.2
       }
     },
     {
       "agentic_power_x": {
-        "base": 74.14,
-        "high": 101.22,
-        "low": 54.47
+        "base": 74.39,
+        "high": 101.57,
+        "low": 54.64
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -415,26 +415,26 @@
       "month": "2026-11",
       "owned_private_commits": 419,
       "owned_private_coverage": "partial",
-      "owned_public_commits": 28,
+      "owned_public_commits": 33,
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 68,
-      "public_merged_pull_requests": 145,
+      "public_merged_pull_requests": 146,
       "public_prs_with_work": 56,
-      "repository_default_branch_commits": 447,
+      "repository_default_branch_commits": 452,
       "skilled_human_equivalent_hours": {
-        "base": 741.38,
-        "high": 1012.23,
-        "low": 544.68
+        "base": 743.88,
+        "high": 1015.73,
+        "low": 546.43
       }
     }
   ],
   "owned_private_commits": 8095,
   "owned_private_through_utc": "2026-11-03",
-  "owned_public_commits": 852,
+  "owned_public_commits": 857,
   "owned_public_through_utc": "2026-11-05",
-  "public_accepted_merge_events": 3615,
-  "public_accepted_pull_requests": 3614,
+  "public_accepted_merge_events": 3616,
+  "public_accepted_pull_requests": 3615,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -443,13 +443,13 @@
   ],
   "public_reused_commit_entries_excluded": 328,
   "repository_count": 93,
-  "repository_default_branch_non_merge_commits": 8947,
+  "repository_default_branch_non_merge_commits": 8952,
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45128.28,
-    "high": 61338.62,
-    "low": 33429.14
+    "base": 45136.77,
+    "high": 61350.2,
+    "low": 33435.38
   },
   "updated_at_utc": "2026-11-05",
   "window": {
@@ -119913,6 +119913,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(bitbucket): preserve significant spaces in rename paths",
       "url": "https://github.com/The-PR-Agent/pr-agent/pull/4682",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T23:10:01Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 5.99,
+        "high": 8.08,
+        "low": 4.49
+      },
+      "merged_at": "2026-11-05T01:17:08Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.99,
+          "high": 8.08,
+          "low": 4.49
+        }
+      },
+      "project": "AstrBotDevs/AstrBot",
+      "pull_request": 10715,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(telegram): fall back to display name for senders without a username",
+      "url": "https://github.com/AstrBotDevs/AstrBot/pull/10715",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
