@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.66,
-    "high": 90.61,
-    "low": 49.38
+    "base": 66.74,
+    "high": 90.7,
+    "low": 49.44
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1133.3,
+  "engineer_weeks_at_40h": 1134.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 547.14,
-        "high": 739.63,
-        "low": 409.38
+        "base": 547.94,
+        "high": 740.71,
+        "low": 409.98
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4390,
+      "public_authored_pr_commits": 4396,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3216,
+      "public_prs_with_work": 3222,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33922.63,
-        "high": 45857.07,
-        "low": 25381.51
+        "base": 33972.29,
+        "high": 45924.12,
+        "low": 25418.76
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 82,
-      "public_merged_pull_requests": 165,
+      "public_merged_pull_requests": 171,
       "public_prs_with_work": 68,
       "repository_default_branch_commits": 459,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 864,
   "owned_public_through_utc": "2026-11-05",
-  "public_accepted_merge_events": 3635,
-  "public_accepted_pull_requests": 3634,
+  "public_accepted_merge_events": 3641,
+  "public_accepted_pull_requests": 3640,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45330.61,
-    "high": 61612.09,
-    "low": 33580.6
+    "base": 45380.27,
+    "high": 61679.14,
+    "low": 33617.85
   },
   "updated_at_utc": "2026-11-05",
   "window": {
@@ -120573,6 +120573,204 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "feat: render provider capability compatibility matrix",
       "url": "https://github.com/maziyarpanahi/openmed/pull/4159",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T15:55:22Z",
+      "evidence": {
+        "additions": 115,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.57,
+        "high": 14.27,
+        "low": 7.93
+      },
+      "merged_at": "2026-11-05T17:05:03Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.57,
+          "high": 14.27,
+          "low": 7.93
+        }
+      },
+      "project": "tigerless-labs/cost-xray",
+      "pull_request": 48,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(capture): retry a wake when the consumer pipe closes",
+      "url": "https://github.com/tigerless-labs/cost-xray/pull/48",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T15:47:08Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.9,
+        "high": 10.67,
+        "low": 5.93
+      },
+      "merged_at": "2026-11-05T17:06:51Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.9,
+          "high": 10.67,
+          "low": 5.93
+        }
+      },
+      "project": "tigerless-labs/cost-xray",
+      "pull_request": 29,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(openai): prefer authoritative completion output and model",
+      "url": "https://github.com/tigerless-labs/cost-xray/pull/29",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T15:46:48Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 24,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.22,
+        "high": 11.1,
+        "low": 6.16
+      },
+      "merged_at": "2026-11-05T17:07:42Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.22,
+          "high": 11.1,
+          "low": 6.16
+        }
+      },
+      "project": "tigerless-labs/cost-xray",
+      "pull_request": 24,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(raw-codec): skip malformed dedup store entries",
+      "url": "https://github.com/tigerless-labs/cost-xray/pull/24",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T15:54:46Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.75,
+        "high": 10.46,
+        "low": 5.81
+      },
+      "merged_at": "2026-11-05T17:08:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.75,
+          "high": 10.46,
+          "low": 5.81
+        }
+      },
+      "project": "tigerless-labs/cost-xray",
+      "pull_request": 40,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(capture): decode complete multiline SSE data events",
+      "url": "https://github.com/tigerless-labs/cost-xray/pull/40",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T15:47:12Z",
+      "evidence": {
+        "additions": 19,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.56,
+        "high": 10.21,
+        "low": 5.67
+      },
+      "merged_at": "2026-11-05T17:09:32Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.56,
+          "high": 10.21,
+          "low": 5.67
+        }
+      },
+      "project": "tigerless-labs/cost-xray",
+      "pull_request": 30,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(openai): retain refusal text in output attribution",
+      "url": "https://github.com/tigerless-labs/cost-xray/pull/30",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T15:56:24Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.66,
+        "high": 10.34,
+        "low": 5.75
+      },
+      "merged_at": "2026-11-05T17:10:26Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.66,
+          "high": 10.34,
+          "low": 5.75
+        }
+      },
+      "project": "tigerless-labs/cost-xray",
+      "pull_request": 50,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(capture): recover from invalid session metadata shapes",
+      "url": "https://github.com/tigerless-labs/cost-xray/pull/50",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
