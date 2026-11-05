@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.45,
-    "high": 90.32,
-    "low": 49.23
+    "base": 66.47,
+    "high": 90.34,
+    "low": 49.24
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1129.7,
+  "engineer_weeks_at_40h": 1130.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 76.47,
-        "high": 104.41,
-        "low": 56.19
+        "base": 77.5,
+        "high": 105.8,
+        "low": 56.96
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 40,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 70,
-      "public_merged_pull_requests": 151,
-      "public_prs_with_work": 58,
+      "public_authored_pr_commits": 71,
+      "public_merged_pull_requests": 152,
+      "public_prs_with_work": 59,
       "repository_default_branch_commits": 459,
       "skilled_human_equivalent_hours": {
-        "base": 764.73,
-        "high": 1044.06,
-        "low": 561.9
+        "base": 775.03,
+        "high": 1057.96,
+        "low": 569.62
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 864,
   "owned_public_through_utc": "2026-11-05",
-  "public_accepted_merge_events": 3621,
-  "public_accepted_pull_requests": 3620,
+  "public_accepted_merge_events": 3622,
+  "public_accepted_pull_requests": 3621,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45188.18,
-    "high": 61419.8,
-    "low": 33473.77
+    "base": 45198.48,
+    "high": 61433.7,
+    "low": 33481.49
   },
   "updated_at_utc": "2026-11-05",
   "window": {
@@ -120111,6 +120111,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Retry failed plugin worktree lookups instead of caching misses",
       "url": "https://github.com/max-sixty/worktrunk/pull/4668",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-05T05:57:23Z",
+      "evidence": {
+        "additions": 81,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.3,
+        "high": 13.9,
+        "low": 7.72
+      },
+      "merged_at": "2026-11-05T06:58:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.3,
+          "high": 13.9,
+          "low": 7.72
+        }
+      },
+      "project": "beenuar/AiSOC",
+      "pull_request": 1708,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(connectors): follow Graph nextLink for Entra audits and risky sign-ins",
+      "url": "https://github.com/beenuar/AiSOC/pull/1708",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
