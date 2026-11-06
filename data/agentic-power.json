@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.28,
-    "high": 91.43,
-    "low": 49.84
+    "base": 67.34,
+    "high": 91.52,
+    "low": 49.89
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1147.0,
+  "engineer_weeks_at_40h": 1148.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 548.81,
-        "high": 741.88,
-        "low": 410.63
+        "base": 549.5,
+        "high": 742.82,
+        "low": 411.15
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4402,
+      "public_authored_pr_commits": 4408,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3228,
+      "public_prs_with_work": 3231,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34026.01,
-        "high": 45996.64,
-        "low": 25459.07
+        "base": 34068.95,
+        "high": 46054.61,
+        "low": 25491.27
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 150,
-      "public_merged_pull_requests": 230,
+      "public_merged_pull_requests": 233,
       "public_prs_with_work": 121,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-06",
-  "public_accepted_merge_events": 3700,
-  "public_accepted_pull_requests": 3699,
+  "public_accepted_merge_events": 3703,
+  "public_accepted_pull_requests": 3702,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45881.83,
-    "high": 62356.36,
-    "low": 33994.0
+    "base": 45924.77,
+    "high": 62414.33,
+    "low": 34026.2
   },
   "updated_at_utc": "2026-11-06",
   "window": {
@@ -122718,6 +122718,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(core): resolve truth-file fallbacks by stored memory identity",
       "url": "https://github.com/tigerless-labs/agent-memory/pull/73",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-21T07:07:48Z",
+      "evidence": {
+        "additions": 135,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.41,
+        "high": 16.76,
+        "low": 9.31
+      },
+      "merged_at": "2026-11-06T18:42:22Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 12.41,
+          "high": 16.76,
+          "low": 9.31
+        }
+      },
+      "project": "dosco/graphjin",
+      "pull_request": 683,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(qcode): encode constraint string literals as JSON",
+      "url": "https://github.com/dosco/graphjin/pull/683",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-21T07:08:14Z",
+      "evidence": {
+        "additions": 262,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 28,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 15.71,
+        "high": 21.21,
+        "low": 11.78
+      },
+      "merged_at": "2026-11-06T18:42:28Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 15.71,
+          "high": 21.21,
+          "low": 11.78
+        }
+      },
+      "project": "dosco/graphjin",
+      "pull_request": 689,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(graph): resolve fragments independently of definition order",
+      "url": "https://github.com/dosco/graphjin/pull/689",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-21T07:10:19Z",
+      "evidence": {
+        "additions": 290,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 14.82,
+        "high": 20.0,
+        "low": 11.11
+      },
+      "merged_at": "2026-11-06T18:42:35Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 14.82,
+          "high": 20.0,
+          "low": 11.11
+        }
+      },
+      "project": "dosco/graphjin",
+      "pull_request": 691,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(openapi): discover fields inherited through allOf response schemas",
+      "url": "https://github.com/dosco/graphjin/pull/691",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
