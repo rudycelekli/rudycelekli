@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.17,
-    "high": 91.29,
-    "low": 49.77
+    "base": 67.21,
+    "high": 91.34,
+    "low": 49.8
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1145.2,
+  "engineer_weeks_at_40h": 1145.9,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 548.1,
-        "high": 740.92,
-        "low": 410.1
+        "base": 548.24,
+        "high": 741.12,
+        "low": 410.21
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4397,
+      "public_authored_pr_commits": 4398,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3223,
+      "public_prs_with_work": 3224,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33982.0,
-        "high": 45937.23,
-        "low": 25426.05
+        "base": 33991.0,
+        "high": 45949.38,
+        "low": 25432.8
       }
     },
     {
       "agentic_power_x": {
-        "base": 105.86,
-        "high": 143.89,
-        "low": 78.42
+        "base": 107.45,
+        "high": 146.05,
+        "low": 79.62
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 147,
-      "public_merged_pull_requests": 222,
-      "public_prs_with_work": 118,
+      "public_authored_pr_commits": 149,
+      "public_merged_pull_requests": 225,
+      "public_prs_with_work": 120,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1270.28,
-        "high": 1726.67,
-        "low": 941.02
+        "base": 1289.45,
+        "high": 1752.55,
+        "low": 955.4
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-06",
-  "public_accepted_merge_events": 3692,
-  "public_accepted_pull_requests": 3691,
+  "public_accepted_merge_events": 3695,
+  "public_accepted_pull_requests": 3694,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45809.61,
-    "high": 62258.87,
-    "low": 33939.82
+    "base": 45837.78,
+    "high": 62296.9,
+    "low": 33960.95
   },
   "updated_at_utc": "2026-11-06",
   "window": {
@@ -122454,6 +122454,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: skip unavailable Hacker News stories before enrichment",
       "url": "https://github.com/Thysrael/Horizon/pull/204",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-05T03:09:04Z",
+      "evidence": {
+        "additions": 124,
+        "changed_files": 2,
+        "comments": 5,
+        "commits": 2,
+        "deletions": 16,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 11.02,
+        "high": 14.88,
+        "low": 8.27
+      },
+      "merged_at": "2026-11-06T17:10:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.02,
+          "high": 14.88,
+          "low": 8.27
+        }
+      },
+      "project": "morluto/jacobian",
+      "pull_request": 4568,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(setup): keep comments that introduce the next Codex table",
+      "url": "https://github.com/morluto/jacobian/pull/4568",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-05T03:12:15Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 2,
+        "comments": 4,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.15,
+        "high": 11.0,
+        "low": 6.11
+      },
+      "merged_at": "2026-11-06T17:10:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.15,
+          "high": 11.0,
+          "low": 6.11
+        }
+      },
+      "project": "morluto/jacobian",
+      "pull_request": 4569,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(setup): check the JACOBIAN_UV_BIN executable before configuring",
+      "url": "https://github.com/morluto/jacobian/pull/4569",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T16:19:28Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.0,
+        "high": 12.15,
+        "low": 6.75
+      },
+      "merged_at": "2026-11-06T17:14:19Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.0,
+          "high": 12.15,
+          "low": 6.75
+        }
+      },
+      "project": "tigerless-labs/agent-memory",
+      "pull_request": 86,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Mark replay runs failed when the experience phase failed",
+      "url": "https://github.com/tigerless-labs/agent-memory/pull/86",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
