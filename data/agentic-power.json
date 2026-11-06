@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.98,
-    "high": 91.03,
-    "low": 49.62
+    "base": 67.17,
+    "high": 91.29,
+    "low": 49.77
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1142.0,
+  "engineer_weeks_at_40h": 1145.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 95.07,
-        "high": 129.33,
-        "low": 70.33
+        "base": 105.86,
+        "high": 143.89,
+        "low": 78.42
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 119,
-      "public_merged_pull_requests": 206,
-      "public_prs_with_work": 102,
+      "public_authored_pr_commits": 147,
+      "public_merged_pull_requests": 222,
+      "public_prs_with_work": 118,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1140.84,
-        "high": 1551.91,
-        "low": 843.93
+        "base": 1270.28,
+        "high": 1726.67,
+        "low": 941.02
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-06",
-  "public_accepted_merge_events": 3676,
-  "public_accepted_pull_requests": 3675,
+  "public_accepted_merge_events": 3692,
+  "public_accepted_pull_requests": 3691,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45680.17,
-    "high": 62084.11,
-    "low": 33842.73
+    "base": 45809.61,
+    "high": 62258.87,
+    "low": 33939.82
   },
   "updated_at_utc": "2026-11-06",
   "window": {
@@ -121926,6 +121926,534 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "lz4file: accept complete short skippable frames",
       "url": "https://github.com/lz4/lz4/pull/2057",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:26:29Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.86,
+        "high": 10.61,
+        "low": 5.9
+      },
+      "merged_at": "2026-11-06T01:13:12Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.86,
+          "high": 10.61,
+          "low": 5.9
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 199,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: preserve published releases when GitHub returns drafts",
+      "url": "https://github.com/Thysrael/Horizon/pull/199",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:30:40Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.62,
+        "high": 11.63,
+        "low": 6.46
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.62,
+          "high": 11.63,
+          "low": 6.46
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 205,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: preserve MCP run listing when one metadata file is corrupt",
+      "url": "https://github.com/Thysrael/Horizon/pull/205",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:33:15Z",
+      "evidence": {
+        "additions": 23,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.9,
+        "high": 10.67,
+        "low": 5.93
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.9,
+          "high": 10.67,
+          "low": 5.93
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 206,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: select Telegram canonical article links by hostname",
+      "url": "https://github.com/Thysrael/Horizon/pull/206",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:33:19Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.54,
+        "high": 10.18,
+        "low": 5.65
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.54,
+          "high": 10.18,
+          "low": 5.65
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 207,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: preserve distinct OpenBB watchlist processing routes",
+      "url": "https://github.com/Thysrael/Horizon/pull/207",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:35:12Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.32,
+        "high": 11.24,
+        "low": 6.24
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.32,
+          "high": 11.24,
+          "low": 6.24
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 209,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: keep full-article parsing off the async event loop",
+      "url": "https://github.com/Thysrael/Horizon/pull/209",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:38:27Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.01,
+        "high": 12.16,
+        "low": 6.76
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.01,
+          "high": 12.16,
+          "low": 6.76
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 210,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: handle numeric and HTTP-date Telegram retry delays",
+      "url": "https://github.com/Thysrael/Horizon/pull/210",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:40:21Z",
+      "evidence": {
+        "additions": 62,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 5,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.88,
+        "high": 14.69,
+        "low": 8.16
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.88,
+          "high": 14.69,
+          "low": 8.16
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 211,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: enforce a total deadline for Apify polling",
+      "url": "https://github.com/Thysrael/Horizon/pull/211",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:46:20Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.9,
+        "high": 10.67,
+        "low": 5.93
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.9,
+          "high": 10.67,
+          "low": 5.93
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 212,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: avoid attributing nested quoted tweets to timeline owners",
+      "url": "https://github.com/Thysrael/Horizon/pull/212",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:46:29Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.21,
+        "high": 9.74,
+        "low": 5.41
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.21,
+          "high": 9.74,
+          "low": 5.41
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 214,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: distinguish tweet account handles from display names in reply filtering",
+      "url": "https://github.com/Thysrael/Horizon/pull/214",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:47:04Z",
+      "evidence": {
+        "additions": 34,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.44,
+        "high": 11.39,
+        "low": 6.33
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.44,
+          "high": 11.39,
+          "low": 6.33
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 215,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: preserve corrupted subscriber data for recovery",
+      "url": "https://github.com/Thysrael/Horizon/pull/215",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:47:13Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.95,
+        "high": 10.73,
+        "low": 5.96
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.95,
+          "high": 10.73,
+          "low": 5.96
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 217,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: prevent duplicate output language processing and delivery",
+      "url": "https://github.com/Thysrael/Horizon/pull/217",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:48:36Z",
+      "evidence": {
+        "additions": 46,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.41,
+        "high": 12.71,
+        "low": 7.06
+      },
+      "merged_at": "2026-11-06T01:23:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.41,
+          "high": 12.71,
+          "low": 7.06
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 218,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: normalize Hacker News HTML into faithful source text",
+      "url": "https://github.com/Thysrael/Horizon/pull/218",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:27:53Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.11,
+        "high": 9.6,
+        "low": 5.33
+      },
+      "merged_at": "2026-11-06T01:23:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.11,
+          "high": 9.6,
+          "low": 5.33
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 200,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: preserve GDELT articles after malformed sibling records",
+      "url": "https://github.com/Thysrael/Horizon/pull/200",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:27:58Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.62,
+        "high": 10.29,
+        "low": 5.72
+      },
+      "merged_at": "2026-11-06T01:23:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.62,
+          "high": 10.29,
+          "low": 5.72
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 201,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: keep token usage snapshots stable across requests",
+      "url": "https://github.com/Thysrael/Horizon/pull/201",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-04T18:30:13Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.31,
+        "high": 8.52,
+        "low": 4.73
+      },
+      "merged_at": "2026-11-06T01:23:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.31,
+          "high": 8.52,
+          "low": 4.73
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 203,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: enforce the precise Google News publication window",
+      "url": "https://github.com/Thysrael/Horizon/pull/203",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:30:19Z",
+      "evidence": {
+        "additions": 23,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.36,
+        "high": 9.93,
+        "low": 5.52
+      },
+      "merged_at": "2026-11-06T01:23:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.36,
+          "high": 9.93,
+          "low": 5.52
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 204,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: skip unavailable Hacker News stories before enrichment",
+      "url": "https://github.com/Thysrael/Horizon/pull/204",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
