@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.34,
-    "high": 91.52,
-    "low": 49.89
+    "base": 67.35,
+    "high": 91.53,
+    "low": 49.9
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1148.1,
+  "engineer_weeks_at_40h": 1148.3,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 108.21,
-        "high": 147.06,
-        "low": 80.18
+        "base": 108.76,
+        "high": 147.81,
+        "low": 80.6
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 150,
-      "public_merged_pull_requests": 233,
-      "public_prs_with_work": 121,
+      "public_authored_pr_commits": 151,
+      "public_merged_pull_requests": 234,
+      "public_prs_with_work": 122,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1298.49,
-        "high": 1764.75,
-        "low": 962.18
+        "base": 1305.14,
+        "high": 1773.73,
+        "low": 967.17
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-06",
-  "public_accepted_merge_events": 3703,
-  "public_accepted_pull_requests": 3702,
+  "public_accepted_merge_events": 3704,
+  "public_accepted_pull_requests": 3703,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45924.77,
-    "high": 62414.33,
-    "low": 34026.2
+    "base": 45931.42,
+    "high": 62423.31,
+    "low": 34031.19
   },
   "updated_at_utc": "2026-11-06",
   "window": {
@@ -122817,6 +122817,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(openapi): discover fields inherited through allOf response schemas",
       "url": "https://github.com/dosco/graphjin/pull/691",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-05T03:16:46Z",
+      "evidence": {
+        "additions": 5,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.65,
+        "high": 8.98,
+        "low": 4.99
+      },
+      "merged_at": "2026-11-06T20:21:56Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.65,
+          "high": 8.98,
+          "low": 4.99
+        }
+      },
+      "project": "Kentucky-ai/opentakeoff",
+      "pull_request": 601,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(report): keep a non-roll condition's roll cells blank in metric",
+      "url": "https://github.com/Kentucky-ai/opentakeoff/pull/601",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
