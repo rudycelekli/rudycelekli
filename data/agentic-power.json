@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.25,
-    "high": 91.4,
-    "low": 49.83
+    "base": 67.28,
+    "high": 91.43,
+    "low": 49.84
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1146.6,
+  "engineer_weeks_at_40h": 1147.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 548.52,
-        "high": 741.49,
-        "low": 410.42
+        "base": 548.81,
+        "high": 741.88,
+        "low": 410.63
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4400,
+      "public_authored_pr_commits": 4402,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3226,
+      "public_prs_with_work": 3228,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34008.24,
-        "high": 45972.66,
-        "low": 25445.74
+        "base": 34026.01,
+        "high": 45996.64,
+        "low": 25459.07
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 150,
-      "public_merged_pull_requests": 228,
+      "public_merged_pull_requests": 230,
       "public_prs_with_work": 121,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-06",
-  "public_accepted_merge_events": 3698,
-  "public_accepted_pull_requests": 3697,
+  "public_accepted_merge_events": 3700,
+  "public_accepted_pull_requests": 3699,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45864.06,
-    "high": 62332.38,
-    "low": 33980.67
+    "base": 45881.83,
+    "high": 62356.36,
+    "low": 33994.0
   },
   "updated_at_utc": "2026-11-06",
   "window": {
@@ -122652,6 +122652,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Release memory-system resources when replay execution raises",
       "url": "https://github.com/tigerless-labs/agent-memory/pull/87",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-09T16:17:02Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.56,
+        "high": 11.55,
+        "low": 6.42
+      },
+      "merged_at": "2026-11-06T18:17:39Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.56,
+          "high": 11.55,
+          "low": 6.42
+        }
+      },
+      "project": "tigerless-labs/agent-memory",
+      "pull_request": 83,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve ISO instants and seconds in benchmark evidence timestamps",
+      "url": "https://github.com/tigerless-labs/agent-memory/pull/83",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-09T15:58:00Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.21,
+        "high": 12.43,
+        "low": 6.91
+      },
+      "merged_at": "2026-11-06T18:26:23Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.21,
+          "high": 12.43,
+          "low": 6.91
+        }
+      },
+      "project": "tigerless-labs/agent-memory",
+      "pull_request": 73,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(core): resolve truth-file fallbacks by stored memory identity",
+      "url": "https://github.com/tigerless-labs/agent-memory/pull/73",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
