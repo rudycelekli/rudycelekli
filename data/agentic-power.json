@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.28,
-    "high": 91.44,
-    "low": 49.85
+    "base": 67.46,
+    "high": 91.68,
+    "low": 49.99
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1150.5,
+  "engineer_weeks_at_40h": 1153.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 549.81,
-        "high": 743.24,
-        "low": 411.38
+        "base": 550.34,
+        "high": 743.95,
+        "low": 411.78
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4410,
+      "public_authored_pr_commits": 4414,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3233,
+      "public_prs_with_work": 3237,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34088.22,
-        "high": 46080.62,
-        "low": 25505.72
+        "base": 34120.85,
+        "high": 46124.67,
+        "low": 25530.2
       }
     },
     {
       "agentic_power_x": {
-        "base": 98.31,
-        "high": 133.57,
-        "low": 72.9
+        "base": 104.81,
+        "high": 142.34,
+        "low": 77.77
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 160,
-      "public_merged_pull_requests": 244,
-      "public_prs_with_work": 131,
+      "public_authored_pr_commits": 172,
+      "public_merged_pull_requests": 256,
+      "public_prs_with_work": 142,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1376.39,
-        "high": 1869.93,
-        "low": 1020.62
+        "base": 1467.36,
+        "high": 1992.72,
+        "low": 1088.83
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3714,
-  "public_accepted_pull_requests": 3713,
+  "public_accepted_merge_events": 3726,
+  "public_accepted_pull_requests": 3725,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46021.94,
-    "high": 62545.52,
-    "low": 34099.09
+    "base": 46145.54,
+    "high": 62712.36,
+    "low": 34191.78
   },
   "updated_at_utc": "2026-11-07",
   "window": {
@@ -123185,6 +123185,417 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "A period written from one quarter to another ends in the last month, so Q1 to Q3 runs through September instead of stopping in July",
       "url": "https://github.com/deeplethe/utopia/pull/1405",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-24T03:01:54Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 8,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.74,
+        "high": 11.8,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-07T17:29:02Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 4.37,
+          "high": 5.9,
+          "low": 3.28
+        },
+        "2026-11": {
+          "base": 4.37,
+          "high": 5.9,
+          "low": 3.28
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1407,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "A month or a year stored at its own precision can be truncated, so \"2024-03\" truncated to a month is 2024-03-01 instead of no value",
+      "url": "https://github.com/deeplethe/utopia/pull/1407",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T22:06:55Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.22,
+        "high": 12.44,
+        "low": 6.91
+      },
+      "merged_at": "2026-11-07T17:34:06Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 4.61,
+          "high": 6.22,
+          "low": 3.46
+        },
+        "2026-11": {
+          "base": 4.61,
+          "high": 6.22,
+          "low": 3.45
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1411,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "A MySQL TIME past a day or below zero reads as itself, so TIMEDIFF of 30 hours is 30:15:00, not null",
+      "url": "https://github.com/deeplethe/utopia/pull/1411",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:03:40Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.0,
+        "high": 9.45,
+        "low": 5.25
+      },
+      "merged_at": "2026-11-07T17:38:55Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.0,
+          "high": 9.45,
+          "low": 5.25
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 393,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(discovery): infer purge, wipe, erase, truncate, destroy and terminate tools as delete",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/393",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:07:37Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.22,
+        "high": 11.1,
+        "low": 6.16
+      },
+      "merged_at": "2026-11-07T17:39:01Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.22,
+          "high": 11.1,
+          "low": 6.16
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 394,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(quick-build): treat purge, wipe, erase, truncate, destroy and terminate tools as critical deletes",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/394",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:20:40Z",
+      "evidence": {
+        "additions": 88,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.91,
+        "high": 13.38,
+        "low": 7.43
+      },
+      "merged_at": "2026-11-07T17:39:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.91,
+          "high": 13.38,
+          "low": 7.43
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 395,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: compute B08 and B17 confidence intervals over the scored subset",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/395",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:26:16Z",
+      "evidence": {
+        "additions": 108,
+        "changed_files": 7,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 12,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 11.88,
+        "high": 16.04,
+        "low": 8.91
+      },
+      "merged_at": "2026-11-07T17:39:11Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.88,
+          "high": 16.04,
+          "low": 8.91
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 396,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: compute P13/P19/P22/P27/P32/S02 confidence intervals over the scored subset",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/396",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:30:48Z",
+      "evidence": {
+        "additions": 91,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.52,
+        "high": 12.85,
+        "low": 7.14
+      },
+      "merged_at": "2026-11-07T17:39:16Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.52,
+          "high": 12.85,
+          "low": 7.14
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 397,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(p13): keep the coverage diagnostic from padding the evidence floor",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/397",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:42:37Z",
+      "evidence": {
+        "additions": 62,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 7,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.29,
+        "high": 13.89,
+        "low": 7.72
+      },
+      "merged_at": "2026-11-07T17:39:21Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.29,
+          "high": 13.89,
+          "low": 7.72
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 377,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: scrub artifact metadata and diagnostic text consistently",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/377",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:44:03Z",
+      "evidence": {
+        "additions": 113,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 11.48,
+        "high": 15.5,
+        "low": 8.61
+      },
+      "merged_at": "2026-11-07T17:39:26Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.48,
+          "high": 15.5,
+          "low": 8.61
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 383,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(windtunnel): retain selected-detector completeness before reporting",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/383",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T14:45:24Z",
+      "evidence": {
+        "additions": 46,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.49,
+        "high": 12.8,
+        "low": 7.11
+      },
+      "merged_at": "2026-11-07T17:39:31Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.49,
+          "high": 12.8,
+          "low": 7.11
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 387,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(policy-lab): verify repair evidence before report export",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/387",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T22:48:33Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.4,
+        "high": 11.33,
+        "low": 6.3
+      },
+      "merged_at": "2026-11-07T17:40:19Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 4.2,
+          "high": 5.67,
+          "low": 3.15
+        },
+        "2026-11": {
+          "base": 4.2,
+          "high": 5.66,
+          "low": 3.15
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1421,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "An object storage prefix is listed as written, so a folder named \"Case #12\" syncs its files",
+      "url": "https://github.com/deeplethe/utopia/pull/1421",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T10:42:50Z",
+      "evidence": {
+        "additions": 711,
+        "changed_files": 7,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 19.45,
+        "high": 26.26,
+        "low": 14.59
+      },
+      "merged_at": "2026-11-07T17:49:18Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 19.45,
+          "high": 26.26,
+          "low": 14.59
+        }
+      },
+      "project": "maziyarpanahi/openmed",
+      "pull_request": 4167,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "feat: add synthetic malformed-asset preflight fixtures",
+      "url": "https://github.com/maziyarpanahi/openmed/pull/4167",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
