@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.5,
-    "high": 91.74,
-    "low": 50.02
+    "base": 67.53,
+    "high": 91.77,
+    "low": 50.03
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1154.3,
+  "engineer_weeks_at_40h": 1154.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 550.7,
-        "high": 744.43,
-        "low": 412.05
+        "base": 550.94,
+        "high": 744.76,
+        "low": 412.23
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4417,
+      "public_authored_pr_commits": 4418,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3240,
+      "public_prs_with_work": 3241,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34143.21,
-        "high": 46154.84,
-        "low": 25546.96
+        "base": 34158.4,
+        "high": 46175.35,
+        "low": 25558.36
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 173,
-      "public_merged_pull_requests": 259,
+      "public_merged_pull_requests": 260,
       "public_prs_with_work": 143,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3729,
-  "public_accepted_pull_requests": 3728,
+  "public_accepted_merge_events": 3730,
+  "public_accepted_pull_requests": 3729,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46172.46,
-    "high": 62748.69,
-    "low": 34211.96
+    "base": 46187.65,
+    "high": 62769.2,
+    "low": 34223.36
   },
   "updated_at_utc": "2026-11-07",
   "window": {
@@ -123700,6 +123700,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "An ODS time cell reads as the time it shows, so PT09H30M00S becomes 09:30",
       "url": "https://github.com/deeplethe/utopia/pull/1429",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T22:42:46Z",
+      "evidence": {
+        "additions": 231,
+        "changed_files": 8,
+        "comments": 4,
+        "commits": 2,
+        "deletions": 39,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 15.19,
+        "high": 20.51,
+        "low": 11.4
+      },
+      "merged_at": "2026-11-07T22:59:24Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 15.19,
+          "high": 20.51,
+          "low": 11.4
+        }
+      },
+      "project": "Softeria/ms-365-mcp-server",
+      "pull_request": 748,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(stdio): apply --enabled-tools, --read-only and MS365_MCP_OAUTH_TOKEN to the account tools",
+      "url": "https://github.com/Softeria/ms-365-mcp-server/pull/748",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
