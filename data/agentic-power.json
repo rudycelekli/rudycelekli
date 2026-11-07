@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.22,
-    "high": 91.36,
-    "low": 49.81
+    "base": 67.24,
+    "high": 91.38,
+    "low": 49.82
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1149.5,
+  "engineer_weeks_at_40h": 1149.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 96.79,
-        "high": 131.5,
-        "low": 71.76
+        "base": 97.33,
+        "high": 132.24,
+        "low": 72.16
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 157,
-      "public_merged_pull_requests": 240,
-      "public_prs_with_work": 128,
+      "public_authored_pr_commits": 158,
+      "public_merged_pull_requests": 241,
+      "public_prs_with_work": 129,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1355.02,
-        "high": 1841.07,
-        "low": 1004.58
+        "base": 1362.64,
+        "high": 1851.36,
+        "low": 1010.3
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3710,
-  "public_accepted_pull_requests": 3709,
+  "public_accepted_merge_events": 3711,
+  "public_accepted_pull_requests": 3710,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45981.3,
-    "high": 62490.65,
-    "low": 34068.6
+    "base": 45988.92,
+    "high": 62500.94,
+    "low": 34074.32
   },
   "updated_at_utc": "2026-11-07",
   "window": {
@@ -123048,6 +123048,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Preserve document and CDATA XPath string values",
       "url": "https://github.com/antchfx/xmlquery/pull/143",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T01:10:38Z",
+      "evidence": {
+        "additions": 29,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.62,
+        "high": 10.29,
+        "low": 5.72
+      },
+      "merged_at": "2026-11-07T04:36:38Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.62,
+          "high": 10.29,
+          "low": 5.72
+        }
+      },
+      "project": "zhayujie/CowAgent",
+      "pull_request": 3913,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(ssrf): block the shared address space in the SSRF guard",
+      "url": "https://github.com/zhayujie/CowAgent/pull/3913",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
