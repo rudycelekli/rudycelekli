@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.27,
-    "high": 91.43,
-    "low": 49.84
+    "base": 67.28,
+    "high": 91.44,
+    "low": 49.85
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1150.3,
+  "engineer_weeks_at_40h": 1150.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 549.75,
-        "high": 743.15,
-        "low": 411.33
+        "base": 549.81,
+        "high": 743.24,
+        "low": 411.38
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4409,
+      "public_authored_pr_commits": 4410,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3232,
+      "public_prs_with_work": 3233,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34084.23,
-        "high": 46075.24,
-        "low": 25502.73
+        "base": 34088.22,
+        "high": 46080.62,
+        "low": 25505.72
       }
     },
     {
       "agentic_power_x": {
-        "base": 98.03,
-        "high": 133.18,
-        "low": 72.69
+        "base": 98.31,
+        "high": 133.57,
+        "low": 72.9
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 159,
-      "public_merged_pull_requests": 243,
-      "public_prs_with_work": 130,
+      "public_authored_pr_commits": 160,
+      "public_merged_pull_requests": 244,
+      "public_prs_with_work": 131,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1372.41,
-        "high": 1864.55,
-        "low": 1017.63
+        "base": 1376.39,
+        "high": 1869.93,
+        "low": 1020.62
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3713,
-  "public_accepted_pull_requests": 3712,
+  "public_accepted_merge_events": 3714,
+  "public_accepted_pull_requests": 3713,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46013.97,
-    "high": 62534.76,
-    "low": 34093.11
+    "base": 46021.94,
+    "high": 62545.52,
+    "low": 34099.09
   },
   "updated_at_utc": "2026-11-07",
   "window": {
@@ -123147,6 +123147,44 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Count last() over the following and following-sibling axes",
       "url": "https://github.com/antchfx/xpath/pull/188",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:54:26Z",
+      "evidence": {
+        "additions": 32,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 7.97,
+        "high": 10.76,
+        "low": 5.98
+      },
+      "merged_at": "2026-11-07T17:23:11Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 3.99,
+          "high": 5.38,
+          "low": 2.99
+        },
+        "2026-11": {
+          "base": 3.98,
+          "high": 5.38,
+          "low": 2.99
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1405,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "A period written from one quarter to another ends in the last month, so Q1 to Q3 runs through September instead of stopping in July",
+      "url": "https://github.com/deeplethe/utopia/pull/1405",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
