@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.17,
-    "high": 91.29,
-    "low": 49.77
+    "base": 67.18,
+    "high": 91.31,
+    "low": 49.78
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1148.7,
+  "engineer_weeks_at_40h": 1148.9,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 94.28,
-        "high": 128.13,
-        "low": 69.88
+        "base": 94.87,
+        "high": 128.92,
+        "low": 70.32
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 153,
-      "public_merged_pull_requests": 236,
-      "public_prs_with_work": 124,
+      "public_authored_pr_commits": 154,
+      "public_merged_pull_requests": 237,
+      "public_prs_with_work": 125,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1319.97,
-        "high": 1793.76,
-        "low": 978.3
+        "base": 1328.18,
+        "high": 1804.84,
+        "low": 984.45
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3706,
-  "public_accepted_pull_requests": 3705,
+  "public_accepted_merge_events": 3707,
+  "public_accepted_pull_requests": 3706,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45946.25,
-    "high": 62443.34,
-    "low": 34042.32
+    "base": 45954.46,
+    "high": 62454.42,
+    "low": 34048.47
   },
   "updated_at_utc": "2026-11-07",
   "window": {
@@ -122916,6 +122916,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(tokenizers): resolve chatgpt-4o-* aliases to o200k_base",
       "url": "https://github.com/headroomlabs-ai/headroom/pull/4672",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T02:34:00Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.21,
+        "high": 11.08,
+        "low": 6.15
+      },
+      "merged_at": "2026-11-07T03:29:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.21,
+          "high": 11.08,
+          "low": 6.15
+        }
+      },
+      "project": "headroomlabs-ai/headroom",
+      "pull_request": 4674,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(proxy): drop headers named by Connection when forwarding responses",
+      "url": "https://github.com/headroomlabs-ai/headroom/pull/4674",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
