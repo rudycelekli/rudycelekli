@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.24,
-    "high": 91.38,
-    "low": 49.82
+    "base": 67.26,
+    "high": 91.41,
+    "low": 49.83
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1149.7,
+  "engineer_weeks_at_40h": 1150.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 549.5,
-        "high": 742.82,
-        "low": 411.15
+        "base": 549.75,
+        "high": 743.15,
+        "low": 411.33
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4408,
+      "public_authored_pr_commits": 4409,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3231,
+      "public_prs_with_work": 3232,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34068.95,
-        "high": 46054.61,
-        "low": 25491.27
+        "base": 34084.23,
+        "high": 46075.24,
+        "low": 25502.73
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 158,
-      "public_merged_pull_requests": 241,
+      "public_merged_pull_requests": 242,
       "public_prs_with_work": 129,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3711,
-  "public_accepted_pull_requests": 3710,
+  "public_accepted_merge_events": 3712,
+  "public_accepted_pull_requests": 3711,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45988.92,
-    "high": 62500.94,
-    "low": 34074.32
+    "base": 46004.2,
+    "high": 62521.57,
+    "low": 34085.78
   },
   "updated_at_utc": "2026-11-07",
   "window": {
@@ -123081,6 +123081,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(ssrf): block the shared address space in the SSRF guard",
       "url": "https://github.com/zhayujie/CowAgent/pull/3913",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-13T11:14:59Z",
+      "evidence": {
+        "additions": 416,
+        "changed_files": 6,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 15.28,
+        "high": 20.63,
+        "low": 11.46
+      },
+      "merged_at": "2026-11-07T11:21:21Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 15.28,
+          "high": 20.63,
+          "low": 11.46
+        }
+      },
+      "project": "maziyarpanahi/openmed",
+      "pull_request": 4175,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "feat: generate bounded waveform stimuli with explicit event truth",
+      "url": "https://github.com/maziyarpanahi/openmed/pull/4175",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
