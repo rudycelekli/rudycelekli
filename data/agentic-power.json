@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.26,
-    "high": 91.41,
-    "low": 49.83
+    "base": 67.27,
+    "high": 91.43,
+    "low": 49.84
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1150.1,
+  "engineer_weeks_at_40h": 1150.3,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 97.33,
-        "high": 132.24,
-        "low": 72.16
+        "base": 98.03,
+        "high": 133.18,
+        "low": 72.69
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 158,
-      "public_merged_pull_requests": 242,
-      "public_prs_with_work": 129,
+      "public_authored_pr_commits": 159,
+      "public_merged_pull_requests": 243,
+      "public_prs_with_work": 130,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1362.64,
-        "high": 1851.36,
-        "low": 1010.3
+        "base": 1372.41,
+        "high": 1864.55,
+        "low": 1017.63
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3712,
-  "public_accepted_pull_requests": 3711,
+  "public_accepted_merge_events": 3713,
+  "public_accepted_pull_requests": 3712,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46004.2,
-    "high": 62521.57,
-    "low": 34085.78
+    "base": 46013.97,
+    "high": 62534.76,
+    "low": 34093.11
   },
   "updated_at_utc": "2026-11-07",
   "window": {
@@ -123114,6 +123114,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "feat: generate bounded waveform stimuli with explicit event truth",
       "url": "https://github.com/maziyarpanahi/openmed/pull/4175",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-05T03:14:10Z",
+      "evidence": {
+        "additions": 87,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.77,
+        "high": 13.19,
+        "low": 7.33
+      },
+      "merged_at": "2026-11-07T15:38:29Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.77,
+          "high": 13.19,
+          "low": 7.33
+        }
+      },
+      "project": "antchfx/xpath",
+      "pull_request": 188,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Count last() over the following and following-sibling axes",
+      "url": "https://github.com/antchfx/xpath/pull/188",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
