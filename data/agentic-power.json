@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.18,
-    "high": 91.31,
-    "low": 49.78
+    "base": 67.22,
+    "high": 91.36,
+    "low": 49.81
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1148.9,
+  "engineer_weeks_at_40h": 1149.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 94.87,
-        "high": 128.92,
-        "low": 70.32
+        "base": 96.79,
+        "high": 131.5,
+        "low": 71.76
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 154,
-      "public_merged_pull_requests": 237,
-      "public_prs_with_work": 125,
+      "public_authored_pr_commits": 157,
+      "public_merged_pull_requests": 240,
+      "public_prs_with_work": 128,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1328.18,
-        "high": 1804.84,
-        "low": 984.45
+        "base": 1355.02,
+        "high": 1841.07,
+        "low": 1004.58
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3707,
-  "public_accepted_pull_requests": 3706,
+  "public_accepted_merge_events": 3710,
+  "public_accepted_pull_requests": 3709,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45954.46,
-    "high": 62454.42,
-    "low": 34048.47
+    "base": 45981.3,
+    "high": 62490.65,
+    "low": 34068.6
   },
   "updated_at_utc": "2026-11-07",
   "window": {
@@ -122949,6 +122949,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(proxy): drop headers named by Connection when forwarding responses",
       "url": "https://github.com/headroomlabs-ai/headroom/pull/4674",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T17:02:55Z",
+      "evidence": {
+        "additions": 60,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.8,
+        "high": 11.88,
+        "low": 6.6
+      },
+      "merged_at": "2026-11-07T03:57:57Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.8,
+          "high": 11.88,
+          "low": 6.6
+        }
+      },
+      "project": "antchfx/xmlquery",
+      "pull_request": 145,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep namespace declarations out of the XPath attribute axis",
+      "url": "https://github.com/antchfx/xmlquery/pull/145",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T16:52:23Z",
+      "evidence": {
+        "additions": 130,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.33,
+        "high": 13.95,
+        "low": 7.75
+      },
+      "merged_at": "2026-11-07T04:09:31Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.33,
+          "high": 13.95,
+          "low": 7.75
+        }
+      },
+      "project": "antchfx/xmlquery",
+      "pull_request": 144,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Restore namespace aliases after leaving a child element",
+      "url": "https://github.com/antchfx/xmlquery/pull/144",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T16:52:06Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.71,
+        "high": 10.4,
+        "low": 5.78
+      },
+      "merged_at": "2026-11-07T04:13:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.71,
+          "high": 10.4,
+          "low": 5.78
+        }
+      },
+      "project": "antchfx/xmlquery",
+      "pull_request": 143,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve document and CDATA XPath string values",
+      "url": "https://github.com/antchfx/xmlquery/pull/143",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
