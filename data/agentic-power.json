@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.54,
-    "high": 91.78,
-    "low": 50.04
+    "base": 67.61,
+    "high": 91.88,
+    "low": 50.1
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1154.9,
+  "engineer_weeks_at_40h": 1159.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -39,9 +39,9 @@
   },
   "model_version": "rolling-12-months-authored-work-v3",
   "modeled_human_direction_hours": {
-    "base": 684.0,
-    "high": 684.0,
-    "low": 684.0
+    "base": 686.0,
+    "high": 686.0,
+    "low": 686.0
   },
   "monthly": [
     {
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 551.06,
-        "high": 744.92,
-        "low": 412.32
+        "base": 554.09,
+        "high": 749.02,
+        "low": 414.6
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,31 +386,31 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4419,
+      "public_authored_pr_commits": 4444,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3242,
+      "public_prs_with_work": 3256,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34165.7,
-        "high": 46185.21,
-        "low": 25563.84
+        "base": 34353.84,
+        "high": 46439.23,
+        "low": 25704.94
       }
     },
     {
       "agentic_power_x": {
-        "base": 105.14,
-        "high": 142.78,
-        "low": 78.02
+        "base": 92.0,
+        "high": 124.93,
+        "low": 68.27
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
-      "direction_calendar_days": 7,
-      "direction_hours": 14.0,
-      "elapsed_days": 7,
+      "direction_calendar_days": 8,
+      "direction_hours": 16.0,
+      "elapsed_days": 8,
       "modeled_human_direction_hours": {
-        "base": 14.0,
-        "high": 14.0,
-        "low": 14.0
+        "base": 16.0,
+        "high": 16.0,
+        "low": 16.0
       },
       "month": "2026-11",
       "owned_private_commits": 419,
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 173,
-      "public_merged_pull_requests": 261,
+      "public_merged_pull_requests": 275,
       "public_prs_with_work": 143,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
@@ -432,9 +432,9 @@
   "owned_private_commits": 8095,
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
-  "owned_public_through_utc": "2026-11-07",
-  "public_accepted_merge_events": 3731,
-  "public_accepted_pull_requests": 3730,
+  "owned_public_through_utc": "2026-11-08",
+  "public_accepted_merge_events": 3745,
+  "public_accepted_pull_requests": 3744,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,15 +447,15 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46194.95,
-    "high": 62779.06,
-    "low": 34228.84
+    "base": 46383.09,
+    "high": 63033.08,
+    "low": 34369.94
   },
-  "updated_at_utc": "2026-11-07",
+  "updated_at_utc": "2026-11-08",
   "window": {
     "calendar_months": 12,
     "start": "2025-12-01",
-    "through": "2026-11-07"
+    "through": "2026-11-08"
   },
   "work_items": [
     {
@@ -123766,6 +123766,468 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Docs search ignores letter case, so search_docs(\"Mcp\") finds the \"Agents over MCP\" sections instead of nothing",
       "url": "https://github.com/deeplethe/utopia/pull/1432",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T17:26:37Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.41,
+        "high": 10.01,
+        "low": 5.56
+      },
+      "merged_at": "2026-11-08T00:12:55Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.41,
+          "high": 10.01,
+          "low": 5.56
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1443,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "A sub-property ring is reported from its own members, so p \u2291 q \u2291 r \u2291 q names the ring q, r instead of p, q, r",
+      "url": "https://github.com/deeplethe/utopia/pull/1443",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T15:43:11Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.21,
+        "high": 9.73,
+        "low": 5.4
+      },
+      "merged_at": "2026-11-08T00:31:38Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.21,
+          "high": 9.73,
+          "low": 5.4
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1433,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "A company name with a comma before \"Inc.\" recalls its entity, so \"Acme, Inc.\" finds Acme instead of creating a second one",
+      "url": "https://github.com/deeplethe/utopia/pull/1433",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-13T21:55:02Z",
+      "evidence": {
+        "additions": 10140,
+        "changed_files": 98,
+        "comments": 0,
+        "commits": 32,
+        "deletions": 770,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 75.0,
+        "high": 101.25,
+        "low": 56.25
+      },
+      "merged_at": "2026-11-08T00:35:54Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 75.0,
+          "high": 101.25,
+          "low": 56.25
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 786,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(graphics): consolidate backend readiness and cache identity",
+      "url": "https://github.com/calesthio/OpenMontage/pull/786",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-05T00:53:19Z",
+      "evidence": {
+        "additions": 99,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.72,
+        "high": 13.13,
+        "low": 7.29
+      },
+      "merged_at": "2026-11-08T00:38:18Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.72,
+          "high": 13.13,
+          "low": 7.29
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 700,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(fal): preserve image format across resumable jobs",
+      "url": "https://github.com/calesthio/OpenMontage/pull/700",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-05T00:55:02Z",
+      "evidence": {
+        "additions": 61,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.83,
+        "high": 10.57,
+        "low": 5.87
+      },
+      "merged_at": "2026-11-08T00:38:22Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.83,
+          "high": 10.57,
+          "low": 5.87
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 701,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(pacing): match TerminalScene frame rounding",
+      "url": "https://github.com/calesthio/OpenMontage/pull/701",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-05T00:57:56Z",
+      "evidence": {
+        "additions": 118,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.29,
+        "high": 13.89,
+        "low": 7.72
+      },
+      "merged_at": "2026-11-08T00:38:26Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.29,
+          "high": 13.89,
+          "low": 7.72
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 703,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(frames): return only frames sampled by the current call",
+      "url": "https://github.com/calesthio/OpenMontage/pull/703",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-05T00:59:13Z",
+      "evidence": {
+        "additions": 115,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.46,
+        "high": 14.12,
+        "low": 7.84
+      },
+      "merged_at": "2026-11-08T00:38:30Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.46,
+          "high": 14.12,
+          "low": 7.84
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 705,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(backlot): track concurrent scene generation by call",
+      "url": "https://github.com/calesthio/OpenMontage/pull/705",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-05T01:01:08Z",
+      "evidence": {
+        "additions": 92,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.65,
+        "high": 11.68,
+        "low": 6.49
+      },
+      "merged_at": "2026-11-08T00:38:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.65,
+          "high": 11.68,
+          "low": 6.49
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 707,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(reframe): honor explicit dimensions at the same aspect ratio",
+      "url": "https://github.com/calesthio/OpenMontage/pull/707",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-05T01:02:38Z",
+      "evidence": {
+        "additions": 83,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.72,
+        "high": 13.13,
+        "low": 7.29
+      },
+      "merged_at": "2026-11-08T00:38:40Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.72,
+          "high": 13.13,
+          "low": 7.29
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 708,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(media): escape apostrophes in FFconcat filenames",
+      "url": "https://github.com/calesthio/OpenMontage/pull/708",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-13T21:53:01Z",
+      "evidence": {
+        "additions": 51,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.44,
+        "high": 11.4,
+        "low": 6.33
+      },
+      "merged_at": "2026-11-08T00:40:24Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.44,
+          "high": 11.4,
+          "low": 6.33
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 785,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cache): reject oversized assets before evicting usable entries",
+      "url": "https://github.com/calesthio/OpenMontage/pull/785",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-14T01:54:28Z",
+      "evidence": {
+        "additions": 62,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.18,
+        "high": 12.39,
+        "low": 6.88
+      },
+      "merged_at": "2026-11-08T00:40:28Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.18,
+          "high": 12.39,
+          "low": 6.88
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 792,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(audio): schedule every channel of delayed tracks",
+      "url": "https://github.com/calesthio/OpenMontage/pull/792",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T03:40:51Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.74,
+        "high": 11.8,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-08T00:40:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.74,
+          "high": 11.8,
+          "low": 6.56
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 806,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(audio): keep short music cue fades inside segment bounds",
+      "url": "https://github.com/calesthio/OpenMontage/pull/806",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T03:47:11Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.08,
+        "high": 10.91,
+        "low": 6.06
+      },
+      "merged_at": "2026-11-08T00:40:40Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.08,
+          "high": 10.91,
+          "low": 6.06
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 807,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(frames): keep scene-guided samples inside short shots",
+      "url": "https://github.com/calesthio/OpenMontage/pull/807",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-17T22:19:06Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.41,
+        "high": 10.01,
+        "low": 5.56
+      },
+      "merged_at": "2026-11-08T00:40:48Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.41,
+          "high": 10.01,
+          "low": 5.56
+        }
+      },
+      "project": "calesthio/OpenMontage",
+      "pull_request": 816,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(slideshow-risk): do not count unspecified camera movement as movement for cinematic claims",
+      "url": "https://github.com/calesthio/OpenMontage/pull/816",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
