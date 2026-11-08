@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.59,
-    "high": 93.2,
-    "low": 50.83
+    "base": 68.6,
+    "high": 93.22,
+    "low": 50.84
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1176.3,
+  "engineer_weeks_at_40h": 1176.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 107.7,
-        "high": 146.16,
-        "low": 80.01
+        "base": 108.25,
+        "high": 146.9,
+        "low": 80.42
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 63,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 215,
-      "public_merged_pull_requests": 300,
-      "public_prs_with_work": 162,
+      "public_authored_pr_commits": 216,
+      "public_merged_pull_requests": 301,
+      "public_prs_with_work": 163,
       "repository_default_branch_commits": 482,
       "skilled_human_equivalent_hours": {
-        "base": 1723.21,
-        "high": 2338.59,
-        "low": 1280.19
+        "base": 1731.96,
+        "high": 2350.41,
+        "low": 1286.75
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 887,
   "owned_public_through_utc": "2026-11-08",
-  "public_accepted_merge_events": 3770,
-  "public_accepted_pull_requests": 3769,
+  "public_accepted_merge_events": 3771,
+  "public_accepted_pull_requests": 3770,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47052.49,
-    "high": 63937.23,
-    "low": 34871.46
+    "base": 47061.24,
+    "high": 63949.05,
+    "low": 34878.02
   },
   "updated_at_utc": "2026-11-08",
   "window": {
@@ -125063,6 +125063,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(work-view): read commit subjects from $(cat <<EOF) messages and all gh pr title forms",
       "url": "https://github.com/thedotmack/claude-mem/pull/5480",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T19:02:06Z",
+      "evidence": {
+        "additions": 46,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.75,
+        "high": 11.82,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-08T21:58:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.75,
+          "high": 11.82,
+          "low": 6.56
+        }
+      },
+      "project": "The-PR-Agent/pr-agent",
+      "pull_request": 4675,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(improve): reject reflection feedback for another file",
+      "url": "https://github.com/The-PR-Agent/pr-agent/pull/4675",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
