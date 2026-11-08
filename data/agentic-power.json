@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.61,
-    "high": 91.88,
-    "low": 50.1
+    "base": 67.65,
+    "high": 91.93,
+    "low": 50.13
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1159.6,
+  "engineer_weeks_at_40h": 1160.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 554.09,
-        "high": 749.02,
-        "low": 414.6
+        "base": 554.5,
+        "high": 749.57,
+        "low": 414.9
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4444,
+      "public_authored_pr_commits": 4447,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3256,
+      "public_prs_with_work": 3259,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34353.84,
-        "high": 46439.23,
-        "low": 25704.94
+        "base": 34379.16,
+        "high": 46473.41,
+        "low": 25723.93
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 173,
-      "public_merged_pull_requests": 275,
+      "public_merged_pull_requests": 278,
       "public_prs_with_work": 143,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-08",
-  "public_accepted_merge_events": 3745,
-  "public_accepted_pull_requests": 3744,
+  "public_accepted_merge_events": 3748,
+  "public_accepted_pull_requests": 3747,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46383.09,
-    "high": 63033.08,
-    "low": 34369.94
+    "base": 46408.41,
+    "high": 63067.26,
+    "low": 34388.93
   },
   "updated_at_utc": "2026-11-08",
   "window": {
@@ -124228,6 +124228,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(slideshow-risk): do not count unspecified camera movement as movement for cinematic claims",
       "url": "https://github.com/calesthio/OpenMontage/pull/816",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-27T05:36:05Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.32,
+        "high": 11.23,
+        "low": 6.24
+      },
+      "merged_at": "2026-11-08T00:54:50Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.32,
+          "high": 11.23,
+          "low": 6.24
+        }
+      },
+      "project": "Panniantong/Agent-Reach",
+      "pull_request": 864,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(youtube): preserve subtitle cue text and omit metadata",
+      "url": "https://github.com/Panniantong/Agent-Reach/pull/864",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-27T05:13:25Z",
+      "evidence": {
+        "additions": 65,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.1,
+        "high": 12.28,
+        "low": 6.82
+      },
+      "merged_at": "2026-11-08T00:55:08Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.1,
+          "high": 12.28,
+          "low": 6.82
+        }
+      },
+      "project": "Panniantong/Agent-Reach",
+      "pull_request": 863,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(update): report failed setup in the installed copy",
+      "url": "https://github.com/Panniantong/Agent-Reach/pull/863",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-02T16:22:03Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.9,
+        "high": 10.67,
+        "low": 5.93
+      },
+      "merged_at": "2026-11-08T00:55:52Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.9,
+          "high": 10.67,
+          "low": 5.93
+        }
+      },
+      "project": "Panniantong/Agent-Reach",
+      "pull_request": 745,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(config): reject malformed YAML before saving configuration",
+      "url": "https://github.com/Panniantong/Agent-Reach/pull/745",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
