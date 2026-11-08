@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.32,
-    "high": 92.84,
-    "low": 50.63
+    "base": 68.38,
+    "high": 92.92,
+    "low": 50.68
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1171.7,
+  "engineer_weeks_at_40h": 1172.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 96.16,
-        "high": 130.57,
-        "low": 71.37
+        "base": 98.81,
+        "high": 134.17,
+        "low": 73.35
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -415,26 +415,26 @@
       "month": "2026-11",
       "owned_private_commits": 419,
       "owned_private_coverage": "partial",
-      "owned_public_commits": 54,
+      "owned_public_commits": 63,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 175,
-      "public_merged_pull_requests": 283,
-      "public_prs_with_work": 145,
-      "repository_default_branch_commits": 473,
+      "public_authored_pr_commits": 180,
+      "public_merged_pull_requests": 288,
+      "public_prs_with_work": 150,
+      "repository_default_branch_commits": 482,
       "skilled_human_equivalent_hours": {
-        "base": 1538.58,
-        "high": 2089.14,
-        "low": 1141.97
+        "base": 1581.03,
+        "high": 2146.69,
+        "low": 1173.58
       }
     }
   ],
   "owned_private_commits": 8095,
   "owned_private_through_utc": "2026-11-03",
-  "owned_public_commits": 878,
+  "owned_public_commits": 887,
   "owned_public_through_utc": "2026-11-08",
-  "public_accepted_merge_events": 3753,
-  "public_accepted_pull_requests": 3752,
+  "public_accepted_merge_events": 3758,
+  "public_accepted_pull_requests": 3757,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -443,13 +443,13 @@
   ],
   "public_reused_commit_entries_excluded": 555,
   "repository_count": 94,
-  "repository_default_branch_non_merge_commits": 8973,
+  "repository_default_branch_non_merge_commits": 8982,
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46867.86,
-    "high": 63687.78,
-    "low": 34733.24
+    "base": 46910.31,
+    "high": 63745.33,
+    "low": 34764.85
   },
   "updated_at_utc": "2026-11-08",
   "window": {
@@ -124502,6 +124502,171 @@
       "reused_implementation_commit_entries_excluded": 227,
       "title": "fix(post-tool-verifier): stop truncating compaction percent overrides",
       "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4603",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:25:05Z",
+      "evidence": {
+        "additions": 55,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.6,
+        "high": 11.61,
+        "low": 6.45
+      },
+      "merged_at": "2026-11-08T05:26:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.6,
+          "high": 11.61,
+          "low": 6.45
+        }
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 2179,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(attribution): degrade asset-class Brinson when a class member is unpriced",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/2179",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:25:27Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.01,
+        "high": 10.81,
+        "low": 6.01
+      },
+      "merged_at": "2026-11-08T05:26:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.01,
+          "high": 10.81,
+          "low": 6.01
+        }
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 2180,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(alpha-bench): skip single-observation IC series in the strict bench",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/2180",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:26:02Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.26,
+        "high": 9.8,
+        "low": 5.45
+      },
+      "merged_at": "2026-11-08T05:26:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.26,
+          "high": 9.8,
+          "low": 5.45
+        }
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 2181,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(combination): keep a missing weight missing in a later rebalance row",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/2181",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:26:21Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.21,
+        "high": 9.74,
+        "low": 5.41
+      },
+      "merged_at": "2026-11-08T05:26:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.21,
+          "high": 9.74,
+          "low": 5.41
+        }
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 2182,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(comps): reject a non-finite target book value",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/2182",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-07T19:26:36Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.62,
+        "high": 8.94,
+        "low": 4.97
+      },
+      "merged_at": "2026-11-08T05:26:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.62,
+          "high": 8.94,
+          "low": 4.97
+        }
+      },
+      "project": "HKUDS/Vibe-Trading",
+      "pull_request": 2183,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(backtest): keep fast-path margin positive at a negative entry price",
+      "url": "https://github.com/HKUDS/Vibe-Trading/pull/2183",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
