@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.51,
-    "high": 93.09,
-    "low": 50.77
+    "base": 68.58,
+    "high": 93.18,
+    "low": 50.82
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1174.9,
+  "engineer_weeks_at_40h": 1176.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 104.25,
-        "high": 141.5,
-        "low": 77.42
+        "base": 107.1,
+        "high": 145.35,
+        "low": 79.56
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 63,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 208,
-      "public_merged_pull_requests": 293,
-      "public_prs_with_work": 155,
+      "public_authored_pr_commits": 214,
+      "public_merged_pull_requests": 299,
+      "public_prs_with_work": 161,
       "repository_default_branch_commits": 482,
       "skilled_human_equivalent_hours": {
-        "base": 1667.99,
-        "high": 2264.07,
-        "low": 1238.79
+        "base": 1713.57,
+        "high": 2325.58,
+        "low": 1272.96
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 887,
   "owned_public_through_utc": "2026-11-08",
-  "public_accepted_merge_events": 3763,
-  "public_accepted_pull_requests": 3762,
+  "public_accepted_merge_events": 3769,
+  "public_accepted_pull_requests": 3768,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46997.27,
-    "high": 63862.71,
-    "low": 34830.06
+    "base": 47042.85,
+    "high": 63924.22,
+    "low": 34864.23
   },
   "updated_at_utc": "2026-11-08",
   "window": {
@@ -124832,6 +124832,204 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(api): select the full GLM-5.3 prompt contract from checkpoint metadata",
       "url": "https://github.com/JustVugg/colibri/pull/2552",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:29:57Z",
+      "evidence": {
+        "additions": 16,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.06,
+        "high": 9.52,
+        "low": 5.29
+      },
+      "merged_at": "2026-11-08T20:47:05Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.06,
+          "high": 9.52,
+          "low": 5.29
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5474,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(openclaw): keep a one-word numeric query in /claude-mem-search",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5474",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:30:09Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.54,
+        "high": 10.18,
+        "low": 5.65
+      },
+      "merged_at": "2026-11-08T20:49:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.54,
+          "high": 10.18,
+          "low": 5.65
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5475,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(openclaw): stamp platformSource \"openclaw\" on worker session posts",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5475",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:30:24Z",
+      "evidence": {
+        "additions": 55,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.01,
+        "high": 12.16,
+        "low": 6.75
+      },
+      "merged_at": "2026-11-08T20:49:54Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.01,
+          "high": 12.16,
+          "low": 6.75
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5476,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(prompt-import): read Claude Code transcripts and settings from CLAUDE_CONFIG_DIR",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5476",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:30:55Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.36,
+        "high": 9.93,
+        "low": 5.52
+      },
+      "merged_at": "2026-11-08T20:50:21Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.36,
+          "high": 9.93,
+          "low": 5.52
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5477,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): rotate the legacy SERVER_BETA key when the canonical key is blank",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5477",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:31:32Z",
+      "evidence": {
+        "additions": 14,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.35,
+        "high": 9.92,
+        "low": 5.51
+      },
+      "merged_at": "2026-11-08T20:50:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.35,
+          "high": 9.92,
+          "low": 5.51
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5478,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): keep surrogate pairs whole when truncating event payloads in the generation prompt",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5478",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:32:02Z",
+      "evidence": {
+        "additions": 19,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.26,
+        "high": 9.8,
+        "low": 5.45
+      },
+      "merged_at": "2026-11-08T20:51:19Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.26,
+          "high": 9.8,
+          "low": 5.45
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5479,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(timeline): read a \"#123\" observation anchor as an id, not a date",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5479",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
