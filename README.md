@@ -228,7 +228,7 @@ All 105 verified upstream projects are shown here. **[Open the sortable evidence
 <!-- contribution-stats:end -->
 
 <!-- refresh-health:start -->
-<sub>Evidence snapshot: 2026-11-08 UTC. Private-work coverage through 2026-11-03. [Refresh status](./data/refresh-health.json) · [Refresh runs](https://github.com/rudycelekli/rudycelekli/actions/workflows/refresh-contribution-stats.yml)</sub>
+<sub>Evidence snapshot: 2026-11-08 UTC. Refresh delayed; showing the previous validated snapshot. Private-work coverage through 2026-11-03. [Refresh status](./data/refresh-health.json) · [Refresh runs](https://github.com/rudycelekli/rudycelekli/actions/workflows/refresh-contribution-stats.yml)</sub>
 <!-- refresh-health:end -->
 
 ## Agentic Power over time
