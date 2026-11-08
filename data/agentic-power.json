@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.46,
-    "high": 93.03,
-    "low": 50.74
+    "base": 68.51,
+    "high": 93.09,
+    "low": 50.77
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1174.1,
+  "engineer_weeks_at_40h": 1174.9,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 102.18,
-        "high": 138.71,
-        "low": 75.87
+        "base": 104.25,
+        "high": 141.5,
+        "low": 77.42
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 63,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 204,
-      "public_merged_pull_requests": 291,
-      "public_prs_with_work": 153,
+      "public_authored_pr_commits": 208,
+      "public_merged_pull_requests": 293,
+      "public_prs_with_work": 155,
       "repository_default_branch_commits": 482,
       "skilled_human_equivalent_hours": {
-        "base": 1634.89,
-        "high": 2219.39,
-        "low": 1213.97
+        "base": 1667.99,
+        "high": 2264.07,
+        "low": 1238.79
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 887,
   "owned_public_through_utc": "2026-11-08",
-  "public_accepted_merge_events": 3761,
-  "public_accepted_pull_requests": 3760,
+  "public_accepted_merge_events": 3763,
+  "public_accepted_pull_requests": 3762,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46964.17,
-    "high": 63818.03,
-    "low": 34805.24
+    "base": 46997.27,
+    "high": 63862.71,
+    "low": 34830.06
   },
   "updated_at_utc": "2026-11-08",
   "window": {
@@ -124766,6 +124766,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Preserve carriage returns through XML output round trips",
       "url": "https://github.com/antchfx/jsonquery/pull/32",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T18:55:32Z",
+      "evidence": {
+        "additions": 732,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 79,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 19.72,
+        "high": 26.62,
+        "low": 14.79
+      },
+      "merged_at": "2026-11-08T14:10:00Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 19.72,
+          "high": 26.62,
+          "low": 14.79
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2558,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(proxy): cancel confirmed resets and close upstream responses",
+      "url": "https://github.com/JustVugg/colibri/pull/2558",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T14:55:47Z",
+      "evidence": {
+        "additions": 217,
+        "changed_files": 6,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.38,
+        "high": 18.06,
+        "low": 10.03
+      },
+      "merged_at": "2026-11-08T14:10:01Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 13.38,
+          "high": 18.06,
+          "low": 10.03
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2552,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(api): select the full GLM-5.3 prompt contract from checkpoint metadata",
+      "url": "https://github.com/JustVugg/colibri/pull/2552",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
