@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.66,
-    "high": 91.95,
-    "low": 50.14
+    "base": 68.16,
+    "high": 92.62,
+    "low": 50.51
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1160.4,
+  "engineer_weeks_at_40h": 1168.9,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 554.62,
-        "high": 749.73,
-        "low": 414.99
+        "base": 559.97,
+        "high": 756.95,
+        "low": 419.0
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4448,
+      "public_authored_pr_commits": 4455,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3260,
+      "public_prs_with_work": 3262,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34386.31,
-        "high": 46483.06,
-        "low": 25729.29
+        "base": 34718.15,
+        "high": 46931.04,
+        "low": 25978.17
       }
     },
     {
       "agentic_power_x": {
-        "base": 92.0,
-        "high": 124.93,
-        "low": 68.27
+        "base": 92.45,
+        "high": 125.55,
+        "low": 68.61
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 43,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 173,
-      "public_merged_pull_requests": 279,
-      "public_prs_with_work": 143,
+      "public_authored_pr_commits": 174,
+      "public_merged_pull_requests": 282,
+      "public_prs_with_work": 144,
       "repository_default_branch_commits": 462,
       "skilled_human_equivalent_hours": {
-        "base": 1471.92,
-        "high": 1998.88,
-        "low": 1092.25
+        "base": 1479.28,
+        "high": 2008.81,
+        "low": 1097.77
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 867,
   "owned_public_through_utc": "2026-11-08",
-  "public_accepted_merge_events": 3749,
-  "public_accepted_pull_requests": 3748,
+  "public_accepted_merge_events": 3752,
+  "public_accepted_pull_requests": 3751,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46415.56,
-    "high": 63076.91,
-    "low": 34394.29
+    "base": 46754.76,
+    "high": 63534.82,
+    "low": 34648.69
   },
   "updated_at_utc": "2026-11-08",
   "window": {
@@ -124360,6 +124360,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "A full-width yen sign is read as the currency, so \"\uffe55,000\u4e07\" is 50000000 instead of no value",
       "url": "https://github.com/deeplethe/utopia/pull/1442",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T02:29:39Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 7.36,
+        "high": 9.93,
+        "low": 5.52
+      },
+      "merged_at": "2026-11-08T02:35:35Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.36,
+          "high": 9.93,
+          "low": 5.52
+        }
+      },
+      "project": "headroomlabs-ai/headroom",
+      "pull_request": 4673,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(init): handle non-UTF-8 directory names when deriving the init profile",
+      "url": "https://github.com/headroomlabs-ai/headroom/pull/4673",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T15:31:19Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.6,
+        "high": 10.26,
+        "low": 5.7
+      },
+      "merged_at": "2026-11-08T02:47:27Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.6,
+          "high": 10.26,
+          "low": 5.7
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1430,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "A date written with \"Sept.\" is read, so \"Sept. 30, 2025\" becomes 2025-09-30 instead of no value",
+      "url": "https://github.com/deeplethe/utopia/pull/1430",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-25T16:20:28Z",
+      "evidence": {
+        "additions": 57522,
+        "changed_files": 1337,
+        "comments": 2,
+        "commits": 329,
+        "deletions": 50266,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 324.24,
+        "high": 437.72,
+        "low": 243.18
+      },
+      "merged_at": "2026-11-08T02:52:04Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 324.24,
+          "high": 437.72,
+          "low": 243.18
+        }
+      },
+      "project": "Yeachan-Heo/oh-my-claudecode",
+      "pull_request": 4602,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(notifications): accept approval keywords followed by punctuation",
+      "url": "https://github.com/Yeachan-Heo/oh-my-claudecode/pull/4602",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
