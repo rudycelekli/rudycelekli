@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.44,
-    "high": 93.0,
-    "low": 50.72
+    "base": 68.46,
+    "high": 93.03,
+    "low": 50.74
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1173.7,
+  "engineer_weeks_at_40h": 1174.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 101.16,
-        "high": 137.34,
-        "low": 75.11
+        "base": 102.18,
+        "high": 138.71,
+        "low": 75.87
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 63,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 202,
-      "public_merged_pull_requests": 289,
-      "public_prs_with_work": 151,
+      "public_authored_pr_commits": 204,
+      "public_merged_pull_requests": 291,
+      "public_prs_with_work": 153,
       "repository_default_branch_commits": 482,
       "skilled_human_equivalent_hours": {
-        "base": 1618.63,
-        "high": 2197.45,
-        "low": 1201.78
+        "base": 1634.89,
+        "high": 2219.39,
+        "low": 1213.97
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 887,
   "owned_public_through_utc": "2026-11-08",
-  "public_accepted_merge_events": 3759,
-  "public_accepted_pull_requests": 3758,
+  "public_accepted_merge_events": 3761,
+  "public_accepted_pull_requests": 3760,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46947.91,
-    "high": 63796.09,
-    "low": 34793.05
+    "base": 46964.17,
+    "high": 63818.03,
+    "low": 34805.24
   },
   "updated_at_utc": "2026-11-08",
   "window": {
@@ -124700,6 +124700,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: community batch, November (21 fixes, one commit each)",
       "url": "https://github.com/debpalash/VoiceStudio/pull/3819",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T16:52:14Z",
+      "evidence": {
+        "additions": 47,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.29,
+        "high": 11.18,
+        "low": 6.21
+      },
+      "merged_at": "2026-11-08T12:21:55Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.29,
+          "high": 11.18,
+          "low": 6.21
+        }
+      },
+      "project": "antchfx/jsonquery",
+      "pull_request": 31,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve JSON null spelling in text and XML output",
+      "url": "https://github.com/antchfx/jsonquery/pull/31",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T16:52:18Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.97,
+        "high": 10.76,
+        "low": 5.98
+      },
+      "merged_at": "2026-11-08T12:23:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.97,
+          "high": 10.76,
+          "low": 5.98
+        }
+      },
+      "project": "antchfx/jsonquery",
+      "pull_request": 32,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve carriage returns through XML output round trips",
+      "url": "https://github.com/antchfx/jsonquery/pull/32",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
