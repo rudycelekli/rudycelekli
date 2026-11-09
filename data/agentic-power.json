@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.52,
-    "high": 93.11,
-    "low": 50.78
+    "base": 68.55,
+    "high": 93.16,
+    "low": 50.81
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1178.6,
+  "engineer_weeks_at_40h": 1179.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 91.33,
-        "high": 124.78,
-        "low": 67.0
+        "base": 91.69,
+        "high": 125.26,
+        "low": 67.27
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,14 +354,14 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 513,
+      "public_authored_pr_commits": 515,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 372,
+      "public_prs_with_work": 374,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5480.08,
-        "high": 7486.82,
-        "low": 4020.27
+        "base": 5501.34,
+        "high": 7515.53,
+        "low": 4036.22
       }
     },
     {
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 100.76,
-        "high": 136.74,
-        "low": 74.87
+        "base": 100.85,
+        "high": 136.85,
+        "low": 74.93
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -415,26 +415,26 @@
       "month": "2026-11",
       "owned_private_commits": 419,
       "owned_private_coverage": "partial",
-      "owned_public_commits": 82,
+      "owned_public_commits": 85,
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 224,
-      "public_merged_pull_requests": 308,
+      "public_merged_pull_requests": 310,
       "public_prs_with_work": 170,
-      "repository_default_branch_commits": 501,
+      "repository_default_branch_commits": 504,
       "skilled_human_equivalent_hours": {
-        "base": 1813.75,
-        "high": 2461.29,
-        "low": 1347.61
+        "base": 1815.25,
+        "high": 2463.39,
+        "low": 1348.66
       }
     }
   ],
   "owned_private_commits": 8095,
   "owned_private_through_utc": "2026-11-03",
-  "owned_public_commits": 906,
+  "owned_public_commits": 909,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3778,
-  "public_accepted_pull_requests": 3777,
+  "public_accepted_merge_events": 3780,
+  "public_accepted_pull_requests": 3779,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -443,13 +443,13 @@
   ],
   "public_reused_commit_entries_excluded": 555,
   "repository_count": 94,
-  "repository_default_branch_non_merge_commits": 9001,
+  "repository_default_branch_non_merge_commits": 9004,
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47143.03,
-    "high": 64059.93,
-    "low": 34938.88
+    "base": 47165.79,
+    "high": 64090.74,
+    "low": 34955.88
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -125327,6 +125327,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(perimeters): show a 0.25-acre fire as 0.25 ac, not 0 ac",
       "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1569",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-09-29T07:01:12Z",
+      "evidence": {
+        "additions": 58,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.09,
+        "high": 13.63,
+        "low": 7.57
+      },
+      "merged_at": "2026-11-09T15:02:59Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 10.09,
+          "high": 13.63,
+          "low": 7.57
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1088,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(agent-memory): avoid NaN panics in search and compaction ranking",
+      "url": "https://github.com/ruvnet/RuVector/pull/1088",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-29T09:01:18Z",
+      "evidence": {
+        "additions": 135,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 21,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.17,
+        "high": 15.08,
+        "low": 8.38
+      },
+      "merged_at": "2026-11-09T15:03:03Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 11.17,
+          "high": 15.08,
+          "low": 8.38
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1090,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(lsm-ann): prevent NaN panics across search tiers",
+      "url": "https://github.com/ruvnet/RuVector/pull/1090",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
