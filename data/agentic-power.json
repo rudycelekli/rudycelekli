@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.61,
-    "high": 93.24,
-    "low": 50.85
+    "base": 68.96,
+    "high": 93.7,
+    "low": 51.11
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1180.2,
+  "engineer_weeks_at_40h": 1186.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 100.88,
-        "high": 136.89,
-        "low": 74.94
+        "base": 113.92,
+        "high": 154.51,
+        "low": 84.73
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 224,
-      "public_merged_pull_requests": 314,
-      "public_prs_with_work": 170,
+      "public_authored_pr_commits": 256,
+      "public_merged_pull_requests": 346,
+      "public_prs_with_work": 202,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 1815.75,
-        "high": 2464.09,
-        "low": 1349.01
+        "base": 2050.63,
+        "high": 2781.18,
+        "low": 1525.16
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3784,
-  "public_accepted_pull_requests": 3783,
+  "public_accepted_merge_events": 3816,
+  "public_accepted_pull_requests": 3815,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47206.57,
-    "high": 64145.8,
-    "low": 34986.43
+    "base": 47441.45,
+    "high": 64462.89,
+    "low": 35162.58
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -35571,11 +35571,11 @@
           "low": 7.24
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 136,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(telegram): deliver complete task results within message limits",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/136",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/136",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -35604,11 +35604,11 @@
           "low": 7.91
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 134,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(schedules): honor standard crontab weekday and restricted-day semantics",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/134",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/134",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -35637,11 +35637,11 @@
           "low": 6.78
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 135,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(database): preserve reserved characters in connection credentials",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/135",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/135",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -35675,11 +35675,11 @@
           "low": 5.06
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 137,
       "reused_implementation_commit_entries_excluded": 1,
       "title": "fix(telegram): observe tasks for their full execution budget",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/137",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/137",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -35708,11 +35708,11 @@
           "low": 6.21
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 138,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(permissions): honor decisions in the final polling interval",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/138",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/138",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -35741,11 +35741,11 @@
           "low": 10.39
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 139,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(sandboxes): replace remotely deleted active sandboxes",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/139",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/139",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -35774,11 +35774,11 @@
           "low": 8.12
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 140,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(tasks): record failed credential and hook setup",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/140",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/140",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -35807,11 +35807,11 @@
           "low": 7.96
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 141,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(tasks): read completed stdout logs before parsing results",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/141",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/141",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49342,11 +49342,11 @@
           "low": 8.46
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 142,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(tasks): create sessions when replying to pre-launch failures",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/142",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/142",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49375,11 +49375,11 @@
           "low": 7.08
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 145,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(tasks): record non-object result output as failed",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/145",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/145",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49408,11 +49408,11 @@
           "low": 10.79
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 149,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(tasks): serialize reply admission within a conversation",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/149",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/149",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49441,11 +49441,11 @@
           "low": 7.67
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 147,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(telegram): deliver complete schedule lists within message limits",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/147",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/147",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49474,11 +49474,11 @@
           "low": 7.08
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 150,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(web): display structured validation error details",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/150",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/150",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49507,11 +49507,11 @@
           "low": 3.36
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 152,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "docs: require supported Node version for web setup",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/152",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/152",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49540,11 +49540,11 @@
           "low": 6.09
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 153,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(dev): validate required permission hook settings upfront",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/153",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/153",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49573,11 +49573,11 @@
           "low": 7.75
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 154,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(dev): stop the stack when a service exits",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/154",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/154",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -49606,11 +49606,11 @@
           "low": 6.89
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 143,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(web): refresh scheduled task outcomes without stale overwrites",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/143",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/143",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -81070,11 +81070,11 @@
           "low": 8.59
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 158,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(permissions): classify branch and remote mutations correctly",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/158",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/158",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -94676,11 +94676,11 @@
           "low": 7.84
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 161,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: retain future routine occurrences carried across clock gaps",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/161",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/161",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -118126,11 +118126,11 @@
           "low": 4.85
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 199,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(chat): keep a # that ends a Markdown heading word",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/199",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/199",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -118159,11 +118159,11 @@
           "low": 5.37
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 200,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(chat): keep balanced parentheses in Markdown link targets",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/200",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/200",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -118192,11 +118192,11 @@
           "low": 4.58
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 201,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(sentinel): redact UNC paths in health-scan titles",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/201",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/201",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -118225,11 +118225,11 @@
           "low": 6.43
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 205,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Allow a prefix when ; or > is only inside quotes",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/205",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/205",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -118258,11 +118258,11 @@
           "low": 8.35
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 203,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Don't treat a dated example inside a code fence as a memory",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/203",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/203",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -118291,11 +118291,11 @@
           "low": 6.56
         }
       },
-      "project": "Anil-matcha/open-duet",
+      "project": "Anil-matcha/suparagent",
       "pull_request": 202,
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(memory): keep a comma inside a quoted topic alias",
-      "url": "https://github.com/Anil-matcha/open-duet/pull/202",
+      "url": "https://github.com/Anil-matcha/suparagent/pull/202",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     },
     {
@@ -125525,6 +125525,1062 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(session-start): tolerate malformed run summary schemas",
       "url": "https://github.com/tigerless-labs/autoharness/pull/222",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:10:18Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.41,
+        "high": 8.65,
+        "low": 4.81
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.41,
+          "high": 8.65,
+          "low": 4.81
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2077,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(wiki): treat a protocol-relative link destination as external",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2077",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:11:20Z",
+      "evidence": {
+        "additions": 43,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.87,
+        "high": 10.62,
+        "low": 5.9
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.87,
+          "high": 10.62,
+          "low": 5.9
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2078,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(consolidate): stop flagging pinned and compacted pages as stale in lint",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2078",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:13:49Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.88,
+        "high": 9.29,
+        "low": 5.16
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.88,
+          "high": 9.29,
+          "low": 5.16
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2081,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): match home drive routes against a backslash Windows cwd",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2081",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-07T20:14:14Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.73,
+        "high": 9.09,
+        "low": 5.05
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.73,
+          "high": 9.09,
+          "low": 5.05
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2082,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): refuse a blank message recipient instead of delivering to the current project",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2082",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:14:19Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.7,
+        "high": 10.39,
+        "low": 5.77
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.7,
+          "high": 10.39,
+          "low": 5.77
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2083,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(llm): find the JSON answer after braced prose",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2083",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:15:28Z",
+      "evidence": {
+        "additions": 23,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.05,
+        "high": 9.52,
+        "low": 5.29
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.05,
+          "high": 9.52,
+          "low": 5.29
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2084,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(consolidate): keep a rule titled after a DOS device on a portable path",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2084",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-07T20:16:49Z",
+      "evidence": {
+        "additions": 42,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.77,
+        "high": 9.13,
+        "low": 5.07
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.77,
+          "high": 9.13,
+          "low": 5.07
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2085,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(admin): answer a reject of an already-decided proposal with 409, not 500",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2085",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:17:31Z",
+      "evidence": {
+        "additions": 63,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.86,
+        "high": 11.96,
+        "low": 6.64
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.86,
+          "high": 11.96,
+          "low": 6.64
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2086,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(web): show a project refusal instead of redirecting to change-password",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2086",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:18:35Z",
+      "evidence": {
+        "additions": 3,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.86,
+        "high": 7.91,
+        "low": 4.39
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.86,
+          "high": 7.91,
+          "low": 4.39
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2087,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): say \"ago\" once in the pending-handoff notice",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2087",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:19:31Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.66,
+        "high": 10.35,
+        "low": 5.75
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.66,
+          "high": 10.35,
+          "low": 5.75
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2088,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(store): keep accented Latin words whole in query-signal similarity",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2088",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:20:35Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.9,
+        "high": 10.67,
+        "low": 5.93
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.9,
+          "high": 10.67,
+          "low": 5.93
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2089,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): keep bare tool-family labels out of session titles and summaries",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2089",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:20:39Z",
+      "evidence": {
+        "additions": 17,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.76,
+        "high": 9.12,
+        "low": 5.07
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.76,
+          "high": 9.12,
+          "low": 5.07
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2090,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): count a recap prompt with no room for its text as omitted",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2090",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:20:44Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.91,
+        "high": 9.33,
+        "low": 5.18
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.91,
+          "high": 9.33,
+          "low": 5.18
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2091,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): split acknowledgment phrases on any whitespace",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2091",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:23:51Z",
+      "evidence": {
+        "additions": 64,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.48,
+        "high": 11.45,
+        "low": 6.36
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.48,
+          "high": 11.45,
+          "low": 6.36
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2092,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): read a blank handoff-accept cwd as omitted",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2092",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:23:57Z",
+      "evidence": {
+        "additions": 37,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.7,
+        "high": 10.39,
+        "low": 5.77
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.7,
+          "high": 10.39,
+          "low": 5.77
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2093,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(web): read a blank session jump field as omitted, not a 400",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2093",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:24:26Z",
+      "evidence": {
+        "additions": 56,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.34,
+        "high": 11.25,
+        "low": 6.25
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.34,
+          "high": 11.25,
+          "low": 6.25
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2094,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(core): skip fenced code in the SessionStart brief excerpt",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2094",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:24:50Z",
+      "evidence": {
+        "additions": 16,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.65,
+        "high": 8.98,
+        "low": 4.99
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.65,
+          "high": 8.98,
+          "low": 4.99
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2095,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(core): recognize a hook ledger saved with a UTF-8 BOM",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2095",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:25:10Z",
+      "evidence": {
+        "additions": 8,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.27,
+        "high": 8.47,
+        "low": 4.7
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.27,
+          "high": 8.47,
+          "low": 4.7
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2096,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(workstream): keep Kimi's native tool-call ids on appended messages",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2096",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:25:15Z",
+      "evidence": {
+        "additions": 8,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.27,
+        "high": 8.47,
+        "low": 4.7
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.27,
+          "high": 8.47,
+          "low": 4.7
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2097,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(workstream): keep Grok's native tool-call ids on tool calls and results",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2097",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:25:20Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.04,
+        "high": 8.15,
+        "low": 4.53
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.04,
+          "high": 8.15,
+          "low": 4.53
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2098,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(workstream): keep a %+X sequence verbatim when decoding a file URI",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2098",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:25:24Z",
+      "evidence": {
+        "additions": 45,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.13,
+        "high": 10.97,
+        "low": 6.09
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.13,
+          "high": 10.97,
+          "low": 6.09
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2099,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(workstream): launch Codex's e, a and cloud-tasks aliases like their full names",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2099",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:26:29Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.63,
+        "high": 11.65,
+        "low": 6.47
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.63,
+          "high": 11.65,
+          "low": 6.47
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2100,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(admin): saturate the handoff expiry cutoff instead of wrapping it",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2100",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:27:22Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.47,
+        "high": 10.09,
+        "low": 5.61
+      },
+      "merged_at": "2026-11-09T17:53:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.47,
+          "high": 10.09,
+          "low": 5.61
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2101,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(consolidate): group lint duplicate titles across whitespace like the collision guard",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2101",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:03:06Z",
+      "evidence": {
+        "additions": 73,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.07,
+        "high": 12.25,
+        "low": 6.8
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.07,
+          "high": 12.25,
+          "low": 6.8
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2070,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(backup): keep plugin manifest directories in backup-agents archives",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2070",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:03:11Z",
+      "evidence": {
+        "additions": 17,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.76,
+        "high": 9.12,
+        "low": 5.07
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.76,
+          "high": 9.12,
+          "low": 5.07
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2071,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): keep a mounted server_url's path from doubling on spool retry",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2071",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:03:16Z",
+      "evidence": {
+        "additions": 29,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.31,
+        "high": 9.87,
+        "low": 5.49
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.31,
+          "high": 9.87,
+          "low": 5.49
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2072,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(install-mcp): drop the MCP URL's query before peeling /mcp in Pi guidance",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2072",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:03:21Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.91,
+        "high": 9.33,
+        "low": 5.18
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.91,
+          "high": 9.33,
+          "low": 5.18
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2073,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): keep a BOM from hiding a home route header on the first line",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2073",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:05:12Z",
+      "evidence": {
+        "additions": 24,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.14,
+        "high": 9.65,
+        "low": 5.36
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.14,
+          "high": 9.65,
+          "low": 5.36
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2074,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(consolidate): keep fenced code out of the A2 compaction summary",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2074",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:07:45Z",
+      "evidence": {
+        "additions": 34,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.8,
+        "high": 10.53,
+        "low": 5.85
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.8,
+          "high": 10.53,
+          "low": 5.85
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2075,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(init): keep the token pepper when --force rewrites the config",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2075",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:08:45Z",
+      "evidence": {
+        "additions": 45,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.0,
+        "high": 10.8,
+        "low": 6.0
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.0,
+          "high": 10.8,
+          "low": 6.0
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2076,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(workstream): skip a non-UTF-8 transcript line when following a Claude /clear",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2076",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:13:21Z",
+      "evidence": {
+        "additions": 14,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.86,
+        "high": 10.61,
+        "low": 5.9
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.86,
+          "high": 10.61,
+          "low": 5.9
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2079,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): treat an inbox-notice-only marker as a settings boundary in script hooks",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2079",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T20:13:44Z",
+      "evidence": {
+        "additions": 11,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.69,
+        "high": 9.03,
+        "low": 5.02
+      },
+      "merged_at": "2026-11-09T17:53:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.69,
+          "high": 9.03,
+          "low": 5.02
+        }
+      },
+      "project": "akitaonrails/ai-memory",
+      "pull_request": 2080,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): split a home route without globbing its aliases",
+      "url": "https://github.com/akitaonrails/ai-memory/pull/2080",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
