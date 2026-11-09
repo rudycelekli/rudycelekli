@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.55,
-    "high": 93.16,
-    "low": 50.81
+    "base": 68.57,
+    "high": 93.18,
+    "low": 50.82
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1179.1,
+  "engineer_weeks_at_40h": 1179.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 91.69,
-        "high": 125.26,
-        "low": 67.27
+        "base": 91.85,
+        "high": 125.48,
+        "low": 67.39
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,14 +354,14 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 515,
+      "public_authored_pr_commits": 516,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 374,
+      "public_prs_with_work": 375,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5501.34,
-        "high": 7515.53,
-        "low": 4036.22
+        "base": 5511.24,
+        "high": 7528.89,
+        "low": 4043.64
       }
     },
     {
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 100.85,
-        "high": 136.85,
-        "low": 74.93
+        "base": 100.88,
+        "high": 136.89,
+        "low": 74.94
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -415,26 +415,26 @@
       "month": "2026-11",
       "owned_private_commits": 419,
       "owned_private_coverage": "partial",
-      "owned_public_commits": 85,
+      "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 224,
-      "public_merged_pull_requests": 310,
+      "public_merged_pull_requests": 311,
       "public_prs_with_work": 170,
-      "repository_default_branch_commits": 504,
+      "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 1815.25,
-        "high": 2463.39,
-        "low": 1348.66
+        "base": 1815.75,
+        "high": 2464.09,
+        "low": 1349.01
       }
     }
   ],
   "owned_private_commits": 8095,
   "owned_private_through_utc": "2026-11-03",
-  "owned_public_commits": 909,
+  "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3780,
-  "public_accepted_pull_requests": 3779,
+  "public_accepted_merge_events": 3781,
+  "public_accepted_pull_requests": 3780,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -443,13 +443,13 @@
   ],
   "public_reused_commit_entries_excluded": 555,
   "repository_count": 94,
-  "repository_default_branch_non_merge_commits": 9004,
+  "repository_default_branch_non_merge_commits": 9005,
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47165.79,
-    "high": 64090.74,
-    "low": 34955.88
+    "base": 47176.19,
+    "high": 64104.8,
+    "low": 34963.65
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -125393,6 +125393,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(lsm-ann): prevent NaN panics across search tiers",
       "url": "https://github.com/ruvnet/RuVector/pull/1090",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-29T09:02:08Z",
+      "evidence": {
+        "additions": 93,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 16,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.9,
+        "high": 13.36,
+        "low": 7.42
+      },
+      "merged_at": "2026-11-09T15:43:33Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 9.9,
+          "high": 13.36,
+          "low": 7.42
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1091,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(matryoshka): avoid NaN panics in public search paths",
+      "url": "https://github.com/ruvnet/RuVector/pull/1091",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
