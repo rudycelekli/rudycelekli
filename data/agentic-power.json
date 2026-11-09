@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.57,
-    "high": 93.18,
-    "low": 50.82
+    "base": 68.59,
+    "high": 93.2,
+    "low": 50.83
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1179.4,
+  "engineer_weeks_at_40h": 1179.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 91.85,
-        "high": 125.48,
-        "low": 67.39
+        "base": 92.04,
+        "high": 125.74,
+        "low": 67.54
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,14 +354,14 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 516,
+      "public_authored_pr_commits": 517,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 375,
+      "public_prs_with_work": 376,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5511.24,
-        "high": 7528.89,
-        "low": 4043.64
+        "base": 5522.69,
+        "high": 7544.34,
+        "low": 4052.23
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 224,
-      "public_merged_pull_requests": 311,
+      "public_merged_pull_requests": 312,
       "public_prs_with_work": 170,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3781,
-  "public_accepted_pull_requests": 3780,
+  "public_accepted_merge_events": 3782,
+  "public_accepted_pull_requests": 3781,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47176.19,
-    "high": 64104.8,
-    "low": 34963.65
+    "base": 47187.64,
+    "high": 64120.25,
+    "low": 34972.24
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -125426,6 +125426,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(matryoshka): avoid NaN panics in public search paths",
       "url": "https://github.com/ruvnet/RuVector/pull/1091",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-09-29T10:19:25Z",
+      "evidence": {
+        "additions": 118,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.45,
+        "high": 15.45,
+        "low": 8.59
+      },
+      "merged_at": "2026-11-09T15:52:56Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 11.45,
+          "high": 15.45,
+          "low": 8.59
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1093,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(temporal-coherence): handle non-finite search scores safely",
+      "url": "https://github.com/ruvnet/RuVector/pull/1093",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
