@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.42,
-    "high": 92.97,
-    "low": 50.71
+    "base": 68.45,
+    "high": 93.02,
+    "low": 50.73
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1176.8,
+  "engineer_weeks_at_40h": 1177.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 96.83,
-        "high": 131.41,
-        "low": 71.94
+        "base": 98.13,
+        "high": 133.16,
+        "low": 72.91
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 67,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 217,
-      "public_merged_pull_requests": 302,
-      "public_prs_with_work": 164,
+      "public_authored_pr_commits": 219,
+      "public_merged_pull_requests": 304,
+      "public_prs_with_work": 166,
       "repository_default_branch_commits": 486,
       "skilled_human_equivalent_hours": {
-        "base": 1742.98,
-        "high": 2365.38,
-        "low": 1294.91
+        "base": 1766.32,
+        "high": 2396.88,
+        "low": 1312.41
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 891,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3772,
-  "public_accepted_pull_requests": 3771,
+  "public_accepted_merge_events": 3774,
+  "public_accepted_pull_requests": 3773,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47072.26,
-    "high": 63964.02,
-    "low": 34886.18
+    "base": 47095.6,
+    "high": 63995.52,
+    "low": 34903.68
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -125129,6 +125129,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(claude-md): head folder CLAUDE.md rows with a file that is in the folder",
       "url": "https://github.com/thedotmack/claude-mem/pull/5468",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-07T19:28:00Z",
+      "evidence": {
+        "additions": 110,
+        "changed_files": 7,
+        "comments": 3,
+        "commits": 3,
+        "deletions": 9,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 13.86,
+        "high": 18.71,
+        "low": 10.39
+      },
+      "merged_at": "2026-11-09T06:49:32Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 13.86,
+          "high": 18.71,
+          "low": 10.39
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5469,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): accept --flag=value in server api-key, memory ingest and adopt options",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5469",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:28:37Z",
+      "evidence": {
+        "additions": 52,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.48,
+        "high": 12.79,
+        "low": 7.11
+      },
+      "merged_at": "2026-11-09T06:50:04Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.48,
+          "high": 12.79,
+          "low": 7.11
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5470,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(dsh): keep the configured platformSource on ingested tool memories",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5470",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
