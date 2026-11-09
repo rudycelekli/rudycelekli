@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.5,
-    "high": 93.08,
-    "low": 50.77
+    "base": 68.52,
+    "high": 93.11,
+    "low": 50.78
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1178.2,
+  "engineer_weeks_at_40h": 1178.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 100.03,
-        "high": 135.73,
-        "low": 74.32
+        "base": 100.65,
+        "high": 136.58,
+        "low": 74.79
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -415,26 +415,26 @@
       "month": "2026-11",
       "owned_private_commits": 419,
       "owned_private_coverage": "partial",
-      "owned_public_commits": 76,
+      "owned_public_commits": 78,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 222,
-      "public_merged_pull_requests": 307,
-      "public_prs_with_work": 169,
-      "repository_default_branch_commits": 495,
+      "public_authored_pr_commits": 224,
+      "public_merged_pull_requests": 308,
+      "public_prs_with_work": 170,
+      "repository_default_branch_commits": 497,
       "skilled_human_equivalent_hours": {
-        "base": 1800.47,
-        "high": 2443.21,
-        "low": 1337.8
+        "base": 1811.75,
+        "high": 2458.49,
+        "low": 1346.21
       }
     }
   ],
   "owned_private_commits": 8095,
   "owned_private_through_utc": "2026-11-03",
-  "owned_public_commits": 900,
+  "owned_public_commits": 902,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3777,
-  "public_accepted_pull_requests": 3776,
+  "public_accepted_merge_events": 3778,
+  "public_accepted_pull_requests": 3777,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -443,13 +443,13 @@
   ],
   "public_reused_commit_entries_excluded": 555,
   "repository_count": 94,
-  "repository_default_branch_non_merge_commits": 8995,
+  "repository_default_branch_non_merge_commits": 8997,
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47129.75,
-    "high": 64041.85,
-    "low": 34929.07
+    "base": 47141.03,
+    "high": 64057.13,
+    "low": 34937.48
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -125294,6 +125294,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(launcher): expand a leading ~ in CLAUDE_MEM_DATA_DIR when recording an empty hook payload",
       "url": "https://github.com/thedotmack/claude-mem/pull/5473",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-05T03:10:08Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.28,
+        "high": 13.88,
+        "low": 7.71
+      },
+      "merged_at": "2026-11-09T13:39:29Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.28,
+          "high": 13.88,
+          "low": 7.71
+        }
+      },
+      "project": "bilawalsidhu/gods-eye-view",
+      "pull_request": 1569,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(perimeters): show a 0.25-acre fire as 0.25 ac, not 0 ac",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1569",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
