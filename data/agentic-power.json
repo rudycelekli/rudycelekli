@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.96,
-    "high": 93.7,
-    "low": 51.11
+    "base": 69.0,
+    "high": 93.76,
+    "low": 51.14
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1186.0,
+  "engineer_weeks_at_40h": 1186.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 561.14,
-        "high": 758.54,
-        "low": 419.88
+        "base": 561.37,
+        "high": 758.85,
+        "low": 420.05
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4459,
+      "public_authored_pr_commits": 4461,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3265,
+      "public_prs_with_work": 3266,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34790.88,
-        "high": 47029.22,
-        "low": 26032.71
+        "base": 34805.14,
+        "high": 47048.47,
+        "low": 26043.4
       }
     },
     {
       "agentic_power_x": {
-        "base": 113.92,
-        "high": 154.51,
-        "low": 84.73
+        "base": 114.82,
+        "high": 155.71,
+        "low": 85.4
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 256,
-      "public_merged_pull_requests": 346,
-      "public_prs_with_work": 202,
+      "public_authored_pr_commits": 259,
+      "public_merged_pull_requests": 348,
+      "public_prs_with_work": 204,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2050.63,
-        "high": 2781.18,
-        "low": 1525.16
+        "base": 2066.68,
+        "high": 2802.85,
+        "low": 1537.2
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3816,
-  "public_accepted_pull_requests": 3815,
+  "public_accepted_merge_events": 3818,
+  "public_accepted_pull_requests": 3817,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47441.45,
-    "high": 64462.89,
-    "low": 35162.58
+    "base": 47471.76,
+    "high": 64503.81,
+    "low": 35185.31
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -126581,6 +126581,77 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(hooks): split a home route without globbing its aliases",
       "url": "https://github.com/akitaonrails/ai-memory/pull/2080",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-27T05:44:22Z",
+      "evidence": {
+        "additions": 423,
+        "changed_files": 4,
+        "comments": 4,
+        "commits": 13,
+        "deletions": 22,
+        "reviews": 5
+      },
+      "heh": {
+        "base": 21.39,
+        "high": 28.88,
+        "low": 16.04
+      },
+      "merged_at": "2026-11-09T18:21:16Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 14.26,
+          "high": 19.25,
+          "low": 10.69
+        },
+        "2026-11": {
+          "base": 7.13,
+          "high": 9.63,
+          "low": 5.35
+        }
+      },
+      "project": "headroomlabs-ai/headroom",
+      "pull_request": 4503,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(evals): exclude provider failures from answer scores",
+      "url": "https://github.com/headroomlabs-ai/headroom/pull/4503",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-07T02:34:55Z",
+      "evidence": {
+        "additions": 83,
+        "changed_files": 2,
+        "comments": 3,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 4
+      },
+      "heh": {
+        "base": 8.92,
+        "high": 12.04,
+        "low": 6.69
+      },
+      "merged_at": "2026-11-09T18:21:38Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.92,
+          "high": 12.04,
+          "low": 6.69
+        }
+      },
+      "project": "headroomlabs-ai/headroom",
+      "pull_request": 4675,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(storage): return the latest snapshot from JSONLStorage.get",
+      "url": "https://github.com/headroomlabs-ai/headroom/pull/4675",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
