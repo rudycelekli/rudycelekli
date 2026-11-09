@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.06,
-    "high": 93.83,
-    "low": 51.18
+    "base": 69.19,
+    "high": 94.02,
+    "low": 51.29
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1187.8,
+  "engineer_weeks_at_40h": 1190.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 114.98,
-        "high": 155.94,
-        "low": 85.53
+        "base": 120.19,
+        "high": 162.97,
+        "low": 89.43
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 260,
-      "public_merged_pull_requests": 351,
-      "public_prs_with_work": 205,
+      "public_authored_pr_commits": 269,
+      "public_merged_pull_requests": 360,
+      "public_prs_with_work": 214,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2069.71,
-        "high": 2806.94,
-        "low": 1539.47
+        "base": 2163.44,
+        "high": 2933.46,
+        "low": 1609.74
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3821,
-  "public_accepted_pull_requests": 3820,
+  "public_accepted_merge_events": 3830,
+  "public_accepted_pull_requests": 3829,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47510.31,
-    "high": 64555.86,
-    "low": 35214.22
+    "base": 47604.04,
+    "high": 64682.38,
+    "low": 35284.49
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -126756,6 +126756,303 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(add-portal): keep generated tests offline in CI",
       "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/714",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:34:18Z",
+      "evidence": {
+        "additions": 99,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.05,
+        "high": 13.57,
+        "low": 7.54
+      },
+      "merged_at": "2026-11-09T21:22:01Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.05,
+          "high": 13.57,
+          "low": 7.54
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 398,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(http, langchain): keep content-flag 403s from stopping the run as key refusals",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/398",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:37:49Z",
+      "evidence": {
+        "additions": 93,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.54,
+        "high": 12.88,
+        "low": 7.15
+      },
+      "merged_at": "2026-11-09T21:22:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.54,
+          "high": 12.88,
+          "low": 7.15
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 399,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(langchain): retry transient LangServe failures and type malformed JSON replies",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/399",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:45:17Z",
+      "evidence": {
+        "additions": 68,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.96,
+        "high": 12.1,
+        "low": 6.72
+      },
+      "merged_at": "2026-11-09T21:22:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.96,
+          "high": 12.1,
+          "low": 6.72
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 400,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(secrets): redact Basic and quoted auth headers echoed in provider errors",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/400",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:55:09Z",
+      "evidence": {
+        "additions": 55,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.69,
+        "high": 11.73,
+        "low": 6.51
+      },
+      "merged_at": "2026-11-09T21:22:19Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.69,
+          "high": 11.73,
+          "low": 6.51
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 401,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): reject a malformed IFIXAI_EXTRA_HEADERS instead of silently dropping it",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/401",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-07T03:57:07Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.32,
+        "high": 12.58,
+        "low": 6.99
+      },
+      "merged_at": "2026-11-09T21:22:24Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.32,
+          "high": 12.58,
+          "low": 6.99
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 402,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(fixtures): report malformed legacy fixtures as validation errors, not tracebacks",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/402",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T03:58:47Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.51,
+        "high": 11.48,
+        "low": 6.38
+      },
+      "merged_at": "2026-11-09T21:22:30Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.51,
+          "high": 11.48,
+          "low": 6.38
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 403,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(b16): render the per-run holdout user ids into the probes",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/403",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T04:01:01Z",
+      "evidence": {
+        "additions": 52,
+        "changed_files": 9,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.93,
+        "high": 14.75,
+        "low": 8.19
+      },
+      "merged_at": "2026-11-09T21:22:35Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.93,
+          "high": 14.75,
+          "low": 8.19
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 404,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: give every B03/B06/B08/B13/B16/B18/B21/B25 probe its own evidence id",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/404",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T04:03:32Z",
+      "evidence": {
+        "additions": 142,
+        "changed_files": 16,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 26,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 16.43,
+        "high": 22.18,
+        "low": 12.32
+      },
+      "merged_at": "2026-11-09T21:22:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 16.43,
+          "high": 22.18,
+          "low": 12.32
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 405,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: de-duplicate user ids before capping users in 14 inspection runners",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/405",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T04:06:25Z",
+      "evidence": {
+        "additions": 136,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 27,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 11.3,
+        "high": 15.25,
+        "low": 8.47
+      },
+      "merged_at": "2026-11-09T21:22:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.3,
+          "high": 15.25,
+          "low": 8.47
+        }
+      },
+      "project": "ifixai-ai/iFixAi",
+      "pull_request": 406,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(p32, s02): build human-review worklists from the judge majority, not one sample",
+      "url": "https://github.com/ifixai-ai/iFixAi/pull/406",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
