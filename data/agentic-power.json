@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.45,
-    "high": 93.02,
-    "low": 50.73
+    "base": 68.5,
+    "high": 93.07,
+    "low": 50.76
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1177.4,
+  "engineer_weeks_at_40h": 1178.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 98.13,
-        "high": 133.16,
-        "low": 72.91
+        "base": 99.78,
+        "high": 135.38,
+        "low": 74.15
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 67,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 219,
-      "public_merged_pull_requests": 304,
-      "public_prs_with_work": 166,
+      "public_authored_pr_commits": 222,
+      "public_merged_pull_requests": 307,
+      "public_prs_with_work": 169,
       "repository_default_branch_commits": 486,
       "skilled_human_equivalent_hours": {
-        "base": 1766.32,
-        "high": 2396.88,
-        "low": 1312.41
+        "base": 1795.97,
+        "high": 2436.91,
+        "low": 1334.65
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 891,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3774,
-  "public_accepted_pull_requests": 3773,
+  "public_accepted_merge_events": 3777,
+  "public_accepted_pull_requests": 3776,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47095.6,
-    "high": 63995.52,
-    "low": 34903.68
+    "base": 47125.25,
+    "high": 64035.55,
+    "low": 34925.92
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -125195,6 +125195,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(dsh): keep the configured platformSource on ingested tool memories",
       "url": "https://github.com/thedotmack/claude-mem/pull/5470",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:29:00Z",
+      "evidence": {
+        "additions": 47,
+        "changed_files": 4,
+        "comments": 3,
+        "commits": 3,
+        "deletions": 8,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.24,
+        "high": 13.82,
+        "low": 7.68
+      },
+      "merged_at": "2026-11-09T09:00:36Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.24,
+          "high": 13.82,
+          "low": 7.68
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5471,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(import): keep merged_into_project on imported observations and summaries",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5471",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:29:26Z",
+      "evidence": {
+        "additions": 77,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.0,
+        "high": 13.5,
+        "low": 7.5
+      },
+      "merged_at": "2026-11-09T09:01:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.0,
+          "high": 13.5,
+          "low": 7.5
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5472,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(install): read BOM-prefixed OpenCode, Kimi and Antigravity host configs",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5472",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-07T19:29:42Z",
+      "evidence": {
+        "additions": 59,
+        "changed_files": 4,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.41,
+        "high": 12.71,
+        "low": 7.06
+      },
+      "merged_at": "2026-11-09T09:01:36Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.41,
+          "high": 12.71,
+          "low": 7.06
+        }
+      },
+      "project": "thedotmack/claude-mem",
+      "pull_request": 5473,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(launcher): expand a leading ~ in CLAUDE_MEM_DATA_DIR when recording an empty hook payload",
+      "url": "https://github.com/thedotmack/claude-mem/pull/5473",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
