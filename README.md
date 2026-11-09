@@ -66,6 +66,20 @@ Each case separates the code change, original validation and limits. Upstream me
 | **Deploying AI in an enterprise** | [Gradia](https://www.gradiahq.com) and [AxiomConsulting.ai](https://axiomconsulting.ai/) |
 | **Building the Charlotte AI community** | [AI Tinkerers Charlotte](https://charlotte.aitinkerers.org/) |
 
+<!-- rcode:start -->
+## rcode
+
+<img src="./assets/rcode.svg" width="100%" alt="rcode: a coding agent for the terminal and a command center. Use your Claude or Codex plan. A receipt on every turn." />
+
+**The coding agent you can hand to anyone.** Terminal, command center, or the Claude and Codex plan you already pay for. Every turn ends with a receipt.
+
+[**github.com/rudycelekli/rcode**](https://github.com/rudycelekli/rcode) · MIT · macOS and Linux
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/rudycelekli/rcode/main/install.sh | sh
+```
+<!-- rcode:end -->
+
 <!-- top-contributor-proof:start -->
 ## Repositories where I’m a top contributor
 
