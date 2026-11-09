@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.0,
-    "high": 93.76,
-    "low": 51.14
+    "base": 69.06,
+    "high": 93.83,
+    "low": 51.18
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1186.8,
+  "engineer_weeks_at_40h": 1187.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 561.37,
-        "high": 758.85,
-        "low": 420.05
+        "base": 561.95,
+        "high": 759.62,
+        "low": 420.48
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4461,
+      "public_authored_pr_commits": 4467,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3266,
+      "public_prs_with_work": 3269,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34805.14,
-        "high": 47048.47,
-        "low": 26043.4
+        "base": 34840.66,
+        "high": 47096.43,
+        "low": 26070.04
       }
     },
     {
       "agentic_power_x": {
-        "base": 114.82,
-        "high": 155.71,
-        "low": 85.4
+        "base": 114.98,
+        "high": 155.94,
+        "low": 85.53
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 259,
-      "public_merged_pull_requests": 348,
-      "public_prs_with_work": 204,
+      "public_authored_pr_commits": 260,
+      "public_merged_pull_requests": 351,
+      "public_prs_with_work": 205,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2066.68,
-        "high": 2802.85,
-        "low": 1537.2
+        "base": 2069.71,
+        "high": 2806.94,
+        "low": 1539.47
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-09",
-  "public_accepted_merge_events": 3818,
-  "public_accepted_pull_requests": 3817,
+  "public_accepted_merge_events": 3821,
+  "public_accepted_pull_requests": 3820,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47471.76,
-    "high": 64503.81,
-    "low": 35185.31
+    "base": 47510.31,
+    "high": 64555.86,
+    "low": 35214.22
   },
   "updated_at_utc": "2026-11-09",
   "window": {
@@ -126652,6 +126652,110 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(storage): return the latest snapshot from JSONLStorage.get",
       "url": "https://github.com/headroomlabs-ai/headroom/pull/4675",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:10:20Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 2,
+        "comments": 6,
+        "commits": 3,
+        "deletions": 0,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 9.08,
+        "high": 12.26,
+        "low": 6.81
+      },
+      "merged_at": "2026-11-09T20:01:23Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.05,
+          "high": 8.17,
+          "low": 4.54
+        },
+        "2026-11": {
+          "base": 3.03,
+          "high": 4.09,
+          "low": 2.27
+        }
+      },
+      "project": "ai-job-search-dev/ai-job-search",
+      "pull_request": 636,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(rank): report a non-object seen_jobs.json entry instead of a traceback",
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/636",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-20T20:00:18Z",
+      "evidence": {
+        "additions": 400,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 25,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 15.83,
+        "high": 21.37,
+        "low": 11.87
+      },
+      "merged_at": "2026-11-09T20:17:05Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 15.83,
+          "high": 21.37,
+          "low": 11.87
+        }
+      },
+      "project": "ai-job-search-dev/ai-job-search",
+      "pull_request": 711,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(fetch-page): decode standard zlib-wrapped HTTP deflate",
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/711",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-21T03:19:01Z",
+      "evidence": {
+        "additions": 325,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 27,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 13.64,
+        "high": 18.42,
+        "low": 10.23
+      },
+      "merged_at": "2026-11-09T20:17:38Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 13.64,
+          "high": 18.42,
+          "low": 10.23
+        }
+      },
+      "project": "ai-job-search-dev/ai-job-search",
+      "pull_request": 714,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(add-portal): keep generated tests offline in CI",
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/714",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
