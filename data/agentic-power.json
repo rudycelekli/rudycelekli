@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.17,
-    "high": 93.98,
-    "low": 51.27
+    "base": 69.18,
+    "high": 93.99,
+    "low": 51.28
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1193.1,
+  "engineer_weeks_at_40h": 1193.3,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 562.94,
-        "high": 760.96,
-        "low": 421.23
+        "base": 563.05,
+        "high": 761.11,
+        "low": 421.31
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4476,
+      "public_authored_pr_commits": 4478,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3275,
+      "public_prs_with_work": 3276,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34902.34,
-        "high": 47179.69,
-        "low": 26116.29
+        "base": 34909.29,
+        "high": 47189.08,
+        "low": 26121.5
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 280,
-      "public_merged_pull_requests": 372,
+      "public_merged_pull_requests": 373,
       "public_prs_with_work": 222,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-10",
-  "public_accepted_merge_events": 3842,
-  "public_accepted_pull_requests": 3841,
+  "public_accepted_merge_events": 3843,
+  "public_accepted_pull_requests": 3842,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47724.43,
-    "high": 64844.91,
-    "low": 35374.79
+    "base": 47731.38,
+    "high": 64854.3,
+    "low": 35380.0
   },
   "updated_at_utc": "2026-11-10",
   "window": {
@@ -127459,6 +127459,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(mcp): reject non-object tool parameters",
       "url": "https://github.com/tigerless-labs/autoharness/pull/242",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-21T03:23:15Z",
+      "evidence": {
+        "additions": 3,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.95,
+        "high": 9.39,
+        "low": 5.21
+      },
+      "merged_at": "2026-11-10T18:29:48Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.95,
+          "high": 9.39,
+          "low": 5.21
+        }
+      },
+      "project": "ai-job-search-dev/ai-job-search",
+      "pull_request": 715,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(gmail-sync): query discovered label names instead of IDs",
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/715",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
