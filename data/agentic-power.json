@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
     "base": 69.04,
-    "high": 93.8,
-    "low": 51.17
+    "high": 93.81,
+    "low": 51.18
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1190.9,
+  "engineer_weeks_at_40h": 1191.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 108.48,
-        "high": 147.08,
-        "low": 80.72
+        "base": 108.74,
+        "high": 147.44,
+        "low": 80.91
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 270,
-      "public_merged_pull_requests": 362,
-      "public_prs_with_work": 215,
+      "public_authored_pr_commits": 271,
+      "public_merged_pull_requests": 363,
+      "public_prs_with_work": 216,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2169.54,
-        "high": 2941.7,
-        "low": 1614.32
+        "base": 2174.84,
+        "high": 2948.86,
+        "low": 1618.29
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-10",
-  "public_accepted_merge_events": 3832,
-  "public_accepted_pull_requests": 3831,
+  "public_accepted_merge_events": 3833,
+  "public_accepted_pull_requests": 3832,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47635.56,
-    "high": 64724.93,
-    "low": 35308.13
+    "base": 47640.86,
+    "high": 64732.09,
+    "low": 35312.1
   },
   "updated_at_utc": "2026-11-10",
   "window": {
@@ -127119,6 +127119,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(helm): skip the dev route-key Secret when existingSecret is set",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2695",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T00:58:37Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 5.3,
+        "high": 7.16,
+        "low": 3.97
+      },
+      "merged_at": "2026-11-10T03:01:44Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.3,
+          "high": 7.16,
+          "low": 3.97
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2694,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(helm): put the controller feature-flags ConfigMap in its namespace",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2694",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
