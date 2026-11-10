@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.99,
-    "high": 93.74,
-    "low": 51.14
+    "base": 69.04,
+    "high": 93.8,
+    "low": 51.17
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1190.1,
+  "engineer_weeks_at_40h": 1190.9,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 561.95,
-        "high": 759.62,
-        "low": 420.48
+        "base": 562.36,
+        "high": 760.17,
+        "low": 420.79
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4467,
+      "public_authored_pr_commits": 4471,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3269,
+      "public_prs_with_work": 3270,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34840.66,
-        "high": 47096.43,
-        "low": 26070.04
+        "base": 34866.08,
+        "high": 47130.74,
+        "low": 26089.1
       }
     },
     {
       "agentic_power_x": {
-        "base": 108.17,
-        "high": 146.67,
-        "low": 80.49
+        "base": 108.48,
+        "high": 147.08,
+        "low": 80.72
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 269,
-      "public_merged_pull_requests": 360,
-      "public_prs_with_work": 214,
+      "public_authored_pr_commits": 270,
+      "public_merged_pull_requests": 362,
+      "public_prs_with_work": 215,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2163.44,
-        "high": 2933.46,
-        "low": 1609.74
+        "base": 2169.54,
+        "high": 2941.7,
+        "low": 1614.32
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-10",
-  "public_accepted_merge_events": 3830,
-  "public_accepted_pull_requests": 3829,
+  "public_accepted_merge_events": 3832,
+  "public_accepted_pull_requests": 3831,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47604.04,
-    "high": 64682.38,
-    "low": 35284.49
+    "base": 47635.56,
+    "high": 64724.93,
+    "low": 35308.13
   },
   "updated_at_utc": "2026-11-10",
   "window": {
@@ -127053,6 +127053,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(p32, s02): build human-review worklists from the judge majority, not one sample",
       "url": "https://github.com/ifixai-ai/iFixAi/pull/406",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-09T15:18:22Z",
+      "evidence": {
+        "additions": 816,
+        "changed_files": 15,
+        "comments": 2,
+        "commits": 4,
+        "deletions": 40,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 25.42,
+        "high": 34.31,
+        "low": 19.06
+      },
+      "merged_at": "2026-11-10T02:04:31Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 25.42,
+          "high": 34.31,
+          "low": 19.06
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1435,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(core,graph): batch validation, live HNSW identities, generated IDs, replacement indexes",
+      "url": "https://github.com/ruvnet/RuVector/pull/1435",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T00:59:19Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 6.1,
+        "high": 8.24,
+        "low": 4.58
+      },
+      "merged_at": "2026-11-10T02:29:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.1,
+          "high": 8.24,
+          "low": 4.58
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2695,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(helm): skip the dev route-key Secret when existingSecret is set",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2695",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
