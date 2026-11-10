@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.09,
-    "high": 93.88,
-    "low": 51.21
+    "base": 69.13,
+    "high": 93.92,
+    "low": 51.24
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1191.8,
+  "engineer_weeks_at_40h": 1192.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 562.41,
-        "high": 760.25,
-        "low": 420.83
+        "base": 562.49,
+        "high": 760.36,
+        "low": 420.89
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4472,
+      "public_authored_pr_commits": 4473,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3271,
+      "public_prs_with_work": 3272,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34869.49,
-        "high": 47135.35,
-        "low": 26091.66
+        "base": 34874.47,
+        "high": 47142.07,
+        "low": 26095.39
       }
     },
     {
       "agentic_power_x": {
-        "base": 110.2,
-        "high": 149.41,
-        "low": 82.01
+        "base": 111.11,
+        "high": 150.64,
+        "low": 82.69
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 276,
-      "public_merged_pull_requests": 367,
-      "public_prs_with_work": 220,
+      "public_authored_pr_commits": 280,
+      "public_merged_pull_requests": 369,
+      "public_prs_with_work": 222,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2203.96,
-        "high": 2988.17,
-        "low": 1640.14
+        "base": 2222.15,
+        "high": 3012.73,
+        "low": 1653.79
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-10",
-  "public_accepted_merge_events": 3837,
-  "public_accepted_pull_requests": 3836,
+  "public_accepted_merge_events": 3839,
+  "public_accepted_pull_requests": 3838,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47673.39,
-    "high": 64776.01,
-    "low": 35336.51
+    "base": 47696.56,
+    "high": 64807.29,
+    "low": 35353.89
   },
   "updated_at_utc": "2026-11-10",
   "window": {
@@ -127289,6 +127289,77 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "A number attribute matches a rule's \"is one of\" set, so a reading stored as 3.0 is one of {3}",
       "url": "https://github.com/deeplethe/utopia/pull/1403",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T22:36:59Z",
+      "evidence": {
+        "additions": 78,
+        "changed_files": 1,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 5,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.95,
+        "high": 13.43,
+        "low": 7.46
+      },
+      "merged_at": "2026-11-10T07:02:18Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 4.98,
+          "high": 6.72,
+          "low": 3.73
+        },
+        "2026-11": {
+          "base": 4.97,
+          "high": 6.71,
+          "low": 3.73
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1399,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "A cron weekday written as a number reads as standard cron, so 1-5 syncs Monday to Friday instead of Sunday to Thursday",
+      "url": "https://github.com/deeplethe/utopia/pull/1399",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:47:08Z",
+      "evidence": {
+        "additions": 142,
+        "changed_files": 6,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 14,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 13.22,
+        "high": 17.85,
+        "low": 9.92
+      },
+      "merged_at": "2026-11-10T07:27:43Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 13.22,
+          "high": 17.85,
+          "low": 9.92
+        }
+      },
+      "project": "Thysrael/Horizon",
+      "pull_request": 216,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: validate positive collection windows across entry points",
+      "url": "https://github.com/Thysrael/Horizon/pull/216",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
