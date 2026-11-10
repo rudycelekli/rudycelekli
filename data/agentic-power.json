@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.27,
-    "high": 94.12,
-    "low": 51.35
+    "base": 69.45,
+    "high": 94.37,
+    "low": 51.48
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1195.0,
+  "engineer_weeks_at_40h": 1198.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 564.13,
-        "high": 762.57,
-        "low": 422.12
+        "base": 566.01,
+        "high": 765.11,
+        "low": 423.53
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4495,
+      "public_authored_pr_commits": 4509,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3284,
+      "public_prs_with_work": 3298,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34975.97,
-        "high": 47279.1,
-        "low": 26171.51
+        "base": 35092.57,
+        "high": 47436.51,
+        "low": 26258.96
       }
     },
     {
       "agentic_power_x": {
-        "base": 111.11,
-        "high": 150.64,
-        "low": 82.69
+        "base": 111.53,
+        "high": 151.21,
+        "low": 83.01
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 280,
-      "public_merged_pull_requests": 381,
-      "public_prs_with_work": 222,
+      "public_authored_pr_commits": 281,
+      "public_merged_pull_requests": 396,
+      "public_prs_with_work": 223,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2222.15,
-        "high": 3012.73,
-        "low": 1653.79
+        "base": 2230.59,
+        "high": 3024.13,
+        "low": 1660.12
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-10",
-  "public_accepted_merge_events": 3851,
-  "public_accepted_pull_requests": 3850,
+  "public_accepted_merge_events": 3866,
+  "public_accepted_pull_requests": 3865,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47798.06,
-    "high": 64944.32,
-    "low": 35430.01
+    "base": 47923.1,
+    "high": 65113.13,
+    "low": 35523.79
   },
   "updated_at_utc": "2026-11-10",
   "window": {
@@ -127756,6 +127756,501 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(fetch-page): drop unclosed script and template blocks from --text",
       "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/764",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T04:45:50Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.44,
+        "high": 11.4,
+        "low": 6.33
+      },
+      "merged_at": "2026-11-10T21:27:33Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.44,
+          "high": 11.4,
+          "low": 6.33
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 400,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(normalize): map currency symbols to ISO codes, not just $",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/400",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:26:11Z",
+      "evidence": {
+        "additions": 34,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.4,
+        "high": 11.33,
+        "low": 6.3
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.4,
+          "high": 11.33,
+          "low": 6.3
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 368,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sitemap): keep the 50,000 URL limit when news tags are present",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/368",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T16:27:46Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.84,
+        "high": 10.59,
+        "low": 5.88
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.84,
+          "high": 10.59,
+          "low": 5.88
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 369,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(seo): pass the full /seo input through $ARGUMENTS",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/369",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T17:26:59Z",
+      "evidence": {
+        "additions": 43,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.53,
+        "high": 11.52,
+        "low": 6.4
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.53,
+          "high": 11.52,
+          "low": 6.4
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 370,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(gbp): score verified status from DataForSEO is_claimed",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/370",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T17:30:52Z",
+      "evidence": {
+        "additions": 76,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.52,
+        "high": 12.86,
+        "low": 7.14
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.52,
+          "high": 12.86,
+          "low": 7.14
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 371,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(indexnow): compare the key file host, not a URL substring",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/371",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-25T17:33:56Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.83,
+        "high": 10.57,
+        "low": 5.87
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.83,
+          "high": 10.57,
+          "low": 5.87
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 372,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(schema): accept a list of offer priceSpecification objects",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/372",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T19:56:45Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.86,
+        "high": 11.96,
+        "low": 6.64
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.86,
+          "high": 11.96,
+          "low": 6.64
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 373,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sitemap): keep Sitemap URLs when a comment follows",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/373",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T20:01:02Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.29,
+        "high": 11.19,
+        "low": 6.22
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.29,
+          "high": 11.19,
+          "low": 6.22
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 374,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(content): do not score a filler phrase inside a longer one",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/374",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-25T20:03:51Z",
+      "evidence": {
+        "additions": 77,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.6,
+        "high": 12.96,
+        "low": 7.2
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.6,
+          "high": 12.96,
+          "low": 7.2
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 375,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(fetch): ignore charset= hidden in another meta attribute",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/375",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-26T14:21:48Z",
+      "evidence": {
+        "additions": 47,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.29,
+        "high": 11.18,
+        "low": 6.21
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.29,
+          "high": 11.18,
+          "low": 6.21
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 376,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(preload): tolerate a non-object speculationrules body",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/376",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-26T14:21:56Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.26,
+        "high": 9.8,
+        "low": 5.45
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.26,
+          "high": 9.8,
+          "low": 5.45
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 377,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(content-verify): detect a bare percentage statistic",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/377",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-26T14:22:03Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.16,
+        "high": 8.32,
+        "low": 4.62
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.16,
+          "high": 8.32,
+          "low": 4.62
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 378,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(content-verify): keep the citation Proper-Noun anchor case-sensitive",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/378",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-26T14:22:10Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.57,
+        "high": 11.57,
+        "low": 6.43
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.57,
+          "high": 11.57,
+          "low": 6.43
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 379,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(indexing-notify): do not overwrite the batch-truncation warning",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/379",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-26T14:22:17Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.57,
+        "high": 11.57,
+        "low": 6.43
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.57,
+          "high": 11.57,
+          "low": 6.43
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 380,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(pagespeed): exit non-zero when every --psi-only call fails",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/380",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-26T14:22:25Z",
+      "evidence": {
+        "additions": 58,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.88,
+        "high": 11.99,
+        "low": 6.66
+      },
+      "merged_at": "2026-11-10T21:27:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.88,
+          "high": 11.99,
+          "low": 6.66
+        }
+      },
+      "project": "AgriciDaniel/claude-seo",
+      "pull_request": 381,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(seo-updates): parse --since robustly instead of crashing",
+      "url": "https://github.com/AgriciDaniel/claude-seo/pull/381",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
