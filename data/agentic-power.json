@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.08,
-    "high": 93.86,
-    "low": 51.2
+    "base": 69.09,
+    "high": 93.88,
+    "low": 51.21
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1191.6,
+  "engineer_weeks_at_40h": 1191.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 562.36,
-        "high": 760.17,
-        "low": 420.79
+        "base": 562.41,
+        "high": 760.25,
+        "low": 420.83
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4471,
+      "public_authored_pr_commits": 4472,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3270,
+      "public_prs_with_work": 3271,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34866.08,
-        "high": 47130.74,
-        "low": 26089.1
+        "base": 34869.49,
+        "high": 47135.35,
+        "low": 26091.66
       }
     },
     {
       "agentic_power_x": {
-        "base": 109.86,
-        "high": 148.95,
-        "low": 81.75
+        "base": 110.2,
+        "high": 149.41,
+        "low": 82.01
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 274,
-      "public_merged_pull_requests": 366,
-      "public_prs_with_work": 219,
+      "public_authored_pr_commits": 276,
+      "public_merged_pull_requests": 367,
+      "public_prs_with_work": 220,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2197.13,
-        "high": 2978.95,
-        "low": 1635.02
+        "base": 2203.96,
+        "high": 2988.17,
+        "low": 1640.14
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-10",
-  "public_accepted_merge_events": 3836,
-  "public_accepted_pull_requests": 3835,
+  "public_accepted_merge_events": 3837,
+  "public_accepted_pull_requests": 3836,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47663.15,
-    "high": 64762.18,
-    "low": 35328.83
+    "base": 47673.39,
+    "high": 64776.01,
+    "low": 35336.51
   },
   "updated_at_utc": "2026-11-10",
   "window": {
@@ -127251,6 +127251,44 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(execd): return 400 for an invalid /files/search pattern",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2687",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T02:22:13Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 4,
+        "deletions": 5,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 10.24,
+        "high": 13.83,
+        "low": 7.68
+      },
+      "merged_at": "2026-11-10T06:55:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 3.41,
+          "high": 4.61,
+          "low": 2.56
+        },
+        "2026-11": {
+          "base": 6.83,
+          "high": 9.22,
+          "low": 5.12
+        }
+      },
+      "project": "deeplethe/utopia",
+      "pull_request": 1403,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "A number attribute matches a rule's \"is one of\" set, so a reading stored as 3.0 is one of {3}",
+      "url": "https://github.com/deeplethe/utopia/pull/1403",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
