@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.26,
-    "high": 94.1,
-    "low": 51.34
+    "base": 69.27,
+    "high": 94.12,
+    "low": 51.35
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1194.7,
+  "engineer_weeks_at_40h": 1195.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 563.98,
-        "high": 762.37,
-        "low": 422.01
+        "base": 564.13,
+        "high": 762.57,
+        "low": 422.12
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4494,
+      "public_authored_pr_commits": 4495,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3283,
+      "public_prs_with_work": 3284,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34966.81,
-        "high": 47266.74,
-        "low": 26164.64
+        "base": 34975.97,
+        "high": 47279.1,
+        "low": 26171.51
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 280,
-      "public_merged_pull_requests": 380,
+      "public_merged_pull_requests": 381,
       "public_prs_with_work": 222,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-10",
-  "public_accepted_merge_events": 3850,
-  "public_accepted_pull_requests": 3849,
+  "public_accepted_merge_events": 3851,
+  "public_accepted_pull_requests": 3850,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47788.9,
-    "high": 64931.96,
-    "low": 35423.14
+    "base": 47798.06,
+    "high": 64944.32,
+    "low": 35430.01
   },
   "updated_at_utc": "2026-11-10",
   "window": {
@@ -127723,6 +127723,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "docs(scrape): align query dates with the discovery window",
       "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/727",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T22:58:41Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.16,
+        "high": 12.36,
+        "low": 6.87
+      },
+      "merged_at": "2026-11-10T19:48:28Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.16,
+          "high": 12.36,
+          "low": 6.87
+        }
+      },
+      "project": "ai-job-search-dev/ai-job-search",
+      "pull_request": 764,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(fetch-page): drop unclosed script and template blocks from --text",
+      "url": "https://github.com/ai-job-search-dev/ai-job-search/pull/764",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
