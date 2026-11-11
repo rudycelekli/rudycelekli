@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.28,
-    "high": 94.13,
-    "low": 51.36
+    "base": 69.3,
+    "high": 94.15,
+    "low": 51.37
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1198.5,
+  "engineer_weeks_at_40h": 1198.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 92.36,
-        "high": 126.16,
-        "low": 67.77
+        "base": 92.56,
+        "high": 126.43,
+        "low": 67.92
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,14 +354,14 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 519,
+      "public_authored_pr_commits": 522,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 378,
+      "public_prs_with_work": 380,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5541.45,
-        "high": 7569.67,
-        "low": 4066.3
+        "base": 5553.45,
+        "high": 7585.87,
+        "low": 4075.3
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 281,
-      "public_merged_pull_requests": 398,
+      "public_merged_pull_requests": 400,
       "public_prs_with_work": 223,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-11",
-  "public_accepted_merge_events": 3868,
-  "public_accepted_pull_requests": 3867,
+  "public_accepted_merge_events": 3870,
+  "public_accepted_pull_requests": 3869,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47941.86,
-    "high": 65138.46,
-    "low": 35537.86
+    "base": 47953.86,
+    "high": 65154.66,
+    "low": 35546.86
   },
   "updated_at_utc": "2026-11-11",
   "window": {
@@ -128317,6 +128317,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(3x2pt-inference): verify reported summaries against posterior samples",
       "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1980",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-29T15:20:32Z",
+      "evidence": {
+        "additions": 4,
+        "changed_files": 1,
+        "comments": 8,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 5.75,
+        "high": 7.76,
+        "low": 4.31
+      },
+      "merged_at": "2026-11-11T01:22:15Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 5.75,
+          "high": 7.76,
+          "low": 4.31
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 2029,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Fix highdim verifier sandbox resources",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2029",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-29T15:05:41Z",
+      "evidence": {
+        "additions": 4,
+        "changed_files": 1,
+        "comments": 9,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.25,
+        "high": 8.44,
+        "low": 4.69
+      },
+      "merged_at": "2026-11-11T01:22:20Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 6.25,
+          "high": 8.44,
+          "low": 4.69
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 2026,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Fix traffic-flux verifier sandbox resources",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2026",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
