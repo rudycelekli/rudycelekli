@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.42,
-    "high": 94.32,
-    "low": 51.46
+    "base": 69.46,
+    "high": 94.37,
+    "low": 51.49
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1201.0,
+  "engineer_weeks_at_40h": 1201.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 103.81,
-        "high": 140.73,
-        "low": 77.28
+        "base": 105.09,
+        "high": 142.45,
+        "low": 78.23
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 287,
-      "public_merged_pull_requests": 409,
-      "public_prs_with_work": 229,
+      "public_authored_pr_commits": 290,
+      "public_merged_pull_requests": 412,
+      "public_prs_with_work": 232,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2283.92,
-        "high": 3096.14,
-        "low": 1700.12
+        "base": 2311.96,
+        "high": 3133.99,
+        "low": 1721.14
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-11",
-  "public_accepted_merge_events": 3879,
-  "public_accepted_pull_requests": 3878,
+  "public_accepted_merge_events": 3882,
+  "public_accepted_pull_requests": 3881,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48038.94,
-    "high": 65269.53,
-    "low": 35610.67
+    "base": 48066.98,
+    "high": 65307.38,
+    "low": 35631.69
   },
   "updated_at_utc": "2026-11-11",
   "window": {
@@ -128680,6 +128680,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(server): match '..' as a whole host-path component",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2701",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T01:14:32Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.48,
+        "high": 11.44,
+        "low": 6.36
+      },
+      "merged_at": "2026-11-11T12:25:42Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.48,
+          "high": 11.44,
+          "low": 6.36
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2702,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): return 400 when Kubernetes rejects a pool spec",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2702",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T01:17:08Z",
+      "evidence": {
+        "additions": 70,
+        "changed_files": 7,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 10.87,
+        "high": 14.68,
+        "low": 8.15
+      },
+      "merged_at": "2026-11-11T12:26:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.87,
+          "high": 14.68,
+          "low": 8.15
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2703,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): return structured codes for network-policy and fsb route errors",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2703",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T16:51:56Z",
+      "evidence": {
+        "additions": 56,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.69,
+        "high": 11.73,
+        "low": 6.51
+      },
+      "merged_at": "2026-11-11T12:32:54Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.69,
+          "high": 11.73,
+          "low": 6.51
+        }
+      },
+      "project": "tigerless-labs/cost-xray",
+      "pull_request": 57,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(verify): retain unmatched output event observations",
+      "url": "https://github.com/tigerless-labs/cost-xray/pull/57",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
