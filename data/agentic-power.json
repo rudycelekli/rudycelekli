@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.34,
-    "high": 94.21,
-    "low": 51.4
+    "base": 69.38,
+    "high": 94.27,
+    "low": 51.43
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1199.6,
+  "engineer_weeks_at_40h": 1200.3,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 92.78,
-        "high": 126.73,
-        "low": 68.09
+        "base": 93.09,
+        "high": 127.15,
+        "low": 68.32
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,14 +354,14 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 523,
+      "public_authored_pr_commits": 525,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 381,
+      "public_prs_with_work": 383,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5566.8,
-        "high": 7603.89,
-        "low": 4085.31
+        "base": 5585.2,
+        "high": 7628.73,
+        "low": 4099.11
       }
     },
     {
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 102.1,
-        "high": 138.42,
-        "low": 75.99
+        "base": 102.56,
+        "high": 139.04,
+        "low": 76.34
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 283,
-      "public_merged_pull_requests": 403,
-      "public_prs_with_work": 225,
+      "public_authored_pr_commits": 284,
+      "public_merged_pull_requests": 406,
+      "public_prs_with_work": 226,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2246.26,
-        "high": 3045.29,
-        "low": 1671.87
+        "base": 2256.35,
+        "high": 3058.91,
+        "low": 1679.43
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-11",
-  "public_accepted_merge_events": 3873,
-  "public_accepted_pull_requests": 3872,
+  "public_accepted_merge_events": 3876,
+  "public_accepted_pull_requests": 3875,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47982.88,
-    "high": 65193.84,
-    "low": 35568.62
+    "base": 48011.37,
+    "high": 65232.3,
+    "low": 35589.98
   },
   "updated_at_utc": "2026-11-11",
   "window": {
@@ -128482,6 +128482,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Retry transient network failures during task image prebuild",
       "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1899",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-09-25T17:45:24Z",
+      "evidence": {
+        "additions": 13,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 16,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.27,
+        "high": 11.17,
+        "low": 6.2
+      },
+      "merged_at": "2026-11-11T06:45:14Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 8.27,
+          "high": 11.17,
+          "low": 6.2
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 1910,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(ci): require every task validation check to pass",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1910",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-09T14:33:15Z",
+      "evidence": {
+        "additions": 118,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.13,
+        "high": 13.67,
+        "low": 7.6
+      },
+      "merged_at": "2026-11-11T06:45:18Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 10.13,
+          "high": 13.67,
+          "low": 7.6
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 1716,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Fix oracle pruning when output directories are absent",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1716",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T00:39:37Z",
+      "evidence": {
+        "additions": 92,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 10.09,
+        "high": 13.62,
+        "low": 7.56
+      },
+      "merged_at": "2026-11-11T06:53:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.09,
+          "high": 13.62,
+          "low": 7.56
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2685,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): render SQL text columns as strings",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2685",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
