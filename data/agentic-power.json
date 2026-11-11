@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.52,
-    "high": 94.46,
-    "low": 51.54
+    "base": 69.55,
+    "high": 94.5,
+    "low": 51.56
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1202.8,
+  "engineer_weeks_at_40h": 1203.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 105.35,
-        "high": 142.8,
-        "low": 78.43
+        "base": 106.18,
+        "high": 143.93,
+        "low": 79.05
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 291,
-      "public_merged_pull_requests": 415,
-      "public_prs_with_work": 233,
+      "public_authored_pr_commits": 293,
+      "public_merged_pull_requests": 417,
+      "public_prs_with_work": 235,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2317.61,
-        "high": 3141.61,
-        "low": 1725.37
+        "base": 2336.04,
+        "high": 3166.48,
+        "low": 1739.19
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-11",
-  "public_accepted_merge_events": 3885,
-  "public_accepted_pull_requests": 3884,
+  "public_accepted_merge_events": 3887,
+  "public_accepted_pull_requests": 3886,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48110.68,
-    "high": 65366.37,
-    "low": 35664.46
+    "base": 48129.11,
+    "high": 65391.24,
+    "low": 35678.28
   },
   "updated_at_utc": "2026-11-11",
   "window": {
@@ -128883,6 +128883,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(ci): fail validation when results cannot be reported",
       "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1911",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-11T18:41:13Z",
+      "evidence": {
+        "additions": 23,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.36,
+        "high": 11.28,
+        "low": 6.27
+      },
+      "merged_at": "2026-11-11T22:20:02Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.36,
+          "high": 11.28,
+          "low": 6.27
+        }
+      },
+      "project": "morluto/rea",
+      "pull_request": 10136,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(native): normalize the CPU names lipo prints for i386 slices",
+      "url": "https://github.com/morluto/rea/pull/10136",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-11T18:35:33Z",
+      "evidence": {
+        "additions": 55,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.07,
+        "high": 13.59,
+        "low": 7.55
+      },
+      "merged_at": "2026-11-11T22:20:07Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.07,
+          "high": 13.59,
+          "low": 7.55
+        }
+      },
+      "project": "morluto/rea",
+      "pull_request": 10134,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(adb): classify mDNS wireless serials as TCP",
+      "url": "https://github.com/morluto/rea/pull/10134",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
