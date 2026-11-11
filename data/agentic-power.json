@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.41,
-    "high": 94.31,
-    "low": 51.45
+    "base": 69.42,
+    "high": 94.32,
+    "low": 51.46
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1200.8,
+  "engineer_weeks_at_40h": 1201.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 103.5,
-        "high": 140.31,
-        "low": 77.05
+        "base": 103.81,
+        "high": 140.73,
+        "low": 77.28
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 286,
-      "public_merged_pull_requests": 408,
-      "public_prs_with_work": 228,
+      "public_authored_pr_commits": 287,
+      "public_merged_pull_requests": 409,
+      "public_prs_with_work": 229,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2277.1,
-        "high": 3086.93,
-        "low": 1695.0
+        "base": 2283.92,
+        "high": 3096.14,
+        "low": 1700.12
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-11",
-  "public_accepted_merge_events": 3878,
-  "public_accepted_pull_requests": 3877,
+  "public_accepted_merge_events": 3879,
+  "public_accepted_pull_requests": 3878,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48032.12,
-    "high": 65260.32,
-    "low": 35605.55
+    "base": 48038.94,
+    "high": 65269.53,
+    "low": 35610.67
   },
   "updated_at_utc": "2026-11-11",
   "window": {
@@ -128647,6 +128647,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(execd): fail fast with 400 when no kernel exists for a language",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2689",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T01:12:37Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.82,
+        "high": 9.21,
+        "low": 5.12
+      },
+      "merged_at": "2026-11-11T07:48:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.82,
+          "high": 9.21,
+          "low": 5.12
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2701,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): match '..' as a whole host-path component",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2701",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
