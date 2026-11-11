@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.48,
-    "high": 94.4,
-    "low": 51.5
+    "base": 69.51,
+    "high": 94.44,
+    "low": 51.53
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1202.0,
+  "engineer_weeks_at_40h": 1202.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 566.2,
-        "high": 765.37,
-        "low": 423.68
+        "base": 566.53,
+        "high": 765.81,
+        "low": 423.92
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4510,
+      "public_authored_pr_commits": 4511,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3299,
+      "public_prs_with_work": 3300,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 35104.69,
-        "high": 47452.87,
-        "low": 26268.05
+        "base": 35124.97,
+        "high": 47480.25,
+        "low": 26283.26
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 290,
-      "public_merged_pull_requests": 413,
+      "public_merged_pull_requests": 414,
       "public_prs_with_work": 232,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-11",
-  "public_accepted_merge_events": 3883,
-  "public_accepted_pull_requests": 3882,
+  "public_accepted_merge_events": 3884,
+  "public_accepted_pull_requests": 3883,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48079.1,
-    "high": 65323.74,
-    "low": 35640.78
+    "base": 48099.38,
+    "high": 65351.12,
+    "low": 35655.99
   },
   "updated_at_utc": "2026-11-11",
   "window": {
@@ -128812,6 +128812,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(web): align loose-list text with its marker",
       "url": "https://github.com/JetBrains/thinkrail/pull/1052",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-30T06:39:00Z",
+      "evidence": {
+        "additions": 318,
+        "changed_files": 11,
+        "comments": 1,
+        "commits": 7,
+        "deletions": 76,
+        "reviews": 7
+      },
+      "heh": {
+        "base": 20.28,
+        "high": 27.38,
+        "low": 15.21
+      },
+      "merged_at": "2026-11-11T18:49:09Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 20.28,
+          "high": 27.38,
+          "low": 15.21
+        }
+      },
+      "project": "JetBrains/thinkrail",
+      "pull_request": 1051,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(web): preserve image drafts across chat remounts",
+      "url": "https://github.com/JetBrains/thinkrail/pull/1051",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
