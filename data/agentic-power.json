@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.38,
-    "high": 94.27,
-    "low": 51.43
+    "base": 69.41,
+    "high": 94.31,
+    "low": 51.45
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1200.3,
+  "engineer_weeks_at_40h": 1200.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 102.56,
-        "high": 139.04,
-        "low": 76.34
+        "base": 103.5,
+        "high": 140.31,
+        "low": 77.05
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 284,
-      "public_merged_pull_requests": 406,
-      "public_prs_with_work": 226,
+      "public_authored_pr_commits": 286,
+      "public_merged_pull_requests": 408,
+      "public_prs_with_work": 228,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2256.35,
-        "high": 3058.91,
-        "low": 1679.43
+        "base": 2277.1,
+        "high": 3086.93,
+        "low": 1695.0
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-11",
-  "public_accepted_merge_events": 3876,
-  "public_accepted_pull_requests": 3875,
+  "public_accepted_merge_events": 3878,
+  "public_accepted_pull_requests": 3877,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48011.37,
-    "high": 65232.3,
-    "low": 35589.98
+    "base": 48032.12,
+    "high": 65260.32,
+    "low": 35605.55
   },
   "updated_at_utc": "2026-11-11",
   "window": {
@@ -128581,6 +128581,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(execd): render SQL text columns as strings",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2685",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T00:42:46Z",
+      "evidence": {
+        "additions": 64,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.61,
+        "high": 12.97,
+        "low": 7.21
+      },
+      "merged_at": "2026-11-11T07:01:27Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.61,
+          "high": 12.97,
+          "low": 7.21
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2686,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): return 404 for unknown command logs and validate cursor",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2686",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T00:50:31Z",
+      "evidence": {
+        "additions": 99,
+        "changed_files": 6,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 11.14,
+        "high": 15.05,
+        "low": 8.36
+      },
+      "merged_at": "2026-11-11T07:08:10Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.14,
+          "high": 15.05,
+          "low": 8.36
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2689,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): fail fast with 400 when no kernel exists for a language",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2689",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
