@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.22,
-    "high": 90.0,
-    "low": 49.06
+    "base": 66.34,
+    "high": 90.16,
+    "low": 49.15
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1148.9,
+  "engineer_weeks_at_40h": 1151.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 536.54,
-        "high": 725.33,
-        "low": 401.43
+        "base": 537.63,
+        "high": 726.79,
+        "low": 402.25
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4269,
+      "public_authored_pr_commits": 4278,
       "public_merged_pull_requests": 3028,
-      "public_prs_with_work": 3117,
+      "public_prs_with_work": 3124,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33265.64,
-        "high": 44970.2,
-        "low": 24888.85
+        "base": 33333.1,
+        "high": 45061.26,
+        "low": 24939.44
       }
     },
     {
       "agentic_power_x": {
-        "base": 89.76,
-        "high": 121.71,
-        "low": 66.78
+        "base": 90.4,
+        "high": 122.57,
+        "low": 67.26
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 272,
-      "public_merged_pull_requests": 402,
-      "public_prs_with_work": 216,
+      "public_authored_pr_commits": 274,
+      "public_merged_pull_requests": 411,
+      "public_prs_with_work": 218,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2154.14,
-        "high": 2920.95,
-        "low": 1602.82
+        "base": 2169.5,
+        "high": 2941.68,
+        "low": 1614.34
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-12",
-  "public_accepted_merge_events": 3672,
-  "public_accepted_pull_requests": 3671,
+  "public_accepted_merge_events": 3681,
+  "public_accepted_pull_requests": 3680,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 45956.82,
-    "high": 62458.72,
-    "low": 34049.17
+    "base": 46039.64,
+    "high": 62570.51,
+    "low": 34111.28
   },
   "updated_at_utc": "2026-11-12",
   "window": {
@@ -121834,6 +121834,303 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: NaN-stable graph and hyperbolic search, plus original-graph mincut bounds",
       "url": "https://github.com/ruvnet/RuVector/pull/1436",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-30T05:26:32Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 4.49,
+        "high": 6.06,
+        "low": 3.36
+      },
+      "merged_at": "2026-11-12T14:36:02Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 4.49,
+          "high": 6.06,
+          "low": 3.36
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 43,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs: normalize the weighted benchmark score equation",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/43",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-09T20:37:19Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.84,
+        "high": 7.88,
+        "low": 4.38
+      },
+      "merged_at": "2026-11-12T14:36:14Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.84,
+          "high": 7.88,
+          "low": 4.38
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 62,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): pass Harbor --yes from sweep eval",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/62",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-30T05:27:09Z",
+      "evidence": {
+        "additions": 75,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.25,
+        "high": 12.49,
+        "low": 6.94
+      },
+      "merged_at": "2026-11-12T14:36:25Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.25,
+          "high": 12.49,
+          "low": 6.94
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 44,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): bound Docker infrastructure health checks",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/44",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T17:09:47Z",
+      "evidence": {
+        "additions": 63,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.8,
+        "high": 11.88,
+        "low": 6.6
+      },
+      "merged_at": "2026-11-12T14:36:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.8,
+          "high": 11.88,
+          "low": 6.6
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 39,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(release): commit the refreshed lockfile with version bumps",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/39",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T17:08:23Z",
+      "evidence": {
+        "additions": 47,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.32,
+        "high": 11.23,
+        "low": 6.24
+      },
+      "merged_at": "2026-11-12T14:36:47Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.32,
+          "high": 11.23,
+          "low": 6.24
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 22,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): isolate temporary task overrides from symlink sources",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/22",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T17:08:19Z",
+      "evidence": {
+        "additions": 127,
+        "changed_files": 101,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 100,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 18.28,
+        "high": 24.68,
+        "low": 13.71
+      },
+      "merged_at": "2026-11-12T14:36:58Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 18.28,
+          "high": 24.68,
+          "low": 13.71
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 21,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(grader): preserve literal JSON escapes on Python 3.13",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/21",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-09T20:33:57Z",
+      "evidence": {
+        "additions": 89,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.52,
+        "high": 12.85,
+        "low": 7.14
+      },
+      "merged_at": "2026-11-12T14:37:10Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.52,
+          "high": 12.85,
+          "low": 7.14
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 58,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(scoring): count grader crashes that omit the trial fields",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/58",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T17:08:41Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.16,
+        "high": 12.36,
+        "low": 6.87
+      },
+      "merged_at": "2026-11-12T14:37:22Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.16,
+          "high": 12.36,
+          "low": 6.87
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 26,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(scoring): report the mean over graded trials",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/26",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T17:08:32Z",
+      "evidence": {
+        "additions": 59,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.16,
+        "high": 12.36,
+        "low": 6.87
+      },
+      "merged_at": "2026-11-12T14:37:34Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.16,
+          "high": 12.36,
+          "low": 6.87
+        }
+      },
+      "project": "facebookresearch/swe-sweep",
+      "pull_request": 24,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(scoring): deduplicate overlapping result roots",
+      "url": "https://github.com/facebookresearch/swe-sweep/pull/24",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
