@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.49,
-    "high": 94.41,
-    "low": 51.51
+    "base": 69.5,
+    "high": 94.42,
+    "low": 51.52
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1205.6,
+  "engineer_weeks_at_40h": 1205.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 101.25,
-        "high": 137.22,
-        "low": 75.4
+        "base": 101.6,
+        "high": 137.7,
+        "low": 75.67
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 305,
-      "public_merged_pull_requests": 429,
-      "public_prs_with_work": 247,
+      "public_authored_pr_commits": 307,
+      "public_merged_pull_requests": 430,
+      "public_prs_with_work": 248,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2429.94,
-        "high": 3293.25,
-        "low": 1809.62
+        "base": 2438.41,
+        "high": 3304.69,
+        "low": 1815.98
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-12",
-  "public_accepted_merge_events": 3899,
-  "public_accepted_pull_requests": 3898,
+  "public_accepted_merge_events": 3900,
+  "public_accepted_pull_requests": 3899,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48223.01,
-    "high": 65518.01,
-    "low": 35748.71
+    "base": 48231.48,
+    "high": 65529.45,
+    "low": 35755.07
   },
   "updated_at_utc": "2026-11-12",
   "window": {
@@ -129345,6 +129345,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(cli): show the template manifest ref in table output",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2745",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T16:50:29Z",
+      "evidence": {
+        "additions": 38,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.47,
+        "high": 11.44,
+        "low": 6.36
+      },
+      "merged_at": "2026-11-12T09:36:57Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.47,
+          "high": 11.44,
+          "low": 6.36
+        }
+      },
+      "project": "go-resty/resty",
+      "pull_request": 1272,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: strip fragments and empty queries from load balancer bases",
+      "url": "https://github.com/go-resty/resty/pull/1272",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
