@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.52,
-    "high": 94.45,
-    "low": 51.54
+    "base": 69.64,
+    "high": 94.61,
+    "low": 51.62
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1206.2,
+  "engineer_weeks_at_40h": 1208.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 93.18,
-        "high": 127.27,
-        "low": 68.39
+        "base": 93.67,
+        "high": 127.93,
+        "low": 68.75
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,21 +354,21 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 526,
+      "public_authored_pr_commits": 530,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 384,
+      "public_prs_with_work": 385,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5590.85,
-        "high": 7636.36,
-        "low": 4103.35
+        "base": 5619.92,
+        "high": 7675.6,
+        "low": 4125.15
       }
     },
     {
       "agentic_power_x": {
-        "base": 566.78,
-        "high": 766.14,
-        "low": 424.11
+        "base": 567.17,
+        "high": 766.68,
+        "low": 424.41
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4514,
+      "public_authored_pr_commits": 4522,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3301,
+      "public_prs_with_work": 3302,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 35140.26,
-        "high": 47500.89,
-        "low": 26294.73
+        "base": 35164.81,
+        "high": 47534.03,
+        "low": 26313.14
       }
     },
     {
       "agentic_power_x": {
-        "base": 101.6,
-        "high": 137.7,
-        "low": 75.67
+        "base": 102.74,
+        "high": 139.24,
+        "low": 76.52
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 307,
-      "public_merged_pull_requests": 431,
-      "public_prs_with_work": 248,
+      "public_authored_pr_commits": 309,
+      "public_merged_pull_requests": 435,
+      "public_prs_with_work": 250,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2438.41,
-        "high": 3304.69,
-        "low": 1815.98
+        "base": 2465.85,
+        "high": 3341.73,
+        "low": 1836.56
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-12",
-  "public_accepted_merge_events": 3901,
-  "public_accepted_pull_requests": 3900,
+  "public_accepted_merge_events": 3905,
+  "public_accepted_pull_requests": 3904,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48246.77,
-    "high": 65550.09,
-    "low": 35766.54
+    "base": 48327.83,
+    "high": 65659.51,
+    "low": 35827.33
   },
   "updated_at_utc": "2026-11-12",
   "window": {
@@ -129411,6 +129411,138 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(rvforge): validate proofs, registry reads, and object identity",
       "url": "https://github.com/ruvnet/RuVector/pull/1433",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-09T15:27:18Z",
+      "evidence": {
+        "additions": 247,
+        "changed_files": 8,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 41,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 16.44,
+        "high": 22.19,
+        "low": 12.33
+      },
+      "merged_at": "2026-11-12T11:14:25Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 16.44,
+          "high": 22.19,
+          "low": 12.33
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1439,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(rvf): store metric, batch dimensions, and quarantined id maps",
+      "url": "https://github.com/ruvnet/RuVector/pull/1439",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-09T15:09:38Z",
+      "evidence": {
+        "additions": 562,
+        "changed_files": 14,
+        "comments": 1,
+        "commits": 9,
+        "deletions": 52,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 24.55,
+        "high": 33.14,
+        "low": 18.41
+      },
+      "merged_at": "2026-11-12T11:19:17Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 24.55,
+          "high": 33.14,
+          "low": 18.41
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1434,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(rvlite): CLI persistence, vector checks, cosine range, and browser writer leases",
+      "url": "https://github.com/ruvnet/RuVector/pull/1434",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-09T15:41:16Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 44,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.0,
+        "high": 14.85,
+        "low": 8.25
+      },
+      "merged_at": "2026-11-12T11:22:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.0,
+          "high": 14.85,
+          "low": 8.25
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1441,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(rvf-wasm): refuse malformed and dimensionless stores",
+      "url": "https://github.com/ruvnet/RuVector/pull/1441",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-09T15:18:25Z",
+      "evidence": {
+        "additions": 594,
+        "changed_files": 16,
+        "comments": 0,
+        "commits": 5,
+        "deletions": 665,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 29.07,
+        "high": 39.24,
+        "low": 21.8
+      },
+      "merged_at": "2026-11-12T11:24:19Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 29.07,
+          "high": 39.24,
+          "low": 21.8
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1436,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: NaN-stable graph and hyperbolic search, plus original-graph mincut bounds",
+      "url": "https://github.com/ruvnet/RuVector/pull/1436",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
