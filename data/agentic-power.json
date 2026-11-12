@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.5,
-    "high": 94.42,
-    "low": 51.52
+    "base": 69.52,
+    "high": 94.45,
+    "low": 51.54
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1205.8,
+  "engineer_weeks_at_40h": 1206.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 566.53,
-        "high": 765.81,
-        "low": 423.92
+        "base": 566.78,
+        "high": 766.14,
+        "low": 424.11
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4511,
+      "public_authored_pr_commits": 4514,
       "public_merged_pull_requests": 3228,
-      "public_prs_with_work": 3300,
+      "public_prs_with_work": 3301,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 35124.97,
-        "high": 47480.25,
-        "low": 26283.26
+        "base": 35140.26,
+        "high": 47500.89,
+        "low": 26294.73
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 307,
-      "public_merged_pull_requests": 430,
+      "public_merged_pull_requests": 431,
       "public_prs_with_work": 248,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-12",
-  "public_accepted_merge_events": 3900,
-  "public_accepted_pull_requests": 3899,
+  "public_accepted_merge_events": 3901,
+  "public_accepted_pull_requests": 3900,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48231.48,
-    "high": 65529.45,
-    "low": 35755.07
+    "base": 48246.77,
+    "high": 65550.09,
+    "low": 35766.54
   },
   "updated_at_utc": "2026-11-12",
   "window": {
@@ -129378,6 +129378,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: strip fragments and empty queries from load balancer bases",
       "url": "https://github.com/go-resty/resty/pull/1272",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-09T15:09:35Z",
+      "evidence": {
+        "additions": 164,
+        "changed_files": 8,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 13,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 15.29,
+        "high": 20.64,
+        "low": 11.47
+      },
+      "merged_at": "2026-11-12T10:28:53Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 15.29,
+          "high": 20.64,
+          "low": 11.47
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1433,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(rvforge): validate proofs, registry reads, and object identity",
+      "url": "https://github.com/ruvnet/RuVector/pull/1433",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
