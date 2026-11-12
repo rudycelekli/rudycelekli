@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.42,
-    "high": 94.32,
-    "low": 51.46
+    "base": 69.43,
+    "high": 94.33,
+    "low": 51.47
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1204.4,
+  "engineer_weeks_at_40h": 1204.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 99.35,
-        "high": 134.65,
-        "low": 73.98
+        "base": 99.65,
+        "high": 135.07,
+        "low": 74.21
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 299,
-      "public_merged_pull_requests": 423,
-      "public_prs_with_work": 241,
+      "public_authored_pr_commits": 300,
+      "public_merged_pull_requests": 424,
+      "public_prs_with_work": 242,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2384.34,
-        "high": 3231.69,
-        "low": 1775.43
+        "base": 2391.69,
+        "high": 3241.61,
+        "low": 1780.94
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-12",
-  "public_accepted_merge_events": 3893,
-  "public_accepted_pull_requests": 3892,
+  "public_accepted_merge_events": 3894,
+  "public_accepted_pull_requests": 3893,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48177.41,
-    "high": 65456.45,
-    "low": 35714.52
+    "base": 48184.76,
+    "high": 65466.37,
+    "low": 35720.03
   },
   "updated_at_utc": "2026-11-12",
   "window": {
@@ -129147,6 +129147,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(cli): keep metrics watch going when a stream line is invalid",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2747",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T01:34:59Z",
+      "evidence": {
+        "additions": 13,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.35,
+        "high": 9.92,
+        "low": 5.51
+      },
+      "merged_at": "2026-11-12T03:30:43Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.35,
+          "high": 9.92,
+          "low": 5.51
+        }
+      },
+      "project": "we-promise/sure",
+      "pull_request": 4922,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Use the destructive token for the required-field asterisk",
+      "url": "https://github.com/we-promise/sure/pull/4922",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
