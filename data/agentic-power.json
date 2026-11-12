@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 66.34,
-    "high": 90.16,
-    "low": 49.15
+    "base": 66.4,
+    "high": 90.25,
+    "low": 49.2
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1151.0,
+  "engineer_weeks_at_40h": 1152.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 537.63,
-        "high": 726.79,
-        "low": 402.25
+        "base": 538.29,
+        "high": 727.69,
+        "low": 402.74
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4278,
+      "public_authored_pr_commits": 4302,
       "public_merged_pull_requests": 3028,
-      "public_prs_with_work": 3124,
+      "public_prs_with_work": 3125,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 33333.1,
-        "high": 45061.26,
-        "low": 24939.44
+        "base": 33374.01,
+        "high": 45116.49,
+        "low": 24970.12
       }
     },
     {
       "agentic_power_x": {
-        "base": 90.4,
-        "high": 122.57,
-        "low": 67.26
+        "base": 90.54,
+        "high": 122.76,
+        "low": 67.37
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 274,
-      "public_merged_pull_requests": 411,
-      "public_prs_with_work": 218,
+      "public_authored_pr_commits": 276,
+      "public_merged_pull_requests": 412,
+      "public_prs_with_work": 219,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2169.5,
-        "high": 2941.68,
-        "low": 1614.34
+        "base": 2172.91,
+        "high": 2946.28,
+        "low": 1616.9
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-12",
-  "public_accepted_merge_events": 3681,
-  "public_accepted_pull_requests": 3680,
+  "public_accepted_merge_events": 3682,
+  "public_accepted_pull_requests": 3681,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 46039.64,
-    "high": 62570.51,
-    "low": 34111.28
+    "base": 46083.96,
+    "high": 62630.34,
+    "low": 34144.52
   },
   "updated_at_utc": "2026-11-12",
   "window": {
@@ -122131,6 +122131,44 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(scoring): deduplicate overlapping result roots",
       "url": "https://github.com/facebookresearch/swe-sweep/pull/24",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-09T15:21:23Z",
+      "evidence": {
+        "additions": 1853,
+        "changed_files": 50,
+        "comments": 1,
+        "commits": 27,
+        "deletions": 86,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 44.32,
+        "high": 59.83,
+        "low": 33.24
+      },
+      "merged_at": "2026-11-12T15:26:43Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 40.91,
+          "high": 55.23,
+          "low": 30.68
+        },
+        "2026-11": {
+          "base": 3.41,
+          "high": 4.6,
+          "low": 2.56
+        }
+      },
+      "project": "ruvnet/RuVector",
+      "pull_request": 1437,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(python): collection, MCP, CLI, and integration correctness",
+      "url": "https://github.com/ruvnet/RuVector/pull/1437",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
