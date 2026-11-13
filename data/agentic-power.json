@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.82,
-    "high": 92.16,
-    "low": 50.26
+    "base": 67.89,
+    "high": 92.24,
+    "low": 50.31
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1180.1,
+  "engineer_weeks_at_40h": 1181.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 92.58,
-        "high": 125.47,
-        "low": 68.94
+        "base": 94.32,
+        "high": 127.82,
+        "low": 70.25
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 302,
-      "public_merged_pull_requests": 458,
-      "public_prs_with_work": 242,
+      "public_authored_pr_commits": 307,
+      "public_merged_pull_requests": 463,
+      "public_prs_with_work": 247,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2407.03,
-        "high": 3262.35,
-        "low": 1792.49
+        "base": 2452.21,
+        "high": 3323.35,
+        "low": 1826.38
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-13",
-  "public_accepted_merge_events": 3788,
-  "public_accepted_pull_requests": 3787,
+  "public_accepted_merge_events": 3793,
+  "public_accepted_pull_requests": 3792,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47203.3,
-    "high": 64141.44,
-    "low": 34984.0
+    "base": 47248.48,
+    "high": 64202.44,
+    "low": 35017.89
   },
   "updated_at_utc": "2026-11-13",
   "window": {
@@ -125687,6 +125687,171 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(egress): keep DNS replies to non-EDNS UDP clients within 512 bytes",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2802",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T05:45:56Z",
+      "evidence": {
+        "additions": 86,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.37,
+        "high": 12.65,
+        "low": 7.03
+      },
+      "merged_at": "2026-11-13T04:38:21Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.37,
+          "high": 12.65,
+          "low": 7.03
+        }
+      },
+      "project": "google-research/timesfm",
+      "pull_request": 546,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(timesfm3/torch): mask covariate placeholders in mixed batches",
+      "url": "https://github.com/google-research/timesfm/pull/546",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T05:46:00Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.21,
+        "high": 9.74,
+        "low": 5.41
+      },
+      "merged_at": "2026-11-13T04:38:21Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.21,
+          "high": 9.74,
+          "low": 5.41
+        }
+      },
+      "project": "google-research/timesfm",
+      "pull_request": 547,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(timesfm3/torch): accept a 2D ndarray of contexts in TimesFM3Evaluator",
+      "url": "https://github.com/google-research/timesfm/pull/547",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T15:32:07Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.63,
+        "high": 11.65,
+        "low": 6.47
+      },
+      "merged_at": "2026-11-13T04:38:21Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.63,
+          "high": 11.65,
+          "low": 6.47
+        }
+      },
+      "project": "google-research/timesfm",
+      "pull_request": 548,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(timesfm3/mlx): decode at patch-rounded horizon like torch",
+      "url": "https://github.com/google-research/timesfm/pull/548",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T15:32:11Z",
+      "evidence": {
+        "additions": 90,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.47,
+        "high": 12.78,
+        "low": 7.1
+      },
+      "merged_at": "2026-11-13T04:38:21Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.47,
+          "high": 12.78,
+          "low": 7.1
+        }
+      },
+      "project": "google-research/timesfm",
+      "pull_request": 549,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(timesfm3/torch): honor ModelConfig.use_sdpa in attention modules",
+      "url": "https://github.com/google-research/timesfm/pull/549",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-02T15:32:14Z",
+      "evidence": {
+        "additions": 115,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.5,
+        "high": 14.18,
+        "low": 7.88
+      },
+      "merged_at": "2026-11-13T04:49:04Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.5,
+          "high": 14.18,
+          "low": 7.88
+        }
+      },
+      "project": "google-research/timesfm",
+      "pull_request": 550,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(timesfm_2p5): align timesfm + xreg residuals with the backcast",
+      "url": "https://github.com/google-research/timesfm/pull/550",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
