@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.8,
-    "high": 92.13,
-    "low": 50.25
+    "base": 67.82,
+    "high": 92.16,
+    "low": 50.26
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1179.7,
+  "engineer_weeks_at_40h": 1180.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 92.0,
-        "high": 124.69,
-        "low": 68.51
+        "base": 92.58,
+        "high": 125.47,
+        "low": 68.94
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 300,
-      "public_merged_pull_requests": 456,
-      "public_prs_with_work": 240,
+      "public_authored_pr_commits": 302,
+      "public_merged_pull_requests": 458,
+      "public_prs_with_work": 242,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2391.96,
-        "high": 3242.0,
-        "low": 1781.19
+        "base": 2407.03,
+        "high": 3262.35,
+        "low": 1792.49
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-13",
-  "public_accepted_merge_events": 3786,
-  "public_accepted_pull_requests": 3785,
+  "public_accepted_merge_events": 3788,
+  "public_accepted_pull_requests": 3787,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47188.23,
-    "high": 64121.09,
-    "low": 34972.7
+    "base": 47203.3,
+    "high": 64141.44,
+    "low": 34984.0
   },
   "updated_at_utc": "2026-11-13",
   "window": {
@@ -125621,6 +125621,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "[TASK FIX] tumor-immune-interface: state the two acceptance parts as requirements",
       "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2795",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T07:54:24Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.47,
+        "high": 8.74,
+        "low": 4.85
+      },
+      "merged_at": "2026-11-13T02:08:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.47,
+          "high": 8.74,
+          "low": 4.85
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2809,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(egress): reject an invalid port in OPENSANDBOX_EGRESS_DNS_UPSTREAM",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2809",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T07:05:44Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.6,
+        "high": 11.61,
+        "low": 6.45
+      },
+      "merged_at": "2026-11-13T02:16:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.6,
+          "high": 11.61,
+          "low": 6.45
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2802,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(egress): keep DNS replies to non-EDNS UDP clients within 512 bytes",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2802",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
