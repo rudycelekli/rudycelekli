@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.93,
-    "high": 92.3,
-    "low": 50.35
+    "base": 67.95,
+    "high": 92.34,
+    "low": 50.37
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1185.4,
+  "engineer_weeks_at_40h": 1185.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 93.18,
-        "high": 126.26,
-        "low": 69.43
+        "base": 93.81,
+        "high": 127.1,
+        "low": 69.9
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 330,
-      "public_merged_pull_requests": 482,
-      "public_prs_with_work": 265,
+      "public_authored_pr_commits": 332,
+      "public_merged_pull_requests": 484,
+      "public_prs_with_work": 267,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2609.11,
-        "high": 3535.16,
-        "low": 1944.04
+        "base": 2626.68,
+        "high": 3558.88,
+        "low": 1957.22
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-14",
-  "public_accepted_merge_events": 3812,
-  "public_accepted_pull_requests": 3811,
+  "public_accepted_merge_events": 3814,
+  "public_accepted_pull_requests": 3813,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47414.44,
-    "high": 64426.49,
-    "low": 35142.35
+    "base": 47432.01,
+    "high": 64450.21,
+    "low": 35155.53
   },
   "updated_at_utc": "2026-11-14",
   "window": {
@@ -126479,6 +126479,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(execd): fail fast with 400 when a code context cwd is unusable",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2782",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T04:29:51Z",
+      "evidence": {
+        "additions": 63,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.77,
+        "high": 11.84,
+        "low": 6.58
+      },
+      "merged_at": "2026-11-14T15:27:57Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.77,
+          "high": 11.84,
+          "low": 6.58
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2780,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(helm): grant the controller pods/exec for the Restart recycle strategy",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2780",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T05:36:06Z",
+      "evidence": {
+        "additions": 55,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 9,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.8,
+        "high": 11.88,
+        "low": 6.6
+      },
+      "merged_at": "2026-11-14T15:29:04Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.8,
+          "high": 11.88,
+          "low": 6.6
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2788,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): reuse upstream connections in the /proxy route",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2788",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
