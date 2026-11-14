@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.75,
-    "high": 92.06,
-    "low": 50.21
+    "base": 67.78,
+    "high": 92.11,
+    "low": 50.24
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1182.2,
+  "engineer_weeks_at_40h": 1182.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 89.02,
-        "high": 120.63,
-        "low": 66.3
+        "base": 89.88,
+        "high": 121.8,
+        "low": 66.95
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 312,
-      "public_merged_pull_requests": 468,
-      "public_prs_with_work": 252,
+      "public_authored_pr_commits": 318,
+      "public_merged_pull_requests": 471,
+      "public_prs_with_work": 255,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2492.42,
-        "high": 3377.63,
-        "low": 1856.53
+        "base": 2516.71,
+        "high": 3410.42,
+        "low": 1874.74
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-14",
-  "public_accepted_merge_events": 3798,
-  "public_accepted_pull_requests": 3797,
+  "public_accepted_merge_events": 3801,
+  "public_accepted_pull_requests": 3800,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47288.69,
-    "high": 64256.72,
-    "low": 35048.04
+    "base": 47312.98,
+    "high": 64289.51,
+    "low": 35066.25
   },
   "updated_at_utc": "2026-11-14",
   "window": {
@@ -126017,6 +126017,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(constraint-driven-development): run dependency-cruiser so the architecture gate can fail",
       "url": "https://github.com/addyosmani/agent-skills/pull/786",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-13T09:36:10Z",
+      "evidence": {
+        "additions": 5,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.47,
+        "high": 8.74,
+        "low": 4.85
+      },
+      "merged_at": "2026-11-14T07:03:33Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.47,
+          "high": 8.74,
+          "low": 4.85
+        }
+      },
+      "project": "we-promise/sure",
+      "pull_request": 4985,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Record CoinSpot buys as cash out and sells as cash in",
+      "url": "https://github.com/we-promise/sure/pull/4985",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-14T05:10:31Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.81,
+        "high": 10.54,
+        "low": 5.86
+      },
+      "merged_at": "2026-11-14T07:15:16Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.81,
+          "high": 10.54,
+          "low": 5.86
+        }
+      },
+      "project": "storytold/craft-anything",
+      "pull_request": 1840,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Check the browser exit diagnostic without timing the whole tool call (R5.2)",
+      "url": "https://github.com/storytold/craft-anything/pull/1840",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-14T05:12:31Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.01,
+        "high": 13.51,
+        "low": 7.5
+      },
+      "merged_at": "2026-11-14T07:15:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.01,
+          "high": 13.51,
+          "low": 7.5
+        }
+      },
+      "project": "storytold/craft-anything",
+      "pull_request": 1844,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Verify Mac call observation with a real debugger (R2.4)",
+      "url": "https://github.com/storytold/craft-anything/pull/1844",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
