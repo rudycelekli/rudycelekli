@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.84,
-    "high": 92.18,
-    "low": 50.28
+    "base": 67.85,
+    "high": 92.19,
+    "low": 50.29
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1183.7,
+  "engineer_weeks_at_40h": 1184.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 549.79,
-        "high": 743.2,
-        "low": 411.37
+        "base": 549.93,
+        "high": 743.4,
+        "low": 411.48
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4425,
+      "public_authored_pr_commits": 4426,
       "public_merged_pull_requests": 3088,
-      "public_prs_with_work": 3189,
+      "public_prs_with_work": 3190,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34086.75,
-        "high": 46078.65,
-        "low": 25504.65
+        "base": 34095.81,
+        "high": 46090.89,
+        "low": 25511.45
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 323,
-      "public_merged_pull_requests": 474,
+      "public_merged_pull_requests": 475,
       "public_prs_with_work": 258,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-14",
-  "public_accepted_merge_events": 3804,
-  "public_accepted_pull_requests": 3803,
+  "public_accepted_merge_events": 3805,
+  "public_accepted_pull_requests": 3804,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47349.45,
-    "high": 64338.75,
-    "low": 35093.61
+    "base": 47358.51,
+    "high": 64350.99,
+    "low": 35100.41
   },
   "updated_at_utc": "2026-11-14",
   "window": {
@@ -126215,6 +126215,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(console): bracket IPv6 pod IPs in the node-agent readyz probe",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2799",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-23T22:51:41Z",
+      "evidence": {
+        "additions": 61,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.06,
+        "high": 12.24,
+        "low": 6.8
+      },
+      "merged_at": "2026-11-14T13:58:24Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.06,
+          "high": 12.24,
+          "low": 6.8
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 175,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: send basic authorization from a link that includes it",
+      "url": "https://github.com/anmolkapil/plexo/pull/175",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
