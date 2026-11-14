@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.78,
-    "high": 92.11,
-    "low": 50.24
+    "base": 67.81,
+    "high": 92.14,
+    "low": 50.26
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1182.8,
+  "engineer_weeks_at_40h": 1183.3,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 89.88,
-        "high": 121.8,
-        "low": 66.95
+        "base": 90.56,
+        "high": 122.72,
+        "low": 67.46
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 318,
-      "public_merged_pull_requests": 471,
-      "public_prs_with_work": 255,
+      "public_authored_pr_commits": 321,
+      "public_merged_pull_requests": 472,
+      "public_prs_with_work": 256,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2516.71,
-        "high": 3410.42,
-        "low": 1874.74
+        "base": 2535.73,
+        "high": 3436.1,
+        "low": 1889.01
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-14",
-  "public_accepted_merge_events": 3801,
-  "public_accepted_pull_requests": 3800,
+  "public_accepted_merge_events": 3802,
+  "public_accepted_pull_requests": 3801,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47312.98,
-    "high": 64289.51,
-    "low": 35066.25
+    "base": 47332.0,
+    "high": 64315.19,
+    "low": 35080.52
   },
   "updated_at_utc": "2026-11-14",
   "window": {
@@ -126116,6 +126116,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Verify Mac call observation with a real debugger (R2.4)",
       "url": "https://github.com/storytold/craft-anything/pull/1844",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-14T05:12:27Z",
+      "evidence": {
+        "additions": 171,
+        "changed_files": 20,
+        "comments": 3,
+        "commits": 3,
+        "deletions": 39,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 19.02,
+        "high": 25.68,
+        "low": 14.27
+      },
+      "merged_at": "2026-11-14T07:36:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 19.02,
+          "high": 25.68,
+          "low": 14.27
+        }
+      },
+      "project": "storytold/craft-anything",
+      "pull_request": 1843,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Show ACP token counts as unknown when the agent does not report them (R2.2)",
+      "url": "https://github.com/storytold/craft-anything/pull/1843",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
