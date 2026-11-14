@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.85,
-    "high": 92.19,
-    "low": 50.29
+    "base": 67.93,
+    "high": 92.3,
+    "low": 50.35
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1184.0,
+  "engineer_weeks_at_40h": 1185.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 91.18,
-        "high": 123.56,
-        "low": 67.93
+        "base": 93.18,
+        "high": 126.26,
+        "low": 69.43
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 86,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 323,
-      "public_merged_pull_requests": 475,
-      "public_prs_with_work": 258,
+      "public_authored_pr_commits": 330,
+      "public_merged_pull_requests": 482,
+      "public_prs_with_work": 265,
       "repository_default_branch_commits": 505,
       "skilled_human_equivalent_hours": {
-        "base": 2553.18,
-        "high": 3459.66,
-        "low": 1902.1
+        "base": 2609.11,
+        "high": 3535.16,
+        "low": 1944.04
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 910,
   "owned_public_through_utc": "2026-11-14",
-  "public_accepted_merge_events": 3805,
-  "public_accepted_pull_requests": 3804,
+  "public_accepted_merge_events": 3812,
+  "public_accepted_pull_requests": 3811,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47358.51,
-    "high": 64350.99,
-    "low": 35100.41
+    "base": 47414.44,
+    "high": 64426.49,
+    "low": 35142.35
   },
   "updated_at_utc": "2026-11-14",
   "window": {
@@ -126248,6 +126248,237 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: send basic authorization from a link that includes it",
       "url": "https://github.com/anmolkapil/plexo/pull/175",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-12T07:21:52Z",
+      "evidence": {
+        "additions": 78,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.27,
+        "high": 11.17,
+        "low": 6.21
+      },
+      "merged_at": "2026-11-14T15:24:49Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.27,
+          "high": 11.17,
+          "low": 6.21
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2805,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sdk-go): deliver WatchMetrics snapshots as they arrive",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2805",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T06:49:35Z",
+      "evidence": {
+        "additions": 46,
+        "changed_files": 6,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.75,
+        "high": 13.16,
+        "low": 7.31
+      },
+      "merged_at": "2026-11-14T15:25:12Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.75,
+          "high": 13.16,
+          "low": 7.31
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2800,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sdk-kotlin): keep the first SSE event after a leading UTF-8 BOM",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2800",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T06:08:25Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.24,
+        "high": 11.12,
+        "low": 6.18
+      },
+      "merged_at": "2026-11-14T15:25:38Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.24,
+          "high": 11.12,
+          "low": 6.18
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2792,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): return 400 when listing contexts for a non-kernel language",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2792",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T06:00:21Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.39,
+        "high": 8.63,
+        "low": 4.79
+      },
+      "merged_at": "2026-11-14T15:25:59Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.39,
+          "high": 8.63,
+          "low": 4.79
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2791,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): drop renew-intent payloads that are not JSON objects",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2791",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T05:44:12Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 5.49,
+        "high": 7.41,
+        "low": 4.11
+      },
+      "merged_at": "2026-11-14T15:26:45Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.49,
+          "high": 7.41,
+          "low": 4.11
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2789,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(helm): derive the node-agent health port from a host:port serverAddr",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2789",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T05:11:27Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.17,
+        "high": 11.03,
+        "low": 6.13
+      },
+      "merged_at": "2026-11-14T15:27:12Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.17,
+          "high": 11.03,
+          "low": 6.13
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2785,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): delete a code context whose Jupyter session is already gone",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2785",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T04:46:51Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 5,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.62,
+        "high": 12.98,
+        "low": 7.21
+      },
+      "merged_at": "2026-11-14T15:27:35Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.62,
+          "high": 12.98,
+          "low": 7.21
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2782,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): fail fast with 400 when a code context cwd is unusable",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2782",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
