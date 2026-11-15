@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
     "base": 68.11,
-    "high": 92.54,
-    "low": 50.48
+    "high": 92.55,
+    "low": 50.49
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1191.9,
+  "engineer_weeks_at_40h": 1192.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 94.37,
-        "high": 127.84,
-        "low": 70.35
+        "base": 94.52,
+        "high": 128.04,
+        "low": 70.46
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 360,
-      "public_merged_pull_requests": 514,
-      "public_prs_with_work": 293,
+      "public_authored_pr_commits": 361,
+      "public_merged_pull_requests": 515,
+      "public_prs_with_work": 294,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 2831.21,
-        "high": 3835.17,
-        "low": 2110.43
+        "base": 2835.7,
+        "high": 3841.23,
+        "low": 2113.79
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-15",
-  "public_accepted_merge_events": 3844,
-  "public_accepted_pull_requests": 3843,
+  "public_accepted_merge_events": 3845,
+  "public_accepted_pull_requests": 3844,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47674.24,
-    "high": 64777.4,
-    "low": 35337.01
+    "base": 47678.73,
+    "high": 64783.46,
+    "low": 35340.37
   },
   "updated_at_utc": "2026-11-15",
   "window": {
@@ -127535,6 +127535,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "docs(skill): state the pixel size of each video format",
       "url": "https://github.com/latent-spaces/brag/pull/95",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:58:52Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 4.49,
+        "high": 6.06,
+        "low": 3.36
+      },
+      "merged_at": "2026-11-15T16:58:56Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 4.49,
+          "high": 6.06,
+          "low": 3.36
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 96,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs(audio): state that keypress wavs sit outside the SFX analysis",
+      "url": "https://github.com/latent-spaces/brag/pull/96",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
