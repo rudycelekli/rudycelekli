@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.04,
-    "high": 92.45,
-    "low": 50.43
+    "base": 68.11,
+    "high": 92.54,
+    "low": 50.48
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1190.7,
+  "engineer_weeks_at_40h": 1191.9,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 92.81,
-        "high": 125.73,
-        "low": 69.18
+        "base": 94.37,
+        "high": 127.84,
+        "low": 70.35
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 352,
-      "public_merged_pull_requests": 506,
-      "public_prs_with_work": 285,
+      "public_authored_pr_commits": 360,
+      "public_merged_pull_requests": 514,
+      "public_prs_with_work": 293,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 2784.35,
-        "high": 3771.92,
-        "low": 2075.29
+        "base": 2831.21,
+        "high": 3835.17,
+        "low": 2110.43
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-15",
-  "public_accepted_merge_events": 3836,
-  "public_accepted_pull_requests": 3835,
+  "public_accepted_merge_events": 3844,
+  "public_accepted_pull_requests": 3843,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47627.38,
-    "high": 64714.15,
-    "low": 35301.87
+    "base": 47674.24,
+    "high": 64777.4,
+    "low": 35337.01
   },
   "updated_at_utc": "2026-11-15",
   "window": {
@@ -127271,6 +127271,270 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(docs): give each gallery video its own accessible name",
       "url": "https://github.com/latent-spaces/brag/pull/77",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:55:22Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 20,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.36,
+        "high": 9.94,
+        "low": 5.52
+      },
+      "merged_at": "2026-11-15T16:33:01Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.36,
+          "high": 9.94,
+          "low": 5.52
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 85,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs: install /brag on other agents with the skills CLI",
+      "url": "https://github.com/latent-spaces/brag/pull/85",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:55:52Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 4.99,
+        "high": 6.73,
+        "low": 3.74
+      },
+      "merged_at": "2026-11-15T16:36:43Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 4.99,
+          "high": 6.73,
+          "low": 3.74
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 86,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs: describe /brag as a multi-agent skill in the product spec",
+      "url": "https://github.com/latent-spaces/brag/pull/86",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:58:05Z",
+      "evidence": {
+        "additions": 5,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.21,
+        "high": 7.03,
+        "low": 3.9
+      },
+      "merged_at": "2026-11-15T16:46:32Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.21,
+          "high": 7.03,
+          "low": 3.9
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 91,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs: add a favicon for the launch site",
+      "url": "https://github.com/latent-spaces/brag/pull/91",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:57:47Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 4.99,
+        "high": 6.73,
+        "low": 3.74
+      },
+      "merged_at": "2026-11-15T16:47:58Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 4.99,
+          "high": 6.73,
+          "low": 3.74
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 90,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(docs): use one Hyperframes URL and harden new-tab links",
+      "url": "https://github.com/latent-spaces/brag/pull/90",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:58:29Z",
+      "evidence": {
+        "additions": 6,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.97,
+        "high": 8.06,
+        "low": 4.48
+      },
+      "merged_at": "2026-11-15T16:52:44Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.97,
+          "high": 8.06,
+          "low": 4.48
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 94,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(skill): honor an explicit duration instead of forcing 15\u201325 seconds",
+      "url": "https://github.com/latent-spaces/brag/pull/94",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:56:45Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.54,
+        "high": 7.48,
+        "low": 4.16
+      },
+      "merged_at": "2026-11-15T16:56:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.54,
+          "high": 7.48,
+          "low": 4.16
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 87,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs: correct Codex, opencode, and brag-slim install notes",
+      "url": "https://github.com/latent-spaces/brag/pull/87",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-09T15:00:18Z",
+      "evidence": {
+        "additions": 8,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.7,
+        "high": 10.39,
+        "low": 5.77
+      },
+      "merged_at": "2026-11-15T16:57:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.7,
+          "high": 10.39,
+          "low": 5.77
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 104,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "feat(plugin): mention /brag-slim in the plugin manifests",
+      "url": "https://github.com/latent-spaces/brag/pull/104",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:58:40Z",
+      "evidence": {
+        "additions": 4,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.1,
+        "high": 6.89,
+        "low": 3.83
+      },
+      "merged_at": "2026-11-15T16:58:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.1,
+          "high": 6.89,
+          "low": 3.83
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 95,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs(skill): state the pixel size of each video format",
+      "url": "https://github.com/latent-spaces/brag/pull/95",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
