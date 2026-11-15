@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.02,
-    "high": 92.42,
-    "low": 50.42
+    "base": 68.04,
+    "high": 92.45,
+    "low": 50.43
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1190.4,
+  "engineer_weeks_at_40h": 1190.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 92.39,
-        "high": 125.16,
-        "low": 68.86
+        "base": 92.81,
+        "high": 125.73,
+        "low": 69.18
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 350,
-      "public_merged_pull_requests": 504,
-      "public_prs_with_work": 283,
+      "public_authored_pr_commits": 352,
+      "public_merged_pull_requests": 506,
+      "public_prs_with_work": 285,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 2771.67,
-        "high": 3754.8,
-        "low": 2065.77
+        "base": 2784.35,
+        "high": 3771.92,
+        "low": 2075.29
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-15",
-  "public_accepted_merge_events": 3834,
-  "public_accepted_pull_requests": 3833,
+  "public_accepted_merge_events": 3836,
+  "public_accepted_pull_requests": 3835,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47614.7,
-    "high": 64697.03,
-    "low": 35292.35
+    "base": 47627.38,
+    "high": 64714.15,
+    "low": 35301.87
   },
   "updated_at_utc": "2026-11-15",
   "window": {
@@ -127205,6 +127205,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(server): reject a pool capacity whose bufferMin exceeds bufferMax",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2801",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-09T14:50:49Z",
+      "evidence": {
+        "additions": 3,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.13,
+        "high": 8.27,
+        "low": 4.6
+      },
+      "merged_at": "2026-11-15T16:22:36Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.13,
+          "high": 8.27,
+          "low": 4.6
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 75,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: keep brag-slim skill symlinks from being rewritten",
+      "url": "https://github.com/latent-spaces/brag/pull/75",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-09T14:51:52Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 12,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.55,
+        "high": 8.85,
+        "low": 4.92
+      },
+      "merged_at": "2026-11-15T16:25:52Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.55,
+          "high": 8.85,
+          "low": 4.92
+        }
+      },
+      "project": "latent-spaces/brag",
+      "pull_request": 77,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(docs): give each gallery video its own accessible name",
+      "url": "https://github.com/latent-spaces/brag/pull/77",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
