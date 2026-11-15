@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.19,
-    "high": 92.65,
-    "low": 50.54
+    "base": 68.3,
+    "high": 92.79,
+    "low": 50.62
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1193.3,
+  "engineer_weeks_at_40h": 1195.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 551.38,
-        "high": 745.35,
-        "low": 412.56
+        "base": 552.33,
+        "high": 746.64,
+        "low": 413.27
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4434,
+      "public_authored_pr_commits": 4440,
       "public_merged_pull_requests": 3088,
-      "public_prs_with_work": 3197,
+      "public_prs_with_work": 3203,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34185.35,
-        "high": 46211.78,
-        "low": 25578.61
+        "base": 34244.57,
+        "high": 46291.75,
+        "low": 25623.02
       }
     },
     {
       "agentic_power_x": {
-        "base": 94.52,
-        "high": 128.04,
-        "low": 70.46
+        "base": 95.08,
+        "high": 128.8,
+        "low": 70.88
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 361,
-      "public_merged_pull_requests": 518,
-      "public_prs_with_work": 294,
+      "public_authored_pr_commits": 363,
+      "public_merged_pull_requests": 526,
+      "public_prs_with_work": 296,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 2835.7,
-        "high": 3841.23,
-        "low": 2113.79
+        "base": 2852.53,
+        "high": 3863.95,
+        "low": 2126.41
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-15",
-  "public_accepted_merge_events": 3848,
-  "public_accepted_pull_requests": 3847,
+  "public_accepted_merge_events": 3856,
+  "public_accepted_pull_requests": 3855,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47730.57,
-    "high": 64853.45,
-    "low": 35379.26
+    "base": 47806.62,
+    "high": 64956.14,
+    "low": 35436.29
   },
   "updated_at_utc": "2026-11-15",
   "window": {
@@ -127667,6 +127667,270 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "feat(service): expose standard gRPC health readiness (#3917)",
       "url": "https://github.com/maziyarpanahi/openmed/pull/4190",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T03:42:52Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.75,
+        "high": 11.81,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-15T20:32:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.75,
+          "high": 11.81,
+          "low": 6.56
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3214,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(dsh): a typed Windows path reaches the review whole",
+      "url": "https://github.com/backnotprop/plannotator/pull/3214",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-14T23:03:45Z",
+      "evidence": {
+        "additions": 72,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.07,
+        "high": 12.25,
+        "low": 6.8
+      },
+      "merged_at": "2026-11-15T20:32:50Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.07,
+          "high": 12.25,
+          "low": 6.8
+        }
+      },
+      "project": "raphaelmansuy/edgequake",
+      "pull_request": 487,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): forward document_list search as document_pattern",
+      "url": "https://github.com/raphaelmansuy/edgequake/pull/487",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-15T06:37:10Z",
+      "evidence": {
+        "additions": 62,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.86,
+        "high": 13.31,
+        "low": 7.39
+      },
+      "merged_at": "2026-11-15T20:32:57Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.86,
+          "high": 13.31,
+          "low": 7.39
+        }
+      },
+      "project": "raphaelmansuy/edgequake",
+      "pull_request": 488,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(python): send q / entity_name in graph label search and entity exists",
+      "url": "https://github.com/raphaelmansuy/edgequake/pull/488",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-15T06:37:13Z",
+      "evidence": {
+        "additions": 80,
+        "changed_files": 6,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.89,
+        "high": 16.06,
+        "low": 8.92
+      },
+      "merged_at": "2026-11-15T20:33:05Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 11.89,
+          "high": 16.06,
+          "low": 8.92
+        }
+      },
+      "project": "raphaelmansuy/edgequake",
+      "pull_request": 489,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sdk): send graph limit as max_nodes in Python and TypeScript graph.get",
+      "url": "https://github.com/raphaelmansuy/edgequake/pull/489",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-15T06:37:16Z",
+      "evidence": {
+        "additions": 71,
+        "changed_files": 5,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.2,
+        "high": 13.77,
+        "low": 7.65
+      },
+      "merged_at": "2026-11-15T20:33:13Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.2,
+          "high": 13.77,
+          "low": 7.65
+        }
+      },
+      "project": "raphaelmansuy/edgequake",
+      "pull_request": 490,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sdk): use source_entity/target_entity in Python and Swift entity merge",
+      "url": "https://github.com/raphaelmansuy/edgequake/pull/490",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-15T06:37:20Z",
+      "evidence": {
+        "additions": 131,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.04,
+        "high": 14.91,
+        "low": 8.28
+      },
+      "merged_at": "2026-11-15T20:33:21Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 11.04,
+          "high": 14.91,
+          "low": 8.28
+        }
+      },
+      "project": "raphaelmansuy/edgequake",
+      "pull_request": 491,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(python): match server contract for relationship create and decode",
+      "url": "https://github.com/raphaelmansuy/edgequake/pull/491",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-15T06:37:42Z",
+      "evidence": {
+        "additions": 16,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.16,
+        "high": 9.67,
+        "low": 5.37
+      },
+      "merged_at": "2026-11-15T20:33:28Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.16,
+          "high": 9.67,
+          "low": 5.37
+        }
+      },
+      "project": "raphaelmansuy/edgequake",
+      "pull_request": 492,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(ruby): send required source_id when creating a relationship",
+      "url": "https://github.com/raphaelmansuy/edgequake/pull/492",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T03:37:08Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.08,
+        "high": 10.91,
+        "low": 6.06
+      },
+      "merged_at": "2026-11-15T20:53:11Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.08,
+          "high": 10.91,
+          "low": 6.06
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3213,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Guide viewer: a link's URL keeps its own closing paren",
+      "url": "https://github.com/backnotprop/plannotator/pull/3213",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
