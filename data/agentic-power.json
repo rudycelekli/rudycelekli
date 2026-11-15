@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 67.87,
-    "high": 92.22,
-    "low": 50.3
+    "base": 67.99,
+    "high": 92.38,
+    "low": 50.39
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1187.7,
+  "engineer_weeks_at_40h": 1189.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 88.85,
-        "high": 120.38,
-        "low": 66.2
+        "base": 91.64,
+        "high": 124.15,
+        "low": 68.3
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 337,
-      "public_merged_pull_requests": 491,
-      "public_prs_with_work": 270,
+      "public_authored_pr_commits": 347,
+      "public_merged_pull_requests": 501,
+      "public_prs_with_work": 280,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 2665.39,
-        "high": 3611.34,
-        "low": 1986.06
+        "base": 2749.16,
+        "high": 3724.41,
+        "low": 2048.89
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-15",
-  "public_accepted_merge_events": 3821,
-  "public_accepted_pull_requests": 3820,
+  "public_accepted_merge_events": 3831,
+  "public_accepted_pull_requests": 3830,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47508.42,
-    "high": 64553.57,
-    "low": 35212.64
+    "base": 47592.19,
+    "high": 64666.64,
+    "low": 35275.47
   },
   "updated_at_utc": "2026-11-15",
   "window": {
@@ -126776,6 +126776,336 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Show how to retry when project approvals refuse a builder action (R2.9)",
       "url": "https://github.com/storytold/craft-anything/pull/1848",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T06:16:29Z",
+      "evidence": {
+        "additions": 4,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.21,
+        "high": 8.38,
+        "low": 4.65
+      },
+      "merged_at": "2026-11-15T05:04:45Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.21,
+          "high": 8.38,
+          "low": 4.65
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2793,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): return SANDBOX::INVALID_METADATA_LABEL for reserved metadata patch keys",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2793",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T06:24:32Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 7.82,
+        "high": 10.56,
+        "low": 5.87
+      },
+      "merged_at": "2026-11-15T05:05:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.82,
+          "high": 10.56,
+          "low": 5.87
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2796,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): return SANDBOX::INVALID_METADATA_LABEL for reserved Docker metadata patch keys",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2796",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T01:05:53Z",
+      "evidence": {
+        "additions": 73,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.5,
+        "high": 12.82,
+        "low": 7.12
+      },
+      "merged_at": "2026-11-15T05:06:02Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.5,
+          "high": 12.82,
+          "low": 7.12
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2697,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sdk-python): propagate code-interpreter handler exceptions",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2697",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T05:52:16Z",
+      "evidence": {
+        "additions": 26,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 7.58,
+        "high": 10.23,
+        "low": 5.69
+      },
+      "merged_at": "2026-11-15T05:06:25Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.58,
+          "high": 10.23,
+          "low": 5.69
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2790,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): return 400 for a malformed template list metadata filter",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2790",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T05:19:37Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 5,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 4
+      },
+      "heh": {
+        "base": 9.27,
+        "high": 12.51,
+        "low": 6.95
+      },
+      "merged_at": "2026-11-15T05:06:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.27,
+          "high": 12.51,
+          "low": 6.95
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2786,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): let docker.pids_limit = 0 disable the PID limit",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2786",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T06:33:22Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 7.86,
+        "high": 10.61,
+        "low": 5.9
+      },
+      "merged_at": "2026-11-15T05:07:20Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.86,
+          "high": 10.61,
+          "low": 5.9
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2798,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(ingress): drop the stale Content-Length from a relayed WebSocket handshake rejection",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2798",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T04:21:44Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.5,
+        "high": 11.48,
+        "low": 6.38
+      },
+      "merged_at": "2026-11-15T05:07:44Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.5,
+          "high": 11.48,
+          "low": 6.38
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2779,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): keep $ literal in paths when it names no variable",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2779",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-12T04:12:33Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 8.71,
+        "high": 11.75,
+        "low": 6.53
+      },
+      "merged_at": "2026-11-15T05:08:05Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.71,
+          "high": 11.75,
+          "low": 6.53
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2778,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): keep secure_access signing keys out of config validation errors",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2778",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-11T15:02:13Z",
+      "evidence": {
+        "additions": 96,
+        "changed_files": 6,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 4
+      },
+      "heh": {
+        "base": 11.01,
+        "high": 14.86,
+        "low": 8.26
+      },
+      "merged_at": "2026-11-15T05:08:29Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.01,
+          "high": 14.86,
+          "low": 8.26
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2760,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(execd): reject invalid isolated-session search globs",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2760",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-11T14:48:18Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 7.31,
+        "high": 9.87,
+        "low": 5.48
+      },
+      "merged_at": "2026-11-15T05:09:25Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.31,
+          "high": 9.87,
+          "low": 5.48
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2749,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(server): reject subPath traversal through backslashes",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2749",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
