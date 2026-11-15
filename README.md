@@ -49,7 +49,9 @@ Research, owned products, upstream contributions, and measured results remain ex
 
 ### Engineering case studies
 
-[**Read the source-linked case studies →**](https://rudycelekli.github.io/engineering/)
+[**Browse the repository case studies →**](https://rudycelekli.github.io/engineering/#repository-studies)
+
+The directory covers upstream engineering and owned public projects. Selected examples include [portable agent assurance](https://rudycelekli.github.io/engineering/repositories/rudycelekli/kya-evidence.html), [live swarm observability](https://rudycelekli.github.io/engineering/repositories/rudycelekli/swarmwatch.html), and [reward-hacking evaluation](https://rudycelekli.github.io/engineering/repositories/rudycelekli/gradia-wind-tunnel.html).
 
 - **Reject incomplete test evidence:** require a current-run Vitest report and a matching process verdict. [Case study](https://rudycelekli.github.io/engineering/vitest-execution-evidence.html) · [Merged Agentic QE #712](https://github.com/proffesor-for-testing/agentic-qe/pull/712).
 - **Preserve exact Git source lines:** keep Unicode separators inside physical diff lines. [Case study](https://rudycelekli.github.io/engineering/git-physical-line-boundaries.html) · [Merged PR-Agent #4668](https://github.com/The-PR-Agent/pr-agent/pull/4668).
