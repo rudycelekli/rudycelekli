@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.53,
-    "high": 93.11,
-    "low": 50.8
+    "base": 68.83,
+    "high": 93.52,
+    "low": 51.03
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1202.7,
+  "engineer_weeks_at_40h": 1208.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 98.28,
-        "high": 133.08,
-        "low": 73.3
+        "base": 104.89,
+        "high": 142.01,
+        "low": 78.26
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 400,
-      "public_merged_pull_requests": 562,
-      "public_prs_with_work": 331,
+      "public_authored_pr_commits": 427,
+      "public_merged_pull_requests": 587,
+      "public_prs_with_work": 356,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3144.93,
-        "high": 4258.68,
-        "low": 2345.73
+        "base": 3356.56,
+        "high": 4544.42,
+        "low": 2504.44
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-16",
-  "public_accepted_merge_events": 3892,
-  "public_accepted_pull_requests": 3891,
+  "public_accepted_merge_events": 3917,
+  "public_accepted_pull_requests": 3916,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48108.89,
-    "high": 65364.19,
-    "low": 35663.01
+    "base": 48320.52,
+    "high": 65649.93,
+    "low": 35821.72
   },
   "updated_at_utc": "2026-11-16",
   "window": {
@@ -129119,6 +129119,831 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(eval): require a successful Juice Shop restart before scoring",
       "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/132",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-16T04:52:29Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.36,
+        "high": 12.64,
+        "low": 7.02
+      },
+      "merged_at": "2026-11-16T12:53:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.36,
+          "high": 12.64,
+          "low": 7.02
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 128,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(engine): recheck current scope before resuming validation",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/128",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:27:22Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.35,
+        "high": 11.27,
+        "low": 6.26
+      },
+      "merged_at": "2026-11-16T12:55:51Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.35,
+          "high": 11.27,
+          "low": 6.26
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 102,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(engine): allow curl-first runs without a Burp MCP file",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/102",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:29:04Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.41,
+        "high": 11.36,
+        "low": 6.31
+      },
+      "merged_at": "2026-11-16T12:55:56Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.41,
+          "high": 11.36,
+          "low": 6.31
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 106,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): preserve nested Markdown in drafted reports",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/106",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:33:11Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.94,
+        "high": 10.72,
+        "low": 5.95
+      },
+      "merged_at": "2026-11-16T12:55:59Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.94,
+          "high": 10.72,
+          "low": 5.95
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 109,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): write valid Codex TOML for escaped strings and literal keys",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/109",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:49:00Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.49,
+        "high": 10.12,
+        "low": 5.62
+      },
+      "merged_at": "2026-11-16T12:56:03Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.49,
+          "high": 10.12,
+          "low": 5.62
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 114,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(engine): select the last JSON verdict fence in message order",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/114",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:26:28Z",
+      "evidence": {
+        "additions": 43,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.95,
+        "high": 12.09,
+        "low": 6.71
+      },
+      "merged_at": "2026-11-16T13:10:37Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.95,
+          "high": 12.09,
+          "low": 6.71
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 100,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(packaging): ship a current standalone skill and report index",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/100",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:37:25Z",
+      "evidence": {
+        "additions": 72,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 22,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.91,
+        "high": 13.38,
+        "low": 7.43
+      },
+      "merged_at": "2026-11-16T13:10:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.91,
+          "high": 13.38,
+          "low": 7.43
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 112,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hooks): inspect staged content in the identifier guard",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/112",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:50:22Z",
+      "evidence": {
+        "additions": 46,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.95,
+        "high": 12.08,
+        "low": 6.71
+      },
+      "merged_at": "2026-11-16T13:10:45Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.95,
+          "high": 12.08,
+          "low": 6.71
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 117,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(eval): exclude unreadable PortSwigger outcomes from solve rates",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/117",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:51:29Z",
+      "evidence": {
+        "additions": 14,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.06,
+        "high": 9.52,
+        "low": 5.29
+      },
+      "merged_at": "2026-11-16T13:10:49Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.06,
+          "high": 9.52,
+          "low": 5.29
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 122,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(scope): preserve metacharacters in host regex rules",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/122",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T04:54:58Z",
+      "evidence": {
+        "additions": 59,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.38,
+        "high": 12.67,
+        "low": 7.04
+      },
+      "merged_at": "2026-11-16T13:10:53Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.38,
+          "high": 12.67,
+          "low": 7.04
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 131,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(eval): report false-positive rates alongside grading coverage",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/131",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:15:24Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.61,
+        "high": 10.27,
+        "low": 5.71
+      },
+      "merged_at": "2026-11-16T13:49:15Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.61,
+          "high": 10.27,
+          "low": 5.71
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 114,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Rules: reject malformed time ranges",
+      "url": "https://github.com/ersinkoc/phonebox/pull/114",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:17:23Z",
+      "evidence": {
+        "additions": 23,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.54,
+        "high": 10.18,
+        "low": 5.65
+      },
+      "merged_at": "2026-11-16T13:50:00Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.54,
+          "high": 10.18,
+          "low": 5.65
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 119,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Fix monthly calendar rules that combine weekday and month day",
+      "url": "https://github.com/ersinkoc/phonebox/pull/119",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:18:55Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.49,
+        "high": 10.12,
+        "low": 5.62
+      },
+      "merged_at": "2026-11-16T13:50:11Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.49,
+          "high": 10.12,
+          "low": 5.62
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 123,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep alarm duration from changing the calendar event",
+      "url": "https://github.com/ersinkoc/phonebox/pull/123",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:19:47Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.94,
+        "high": 9.37,
+        "low": 5.21
+      },
+      "merged_at": "2026-11-16T13:50:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.94,
+          "high": 9.37,
+          "low": 5.21
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 126,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Use the first occurrence of repeated calendar times",
+      "url": "https://github.com/ersinkoc/phonebox/pull/126",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:18:55Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 29,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.91,
+        "high": 12.03,
+        "low": 6.68
+      },
+      "merged_at": "2026-11-16T13:50:35Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.91,
+          "high": 12.03,
+          "low": 6.68
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 122,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep Antigravity's quota fallback after an unreadable summary",
+      "url": "https://github.com/ersinkoc/phonebox/pull/122",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:20:51Z",
+      "evidence": {
+        "additions": 24,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.84,
+        "high": 10.59,
+        "low": 5.88
+      },
+      "merged_at": "2026-11-16T13:50:47Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.84,
+          "high": 10.59,
+          "low": 5.88
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 128,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Put the WinGet releases link in localized package metadata",
+      "url": "https://github.com/ersinkoc/phonebox/pull/128",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:22:20Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.58,
+        "high": 10.23,
+        "low": 5.69
+      },
+      "merged_at": "2026-11-16T13:50:59Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.58,
+          "high": 10.23,
+          "low": 5.69
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 129,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Demo: keep layouts saved while the catalog loads",
+      "url": "https://github.com/ersinkoc/phonebox/pull/129",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:16:15Z",
+      "evidence": {
+        "additions": 105,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.27,
+        "high": 13.86,
+        "low": 7.7
+      },
+      "merged_at": "2026-11-16T13:51:10Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.27,
+          "high": 13.86,
+          "low": 7.7
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 118,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep custom paths intact in Unix source autostart files",
+      "url": "https://github.com/ersinkoc/phonebox/pull/118",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:18:46Z",
+      "evidence": {
+        "additions": 67,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.52,
+        "high": 12.86,
+        "low": 7.14
+      },
+      "merged_at": "2026-11-16T13:51:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.52,
+          "high": 12.86,
+          "low": 7.14
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 120,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep the Windows agent running when a source build fails",
+      "url": "https://github.com/ersinkoc/phonebox/pull/120",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:15:37Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.25,
+        "high": 11.13,
+        "low": 6.18
+      },
+      "merged_at": "2026-11-16T13:53:29Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.25,
+          "high": 11.13,
+          "low": 6.18
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 115,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Push data: ignore invalid entries in saved snapshots",
+      "url": "https://github.com/ersinkoc/phonebox/pull/115",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:18:49Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.4,
+        "high": 11.34,
+        "low": 6.3
+      },
+      "merged_at": "2026-11-16T13:53:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.4,
+          "high": 11.34,
+          "low": 6.3
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 121,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Push data: keep versions increasing under concurrent writes",
+      "url": "https://github.com/ersinkoc/phonebox/pull/121",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:18:55Z",
+      "evidence": {
+        "additions": 45,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.54,
+        "high": 11.53,
+        "low": 6.4
+      },
+      "merged_at": "2026-11-16T13:53:53Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.54,
+          "high": 11.53,
+          "low": 6.4
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 124,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep network speed accurate when adapters connect or reset",
+      "url": "https://github.com/ersinkoc/phonebox/pull/124",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:14:37Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.9,
+        "high": 10.67,
+        "low": 5.93
+      },
+      "merged_at": "2026-11-16T13:54:04Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.9,
+          "high": 10.67,
+          "low": 5.93
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 113,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Rebuild stale APKs when installing from Unix source checkouts",
+      "url": "https://github.com/ersinkoc/phonebox/pull/113",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:20:07Z",
+      "evidence": {
+        "additions": 67,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.84,
+        "high": 13.29,
+        "low": 7.38
+      },
+      "merged_at": "2026-11-16T13:54:17Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.84,
+          "high": 13.29,
+          "low": 7.38
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 127,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Clean up per-platform staging from local packaging builds",
+      "url": "https://github.com/ersinkoc/phonebox/pull/127",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:22:27Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.2,
+        "high": 12.42,
+        "low": 6.9
+      },
+      "merged_at": "2026-11-16T13:54:29Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.2,
+          "high": 12.42,
+          "low": 6.9
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 130,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep Smart Stack alarms active across pages",
+      "url": "https://github.com/ersinkoc/phonebox/pull/130",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
