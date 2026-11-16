@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.9,
-    "high": 93.6,
-    "low": 51.08
+    "base": 69.02,
+    "high": 93.78,
+    "low": 51.17
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1209.1,
+  "engineer_weeks_at_40h": 1211.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 106.29,
-        "high": 143.9,
-        "low": 79.31
+        "base": 109.1,
+        "high": 147.7,
+        "low": 81.42
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 432,
-      "public_merged_pull_requests": 592,
-      "public_prs_with_work": 361,
+      "public_authored_pr_commits": 444,
+      "public_merged_pull_requests": 602,
+      "public_prs_with_work": 371,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3401.28,
-        "high": 4604.8,
-        "low": 2537.99
+        "base": 3491.26,
+        "high": 4726.27,
+        "low": 2605.48
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-16",
-  "public_accepted_merge_events": 3922,
-  "public_accepted_pull_requests": 3921,
+  "public_accepted_merge_events": 3932,
+  "public_accepted_pull_requests": 3931,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48365.24,
-    "high": 65710.31,
-    "low": 35855.27
+    "base": 48455.22,
+    "high": 65831.78,
+    "low": 35922.76
   },
   "updated_at_utc": "2026-11-16",
   "window": {
@@ -130109,6 +130109,336 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Keep Unix uninstall help and typos from removing PhoneBox",
       "url": "https://github.com/ersinkoc/phonebox/pull/138",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T15:43:38Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 3,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.47,
+        "high": 11.44,
+        "low": 6.35
+      },
+      "merged_at": "2026-11-16T16:04:28Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.47,
+          "high": 11.44,
+          "low": 6.35
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 144,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Settings: let a relative config filename save in the current directory",
+      "url": "https://github.com/ersinkoc/phonebox/pull/144",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T15:42:21Z",
+      "evidence": {
+        "additions": 56,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 12,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.91,
+        "high": 12.03,
+        "low": 6.68
+      },
+      "merged_at": "2026-11-16T16:04:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.91,
+          "high": 12.03,
+          "low": 6.68
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 139,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Push data: save pending readings before the agent restarts",
+      "url": "https://github.com/ersinkoc/phonebox/pull/139",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T15:43:11Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.94,
+        "high": 9.37,
+        "low": 5.21
+      },
+      "merged_at": "2026-11-16T16:04:53Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.94,
+          "high": 9.37,
+          "low": 5.21
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 140,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep seasonal calendar recurrences in their selected months",
+      "url": "https://github.com/ersinkoc/phonebox/pull/140",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T15:43:11Z",
+      "evidence": {
+        "additions": 52,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 12,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.8,
+        "high": 11.88,
+        "low": 6.6
+      },
+      "merged_at": "2026-11-16T16:05:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.8,
+          "high": 11.88,
+          "low": 6.6
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 141,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Bound GitHub CLI refreshes and reap cancelled processes",
+      "url": "https://github.com/ersinkoc/phonebox/pull/141",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T15:43:11Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.4,
+        "high": 11.34,
+        "low": 6.3
+      },
+      "merged_at": "2026-11-16T16:05:21Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.4,
+          "high": 11.34,
+          "low": 6.3
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 142,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep one invalid duration from dropping the whole calendar feed",
+      "url": "https://github.com/ersinkoc/phonebox/pull/142",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T15:43:48Z",
+      "evidence": {
+        "additions": 34,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.97,
+        "high": 10.76,
+        "low": 5.98
+      },
+      "merged_at": "2026-11-16T16:05:34Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.97,
+          "high": 10.76,
+          "low": 5.98
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 145,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Show unavailable changes for incomplete exchange rates",
+      "url": "https://github.com/ersinkoc/phonebox/pull/145",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-16T15:44:20Z",
+      "evidence": {
+        "additions": 86,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 22,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.88,
+        "high": 14.68,
+        "low": 8.16
+      },
+      "merged_at": "2026-11-16T16:05:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.88,
+          "high": 14.68,
+          "low": 8.16
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 146,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Refresh Air Quality when the weather location changes",
+      "url": "https://github.com/ersinkoc/phonebox/pull/146",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T15:44:20Z",
+      "evidence": {
+        "additions": 68,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.39,
+        "high": 12.68,
+        "low": 7.05
+      },
+      "merged_at": "2026-11-16T16:06:01Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.39,
+          "high": 12.68,
+          "low": 7.05
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 147,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Release the Media volume slider after cancelled drags",
+      "url": "https://github.com/ersinkoc/phonebox/pull/147",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T13:16:04Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 9.48,
+        "high": 12.79,
+        "low": 7.11
+      },
+      "merged_at": "2026-11-16T16:10:33Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.48,
+          "high": 12.79,
+          "low": 7.11
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 116,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Settings: reject a stale save after the config file is deleted",
+      "url": "https://github.com/ersinkoc/phonebox/pull/116",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T15:43:12Z",
+      "evidence": {
+        "additions": 125,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.74,
+        "high": 14.5,
+        "low": 8.05
+      },
+      "merged_at": "2026-11-16T16:10:45Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.74,
+          "high": 14.5,
+          "low": 8.05
+        }
+      },
+      "project": "ersinkoc/phonebox",
+      "pull_request": 143,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Start the Unix desktop agent even when the optional APK download fails",
+      "url": "https://github.com/ersinkoc/phonebox/pull/143",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
