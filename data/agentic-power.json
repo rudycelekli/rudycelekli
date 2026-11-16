@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.17,
-    "high": 92.62,
-    "low": 50.53
+    "base": 68.18,
+    "high": 92.64,
+    "low": 50.54
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1196.4,
+  "engineer_weeks_at_40h": 1196.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 552.33,
-        "high": 746.64,
-        "low": 413.27
+        "base": 552.49,
+        "high": 746.86,
+        "low": 413.39
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4440,
+      "public_authored_pr_commits": 4441,
       "public_merged_pull_requests": 3088,
-      "public_prs_with_work": 3203,
+      "public_prs_with_work": 3204,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34244.57,
-        "high": 46291.75,
-        "low": 25623.02
+        "base": 34254.44,
+        "high": 46305.07,
+        "low": 25630.42
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 368,
-      "public_merged_pull_requests": 531,
+      "public_merged_pull_requests": 532,
       "public_prs_with_work": 301,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-16",
-  "public_accepted_merge_events": 3861,
-  "public_accepted_pull_requests": 3860,
+  "public_accepted_merge_events": 3862,
+  "public_accepted_pull_requests": 3861,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47855.02,
-    "high": 65021.49,
-    "low": 35472.6
+    "base": 47864.89,
+    "high": 65034.81,
+    "low": 35480.0
   },
   "updated_at_utc": "2026-11-16",
   "window": {
@@ -128096,6 +128096,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(server): fall back to the default tenant TTL on a malformed ttl",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2704",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-06T14:08:52Z",
+      "evidence": {
+        "additions": 70,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.87,
+        "high": 13.32,
+        "low": 7.4
+      },
+      "merged_at": "2026-11-16T08:06:06Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.87,
+          "high": 13.32,
+          "low": 7.4
+        }
+      },
+      "project": "agno-agi/agno",
+      "pull_request": 10843,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "[fix] Read Office uploads with non-string temporary stream names",
+      "url": "https://github.com/agno-agi/agno/pull/10843",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
