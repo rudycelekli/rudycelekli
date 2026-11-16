@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.02,
-    "high": 93.78,
-    "low": 51.17
+    "base": 69.06,
+    "high": 93.82,
+    "low": 51.2
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1211.4,
+  "engineer_weeks_at_40h": 1212.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 109.1,
-        "high": 147.7,
-        "low": 81.42
+        "base": 109.84,
+        "high": 148.69,
+        "low": 81.97
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 444,
-      "public_merged_pull_requests": 602,
-      "public_prs_with_work": 371,
+      "public_authored_pr_commits": 450,
+      "public_merged_pull_requests": 604,
+      "public_prs_with_work": 373,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3491.26,
-        "high": 4726.27,
-        "low": 2605.48
+        "base": 3514.78,
+        "high": 4758.02,
+        "low": 2623.12
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-16",
-  "public_accepted_merge_events": 3932,
-  "public_accepted_pull_requests": 3931,
+  "public_accepted_merge_events": 3934,
+  "public_accepted_pull_requests": 3933,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48455.22,
-    "high": 65831.78,
-    "low": 35922.76
+    "base": 48478.74,
+    "high": 65863.53,
+    "low": 35940.4
   },
   "updated_at_utc": "2026-11-16",
   "window": {
@@ -130439,6 +130439,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Start the Unix desktop agent even when the optional APK download fails",
       "url": "https://github.com/ersinkoc/phonebox/pull/143",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:57:06Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 6,
+        "comments": 4,
+        "commits": 5,
+        "deletions": 8,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 11.84,
+        "high": 15.99,
+        "low": 8.88
+      },
+      "merged_at": "2026-11-16T21:52:35Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.84,
+          "high": 15.99,
+          "low": 8.88
+        }
+      },
+      "project": "The-PR-Agent/pr-agent",
+      "pull_request": 4671,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(review): deduplicate failure modes before the output cap",
+      "url": "https://github.com/The-PR-Agent/pr-agent/pull/4671",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-04T18:42:52Z",
+      "evidence": {
+        "additions": 97,
+        "changed_files": 2,
+        "comments": 4,
+        "commits": 5,
+        "deletions": 2,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 11.68,
+        "high": 15.76,
+        "low": 8.76
+      },
+      "merged_at": "2026-11-16T21:52:42Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.68,
+          "high": 15.76,
+          "low": 8.76
+        }
+      },
+      "project": "The-PR-Agent/pr-agent",
+      "pull_request": 4666,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(output): preserve structured reviews when writing fails",
+      "url": "https://github.com/The-PR-Agent/pr-agent/pull/4666",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
