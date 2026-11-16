@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.11,
-    "high": 92.55,
-    "low": 50.49
+    "base": 68.13,
+    "high": 92.57,
+    "low": 50.5
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1195.4,
+  "engineer_weeks_at_40h": 1195.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 89.4,
-        "high": 121.1,
-        "low": 66.64
+        "base": 89.74,
+        "high": 121.56,
+        "low": 66.9
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 364,
-      "public_merged_pull_requests": 527,
-      "public_prs_with_work": 297,
+      "public_authored_pr_commits": 365,
+      "public_merged_pull_requests": 528,
+      "public_prs_with_work": 298,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 2860.83,
-        "high": 3875.16,
-        "low": 2132.64
+        "base": 2871.8,
+        "high": 3889.97,
+        "low": 2140.87
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-16",
-  "public_accepted_merge_events": 3857,
-  "public_accepted_pull_requests": 3856,
+  "public_accepted_merge_events": 3858,
+  "public_accepted_pull_requests": 3857,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47814.92,
-    "high": 64967.35,
-    "low": 35442.52
+    "base": 47825.89,
+    "high": 64982.16,
+    "low": 35450.75
   },
   "updated_at_utc": "2026-11-16",
   "window": {
@@ -127964,6 +127964,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Add a rolling three-day Inbox update filter",
       "url": "https://github.com/backnotprop/plannotator/pull/3401",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-12T03:54:25Z",
+      "evidence": {
+        "additions": 167,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.97,
+        "high": 14.81,
+        "low": 8.23
+      },
+      "merged_at": "2026-11-16T01:15:59Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.97,
+          "high": 14.81,
+          "low": 8.23
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3215,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "ci: three path gates skipped PRs that break the job they gate",
+      "url": "https://github.com/backnotprop/plannotator/pull/3215",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
