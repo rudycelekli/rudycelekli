@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.06,
-    "high": 93.82,
-    "low": 51.2
+    "base": 69.15,
+    "high": 93.95,
+    "low": 51.27
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1212.0,
+  "engineer_weeks_at_40h": 1213.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 109.84,
-        "high": 148.69,
-        "low": 81.97
+        "base": 111.9,
+        "high": 151.48,
+        "low": 83.52
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 450,
-      "public_merged_pull_requests": 604,
-      "public_prs_with_work": 373,
+      "public_authored_pr_commits": 458,
+      "public_merged_pull_requests": 612,
+      "public_prs_with_work": 381,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3514.78,
-        "high": 4758.02,
-        "low": 2623.12
+        "base": 3580.92,
+        "high": 4847.33,
+        "low": 2672.73
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-16",
-  "public_accepted_merge_events": 3934,
-  "public_accepted_pull_requests": 3933,
+  "public_accepted_merge_events": 3942,
+  "public_accepted_pull_requests": 3941,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48478.74,
-    "high": 65863.53,
-    "low": 35940.4
+    "base": 48544.88,
+    "high": 65952.84,
+    "low": 35990.01
   },
   "updated_at_utc": "2026-11-16",
   "window": {
@@ -130505,6 +130505,270 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(output): preserve structured reviews when writing fails",
       "url": "https://github.com/The-PR-Agent/pr-agent/pull/4666",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T18:15:10Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.91,
+        "high": 12.03,
+        "low": 6.68
+      },
+      "merged_at": "2026-11-16T23:11:24Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.91,
+          "high": 12.03,
+          "low": 6.68
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 139,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(engine): keep concurrent OSINT response bodies isolated",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/139",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T18:17:11Z",
+      "evidence": {
+        "additions": 76,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.37,
+        "high": 12.65,
+        "low": 7.03
+      },
+      "merged_at": "2026-11-16T23:11:29Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.37,
+          "high": 12.65,
+          "low": 7.03
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 141,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(eval): leave unreadable Juice Shop outcomes ungraded",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/141",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T18:17:14Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.15,
+        "high": 11.0,
+        "low": 6.11
+      },
+      "merged_at": "2026-11-16T23:11:34Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.15,
+          "high": 11.0,
+          "low": 6.11
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 142,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(research): preserve coverage gaps when platform report IDs collide",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/142",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-16T18:17:18Z",
+      "evidence": {
+        "additions": 17,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.21,
+        "high": 8.39,
+        "low": 4.66
+      },
+      "merged_at": "2026-11-16T23:11:39Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.21,
+          "high": 8.39,
+          "low": 4.66
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 143,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(research): retain every classifier rule when verifying citations",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/143",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T18:17:22Z",
+      "evidence": {
+        "additions": 70,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.99,
+        "high": 12.14,
+        "low": 6.74
+      },
+      "merged_at": "2026-11-16T23:11:43Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.99,
+          "high": 12.14,
+          "low": 6.74
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 144,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(eval): reject reused instances in manual PortSwigger ablations",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/144",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T18:17:26Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.97,
+        "high": 10.76,
+        "low": 5.98
+      },
+      "merged_at": "2026-11-16T23:11:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.97,
+          "high": 10.76,
+          "low": 5.98
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 145,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(install): preserve independent backups on same-second runs",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/145",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T18:17:31Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.47,
+        "high": 10.09,
+        "low": 5.61
+      },
+      "merged_at": "2026-11-16T23:11:50Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.47,
+          "high": 10.09,
+          "low": 5.61
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 146,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(scaffold): keep Bash engagement creation usable with malformed recon manifests",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/146",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T18:17:35Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 17,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.07,
+        "high": 12.25,
+        "low": 6.8
+      },
+      "merged_at": "2026-11-16T23:11:54Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.07,
+          "high": 12.25,
+          "low": 6.8
+        }
+      },
+      "project": "elementalsouls/Claude-BugHunter",
+      "pull_request": 147,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): preserve malformed JSON configs and continue wiring other harnesses",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/147",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
