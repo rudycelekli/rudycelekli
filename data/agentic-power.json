@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 68.15,
-    "high": 92.59,
-    "low": 50.51
+    "base": 68.16,
+    "high": 92.61,
+    "low": 50.52
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1195.9,
+  "engineer_weeks_at_40h": 1196.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 90.12,
-        "high": 122.07,
-        "low": 67.18
+        "base": 90.39,
+        "high": 122.44,
+        "low": 67.39
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 366,
-      "public_merged_pull_requests": 529,
-      "public_prs_with_work": 299,
+      "public_authored_pr_commits": 367,
+      "public_merged_pull_requests": 530,
+      "public_prs_with_work": 300,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 2883.82,
-        "high": 3906.2,
-        "low": 2149.89
+        "base": 2892.57,
+        "high": 3918.01,
+        "low": 2156.45
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-16",
-  "public_accepted_merge_events": 3859,
-  "public_accepted_pull_requests": 3858,
+  "public_accepted_merge_events": 3860,
+  "public_accepted_pull_requests": 3859,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 47837.91,
-    "high": 64998.39,
-    "low": 35459.77
+    "base": 47846.66,
+    "high": 65010.2,
+    "low": 35466.33
   },
   "updated_at_utc": "2026-11-16",
   "window": {
@@ -128030,6 +128030,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "install.sh: download the binary from PLANNOTATOR_RELEASE_DOWNLOAD_URL",
       "url": "https://github.com/backnotprop/plannotator/pull/3310",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-15T03:43:00Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 15,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.75,
+        "high": 11.81,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-16T03:40:18Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.75,
+          "high": 11.81,
+          "low": 6.56
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3400,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Enable Claude Code panel tools and Inbox wakes in Orca",
+      "url": "https://github.com/backnotprop/plannotator/pull/3400",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
