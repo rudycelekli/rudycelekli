@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.12,
-    "high": 93.9,
-    "low": 51.24
+    "base": 69.18,
+    "high": 93.99,
+    "low": 51.29
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1216.5,
+  "engineer_weeks_at_40h": 1217.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 94.25,
-        "high": 128.72,
-        "low": 69.19
+        "base": 94.77,
+        "high": 129.42,
+        "low": 69.58
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,14 +354,14 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 537,
+      "public_authored_pr_commits": 540,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 395,
+      "public_prs_with_work": 397,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5654.99,
-        "high": 7722.96,
-        "low": 4151.4
+        "base": 5686.14,
+        "high": 7765.01,
+        "low": 4174.76
       }
     },
     {
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 108.03,
-        "high": 146.23,
-        "low": 80.64
+        "base": 108.37,
+        "high": 146.69,
+        "low": 80.9
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 468,
-      "public_merged_pull_requests": 626,
-      "public_prs_with_work": 391,
+      "public_authored_pr_commits": 469,
+      "public_merged_pull_requests": 629,
+      "public_prs_with_work": 392,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3673.05,
-        "high": 4971.7,
-        "low": 2741.84
+        "base": 3684.63,
+        "high": 4987.34,
+        "low": 2750.53
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-17",
-  "public_accepted_merge_events": 3956,
-  "public_accepted_pull_requests": 3955,
+  "public_accepted_merge_events": 3959,
+  "public_accepted_pull_requests": 3958,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48659.73,
-    "high": 66107.88,
-    "low": 36076.14
+    "base": 48702.46,
+    "high": 66165.57,
+    "low": 36108.19
   },
   "updated_at_utc": "2026-11-17",
   "window": {
@@ -131231,6 +131231,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "[TASK FIX] hysteretic-aquifer-control: cap verifier threads before any numerical work",
       "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2784",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-27T20:49:06Z",
+      "evidence": {
+        "additions": 263,
+        "changed_files": 7,
+        "comments": 13,
+        "commits": 13,
+        "deletions": 9,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 20.37,
+        "high": 27.5,
+        "low": 15.28
+      },
+      "merged_at": "2026-11-17T14:07:42Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 20.37,
+          "high": 27.5,
+          "low": 15.28
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 1976,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "[TASK FIX] rv-astrometry-fitting: consolidate posterior, compatibility and contract fixes",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1976",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-13T08:46:15Z",
+      "evidence": {
+        "additions": 206,
+        "changed_files": 1,
+        "comments": 11,
+        "commits": 1,
+        "deletions": 18,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 11.58,
+        "high": 15.64,
+        "low": 8.69
+      },
+      "merged_at": "2026-11-17T14:12:36Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.58,
+          "high": 15.64,
+          "low": 8.69
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 2827,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "[TASK FIX] amr-poisson-optimize: start every graded candidate run from fresh state",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2827",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-27T20:49:20Z",
+      "evidence": {
+        "additions": 124,
+        "changed_files": 3,
+        "comments": 12,
+        "commits": 1,
+        "deletions": 11,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 10.78,
+        "high": 14.55,
+        "low": 8.08
+      },
+      "merged_at": "2026-11-17T14:20:02Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 10.78,
+          "high": 14.55,
+          "low": 8.08
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 1982,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cmb-cross-inference): accept both byte orders of float64 artifacts",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1982",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
