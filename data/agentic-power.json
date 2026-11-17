@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.05,
-    "high": 93.81,
-    "low": 51.19
+    "base": 69.07,
+    "high": 93.84,
+    "low": 51.21
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1215.2,
+  "engineer_weeks_at_40h": 1215.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 93.87,
-        "high": 128.2,
-        "low": 68.91
+        "base": 94.02,
+        "high": 128.4,
+        "low": 69.01
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,14 +354,14 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 533,
+      "public_authored_pr_commits": 534,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 391,
+      "public_prs_with_work": 392,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5632.27,
-        "high": 7692.29,
-        "low": 4134.38
+        "base": 5640.9,
+        "high": 7703.94,
+        "low": 4140.85
       }
     },
     {
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 107.2,
-        "high": 145.1,
-        "low": 80.02
+        "base": 107.4,
+        "high": 145.37,
+        "low": 80.17
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 465,
-      "public_merged_pull_requests": 619,
-      "public_prs_with_work": 388,
+      "public_authored_pr_commits": 466,
+      "public_merged_pull_requests": 621,
+      "public_prs_with_work": 389,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3644.79,
-        "high": 4933.57,
-        "low": 2720.65
+        "base": 3651.55,
+        "high": 4942.69,
+        "low": 2725.72
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-17",
-  "public_accepted_merge_events": 3949,
-  "public_accepted_pull_requests": 3948,
+  "public_accepted_merge_events": 3951,
+  "public_accepted_pull_requests": 3950,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48608.75,
-    "high": 66039.08,
-    "low": 36037.93
+    "base": 48624.14,
+    "high": 66059.85,
+    "low": 36049.47
   },
   "updated_at_utc": "2026-11-17",
   "window": {
@@ -131000,6 +131000,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(engine): close coverage only after every endpoint work item has a verdict",
       "url": "https://github.com/elementalsouls/Claude-BugHunter/pull/136",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-09-27T20:47:25Z",
+      "evidence": {
+        "additions": 58,
+        "changed_files": 2,
+        "comments": 13,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 8.63,
+        "high": 11.65,
+        "low": 6.47
+      },
+      "merged_at": "2026-11-17T03:41:23Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 8.63,
+          "high": 11.65,
+          "low": 6.47
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 1950,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(virtual-baseline-localization): register imported prediction modules",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1950",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-11T23:04:51Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 1,
+        "comments": 8,
+        "commits": 1,
+        "deletions": 9,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.76,
+        "high": 9.12,
+        "low": 5.07
+      },
+      "merged_at": "2026-11-17T03:42:56Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.76,
+          "high": 9.12,
+          "low": 5.07
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 2800,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "[TASK FIX] cell-lineage-reconstruction: state the F1 and error bars as requirements",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2800",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
