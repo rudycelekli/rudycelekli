@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.09,
-    "high": 93.86,
-    "low": 51.22
+    "base": 69.11,
+    "high": 93.89,
+    "low": 51.24
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1216.0,
+  "engineer_weeks_at_40h": 1216.3,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 107.4,
-        "high": 145.37,
-        "low": 80.17
+        "base": 107.81,
+        "high": 145.93,
+        "low": 80.48
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 466,
-      "public_merged_pull_requests": 624,
-      "public_prs_with_work": 389,
+      "public_authored_pr_commits": 467,
+      "public_merged_pull_requests": 625,
+      "public_prs_with_work": 390,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3651.55,
-        "high": 4942.69,
-        "low": 2725.72
+        "base": 3665.69,
+        "high": 4961.77,
+        "low": 2736.32
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-17",
-  "public_accepted_merge_events": 3954,
-  "public_accepted_pull_requests": 3953,
+  "public_accepted_merge_events": 3955,
+  "public_accepted_pull_requests": 3954,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48638.23,
-    "high": 66078.87,
-    "low": 36060.02
+    "base": 48652.37,
+    "high": 66097.95,
+    "low": 36070.62
   },
   "updated_at_utc": "2026-11-17",
   "window": {
@@ -131165,6 +131165,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Add chibivue tutorial",
       "url": "https://github.com/codecrafters-io/build-your-own-x/pull/2026",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-12T08:02:33Z",
+      "evidence": {
+        "additions": 180,
+        "changed_files": 7,
+        "comments": 4,
+        "commits": 3,
+        "deletions": 9,
+        "reviews": 6
+      },
+      "heh": {
+        "base": 14.14,
+        "high": 19.08,
+        "low": 10.6
+      },
+      "merged_at": "2026-11-17T11:55:56Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 14.14,
+          "high": 19.08,
+          "low": 10.6
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2810,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(egress): match domain targets written with a trailing root dot",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2810",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
