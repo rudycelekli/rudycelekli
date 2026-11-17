@@ -1,7 +1,7 @@
 {
   "agentic_power_x": {
-    "base": 69.11,
-    "high": 93.89,
+    "base": 69.12,
+    "high": 93.9,
     "low": 51.24
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1216.3,
+  "engineer_weeks_at_40h": 1216.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 107.81,
-        "high": 145.93,
-        "low": 80.48
+        "base": 108.03,
+        "high": 146.23,
+        "low": 80.64
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 467,
-      "public_merged_pull_requests": 625,
-      "public_prs_with_work": 390,
+      "public_authored_pr_commits": 468,
+      "public_merged_pull_requests": 626,
+      "public_prs_with_work": 391,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3665.69,
-        "high": 4961.77,
-        "low": 2736.32
+        "base": 3673.05,
+        "high": 4971.7,
+        "low": 2741.84
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-17",
-  "public_accepted_merge_events": 3955,
-  "public_accepted_pull_requests": 3954,
+  "public_accepted_merge_events": 3956,
+  "public_accepted_pull_requests": 3955,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48652.37,
-    "high": 66097.95,
-    "low": 36070.62
+    "base": 48659.73,
+    "high": 66107.88,
+    "low": 36076.14
   },
   "updated_at_utc": "2026-11-17",
   "window": {
@@ -131198,6 +131198,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(egress): match domain targets written with a trailing root dot",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2810",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-11T22:56:50Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 2,
+        "comments": 10,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 7.36,
+        "high": 9.93,
+        "low": 5.52
+      },
+      "merged_at": "2026-11-17T13:04:57Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.36,
+          "high": 9.93,
+          "low": 5.52
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 2784,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "[TASK FIX] hysteretic-aquifer-control: cap verifier threads before any numerical work",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2784",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
