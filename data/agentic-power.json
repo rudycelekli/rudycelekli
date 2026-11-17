@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.18,
-    "high": 93.99,
-    "low": 51.29
+    "base": 69.41,
+    "high": 94.29,
+    "low": 51.46
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1217.6,
+  "engineer_weeks_at_40h": 1221.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 108.37,
-        "high": 146.69,
-        "low": 80.9
+        "base": 113.11,
+        "high": 153.08,
+        "low": 84.45
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 0,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 469,
-      "public_merged_pull_requests": 629,
-      "public_prs_with_work": 392,
+      "public_authored_pr_commits": 495,
+      "public_merged_pull_requests": 647,
+      "public_prs_with_work": 410,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3684.63,
-        "high": 4987.34,
-        "low": 2750.53
+        "base": 3845.61,
+        "high": 5204.67,
+        "low": 2871.27
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-17",
-  "public_accepted_merge_events": 3959,
-  "public_accepted_pull_requests": 3958,
+  "public_accepted_merge_events": 3977,
+  "public_accepted_pull_requests": 3976,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48702.46,
-    "high": 66165.57,
-    "low": 36108.19
+    "base": 48863.44,
+    "high": 66382.9,
+    "low": 36228.93
   },
   "updated_at_utc": "2026-11-17",
   "window": {
@@ -131330,6 +131330,600 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(cmb-cross-inference): accept both byte orders of float64 artifacts",
       "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1982",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:09:01Z",
+      "evidence": {
+        "additions": 51,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 11,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.89,
+        "high": 12.01,
+        "low": 6.67
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.89,
+          "high": 12.01,
+          "low": 6.67
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 7,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reject interrupted and malformed HTTP response bodies",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/7",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:09:04Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 15,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.06,
+        "high": 12.24,
+        "low": 6.8
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.06,
+          "high": 12.24,
+          "low": 6.8
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 8,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Replay the final HTTP response after informational headers",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/8",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:09:40Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.04,
+        "high": 10.85,
+        "low": 6.03
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.04,
+          "high": 10.85,
+          "low": 6.03
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 9,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reject empty recordings in behavior comparisons",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/9",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:11:43Z",
+      "evidence": {
+        "additions": 68,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.55,
+        "high": 14.24,
+        "low": 7.91
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.55,
+          "high": 14.24,
+          "low": 7.91
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 10,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve key order when applying float tolerance",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/10",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:11:47Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.14,
+        "high": 12.33,
+        "low": 6.85
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.14,
+          "high": 12.33,
+          "low": 6.85
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 11,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve own __proto__ keys in JavaScript recordings",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/11",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:11:49Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.81,
+        "high": 9.2,
+        "low": 5.11
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.81,
+          "high": 9.2,
+          "low": 5.11
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 12,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Resolve curl examples to their HTTP request targets",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/12",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:14:08Z",
+      "evidence": {
+        "additions": 29,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.14,
+        "high": 12.33,
+        "low": 6.85
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.14,
+          "high": 12.33,
+          "low": 6.85
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 13,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Detect manifestless TypeScript module projects",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/13",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:14:11Z",
+      "evidence": {
+        "additions": 64,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 17,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.9,
+        "high": 12.02,
+        "low": 6.68
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.9,
+          "high": 12.02,
+          "low": 6.68
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 14,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep custom MCP server options when setup updates the binary",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/14",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:14:15Z",
+      "evidence": {
+        "additions": 38,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.16,
+        "high": 11.02,
+        "low": 6.12
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.16,
+          "high": 11.02,
+          "low": 6.12
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 15,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Enforce CLI replay deadlines across Unix process groups",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/15",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:14:17Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.37,
+        "high": 11.3,
+        "low": 6.28
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.37,
+          "high": 11.3,
+          "low": 6.28
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 16,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep every CLI recording when case names collide",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/16",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:14:20Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.22,
+        "high": 12.44,
+        "low": 6.91
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.22,
+          "high": 12.44,
+          "low": 6.91
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 17,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Record both CLI streams exactly for binary cases",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/17",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:16:08Z",
+      "evidence": {
+        "additions": 11,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.76,
+        "high": 9.12,
+        "low": 5.07
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.76,
+          "high": 9.12,
+          "low": 5.07
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 18,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Declare and check the Rust 1.97 minimum",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/18",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:16:11Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 15,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.09,
+        "high": 10.92,
+        "low": 6.07
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.09,
+          "high": 10.92,
+          "low": 6.07
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 19,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Fail the ported check when the source is unreadable",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/19",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:16:13Z",
+      "evidence": {
+        "additions": 83,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.82,
+        "high": 13.26,
+        "low": 7.37
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.82,
+          "high": 13.26,
+          "low": 7.37
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 20,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve Ruby evidence when a result cannot be encoded",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/20",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:16:16Z",
+      "evidence": {
+        "additions": 31,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.36,
+        "high": 11.29,
+        "low": 6.27
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.36,
+          "high": 11.29,
+          "low": 6.27
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 21,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Encode Java identifiers correctly in JNI symbols",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/21",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:16:28Z",
+      "evidence": {
+        "additions": 124,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.6,
+        "high": 15.66,
+        "low": 8.7
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.6,
+          "high": 15.66,
+          "low": 8.7
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 22,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Record Go internal packages and versioned local modules",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/22",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:16:30Z",
+      "evidence": {
+        "additions": 90,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 46,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.95,
+        "high": 14.78,
+        "low": 8.21
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.95,
+          "high": 14.78,
+          "low": 8.21
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 23,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reserve generated binding names in Go bridges",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/23",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-17T18:16:45Z",
+      "evidence": {
+        "additions": 75,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.12,
+        "high": 12.32,
+        "low": 6.84
+      },
+      "merged_at": "2026-11-17T21:47:41Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.12,
+          "high": 12.32,
+          "low": 6.84
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 24,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reject invalid Java replay arguments even for null results",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/24",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
