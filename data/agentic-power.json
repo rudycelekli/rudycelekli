@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.35,
-    "high": 94.21,
-    "low": 51.42
+    "base": 69.37,
+    "high": 94.24,
+    "low": 51.44
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1224.0,
+  "engineer_weeks_at_40h": 1224.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -334,9 +334,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 94.77,
-        "high": 129.42,
-        "low": 69.58
+        "base": 95.07,
+        "high": 129.82,
+        "low": 69.8
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 0,
@@ -354,14 +354,14 @@
       "owned_public_commits": 141,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 540,
+      "public_authored_pr_commits": 542,
       "public_merged_pull_requests": 242,
-      "public_prs_with_work": 397,
+      "public_prs_with_work": 398,
       "repository_default_branch_commits": 1715,
       "skilled_human_equivalent_hours": {
-        "base": 5686.14,
-        "high": 7765.01,
-        "low": 4174.76
+        "base": 5703.91,
+        "high": 7789.0,
+        "low": 4188.09
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 506,
-      "public_merged_pull_requests": 659,
+      "public_merged_pull_requests": 660,
       "public_prs_with_work": 422,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-18",
-  "public_accepted_merge_events": 3989,
-  "public_accepted_pull_requests": 3988,
+  "public_accepted_merge_events": 3990,
+  "public_accepted_pull_requests": 3989,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48958.78,
-    "high": 66511.6,
-    "low": 36300.43
+    "base": 48976.55,
+    "high": 66535.59,
+    "low": 36313.76
   },
   "updated_at_utc": "2026-11-18",
   "window": {
@@ -132321,6 +132321,39 @@
       "title": "Show the first commit in Last commit reviews",
       "url": "https://github.com/backnotprop/plannotator/pull/3547",
       "work_timing_basis": "PR creation-month proxy; no attributed non-merge commit timing available"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-09-25T17:36:11Z",
+      "evidence": {
+        "additions": 122,
+        "changed_files": 6,
+        "comments": 15,
+        "commits": 9,
+        "deletions": 66,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 17.77,
+        "high": 23.99,
+        "low": 13.33
+      },
+      "merged_at": "2026-11-18T07:54:51Z",
+      "monthly_heh_allocation": {
+        "2026-09": {
+          "base": 17.77,
+          "high": 23.99,
+          "low": 13.33
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 1908,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "[TASK FIX] hbv-calibration-1: consolidate R setup, memory and routing clarification",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1908",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
 }
