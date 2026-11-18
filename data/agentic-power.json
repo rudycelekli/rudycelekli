@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.84,
-    "high": 94.88,
-    "low": 51.79
+    "base": 69.87,
+    "high": 94.91,
+    "low": 51.81
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1232.8,
+  "engineer_weeks_at_40h": 1233.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 118.57,
-        "high": 160.43,
-        "low": 88.57
+        "base": 119.05,
+        "high": 161.07,
+        "low": 88.92
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 544,
-      "public_merged_pull_requests": 698,
-      "public_prs_with_work": 459,
+      "public_authored_pr_commits": 546,
+      "public_merged_pull_requests": 700,
+      "public_prs_with_work": 461,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4268.42,
-        "high": 5775.41,
-        "low": 3188.35
+        "base": 4285.65,
+        "high": 5798.67,
+        "low": 3201.27
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-18",
-  "public_accepted_merge_events": 4028,
-  "public_accepted_pull_requests": 4027,
+  "public_accepted_merge_events": 4030,
+  "public_accepted_pull_requests": 4029,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49310.49,
-    "high": 66986.37,
-    "low": 36564.19
+    "base": 49327.72,
+    "high": 67009.63,
+    "low": 36577.11
   },
   "updated_at_utc": "2026-11-18",
   "window": {
@@ -133607,6 +133607,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Use every polygon in an Overture download area",
       "url": "https://github.com/c2g-dev/city2graph/pull/279",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:21:28Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.94,
+        "high": 12.08,
+        "low": 6.71
+      },
+      "merged_at": "2026-11-18T18:23:40Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.94,
+          "high": 12.08,
+          "low": 6.71
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 287,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Respect source level-rule positions after splitting Overture segments",
+      "url": "https://github.com/c2g-dev/city2graph/pull/287",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:59:43Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 8.29,
+        "high": 11.18,
+        "low": 6.21
+      },
+      "merged_at": "2026-11-18T18:30:00Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.29,
+          "high": 11.18,
+          "low": 6.21
+        }
+      },
+      "project": "huggingface/lerobot",
+      "pull_request": 5404,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sim): keep terminal observations when vector simulators reuse buffers",
+      "url": "https://github.com/huggingface/lerobot/pull/5404",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
