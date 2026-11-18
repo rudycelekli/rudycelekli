@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.81,
-    "high": 94.83,
-    "low": 51.76
+    "base": 69.82,
+    "high": 94.85,
+    "low": 51.78
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1232.1,
+  "engineer_weeks_at_40h": 1232.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 118.03,
-        "high": 159.7,
-        "low": 88.16
+        "base": 118.34,
+        "high": 160.12,
+        "low": 88.39
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 542,
-      "public_merged_pull_requests": 695,
-      "public_prs_with_work": 457,
+      "public_authored_pr_commits": 543,
+      "public_merged_pull_requests": 696,
+      "public_prs_with_work": 458,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4249.13,
-        "high": 5749.37,
-        "low": 3173.89
+        "base": 4260.2,
+        "high": 5764.31,
+        "low": 3182.19
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-18",
-  "public_accepted_merge_events": 4025,
-  "public_accepted_pull_requests": 4024,
+  "public_accepted_merge_events": 4026,
+  "public_accepted_pull_requests": 4025,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49284.73,
-    "high": 66951.59,
-    "low": 36544.88
+    "base": 49295.8,
+    "high": 66966.53,
+    "low": 36553.18
   },
   "updated_at_utc": "2026-11-18",
   "window": {
@@ -133508,6 +133508,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(sdk-python): keep structured errors on streamed download failures",
       "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2696",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T01:11:25Z",
+      "evidence": {
+        "additions": 98,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 34,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 11.07,
+        "high": 14.94,
+        "low": 8.3
+      },
+      "merged_at": "2026-11-18T14:50:20Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.07,
+          "high": 14.94,
+          "low": 8.3
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2700,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sdk-js): keep server error codes on file download and upload failures",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2700",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
