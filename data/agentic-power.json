@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.6,
-    "high": 94.55,
-    "low": 51.61
+    "base": 69.79,
+    "high": 94.81,
+    "low": 51.75
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1228.5,
+  "engineer_weeks_at_40h": 1231.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 114.0,
-        "high": 154.26,
-        "low": 85.14
+        "base": 117.7,
+        "high": 159.26,
+        "low": 87.92
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 526,
-      "public_merged_pull_requests": 680,
-      "public_prs_with_work": 442,
+      "public_authored_pr_commits": 541,
+      "public_merged_pull_requests": 694,
+      "public_prs_with_work": 456,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4103.88,
-        "high": 5553.3,
-        "low": 3064.96
+        "base": 4237.33,
+        "high": 5733.44,
+        "low": 3165.04
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-18",
-  "public_accepted_merge_events": 4010,
-  "public_accepted_pull_requests": 4009,
+  "public_accepted_merge_events": 4024,
+  "public_accepted_pull_requests": 4023,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49139.48,
-    "high": 66755.52,
-    "low": 36435.95
+    "base": 49272.93,
+    "high": 66935.66,
+    "low": 36536.03
   },
   "updated_at_utc": "2026-11-18",
   "window": {
@@ -133013,6 +133013,468 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Preserve distinct HTTP cases with colliding names",
       "url": "https://github.com/erkamyaman/rust-anything/pull/71",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:29:21Z",
+      "evidence": {
+        "additions": 414,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 21,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 15.94,
+        "high": 21.51,
+        "low": 11.95
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 15.94,
+          "high": 21.51,
+          "low": 11.95
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3636,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reconnect the Inbox when a relay socket stops answering",
+      "url": "https://github.com/backnotprop/plannotator/pull/3636",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:32:25Z",
+      "evidence": {
+        "additions": 78,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 30,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.23,
+        "high": 13.81,
+        "low": 7.67
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.23,
+          "high": 13.81,
+          "low": 7.67
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3637,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reuse restart judgments in Inbox thread and status responses",
+      "url": "https://github.com/backnotprop/plannotator/pull/3637",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:20:50Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.62,
+        "high": 8.94,
+        "low": 4.97
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.62,
+          "high": 8.94,
+          "low": 4.97
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3639,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Prefer the forge's default branch when grouping PR stacks",
+      "url": "https://github.com/backnotprop/plannotator/pull/3639",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:20:52Z",
+      "evidence": {
+        "additions": 41,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.72,
+        "high": 11.77,
+        "low": 6.54
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.72,
+          "high": 11.77,
+          "low": 6.54
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3640,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep successful entries when a later bulk hide or show fails",
+      "url": "https://github.com/backnotprop/plannotator/pull/3640",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:20:54Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.06,
+        "high": 9.52,
+        "low": 5.29
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.06,
+          "high": 9.52,
+          "low": 5.29
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3641,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep an open PR attached through five merged stack layers",
+      "url": "https://github.com/backnotprop/plannotator/pull/3641",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:20:56Z",
+      "evidence": {
+        "additions": 118,
+        "changed_files": 8,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 59,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 14.29,
+        "high": 19.29,
+        "low": 10.72
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 14.29,
+          "high": 19.29,
+          "low": 10.72
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3642,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Count patch-marker-like lines in review hunks",
+      "url": "https://github.com/backnotprop/plannotator/pull/3642",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:20:58Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.54,
+        "high": 10.18,
+        "low": 5.65
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.54,
+          "high": 10.18,
+          "low": 5.65
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3643,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve whitespace in Git review paths",
+      "url": "https://github.com/backnotprop/plannotator/pull/3643",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:21:00Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.17,
+        "high": 11.03,
+        "low": 6.13
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.17,
+          "high": 11.03,
+          "low": 6.13
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3644,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Move the Inbox wake when Oh My Pi switches sessions",
+      "url": "https://github.com/backnotprop/plannotator/pull/3644",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:23:13Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.21,
+        "high": 9.74,
+        "low": 5.41
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.21,
+          "high": 9.74,
+          "low": 5.41
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3646,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Retry a linked Board after its first read fails",
+      "url": "https://github.com/backnotprop/plannotator/pull/3646",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:23:16Z",
+      "evidence": {
+        "additions": 71,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.15,
+        "high": 13.7,
+        "low": 7.61
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.15,
+          "high": 13.7,
+          "low": 7.61
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3647,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Discard linked Reviews reads when their machine is unlinked",
+      "url": "https://github.com/backnotprop/plannotator/pull/3647",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:23:18Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.92,
+        "high": 12.04,
+        "low": 6.69
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.92,
+          "high": 12.04,
+          "low": 6.69
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3648,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep comment composers open on an IME Escape",
+      "url": "https://github.com/backnotprop/plannotator/pull/3648",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:23:20Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.08,
+        "high": 10.91,
+        "low": 6.06
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.08,
+          "high": 10.91,
+          "low": 6.06
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3649,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Refresh bulk merge confirmation when its target changes",
+      "url": "https://github.com/backnotprop/plannotator/pull/3649",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:23:23Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.92,
+        "high": 12.04,
+        "low": 6.69
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.92,
+          "high": 12.04,
+          "low": 6.69
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3650,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Restore plan mode when Oh My Pi changes sessions",
+      "url": "https://github.com/backnotprop/plannotator/pull/3650",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:23:26Z",
+      "evidence": {
+        "additions": 76,
+        "changed_files": 6,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.6,
+        "high": 15.66,
+        "low": 8.7
+      },
+      "merged_at": "2026-11-18T10:09:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.6,
+          "high": 15.66,
+          "low": 8.7
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3651,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Read Git hunks that omit blank context prefixes",
+      "url": "https://github.com/backnotprop/plannotator/pull/3651",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
