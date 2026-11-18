@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.87,
-    "high": 94.91,
-    "low": 51.81
+    "base": 69.89,
+    "high": 94.95,
+    "low": 51.83
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1233.2,
+  "engineer_weeks_at_40h": 1233.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 119.05,
-        "high": 161.07,
-        "low": 88.92
+        "base": 119.54,
+        "high": 161.74,
+        "low": 89.3
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 546,
-      "public_merged_pull_requests": 700,
-      "public_prs_with_work": 461,
+      "public_authored_pr_commits": 548,
+      "public_merged_pull_requests": 702,
+      "public_prs_with_work": 463,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4285.65,
-        "high": 5798.67,
-        "low": 3201.27
+        "base": 4303.51,
+        "high": 5822.79,
+        "low": 3214.67
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-18",
-  "public_accepted_merge_events": 4030,
-  "public_accepted_pull_requests": 4029,
+  "public_accepted_merge_events": 4032,
+  "public_accepted_pull_requests": 4031,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49327.72,
-    "high": 67009.63,
-    "low": 36577.11
+    "base": 49345.58,
+    "high": 67033.75,
+    "low": 36590.51
   },
   "updated_at_utc": "2026-11-18",
   "window": {
@@ -133673,6 +133673,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(sim): keep terminal observations when vector simulators reuse buffers",
       "url": "https://github.com/huggingface/lerobot/pull/5404",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:25:14Z",
+      "evidence": {
+        "additions": 85,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 13,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.15,
+        "high": 13.71,
+        "low": 7.62
+      },
+      "merged_at": "2026-11-18T18:33:24Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.15,
+          "high": 13.71,
+          "low": 7.62
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 295,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep PyG edge features and metadata aligned after dropping dangling edges",
+      "url": "https://github.com/c2g-dev/city2graph/pull/295",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:23:55Z",
+      "evidence": {
+        "additions": 19,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.71,
+        "high": 10.41,
+        "low": 5.78
+      },
+      "merged_at": "2026-11-18T18:59:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.71,
+          "high": 10.41,
+          "low": 5.78
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 292,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep missing GTFS stop times from becoming midnight trips",
+      "url": "https://github.com/c2g-dev/city2graph/pull/292",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
