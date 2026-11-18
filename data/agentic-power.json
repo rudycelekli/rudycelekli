@@ -1,13 +1,13 @@
 {
   "agentic_power_x": {
-    "base": 69.34,
-    "high": 94.2,
-    "low": 51.41
+    "base": 69.35,
+    "high": 94.21,
+    "low": 51.42
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
   "coverage_status": "partial",
-  "creation_month_proxy_prs": 17,
+  "creation_month_proxy_prs": 18,
   "direction_calibration": {
     "allocation_method": "two hours per elapsed calendar day; independent of contribution volume",
     "hours_per_day": 2.0,
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1223.8,
+  "engineer_weeks_at_40h": 1224.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,12 +398,12 @@
     },
     {
       "agentic_power_x": {
-        "base": 109.33,
-        "high": 147.96,
-        "low": 81.64
+        "base": 109.47,
+        "high": 148.15,
+        "low": 81.74
       },
       "coverage_status": "partial",
-      "creation_month_proxy_prs": 0,
+      "creation_month_proxy_prs": 1,
       "direction_calendar_days": 18,
       "direction_hours": 36.0,
       "elapsed_days": 18,
@@ -419,13 +419,13 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 506,
-      "public_merged_pull_requests": 658,
-      "public_prs_with_work": 421,
+      "public_merged_pull_requests": 659,
+      "public_prs_with_work": 422,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3935.95,
-        "high": 5326.62,
-        "low": 2939.02
+        "base": 3940.95,
+        "high": 5333.37,
+        "low": 2942.77
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-18",
-  "public_accepted_merge_events": 3988,
-  "public_accepted_pull_requests": 3987,
+  "public_accepted_merge_events": 3989,
+  "public_accepted_pull_requests": 3988,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48953.78,
-    "high": 66504.85,
-    "low": 36296.68
+    "base": 48958.78,
+    "high": 66511.6,
+    "low": 36300.43
   },
   "updated_at_utc": "2026-11-18",
   "window": {
@@ -132288,6 +132288,39 @@
       "title": "Preserve concurrent changes when editing Inbox routines",
       "url": "https://github.com/backnotprop/plannotator/pull/3552",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-16T18:16:55Z",
+      "evidence": {
+        "additions": 0,
+        "changed_files": 0,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.0,
+        "high": 6.75,
+        "low": 3.75
+      },
+      "merged_at": "2026-11-18T04:41:00Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.0,
+          "high": 6.75,
+          "low": 3.75
+        }
+      },
+      "project": "backnotprop/plannotator",
+      "pull_request": 3547,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Show the first commit in Last commit reviews",
+      "url": "https://github.com/backnotprop/plannotator/pull/3547",
+      "work_timing_basis": "PR creation-month proxy; no attributed non-merge commit timing available"
     }
   ]
 }
