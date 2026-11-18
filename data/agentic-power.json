@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.37,
-    "high": 94.24,
-    "low": 51.44
+    "base": 69.6,
+    "high": 94.55,
+    "low": 51.61
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1224.4,
+  "engineer_weeks_at_40h": 1228.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 109.47,
-        "high": 148.15,
-        "low": 81.74
+        "base": 114.0,
+        "high": 154.26,
+        "low": 85.14
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 506,
-      "public_merged_pull_requests": 660,
-      "public_prs_with_work": 422,
+      "public_authored_pr_commits": 526,
+      "public_merged_pull_requests": 680,
+      "public_prs_with_work": 442,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 3940.95,
-        "high": 5333.37,
-        "low": 2942.77
+        "base": 4103.88,
+        "high": 5553.3,
+        "low": 3064.96
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-18",
-  "public_accepted_merge_events": 3990,
-  "public_accepted_pull_requests": 3989,
+  "public_accepted_merge_events": 4010,
+  "public_accepted_pull_requests": 4009,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 48976.55,
-    "high": 66535.59,
-    "low": 36313.76
+    "base": 49139.48,
+    "high": 66755.52,
+    "low": 36435.95
   },
   "updated_at_utc": "2026-11-18",
   "window": {
@@ -132353,6 +132353,666 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "[TASK FIX] hbv-calibration-1: consolidate R setup, memory and routing clarification",
       "url": "https://github.com/harbor-framework/terminal-bench-science/pull/1908",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:15Z",
+      "evidence": {
+        "additions": 79,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.3,
+        "high": 12.55,
+        "low": 6.97
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.3,
+          "high": 12.55,
+          "low": 6.97
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 63,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Benchmark async TypeScript calls through promise settlement",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/63",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:21Z",
+      "evidence": {
+        "additions": 37,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.94,
+        "high": 10.71,
+        "low": 5.95
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.94,
+          "high": 10.71,
+          "low": 5.95
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 65,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Ignore non-top-level Go struct fields when deriving the bridge shape",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/65",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:23Z",
+      "evidence": {
+        "additions": 82,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.89,
+        "high": 13.35,
+        "low": 7.42
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.89,
+          "high": 13.35,
+          "low": 7.42
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 66,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Read quoted and tab-separated Go module directives",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/66",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-18T04:45:28Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.01,
+        "high": 8.11,
+        "low": 4.51
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.01,
+          "high": 8.11,
+          "low": 4.51
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 67,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Classify C# test sources by their owning project",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/67",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:33Z",
+      "evidence": {
+        "additions": 30,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.36,
+        "high": 9.93,
+        "low": 5.52
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.36,
+          "high": 9.93,
+          "low": 5.52
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 68,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve namespace prefixes in grouped PHP imports",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/68",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:36Z",
+      "evidence": {
+        "additions": 63,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.91,
+        "high": 12.03,
+        "low": 6.68
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.91,
+          "high": 12.03,
+          "low": 6.68
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 69,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep the Go toolchain cgo setting while recording the original",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/69",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:39Z",
+      "evidence": {
+        "additions": 73,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.2,
+        "high": 12.42,
+        "low": 6.9
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.2,
+          "high": 12.42,
+          "low": 6.9
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 70,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Use parsed Java package names when resolving recording targets",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/70",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:44Z",
+      "evidence": {
+        "additions": 26,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.19,
+        "high": 9.7,
+        "low": 5.39
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.19,
+          "high": 9.7,
+          "low": 5.39
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 72,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Match curl data-file request bodies",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/72",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:47Z",
+      "evidence": {
+        "additions": 26,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.31,
+        "high": 9.87,
+        "low": 5.49
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.31,
+          "high": 9.87,
+          "low": 5.49
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 73,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Validate the HTTP Content-Length framing",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/73",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:50Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.01,
+        "high": 9.46,
+        "low": 5.26
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.01,
+          "high": 9.46,
+          "low": 5.26
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 74,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Quote Node profile output directories",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/74",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:53Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.17,
+        "high": 11.03,
+        "low": 6.13
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.17,
+          "high": 11.03,
+          "low": 6.13
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 75,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Decode file URLs in Node CPU profiles",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/75",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:56Z",
+      "evidence": {
+        "additions": 38,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.15,
+        "high": 11.0,
+        "low": 6.11
+      },
+      "merged_at": "2026-11-18T08:44:08Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.15,
+          "high": 11.0,
+          "low": 6.11
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 76,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep the configured port when re-recording HTTP cases",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/76",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:44:57Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.31,
+        "high": 9.87,
+        "low": 5.48
+      },
+      "merged_at": "2026-11-18T08:44:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.31,
+          "high": 9.87,
+          "low": 5.48
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 57,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep original export names when refreshing raw Rust identifiers",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/57",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:00Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.81,
+        "high": 9.2,
+        "low": 5.11
+      },
+      "merged_at": "2026-11-18T08:44:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.81,
+          "high": 9.2,
+          "low": 5.11
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 58,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Use dynamic wire keys for wide TypeScript objects",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/58",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:03Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.05,
+        "high": 10.86,
+        "low": 6.03
+      },
+      "merged_at": "2026-11-18T08:44:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.05,
+          "high": 10.86,
+          "low": 6.03
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 59,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Escape path delimiters in the Node resolver registration URL",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/59",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:06Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.73,
+        "high": 11.79,
+        "low": 6.55
+      },
+      "merged_at": "2026-11-18T08:44:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.73,
+          "high": 11.79,
+          "low": 6.55
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 60,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Replay large UTF-16 strings without exceeding Node argument limits",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/60",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:09Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.57,
+        "high": 11.57,
+        "low": 6.43
+      },
+      "merged_at": "2026-11-18T08:44:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.57,
+          "high": 11.57,
+          "low": 6.43
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 61,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Honor exact TypeScript path aliases before wildcard matches",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/61",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:12Z",
+      "evidence": {
+        "additions": 65,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.04,
+        "high": 12.21,
+        "low": 6.78
+      },
+      "merged_at": "2026-11-18T08:44:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.04,
+          "high": 12.21,
+          "low": 6.78
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 62,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Resolve emitted TypeScript module extensions during Node recording",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/62",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:18Z",
+      "evidence": {
+        "additions": 52,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.69,
+        "high": 11.73,
+        "low": 6.51
+      },
+      "merged_at": "2026-11-18T08:44:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.69,
+          "high": 11.73,
+          "low": 6.51
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 64,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Isolate the generated C string conversion helper",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/64",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T04:45:42Z",
+      "evidence": {
+        "additions": 63,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.29,
+        "high": 12.54,
+        "low": 6.97
+      },
+      "merged_at": "2026-11-18T08:44:09Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.29,
+          "high": 12.54,
+          "low": 6.97
+        }
+      },
+      "project": "erkamyaman/rust-anything",
+      "pull_request": 71,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve distinct HTTP cases with colliding names",
+      "url": "https://github.com/erkamyaman/rust-anything/pull/71",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
