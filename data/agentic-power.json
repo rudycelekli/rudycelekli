@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.79,
-    "high": 94.81,
-    "low": 51.75
+    "base": 69.81,
+    "high": 94.83,
+    "low": 51.76
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1231.8,
+  "engineer_weeks_at_40h": 1232.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 117.7,
-        "high": 159.26,
-        "low": 87.92
+        "base": 118.03,
+        "high": 159.7,
+        "low": 88.16
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 541,
-      "public_merged_pull_requests": 694,
-      "public_prs_with_work": 456,
+      "public_authored_pr_commits": 542,
+      "public_merged_pull_requests": 695,
+      "public_prs_with_work": 457,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4237.33,
-        "high": 5733.44,
-        "low": 3165.04
+        "base": 4249.13,
+        "high": 5749.37,
+        "low": 3173.89
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-18",
-  "public_accepted_merge_events": 4024,
-  "public_accepted_pull_requests": 4023,
+  "public_accepted_merge_events": 4025,
+  "public_accepted_pull_requests": 4024,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49272.93,
-    "high": 66935.66,
-    "low": 36536.03
+    "base": 49284.73,
+    "high": 66951.59,
+    "low": 36544.88
   },
   "updated_at_utc": "2026-11-18",
   "window": {
@@ -133475,6 +133475,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Read Git hunks that omit blank context prefixes",
       "url": "https://github.com/backnotprop/plannotator/pull/3651",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-10T01:03:39Z",
+      "evidence": {
+        "additions": 136,
+        "changed_files": 5,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 16,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 11.8,
+        "high": 15.93,
+        "low": 8.85
+      },
+      "merged_at": "2026-11-18T10:53:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.8,
+          "high": 15.93,
+          "low": 8.85
+        }
+      },
+      "project": "opensandbox-group/OpenSandbox",
+      "pull_request": 2696,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sdk-python): keep structured errors on streamed download failures",
+      "url": "https://github.com/opensandbox-group/OpenSandbox/pull/2696",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
