@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.72,
-    "high": 94.72,
-    "low": 51.7
+    "base": 69.79,
+    "high": 94.8,
+    "low": 51.75
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1234.1,
+  "engineer_weeks_at_40h": 1235.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 113.74,
-        "high": 153.9,
-        "low": 84.97
+        "base": 114.91,
+        "high": 155.47,
+        "low": 85.84
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 550,
-      "public_merged_pull_requests": 704,
-      "public_prs_with_work": 465,
+      "public_authored_pr_commits": 558,
+      "public_merged_pull_requests": 709,
+      "public_prs_with_work": 470,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4322.27,
-        "high": 5848.12,
-        "low": 3228.75
+        "base": 4366.58,
+        "high": 5907.94,
+        "low": 3261.98
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-19",
-  "public_accepted_merge_events": 4034,
-  "public_accepted_pull_requests": 4033,
+  "public_accepted_merge_events": 4039,
+  "public_accepted_pull_requests": 4038,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49364.34,
-    "high": 67059.08,
-    "low": 36604.59
+    "base": 49408.65,
+    "high": 67118.9,
+    "low": 36637.82
   },
   "updated_at_utc": "2026-11-19",
   "window": {
@@ -133805,6 +133805,171 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Preserve tool use in scoped document edits",
       "url": "https://github.com/google-deepmind/concordia/pull/452",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:58:00Z",
+      "evidence": {
+        "additions": 60,
+        "changed_files": 2,
+        "comments": 11,
+        "commits": 2,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.3,
+        "high": 12.55,
+        "low": 6.97
+      },
+      "merged_at": "2026-11-19T21:29:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.3,
+          "high": 12.55,
+          "low": 6.97
+        }
+      },
+      "project": "affaan-m/ECC",
+      "pull_request": 4019,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(openspec): query history for literal anchor paths",
+      "url": "https://github.com/affaan-m/ECC/pull/4019",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T05:58:27Z",
+      "evidence": {
+        "additions": 28,
+        "changed_files": 2,
+        "comments": 11,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.16,
+        "high": 11.02,
+        "low": 6.12
+      },
+      "merged_at": "2026-11-19T21:29:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.16,
+          "high": 11.02,
+          "low": 6.12
+        }
+      },
+      "project": "affaan-m/ECC",
+      "pull_request": 4020,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(eval-harness): preserve fixtures when recording fails",
+      "url": "https://github.com/affaan-m/ECC/pull/4020",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T06:01:21Z",
+      "evidence": {
+        "additions": 60,
+        "changed_files": 2,
+        "comments": 7,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.74,
+        "high": 11.8,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-19T21:29:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.74,
+          "high": 11.8,
+          "low": 6.56
+        }
+      },
+      "project": "affaan-m/ECC",
+      "pull_request": 4021,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(nasiko): identify missing qualified registry manifests",
+      "url": "https://github.com/affaan-m/ECC/pull/4021",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-18T06:04:54Z",
+      "evidence": {
+        "additions": 76,
+        "changed_files": 4,
+        "comments": 11,
+        "commits": 2,
+        "deletions": 14,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 9.67,
+        "high": 13.05,
+        "low": 7.25
+      },
+      "merged_at": "2026-11-19T21:29:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.67,
+          "high": 13.05,
+          "low": 7.25
+        }
+      },
+      "project": "affaan-m/ECC",
+      "pull_request": 4022,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(statusline): preserve newer tool metrics during context updates",
+      "url": "https://github.com/affaan-m/ECC/pull/4022",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T06:06:53Z",
+      "evidence": {
+        "additions": 39,
+        "changed_files": 2,
+        "comments": 7,
+        "commits": 1,
+        "deletions": 13,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.44,
+        "high": 11.4,
+        "low": 6.33
+      },
+      "merged_at": "2026-11-19T21:29:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.44,
+          "high": 11.4,
+          "low": 6.33
+        }
+      },
+      "project": "affaan-m/ECC",
+      "pull_request": 4023,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): use the dispatched tool namespace for health checks",
+      "url": "https://github.com/affaan-m/ECC/pull/4023",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
