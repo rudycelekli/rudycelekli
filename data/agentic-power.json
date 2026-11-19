@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.79,
-    "high": 94.8,
-    "low": 51.75
+    "base": 69.8,
+    "high": 94.82,
+    "low": 51.76
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1235.2,
+  "engineer_weeks_at_40h": 1235.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 114.91,
-        "high": 155.47,
-        "low": 85.84
+        "base": 115.15,
+        "high": 155.79,
+        "low": 86.02
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 558,
-      "public_merged_pull_requests": 709,
-      "public_prs_with_work": 470,
+      "public_authored_pr_commits": 561,
+      "public_merged_pull_requests": 710,
+      "public_prs_with_work": 471,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4366.58,
-        "high": 5907.94,
-        "low": 3261.98
+        "base": 4375.65,
+        "high": 5920.18,
+        "low": 3268.78
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-19",
-  "public_accepted_merge_events": 4039,
-  "public_accepted_pull_requests": 4038,
+  "public_accepted_merge_events": 4040,
+  "public_accepted_pull_requests": 4039,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49408.65,
-    "high": 67118.9,
-    "low": 36637.82
+    "base": 49417.72,
+    "high": 67131.14,
+    "low": 36644.62
   },
   "updated_at_utc": "2026-11-19",
   "window": {
@@ -133970,6 +133970,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(mcp): use the dispatched tool namespace for health checks",
       "url": "https://github.com/affaan-m/ECC/pull/4023",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-14T06:51:54Z",
+      "evidence": {
+        "additions": 43,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 2,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 9.07,
+        "high": 12.24,
+        "low": 6.8
+      },
+      "merged_at": "2026-11-19T22:15:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.07,
+          "high": 12.24,
+          "low": 6.8
+        }
+      },
+      "project": "storytold/craft-anything",
+      "pull_request": 1849,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Verify existing Go projects with real build and test checks (R2.7)",
+      "url": "https://github.com/storytold/craft-anything/pull/1849",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
