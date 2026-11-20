@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.96,
-    "high": 95.03,
-    "low": 51.88
+    "base": 69.97,
+    "high": 95.05,
+    "low": 51.89
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1241.8,
+  "engineer_weeks_at_40h": 1242.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 110.78,
-        "high": 149.88,
-        "low": 82.76
+        "base": 111.05,
+        "high": 150.25,
+        "low": 82.96
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 568,
-      "public_merged_pull_requests": 741,
-      "public_prs_with_work": 476,
+      "public_authored_pr_commits": 569,
+      "public_merged_pull_requests": 742,
+      "public_prs_with_work": 477,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4431.24,
-        "high": 5995.24,
-        "low": 3310.47
+        "base": 4442.03,
+        "high": 6009.8,
+        "low": 3318.56
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-20",
-  "public_accepted_merge_events": 4071,
-  "public_accepted_pull_requests": 4070,
+  "public_accepted_merge_events": 4072,
+  "public_accepted_pull_requests": 4071,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49670.22,
-    "high": 67472.06,
-    "low": 36834.02
+    "base": 49681.01,
+    "high": 67486.62,
+    "low": 36842.11
   },
   "updated_at_utc": "2026-11-20",
   "window": {
@@ -135026,6 +135026,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Propagate program-walk callback and filter errors",
       "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9787",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-20T03:08:55Z",
+      "evidence": {
+        "additions": 50,
+        "changed_files": 8,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.79,
+        "high": 14.56,
+        "low": 8.09
+      },
+      "merged_at": "2026-11-20T14:45:22Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.79,
+          "high": 14.56,
+          "low": 8.09
+        }
+      },
+      "project": "Kentucky-ai/opentakeoff",
+      "pull_request": 664,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Fix ceiling wall angle after resetting the floor multiplier",
+      "url": "https://github.com/Kentucky-ai/opentakeoff/pull/664",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
