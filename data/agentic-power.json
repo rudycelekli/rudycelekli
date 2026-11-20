@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.61,
-    "high": 94.57,
-    "low": 51.62
+    "base": 69.63,
+    "high": 94.59,
+    "low": 51.63
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1235.6,
+  "engineer_weeks_at_40h": 1236.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 109.58,
-        "high": 148.26,
-        "low": 81.86
+        "base": 109.91,
+        "high": 148.7,
+        "low": 82.11
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 562,
-      "public_merged_pull_requests": 711,
-      "public_prs_with_work": 472,
+      "public_authored_pr_commits": 564,
+      "public_merged_pull_requests": 712,
+      "public_prs_with_work": 473,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4383.09,
-        "high": 5930.23,
-        "low": 3274.36
+        "base": 4396.3,
+        "high": 5948.07,
+        "low": 3284.27
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-20",
-  "public_accepted_merge_events": 4041,
-  "public_accepted_pull_requests": 4040,
+  "public_accepted_merge_events": 4042,
+  "public_accepted_pull_requests": 4041,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49425.16,
-    "high": 67141.19,
-    "low": 36650.2
+    "base": 49438.37,
+    "high": 67159.03,
+    "low": 36660.11
   },
   "updated_at_utc": "2026-11-20",
   "window": {
@@ -134036,6 +134036,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Reject missing GTFS frequency period boundaries",
       "url": "https://github.com/c2g-dev/city2graph/pull/277",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-18T16:17:06Z",
+      "evidence": {
+        "additions": 127,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 4,
+        "deletions": 23,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.21,
+        "high": 17.84,
+        "low": 9.91
+      },
+      "merged_at": "2026-11-20T01:02:59Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 13.21,
+          "high": 17.84,
+          "low": 9.91
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 278,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep invalid GTFS stop coordinates out of graph geometry",
+      "url": "https://github.com/c2g-dev/city2graph/pull/278",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
