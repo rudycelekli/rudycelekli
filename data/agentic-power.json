@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.92,
-    "high": 94.98,
-    "low": 51.85
+    "base": 69.96,
+    "high": 95.03,
+    "low": 51.88
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1241.1,
+  "engineer_weeks_at_40h": 1241.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 555.34,
-        "high": 750.7,
-        "low": 415.53
+        "base": 555.77,
+        "high": 751.28,
+        "low": 415.85
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4464,
+      "public_authored_pr_commits": 4468,
       "public_merged_pull_requests": 3088,
-      "public_prs_with_work": 3227,
+      "public_prs_with_work": 3231,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34430.93,
-        "high": 46543.37,
-        "low": 25762.81
+        "base": 34457.82,
+        "high": 46579.67,
+        "low": 25782.98
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 568,
-      "public_merged_pull_requests": 737,
+      "public_merged_pull_requests": 741,
       "public_prs_with_work": 476,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-20",
-  "public_accepted_merge_events": 4067,
-  "public_accepted_pull_requests": 4066,
+  "public_accepted_merge_events": 4071,
+  "public_accepted_pull_requests": 4070,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49643.33,
-    "high": 67435.76,
-    "low": 36813.85
+    "base": 49670.22,
+    "high": 67472.06,
+    "low": 36834.02
   },
   "updated_at_utc": "2026-11-20",
   "window": {
@@ -134894,6 +134894,138 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(places): don't let the browser cache a refused Google answer",
       "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1570",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-11T14:48:00Z",
+      "evidence": {
+        "additions": 11,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.47,
+        "high": 8.74,
+        "low": 4.85
+      },
+      "merged_at": "2026-11-20T11:04:12Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.47,
+          "high": 8.74,
+          "low": 4.85
+        }
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9775,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve script changes and exceptions during PyGhidra path cleanup",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9775",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-11T15:18:07Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 11,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.01,
+        "high": 9.46,
+        "low": 5.26
+      },
+      "merged_at": "2026-11-20T11:04:12Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.01,
+          "high": 9.46,
+          "low": 5.26
+        }
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9779,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Roll back newly created PyGhidra plugin installs after copy failures",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9779",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-11T16:01:20Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 1,
+        "comments": 2,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 6.65,
+        "high": 8.98,
+        "low": 4.99
+      },
+      "merged_at": "2026-11-20T11:04:12Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.65,
+          "high": 8.98,
+          "low": 4.99
+        }
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9783,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Notify PyGhidra monitor listeners on cancellation",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9783",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-11T16:12:20Z",
+      "evidence": {
+        "additions": 10,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.76,
+        "high": 9.12,
+        "low": 5.07
+      },
+      "merged_at": "2026-11-20T11:04:12Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.76,
+          "high": 9.12,
+          "low": 5.07
+        }
+      },
+      "project": "NationalSecurityAgency/ghidra",
+      "pull_request": 9787,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Propagate program-walk callback and filter errors",
+      "url": "https://github.com/NationalSecurityAgency/ghidra/pull/9787",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
