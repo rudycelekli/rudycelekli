@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 70.14,
-    "high": 95.27,
-    "low": 52.01
+    "base": 70.18,
+    "high": 95.34,
+    "low": 52.05
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1245.0,
+  "engineer_weeks_at_40h": 1245.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 113.98,
-        "high": 154.21,
-        "low": 85.16
+        "base": 114.81,
+        "high": 155.32,
+        "low": 85.78
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 586,
-      "public_merged_pull_requests": 755,
-      "public_prs_with_work": 490,
+      "public_authored_pr_commits": 595,
+      "public_merged_pull_requests": 758,
+      "public_prs_with_work": 493,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4559.37,
-        "high": 6168.21,
-        "low": 3406.6
+        "base": 4592.36,
+        "high": 6212.75,
+        "low": 3431.35
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-20",
-  "public_accepted_merge_events": 4085,
-  "public_accepted_pull_requests": 4084,
+  "public_accepted_merge_events": 4088,
+  "public_accepted_pull_requests": 4087,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49798.35,
-    "high": 67645.03,
-    "low": 36930.15
+    "base": 49831.34,
+    "high": 67689.57,
+    "low": 36954.9
   },
   "updated_at_utc": "2026-11-20",
   "window": {
@@ -135488,6 +135488,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Ignore out-of-range Overture connector positions",
       "url": "https://github.com/c2g-dev/city2graph/pull/286",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-20T02:22:35Z",
+      "evidence": {
+        "additions": 71,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 7,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.87,
+        "high": 14.68,
+        "low": 8.16
+      },
+      "merged_at": "2026-11-20T18:03:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.87,
+          "high": 14.68,
+          "low": 8.16
+        }
+      },
+      "project": "google-labs-code/stitch-skills",
+      "pull_request": 103,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: validate hardcoded colors in className expressions",
+      "url": "https://github.com/google-labs-code/stitch-skills/pull/103",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-20T02:22:38Z",
+      "evidence": {
+        "additions": 65,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 7,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.72,
+        "high": 14.47,
+        "low": 8.04
+      },
+      "merged_at": "2026-11-20T18:05:42Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.72,
+          "high": 14.47,
+          "low": 8.04
+        }
+      },
+      "project": "google-labs-code/stitch-skills",
+      "pull_request": 104,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: reject unsupported web tags in native components",
+      "url": "https://github.com/google-labs-code/stitch-skills/pull/104",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-20T02:22:40Z",
+      "evidence": {
+        "additions": 104,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 12,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 11.4,
+        "high": 15.39,
+        "low": 8.55
+      },
+      "merged_at": "2026-11-20T18:08:02Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.4,
+          "high": 15.39,
+          "low": 8.55
+        }
+      },
+      "project": "google-labs-code/stitch-skills",
+      "pull_request": 105,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: recognize CSS-first Tailwind setups in verification",
+      "url": "https://github.com/google-labs-code/stitch-skills/pull/105",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
