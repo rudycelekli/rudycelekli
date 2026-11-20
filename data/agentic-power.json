@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.9,
-    "high": 94.95,
-    "low": 51.83
+    "base": 69.92,
+    "high": 94.98,
+    "low": 51.85
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1240.7,
+  "engineer_weeks_at_40h": 1241.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 110.37,
-        "high": 149.32,
-        "low": 82.45
+        "base": 110.78,
+        "high": 149.88,
+        "low": 82.76
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 566,
-      "public_merged_pull_requests": 736,
-      "public_prs_with_work": 475,
+      "public_authored_pr_commits": 568,
+      "public_merged_pull_requests": 737,
+      "public_prs_with_work": 476,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4414.61,
-        "high": 5972.79,
-        "low": 3298.0
+        "base": 4431.24,
+        "high": 5995.24,
+        "low": 3310.47
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-20",
-  "public_accepted_merge_events": 4066,
-  "public_accepted_pull_requests": 4065,
+  "public_accepted_merge_events": 4067,
+  "public_accepted_pull_requests": 4066,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49626.7,
-    "high": 67413.31,
-    "low": 36801.38
+    "base": 49643.33,
+    "high": 67435.76,
+    "low": 36813.85
   },
   "updated_at_utc": "2026-11-20",
   "window": {
@@ -134861,6 +134861,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(supermetrics): reject row limits that parseInt would truncate",
       "url": "https://github.com/coreyhaines31/marketingskills/pull/879",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-05T03:25:34Z",
+      "evidence": {
+        "additions": 129,
+        "changed_files": 6,
+        "comments": 3,
+        "commits": 10,
+        "deletions": 22,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 16.63,
+        "high": 22.45,
+        "low": 12.47
+      },
+      "merged_at": "2026-11-20T10:20:03Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 16.63,
+          "high": 22.45,
+          "low": 12.47
+        }
+      },
+      "project": "bilawalsidhu/gods-eye-view",
+      "pull_request": 1570,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(places): don't let the browser cache a refused Google answer",
+      "url": "https://github.com/bilawalsidhu/gods-eye-view/pull/1570",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
