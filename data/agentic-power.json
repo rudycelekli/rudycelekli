@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.63,
-    "high": 94.59,
-    "low": 51.63
+    "base": 69.9,
+    "high": 94.95,
+    "low": 51.83
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1236.0,
+  "engineer_weeks_at_40h": 1240.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 552.6,
-        "high": 747.0,
-        "low": 413.47
+        "base": 555.34,
+        "high": 750.7,
+        "low": 415.53
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,21 +386,21 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4442,
+      "public_authored_pr_commits": 4464,
       "public_merged_pull_requests": 3088,
-      "public_prs_with_work": 3205,
+      "public_prs_with_work": 3227,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34260.91,
-        "high": 46313.81,
-        "low": 25635.27
+        "base": 34430.93,
+        "high": 46543.37,
+        "low": 25762.81
       }
     },
     {
       "agentic_power_x": {
-        "base": 109.91,
-        "high": 148.7,
-        "low": 82.11
+        "base": 110.37,
+        "high": 149.32,
+        "low": 82.45
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 564,
-      "public_merged_pull_requests": 712,
-      "public_prs_with_work": 473,
+      "public_authored_pr_commits": 566,
+      "public_merged_pull_requests": 736,
+      "public_prs_with_work": 475,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4396.3,
-        "high": 5948.07,
-        "low": 3284.27
+        "base": 4414.61,
+        "high": 5972.79,
+        "low": 3298.0
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-20",
-  "public_accepted_merge_events": 4042,
-  "public_accepted_pull_requests": 4041,
+  "public_accepted_merge_events": 4066,
+  "public_accepted_pull_requests": 4065,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49438.37,
-    "high": 67159.03,
-    "low": 36660.11
+    "base": 49626.7,
+    "high": 67413.31,
+    "low": 36801.38
   },
   "updated_at_utc": "2026-11-20",
   "window": {
@@ -134069,6 +134069,798 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Keep invalid GTFS stop coordinates out of graph geometry",
       "url": "https://github.com/c2g-dev/city2graph/pull/278",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:21:10Z",
+      "evidence": {
+        "additions": 98,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.81,
+        "high": 14.6,
+        "low": 8.11
+      },
+      "merged_at": "2026-11-20T01:33:54Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.81,
+          "high": 14.6,
+          "low": 8.11
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 283,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve curved street geometry in proximity paths",
+      "url": "https://github.com/c2g-dev/city2graph/pull/283",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T20:40:31Z",
+      "evidence": {
+        "additions": 15,
+        "changed_files": 2,
+        "comments": 9,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 7.5,
+        "high": 10.12,
+        "low": 5.62
+      },
+      "merged_at": "2026-11-20T01:46:56Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.5,
+          "high": 10.12,
+          "low": 5.62
+        }
+      },
+      "project": "sgl-project/sglang",
+      "pull_request": 51338,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "[Feat] classify: Support independent multi-label probabilities",
+      "url": "https://github.com/sgl-project/sglang/pull/51338",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-16T01:30:45Z",
+      "evidence": {
+        "additions": 200,
+        "changed_files": 38,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 18.44,
+        "high": 24.9,
+        "low": 13.83
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 18.44,
+          "high": 24.9,
+          "low": 13.83
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 852,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(clis): propagate remaining HTTP rejection statuses",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/852",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-17T16:09:27Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.54,
+        "high": 11.53,
+        "low": 6.4
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.54,
+          "high": 11.53,
+          "low": 6.4
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 858,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(paddle): reject incomplete recurring price options",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/858",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:18:27Z",
+      "evidence": {
+        "additions": 11,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.17,
+        "high": 9.68,
+        "low": 5.38
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.17,
+          "high": 9.68,
+          "low": 5.38
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 860,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(close): filter activity lists with the documented _type parameter",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/860",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:20:09Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.04,
+        "high": 9.51,
+        "low": 5.28
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.04,
+          "high": 9.51,
+          "low": 5.28
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 861,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(activecampaign): send deal search as filters[search]",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/861",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:21:00Z",
+      "evidence": {
+        "additions": 16,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.11,
+        "high": 9.6,
+        "low": 5.33
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.11,
+          "high": 9.6,
+          "low": 5.33
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 862,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(activecampaign): require whole-cent deal values",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/862",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:22:19Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.97,
+        "high": 9.41,
+        "low": 5.23
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.97,
+          "high": 9.41,
+          "low": 5.23
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 863,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(truelist): enforce the three-address inline verification limit",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/863",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:23:45Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 13,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.17,
+        "high": 11.03,
+        "low": 6.13
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.17,
+          "high": 11.03,
+          "low": 6.13
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 864,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(ahrefs): send required Keywords Explorer and SERP Overview parameters",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/864",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:24:48Z",
+      "evidence": {
+        "additions": 14,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.71,
+        "high": 10.41,
+        "low": 5.78
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.71,
+          "high": 10.41,
+          "low": 5.78
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 865,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(livestorm): create webhooks with documented url and event attributes",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/865",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:26:00Z",
+      "evidence": {
+        "additions": 17,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.66,
+        "high": 10.34,
+        "low": 5.75
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.66,
+          "high": 10.34,
+          "low": 5.75
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 866,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(optimizely): change experiment state with the documented action parameter",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/866",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:26:59Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.31,
+        "high": 9.87,
+        "low": 5.48
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.31,
+          "high": 9.87,
+          "low": 5.48
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 867,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(postmark): enforce batch and suppression request limits",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/867",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:27:39Z",
+      "evidence": {
+        "additions": 10,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.82,
+        "high": 9.21,
+        "low": 5.12
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.82,
+          "high": 9.21,
+          "low": 5.12
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 868,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(apollo): enforce the ten-person bulk enrichment limit",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/868",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:28:25Z",
+      "evidence": {
+        "additions": 8,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.62,
+        "high": 8.94,
+        "low": 4.97
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.62,
+          "high": 8.94,
+          "low": 4.97
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 869,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(hunter): read and pause sequences through documented routes",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/869",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:29:18Z",
+      "evidence": {
+        "additions": 14,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.41,
+        "high": 10.0,
+        "low": 5.55
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.41,
+          "high": 10.0,
+          "low": 5.55
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 870,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(lemlist): request campaign stats from the v2 route with its date range",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/870",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:30:23Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.17,
+        "high": 9.68,
+        "low": 5.38
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.17,
+          "high": 9.68,
+          "low": 5.38
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 871,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mixpanel): require the funnel query date range",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/871",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:31:11Z",
+      "evidence": {
+        "additions": 5,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.74,
+        "high": 9.1,
+        "low": 5.06
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.74,
+          "high": 9.1,
+          "low": 5.06
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 872,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(tiktok): send v1.3 operation_status for campaign status updates",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/872",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:32:06Z",
+      "evidence": {
+        "additions": 24,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.79,
+        "high": 10.51,
+        "low": 5.84
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.79,
+          "high": 10.51,
+          "low": 5.84
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 873,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(dataforseo): enforce per-task keyword limits",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/873",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:33:14Z",
+      "evidence": {
+        "additions": 20,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.66,
+        "high": 10.35,
+        "low": 5.75
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.66,
+          "high": 10.35,
+          "low": 5.75
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 874,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(resend): page audience, contact and webhook lists with cursors",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/874",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:34:07Z",
+      "evidence": {
+        "additions": 14,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.41,
+        "high": 10.0,
+        "low": 5.55
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.41,
+          "high": 10.0,
+          "low": 5.55
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 875,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(trustpilot): page business search with the documented perpage parameter",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/875",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-10-18T13:35:00Z",
+      "evidence": {
+        "additions": 6,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.82,
+        "high": 10.56,
+        "low": 5.87
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.82,
+          "high": 10.56,
+          "low": 5.87
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 876,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(similarweb): request geography from the v4 endpoint",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/876",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-18T13:36:29Z",
+      "evidence": {
+        "additions": 6,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.82,
+        "high": 9.21,
+        "low": 5.12
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.82,
+          "high": 9.21,
+          "low": 5.12
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 877,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(google-ads): strip hyphens from the target customer ID",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/877",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-18T13:37:40Z",
+      "evidence": {
+        "additions": 11,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.82,
+        "high": 7.86,
+        "low": 4.37
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.82,
+          "high": 7.86,
+          "low": 4.37
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 878,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(wistia): honor an explicit false public project flag",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/878",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-18T13:39:35Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.82,
+        "high": 7.86,
+        "low": 4.37
+      },
+      "merged_at": "2026-11-20T01:51:36Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 5.82,
+          "high": 7.86,
+          "low": 4.37
+        }
+      },
+      "project": "coreyhaines31/marketingskills",
+      "pull_request": 879,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(supermetrics): reject row limits that parseInt would truncate",
+      "url": "https://github.com/coreyhaines31/marketingskills/pull/879",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
