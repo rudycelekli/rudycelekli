@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 70.05,
-    "high": 95.16,
-    "low": 51.95
+    "base": 70.14,
+    "high": 95.27,
+    "low": 52.01
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1243.4,
+  "engineer_weeks_at_40h": 1245.0,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 112.45,
-        "high": 152.13,
-        "low": 84.01
+        "base": 113.98,
+        "high": 154.21,
+        "low": 85.16
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 94,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 578,
-      "public_merged_pull_requests": 748,
-      "public_prs_with_work": 483,
+      "public_authored_pr_commits": 586,
+      "public_merged_pull_requests": 755,
+      "public_prs_with_work": 490,
       "repository_default_branch_commits": 513,
       "skilled_human_equivalent_hours": {
-        "base": 4497.92,
-        "high": 6085.25,
-        "low": 3360.49
+        "base": 4559.37,
+        "high": 6168.21,
+        "low": 3406.6
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 918,
   "owned_public_through_utc": "2026-11-20",
-  "public_accepted_merge_events": 4078,
-  "public_accepted_pull_requests": 4077,
+  "public_accepted_merge_events": 4085,
+  "public_accepted_pull_requests": 4084,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49736.9,
-    "high": 67562.07,
-    "low": 36884.04
+    "base": 49798.35,
+    "high": 67645.03,
+    "low": 36930.15
   },
   "updated_at_utc": "2026-11-20",
   "window": {
@@ -135257,6 +135257,237 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Merge reciprocal OD flows for mixed-type zone IDs",
       "url": "https://github.com/c2g-dev/city2graph/pull/294",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:28:21Z",
+      "evidence": {
+        "additions": 80,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 4,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.8,
+        "high": 14.58,
+        "low": 8.1
+      },
+      "merged_at": "2026-11-20T17:31:39Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.8,
+          "high": 14.58,
+          "low": 8.1
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 300,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reject invalid network distance costs before routing",
+      "url": "https://github.com/c2g-dev/city2graph/pull/300",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:22:49Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.83,
+        "high": 11.92,
+        "low": 6.62
+      },
+      "merged_at": "2026-11-20T17:33:11Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.83,
+          "high": 11.92,
+          "low": 6.62
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 288,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep disconnected rows out when edge index labels repeat",
+      "url": "https://github.com/c2g-dev/city2graph/pull/288",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-18T16:25:14Z",
+      "evidence": {
+        "additions": 27,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.58,
+        "high": 11.58,
+        "low": 6.44
+      },
+      "merged_at": "2026-11-20T17:34:04Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.58,
+          "high": 11.58,
+          "low": 6.44
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 296,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Use the active geometry column to construct dual graphs",
+      "url": "https://github.com/c2g-dev/city2graph/pull/296",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-18T16:23:23Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.58,
+        "high": 8.88,
+        "low": 4.94
+      },
+      "merged_at": "2026-11-20T17:34:49Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.58,
+          "high": 8.88,
+          "low": 4.94
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 289,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Skip Overture downloads for an explicitly empty layer selection",
+      "url": "https://github.com/c2g-dev/city2graph/pull/289",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-18T16:21:13Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.38,
+        "high": 12.67,
+        "low": 7.04
+      },
+      "merged_at": "2026-11-20T17:35:33Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.38,
+          "high": 12.67,
+          "low": 7.04
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 285,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Clip empty spatial selections to an empty graph",
+      "url": "https://github.com/c2g-dev/city2graph/pull/285",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:23:55Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 33,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.27,
+        "high": 12.52,
+        "low": 6.96
+      },
+      "merged_at": "2026-11-20T17:36:24Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.27,
+          "high": 12.52,
+          "low": 6.96
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 291,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep valid GBFS feeds available beside malformed files",
+      "url": "https://github.com/c2g-dev/city2graph/pull/291",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:21:26Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.01,
+        "high": 10.81,
+        "low": 6.01
+      },
+      "merged_at": "2026-11-20T17:37:15Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.01,
+          "high": 10.81,
+          "low": 6.01
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 286,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Ignore out-of-range Overture connector positions",
+      "url": "https://github.com/c2g-dev/city2graph/pull/286",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
