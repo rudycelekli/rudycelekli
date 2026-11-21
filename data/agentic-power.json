@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 70.07,
-    "high": 95.18,
-    "low": 51.96
+    "base": 70.12,
+    "high": 95.25,
+    "low": 52.0
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1247.3,
+  "engineer_weeks_at_40h": 1248.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 110.74,
-        "high": 149.81,
-        "low": 82.75
+        "base": 111.59,
+        "high": 150.96,
+        "low": 83.39
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 97,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 601,
-      "public_merged_pull_requests": 764,
-      "public_prs_with_work": 499,
+      "public_authored_pr_commits": 607,
+      "public_merged_pull_requests": 767,
+      "public_prs_with_work": 502,
       "repository_default_branch_commits": 516,
       "skilled_human_equivalent_hours": {
-        "base": 4651.09,
-        "high": 6292.11,
-        "low": 3475.32
+        "base": 4686.93,
+        "high": 6340.5,
+        "low": 3502.19
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 921,
   "owned_public_through_utc": "2026-11-21",
-  "public_accepted_merge_events": 4094,
-  "public_accepted_pull_requests": 4093,
+  "public_accepted_merge_events": 4097,
+  "public_accepted_pull_requests": 4096,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49890.07,
-    "high": 67768.93,
-    "low": 36998.87
+    "base": 49925.91,
+    "high": 67817.32,
+    "low": 37025.74
   },
   "updated_at_utc": "2026-11-21",
   "window": {
@@ -135785,6 +135785,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Restore arbitrary attribute keys from rustworkx without collisions",
       "url": "https://github.com/c2g-dev/city2graph/pull/281",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:23:56Z",
+      "evidence": {
+        "additions": 98,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 4,
+        "deletions": 10,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.38,
+        "high": 15.36,
+        "low": 8.53
+      },
+      "merged_at": "2026-11-21T18:59:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.38,
+          "high": 15.36,
+          "low": 8.53
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 293,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Build GTFS OD lines from unmaterialized stop coordinates",
+      "url": "https://github.com/c2g-dev/city2graph/pull/293",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:17:06Z",
+      "evidence": {
+        "additions": 76,
+        "changed_files": 3,
+        "comments": 3,
+        "commits": 6,
+        "deletions": 17,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.39,
+        "high": 16.73,
+        "low": 9.29
+      },
+      "merged_at": "2026-11-21T19:06:18Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 12.39,
+          "high": 16.73,
+          "low": 9.29
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 276,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve actual GTFS departures and undirected summary geometry",
+      "url": "https://github.com/c2g-dev/city2graph/pull/276",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-18T16:21:10Z",
+      "evidence": {
+        "additions": 69,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 5,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.07,
+        "high": 16.3,
+        "low": 9.05
+      },
+      "merged_at": "2026-11-21T19:07:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 12.07,
+          "high": 16.3,
+          "low": 9.05
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 282,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reject invalid cutoffs in fixed-radius proximity graphs",
+      "url": "https://github.com/c2g-dev/city2graph/pull/282",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
