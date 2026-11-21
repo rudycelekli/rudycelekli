@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 70.04,
-    "high": 95.14,
-    "low": 51.94
+    "base": 70.07,
+    "high": 95.18,
+    "low": 51.96
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1246.7,
+  "engineer_weeks_at_40h": 1247.3,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 110.19,
-        "high": 149.06,
-        "low": 82.33
+        "base": 110.74,
+        "high": 149.81,
+        "low": 82.75
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 97,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 599,
-      "public_merged_pull_requests": 762,
-      "public_prs_with_work": 497,
+      "public_authored_pr_commits": 601,
+      "public_merged_pull_requests": 764,
+      "public_prs_with_work": 499,
       "repository_default_branch_commits": 516,
       "skilled_human_equivalent_hours": {
-        "base": 4627.82,
-        "high": 6260.69,
-        "low": 3457.87
+        "base": 4651.09,
+        "high": 6292.11,
+        "low": 3475.32
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 921,
   "owned_public_through_utc": "2026-11-21",
-  "public_accepted_merge_events": 4092,
-  "public_accepted_pull_requests": 4091,
+  "public_accepted_merge_events": 4094,
+  "public_accepted_pull_requests": 4093,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49866.8,
-    "high": 67737.51,
-    "low": 36981.42
+    "base": 49890.07,
+    "high": 67768.93,
+    "low": 36998.87
   },
   "updated_at_utc": "2026-11-21",
   "window": {
@@ -135719,6 +135719,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(cline): carry the SDK session ID into hook telemetry",
       "url": "https://github.com/Asymptote-Labs/agent-beacon/pull/1349",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "systems_engineering",
+      "created_at": "2026-11-18T16:21:11Z",
+      "evidence": {
+        "additions": 35,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 3,
+        "deletions": 7,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 10.12,
+        "high": 13.66,
+        "low": 7.59
+      },
+      "merged_at": "2026-11-21T18:37:42Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.12,
+          "high": 13.66,
+          "low": 7.59
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 284,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Keep unique place IDs when a morphology graph has no edges",
+      "url": "https://github.com/c2g-dev/city2graph/pull/284",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-18T16:20:05Z",
+      "evidence": {
+        "additions": 134,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 5,
+        "deletions": 41,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.15,
+        "high": 17.76,
+        "low": 9.86
+      },
+      "merged_at": "2026-11-21T18:44:31Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 13.15,
+          "high": 17.76,
+          "low": 9.86
+        }
+      },
+      "project": "c2g-dev/city2graph",
+      "pull_request": 281,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Restore arbitrary attribute keys from rustworkx without collisions",
+      "url": "https://github.com/c2g-dev/city2graph/pull/281",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
