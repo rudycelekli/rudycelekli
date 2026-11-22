@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.93,
-    "high": 95.0,
-    "low": 51.86
+    "base": 69.94,
+    "high": 95.01,
+    "low": 51.87
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1248.3,
+  "engineer_weeks_at_40h": 1248.5,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 106.68,
-        "high": 144.32,
-        "low": 79.72
+        "base": 106.82,
+        "high": 144.5,
+        "low": 79.82
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 97,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 608,
-      "public_merged_pull_requests": 768,
-      "public_prs_with_work": 503,
+      "public_authored_pr_commits": 609,
+      "public_merged_pull_requests": 769,
+      "public_prs_with_work": 504,
       "repository_default_branch_commits": 516,
       "skilled_human_equivalent_hours": {
-        "base": 4694.12,
-        "high": 6350.21,
-        "low": 3507.58
+        "base": 4699.87,
+        "high": 6357.97,
+        "low": 3511.89
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 921,
   "owned_public_through_utc": "2026-11-22",
-  "public_accepted_merge_events": 4098,
-  "public_accepted_pull_requests": 4097,
+  "public_accepted_merge_events": 4099,
+  "public_accepted_pull_requests": 4098,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49933.1,
-    "high": 67827.03,
-    "low": 37031.13
+    "base": 49938.85,
+    "high": 67834.79,
+    "low": 37035.44
   },
   "updated_at_utc": "2026-11-22",
   "window": {
@@ -135917,6 +135917,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Distinguish GitHub and GitLab numbers in the PR board filter",
       "url": "https://github.com/backnotprop/plannotator/pull/3638",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-20T03:03:20Z",
+      "evidence": {
+        "additions": 0,
+        "changed_files": 1,
+        "comments": 6,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 5.75,
+        "high": 7.76,
+        "low": 4.31
+      },
+      "merged_at": "2026-11-22T12:53:46Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.75,
+          "high": 7.76,
+          "low": 4.31
+        }
+      },
+      "project": "harbor-framework/terminal-bench-science",
+      "pull_request": 2921,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "[TASK FIX] Restore valid verifier config for clinical-metadata-recovery",
+      "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2921",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
