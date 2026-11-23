@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.75,
-    "high": 94.74,
-    "low": 51.73
+    "base": 69.9,
+    "high": 94.95,
+    "low": 51.84
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1248.5,
+  "engineer_weeks_at_40h": 1251.3,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 102.18,
-        "high": 138.23,
-        "low": 76.35
+        "base": 104.61,
+        "high": 141.51,
+        "low": 78.17
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 98,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 609,
-      "public_merged_pull_requests": 769,
-      "public_prs_with_work": 504,
+      "public_authored_pr_commits": 624,
+      "public_merged_pull_requests": 784,
+      "public_prs_with_work": 519,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
-        "base": 4700.37,
-        "high": 6358.67,
-        "low": 3512.24
+        "base": 4811.93,
+        "high": 6509.26,
+        "low": 3595.92
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-23",
-  "public_accepted_merge_events": 4099,
-  "public_accepted_pull_requests": 4098,
+  "public_accepted_merge_events": 4114,
+  "public_accepted_pull_requests": 4113,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 49939.35,
-    "high": 67835.49,
-    "low": 37035.79
+    "base": 50050.91,
+    "high": 67986.08,
+    "low": 37119.47
   },
   "updated_at_utc": "2026-11-23",
   "window": {
@@ -135950,6 +135950,501 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "[TASK FIX] Restore valid verifier config for clinical-metadata-recovery",
       "url": "https://github.com/harbor-framework/terminal-bench-science/pull/2921",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:04:43Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.69,
+        "high": 9.03,
+        "low": 5.02
+      },
+      "merged_at": "2026-11-23T22:26:20Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.69,
+          "high": 9.03,
+          "low": 5.02
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 4,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Preserve the Stilt reference video when rendering fails",
+      "url": "https://github.com/apekshik/anymachine/pull/4",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:04:45Z",
+      "evidence": {
+        "additions": 5,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.86,
+        "high": 7.91,
+        "low": 4.39
+      },
+      "merged_at": "2026-11-23T22:26:25Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.86,
+          "high": 7.91,
+          "low": 4.39
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 5,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reject Stilt animation runs that share an output directory",
+      "url": "https://github.com/apekshik/anymachine/pull/5",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:04:47Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.63,
+        "high": 7.6,
+        "low": 4.22
+      },
+      "merged_at": "2026-11-23T22:26:31Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.63,
+          "high": 7.6,
+          "low": 4.22
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 6,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Make Stilt assembly timing repeatable across renders",
+      "url": "https://github.com/apekshik/anymachine/pull/6",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:22Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.19,
+        "high": 9.7,
+        "low": 5.39
+      },
+      "merged_at": "2026-11-23T22:26:37Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.19,
+          "high": 9.7,
+          "low": 5.39
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 8,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Always check the laptop hinge at its fully open endpoint",
+      "url": "https://github.com/apekshik/anymachine/pull/8",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:27Z",
+      "evidence": {
+        "additions": 4,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.75,
+        "high": 7.76,
+        "low": 4.31
+      },
+      "merged_at": "2026-11-23T22:26:42Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.75,
+          "high": 7.76,
+          "low": 4.31
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 10,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Fail verification when a quadruped GLB is missing required actions",
+      "url": "https://github.com/apekshik/anymachine/pull/10",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:29Z",
+      "evidence": {
+        "additions": 106,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 20,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.25,
+        "high": 13.84,
+        "low": 7.69
+      },
+      "merged_at": "2026-11-23T22:26:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.25,
+          "high": 13.84,
+          "low": 7.69
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 11,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Summarize backpack collision checks using their recorded thresholds",
+      "url": "https://github.com/apekshik/anymachine/pull/11",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:32Z",
+      "evidence": {
+        "additions": 120,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.17,
+        "high": 13.73,
+        "low": 7.63
+      },
+      "merged_at": "2026-11-23T22:26:54Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 10.17,
+          "high": 13.73,
+          "low": 7.63
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 12,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Reject empty or misspelled backpack collision masks",
+      "url": "https://github.com/apekshik/anymachine/pull/12",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:34Z",
+      "evidence": {
+        "additions": 4,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.04,
+        "high": 8.15,
+        "low": 4.53
+      },
+      "merged_at": "2026-11-23T22:26:59Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.04,
+          "high": 8.15,
+          "low": 4.53
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 13,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Enforce the laptop texture cap on both image axes",
+      "url": "https://github.com/apekshik/anymachine/pull/13",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:38Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 18,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.8,
+        "high": 10.53,
+        "low": 5.85
+      },
+      "merged_at": "2026-11-23T22:27:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.8,
+          "high": 10.53,
+          "low": 5.85
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 15,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Report the Stilt export formats actually verified",
+      "url": "https://github.com/apekshik/anymachine/pull/15",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:40Z",
+      "evidence": {
+        "additions": 7,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.69,
+        "high": 9.03,
+        "low": 5.02
+      },
+      "merged_at": "2026-11-23T22:27:11Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.69,
+          "high": 9.03,
+          "low": 5.02
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 16,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Report unreachable lateral targets in leg IK",
+      "url": "https://github.com/apekshik/anymachine/pull/16",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:43Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 5,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.01,
+        "high": 9.46,
+        "low": 5.26
+      },
+      "merged_at": "2026-11-23T22:27:17Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.01,
+          "high": 9.46,
+          "low": 5.26
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 17,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Document what a clean checkout needs to rebuild each rig",
+      "url": "https://github.com/apekshik/anymachine/pull/17",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:08:03Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.86,
+        "high": 9.26,
+        "low": 5.15
+      },
+      "merged_at": "2026-11-23T22:27:23Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.86,
+          "high": 9.26,
+          "low": 5.15
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 18,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Explain laptop inputs that cannot form a hinge",
+      "url": "https://github.com/apekshik/anymachine/pull/18",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:20Z",
+      "evidence": {
+        "additions": 53,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 19,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.37,
+        "high": 12.65,
+        "low": 7.03
+      },
+      "merged_at": "2026-11-23T22:44:00Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.37,
+          "high": 12.65,
+          "low": 7.03
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 7,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Make the laptop rebuild runnable from any checkout",
+      "url": "https://github.com/apekshik/anymachine/pull/7",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:25Z",
+      "evidence": {
+        "additions": 19,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.89,
+        "high": 10.65,
+        "low": 5.92
+      },
+      "merged_at": "2026-11-23T22:44:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.89,
+          "high": 10.65,
+          "low": 5.92
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 9,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Propagate Blender failures through spider and quadruped pipelines",
+      "url": "https://github.com/apekshik/anymachine/pull/9",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-23T06:07:36Z",
+      "evidence": {
+        "additions": 24,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 15,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.36,
+        "high": 11.29,
+        "low": 6.27
+      },
+      "merged_at": "2026-11-23T22:44:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.36,
+          "high": 11.29,
+          "low": 6.27
+        }
+      },
+      "project": "apekshik/anymachine",
+      "pull_request": 14,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Distinguish unmeasured spider geometry from passing checks",
+      "url": "https://github.com/apekshik/anymachine/pull/14",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
