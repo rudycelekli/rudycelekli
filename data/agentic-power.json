@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.93,
-    "high": 94.99,
-    "low": 51.86
+    "base": 69.95,
+    "high": 95.02,
+    "low": 51.88
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1255.2,
+  "engineer_weeks_at_40h": 1255.7,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 103.55,
-        "high": 140.07,
-        "low": 77.39
+        "base": 103.91,
+        "high": 140.55,
+        "low": 77.66
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 98,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 647,
-      "public_merged_pull_requests": 807,
-      "public_prs_with_work": 542,
+      "public_authored_pr_commits": 649,
+      "public_merged_pull_requests": 809,
+      "public_prs_with_work": 544,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
-        "base": 4970.59,
-        "high": 6723.42,
-        "low": 3714.91
+        "base": 4987.54,
+        "high": 6746.31,
+        "low": 3727.62
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-24",
-  "public_accepted_merge_events": 4137,
-  "public_accepted_pull_requests": 4136,
+  "public_accepted_merge_events": 4139,
+  "public_accepted_pull_requests": 4138,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50209.57,
-    "high": 68200.24,
-    "low": 37238.46
+    "base": 50226.52,
+    "high": 68223.13,
+    "low": 37251.17
   },
   "updated_at_utc": "2026-11-24",
   "window": {
@@ -137204,6 +137204,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(installer): retain payload when hook removal fails",
       "url": "https://github.com/mjmirza/app-store-compliance/pull/2392",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:39:07Z",
+      "evidence": {
+        "additions": 62,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.76,
+        "high": 13.18,
+        "low": 7.32
+      },
+      "merged_at": "2026-11-24T21:09:57Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.76,
+          "high": 13.18,
+          "low": 7.32
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2381,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(metadata): propagate failed store pulls and clean up Play edits",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2381",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:43:19Z",
+      "evidence": {
+        "additions": 9,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.19,
+        "high": 9.71,
+        "low": 5.39
+      },
+      "merged_at": "2026-11-24T21:17:28Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.19,
+          "high": 9.71,
+          "low": 5.39
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2393,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(installer): return failure for invalid dry-run config",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2393",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
