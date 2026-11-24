@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.81,
-    "high": 94.82,
-    "low": 51.77
+    "base": 69.93,
+    "high": 94.99,
+    "low": 51.86
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1253.0,
+  "engineer_weeks_at_40h": 1255.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 101.72,
-        "high": 137.6,
-        "low": 76.02
+        "base": 103.55,
+        "high": 140.07,
+        "low": 77.39
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 98,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 636,
-      "public_merged_pull_requests": 796,
-      "public_prs_with_work": 531,
+      "public_authored_pr_commits": 647,
+      "public_merged_pull_requests": 807,
+      "public_prs_with_work": 542,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
-        "base": 4882.57,
-        "high": 6604.59,
-        "low": 3648.89
+        "base": 4970.59,
+        "high": 6723.42,
+        "low": 3714.91
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-24",
-  "public_accepted_merge_events": 4126,
-  "public_accepted_pull_requests": 4125,
+  "public_accepted_merge_events": 4137,
+  "public_accepted_pull_requests": 4136,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50121.55,
-    "high": 68081.41,
-    "low": 37172.44
+    "base": 50209.57,
+    "high": 68200.24,
+    "low": 37238.46
   },
   "updated_at_utc": "2026-11-24",
   "window": {
@@ -136841,6 +136841,369 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "docs(test): document the project default for test list",
       "url": "https://github.com/TestSprite/testsprite-cli/pull/747",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:39:04Z",
+      "evidence": {
+        "additions": 22,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.36,
+        "high": 9.93,
+        "low": 5.52
+      },
+      "merged_at": "2026-11-24T20:36:35Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.36,
+          "high": 9.93,
+          "low": 5.52
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2380,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(validate): require a complete deadline source URL",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2380",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:39:09Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.58,
+        "high": 10.23,
+        "low": 5.69
+      },
+      "merged_at": "2026-11-24T20:36:40Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.58,
+          "high": 10.23,
+          "low": 5.69
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2382,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(deadlines): reject invalid platform filters and trim valid names",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2382",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-24T18:42:54Z",
+      "evidence": {
+        "additions": 6,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 5.2,
+        "high": 7.02,
+        "low": 3.9
+      },
+      "merged_at": "2026-11-24T20:36:45Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.2,
+          "high": 7.02,
+          "low": 3.9
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2383,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "test(guard): isolate the empty-stdin scan from the host temp directory",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2383",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:42:57Z",
+      "evidence": {
+        "additions": 18,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.16,
+        "high": 9.67,
+        "low": 5.37
+      },
+      "merged_at": "2026-11-24T20:36:50Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.16,
+          "high": 9.67,
+          "low": 5.37
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2384,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(manifest): report non-string privacy descriptions",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2384",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:42:59Z",
+      "evidence": {
+        "additions": 44,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.32,
+        "high": 11.23,
+        "low": 6.24
+      },
+      "merged_at": "2026-11-24T20:36:55Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.32,
+          "high": 11.23,
+          "low": 6.24
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2385,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(metadata): retain policy conflict checks above variant cap",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2385",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:43:04Z",
+      "evidence": {
+        "additions": 33,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.94,
+        "high": 10.72,
+        "low": 5.95
+      },
+      "merged_at": "2026-11-24T20:37:00Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.94,
+          "high": 10.72,
+          "low": 5.95
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2387,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(accessibility): bound source excerpts for SwiftUI findings",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2387",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:43:07Z",
+      "evidence": {
+        "additions": 46,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 15,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.06,
+        "high": 12.24,
+        "low": 6.8
+      },
+      "merged_at": "2026-11-24T20:37:06Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.06,
+          "high": 12.24,
+          "low": 6.8
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2388,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(audit): require findings coverage before marking an area passed",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2388",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-24T18:43:10Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.5,
+        "high": 10.13,
+        "low": 5.63
+      },
+      "merged_at": "2026-11-24T20:37:10Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.5,
+          "high": 10.13,
+          "low": 5.63
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2389,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(fleet): validate attestation revision and scope types",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2389",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:43:12Z",
+      "evidence": {
+        "additions": 56,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.98,
+        "high": 12.12,
+        "low": 6.73
+      },
+      "merged_at": "2026-11-24T20:37:16Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.98,
+          "high": 12.12,
+          "low": 6.73
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2390,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(register): reject unknown store and jurisdiction scopes",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2390",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:43:14Z",
+      "evidence": {
+        "additions": 67,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 8,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.45,
+        "high": 12.75,
+        "low": 7.09
+      },
+      "merged_at": "2026-11-24T20:37:20Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.45,
+          "high": 12.75,
+          "low": 7.09
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2391,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(eval): detect missing feature coverage and duplicate gold cases",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2391",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:43:16Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 4,
+        "comments": 1,
+        "commits": 1,
+        "deletions": 15,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.47,
+        "high": 12.79,
+        "low": 7.1
+      },
+      "merged_at": "2026-11-24T20:38:19Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.47,
+          "high": 12.79,
+          "low": 7.1
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2392,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(installer): retain payload when hook removal fails",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2392",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
