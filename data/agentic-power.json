@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.97,
-    "high": 95.04,
-    "low": 51.89
+    "base": 69.99,
+    "high": 95.06,
+    "low": 51.91
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1255.9,
+  "engineer_weeks_at_40h": 1256.2,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 104.14,
-        "high": 140.86,
-        "low": 77.83
+        "base": 104.38,
+        "high": 141.19,
+        "low": 78.01
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 98,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 650,
-      "public_merged_pull_requests": 810,
-      "public_prs_with_work": 545,
+      "public_authored_pr_commits": 651,
+      "public_merged_pull_requests": 811,
+      "public_prs_with_work": 546,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
-        "base": 4998.6,
-        "high": 6761.24,
-        "low": 3735.92
+        "base": 5010.27,
+        "high": 6777.0,
+        "low": 3744.68
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-24",
-  "public_accepted_merge_events": 4140,
-  "public_accepted_pull_requests": 4139,
+  "public_accepted_merge_events": 4141,
+  "public_accepted_pull_requests": 4140,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50237.58,
-    "high": 68238.06,
-    "low": 37259.47
+    "base": 50249.25,
+    "high": 68253.82,
+    "low": 37268.23
   },
   "updated_at_utc": "2026-11-24",
   "window": {
@@ -137303,6 +137303,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(installer): validate Kimi managed block markers",
       "url": "https://github.com/mjmirza/app-store-compliance/pull/2394",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:43:24Z",
+      "evidence": {
+        "additions": 74,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 6,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 11.67,
+        "high": 15.76,
+        "low": 8.76
+      },
+      "merged_at": "2026-11-24T23:03:29Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.67,
+          "high": 15.76,
+          "low": 8.76
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2395,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(installer): preserve user-owned OpenCode plugin files",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2395",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
