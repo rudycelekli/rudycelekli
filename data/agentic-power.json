@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.75,
-    "high": 94.74,
-    "low": 51.73
+    "base": 69.8,
+    "high": 94.81,
+    "low": 51.77
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1251.9,
+  "engineer_weeks_at_40h": 1252.9,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 100.81,
-        "high": 136.37,
-        "low": 75.34
+        "base": 101.58,
+        "high": 137.41,
+        "low": 75.91
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 98,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 629,
-      "public_merged_pull_requests": 789,
-      "public_prs_with_work": 524,
+      "public_authored_pr_commits": 635,
+      "public_merged_pull_requests": 795,
+      "public_prs_with_work": 530,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
-        "base": 4838.98,
-        "high": 6545.76,
-        "low": 3616.2
+        "base": 4875.82,
+        "high": 6595.48,
+        "low": 3643.83
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-24",
-  "public_accepted_merge_events": 4119,
-  "public_accepted_pull_requests": 4118,
+  "public_accepted_merge_events": 4125,
+  "public_accepted_pull_requests": 4124,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50077.96,
-    "high": 68022.58,
-    "low": 37139.75
+    "base": 50114.8,
+    "high": 68072.3,
+    "low": 37167.38
   },
   "updated_at_utc": "2026-11-24",
   "window": {
@@ -136610,6 +136610,204 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "docs(ci): check credential presence without printing values",
       "url": "https://github.com/TestSprite/testsprite-cli/pull/742",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-21T08:41:32Z",
+      "evidence": {
+        "additions": 4,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 3,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 6.04,
+        "high": 8.15,
+        "low": 4.53
+      },
+      "merged_at": "2026-11-24T03:00:36Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 6.04,
+          "high": 8.15,
+          "low": 4.53
+        }
+      },
+      "project": "TestSprite/testsprite-cli",
+      "pull_request": 740,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs(ci): make the saved-list gate fail on zero tests",
+      "url": "https://github.com/TestSprite/testsprite-cli/pull/740",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-21T08:41:44Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 5.99,
+        "high": 8.08,
+        "low": 4.49
+      },
+      "merged_at": "2026-11-24T03:06:50Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.99,
+          "high": 8.08,
+          "low": 4.49
+        }
+      },
+      "project": "TestSprite/testsprite-cli",
+      "pull_request": 745,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs(agent): make the offline install instructions explicit",
+      "url": "https://github.com/TestSprite/testsprite-cli/pull/745",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-21T08:41:46Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 1,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 5.99,
+        "high": 8.08,
+        "low": 4.49
+      },
+      "merged_at": "2026-11-24T03:11:31Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.99,
+          "high": 8.08,
+          "low": 4.49
+        }
+      },
+      "project": "TestSprite/testsprite-cli",
+      "pull_request": 746,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs(config): explain when CI bypasses the credentials file",
+      "url": "https://github.com/TestSprite/testsprite-cli/pull/746",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-21T08:41:52Z",
+      "evidence": {
+        "additions": 1,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 5.8,
+        "high": 7.83,
+        "low": 4.35
+      },
+      "merged_at": "2026-11-24T03:17:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.8,
+          "high": 7.83,
+          "low": 4.35
+        }
+      },
+      "project": "TestSprite/testsprite-cli",
+      "pull_request": 749,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs(migration): mark the old auth commands as removed",
+      "url": "https://github.com/TestSprite/testsprite-cli/pull/749",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-21T08:43:25Z",
+      "evidence": {
+        "additions": 2,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 0,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 5.99,
+        "high": 8.08,
+        "low": 4.49
+      },
+      "merged_at": "2026-11-24T03:22:32Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 5.99,
+          "high": 8.08,
+          "low": 4.49
+        }
+      },
+      "project": "TestSprite/testsprite-cli",
+      "pull_request": 751,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs(ci): warn about required checks on GitHub merge queues",
+      "url": "https://github.com/TestSprite/testsprite-cli/pull/751",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-21T08:43:23Z",
+      "evidence": {
+        "additions": 11,
+        "changed_files": 1,
+        "comments": 1,
+        "commits": 4,
+        "deletions": 3,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 7.03,
+        "high": 9.5,
+        "low": 5.28
+      },
+      "merged_at": "2026-11-24T03:27:19Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.03,
+          "high": 9.5,
+          "low": 5.28
+        }
+      },
+      "project": "TestSprite/testsprite-cli",
+      "pull_request": 750,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs(result): account for cancelled results in latest-result examples",
+      "url": "https://github.com/TestSprite/testsprite-cli/pull/750",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
