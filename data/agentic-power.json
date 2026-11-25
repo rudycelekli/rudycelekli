@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.83,
-    "high": 94.85,
-    "low": 51.79
+    "base": 69.84,
+    "high": 94.87,
+    "low": 51.8
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1256.9,
+  "engineer_weeks_at_40h": 1257.1,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 555.77,
-        "high": 751.28,
-        "low": 415.85
+        "base": 555.9,
+        "high": 751.46,
+        "low": 415.95
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4468,
+      "public_authored_pr_commits": 4469,
       "public_merged_pull_requests": 3088,
-      "public_prs_with_work": 3231,
+      "public_prs_with_work": 3232,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34457.82,
-        "high": 46579.67,
-        "low": 25782.98
+        "base": 34465.63,
+        "high": 46590.21,
+        "low": 25788.84
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 652,
-      "public_merged_pull_requests": 812,
+      "public_merged_pull_requests": 813,
       "public_prs_with_work": 547,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-25",
-  "public_accepted_merge_events": 4142,
-  "public_accepted_pull_requests": 4141,
+  "public_accepted_merge_events": 4143,
+  "public_accepted_pull_requests": 4142,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50277.87,
-    "high": 68292.46,
-    "low": 37289.7
+    "base": 50285.68,
+    "high": 68303.0,
+    "low": 37295.56
   },
   "updated_at_utc": "2026-11-25",
   "window": {
@@ -137369,6 +137369,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(accessibility): report undersized Android dimensions alongside wrap_content",
       "url": "https://github.com/mjmirza/app-store-compliance/pull/2386",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-24T04:31:31Z",
+      "evidence": {
+        "additions": 21,
+        "changed_files": 2,
+        "comments": 2,
+        "commits": 2,
+        "deletions": 1,
+        "reviews": 2
+      },
+      "heh": {
+        "base": 7.81,
+        "high": 10.54,
+        "low": 5.86
+      },
+      "merged_at": "2026-11-25T09:03:21Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.81,
+          "high": 10.54,
+          "low": 5.86
+        }
+      },
+      "project": "anmolkapil/plexo",
+      "pull_request": 184,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: accept pasted local torrent and NZB paths with forward slashes or quotes",
+      "url": "https://github.com/anmolkapil/plexo/pull/184",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
