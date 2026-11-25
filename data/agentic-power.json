@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.88,
-    "high": 94.92,
-    "low": 51.83
+    "base": 69.94,
+    "high": 94.99,
+    "low": 51.87
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1257.9,
+  "engineer_weeks_at_40h": 1258.8,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 101.26,
-        "high": 136.96,
-        "low": 75.68
+        "base": 102.02,
+        "high": 137.98,
+        "low": 76.25
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 98,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 658,
-      "public_merged_pull_requests": 816,
-      "public_prs_with_work": 550,
+      "public_authored_pr_commits": 664,
+      "public_merged_pull_requests": 819,
+      "public_prs_with_work": 553,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
-        "base": 5062.91,
-        "high": 6848.08,
-        "low": 3784.17
+        "base": 5100.76,
+        "high": 6899.18,
+        "low": 3812.56
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-25",
-  "public_accepted_merge_events": 4146,
-  "public_accepted_pull_requests": 4145,
+  "public_accepted_merge_events": 4149,
+  "public_accepted_pull_requests": 4148,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50315.57,
-    "high": 68343.36,
-    "low": 37317.98
+    "base": 50353.42,
+    "high": 68394.46,
+    "low": 37346.37
   },
   "updated_at_utc": "2026-11-25",
   "window": {
@@ -137506,6 +137506,105 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "Keep one non-finite value from corrupting its compressed PLY chunk",
       "url": "https://github.com/playcanvas/splat-transform/pull/355",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T18:39:02Z",
+      "evidence": {
+        "additions": 91,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 8,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 13.04,
+        "high": 17.6,
+        "low": 9.78
+      },
+      "merged_at": "2026-11-25T17:47:53Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 13.04,
+          "high": 17.6,
+          "low": 9.78
+        }
+      },
+      "project": "mjmirza/app-store-compliance",
+      "pull_request": 2379,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(guard): read quoted Xcode deployment target keys",
+      "url": "https://github.com/mjmirza/app-store-compliance/pull/2379",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T22:10:01Z",
+      "evidence": {
+        "additions": 199,
+        "changed_files": 5,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 1,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 13.61,
+        "high": 18.38,
+        "low": 10.21
+      },
+      "merged_at": "2026-11-25T17:51:45Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 13.61,
+          "high": 18.38,
+          "low": 10.21
+        }
+      },
+      "project": "mvanhorn/last30days-skill",
+      "pull_request": 1618,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: bound the remote query planning step",
+      "url": "https://github.com/mvanhorn/last30days-skill/pull/1618",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-24T22:10:05Z",
+      "evidence": {
+        "additions": 125,
+        "changed_files": 3,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 11.2,
+        "high": 15.12,
+        "low": 8.4
+      },
+      "merged_at": "2026-11-25T17:52:39Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 11.2,
+          "high": 15.12,
+          "low": 8.4
+        }
+      },
+      "project": "mvanhorn/last30days-skill",
+      "pull_request": 1619,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix: keep usable subqueries from malformed provider plans",
+      "url": "https://github.com/mvanhorn/last30days-skill/pull/1619",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
