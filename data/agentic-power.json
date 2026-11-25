@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.84,
-    "high": 94.87,
-    "low": 51.8
+    "base": 69.85,
+    "high": 94.88,
+    "low": 51.81
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1257.1,
+  "engineer_weeks_at_40h": 1257.4,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 100.78,
-        "high": 136.31,
-        "low": 75.32
+        "base": 100.97,
+        "high": 136.57,
+        "low": 75.47
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 98,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 652,
-      "public_merged_pull_requests": 813,
-      "public_prs_with_work": 547,
+      "public_authored_pr_commits": 655,
+      "public_merged_pull_requests": 814,
+      "public_prs_with_work": 548,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
-        "base": 5038.89,
-        "high": 6815.64,
-        "low": 3766.15
+        "base": 5048.53,
+        "high": 6828.66,
+        "low": 3773.38
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-25",
-  "public_accepted_merge_events": 4143,
-  "public_accepted_pull_requests": 4142,
+  "public_accepted_merge_events": 4144,
+  "public_accepted_pull_requests": 4143,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50285.68,
-    "high": 68303.0,
-    "low": 37295.56
+    "base": 50295.32,
+    "high": 68316.02,
+    "low": 37302.79
   },
   "updated_at_utc": "2026-11-25",
   "window": {
@@ -137402,6 +137402,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: accept pasted local torrent and NZB paths with forward slashes or quotes",
       "url": "https://github.com/anmolkapil/plexo/pull/184",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-24T22:15:12Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 4,
+        "deletions": 12,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 9.64,
+        "high": 13.02,
+        "low": 7.23
+      },
+      "merged_at": "2026-11-25T09:56:13Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 9.64,
+          "high": 13.02,
+          "low": 7.23
+        }
+      },
+      "project": "Prism-Shadow/penguin-harness",
+      "pull_request": 1831,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "docs: explain how the dev server selects its CLI",
+      "url": "https://github.com/Prism-Shadow/penguin-harness/pull/1831",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
