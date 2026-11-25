@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.85,
-    "high": 94.88,
-    "low": 51.81
+    "base": 69.87,
+    "high": 94.9,
+    "low": 51.82
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1257.4,
+  "engineer_weeks_at_40h": 1257.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 100.97,
-        "high": 136.57,
-        "low": 75.47
+        "base": 101.14,
+        "high": 136.8,
+        "low": 75.6
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 98,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 655,
-      "public_merged_pull_requests": 814,
-      "public_prs_with_work": 548,
+      "public_authored_pr_commits": 657,
+      "public_merged_pull_requests": 815,
+      "public_prs_with_work": 549,
       "repository_default_branch_commits": 517,
       "skilled_human_equivalent_hours": {
-        "base": 5048.53,
-        "high": 6828.66,
-        "low": 3773.38
+        "base": 5057.05,
+        "high": 6840.16,
+        "low": 3779.77
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 922,
   "owned_public_through_utc": "2026-11-25",
-  "public_accepted_merge_events": 4144,
-  "public_accepted_pull_requests": 4143,
+  "public_accepted_merge_events": 4145,
+  "public_accepted_pull_requests": 4144,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50295.32,
-    "high": 68316.02,
-    "low": 37302.79
+    "base": 50303.84,
+    "high": 68327.52,
+    "low": 37309.18
   },
   "updated_at_utc": "2026-11-25",
   "window": {
@@ -137435,6 +137435,39 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "docs: explain how the dev server selects its CLI",
       "url": "https://github.com/Prism-Shadow/penguin-harness/pull/1831",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-11-24T22:14:58Z",
+      "evidence": {
+        "additions": 48,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 3
+      },
+      "heh": {
+        "base": 8.52,
+        "high": 11.5,
+        "low": 6.39
+      },
+      "merged_at": "2026-11-25T10:22:25Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.52,
+          "high": 11.5,
+          "low": 6.39
+        }
+      },
+      "project": "Prism-Shadow/penguin-harness",
+      "pull_request": 1830,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(ci): validate all packages for unknown lockfile formats",
+      "url": "https://github.com/Prism-Shadow/penguin-harness/pull/1830",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
