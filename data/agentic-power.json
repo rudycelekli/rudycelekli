@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.75,
-    "high": 94.74,
-    "low": 51.73
+    "base": 70.08,
+    "high": 95.18,
+    "low": 51.98
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1259.0,
+  "engineer_weeks_at_40h": 1264.9,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -366,9 +366,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 555.99,
-        "high": 751.58,
-        "low": 416.02
+        "base": 559.79,
+        "high": 756.71,
+        "low": 418.87
       },
       "coverage_status": "complete",
       "creation_month_proxy_prs": 17,
@@ -386,14 +386,14 @@
       "owned_public_commits": 433,
       "owned_public_coverage": "complete",
       "partial_month": false,
-      "public_authored_pr_commits": 4470,
+      "public_authored_pr_commits": 4501,
       "public_merged_pull_requests": 3088,
-      "public_prs_with_work": 3233,
+      "public_prs_with_work": 3260,
       "repository_default_branch_commits": 1749,
       "skilled_human_equivalent_hours": {
-        "base": 34471.5,
-        "high": 46598.13,
-        "low": 25793.24
+        "base": 34706.94,
+        "high": 46916.01,
+        "low": 25969.83
       }
     },
     {
@@ -419,7 +419,7 @@
       "owned_public_coverage": "complete",
       "partial_month": true,
       "public_authored_pr_commits": 664,
-      "public_merged_pull_requests": 819,
+      "public_merged_pull_requests": 846,
       "public_prs_with_work": 553,
       "repository_default_branch_commits": 530,
       "skilled_human_equivalent_hours": {
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 935,
   "owned_public_through_utc": "2026-11-26",
-  "public_accepted_merge_events": 4149,
-  "public_accepted_pull_requests": 4148,
+  "public_accepted_merge_events": 4176,
+  "public_accepted_pull_requests": 4175,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50359.92,
-    "high": 68403.56,
-    "low": 37350.92
+    "base": 50595.36,
+    "high": 68721.44,
+    "low": 37527.51
   },
   "updated_at_utc": "2026-11-26",
   "window": {
@@ -137605,6 +137605,897 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix: keep usable subqueries from malformed provider plans",
       "url": "https://github.com/mvanhorn/last30days-skill/pull/1619",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:42:58Z",
+      "evidence": {
+        "additions": 63,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.83,
+        "high": 11.92,
+        "low": 6.62
+      },
+      "merged_at": "2026-11-26T12:20:32Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.83,
+          "high": 11.92,
+          "low": 6.62
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2476,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(api): report matched API stop before engine length cap",
+      "url": "https://github.com/JustVugg/colibri/pull/2476",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:52:30Z",
+      "evidence": {
+        "additions": 59,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.71,
+        "high": 11.76,
+        "low": 6.54
+      },
+      "merged_at": "2026-11-26T12:20:32Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.71,
+          "high": 11.76,
+          "low": 6.54
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2479,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(chat): report SSE failures and premature response closure",
+      "url": "https://github.com/JustVugg/colibri/pull/2479",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:52:38Z",
+      "evidence": {
+        "additions": 61,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.74,
+        "high": 11.8,
+        "low": 6.56
+      },
+      "merged_at": "2026-11-26T12:20:32Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.74,
+          "high": 11.8,
+          "low": 6.56
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2481,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): reject non-JSON constants before dispatch",
+      "url": "https://github.com/JustVugg/colibri/pull/2481",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-28T16:23:13Z",
+      "evidence": {
+        "additions": 75,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 7,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.27,
+        "high": 12.52,
+        "low": 6.96
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.27,
+          "high": 12.52,
+          "low": 6.96
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2444,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(download): preserve exact filenames in curl fallback URLs",
+      "url": "https://github.com/JustVugg/colibri/pull/2444",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-28T16:23:21Z",
+      "evidence": {
+        "additions": 92,
+        "changed_files": 4,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.85,
+        "high": 14.65,
+        "low": 8.14
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.85,
+          "high": 14.65,
+          "low": 8.14
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2445,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(json): reject invalid raw UTF-8 in checked documents",
+      "url": "https://github.com/JustVugg/colibri/pull/2445",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-28T16:23:28Z",
+      "evidence": {
+        "additions": 68,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.91,
+        "high": 12.03,
+        "low": 6.68
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.91,
+          "high": 12.03,
+          "low": 6.68
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2446,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(api): instruct Qwen3-Coder when tools are required",
+      "url": "https://github.com/JustVugg/colibri/pull/2446",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-28T17:54:19Z",
+      "evidence": {
+        "additions": 19,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.16,
+        "high": 8.32,
+        "low": 4.62
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.16,
+          "high": 8.32,
+          "low": 4.62
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2448,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(setup): reject invalid explicit ports before setup work",
+      "url": "https://github.com/JustVugg/colibri/pull/2448",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-28T17:55:58Z",
+      "evidence": {
+        "additions": 72,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.04,
+        "high": 12.21,
+        "low": 6.78
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.04,
+          "high": 12.21,
+          "low": 6.78
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2449,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(v41): preserve qualified tool names in API responses",
+      "url": "https://github.com/JustVugg/colibri/pull/2449",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-28T17:56:00Z",
+      "evidence": {
+        "additions": 105,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 9,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 10.0,
+        "high": 13.51,
+        "low": 7.5
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 10.0,
+          "high": 13.51,
+          "low": 7.5
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2450,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): serialize overlapping server lifecycle actions",
+      "url": "https://github.com/JustVugg/colibri/pull/2450",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-28T17:56:42Z",
+      "evidence": {
+        "additions": 4,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 4.86,
+        "high": 6.56,
+        "low": 3.64
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 4.86,
+          "high": 6.56,
+          "low": 3.64
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2451,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "test(score): pin float32 KV for the fixture reference",
+      "url": "https://github.com/JustVugg/colibri/pull/2451",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-28T17:58:35Z",
+      "evidence": {
+        "additions": 25,
+        "changed_files": 1,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 6.6,
+        "high": 8.91,
+        "low": 4.95
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 6.6,
+          "high": 8.91,
+          "low": 4.95
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2452,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "test(setup): isolate fixture capacity from physical host disk space",
+      "url": "https://github.com/JustVugg/colibri/pull/2452",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "reliability_and_qe",
+      "created_at": "2026-10-29T06:38:49Z",
+      "evidence": {
+        "additions": 69,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.02,
+        "high": 10.82,
+        "low": 6.01
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.02,
+          "high": 10.82,
+          "low": 6.01
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2464,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(atlas): exclude held-out traces from every specialist set",
+      "url": "https://github.com/JustVugg/colibri/pull/2464",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:38:52Z",
+      "evidence": {
+        "additions": 61,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.71,
+        "high": 11.76,
+        "low": 6.54
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.71,
+          "high": 11.76,
+          "low": 6.54
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2465,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(sft): remove stale files for empty prepared splits",
+      "url": "https://github.com/JustVugg/colibri/pull/2465",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:38:56Z",
+      "evidence": {
+        "additions": 54,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.54,
+        "high": 11.53,
+        "low": 6.4
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.54,
+          "high": 11.53,
+          "low": 6.4
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2466,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(convert): stop Inkling raw copies at unexpected EOF",
+      "url": "https://github.com/JustVugg/colibri/pull/2466",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:39:00Z",
+      "evidence": {
+        "additions": 65,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.83,
+        "high": 11.92,
+        "low": 6.62
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.83,
+          "high": 11.92,
+          "low": 6.62
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2467,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(convert): preserve Inkling source shards on output aliases",
+      "url": "https://github.com/JustVugg/colibri/pull/2467",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:39:04Z",
+      "evidence": {
+        "additions": 72,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.67,
+        "high": 13.06,
+        "low": 7.26
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.67,
+          "high": 13.06,
+          "low": 7.26
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2468,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(api): cache compaction summaries for exactly their replaced prefix",
+      "url": "https://github.com/JustVugg/colibri/pull/2468",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:39:08Z",
+      "evidence": {
+        "additions": 79,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 3,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.27,
+        "high": 12.52,
+        "low": 6.96
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.27,
+          "high": 12.52,
+          "low": 6.96
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2469,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(api): preserve GLM answer prose after streamed tool calls",
+      "url": "https://github.com/JustVugg/colibri/pull/2469",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:39:12Z",
+      "evidence": {
+        "additions": 104,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.79,
+        "high": 13.22,
+        "low": 7.34
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.79,
+          "high": 13.22,
+          "low": 7.34
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2470,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): refresh the configured source engine before start",
+      "url": "https://github.com/JustVugg/colibri/pull/2470",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:39:16Z",
+      "evidence": {
+        "additions": 84,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 6,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.47,
+        "high": 12.78,
+        "low": 7.1
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.47,
+          "high": 12.78,
+          "low": 7.1
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2471,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): measure wait deadlines with the monotonic clock",
+      "url": "https://github.com/JustVugg/colibri/pull/2471",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:39:20Z",
+      "evidence": {
+        "additions": 42,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.18,
+        "high": 11.05,
+        "low": 6.14
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.18,
+          "high": 11.05,
+          "low": 6.14
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2472,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(mcp): reject malformed UTF-8 without ending the session",
+      "url": "https://github.com/JustVugg/colibri/pull/2472",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:39:24Z",
+      "evidence": {
+        "additions": 36,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 1,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 7.94,
+        "high": 10.72,
+        "low": 5.95
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 7.94,
+          "high": 10.72,
+          "low": 5.95
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2473,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(chat): identify remote document destinations by literal address",
+      "url": "https://github.com/JustVugg/colibri/pull/2473",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:42:53Z",
+      "evidence": {
+        "additions": 40,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.05,
+        "high": 10.86,
+        "low": 6.03
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.05,
+          "high": 10.86,
+          "low": 6.03
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2475,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(cli): preserve Markdown across streamed prefix boundaries",
+      "url": "https://github.com/JustVugg/colibri/pull/2475",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:52:23Z",
+      "evidence": {
+        "additions": 162,
+        "changed_files": 3,
+        "comments": 0,
+        "commits": 2,
+        "deletions": 16,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 12.05,
+        "high": 16.27,
+        "low": 9.04
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 12.05,
+          "high": 16.27,
+          "low": 9.04
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2477,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(api): validate compaction requests before inference admission",
+      "url": "https://github.com/JustVugg/colibri/pull/2477",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:52:27Z",
+      "evidence": {
+        "additions": 49,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.48,
+        "high": 11.44,
+        "low": 6.36
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.48,
+          "high": 11.44,
+          "low": 6.36
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2478,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(chat): retain answer text alongside reasoning deltas",
+      "url": "https://github.com/JustVugg/colibri/pull/2478",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:52:34Z",
+      "evidence": {
+        "additions": 60,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 4,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.8,
+        "high": 11.88,
+        "low": 6.6
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.8,
+          "high": 11.88,
+          "low": 6.6
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2480,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(chat): assemble SSE data fields before decoding JSON",
+      "url": "https://github.com/JustVugg/colibri/pull/2480",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:52:42Z",
+      "evidence": {
+        "additions": 57,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 0,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 8.6,
+        "high": 11.61,
+        "low": 6.45
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 8.6,
+          "high": 11.61,
+          "low": 6.45
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2482,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(eval): reject impossible MMLU subset sample counts",
+      "url": "https://github.com/JustVugg/colibri/pull/2482",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-10-29T06:52:46Z",
+      "evidence": {
+        "additions": 72,
+        "changed_files": 2,
+        "comments": 0,
+        "commits": 1,
+        "deletions": 2,
+        "reviews": 0
+      },
+      "heh": {
+        "base": 9.07,
+        "high": 12.25,
+        "low": 6.8
+      },
+      "merged_at": "2026-11-26T12:20:33Z",
+      "monthly_heh_allocation": {
+        "2026-10": {
+          "base": 9.07,
+          "high": 12.25,
+          "low": 6.8
+        }
+      },
+      "project": "JustVugg/colibri",
+      "pull_request": 2483,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "fix(eval): isolate MMLU prompt mode and greedy temperature",
+      "url": "https://github.com/JustVugg/colibri/pull/2483",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
