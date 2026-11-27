@@ -1,8 +1,8 @@
 {
   "agentic_power_x": {
-    "base": 69.9,
-    "high": 94.94,
-    "low": 51.85
+    "base": 69.92,
+    "high": 94.97,
+    "low": 51.86
   },
   "aggregate_basis": "Modeled ratio for recorded work only; incomplete coverage is not an account-wide total.",
   "basis": "Authored-work monthly HEH divided by two assumed human-direction hours per elapsed day",
@@ -18,7 +18,7 @@
       "low": 14.0
     }
   },
-  "engineer_weeks_at_40h": 1265.2,
+  "engineer_weeks_at_40h": 1265.6,
   "excluded_owned_pr_overlap_commits": 0,
   "framework": {
     "author": "Dr. Mark Allen / HeroForge.AI",
@@ -398,9 +398,9 @@
     },
     {
       "agentic_power_x": {
-        "base": 94.81,
-        "high": 128.26,
-        "low": 70.85
+        "base": 95.1,
+        "high": 128.64,
+        "low": 71.06
       },
       "coverage_status": "partial",
       "creation_month_proxy_prs": 1,
@@ -418,14 +418,14 @@
       "owned_public_commits": 136,
       "owned_public_coverage": "complete",
       "partial_month": true,
-      "public_authored_pr_commits": 664,
-      "public_merged_pull_requests": 846,
-      "public_prs_with_work": 553,
+      "public_authored_pr_commits": 666,
+      "public_merged_pull_requests": 848,
+      "public_prs_with_work": 555,
       "repository_default_branch_commits": 555,
       "skilled_human_equivalent_hours": {
-        "base": 5119.76,
-        "high": 6925.78,
-        "low": 3825.86
+        "base": 5135.18,
+        "high": 6946.6,
+        "low": 3837.42
       }
     }
   ],
@@ -433,8 +433,8 @@
   "owned_private_through_utc": "2026-11-03",
   "owned_public_commits": 960,
   "owned_public_through_utc": "2026-11-27",
-  "public_accepted_merge_events": 4176,
-  "public_accepted_pull_requests": 4175,
+  "public_accepted_merge_events": 4178,
+  "public_accepted_pull_requests": 4177,
   "public_prs_excluded_as_reused_implementation": [
     {
       "reason": "all identifiable implementation commits already credited to an earlier accepted PR",
@@ -447,9 +447,9 @@
   "schema_version": 3,
   "scope": "Accepted public upstream PRs plus attributed default-branch commits in accessible personally owned non-fork repositories",
   "skilled_human_equivalent_hours": {
-    "base": 50607.86,
-    "high": 68738.94,
-    "low": 37536.26
+    "base": 50623.28,
+    "high": 68759.76,
+    "low": 37547.82
   },
   "updated_at_utc": "2026-11-27",
   "window": {
@@ -138496,6 +138496,72 @@
       "reused_implementation_commit_entries_excluded": 0,
       "title": "fix(eval): isolate MMLU prompt mode and greedy temperature",
       "url": "https://github.com/JustVugg/colibri/pull/2483",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T17:10:57Z",
+      "evidence": {
+        "additions": 12,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 2,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 7.26,
+        "high": 9.8,
+        "low": 5.44
+      },
+      "merged_at": "2026-11-27T21:39:48Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 7.26,
+          "high": 9.8,
+          "low": 5.44
+        }
+      },
+      "project": "fabiocaccamo/python-benedict",
+      "pull_request": 664,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Detach shallow copies from the original outer dictionary",
+      "url": "https://github.com/fabiocaccamo/python-benedict/pull/664",
+      "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
+    },
+    {
+      "acceptance_basis": "merged pull request",
+      "accepted": true,
+      "category": "software_engineering",
+      "created_at": "2026-11-01T17:10:23Z",
+      "evidence": {
+        "additions": 19,
+        "changed_files": 2,
+        "comments": 1,
+        "commits": 3,
+        "deletions": 0,
+        "reviews": 1
+      },
+      "heh": {
+        "base": 8.16,
+        "high": 11.02,
+        "low": 6.12
+      },
+      "merged_at": "2026-11-27T21:39:59Z",
+      "monthly_heh_allocation": {
+        "2026-11": {
+          "base": 8.16,
+          "high": 11.02,
+          "low": 6.12
+        }
+      },
+      "project": "fabiocaccamo/python-benedict",
+      "pull_request": 663,
+      "reused_implementation_commit_entries_excluded": 0,
+      "title": "Allow nesting frozen records without changing the inputs",
+      "url": "https://github.com/fabiocaccamo/python-benedict/pull/663",
       "work_timing_basis": "equal shares per newly credited attributed non-merge PR commit, grouped by UTC authored month"
     }
   ]
